@@ -9,8 +9,10 @@ let
   shellrcModulePath = builtins.replaceStrings [ "." ] [ "/" ] shellrcModule + ".hs";
 
   ghc = haskellPackages.ghcWithPackages (p: with p; [
+    brick
     bytestring
     containers
+    cursor
     dhall
     http-conduit
     horizon-gen-nix
