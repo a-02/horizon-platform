@@ -20,6 +20,7 @@ let
     path
     procex
     text
+    vector
     yaml
   ]);
 
