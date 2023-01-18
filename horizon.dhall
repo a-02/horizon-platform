@@ -1238,7 +1238,7 @@ let packages =
       , zlib = H.callHackage "zlib" "0.6.3.0"
       }
 
-in  H.HorizonExport.MakePackageSet
+in H.HorizonExport.MakePackageSet 
       { packagesDir = "pkgs"
       , packageSetFile = "initial-packages.nix"
       , packageSet = { compiler = "ghc-9.4.4", packages = toMap packages }

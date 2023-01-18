@@ -1,17 +1,24 @@
+{-# LANGUAGE AllowAmbiguousTypes #-}
 {-# LANGUAGE NoMonomorphismRestriction #-}
+{-# LANGUAGE TemplateHaskell #-}
+{-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE OverloadedLists           #-}
 {-# LANGUAGE OverloadedStrings         #-}
 {-# LANGUAGE ViewPatterns              #-}
 {-# OPTIONS_GHC -Wno-missing-signatures #-}
 {-# OPTIONS_GHC -Wno-unused-imports #-}
+{-# OPTIONS_GHC -fplugin=Polysemy.Plugin #-}
 
 module ShellRC where
 
-import           Brick                     (BrickEvent (VtyEvent), EventM,
+import Polysemy.State
+import Control.Monad (void)
+import Control.Monad.IO.Class
+import           Brick                     (BrickEvent (VtyEvent), EventM, gets,
                                             Padding (..),
                                             ViewportType (Vertical), Widget,
                                             attrMap, attrName, bg, fg, hBox,
-                                            halt, on, padLeft, txt, vScrollBy,
+                                            halt, on, padLeftRight, txt, vScrollBy,
                                             viewport, viewportScroll, visible,
                                             withAttr)
 import qualified Brick
@@ -46,6 +53,7 @@ import           Network.HTTP.Simple
 import           Path
 import           Procex.Prelude
 import           Procex.Shell              hiding (promptFunction)
+import Polysemy
 import           System.Directory
 import           System.Environment
 
@@ -91,10 +99,10 @@ renderVersion :: Version -> Widget n
 renderVersion (MkVersion x) = txt x
 
 renderGitSource :: GitSource -> Widget n
-renderGitSource (MkGitSource u r s) = hBox (fmap (padLeft (Pad 1)) [txt "Git", renderRepo u, renderRevision r])
+renderGitSource (MkGitSource u r s) = hBox (fmap (padLeftRight 1) [txt "Git", renderRepo u, renderRevision r])
 
 renderHackageSource :: HackageSource -> Widget n
-renderHackageSource (MkHackageSource n v) = hBox (fmap (padLeft (Pad 1)) [txt "Hackage", renderName n, renderVersion v])
+renderHackageSource (MkHackageSource n v) = hBox (fmap (padLeftRight 1) [txt "Hackage", renderName n, renderVersion v])
 
 renderHaskellSource :: HaskellSource -> Widget n
 renderHaskellSource (FromGit x)     = renderGitSource x
@@ -116,15 +124,80 @@ packageListToTable = table . packageListToMatrix
 renderPackageList :: PackageListCursor -> Widget Text
 renderPackageList = viewport "Viewy" Vertical . renderTable . packageListToTable
 
-handleEvent :: BrickEvent Text e -> EventM Text PackageListCursor ()
-handleEvent (VtyEvent (EvKey KDown [])) = do
-  vScrollBy (viewportScroll "Viewy") 2
-  Brick.modify (\s -> fromMaybe s $ nonEmptyCursorSelectNext id id s)
-handleEvent (VtyEvent (EvKey KUp [])) = do
-  vScrollBy (viewportScroll "Viewy") (-2)
-  Brick.modify (\s -> fromMaybe s $ nonEmptyCursorSelectPrev id id s)
-handleEvent (VtyEvent (EvKey (KChar 'q') [])) = do
-  halt
+scrollDown :: EventM e (PackageListCursor, c) ()
+scrollDown =  Brick.modify (\(s, c) -> (fromMaybe s $ nonEmptyCursorSelectNext id id s, c))
+
+scrollUp :: EventM e (PackageListCursor, c) ()
+scrollUp =  Brick.modify (\(s, c) -> (fromMaybe s $ nonEmptyCursorSelectPrev id id s, c))
+
+type Vim :: Type -> (Type -> Type) -> Type -> Type
+data Vim y m a where
+  Del :: Vim y m ()
+  Find :: Vim y m ()
+  MoveDown :: Vim y m ()
+  MoveEndOfFile :: Vim y m ()
+  MoveLeft :: Vim y m ()
+  MoveRight :: Vim y m ()
+  MoveStartOfFile :: Vim y m ()
+  MoveUp :: Vim y m ()
+  Paste :: Vim y m ()
+  Quit :: Vim y m ()
+  Write :: Vim y m ()
+  Yank :: Vim y m ()
+
+makeSem ''Vim
+
+interpretVim :: Member (Embed (EventM e (PackageListCursor, c))) r => Sem (Vim y ': r) a -> Sem r a
+interpretVim = interpret $ \case
+  Del -> embed $ pure ()
+  Find -> embed $ pure ()
+  MoveDown -> embed $ scrollDown
+  MoveEndOfFile -> embed $ Brick.modify (\(x, c) -> (nonEmptyCursorSelectLast id id x, c))
+  MoveLeft -> embed $ pure ()
+  MoveRight -> embed $ pure ()
+  MoveStartOfFile -> embed $ Brick.modify (\(x, c) -> (nonEmptyCursorSelectFirst id id x , c))
+  MoveUp -> embed $ scrollUp
+  Paste -> embed $ pure ()
+  Quit -> embed $ halt
+  Yank -> embed $ pure ()
+
+brickEventToVim :: Members '[Vim y, State (Last Char)] r => BrickEvent Text e -> Sem r ()
+brickEventToVim (VtyEvent (EvKey KDown [])) = clear >> moveDown
+brickEventToVim (VtyEvent (EvKey KUp [])) = moveUp
+brickEventToVim (VtyEvent (EvKey (KChar 'j') [])) = moveDown
+brickEventToVim (VtyEvent (EvKey (KChar 'k') [])) = moveUp
+brickEventToVim (VtyEvent (EvKey (KChar 'G') [])) = moveEndOfFile
+brickEventToVim (VtyEvent (EvKey (KChar 'g') [])) = do
+  x <- get
+  case x of
+    Just 'g' -> do 
+       moveStartOfFile 
+       put Nothing
+    _ -> put $ Just 'g'
+brickEventToVim (VtyEvent (EvKey (KChar 'q') [])) = quit
+brickEventToVim (VtyEvent (EvKey (KChar 'w') [])) = write
+brickEventToVim _ = pure ()
+
+ 
+semStateToBrickState :: Member (Embed (EventM e s)) r => L.Lens' s t -> Sem (State t ': r) a -> Sem r a
+semStateToBrickState f = interpret $ \case
+  Put x -> embed $ Brick.put . L.set f x =<< Brick.get
+  Get   -> embed $ L.view f <$> Brick.get
+
+
+handleEvent :: BrickEvent Text e -> EventM Text (PackageListCursor, Maybe Char) ()
+handleEvent x = do
+  runM . semStateToBrickState (L.lens snd (\z k -> (fst z, k))) . interpretVim . brickEventToVim $ x
+handleEvent (VtyEvent (EvKey (KChar 'b') [])) = do
+  (MkName x, _) <- Brick.gets (nonEmptyCursorCurrent . fst)
+  let z = mq
+           "nix"
+            "build"
+            "-L"
+            (T.unpack $ ".#" <> x)
+            (pipeHOut 1 $ \_ stdout -> B.hGetContents stdout >>= B.putStr)
+            (pipeHOut 2 $ \_ stderr -> B.hGetContents stderr >>= B.writeFile "./log")
+  pure ()
 handleEvent _ = pure ()
 
 
@@ -133,12 +206,12 @@ appAttrMap = attrMap defAttr [ (attrName "highlight", fg yellow)
                              , (attrName "good", white `on` green)
                              ]
 
-packageListMain :: Brick.App PackageListCursor e Text
-packageListMain = Brick.App (pure . renderPackageList) (const $ const Nothing) handleEvent (pure ()) (const (appAttrMap))
+packageListMain :: Brick.App (PackageListCursor, Maybe Char) e Text
+packageListMain = Brick.App (pure . renderPackageList . fst) (const $ const Nothing) handleEvent (pure ()) (const (appAttrMap))
 
 go :: IO ()
 go = do
   x <- Dhall.inputFile @HorizonExport Dhall.auto "horizon.dhall"
   case x of
-    MakePackageSet (MkPackageSetExportSettings _ _ (MkPackageSet _ (MkPackageList (Map.toList -> y:ys)))) -> Brick.defaultMain packageListMain $ makeNonEmptyCursor id (y :| ys)
+    MakePackageSet (MkPackageSetExportSettings _ _ (MkPackageSet _ (MkPackageList (Map.toList -> y:ys)))) -> Brick.defaultMain packageListMain $ (makeNonEmptyCursor id (y :| ys), Nothing)
   pure ()

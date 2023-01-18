@@ -20,6 +20,8 @@ let
     lens
     lens-aeson
     path
+    polysemy-plugin
+    polysemy
     procex
     text
     vector
