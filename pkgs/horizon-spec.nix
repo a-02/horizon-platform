@@ -11,8 +11,8 @@
 }:
 mkDerivation {
   pname = "horizon-spec";
-  version = "0.4.1";
-  sha256 = "4cf5ba59489bca20edf7c82c69ce565c69c900c863bf3f335c887f6784e929f7";
+  version = "0.5";
+  sha256 = "ad53944bff29788217e58608c312eb6186700821be8db78090e53c94f4783656";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

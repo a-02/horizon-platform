@@ -16,6 +16,7 @@ import qualified Data.Map                  as Map
 import           Data.Text                 (Text)
 import qualified Data.Text                 as T
 import qualified Data.Text.Encoding        as T
+import qualified Data.Vector               as V
 import qualified Data.Yaml                 as Y
 import qualified Data.Yaml.Pretty          as Y
 import           Horizon.Spec
