@@ -203,6 +203,7 @@ let packages =
       , composite-lens-extra = H.callHackage "composite-lens-extra" "0.1.0.0"
       , composite-tuple = H.callHackage "composite-tuple" "0.1.2.0"
       , composition-prelude = H.callHackage "composition-prelude" "3.0.0.2"
+      , concise = H.callHackage "concise" "0.1.0.1"
       , concurrent-extra = H.callHackage "concurrent-extra" "0.7.0.12"
       , concurrent-output = H.callHackage "concurrent-output" "1.10.16"
       , conduit-combinators = H.callHackage "conduit-combinators" "1.3.0"

@@ -285,6 +285,8 @@ self: with pkgs.haskell.lib; {
 
   composition-prelude = self.callPackage (./pkgs/composition-prelude.nix) { };
 
+  concise = self.callPackage (./pkgs/concise.nix) { };
+
   concurrent-extra = self.callPackage (./pkgs/concurrent-extra.nix) { };
 
   concurrent-output = self.callPackage (./pkgs/concurrent-output.nix) { };
