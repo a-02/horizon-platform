@@ -53,6 +53,8 @@ self: with pkgs.haskell.lib; {
 
   QuickCheck = self.callPackage (./pkgs/QuickCheck.nix) { };
 
+  RSA = self.callPackage (./pkgs/RSA.nix) { };
+
   SHA = self.callPackage (./pkgs/SHA.nix) { };
 
   StateVar = self.callPackage (./pkgs/StateVar.nix) { };
@@ -120,6 +122,8 @@ self: with pkgs.haskell.lib; {
   attoparsec-binary = self.callPackage (./pkgs/attoparsec-binary.nix) { };
 
   attoparsec-iso8601 = self.callPackage (./pkgs/attoparsec-iso8601.nix) { };
+
+  authenticate-oauth = self.callPackage (./pkgs/authenticate-oauth.nix) { };
 
   auto-update = self.callPackage (./pkgs/auto-update.nix) { };
 
@@ -285,6 +289,8 @@ self: with pkgs.haskell.lib; {
 
   composition-prelude = self.callPackage (./pkgs/composition-prelude.nix) { };
 
+  concise = self.callPackage (./pkgs/concise.nix) { };
+
   concurrent-extra = self.callPackage (./pkgs/concurrent-extra.nix) { };
 
   concurrent-output = self.callPackage (./pkgs/concurrent-output.nix) { };
@@ -318,6 +324,8 @@ self: with pkgs.haskell.lib; {
   crypto-api = self.callPackage (./pkgs/crypto-api.nix) { };
 
   crypto-api-tests = self.callPackage (./pkgs/crypto-api-tests.nix) { };
+
+  crypto-pubkey-types = self.callPackage (./pkgs/crypto-pubkey-types.nix) { };
 
   cryptohash = self.callPackage (./pkgs/cryptohash.nix) { };
 
@@ -865,6 +873,8 @@ self: with pkgs.haskell.lib; {
 
   jira-wiki-markup = self.callPackage (./pkgs/jira-wiki-markup.nix) { };
 
+  jose = self.callPackage (./pkgs/jose.nix) { };
+
   js-chart = self.callPackage (./pkgs/js-chart.nix) { };
 
   js-dgtable = self.callPackage (./pkgs/js-dgtable.nix) { };
@@ -1389,6 +1399,10 @@ self: with pkgs.haskell.lib; {
 
   servant = self.callPackage (./pkgs/servant.nix) { };
 
+  servant-auth = self.callPackage (./pkgs/servant-auth.nix) { };
+
+  servant-auth-server = self.callPackage (./pkgs/servant-auth-server.nix) { };
+
   servant-blaze = self.callPackage (./pkgs/servant-blaze.nix) { };
 
   servant-client = self.callPackage (./pkgs/servant-client.nix) { };
@@ -1842,6 +1856,8 @@ self: with pkgs.haskell.lib; {
   word-wrap = self.callPackage (./pkgs/word-wrap.nix) { };
 
   word8 = self.callPackage (./pkgs/word8.nix) { };
+
+  wreq = self.callPackage (./pkgs/wreq.nix) { };
 
   wuss = self.callPackage (./pkgs/wuss.nix) { };
 
