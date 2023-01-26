@@ -822,6 +822,7 @@ let packages =
       , retry = H.callHackage "retry" "0.9.3.0"
       , rope-utf16-splay = H.callHackage "rope-utf16-splay" "0.4.0.0"
       , row-types = H.callHackage "row-types" "1.0.1.2"
+      , RSA = H.callHackage "RSA" "2.4.1"
       , safe-coloured-text-layout =
           H.callHackage "safe-coloured-text-layout" "0.0.0.0"
       , safe-coloured-text-terminfo =
