@@ -1116,6 +1116,7 @@ let packages =
       , word-compat = H.callHackage "word-compat" "0.0.6"
       , word-wrap = H.callHackage "word-wrap" "0.5"
       , word8 = H.callHackage "word8" "0.1.3"
+      , wreq = H.callHackage "wreq" "0.5.3.3"
       , wuss = H.callHackage "wuss" "2.0.0.2"
       , x509-store = H.callHackage "x509-store" "1.6.9"
       , x509-system = H.callHackage "x509-system" "1.6.7"
