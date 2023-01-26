@@ -1399,6 +1399,8 @@ self: with pkgs.haskell.lib; {
 
   servant = self.callPackage (./pkgs/servant.nix) { };
 
+  servant-auth = self.callPackage (./pkgs/servant-auth.nix) { };
+
   servant-blaze = self.callPackage (./pkgs/servant-blaze.nix) { };
 
   servant-client = self.callPackage (./pkgs/servant-client.nix) { };

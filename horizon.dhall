@@ -850,6 +850,7 @@ let packages =
       , semver = H.callHackage "semver" "0.4.0.1"
       , serialise = H.callHackage "serialise" "0.2.6.0"
       , servant = callGitServant "servant"
+      , servant-auth = H.callHackage "servant-auth" "0.4.1.0"
       , servant-blaze = H.callHackage "servant-blaze" "0.9.1"
       , servant-client-core = callGitServant "servant-client-core"
       , servant-client = callGitServant "servant-client"
