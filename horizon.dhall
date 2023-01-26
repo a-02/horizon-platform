@@ -237,6 +237,7 @@ let packages =
       , cryptohash = H.callHackage "cryptohash" "0.11.9"
       , crypto-api-tests = H.callHackage "crypto-api-tests" "0.3"
       , crypto-api = H.callHackage "crypto-api" "0.13.3"
+      , crypto-pubkey-types = H.callHackage "crypto-pubkey-types" "0.4.3"
       , daemons = H.callHackage "daemons" "0.3.0"
       , data-binary-ieee754 = H.callHackage "data-binary-ieee754" "0.4.4"
       , data-clist = H.callHackage "data-clist" "0.2"
