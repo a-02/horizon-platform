@@ -112,6 +112,7 @@ let packages =
       , attoparsec-binary = H.callHackage "attoparsec-binary" "0.2"
       , attoparsec-iso8601 = H.callHackage "attoparsec-iso8601" "1.1.0.0"
       , attoparsec = H.callHackage "attoparsec" "0.14.4"
+      , authenticate-oauth = H.callHackage "authenticate-oauth" "1.7"
       , auto-update = H.callHackage "auto-update" "0.1.6"
       , autodocodec = H.callHackage "autodocodec" "0.2.0.1"
       , autodocodec-schema = H.callHackage "autodocodec-schema" "0.1.0.2"
