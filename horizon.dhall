@@ -554,6 +554,7 @@ let packages =
       , iso8601-time = H.callHackage "iso8601-time" "0.1.5"
       , iwlib = H.callHackage "iwlib" "0.1.2"
       , jira-wiki-markup = H.callHackage "jira-wiki-markup" "1.4.0"
+      , jose = H.callHackage "jose" "0.9"
       , js-chart = H.callHackage "js-chart" "2.9.4.1"
       , js-dgtable = H.callHackage "js-dgtable" "0.5.2"
       , js-flot = H.callHackage "js-flot" "0.8.3"

@@ -873,6 +873,8 @@ self: with pkgs.haskell.lib; {
 
   jira-wiki-markup = self.callPackage (./pkgs/jira-wiki-markup.nix) { };
 
+  jose = self.callPackage (./pkgs/jose.nix) { };
+
   js-chart = self.callPackage (./pkgs/js-chart.nix) { };
 
   js-dgtable = self.callPackage (./pkgs/js-dgtable.nix) { };
