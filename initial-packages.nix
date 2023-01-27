@@ -1401,6 +1401,8 @@ self: with pkgs.haskell.lib; {
 
   servant-auth = self.callPackage (./pkgs/servant-auth.nix) { };
 
+  servant-auth-client = self.callPackage (./pkgs/servant-auth-client.nix) { };
+
   servant-auth-server = self.callPackage (./pkgs/servant-auth-server.nix) { };
 
   servant-blaze = self.callPackage (./pkgs/servant-blaze.nix) { };
