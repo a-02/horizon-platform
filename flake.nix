@@ -46,7 +46,7 @@
 
         legacyPackages = pkgs.callPackage (nixpkgs + /pkgs/development/haskell-modules) {
           buildHaskellPackages = pkgs.haskell.packages.ghc944;
-          compilerConfig = pkgs.callPackage ./configuration-ghc-9.4.x.nix { inherit haskellLib; };
+          compilerConfig = pkgs.callPackage ./configuration-ghc.nix { inherit haskellLib; };
           configurationArm = { pkgs, haskellLib }: self: super: { };
           configurationCommon = import ./configuration.nix;
           configurationDarwin = { pkgs, haskellLib }: self: super: { };
