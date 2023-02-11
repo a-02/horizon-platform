@@ -7,6 +7,7 @@
     };
     lint-utils.url = "git+https://gitlab.homotopic.tech/nix/lint-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    horizon-gen-nix-flake.url = "git+https://gitlab.homotopic.tech/horizon/horizon-gen-nix";
   };
 
   outputs =
@@ -15,6 +16,7 @@
     , get-flake
     , flake-utils
     , horizon-platform
+    , horizon-gen-nix-flake
     , lint-utils
     , nixpkgs
     , ...
@@ -36,7 +38,7 @@
           runtimeInputs = with pkgs; [ ghc cabal-install ];
           text = ''
             cabal update
-            ${horizon-platform-prev.legacyPackages.${system}.horizon-gen-nix}/bin/horizon-gen-nix;
+            ${horizon-gen-nix-flake.legacyPackages.${system}.horizon-gen-nix}/bin/horizon-gen-nix;
             ${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt pkgs/*
             ${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt initial-packages.nix
           '';
