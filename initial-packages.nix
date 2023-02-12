@@ -535,6 +535,8 @@ self: with pkgs.haskell.lib; {
 
   fixed = self.callPackage (./pkgs/fixed.nix) { };
 
+  floatshow = self.callPackage (./pkgs/floatshow.nix) { };
+
   fmlist = self.callPackage (./pkgs/fmlist.nix) { };
 
   fmt = self.callPackage (./pkgs/fmt.nix) { };

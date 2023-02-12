@@ -360,6 +360,7 @@ let packages =
       , first-class-families = H.callHackage "first-class-families" "0.8.0.1"
       , fin = H.callHackage "fin" "0.2.1"
       , fixed = H.callHackage "fixed" "0.3"
+      , floatshow = H.callHackage "floatshow" "0.2.4"
       , fmlist = H.callHackage "fmlist" "0.9.4"
       , fmt = H.callHackage "fmt" "0.6.3.0"
       , foldl = H.callHackage "foldl" "1.4.12"
