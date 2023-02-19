@@ -1051,6 +1051,8 @@ self: with pkgs.haskell.lib; {
 
   mono-traversable = self.callPackage (./pkgs/mono-traversable.nix) { };
 
+  monoid-extras = self.callPackage (./pkgs/monoid-extras.nix) { };
+
   monoid-subclasses = self.callPackage (./pkgs/monoid-subclasses.nix) { };
 
   monoidal-containers = self.callPackage (./pkgs/monoidal-containers.nix) { };

@@ -657,6 +657,7 @@ let packages =
       , monad-primitive = H.callHackage "monad-primitive" "0.1"
       , mono-traversable = H.callHackage "mono-traversable" "1.0.15.3"
       , monoidal-containers = H.callHackage "monoidal-containers" "0.6.3.0"
+      , monoid-extras = H.callHackage "monoid-extras" "0.6.2"
       , monoid-subclasses = H.callHackage "monoid-subclasses" "1.1.3"
       , mtl-compat = H.callHackage "mtl-compat" "0.2.2"
       , mtl-prelude = H.callHackage "mtl-prelude" "2.0.3.1"
