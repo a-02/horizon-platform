@@ -1,6 +1,6 @@
 let H =
-      https://gitlab.homotopic.tech/horizon/horizon-spec/-/raw/0.4.2/dhall/package.dhall
-        sha256:63d99b8dc5d0a7b25230dfde746003c5f4b30a607c89f6a104634062eec44503
+      https://gitlab.homotopic.tech/horizon/horizon-spec/-/raw/0.6/dhall/package.dhall
+        sha256:9a80164572526dc5350f105c8db0790fdf36634629b4cf03402ba14fd173d121
 
 let callHorizonAdopted
     : H.Name → H.Revision → H.HaskellPackage.Type
@@ -437,7 +437,7 @@ let packages =
       , ghc-byteorder = H.callHackage "ghc-byteorder" "4.11.0.0.10"
       , ghc-check = H.callHackage "ghc-check" "0.5.0.8"
       , ghc-exactprint = H.callHackage "ghc-exactprint" "1.6.1.1"
-      , ghc-lib-parser = H.callHackage "ghc-lib-parser" "9.4.2.20220822"
+      , ghc-lib-parser = H.callHackage "ghc-lib-parser" "9.4.4.20220822"
       , ghc-lib-parser-ex = H.callHackage "ghc-lib-parser-ex" "9.4.0.0"
       , ghc-paths = H.callHackage "ghc-paths" "0.1.0.12"
       , ghc-tcplugins-extra = H.callHackage "ghc-tcplugins-extra" "0.4.3"
@@ -1159,5 +1159,5 @@ let packages =
 in  H.HorizonExport.MakePackageSet
       { packagesDir = "pkgs"
       , packageSetFile = "initial-packages.nix"
-      , packageSet = { compiler = "ghc-9.4.2", packages = toMap packages }
+      , packageSet = { compiler = "ghc-9.4.4", packages = toMap packages }
       }

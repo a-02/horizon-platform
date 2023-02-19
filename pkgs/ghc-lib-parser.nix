@@ -21,8 +21,8 @@
 }:
 mkDerivation {
   pname = "ghc-lib-parser";
-  version = "9.4.2.20220822";
-  sha256 = "3eb1fd79734728fffb39c98a4a42747d0db2d35380fec8ab24bbea5d76b93847";
+  version = "9.4.4.20221225";
+  sha256 = "67f6d80ce04d4178b762c7e139388c1106a818d8a532a5ac458c8209ef61652b";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = true;
