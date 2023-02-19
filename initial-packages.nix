@@ -873,6 +873,8 @@ self: with pkgs.haskell.lib; {
 
   interpolate = self.callPackage (./pkgs/interpolate.nix) { };
 
+  intervals = self.callPackage (./pkgs/intervals.nix) { };
+
   invariant = self.callPackage (./pkgs/invariant.nix) { };
 
   io-streams = self.callPackage (./pkgs/io-streams.nix) { };

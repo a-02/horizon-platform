@@ -554,6 +554,7 @@ let packages =
       , int-cast = H.callHackage "int-cast" "0.2.0.0"
       , integer-logarithms = H.callHackage "integer-logarithms" "1.0.3.1"
       , interpolate = H.callHackage "interpolate" "0.2.1"
+      , intervals = H.callHackage "intervals" "0.9.2"
       , invariant = H.callHackage "invariant" "0.6"
       , io-streams-haproxy = H.callHackage "io-streams-haproxy" "1.0.1.0"
       , io-streams = H.callHackage "io-streams" "1.5.2.2"
