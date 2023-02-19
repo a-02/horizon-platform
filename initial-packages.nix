@@ -453,6 +453,8 @@ self: with pkgs.haskell.lib; {
 
   double-conversion = self.callPackage (./pkgs/double-conversion.nix) { };
 
+  dual-tree = self.callPackage (./pkgs/dual-tree.nix) { };
+
   easy-file = self.callPackage (./pkgs/easy-file.nix) { };
 
   echo = self.callPackage (./pkgs/echo.nix) { };
