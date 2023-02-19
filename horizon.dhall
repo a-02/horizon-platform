@@ -995,6 +995,7 @@ let packages =
           H.callHackage "test-framework-quickcheck2" "0.3.0.5"
       , test-framework-smallcheck =
           H.callHackage "test-framework-smallcheck" "0.2"
+      , testing-feat = H.callHackage "testing-feat" "1.1.1.1"
       , testing-type-modifiers =
           H.callHackage "testing-type-modifiers" "0.1.0.1"
       , texmath = H.callHackage "texmath" "0.12.5.4"

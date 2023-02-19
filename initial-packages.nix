@@ -1637,6 +1637,8 @@ self: with pkgs.haskell.lib; {
 
   test-framework-th = self.callPackage (./pkgs/test-framework-th.nix) { };
 
+  testing-feat = self.callPackage (./pkgs/testing-feat.nix) { };
+
   testing-type-modifiers = self.callPackage (./pkgs/testing-type-modifiers.nix) { };
 
   texmath = self.callPackage (./pkgs/texmath.nix) { };
