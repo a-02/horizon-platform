@@ -413,6 +413,8 @@ self: with pkgs.haskell.lib; {
 
   dhall-json = self.callPackage (./pkgs/dhall-json.nix) { };
 
+  diagrams-solve = self.callPackage (./pkgs/diagrams-solve.nix) { };
+
   dictionary-sharing = self.callPackage (./pkgs/dictionary-sharing.nix) { };
 
   digest = self.callPackage (./pkgs/digest.nix) { };

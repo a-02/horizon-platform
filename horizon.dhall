@@ -271,6 +271,7 @@ let packages =
       , deriving-aeson = H.callHackage "deriving-aeson" "0.2.8"
       , dhall = H.callHackage "dhall" "1.41.2"
       , dhall-json = H.callHackage "dhall-json" "1.7.11"
+      , diagrams-solve = H.callHackage "diagrams-solve" "0.1.3"
       , dictionary-sharing = H.callHackage "dictionary-sharing" "0.1.0.0"
       , digest = H.callHackage "digest" "0.0.1.3"
       , dimensional = H.callHackage "dimensional" "1.5"
