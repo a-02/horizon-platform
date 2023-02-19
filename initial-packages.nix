@@ -1037,6 +1037,8 @@ self: with pkgs.haskell.lib; {
 
   monad-peel = self.callPackage (./pkgs/monad-peel.nix) { };
 
+  monad-primitive = self.callPackage (./pkgs/monad-primitive.nix) { };
+
   monad-time = self.callPackage (./pkgs/monad-time.nix) { };
 
   monads-tf = self.callPackage (./pkgs/monads-tf.nix) { };
