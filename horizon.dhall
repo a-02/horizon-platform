@@ -684,6 +684,7 @@ let packages =
       , newtype = H.callHackage "newtype" "0.2.2.0"
       , nonempty-vector = H.callHackage "nonempty-vector" "0.2.1.0"
       , nothunks = H.callHackage "nothunks" "0.1.3"
+      , numeric-extras = H.callHackage "numeric-extras" "0.1"
       , numtype-dk = H.callHackage "numtype-dk" "0.5.0.3"
       , odd-jobs =
           H.callGit

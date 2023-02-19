@@ -1107,6 +1107,8 @@ self: with pkgs.haskell.lib; {
 
   nothunks = self.callPackage (./pkgs/nothunks.nix) { };
 
+  numeric-extras = self.callPackage (./pkgs/numeric-extras.nix) { };
+
   numtype-dk = self.callPackage (./pkgs/numtype-dk.nix) { };
 
   odd-jobs = self.callPackage (./pkgs/odd-jobs.nix) { };
