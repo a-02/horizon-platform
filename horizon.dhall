@@ -273,6 +273,7 @@ let packages =
       , dhall = H.callHackage "dhall" "1.41.2"
       , dhall-json = H.callHackage "dhall-json" "1.7.11"
       , diagrams-core = H.callHackage "diagrams-core" "1.5.0.1"
+      , diagrams-lib = H.callHackage "diagrams-lib" "1.4.5.3"
       , diagrams-solve = H.callHackage "diagrams-solve" "0.1.3"
       , dictionary-sharing = H.callHackage "dictionary-sharing" "0.1.0.0"
       , digest = H.callHackage "digest" "0.0.1.3"

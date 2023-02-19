@@ -417,6 +417,8 @@ self: with pkgs.haskell.lib; {
 
   diagrams-core = self.callPackage (./pkgs/diagrams-core.nix) { };
 
+  diagrams-lib = self.callPackage (./pkgs/diagrams-lib.nix) { };
+
   diagrams-solve = self.callPackage (./pkgs/diagrams-solve.nix) { };
 
   dictionary-sharing = self.callPackage (./pkgs/dictionary-sharing.nix) { };
