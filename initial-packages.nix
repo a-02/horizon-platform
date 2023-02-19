@@ -301,6 +301,8 @@ self: with pkgs.haskell.lib; {
 
   conduit-extra = self.callPackage (./pkgs/conduit-extra.nix) { };
 
+  conduit-parse = self.callPackage (./pkgs/conduit-parse.nix) { };
+
   config-ini = self.callPackage (./pkgs/config-ini.nix) { };
 
   connection = self.callPackage (./pkgs/connection.nix) { };
