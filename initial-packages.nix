@@ -1107,6 +1107,8 @@ self: with pkgs.haskell.lib; {
 
   openssl-streams = self.callPackage (./pkgs/openssl-streams.nix) { };
 
+  operational = self.callPackage (./pkgs/operational.nix) { };
+
   optics = self.callPackage (./pkgs/optics.nix) { };
 
   optics-core = self.callPackage (./pkgs/optics-core.nix) { };

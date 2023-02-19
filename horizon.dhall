@@ -688,6 +688,7 @@ let packages =
       , one-liner = H.callHackage "one-liner" "2.1"
       , openapi3 = H.callHackage "openapi3" "3.2.2"
       , openssl-streams = H.callHackage "openssl-streams" "1.2.3.0"
+      , operational = H.callHackage "operational" "0.2.4.2"
       , optics-core = H.callHackage "optics-core" "0.4.1"
       , optics-extra = H.callHackage "optics-extra" "0.4.2.1"
       , optics-th = H.callHackage "optics-th" "0.4.1"
