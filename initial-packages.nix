@@ -1361,6 +1361,8 @@ self: with pkgs.haskell.lib; {
 
   row-types = self.callPackage (./pkgs/row-types.nix) { };
 
+  rvar = self.callPackage (./pkgs/rvar.nix) { };
+
   safe = self.callPackage (./pkgs/safe.nix) { };
 
   safe-coloured-text = self.callPackage (./pkgs/safe-coloured-text.nix) { };
