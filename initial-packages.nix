@@ -77,6 +77,8 @@ self: with pkgs.haskell.lib; {
 
   abstract-par = self.callPackage (./pkgs/abstract-par.nix) { };
 
+  active = self.callPackage (./pkgs/active.nix) { };
+
   adjunctions = self.callPackage (./pkgs/adjunctions.nix) { };
 
   aeson = self.callPackage (./pkgs/aeson.nix) { };

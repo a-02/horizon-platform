@@ -89,6 +89,7 @@ let packages =
       , abstract-deque-tests = H.callHackage "abstract-deque-tests" "0.3"
       , abstract-deque = H.callHackage "abstract-deque" "0.3"
       , abstract-par = H.callHackage "abstract-par" "0.3.3"
+      , active = H.callHackage "active" "0.2.0.16"
       , adjunctions = H.callHackage "adjunctions" "4.4.2"
       , aeson = H.callHackage "aeson" "2.1.0.0"
       , aeson-pretty = H.callHackage "aeson-pretty" "0.8.9"
