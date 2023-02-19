@@ -39,6 +39,8 @@ self: with pkgs.haskell.lib; {
 
   ListLike = self.callPackage (./pkgs/ListLike.nix) { };
 
+  MonadPrompt = self.callPackage (./pkgs/MonadPrompt.nix) { };
+
   MonadRandom = self.callPackage (./pkgs/MonadRandom.nix) { };
 
   OneTuple = self.callPackage (./pkgs/OneTuple.nix) { };

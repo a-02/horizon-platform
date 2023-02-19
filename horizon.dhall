@@ -72,6 +72,7 @@ let packages =
       , ListLike = H.callHackage "ListLike" "4.7.7"
       , JuicyPixels = H.callHackage "JuicyPixels" "3.3.8"
       , MonadRandom = H.callHackage "MonadRandom" "0.5.3"
+      , MonadPrompt = H.callHackage "MonadPrompt" "1.0.0.5"
       , OneTuple = H.callHackage "OneTuple" "0.3.1"
       , Only = H.callHackage "Only" "0.1"
       , OpenGLRaw = H.callHackage "OpenGLRaw" "3.3.4.1"
