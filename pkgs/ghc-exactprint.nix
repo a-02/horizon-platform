@@ -22,10 +22,8 @@
 }:
 mkDerivation {
   pname = "ghc-exactprint";
-  version = "1.6.0";
-  sha256 = "8eb59736bbf052a380d5c72277abad05802730b37629ea67a4517b2d88dd40fa";
-  revision = "1";
-  editedCabalFile = "14ilvq5j0x153x6y4sxhks3fccwb0m03b029ffi9pvf1g6y3pqh7";
+  version = "1.6.1.1";
+  sha256 = "8883b247ca97c8720c047b820941c1119c4537c0121b21b02cca441ea12df437";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
