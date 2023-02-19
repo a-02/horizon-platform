@@ -15,6 +15,8 @@ self: with pkgs.haskell.lib; {
 
   Cabal-tree-diff = self.callPackage (./pkgs/Cabal-tree-diff.nix) { };
 
+  Chart = self.callPackage (./pkgs/Chart.nix) { };
+
   ChasingBottoms = self.callPackage (./pkgs/ChasingBottoms.nix) { };
 
   Decimal = self.callPackage (./pkgs/Decimal.nix) { };

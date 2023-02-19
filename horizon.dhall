@@ -59,6 +59,7 @@ let packages =
       , Cabal-described = callGitCabal "Cabal-described"
       , Cabal-syntax = callGitCabal "Cabal-syntax"
       , Cabal-tree-diff = callGitCabal "Cabal-tree-diff"
+      , Chart = H.callHackage "Chart" "1.9.4"
       , ChasingBottoms = H.callHackage "ChasingBottoms" "1.3.1.12"
       , Decimal = H.callHackage "Decimal" "0.5.2"
       , Diff = H.callHackage "Diff" "0.4.1"
