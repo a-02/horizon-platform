@@ -39,7 +39,7 @@ let callGitKvStoreEffectful
     : H.Subdir → H.HaskellPackage.Type
     = λ(subdir : H.Subdir) →
         H.callGit
-          "https://github.com/TeofilC/servant"
+          "https://github.com/haskell-effectful/kvstore-effectful"
           "3502825423aea3a1af9384e9d751feea4599c60b"
           (Some subdir)
 
