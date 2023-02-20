@@ -1062,11 +1062,7 @@ let packages =
       , tasty-discover = H.callHackage "tasty-discover" "5.0.0"
       , tasty-expected-failure = H.callHackage "tasty-expected-failure" "0.12.3"
       , tasty-golden = H.callHackage "tasty-golden" "2.3.5"
-      , tasty-hedgehog =
-          H.callGit
-            "https://github.com/locallycompact/tasty-hedgehog"
-            "4a3477578ed21aa82e5b74f387d08e5d750635d6"
-            (None Text)
+      , tasty-hedgehog = H.callHackage "tasty-hedgehog" "1.4.0.0"
       , tasty-hslua = H.callHackage "tasty-hslua" "1.0.2"
       , tasty-hspec = H.callHackage "tasty-hspec" "1.2.0.1"
       , tasty-hunit =
