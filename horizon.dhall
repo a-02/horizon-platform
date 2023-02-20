@@ -323,11 +323,7 @@ let packages =
       , doctest-parallel = H.callHackage "doctest-parallel" "0.2.5"
       , dom-lt = H.callHackage "dom-lt" "0.2.3"
       , dotgen = H.callHackage "dotgen" "0.4.3"
-      , double-conversion =
-          H.callGit
-            "https://github.com/haskell/double-conversion"
-            "5d092e0664442eaac8ae1d101dba57ce9b1c9b03"
-            (None Text)
+      , double-conversion = H.callHackage "double-conversion" "2.0.4.2"
       , dual-tree = H.callHackage "dual-tree" "0.2.3.1"
       , easy-file = H.callHackage "easy-file" "0.2.2"
       , echo = H.callHackage "echo" "0.1.4"

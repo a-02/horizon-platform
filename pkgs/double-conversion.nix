@@ -2,7 +2,6 @@
 , HUnit
 , base
 , bytestring
-, fetchgit
 , ghc-prim
 , lib
 , system-cxx-std-lib
@@ -13,13 +12,10 @@
 }:
 mkDerivation {
   pname = "double-conversion";
-  version = "2.0.4.1";
-  src = fetchgit {
-    url = "https://github.com/haskell/double-conversion";
-    sha256 = "0z27zd1nyydz6hirbbdyhqmd4nbxcn7vcfx6jvlygrm4jwmhkr9b";
-    rev = "5d092e0664442eaac8ae1d101dba57ce9b1c9b03";
-    fetchSubmodules = true;
-  };
+  version = "2.0.4.2";
+  sha256 = "9ab8bc1f0fa7de356c07b23d7d684b6c3ddfa542fd56ea422fb5fd17000aec64";
+  revision = "2";
+  editedCabalFile = "1mpnx4m2pg5crfz9k8wamh5mgsha0np3ynnllrmglmwh54gvfjj3";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
