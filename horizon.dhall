@@ -181,11 +181,7 @@ let packages =
       , cabal-doctest = H.callHackage "cabal-doctest" "1.0.9"
       , cabal-install = H.callHackage "cabal-install" "3.8.1.0"
       , cabal-install-solver = H.callHackage "cabal-install-solver" "3.8.1.0"
-      , cabal2nix =
-          H.callGit
-            "https://github.com/NixOS/cabal2nix"
-            "8e97f51e4bd4e5b9ff79391aa599ed8547771954"
-            (Some "cabal2nix")
+      , cabal2nix = H.callHackage "cabal2nix" "2.19.1"
       , cache = H.callHackage "cache" "0.1.3.0"
       , call-stack = H.callHackage "call-stack" "0.4.0"
       , canonical-json = H.callHackage "canonical-json" "0.6.0.1"
