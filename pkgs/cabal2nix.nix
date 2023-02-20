@@ -8,7 +8,6 @@
 , deepseq
 , directory
 , distribution-nixpkgs
-, fetchgit
 , filepath
 , hackage-db
 , hopenssl
@@ -33,13 +32,7 @@
 mkDerivation {
   pname = "cabal2nix";
   version = "2.19.1";
-  src = fetchgit {
-    url = "https://github.com/NixOS/cabal2nix";
-    sha256 = "1n4jy4xsrzywqvzicsca6kaw4bp0xdz5qfkvj7bkh4np9p3hnj08";
-    rev = "8e97f51e4bd4e5b9ff79391aa599ed8547771954";
-    fetchSubmodules = true;
-  };
-  postUnpack = "sourceRoot+=/cabal2nix/; echo source root reset to $sourceRoot";
+  sha256 = "e0dba35dba0917f4663ba3aee131341dcbf2241112227e07e4d4cfbe37f667b2";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

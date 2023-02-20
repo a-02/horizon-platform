@@ -181,11 +181,7 @@ let packages =
       , cabal-doctest = H.callHackage "cabal-doctest" "1.0.9"
       , cabal-install = H.callHackage "cabal-install" "3.8.1.0"
       , cabal-install-solver = H.callHackage "cabal-install-solver" "3.8.1.0"
-      , cabal2nix =
-          H.callGit
-            "https://github.com/NixOS/cabal2nix"
-            "8e97f51e4bd4e5b9ff79391aa599ed8547771954"
-            (Some "cabal2nix")
+      , cabal2nix = H.callHackage "cabal2nix" "2.19.1"
       , cache = H.callHackage "cache" "0.1.3.0"
       , call-stack = H.callHackage "call-stack" "0.4.0"
       , canonical-json = H.callHackage "canonical-json" "0.6.0.1"
@@ -327,11 +323,7 @@ let packages =
       , doctest-parallel = H.callHackage "doctest-parallel" "0.2.5"
       , dom-lt = H.callHackage "dom-lt" "0.2.3"
       , dotgen = H.callHackage "dotgen" "0.4.3"
-      , double-conversion =
-          H.callGit
-            "https://github.com/haskell/double-conversion"
-            "5d092e0664442eaac8ae1d101dba57ce9b1c9b03"
-            (None Text)
+      , double-conversion = H.callHackage "double-conversion" "2.0.4.2"
       , dual-tree = H.callHackage "dual-tree" "0.2.3.1"
       , easy-file = H.callHackage "easy-file" "0.2.2"
       , echo = H.callHackage "echo" "0.1.4"
@@ -1057,20 +1049,12 @@ let packages =
             "https://github.com/locallycompact/tar"
             "107c0b78524acfd0e77e767b83073492008bea0c"
             (None Text)
-      , tasty =
-          H.callGit
-            "https://github.com/UnkindPartition/tasty"
-            "207d3453a64b414593512c1e968171d64a8dbe61"
-            (Some "core")
+      , tasty = H.callHackage "tasty" "1.4.3"
       , tasty-bench = H.callHackage "tasty-bench" "0.3.2"
       , tasty-discover = H.callHackage "tasty-discover" "5.0.0"
       , tasty-expected-failure = H.callHackage "tasty-expected-failure" "0.12.3"
       , tasty-golden = H.callHackage "tasty-golden" "2.3.5"
-      , tasty-hedgehog =
-          H.callGit
-            "https://github.com/locallycompact/tasty-hedgehog"
-            "4a3477578ed21aa82e5b74f387d08e5d750635d6"
-            (None Text)
+      , tasty-hedgehog = H.callHackage "tasty-hedgehog" "1.4.0.0"
       , tasty-hslua = H.callHackage "tasty-hslua" "1.0.2"
       , tasty-hspec = H.callHackage "tasty-hspec" "1.2.0.1"
       , tasty-hunit =

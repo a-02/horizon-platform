@@ -1,6 +1,5 @@
 { mkDerivation
 , base
-, fetchgit
 , hedgehog
 , lib
 , tagged
@@ -9,13 +8,8 @@
 }:
 mkDerivation {
   pname = "tasty-hedgehog";
-  version = "1.2.0.0";
-  src = fetchgit {
-    url = "https://github.com/locallycompact/tasty-hedgehog";
-    sha256 = "1ql4wsah4zz2dizakgh3lfgbbq9c3c6nmypcp6fl3i96pbdj2bh5";
-    rev = "4a3477578ed21aa82e5b74f387d08e5d750635d6";
-    fetchSubmodules = true;
-  };
+  version = "1.4.0.0";
+  sha256 = "93e4009389a7c14a37e9195ff8a96b739438543e2d408d089eebec6e715c9cbd";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
