@@ -1053,11 +1053,7 @@ let packages =
             "https://github.com/locallycompact/tar"
             "107c0b78524acfd0e77e767b83073492008bea0c"
             (None Text)
-      , tasty =
-          H.callGit
-            "https://github.com/UnkindPartition/tasty"
-            "207d3453a64b414593512c1e968171d64a8dbe61"
-            (Some "core")
+      , tasty = H.callHackage "tasty" "1.4.3"
       , tasty-bench = H.callHackage "tasty-bench" "0.3.2"
       , tasty-discover = H.callHackage "tasty-discover" "5.0.0"
       , tasty-expected-failure = H.callHackage "tasty-expected-failure" "0.12.3"
