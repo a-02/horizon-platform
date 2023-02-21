@@ -46,6 +46,7 @@ import qualified Data.Vector               as V
 import qualified Data.Yaml                 as Y
 import qualified Data.Yaml.Pretty          as Y
 import qualified Dhall
+import Data.Monoid
 import           Graphics.Vty.Attributes
 import           Graphics.Vty.Input.Events
 import           Horizon.Spec
@@ -161,8 +162,8 @@ interpretVim = interpret $ \case
   Quit -> embed $ halt
   Yank -> embed $ pure ()
 
-brickEventToVim :: Members '[Vim y, State (Last Char)] r => BrickEvent Text e -> Sem r ()
-brickEventToVim (VtyEvent (EvKey KDown [])) = clear >> moveDown
+brickEventToVim :: Members '[Vim y, State (Maybe Char)] r => BrickEvent Text e -> Sem r ()
+brickEventToVim (VtyEvent (EvKey KDown [])) = moveDown
 brickEventToVim (VtyEvent (EvKey KUp [])) = moveUp
 brickEventToVim (VtyEvent (EvKey (KChar 'j') [])) = moveDown
 brickEventToVim (VtyEvent (EvKey (KChar 'k') [])) = moveUp
