@@ -21,8 +21,8 @@
 }:
 mkDerivation {
   pname = "horizon-gen-nix";
-  version = "0.5";
-  sha256 = "5b57b9038d9dd0e29e8c32acc979b2c753b078ab81f61dfaa3f2609a57451515";
+  version = "0.6";
+  sha256 = "814a01e62e66aca869df8738656e1c351a9b20a6cfe1f25fac2070f6073f0db6";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
