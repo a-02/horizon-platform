@@ -11,6 +11,8 @@
 
 module ShellRC where
 
+import Dhall.Core
+import Dhall.Src
 import           Brick                     (BrickEvent (VtyEvent), EventM,
                                             Padding (..),
                                             ViewportType (Vertical), Widget,
@@ -33,6 +35,7 @@ import qualified Data.Aeson.KeyMap         as A
 import qualified Data.Aeson.Lens           as L
 import qualified Data.ByteString           as B
 import           Data.ByteString.Lazy.UTF8 as BLU
+import qualified Dhall.Map as DMap
 import qualified Data.ByteString.Lazy.UTF8 as BU
 import           Data.Kind                 (Type)
 import qualified Data.List
@@ -245,6 +248,34 @@ readDerivation (MkPackagesDir d) (MkName x) = do
   let j = d </> f'
   q <- B.readFile $ toFilePath j
   pure $ T.decodeUtf8Lenient q
+
+callHackageLit :: Expr Src Import
+callHackageLit = Field "H" (FieldSelection Nothing "callHackage" Nothing)
+
+callGitLit :: Expr Src Import
+callGitLit = Field "H" (FieldSelection Nothing "callGit" Nothing)
+
+callHackageApp :: Name -> Version -> Expr Src Import
+callHackageApp (MkName x) (MkVersion v) = App (App callHackageLit (TextLit $ Chunks [] x)) (TextLit $ Chunks [] v)
+
+callGitApp :: Repo -> Revision -> Expr Src Import
+callGitApp (MkRepo (MkUrl x)) (MkRevision v) = App (App callGitLit (TextLit $ Chunks [] x)) (TextLit $ Chunks [] v)
+
+
+f :: Name -> HaskellPackage -> (Name, RecordField Src Import)
+f x k = case source k of
+  FromHackage (MkHackageSource n v) -> (x, RecordField Nothing (callHackageApp n v) Nothing Nothing)
+  FromGit (MkGitSource n v _) -> (x, RecordField Nothing (callGitApp n v) Nothing Nothing)
+
+g :: IO (Expr Src Import)
+g = do 
+  x <- Dhall.inputFile @HorizonExport Dhall.auto "horizon.dhall"
+  pure $ h x
+
+
+h :: HorizonExport -> Expr Src Import
+h (MakePackageSet (MkPackageSetExportSettings d _ (MkPackageSet _ (MkPackageList (Map.toList -> ys))))) = 
+  RecordLit $ DMap.fromList $ map ((\(MkName x, y) -> (x, y)) . uncurry f) ys
 
 go :: IO ()
 go = do
