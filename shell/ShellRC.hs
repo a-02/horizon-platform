@@ -293,11 +293,21 @@ haskellPackageToExpr (MkHaskellPackage s xs ys) =
 packageListToExpr :: PackageList -> Expr s a
 packageListToExpr (MkPackageList (Map.toList -> ys)) = RecordLit . DMap.fromList . map (\(MkName x, y) -> (x, makeRecordField $ haskellPackageToExpr y)) $ ys
 
-h :: HorizonExport -> Expr Src Import
-h (MakePackageSet (MkPackageSetExportSettings (MkPackagesDir d) (MkPackageSetFile f) (MkPackageSet (MkCompiler c) xs))) = letHorizonSpecIn $ letPackagesBindingIn xs $ RecordLit . DMap.fromList $ [
+horizonExportToExpr :: HorizonExport -> Expr s Import
+horizonExportToExpr (MakePackageSet x) = packageSetExportSettingsToExpr x
+
+packageSetExportSettingsToExpr :: PackageSetExportSettings -> Expr s Import
+packageSetExportSettingsToExpr (MkPackageSetExportSettings (MkPackagesDir d) (MkPackageSetFile f) (MkPackageSet (MkCompiler c) xs)) = letHorizonSpecIn $ letPackagesBindingIn xs $ RecordLit . DMap.fromList $ [
     ("packageSetFile", makeRecordField $ TextLit $ Chunks [] (T.pack $ toFilePath f)),
     ("packagesDir", makeRecordField $ TextLit $ Chunks [] $ T.pack $ toFilePath d),
     ("packagesSet", makeRecordField $  RecordLit $ DMap.fromList [("compiler", makeRecordField $ TextLit $ Chunks [] c), ("packages", makeRecordField $ ToMap "packages" Nothing)])]
+
+
+prettyHorizonExport :: HorizonExport -> Text
+prettyHorizonExport = Dhall.Core.pretty . horizonExportToExpr
+
+writeHorizonFile :: HorizonExport -> IO ()
+writeHorizonFile = B.writeFile "horizon.dhall" . T.encodeUtf8 . Dhall.Core.pretty . horizonExportToExpr
 
 loadHorizon :: IO HorizonExport
 loadHorizon = Dhall.inputFile @HorizonExport Dhall.auto "horizon.dhall"
