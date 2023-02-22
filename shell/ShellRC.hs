@@ -266,7 +266,11 @@ callHackageApp :: HackageSource -> Expr s a
 callHackageApp (MkHackageSource (MkName x) (MkVersion v)) = App (App callHackageLit (TextLit $ Chunks [] x)) (TextLit $ Chunks [] v)
 
 callGitApp :: GitSource -> Expr s a
-callGitApp (MkGitSource (MkRepo (MkUrl x)) (MkRevision v) _) = App (App callGitLit (TextLit $ Chunks [] x)) (TextLit $ Chunks [] v)
+callGitApp (MkGitSource (MkRepo (MkUrl x)) (MkRevision v) d) = 
+  let z = case d of
+           Nothing -> App None $ horizonField "Subdir"
+           Just (MkSubdir k) -> Some $ TextLit $ Chunks [] $ T.pack $ toFilePath k
+  in App (App (App callGitLit (TextLit $ Chunks [] x)) (TextLit $ Chunks [] v)) z
 
 callTarballApp :: TarballSource -> Expr s a
 callTarballApp (MkTarballSource (MkUrl x)) = App callTarballLit (TextLit $ Chunks [] x)
@@ -282,7 +286,7 @@ cabalFlagToExpr (MkCabalFlag x) =
   let (z, t) = case x of 
                 Disable a -> (makeFieldSelection "Disable", a)
                 Enable a -> (makeFieldSelection "Enable", a)
-  in App (Field (horizonField "CabalField") z) (TextLit $ Chunks [] t)
+  in App (Field (horizonField "CabalFlag") z) (TextLit $ Chunks [] t)
 
 haskellPackageToExpr :: HaskellPackage -> Expr s a
 haskellPackageToExpr (MkHaskellPackage s xs ys) = 
@@ -297,10 +301,10 @@ horizonExportToExpr :: HorizonExport -> Expr s Import
 horizonExportToExpr (MakePackageSet x) = packageSetExportSettingsToExpr x
 
 packageSetExportSettingsToExpr :: PackageSetExportSettings -> Expr s Import
-packageSetExportSettingsToExpr (MkPackageSetExportSettings (MkPackagesDir d) (MkPackageSetFile f) (MkPackageSet (MkCompiler c) xs)) = letHorizonSpecIn $ letPackagesBindingIn xs $ RecordLit . DMap.fromList $ [
+packageSetExportSettingsToExpr (MkPackageSetExportSettings (MkPackagesDir d) (MkPackageSetFile f) (MkPackageSet (MkCompiler c) xs)) = letHorizonSpecIn $ letPackagesBindingIn xs $ App (Field (horizonField "HorizonExport") (makeFieldSelection "MakePackageSet")) $ RecordLit . DMap.fromList $ [
     ("packageSetFile", makeRecordField $ TextLit $ Chunks [] (T.pack $ toFilePath f)),
     ("packagesDir", makeRecordField $ TextLit $ Chunks [] $ T.pack $ toFilePath d),
-    ("packagesSet", makeRecordField $  RecordLit $ DMap.fromList [("compiler", makeRecordField $ TextLit $ Chunks [] c), ("packages", makeRecordField $ ToMap "packages" Nothing)])]
+    ("packageSet", makeRecordField $  RecordLit $ DMap.fromList [("compiler", makeRecordField $ TextLit $ Chunks [] c), ("packages", makeRecordField $ ToMap "packages" Nothing)])]
 
 
 prettyHorizonExport :: HorizonExport -> Text
@@ -313,7 +317,7 @@ loadHorizon :: IO HorizonExport
 loadHorizon = Dhall.inputFile @HorizonExport Dhall.auto "horizon.dhall"
 
 horizonSpecUrl :: Dhall.Core.URL
-horizonSpecUrl = Dhall.Core.URL HTTPS "" (Dhall.Core.File (Dhall.Core.Directory ["dhall", "0.6", "raw", "-", "horizon-spec", "horizon", "gitlab.homotopic.tech"]) "package.dhall") Nothing Nothing
+horizonSpecUrl = Dhall.Core.URL HTTPS "gitlab.homotopic.tech" (Dhall.Core.File (Dhall.Core.Directory ["dhall", "0.6", "raw", "-", "horizon-spec", "horizon"]) "package.dhall") Nothing Nothing
 
 horizonSpecImportHashed :: ImportHashed
 horizonSpecImportHashed = ImportHashed Nothing (Remote horizonSpecUrl)
