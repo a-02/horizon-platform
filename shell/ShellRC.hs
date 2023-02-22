@@ -277,6 +277,9 @@ h :: HorizonExport -> Expr Src Import
 h (MakePackageSet (MkPackageSetExportSettings d _ (MkPackageSet _ (MkPackageList (Map.toList -> ys))))) = 
   RecordLit $ DMap.fromList $ map ((\(MkName x, y) -> (x, y)) . uncurry f) ys
 
+loadHorizon :: IO HorizonExport
+loadHorizon = Dhall.inputFile @HorizonExport Dhall.auto "horizon.dhall"
+
 go :: IO ()
 go = do
   x <- Dhall.inputFile @HorizonExport Dhall.auto "horizon.dhall"

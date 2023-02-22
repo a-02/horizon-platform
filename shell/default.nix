@@ -54,6 +54,8 @@ let
       :set prompt-function promptFunction
 
       _init
+
+      hz <- loadHorizon
     END
     grep -E '^import .*$' < ${shellrcSrc}/${shellrcModulePath} >> $out
   '';
