@@ -1,9 +1,9 @@
-{-# LANGUAGE AllowAmbiguousTypes #-}
+{-# LANGUAGE AllowAmbiguousTypes       #-}
+{-# LANGUAGE LambdaCase                #-}
 {-# LANGUAGE NoMonomorphismRestriction #-}
-{-# LANGUAGE TemplateHaskell #-}
-{-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE OverloadedLists           #-}
 {-# LANGUAGE OverloadedStrings         #-}
+{-# LANGUAGE TemplateHaskell           #-}
 {-# LANGUAGE ViewPatterns              #-}
 {-# OPTIONS_GHC -Wno-missing-signatures #-}
 {-# OPTIONS_GHC -Wno-unused-imports #-}
@@ -11,27 +11,27 @@
 
 module ShellRC where
 
-import Polysemy.State
-import Control.Monad (void)
-import Control.Monad.IO.Class
-import           Brick                     (BrickEvent (VtyEvent), EventM, gets,
+import           Brick                     (BrickEvent (VtyEvent), EventM,
                                             Padding (..),
                                             ViewportType (Vertical), Widget,
-                                            attrMap, attrName, bg, fg, hBox,
-                                            halt, on, padLeftRight, txt, vScrollBy,
-                                            viewport, viewportScroll, visible,
-                                            withAttr)
+                                            attrMap, attrName, bg, fg, gets,
+                                            hBox, halt, on, padLeftRight, txt,
+                                            vScrollBy, viewport, viewportScroll,
+                                            visible, withAttr)
 import qualified Brick
+import           Brick.Widgets.Border
 import qualified Brick.Widgets.List        as Brick
 import           Brick.Widgets.Table       (Table, renderTable, table)
 import qualified Brick.Widgets.Table       as Brick
 import qualified Control.Lens              as L
+import           Control.Monad             (forM, void)
+import           Control.Monad.IO.Class
 import           Cursor.List.NonEmpty
 import qualified Data.Aeson                as A
 import qualified Data.Aeson.Key            as A
 import qualified Data.Aeson.KeyMap         as A
 import qualified Data.Aeson.Lens           as L
-import qualified Data.ByteString.Lazy      as B
+import qualified Data.ByteString           as B
 import           Data.ByteString.Lazy.UTF8 as BLU
 import qualified Data.ByteString.Lazy.UTF8 as BU
 import           Data.Kind                 (Type)
@@ -39,22 +39,24 @@ import qualified Data.List
 import           Data.List.NonEmpty        (NonEmpty ((:|)))
 import qualified Data.Map                  as Map
 import           Data.Maybe                (fromMaybe)
+import           Data.Monoid
 import           Data.Text                 (Text)
 import qualified Data.Text                 as T
 import qualified Data.Text.Encoding        as T
+import qualified Data.Text.Encoding.Error  as T
 import qualified Data.Vector               as V
 import qualified Data.Yaml                 as Y
 import qualified Data.Yaml.Pretty          as Y
 import qualified Dhall
-import Data.Monoid
 import           Graphics.Vty.Attributes
 import           Graphics.Vty.Input.Events
 import           Horizon.Spec
 import           Network.HTTP.Simple
 import           Path
+import           Polysemy
+import           Polysemy.State
 import           Procex.Prelude
 import           Procex.Shell              hiding (promptFunction)
-import Polysemy
 import           System.Directory
 import           System.Environment
 
@@ -110,26 +112,48 @@ renderHaskellSource (FromGit x)     = renderGitSource x
 renderHaskellSource (FromHackage x) = renderHackageSource x
 
 type PackageListCursor :: Type
-type PackageListCursor = NonEmptyCursor (Name, HaskellPackage) (Name, HaskellPackage)
+type PackageListCursor = NonEmptyCursor (Name, HaskellPackage, Text) (Name, HaskellPackage, Text)
+
+type HorizonTUIState :: Type
+data HorizonTUIState where
+  MkHorizonTUIState :: {
+    packageListCursor :: PackageListCursor,
+    lastChar :: Maybe Char
+  } -> HorizonTUIState
 
 packageListToMatrix :: PackageListCursor -> [[Widget n]]
 packageListToMatrix (NonEmptyCursor xs y zs) = V.toList $ mconcat [
-  fmap (\(k, v) -> [renderName k, renderHaskellSource $ source v]) $ V.fromList $ reverse $ Data.List.take 100 xs,
-  pure $ (\(k, v) -> fmap (withAttr (attrName "highlight")) [visible (renderName k), renderHaskellSource $ source v]) $ y,
-  fmap (\(k, v) -> [renderName k, renderHaskellSource $ source v]) $ V.fromList $ Data.List.take 100 zs
+  fmap (\(k, v, _) -> [renderName k, renderHaskellSource $ source v]) $ V.fromList $ reverse $ Data.List.take 100 xs,
+  pure $ (\(k, v, _) -> fmap (withAttr (attrName "highlight")) [visible (renderName k), renderHaskellSource $ source v]) $ y,
+  fmap (\(k, v, _) -> [renderName k, renderHaskellSource $ source v]) $ V.fromList $ Data.List.take 100 zs
   ]
+
+renderCursorPackageInfo ::  PackageListCursor -> Widget n
+renderCursorPackageInfo (NonEmptyCursor _ y _) = txt . L.view L._3 $ y
 
 packageListToTable :: PackageListCursor -> Table n
 packageListToTable = table . packageListToMatrix
 
-renderPackageList :: PackageListCursor -> Widget Text
-renderPackageList = viewport "Viewy" Vertical . renderTable . packageListToTable
+renderPackageList :: Text -> PackageListCursor -> Widget Text
+renderPackageList x = viewport x Vertical . renderTable . packageListToTable
 
-scrollDown :: EventM e (PackageListCursor, c) ()
-scrollDown =  Brick.modify (\(s, c) -> (fromMaybe s $ nonEmptyCursorSelectNext id id s, c))
+nonEmptyCursorSelectNextClamped :: (a -> b) -> (b -> a) -> NonEmptyCursor a b -> NonEmptyCursor a b
+nonEmptyCursorSelectNextClamped f g s = fromMaybe s $ nonEmptyCursorSelectNext f g s
 
-scrollUp :: EventM e (PackageListCursor, c) ()
-scrollUp =  Brick.modify (\(s, c) -> (fromMaybe s $ nonEmptyCursorSelectPrev id id s, c))
+nonEmptyCursorSelectPrevClamped :: (a -> b) -> (b -> a) -> NonEmptyCursor a b -> NonEmptyCursor a b
+nonEmptyCursorSelectPrevClamped f g s = fromMaybe s $ nonEmptyCursorSelectPrev f g s
+
+scrollDown :: EventM e HorizonTUIState ()
+scrollDown =  Brick.modify (\(MkHorizonTUIState s c) -> MkHorizonTUIState (nonEmptyCursorSelectNextClamped id id s) c)
+
+scrollUp :: EventM e HorizonTUIState ()
+scrollUp =  Brick.modify (\(MkHorizonTUIState s c) -> MkHorizonTUIState (nonEmptyCursorSelectPrevClamped id id s) c)
+
+endOfFile :: EventM e HorizonTUIState ()
+endOfFile = Brick.modify (\(MkHorizonTUIState s c) -> MkHorizonTUIState (nonEmptyCursorSelectLast id id s) c)
+
+startOfFile :: EventM e HorizonTUIState ()
+startOfFile = Brick.modify (\(MkHorizonTUIState s c) -> MkHorizonTUIState (nonEmptyCursorSelectFirst id id s) c)
 
 type Vim :: Type -> (Type -> Type) -> Type -> Type
 data Vim y m a where
@@ -148,19 +172,19 @@ data Vim y m a where
 
 makeSem ''Vim
 
-interpretVim :: Member (Embed (EventM e (PackageListCursor, c))) r => Sem (Vim y ': r) a -> Sem r a
+interpretVim :: Member (Embed (EventM e HorizonTUIState)) r => Sem (Vim y ': r) a -> Sem r a
 interpretVim = interpret $ \case
-  Del -> embed $ pure ()
-  Find -> embed $ pure ()
-  MoveDown -> embed $ scrollDown
-  MoveEndOfFile -> embed $ Brick.modify (\(x, c) -> (nonEmptyCursorSelectLast id id x, c))
-  MoveLeft -> embed $ pure ()
-  MoveRight -> embed $ pure ()
-  MoveStartOfFile -> embed $ Brick.modify (\(x, c) -> (nonEmptyCursorSelectFirst id id x , c))
-  MoveUp -> embed $ scrollUp
-  Paste -> embed $ pure ()
-  Quit -> embed $ halt
-  Yank -> embed $ pure ()
+  Del             -> embed $ pure ()
+  Find            -> embed $ pure ()
+  MoveDown        -> embed $ scrollDown
+  MoveEndOfFile   -> embed $ endOfFile
+  MoveLeft        -> embed $ pure ()
+  MoveRight       -> embed $ pure ()
+  MoveStartOfFile -> embed $ startOfFile
+  MoveUp          -> embed $ scrollUp
+  Paste           -> embed $ pure ()
+  Quit            -> embed $ halt
+  Yank            -> embed $ pure ()
 
 brickEventToVim :: Members '[Vim y, State (Maybe Char)] r => BrickEvent Text e -> Sem r ()
 brickEventToVim (VtyEvent (EvKey KDown [])) = moveDown
@@ -171,34 +195,32 @@ brickEventToVim (VtyEvent (EvKey (KChar 'G') [])) = moveEndOfFile
 brickEventToVim (VtyEvent (EvKey (KChar 'g') [])) = do
   x <- get
   case x of
-    Just 'g' -> do 
-       moveStartOfFile 
+    Just 'g' -> do
+       moveStartOfFile
        put Nothing
     _ -> put $ Just 'g'
 brickEventToVim (VtyEvent (EvKey (KChar 'q') [])) = quit
 brickEventToVim (VtyEvent (EvKey (KChar 'w') [])) = write
-brickEventToVim _ = pure ()
 
- 
+
 semStateToBrickState :: Member (Embed (EventM e s)) r => L.Lens' s t -> Sem (State t ': r) a -> Sem r a
 semStateToBrickState f = interpret $ \case
   Put x -> embed $ Brick.put . L.set f x =<< Brick.get
   Get   -> embed $ L.view f <$> Brick.get
 
-
-handleEvent :: BrickEvent Text e -> EventM Text (PackageListCursor, Maybe Char) ()
-handleEvent x = do
-  runM . semStateToBrickState (L.lens snd (\z k -> (fst z, k))) . interpretVim . brickEventToVim $ x
+handleEvent :: BrickEvent Text e -> EventM Text HorizonTUIState ()
 handleEvent (VtyEvent (EvKey (KChar 'b') [])) = do
-  (MkName x, _) <- Brick.gets (nonEmptyCursorCurrent . fst)
-  let z = mq
+  (MkName x, _, _) <- Brick.gets (nonEmptyCursorCurrent . packageListCursor)
+  _ <- liftIO $ captureLazyNoThrow $ mq
            "nix"
             "build"
             "-L"
             (T.unpack $ ".#" <> x)
-            (pipeHOut 1 $ \_ stdout -> B.hGetContents stdout >>= B.putStr)
-            (pipeHOut 2 $ \_ stderr -> B.hGetContents stderr >>= B.writeFile "./log")
+            (pipeHOut 1 $ \_ stdout -> B.hGetContents stdout >>= (\_ -> pure ()))
+            (pipeHOut 2 $ \_ stderr -> B.hGetContents stderr >>= (\_ -> pure ()))
   pure ()
+handleEvent x = do
+  runM . semStateToBrickState (L.lens lastChar (\(MkHorizonTUIState s c) x -> MkHorizonTUIState s x )) . interpretVim . brickEventToVim $ x
 handleEvent _ = pure ()
 
 
@@ -207,12 +229,26 @@ appAttrMap = attrMap defAttr [ (attrName "highlight", fg yellow)
                              , (attrName "good", white `on` green)
                              ]
 
-packageListMain :: Brick.App (PackageListCursor, Maybe Char) e Text
-packageListMain = Brick.App (pure . renderPackageList . fst) (const $ const Nothing) handleEvent (pure ()) (const (appAttrMap))
+packageListMain :: Brick.App HorizonTUIState e Text
+packageListMain = Brick.App ((\x -> pure $ hBox [renderPackageList "F" x, border $ renderCursorPackageInfo x]) . packageListCursor) (const $ const Nothing) handleEvent (pure ()) (const (appAttrMap))
+
+buildCursor :: HorizonExport -> IO PackageListCursor
+buildCursor (MakePackageSet (MkPackageSetExportSettings d _ (MkPackageSet _ (MkPackageList (Map.toList -> y:ys))))) = do
+  (z : zs) <- forM (y:ys) $ \(x, k) -> do
+    q <- readDerivation d x
+    pure (x, k, q)
+  pure $ makeNonEmptyCursor id (z :| zs)
+
+readDerivation :: PackagesDir -> Name -> IO Text
+readDerivation (MkPackagesDir d) (MkName x) = do
+  f' <- parseRelFile $ T.unpack (x <> ".nix")
+  let j = d </> f'
+  q <- B.readFile $ toFilePath j
+  pure $ T.decodeUtf8Lenient q
 
 go :: IO ()
 go = do
   x <- Dhall.inputFile @HorizonExport Dhall.auto "horizon.dhall"
-  case x of
-    MakePackageSet (MkPackageSetExportSettings _ _ (MkPackageSet _ (MkPackageList (Map.toList -> y:ys)))) -> Brick.defaultMain packageListMain $ (makeNonEmptyCursor id (y :| ys), Nothing)
+  k <- buildCursor x
+  Brick.defaultMain packageListMain $ MkHorizonTUIState k Nothing
   pure ()
