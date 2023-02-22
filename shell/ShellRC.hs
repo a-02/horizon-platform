@@ -20,6 +20,7 @@ import           Brick                     (BrickEvent (VtyEvent), EventM,
                                             hBox, halt, on, padLeftRight, txt,
                                             vScrollBy, viewport, viewportScroll,
                                             visible, withAttr)
+import GHC.Exts
 import qualified Brick
 import           Brick.Widgets.Border
 import qualified Brick.Widgets.List        as Brick
@@ -249,40 +250,88 @@ readDerivation (MkPackagesDir d) (MkName x) = do
   q <- B.readFile $ toFilePath j
   pure $ T.decodeUtf8Lenient q
 
-callHackageLit :: Expr Src Import
-callHackageLit = Field "H" (FieldSelection Nothing "callHackage" Nothing)
+horizonField :: Text -> Expr s a
+horizonField = Field (horizonSpecIdentifier) . makeFieldSelection
 
-callGitLit :: Expr Src Import
-callGitLit = Field "H" (FieldSelection Nothing "callGit" Nothing)
+callHackageLit :: Expr s a
+callHackageLit = horizonField "callHackage"
 
-callHackageApp :: Name -> Version -> Expr Src Import
-callHackageApp (MkName x) (MkVersion v) = App (App callHackageLit (TextLit $ Chunks [] x)) (TextLit $ Chunks [] v)
+callGitLit :: Expr s a
+callGitLit = horizonField "callGit"
 
-callGitApp :: Repo -> Revision -> Expr Src Import
-callGitApp (MkRepo (MkUrl x)) (MkRevision v) = App (App callGitLit (TextLit $ Chunks [] x)) (TextLit $ Chunks [] v)
+callTarballLit :: Expr s a
+callTarballLit = horizonField "callTarball"
 
+callHackageApp :: HackageSource -> Expr s a
+callHackageApp (MkHackageSource (MkName x) (MkVersion v)) = App (App callHackageLit (TextLit $ Chunks [] x)) (TextLit $ Chunks [] v)
 
-f :: Name -> HaskellPackage -> (Name, RecordField Src Import)
-f x k = case source k of
-  FromHackage (MkHackageSource n v) -> (x, RecordField Nothing (callHackageApp n v) Nothing Nothing)
-  FromGit (MkGitSource n v _) -> (x, RecordField Nothing (callGitApp n v) Nothing Nothing)
+callGitApp :: GitSource -> Expr s a
+callGitApp (MkGitSource (MkRepo (MkUrl x)) (MkRevision v) _) = App (App callGitLit (TextLit $ Chunks [] x)) (TextLit $ Chunks [] v)
 
-g :: IO (Expr Src Import)
-g = do 
-  x <- Dhall.inputFile @HorizonExport Dhall.auto "horizon.dhall"
-  pure $ h x
+callTarballApp :: TarballSource -> Expr s a
+callTarballApp (MkTarballSource (MkUrl x)) = App callTarballLit (TextLit $ Chunks [] x)
 
+haskellSourceToExpr :: HaskellSource -> Expr s a
+haskellSourceToExpr k = case k of
+  FromHackage x -> callHackageApp x
+  FromGit x -> callGitApp x
+  FromTarball x -> callTarballApp x
+
+cabalFlagToExpr :: CabalFlag -> Expr s a
+cabalFlagToExpr (MkCabalFlag x) =
+  let (z, t) = case x of 
+                Disable a -> (makeFieldSelection "Disable", a)
+                Enable a -> (makeFieldSelection "Enable", a)
+  in App (Field (horizonField "CabalField") z) (TextLit $ Chunks [] t)
+
+haskellPackageToExpr :: HaskellPackage -> Expr s a
+haskellPackageToExpr (MkHaskellPackage s xs ys) = 
+  let t = haskellSourceToExpr s
+      applyFlagsExpr = if (not . null $ ys) then \x -> With x (WithLabel "flags" :| []) (ListLit Nothing $ GHC.Exts.fromList $ map cabalFlagToExpr ys) else id
+  in applyFlagsExpr t
+
+packageListToExpr :: PackageList -> Expr s a
+packageListToExpr (MkPackageList (Map.toList -> ys)) = RecordLit . DMap.fromList . map (\(MkName x, y) -> (x, makeRecordField $ haskellPackageToExpr y)) $ ys
 
 h :: HorizonExport -> Expr Src Import
-h (MakePackageSet (MkPackageSetExportSettings d _ (MkPackageSet _ (MkPackageList (Map.toList -> ys))))) = 
-  RecordLit $ DMap.fromList $ map ((\(MkName x, y) -> (x, y)) . uncurry f) ys
+h (MakePackageSet (MkPackageSetExportSettings (MkPackagesDir d) (MkPackageSetFile f) (MkPackageSet (MkCompiler c) xs))) = letHorizonSpecIn $ letPackagesBindingIn xs $ RecordLit . DMap.fromList $ [
+    ("packageSetFile", makeRecordField $ TextLit $ Chunks [] (T.pack $ toFilePath f)),
+    ("packagesDir", makeRecordField $ TextLit $ Chunks [] $ T.pack $ toFilePath d),
+    ("packagesSet", makeRecordField $  RecordLit $ DMap.fromList [("compiler", makeRecordField $ TextLit $ Chunks [] c), ("packages", makeRecordField $ ToMap "packages" Nothing)])]
 
 loadHorizon :: IO HorizonExport
 loadHorizon = Dhall.inputFile @HorizonExport Dhall.auto "horizon.dhall"
 
+horizonSpecUrl :: Dhall.Core.URL
+horizonSpecUrl = Dhall.Core.URL HTTPS "" (Dhall.Core.File (Dhall.Core.Directory ["dhall", "0.6", "raw", "-", "horizon-spec", "horizon", "gitlab.homotopic.tech"]) "package.dhall") Nothing Nothing
+
+horizonSpecImportHashed :: ImportHashed
+horizonSpecImportHashed = ImportHashed Nothing (Remote horizonSpecUrl)
+
+horizonSpecImport :: Import
+horizonSpecImport = Import horizonSpecImportHashed Code
+
+horizonSpecIdentifier :: Expr s a
+horizonSpecIdentifier = "H"
+
+packagesIdentifier :: Text
+packagesIdentifier = "packages"
+
+horizonSpecBinding :: Binding s Import
+horizonSpecBinding = makeBinding "H" (Dhall.Core.Embed horizonSpecImport)
+
+letHorizonSpecIn :: Expr s Import -> Expr s Import
+letHorizonSpecIn = Let horizonSpecBinding
+
+packagesBinding :: PackageList -> Binding s a
+packagesBinding = makeBinding packagesIdentifier . packageListToExpr
+
+letPackagesBindingIn :: PackageList -> Expr s a -> Expr s a
+letPackagesBindingIn xs = Let (packagesBinding xs)
+
 go :: IO ()
 go = do
-  x <- Dhall.inputFile @HorizonExport Dhall.auto "horizon.dhall"
+  x <- loadHorizon
   k <- buildCursor x
   Brick.defaultMain packageListMain $ MkHorizonTUIState k Nothing
   pure ()
