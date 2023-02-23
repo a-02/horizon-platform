@@ -1,9 +1,11 @@
 {-# LANGUAGE AllowAmbiguousTypes       #-}
+{-# LANGUAGE DerivingStrategies       #-}
 {-# LANGUAGE LambdaCase                #-}
 {-# LANGUAGE NoMonomorphismRestriction #-}
 {-# LANGUAGE OverloadedLists           #-}
 {-# LANGUAGE OverloadedStrings         #-}
 {-# LANGUAGE TemplateHaskell           #-}
+{-# LANGUAGE TypeFamilies           #-}
 {-# LANGUAGE ViewPatterns              #-}
 {-# OPTIONS_GHC -Wno-missing-signatures #-}
 {-# OPTIONS_GHC -Wno-unused-imports #-}
@@ -342,6 +344,66 @@ packagesBinding = makeBinding packagesIdentifier . packageListToExpr
 
 letPackagesBindingIn :: PackageList -> Expr s a -> Expr s a
 letPackagesBindingIn xs = Let (packagesBinding xs)
+
+type HasPackageSet :: Type -> Constraint
+class HasPackageSet x where
+  packageSetL :: L.Lens' x PackageSet
+
+instance HasPackageSet Overlay where
+  packageSetL = L.lens fromOverlay (\(MkOverlay _) ys -> MkOverlay ys)
+
+instance HasPackageSet PackageSetExportSettings where
+  packageSetL = L.lens packageSet (\x y -> x { packageSet = y })
+
+instance HasPackageSet OverlayExportSettings where
+  packageSetL = L.lens overlay (\x y -> x { overlay = y }) . packageSetL @Overlay
+
+instance HasPackageSet HorizonExport where
+  packageSetL f = \case
+    MakePackageSet x -> MakePackageSet <$> packageSetL f x
+    MakeOverlay x -> MakeOverlay <$> packageSetL f x
+
+type HasPackages :: Type -> Constraint
+class HasPackages x where
+  packagesL :: L.Lens' x PackageList
+
+instance HasPackages PackageSet where
+  packagesL = L.lens packages (\x y -> x { packages = y })
+
+instance HasPackages HorizonExport where
+  packagesL = packageSetL . packagesL @PackageSet
+
+type instance L.IxValue PackageList = HaskellPackage
+
+type instance L.Index PackageList = Name
+
+type instance L.IxValue HorizonExport = HaskellPackage
+
+type instance L.Index HorizonExport = Name
+
+
+instance L.Ixed PackageList where
+  ix k f (MkPackageList xs) = MkPackageList <$> L.ix k f xs
+
+instance L.At PackageList where
+  at k f (MkPackageList xs) = MkPackageList <$> L.at k f xs
+
+instance L.Ixed HorizonExport where
+  ix k = packagesL @HorizonExport . L.ix @PackageList k
+
+instance L.At HorizonExport where
+  at k = packagesL @HorizonExport . L.at @PackageList k
+
+
+deriving newtype instance IsString Name
+
+deriving newtype instance IsString Version
+
+defaultModifiers :: Modifiers
+defaultModifiers = MkModifiers True True False False False
+
+callHackage :: Name -> Version -> HaskellPackage
+callHackage n v = MkHaskellPackage { source = FromHackage n v, flags = [], modifiers = defaultModifiers }
 
 go :: IO ()
 go = do
