@@ -1151,6 +1151,8 @@ self: with pkgs.haskell.lib; {
 
   microstache = self.callPackage (./pkgs/microstache.nix) { };
 
+  mime-mail = self.callPackage (./pkgs/mime-mail.nix) { };
+
   mime-types = self.callPackage (./pkgs/mime-types.nix) { };
 
   mmap = self.callPackage (./pkgs/mmap.nix) { };

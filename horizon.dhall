@@ -721,6 +721,7 @@ let packages =
       , microlens = H.callHackage "microlens" "0.4.13.0"
       , microspec = H.callHackage "microspec" "0.2.1.3"
       , microstache = H.callHackage "microstache" "1.0.2.2"
+      , mime-mail = H.callHackage "mime-mail" "0.5.1"
       , mime-types = H.callHackage "mime-types" "0.1.1.0"
       , mmap = H.callHackage "mmap" "0.5.9"
       , mmorph = H.callHackage "mmorph" "1.2.0"
