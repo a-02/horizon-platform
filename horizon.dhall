@@ -79,6 +79,7 @@ let packages =
       , Decimal = H.callHackage "Decimal" "0.5.2"
       , Diff = H.callHackage "Diff" "0.4.1"
       , Glob = H.callHackage "Glob" "0.10.2"
+      , HaskellNet = H.callHackage "HaskellNet" "0.6.0.2"
       , HTF = H.callHackage "HTF" "0.15.0.0"
       , HTTP = H.callHackage "HTTP" "4000.4.1"
       , HUnit = H.callHackage "HUnit" "1.6.2.0"

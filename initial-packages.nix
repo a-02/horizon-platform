@@ -33,6 +33,8 @@ self: with pkgs.haskell.lib; {
 
   HUnit = self.callPackage (./pkgs/HUnit.nix) { };
 
+  HaskellNet = self.callPackage (./pkgs/HaskellNet.nix) { };
+
   Hclip = self.callPackage (./pkgs/Hclip.nix) { };
 
   HsOpenSSL = self.callPackage (./pkgs/HsOpenSSL.nix) { };
