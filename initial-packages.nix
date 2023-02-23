@@ -33,6 +33,8 @@ self: with pkgs.haskell.lib; {
 
   HUnit = self.callPackage (./pkgs/HUnit.nix) { };
 
+  HaskellNet = self.callPackage (./pkgs/HaskellNet.nix) { };
+
   Hclip = self.callPackage (./pkgs/Hclip.nix) { };
 
   HsOpenSSL = self.callPackage (./pkgs/HsOpenSSL.nix) { };
@@ -1150,6 +1152,8 @@ self: with pkgs.haskell.lib; {
   microspec = self.callPackage (./pkgs/microspec.nix) { };
 
   microstache = self.callPackage (./pkgs/microstache.nix) { };
+
+  mime-mail = self.callPackage (./pkgs/mime-mail.nix) { };
 
   mime-types = self.callPackage (./pkgs/mime-types.nix) { };
 
