@@ -13,13 +13,9 @@
 
 module ShellRC where
 
-import           Brick                     (BrickEvent (VtyEvent), EventM,
-                                            Padding (..),
-                                            ViewportType (Vertical), Widget,
-                                            attrMap, attrName, bg, fg, gets,
-                                            hBox, halt, on, padLeftRight, txt,
-                                            vScrollBy, viewport, viewportScroll,
-                                            visible, withAttr)
+import Brick (BrickEvent(VtyEvent), txt, hBox, padLeftRight)
+import Brick (EventM, viewport, ViewportType(Vertical))
+import Brick (halt, attrMap, attrName, bg, on, fg)
 import qualified Brick
 import           Brick.Widgets.Border
 import qualified Brick.Widgets.List        as Brick
@@ -94,28 +90,28 @@ runAllFeedback = do
   let y = Map.keys . A.toMapText . L.view (L._Right . L._Object . L.ix "loops" . L._Object) $ x
   mapM_ (captureLazyNoThrow . mq t "--command" "nix" "run" "github:NorfairKing/feedback" "--" . T.unpack) y
 
-renderUrl :: Url -> Widget n
+renderUrl :: Url -> Brick.Widget n
 renderUrl (MkUrl x) = txt x
 
-renderRepo :: Repo -> Widget n
+renderRepo :: Repo -> Brick.Widget n
 renderRepo (MkRepo x) = renderUrl x
 
-renderRevision :: Revision -> Widget n
+renderRevision :: Revision -> Brick.Widget n
 renderRevision (MkRevision x) = txt x
 
-renderName :: Name -> Widget n
+renderName :: Name -> Brick.Widget n
 renderName (MkName x) = txt x
 
-renderVersion :: Version -> Widget n
+renderVersion :: Version -> Brick.Widget n
 renderVersion (MkVersion x) = txt x
 
-renderGitSource :: GitSource -> Widget n
+renderGitSource :: GitSource -> Brick.Widget n
 renderGitSource (MkGitSource u r s) = hBox (fmap (padLeftRight 1) [txt "Git", renderRepo u, renderRevision r])
 
-renderHackageSource :: HackageSource -> Widget n
+renderHackageSource :: HackageSource -> Brick.Widget n
 renderHackageSource (MkHackageSource n v) = hBox (fmap (padLeftRight 1) [txt "Hackage", renderName n, renderVersion v])
 
-renderHaskellSource :: HaskellSource -> Widget n
+renderHaskellSource :: HaskellSource -> Brick.Widget n
 renderHaskellSource (FromGit x)     = renderGitSource x
 renderHaskellSource (FromHackage x) = renderHackageSource x
 
@@ -129,20 +125,20 @@ data HorizonTUIState where
     lastChar :: Maybe Char
   } -> HorizonTUIState
 
-packageListToMatrix :: PackageListCursor -> [[Widget n]]
+packageListToMatrix :: PackageListCursor -> [[Brick.Widget n]]
 packageListToMatrix (NonEmptyCursor xs y zs) = V.toList $ mconcat [
   fmap (\(k, v, _) -> [renderName k, renderHaskellSource $ source v]) $ V.fromList $ reverse $ Data.List.take 100 xs,
-  pure $ (\(k, v, _) -> fmap (withAttr (attrName "highlight")) [visible (renderName k), renderHaskellSource $ source v]) $ y,
+  pure $ (\(k, v, _) -> fmap (Brick.withAttr (Brick.attrName "highlight")) [Brick.visible (renderName k), renderHaskellSource $ source v]) $ y,
   fmap (\(k, v, _) -> [renderName k, renderHaskellSource $ source v]) $ V.fromList $ Data.List.take 100 zs
   ]
 
-renderCursorPackageInfo ::  PackageListCursor -> Widget n
+renderCursorPackageInfo ::  PackageListCursor -> Brick.Widget n
 renderCursorPackageInfo (NonEmptyCursor _ y _) = txt . L.view L._3 $ y
 
 packageListToTable :: PackageListCursor -> Table n
 packageListToTable = table . packageListToMatrix
 
-renderPackageList :: Text -> PackageListCursor -> Widget Text
+renderPackageList :: Text -> PackageListCursor -> Brick.Widget Text
 renderPackageList x = viewport x Vertical . renderTable . packageListToTable
 
 nonEmptyCursorSelectNextClamped :: (a -> b) -> (b -> a) -> NonEmptyCursor a b -> NonEmptyCursor a b
@@ -151,16 +147,16 @@ nonEmptyCursorSelectNextClamped f g s = fromMaybe s $ nonEmptyCursorSelectNext f
 nonEmptyCursorSelectPrevClamped :: (a -> b) -> (b -> a) -> NonEmptyCursor a b -> NonEmptyCursor a b
 nonEmptyCursorSelectPrevClamped f g s = fromMaybe s $ nonEmptyCursorSelectPrev f g s
 
-scrollDown :: EventM e HorizonTUIState ()
+scrollDown :: Brick.EventM e HorizonTUIState ()
 scrollDown =  Brick.modify (\(MkHorizonTUIState s c) -> MkHorizonTUIState (nonEmptyCursorSelectNextClamped id id s) c)
 
-scrollUp :: EventM e HorizonTUIState ()
+scrollUp :: Brick.EventM e HorizonTUIState ()
 scrollUp =  Brick.modify (\(MkHorizonTUIState s c) -> MkHorizonTUIState (nonEmptyCursorSelectPrevClamped id id s) c)
 
-endOfFile :: EventM e HorizonTUIState ()
+endOfFile :: Brick.EventM e HorizonTUIState ()
 endOfFile = Brick.modify (\(MkHorizonTUIState s c) -> MkHorizonTUIState (nonEmptyCursorSelectLast id id s) c)
 
-startOfFile :: EventM e HorizonTUIState ()
+startOfFile :: Brick.EventM e HorizonTUIState ()
 startOfFile = Brick.modify (\(MkHorizonTUIState s c) -> MkHorizonTUIState (nonEmptyCursorSelectFirst id id s) c)
 
 type Vim :: Type -> (Type -> Type) -> Type -> Type
@@ -180,7 +176,7 @@ data Vim y m a where
 
 makeSem ''Vim
 
-interpretVim :: Member (Embed (EventM e HorizonTUIState)) r => Sem (Vim y ': r) a -> Sem r a
+interpretVim :: Member (Embed (Brick.EventM e HorizonTUIState)) r => Sem (Vim y ': r) a -> Sem r a
 interpretVim = interpret $ \case
   Del             -> embed $ pure ()
   Find            -> embed $ pure ()
@@ -194,7 +190,7 @@ interpretVim = interpret $ \case
   Quit            -> embed $ halt
   Yank            -> embed $ pure ()
 
-brickEventToVim :: Members '[Vim y, State (Maybe Char)] r => BrickEvent Text e -> Sem r ()
+brickEventToVim :: Members '[Vim y, State (Maybe Char)] r => Brick.BrickEvent Text e -> Sem r ()
 brickEventToVim (VtyEvent (EvKey KDown [])) = moveDown
 brickEventToVim (VtyEvent (EvKey KUp [])) = moveUp
 brickEventToVim (VtyEvent (EvKey (KChar 'j') [])) = moveDown
@@ -216,7 +212,7 @@ semStateToBrickState f = interpret $ \case
   Put x -> embed $ Brick.put . L.set f x =<< Brick.get
   Get   -> embed $ L.view f <$> Brick.get
 
-handleEvent :: BrickEvent Text e -> EventM Text HorizonTUIState ()
+handleEvent :: Brick.BrickEvent Text e -> Brick.EventM Text HorizonTUIState ()
 handleEvent (VtyEvent (EvKey (KChar 'b') [])) = do
   (MkName x, _, _) <- Brick.gets (nonEmptyCursorCurrent . packageListCursor)
   _ <- liftIO $ captureLazyNoThrow $ mq
