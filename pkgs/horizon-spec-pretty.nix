@@ -1,38 +1,29 @@
 { mkDerivation
 , base
+, bytestring
 , containers
 , dhall
+, horizon-spec
+, lens
 , lib
 , path
-, path-dhall-instance
-, prettyprinter
-, sydtest
-, template-haskell
 , text
-, th-lift
 }:
 mkDerivation {
-  pname = "horizon-spec";
-  version = "0.6.4";
-  sha256 = "092aff7d396d331dbe45414e40fa5a142e8c47a4df8f141aa493cce5437fb72f";
+  pname = "horizon-spec-pretty";
+  version = "0.0.1";
+  sha256 = "8edf0b0aaeab131627ef277c223b6311a7cdf441ed0118355b0092f77a62f633";
   isLibrary = true;
-  isExecutable = true;
+  isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base
+    bytestring
     containers
     dhall
+    horizon-spec
+    lens
     path
-    path-dhall-instance
-    template-haskell
-    text
-    th-lift
-  ];
-  executableHaskellDepends = [
-    base
-    dhall
-    prettyprinter
-    sydtest
     text
   ];
   enableLibraryProfiling = true;
@@ -43,7 +34,7 @@ mkDerivation {
   doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://horizon-haskell.net";
-  description = "Horizon Stable Package Set Type Definitions";
+  description = "Horizon Stable Package Set Pretty Printer";
   license = lib.licenses.mit;
   broken = false;
 }
