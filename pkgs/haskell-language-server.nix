@@ -17,6 +17,7 @@
 , ghc-boot-th
 , ghc-paths
 , ghcide
+, ghcide-bench
 , ghcide-test-utils
 , githash
 , gitrev
@@ -46,8 +47,10 @@
 , hls-retrie-plugin
 , hls-splice-plugin
 , hls-test-utils
+, hp2pretty
 , hslogger
 , hspec-expectations
+, implicit-hie
 , lens
 , lens-aeson
 , lib
@@ -61,6 +64,8 @@
 , process
 , regex-tdfa
 , safe-exceptions
+, shake
+, shake-bench
 , sqlite-simple
 , stm
 , temporary
@@ -69,6 +74,7 @@
 , unix
 , unliftio-core
 , unordered-containers
+, yaml
 }:
 mkDerivation {
   pname = "haskell-language-server";
@@ -207,8 +213,27 @@ mkDerivation {
     unordered-containers
   ];
   testToolDepends = [ ghcide ];
-  enableLibraryProfiling = false;
-  enableExecutableProfiling = false;
+  benchmarkHaskellDepends = [
+    aeson
+    base
+    containers
+    data-default
+    directory
+    extra
+    filepath
+    ghcide-bench
+    hls-plugin-api
+    lens
+    lens-aeson
+    optparse-applicative
+    shake
+    shake-bench
+    text
+    yaml
+  ];
+  benchmarkToolDepends = [ ghcide-bench hp2pretty implicit-hie ];
+  enableLibraryProfiling = true;
+  enableExecutableProfiling = true;
   doHaddock = false;
   jailbreak = true;
   doCheck = false;

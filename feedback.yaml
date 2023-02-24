@@ -8,3 +8,5 @@ loops:
     command: nix run .#horizon-gen-nix
     filter:
       find: horizon.dhall
+  procex:
+    command: nix run .#procex -L

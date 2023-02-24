@@ -9,15 +9,21 @@ let
   shellrcModulePath = builtins.replaceStrings [ "." ] [ "/" ] shellrcModule + ".hs";
 
   ghc = haskellPackages.ghcWithPackages (p: with p; [
+    brick
     bytestring
     containers
+    cursor
     dhall
     http-conduit
     horizon-gen-nix
     horizon-spec
+    horizon-spec-lens
+    horizon-spec-pretty
     lens
     lens-aeson
     path
+    polysemy-plugin
+    polysemy
     procex
     text
     vector
@@ -50,6 +56,8 @@ let
       :set prompt-function promptFunction
 
       _init
+
+      hz <- loadHorizon
     END
     grep -E '^import .*$' < ${shellrcSrc}/${shellrcModulePath} >> $out
   '';
