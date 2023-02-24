@@ -33,6 +33,28 @@ If you need to do additional manual overrides to the nix code, such as
 `addPkgconfigDepends`, edit the `configuration.nix` overlay, which is applied
 afterwards.
 
+## Programmmatic Updates
+
+The package set will be automatically loaded under the variable `hz`.
+
+```
+import Horizon.Spec.Utils
+
+let f = L.at "lens" L..~ Just (callHackage "lens" "5.1")
+
+:t f
+f :: (L.IxValue t ~ HaskellPackage, L.At t,
+      IsString (L.Index t)) =>
+     t -> t
+
+let hz' = f hz
+
+H.writeHorizonFile hz'
+
+```
+
+Then remember to delete `pkgs/lens.nix` and re-run `nix run .#horizon-gen-nix`
+as usual.~
 ## Package Set Policy
 
 This package set has the following policy.
