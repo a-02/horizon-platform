@@ -7,12 +7,14 @@
 , path-dhall-instance
 , prettyprinter
 , sydtest
+, template-haskell
 , text
+, th-lift
 }:
 mkDerivation {
   pname = "horizon-spec";
-  version = "0.6.1";
-  sha256 = "97840918baa16cc175560645d1cd3bf762f7b6133d9c44f1c4da152431f65ada";
+  version = "0.6.4";
+  sha256 = "092aff7d396d331dbe45414e40fa5a142e8c47a4df8f141aa493cce5437fb72f";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
@@ -22,7 +24,9 @@ mkDerivation {
     dhall
     path
     path-dhall-instance
+    template-haskell
     text
+    th-lift
   ];
   executableHaskellDepends = [
     base
