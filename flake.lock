@@ -217,11 +217,11 @@
     "horizon-platform_2": {
       "flake": false,
       "locked": {
-        "lastModified": 1676980373,
-        "narHash": "sha256-gTkwi1w139+lt0eqvPig6pTdFv+qzrCHU0DmK8R89vw=",
+        "lastModified": 1677263150,
+        "narHash": "sha256-VS8RQKojTgHgPQQeL9WBIdS2C3nMZ1s7tL1slvm1qfA=",
         "ref": "refs/heads/master",
-        "rev": "dc6d92b18585a41c07d3a4b59a5399a14256fbab",
-        "revCount": 938,
+        "rev": "2e6a2ea4546bf344f1b7d671d3006e0cc6be1ca1",
+        "revCount": 947,
         "type": "git",
         "url": "https://gitlab.homotopic.tech/horizon/horizon-platform"
       },
