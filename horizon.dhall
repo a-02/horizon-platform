@@ -549,6 +549,7 @@ let packages =
       , horizon-gen-nix = H.callHackage "horizon-gen-nix" "0.6"
       , horizon-spec = H.callHackage "horizon-spec" "0.6.1"
       , horizon-spec-lens = H.callHackage "horizon-spec-lens" "0.1"
+      , horizon-spec-pretty = H.callHackage "horizon-spec-pretty" "0.0.1"
       , hosc = H.callHackage "hosc" "0.19.1"
       , hostname = H.callHackage "hostname" "1.0"
       , hourglass = H.callHackage "hourglass" "0.2.12"
