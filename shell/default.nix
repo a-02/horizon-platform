@@ -17,6 +17,8 @@ let
     http-conduit
     horizon-gen-nix
     horizon-spec
+    horizon-spec-lens
+    horizon-spec-pretty
     lens
     lens-aeson
     path
