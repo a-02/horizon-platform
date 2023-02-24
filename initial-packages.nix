@@ -839,6 +839,8 @@ self: with pkgs.haskell.lib; {
 
   horizon-spec = self.callPackage (./pkgs/horizon-spec.nix) { };
 
+  horizon-spec-lens = self.callPackage (./pkgs/horizon-spec-lens.nix) { };
+
   hosc = self.callPackage (./pkgs/hosc.nix) { };
 
   hostname = self.callPackage (./pkgs/hostname.nix) { };
