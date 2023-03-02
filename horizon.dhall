@@ -1202,6 +1202,7 @@ let packages =
       , utility-ht = H.callHackage "utility-ht" "0.0.16"
       , uuid = H.callHackage "uuid" "1.3.15"
       , uuid-types = H.callHackage "uuid-types" "1.0.5"
+      , validation = H.callHackage "validation" "1.1.2"
       , validation-selective = H.callHackage "validation-selective" "0.1.0.2"
       , validity = H.callHackage "validity" "0.12.0.1"
       , validity-aeson = H.callHackage "validity-aeson" "0.2.0.5"

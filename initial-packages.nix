@@ -1965,6 +1965,8 @@ self: with pkgs.haskell.lib; {
 
   uuid-types = self.callPackage (./pkgs/uuid-types.nix) { };
 
+  validation = self.callPackage (./pkgs/validation.nix) { };
+
   validation-selective = self.callPackage (./pkgs/validation-selective.nix) { };
 
   validity = self.callPackage (./pkgs/validity.nix) { };
