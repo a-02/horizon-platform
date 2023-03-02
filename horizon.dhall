@@ -783,6 +783,7 @@ let packages =
       , newtype-generics = H.callHackage "newtype-generics" "0.6.2"
       , nix-derivation = H.callHackage "nix-derivation" "1.1.2"
       , nonempty-vector = H.callHackage "nonempty-vector" "0.2.1.0"
+      , non-negative = H.callHackage "non-negative" "0.1.2"
       , nothunks = H.callHackage "nothunks" "0.1.3"
       , numeric-extras = H.callHackage "numeric-extras" "0.1"
       , numtype-dk = H.callHackage "numtype-dk" "0.5.0.3"

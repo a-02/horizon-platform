@@ -1251,6 +1251,8 @@ self: with pkgs.haskell.lib; {
 
   nix-derivation = self.callPackage (./pkgs/nix-derivation.nix) { };
 
+  non-negative = self.callPackage (./pkgs/non-negative.nix) { };
+
   nonempty-vector = self.callPackage (./pkgs/nonempty-vector.nix) { };
 
   nothunks = self.callPackage (./pkgs/nothunks.nix) { };
