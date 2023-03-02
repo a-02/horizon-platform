@@ -435,6 +435,8 @@ self: with pkgs.haskell.lib; {
 
   dhall-json = self.callPackage (./pkgs/dhall-json.nix) { };
 
+  dhall-nixpkgs = self.callPackage (./pkgs/dhall-nixpkgs.nix) { };
+
   diagrams-contrib = self.callPackage (./pkgs/diagrams-contrib.nix) { };
 
   diagrams-core = self.callPackage (./pkgs/diagrams-core.nix) { };
@@ -833,6 +835,12 @@ self: with pkgs.haskell.lib; {
 
   hls-test-utils = self.callPackage (./pkgs/hls-test-utils.nix) { };
 
+  hnix = self.callPackage (./pkgs/hnix.nix) { };
+
+  hnix-store-core = self.callPackage (./pkgs/hnix-store-core.nix) { };
+
+  hnix-store-remote = self.callPackage (./pkgs/hnix-store-remote.nix) { };
+
   hopenssl = self.callPackage (./pkgs/hopenssl.nix) { };
 
   horizon-gen-nix = self.callPackage (./pkgs/horizon-gen-nix.nix) { };
@@ -1051,6 +1059,8 @@ self: with pkgs.haskell.lib; {
 
   lens-aeson = self.callPackage (./pkgs/lens-aeson.nix) { };
 
+  lens-family = self.callPackage (./pkgs/lens-family.nix) { };
+
   lens-family-core = self.callPackage (./pkgs/lens-family-core.nix) { };
 
   lens-family-th = self.callPackage (./pkgs/lens-family-th.nix) { };
@@ -1187,6 +1197,8 @@ self: with pkgs.haskell.lib; {
 
   monad-time = self.callPackage (./pkgs/monad-time.nix) { };
 
+  monadlist = self.callPackage (./pkgs/monadlist.nix) { };
+
   monads-tf = self.callPackage (./pkgs/monads-tf.nix) { };
 
   mono-traversable = self.callPackage (./pkgs/mono-traversable.nix) { };
@@ -1236,6 +1248,8 @@ self: with pkgs.haskell.lib; {
   newtype = self.callPackage (./pkgs/newtype.nix) { };
 
   newtype-generics = self.callPackage (./pkgs/newtype-generics.nix) { };
+
+  nix-derivation = self.callPackage (./pkgs/nix-derivation.nix) { };
 
   nonempty-vector = self.callPackage (./pkgs/nonempty-vector.nix) { };
 
