@@ -1045,6 +1045,7 @@ let packages =
       , some = H.callHackage "some" "1.0.4"
       , sop-core = H.callHackage "sop-core" "0.5.0.1"
       , sorted-list = H.callHackage "sorted-list" "0.2.1.0"
+      , sort = H.callHackage "sort" "1.0.0.0"
       , souffle-haskell = H.callHackage "souffle-haskell" "3.5.0"
       , special-values = H.callHackage "special-values" "0.1.0.0"
       , split = H.callHackage "split" "0.2.3.3"

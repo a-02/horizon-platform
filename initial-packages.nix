@@ -1683,6 +1683,8 @@ self: with pkgs.haskell.lib; {
 
   sop-core = self.callPackage (./pkgs/sop-core.nix) { };
 
+  sort = self.callPackage (./pkgs/sort.nix) { };
+
   sorted-list = self.callPackage (./pkgs/sorted-list.nix) { };
 
   souffle-haskell = self.callPackage (./pkgs/souffle-haskell.nix) { };
