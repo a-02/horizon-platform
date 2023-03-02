@@ -1259,6 +1259,8 @@ self: with pkgs.haskell.lib; {
 
   numeric-extras = self.callPackage (./pkgs/numeric-extras.nix) { };
 
+  numeric-prelude = self.callPackage (./pkgs/numeric-prelude.nix) { };
+
   numtype-dk = self.callPackage (./pkgs/numtype-dk.nix) { };
 
   odd-jobs = self.callPackage (./pkgs/odd-jobs.nix) { };

@@ -786,6 +786,7 @@ let packages =
       , non-negative = H.callHackage "non-negative" "0.1.2"
       , nothunks = H.callHackage "nothunks" "0.1.3"
       , numeric-extras = H.callHackage "numeric-extras" "0.1"
+      , numeric-prelude = H.callHackage "numeric-prelude" "0.4.4"
       , numtype-dk = H.callHackage "numtype-dk" "0.5.0.3"
       , odd-jobs =
           H.callGit
