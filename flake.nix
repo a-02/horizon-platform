@@ -5,7 +5,6 @@
   inputs = {
     get-flake.url = "github:ursi/get-flake";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    horizon-gen-nix-flake.url = "git+https://gitlab.homotopic.tech/horizon/horizon-gen-nix";
     horizon-platform = {
       url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform";
       flake = false;
@@ -20,7 +19,6 @@
     , get-flake
     , flake-parts
     , horizon-platform
-    , horizon-gen-nix-flake
     , lint-utils
     , nixpkgs
     , ...
@@ -43,7 +41,7 @@
             runtimeInputs = with pkgs; [ ghc cabal-install ];
             text = ''
               cabal update
-              ${horizon-gen-nix-flake.legacyPackages.${system}.horizon-gen-nix}/bin/horizon-gen-nix;
+              ${horizon-platform-prev.legacyPackages.${system}.horizon-gen-nix}/bin/horizon-gen-nix;
               ${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt pkgs/*
               ${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt initial-packages.nix
             '';

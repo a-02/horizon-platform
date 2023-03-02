@@ -1,5 +1,6 @@
 let H =
       https://gitlab.homotopic.tech/horizon/horizon-spec/-/raw/0.6/dhall/package.dhall
+        sha256:9a80164572526dc5350f105c8db0790fdf36634629b4cf03402ba14fd173d121
 
 let packages =
       { BNFC = H.callHackage "BNFC" "2.9.4.1"
@@ -276,6 +277,7 @@ let packages =
       , derp = H.callHackage "derp" "0.1.6"
       , dhall = H.callHackage "dhall" "1.41.2"
       , dhall-json = H.callHackage "dhall-json" "1.7.11"
+      , dhall-nixpkgs = H.callHackage "dhall-nixpkgs" "1.0.9"
       , diagrams-contrib = H.callHackage "diagrams-contrib" "1.4.5"
       , diagrams-core = H.callHackage "diagrams-core" "1.5.0.1"
       , diagrams-lib = H.callHackage "diagrams-lib" "1.4.5.3"
@@ -538,6 +540,13 @@ let packages =
       , hls-retrie-plugin = H.callHackage "hls-retrie-plugin" "1.0.3.0"
       , hls-splice-plugin = H.callHackage "hls-splice-plugin" "1.0.3.0"
       , hls-test-utils = H.callHackage "hls-test-utils" "1.5.0.0"
+      , hnix =
+          H.callGit
+            "https://github.com/haskell-nix/hnix"
+            "48e962a3497893c30a749d085ebf82a8cc5cd5bd"
+            (None H.Subdir)
+      , hnix-store-core = H.callHackage "hnix-store-core" "0.6.1.0"
+      , hnix-store-remote = H.callHackage "hnix-store-remote" "0.6.0.0"
       , hopenssl = H.callHackage "hopenssl" "2.2.4"
       , horizon-gen-nix = H.callHackage "horizon-gen-nix" "0.6"
       , horizon-spec = H.callHackage "horizon-spec" "0.6.4"
@@ -673,6 +682,7 @@ let packages =
       , lens-aeson = H.callHackage "lens-aeson" "1.2.1"
       , lens-family-core = H.callHackage "lens-family-core" "2.1.2"
       , lens-family-th = H.callHackage "lens-family-th" "0.5.2.1"
+      , lens-family = H.callHackage "lens-family" "2.1.2"
       , libsodium = H.callHackage "libsodium" "1.0.18.2"
       , libsystemd-journal = H.callHackage "libsystemd-journal" "1.4.5"
       , libxml = H.callHackage "libxml" "0.1.1"
@@ -736,6 +746,7 @@ let packages =
       , mmorph = H.callHackage "mmorph" "1.2.0"
       , mockery = H.callHackage "mockery" "0.3.5"
       , mod = H.callHackage "mod" "0.1.2.2"
+      , monadlist = H.callHackage "monadlist" "0.0.2"
       , monad-control = H.callHackage "monad-control" "1.0.3.1"
       , monad-logger = H.callHackage "monad-logger" "0.3.37"
       , monad-loops = H.callHackage "monad-loops" "0.4.3"
@@ -770,9 +781,12 @@ let packages =
       , network-uri = H.callHackage "network-uri" "2.6.4.1"
       , newtype = H.callHackage "newtype" "0.2.2.0"
       , newtype-generics = H.callHackage "newtype-generics" "0.6.2"
+      , nix-derivation = H.callHackage "nix-derivation" "1.1.2"
       , nonempty-vector = H.callHackage "nonempty-vector" "0.2.1.0"
+      , non-negative = H.callHackage "non-negative" "0.1.2"
       , nothunks = H.callHackage "nothunks" "0.1.3"
       , numeric-extras = H.callHackage "numeric-extras" "0.1"
+      , numeric-prelude = H.callHackage "numeric-prelude" "0.4.4"
       , numtype-dk = H.callHackage "numtype-dk" "0.5.0.3"
       , odd-jobs =
           H.callGit
@@ -1033,6 +1047,7 @@ let packages =
       , some = H.callHackage "some" "1.0.4"
       , sop-core = H.callHackage "sop-core" "0.5.0.1"
       , sorted-list = H.callHackage "sorted-list" "0.2.1.0"
+      , sort = H.callHackage "sort" "1.0.0.0"
       , souffle-haskell = H.callHackage "souffle-haskell" "3.5.0"
       , special-values = H.callHackage "special-values" "0.1.0.0"
       , split = H.callHackage "split" "0.2.3.3"
@@ -1189,6 +1204,7 @@ let packages =
       , utility-ht = H.callHackage "utility-ht" "0.0.16"
       , uuid = H.callHackage "uuid" "1.3.15"
       , uuid-types = H.callHackage "uuid-types" "1.0.5"
+      , validation = H.callHackage "validation" "1.1.2"
       , validation-selective = H.callHackage "validation-selective" "0.1.0.2"
       , validity = H.callHackage "validity" "0.12.0.1"
       , validity-aeson = H.callHackage "validity-aeson" "0.2.0.5"
