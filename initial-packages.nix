@@ -433,6 +433,8 @@ self: with pkgs.haskell.lib; {
 
   dhall = self.callPackage (./pkgs/dhall.nix) { };
 
+  dhall-docs = self.callPackage (./pkgs/dhall-docs.nix) { };
+
   dhall-json = self.callPackage (./pkgs/dhall-json.nix) { };
 
   dhall-nixpkgs = self.callPackage (./pkgs/dhall-nixpkgs.nix) { };
@@ -925,6 +927,8 @@ self: with pkgs.haskell.lib; {
 
   html-entities = self.callPackage (./pkgs/html-entities.nix) { };
 
+  html-entity-map = self.callPackage (./pkgs/html-entity-map.nix) { };
+
   http-api-data = self.callPackage (./pkgs/http-api-data.nix) { };
 
   http-client = self.callPackage (./pkgs/http-client.nix) { };
@@ -1173,11 +1177,15 @@ self: with pkgs.haskell.lib; {
 
   mmap = self.callPackage (./pkgs/mmap.nix) { };
 
+  mmark = self.callPackage (./pkgs/mmark.nix) { };
+
   mmorph = self.callPackage (./pkgs/mmorph.nix) { };
 
   mockery = self.callPackage (./pkgs/mockery.nix) { };
 
   mod = self.callPackage (./pkgs/mod.nix) { };
+
+  modern-uri = self.callPackage (./pkgs/modern-uri.nix) { };
 
   monad-control = self.callPackage (./pkgs/monad-control.nix) { };
 
