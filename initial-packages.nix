@@ -519,6 +519,8 @@ self: with pkgs.haskell.lib; {
 
   ekg-wai = self.callPackage (./pkgs/ekg-wai.nix) { };
 
+  ema = self.callPackage (./pkgs/ema.nix) { };
+
   email-validate = self.callPackage (./pkgs/email-validate.nix) { };
 
   emojis = self.callPackage (./pkgs/emojis.nix) { };
@@ -1129,6 +1131,8 @@ self: with pkgs.haskell.lib; {
 
   lukko = self.callPackage (./pkgs/lukko.nix) { };
 
+  lvar = self.callPackage (./pkgs/lvar.nix) { };
+
   lzma = self.callPackage (./pkgs/lzma.nix) { };
 
   managed = self.callPackage (./pkgs/managed.nix) { };
@@ -1190,6 +1194,8 @@ self: with pkgs.haskell.lib; {
   monad-control = self.callPackage (./pkgs/monad-control.nix) { };
 
   monad-logger = self.callPackage (./pkgs/monad-logger.nix) { };
+
+  monad-logger-extras = self.callPackage (./pkgs/monad-logger-extras.nix) { };
 
   monad-loops = self.callPackage (./pkgs/monad-loops.nix) { };
 
@@ -1968,6 +1974,8 @@ self: with pkgs.haskell.lib; {
   uri-bytestring = self.callPackage (./pkgs/uri-bytestring.nix) { };
 
   uri-encode = self.callPackage (./pkgs/uri-encode.nix) { };
+
+  url-slug = self.callPackage (./pkgs/url-slug.nix) { };
 
   utf8-string = self.callPackage (./pkgs/utf8-string.nix) { };
 
