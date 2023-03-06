@@ -1,5 +1,5 @@
 let H =
-      https://gitlab.homotopic.tech/horizon/horizon-spec/-/raw/0.6/dhall/package.dhall
+      https://gitlab.homotopic.tech/horizon/dhall/horizon-spec/-/raw/0.6/dhall/package.dhall
         sha256:9a80164572526dc5350f105c8db0790fdf36634629b4cf03402ba14fd173d121
 
 let packages =
