@@ -1,4 +1,4 @@
-# Haskell Horizon Platform
+# Horizon Haskell Platform
 
 [horizon-haskell.net](https://horizon-haskell.net).
 
