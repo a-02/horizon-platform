@@ -1,6 +1,6 @@
 {
 
-  description = "Haskell Horizon Platform";
+  description = "Horizon Haskell Platform";
 
   inputs = {
     get-flake.url = "github:ursi/get-flake";
