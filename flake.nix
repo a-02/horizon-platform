@@ -6,7 +6,7 @@
     get-flake.url = "github:ursi/get-flake";
     flake-parts.url = "github:hercules-ci/flake-parts";
     horizon-platform = {
-      url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform";
+      url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-platform";
       flake = false;
     };
     lint-utils.url = "git+https://gitlab.homotopic.tech/nix/lint-utils";

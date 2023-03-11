@@ -51,17 +51,17 @@
     "horizon-platform": {
       "flake": false,
       "locked": {
-        "lastModified": 1677263150,
-        "narHash": "sha256-VS8RQKojTgHgPQQeL9WBIdS2C3nMZ1s7tL1slvm1qfA=",
+        "lastModified": 1678524042,
+        "narHash": "sha256-WGTbVYoUMdiBoz/mu9ie0WP50ANdhBUUmH+hmktAekc=",
         "ref": "refs/heads/master",
-        "rev": "2e6a2ea4546bf344f1b7d671d3006e0cc6be1ca1",
-        "revCount": 947,
+        "rev": "eb9368ebed9468eaf31fb0704445580271f973d1",
+        "revCount": 982,
         "type": "git",
-        "url": "https://gitlab.homotopic.tech/horizon/horizon-platform"
+        "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-platform"
       },
       "original": {
         "type": "git",
-        "url": "https://gitlab.homotopic.tech/horizon/horizon-platform"
+        "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-platform"
       }
     },
     "lint-utils": {
