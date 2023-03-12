@@ -47,7 +47,6 @@
             name = "horizon-gen-nix";
             runtimeInputs = with pkgs; [ ghc cabal-install ];
             text = ''
-              cabal update
               ${horizon-platform-prev.legacyPackages.${system}.horizon-gen-nix}/bin/horizon-gen-nix;
               ${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt pkgs/*
               ${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt initial-packages.nix

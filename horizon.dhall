@@ -1,6 +1,5 @@
 let H =
-      https://gitlab.horizon-haskell.net/dhall/horizon-spec/-/raw/0.6/horizon-spec/package.dhall
-        sha256:9a80164572526dc5350f105c8db0790fdf36634629b4cf03402ba14fd173d121
+      https://gitlab.horizon-haskell.net/dhall/horizon-spec/-/raw/0.10.0/horizon-spec/package.dhall
 
 let packages =
       { BNFC = H.callHackage "BNFC" "2.9.4.1"
@@ -550,8 +549,15 @@ let packages =
       , hnix-store-core = H.callHackage "hnix-store-core" "0.6.1.0"
       , hnix-store-remote = H.callHackage "hnix-store-remote" "0.6.0.0"
       , hopenssl = H.callHackage "hopenssl" "2.2.4"
-      , horizon-gen-nix = H.callHackage "horizon-gen-nix" "0.6"
-      , horizon-spec = H.callHackage "horizon-spec" "0.6.4"
+      , horizon-gen-nix =
+          H.callTarball
+            "https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix/-/archive/master/horizon-gen-nix-master.tar.gz"
+            (Some "horizon-gen-nix")
+      , horizon-spec =
+          H.callGit
+            "https://gitlab.horizon-haskell.net/haskell/horizon-spec"
+            "7c5ca21695f5964cca852d2d6d43729c7418ace7"
+            (Some "horizon-spec")
       , horizon-spec-lens = H.callHackage "horizon-spec-lens" "0.1"
       , horizon-spec-pretty = H.callHackage "horizon-spec-pretty" "0.0.1"
       , hosc = H.callHackage "hosc" "0.19.1"

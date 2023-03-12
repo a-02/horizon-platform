@@ -7,6 +7,7 @@
 , directory
 , distribution-nixpkgs
 , either
+, fetchzip
 , horizon-spec
 , language-nix
 , lens
@@ -21,8 +22,12 @@
 }:
 mkDerivation {
   pname = "horizon-gen-nix";
-  version = "0.6";
-  sha256 = "814a01e62e66aca869df8738656e1c351a9b20a6cfe1f25fac2070f6073f0db6";
+  version = "0.8.0";
+  src = fetchzip {
+    url = "https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix/-/archive/master/horizon-gen-nix-master.tar.gz";
+    sha256 = "0yix3z210v9jpsw5pxiz0r8rj03r1j91jq5fxy6qgf3bavv3i005";
+  };
+  postUnpack = "sourceRoot+=/horizon-gen-nix/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

@@ -2,21 +2,26 @@
 , base
 , containers
 , dhall
+, fetchgit
 , lib
 , path
 , path-dhall-instance
-, prettyprinter
-, sydtest
 , template-haskell
 , text
 , th-lift
 }:
 mkDerivation {
   pname = "horizon-spec";
-  version = "0.6.4";
-  sha256 = "092aff7d396d331dbe45414e40fa5a142e8c47a4df8f141aa493cce5437fb72f";
+  version = "0.10.0";
+  src = fetchgit {
+    url = "https://gitlab.horizon-haskell.net/haskell/horizon-spec";
+    sha256 = "1c5a1n8c2rf765zrqq4l0lcdikriw9f7ca5l0xa6sy1cpdhg3sgh";
+    rev = "7c5ca21695f5964cca852d2d6d43729c7418ace7";
+    fetchSubmodules = true;
+  };
+  postUnpack = "sourceRoot+=/horizon-spec/; echo source root reset to $sourceRoot";
   isLibrary = true;
-  isExecutable = true;
+  isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base
@@ -27,13 +32,6 @@ mkDerivation {
     template-haskell
     text
     th-lift
-  ];
-  executableHaskellDepends = [
-    base
-    dhall
-    prettyprinter
-    sydtest
-    text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
