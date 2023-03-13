@@ -23,4 +23,5 @@ cachix:
   only:
     refs:
     - master
-  script: dhall --file .cachix.dhall | dhall text | bash
+    - cachix
+  script: nix-shell -p jq cachix parallel --command 'dhall --file .cachix.dhall | dhall text | bash'
