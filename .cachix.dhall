@@ -10,7 +10,11 @@ let H =
 let toStep
     : Text → Text
     = λ(x : Text) →
-        "nix build --json .#${x} | jq -r '.[].outputs | to_entries[].value' | cachix push horizon"
+        "nix build --accept-flake-config --json .#${x} | jq -r '.[].outputs | to_entries[].value' | cachix push horizon"
+
+let toEchoStep
+    : Text → Text
+    = λ(x : Text) → "echo \"${toStep x}\""
 
 let input =
       Prelude.Map.keys
@@ -24,11 +28,13 @@ let input =
             ./horizon.dhall
         )
 
-let packages = Prelude.List.map Text Text toStep (input : List Text)
+let packages = Prelude.List.map Text Text toEchoStep (input : List Text)
 
-in  Prelude.List.fold
-      Text
-      packages
-      Text
-      (λ(x : Text) → λ(y : Text) → x ++ "\n" ++ y)
-      ""
+in      "("
+    ++  Prelude.List.fold
+          Text
+          packages
+          Text
+          (λ(x : Text) → λ(y : Text) → x ++ ";" ++ y)
+          ""
+    ++  ") | parallel -j 16"
