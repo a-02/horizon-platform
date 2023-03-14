@@ -61,7 +61,7 @@
             compilerConfig = pkgs.callPackage ./configuration-ghc.nix { inherit haskellLib; };
             configurationArm = { pkgs, haskellLib }: self: super: { };
             configurationCommon = import ./configuration.nix;
-            configurationDarwin = { pkgs, haskellLib }: self: super: { };
+            configurationDarwin = import ./configuration-darwin.nix;
             configurationNix = { pkgs, haskellLib }: self: super: { };
             ghc = pkgs.haskell.compiler.ghc944;
             inherit haskellLib;
@@ -118,10 +118,7 @@
             inherit inputs pkgs;
             modules = [
               ({ pkgs, ... }: {
-                packages = [
-                  horizon-gen-nix
-                  pkgs.nixpkgs-fmt
-                ];
+                packages = [ horizon-gen-nix pkgs.nixpkgs-fmt ];
               })
             ];
           };
