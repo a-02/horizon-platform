@@ -8,6 +8,7 @@
   };
 
   inputs = {
+    devenv.url = "github:cachix/devenv";
     get-flake.url = "github:ursi/get-flake";
     flake-parts.url = "github:hercules-ci/flake-parts";
     horizon-platform = {
@@ -21,6 +22,7 @@
   outputs =
     inputs@
     { self
+    , devenv
     , get-flake
     , flake-parts
     , horizon-platform
@@ -98,11 +100,6 @@
 
           apps = {
 
-            horizon-gen-nix = {
-              type = "app";
-              program = "${horizon-gen-nix}/bin/horizon-gen-nix";
-            };
-
             procex = {
               type = "app";
               program = "${procex}/bin/procex-shell";
@@ -115,6 +112,18 @@
             dhall-format = dhall-format { src = self; };
             nixpkgs-fmt = nixpkgs-fmt { src = self; };
             stylish-haskell = stylish-haskell { src = self; };
+          };
+
+          devShells.default = devenv.lib.mkShell {
+            inherit inputs pkgs;
+            modules = [
+              ({ pkgs, ... }: {
+                packages = [
+                  horizon-gen-nix
+                  pkgs.nixpkgs-fmt
+                ];
+              })
+            ];
           };
 
           inherit legacyPackages;
