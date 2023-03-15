@@ -76,23 +76,6 @@
               && v.meta.broken == false)
             legacyPackages;
 
-          run-impure-tests = writePorcelainOrDieBin {
-            name = "run-impure-tests";
-            src = ./.;
-            command = ''
-              export PATH=$PATH:${pkgs.nix-prefetch-git}/bin:${pkgs.cabal-install}/bin
-              cabal update
-              rm pkgs -rf && nix run .#horizon-gen-nix;
-              nixpkgs-fmt pkgs/*
-            '';
-            advice = "Try removing the offending packages from pkgs/ and running nix run .#horizon-gen-nix";
-          };
-
-          run-impure-tests-app = {
-            type = "app";
-            program = "${run-impure-tests}/bin/run-impure-tests";
-          };
-
           procex = import ./shell/default.nix { haskellPackages = horizon-platform-prev.legacyPackages.${system}; inherit (pkgs) runCommand writeShellScriptBin; };
         in
         {
@@ -104,7 +87,6 @@
               program = "${procex}/bin/procex-shell";
             };
 
-            run-impure-tests = run-impure-tests-app;
           };
 
           checks = with lint-utils.linters.${system}; {
