@@ -3,6 +3,7 @@
 , base
 , directory
 , extra
+, fetchgit
 , hspec
 , lib
 , monad-parallel
@@ -11,10 +12,13 @@
 }:
 mkDerivation {
   pname = "unix-compat";
-  version = "0.6";
-  sha256 = "b4cd823a6543ad3aca8e740ecf5f44aabde60f1452b5a55655db5c8b7a44d5f8";
-  revision = "1";
-  editedCabalFile = "0g5mi6rh977idajgxnnlsd7dp28vf4xwiiwpsc4pj1rqv0lhjp8g";
+  version = "0.7";
+  src = fetchgit {
+    url = "https://github.com/mitchellwrosen/fork--unix-compat";
+    sha256 = "05bnsbaswlsjgb8hrvabwdxzj4ii0kabj8mk47iczlwks6rimlgl";
+    rev = "f28060acd449643d267954647c1bb7c748c35fa9";
+    fetchSubmodules = true;
+  };
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

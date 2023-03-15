@@ -1,9 +1,10 @@
 { mkDerivation
 , QuickCheck
+, assoc
 , base
-, base-orphans
 , comonad
 , containers
+, foldable1-classes-compat
 , hspec
 , hspec-discover
 , lib
@@ -15,16 +16,17 @@
 }:
 mkDerivation {
   pname = "bifunctors";
-  version = "5.5.13";
-  sha256 = "26cc27ade3796cf03bd680f98ebb7b8c0d7fd1b67c1894dc3635f734fba7dbd7";
+  version = "5.6.1";
+  sha256 = "06381471b5be16516a1b2c4b21a5101a3d991038bface8e0cad144c0044d57fc";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
+    assoc
     base
-    base-orphans
     comonad
     containers
+    foldable1-classes-compat
     tagged
     template-haskell
     th-abstraction
