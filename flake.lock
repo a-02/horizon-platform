@@ -125,11 +125,11 @@
     "horizon-platform": {
       "flake": false,
       "locked": {
-        "lastModified": 1678524042,
-        "narHash": "sha256-WGTbVYoUMdiBoz/mu9ie0WP50ANdhBUUmH+hmktAekc=",
+        "lastModified": 1678805130,
+        "narHash": "sha256-I4q5yTZZJB5vuWfA/T0NaIgAi3kaP5k6OWCc34YWlgc=",
         "ref": "refs/heads/master",
-        "rev": "eb9368ebed9468eaf31fb0704445580271f973d1",
-        "revCount": 982,
+        "rev": "b04d3fea8d6127c1aa7d8e8bb0d2812e8b5e1d20",
+        "revCount": 991,
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-platform"
       },

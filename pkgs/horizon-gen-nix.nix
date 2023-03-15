@@ -7,6 +7,7 @@
 , directory
 , distribution-nixpkgs
 , either
+, fetchzip
 , horizon-spec
 , language-nix
 , lens
@@ -15,14 +16,19 @@
 , path
 , path-dhall-instance
 , pretty
+, raw-strings-qq
 , silently
 , sydtest
 , text
 }:
 mkDerivation {
   pname = "horizon-gen-nix";
-  version = "0.6";
-  sha256 = "814a01e62e66aca869df8738656e1c351a9b20a6cfe1f25fac2070f6073f0db6";
+  version = "0.9.0";
+  src = fetchzip {
+    url = "https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix/-/archive/0.9.0/horizon-gen-nix-0.9.0.tar.gz";
+    sha256 = "0jmrpkn56kykisj7zki4ib1zhm6m4qxbzhgz9k4lmf0gh4w37iln";
+  };
+  postUnpack = "sourceRoot+=/horizon-gen-nix/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
@@ -42,6 +48,7 @@ mkDerivation {
     path
     path-dhall-instance
     pretty
+    raw-strings-qq
     silently
     text
   ];

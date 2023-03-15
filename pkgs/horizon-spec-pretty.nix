@@ -3,16 +3,20 @@
 , bytestring
 , containers
 , dhall
+, fetchzip
 , horizon-spec
-, lens
 , lib
 , path
 , text
 }:
 mkDerivation {
   pname = "horizon-spec-pretty";
-  version = "0.0.1";
-  sha256 = "8edf0b0aaeab131627ef277c223b6311a7cdf441ed0118355b0092f77a62f633";
+  version = "0.1.0";
+  src = fetchzip {
+    url = "https://gitlab.horizon-haskell.net/haskell/horizon-spec-pretty/-/archive/0.1.0/horizon-spec-pretty-0.1.0.tar.gz";
+    sha256 = "0sa90d981qig9qlf260d82kkbdjan4501briv3wd15h2nzzd4faz";
+  };
+  postUnpack = "sourceRoot+=/horizon-spec-pretty/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -22,7 +26,6 @@ mkDerivation {
     containers
     dhall
     horizon-spec
-    lens
     path
     text
   ];
