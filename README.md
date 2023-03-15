@@ -4,57 +4,6 @@
 
 Horizon is a haskell package set targetting new builds of GHC.
 
-## Getting started
-
-You an can use this package set instead of your haskell packages set in
-nixpkgs. To see an example you can use the template supplied with this
-repository.
-
-```
-mkdir myProject
-cd myProject
-nix flake init -t 'git+https://gitlab.homotopic.tech/horizon/horizon-templates'
-```
-
-## Updating the package set
-
-The package set is generated from the `horizon.dhall` using the following command:
-
-```
-nix run .#horizon-gen-nix
-```
-
-This will generate both the packages folder and the package set file. If you
-want to regenerate a particular package in the packages folder, delete that file
-from the packages folder. To regenerate the entire package set from scratch,
-delete the packages folder.
-
-If you need to do additional manual overrides to the nix code, such as
-`addPkgconfigDepends`, edit the `configuration.nix` overlay, which is applied
-afterwards.
-
-## Programmmatic Updates
-
-The package set will be automatically loaded under the variable `hz`.
-
-```
-import Horizon.Spec.Utils
-
-let f = L.at "lens" L..~ Just (callHackage "lens" "5.1")
-
-:t f
-f :: (L.IxValue t ~ HaskellPackage, L.At t,
-      IsString (L.Index t)) =>
-     t -> t
-
-let hz' = f hz
-
-H.writeHorizonFile hz'
-
-```
-
-Then remember to delete `pkgs/lens.nix` and re-run `nix run .#horizon-gen-nix`
-as usual.~
 ## Package Set Policy
 
 This package set has the following policy.
@@ -84,20 +33,45 @@ This package set has the following policy.
 * Tags will be of the form `stable-<yyyy>-<mm>-<dd>-r<N>` where all
 stable sources are used.
 
-## Commit Policy
+## Updating the package set
 
-* All commits should evaluate with `nix flake show`.
-* All commits should pass all checks with `nix flake check`.
-* All derivations in `packages` should build.
-* Where possible, commits should be atomic, of the form
-  * foo: init at <version>
-  * foo: <old-version> -> <new-version>
-* If multiple packages need to be maintained in lockstep,
-  the commit message should contain all changes.
+The package set is generated from the `horizon.dhall` using the following command:
 
-## ChangeLog Policy
+```
+nix run 'git+https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix?ref=refs/tags/0.9.0'
+```
 
-* ChangeLogs should clearly show source stability changes between versions,
-  of the form:
-  * stabilized source: aeson, lens
-  * destabilized source: pandoc
+This will generate both the packages folder and the package set file. If you
+want to regenerate a particular package in the packages folder, delete that file
+from the packages folder. To regenerate the entire package set from scratch,
+delete the packages folder.
+
+If you need to do additional manual overrides to the nix code, such as
+`addPkgconfigDepends`, edit the `configuration.nix` overlay, which is applied
+afterwards.
+
+## Programmmatic Updates
+
+To use `horizon-shell`.
+
+```
+nix run 'git+https://gitlab.horizon-haskell.net/shells/horizon-shell?ref=refs/tags/0.0.1'
+```
+
+The package set will be automatically loaded under the variable `hz`.
+
+```
+let f = L.at "lens" L..~ Just (H.callHackage "lens" "5.1")
+
+:t f
+f :: (L.IxValue t ~ HaskellPackage, L.At t,
+      IsString (L.Index t)) =>
+     t -> t
+
+let hz' = f hz
+
+H.writeHorizonFile hz'
+
+```
+
+Then remember to delete `pkgs/lens.nix` and re-run horizon-gen-nix as usual.

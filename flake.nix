@@ -76,18 +76,8 @@
               && v.meta.broken == false)
             legacyPackages;
 
-          procex = import ./shell/default.nix { haskellPackages = horizon-platform-prev.legacyPackages.${system}; inherit (pkgs) runCommand writeShellScriptBin; };
         in
         {
-
-          apps = {
-
-            procex = {
-              type = "app";
-              program = "${procex}/bin/procex-shell";
-            };
-
-          };
 
           checks = with lint-utils.linters.${system}; {
             dhall-format = dhall-format { src = self; };
