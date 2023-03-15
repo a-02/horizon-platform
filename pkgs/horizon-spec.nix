@@ -2,7 +2,7 @@
 , base
 , containers
 , dhall
-, fetchgit
+, fetchzip
 , lib
 , path
 , path-dhall-instance
@@ -12,12 +12,10 @@
 }:
 mkDerivation {
   pname = "horizon-spec";
-  version = "0.10.0";
-  src = fetchgit {
-    url = "https://gitlab.horizon-haskell.net/haskell/horizon-spec";
-    sha256 = "1c5a1n8c2rf765zrqq4l0lcdikriw9f7ca5l0xa6sy1cpdhg3sgh";
-    rev = "7c5ca21695f5964cca852d2d6d43729c7418ace7";
-    fetchSubmodules = true;
+  version = "0.11.0";
+  src = fetchzip {
+    url = "https://gitlab.horizon-haskell.net/haskell/horizon-spec/-/archive/0.11.0/horizon-spec-0.11.0.tar.gz";
+    sha256 = "0jhpivaafwg9a75qj0aq1lirhvhx4404l8bdsx794sbjqifnwnxn";
   };
   postUnpack = "sourceRoot+=/horizon-spec/; echo source root reset to $sourceRoot";
   isLibrary = true;

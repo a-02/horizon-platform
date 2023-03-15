@@ -550,16 +550,19 @@ let packages =
       , hnix-store-remote = H.callHackage "hnix-store-remote" "0.6.0.0"
       , hopenssl = H.callHackage "hopenssl" "2.2.4"
       , horizon-gen-nix =
-          H.callTarball
-            "https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix/-/archive/master/horizon-gen-nix-master.tar.gz"
-            (Some "horizon-gen-nix")
+          H.callHorizonGitlab "horizon-gen-nix" "0.9.0" (Some "horizon-gen-nix")
       , horizon-spec =
-          H.callGit
-            "https://gitlab.horizon-haskell.net/haskell/horizon-spec"
-            "7c5ca21695f5964cca852d2d6d43729c7418ace7"
-            (Some "horizon-spec")
-      , horizon-spec-lens = H.callHackage "horizon-spec-lens" "0.1"
-      , horizon-spec-pretty = H.callHackage "horizon-spec-pretty" "0.0.1"
+          H.callHorizonGitlab "horizon-spec" "0.11.0" (Some "horizon-spec")
+      , horizon-spec-lens =
+          H.callHorizonGitlab
+            "horizon-spec-lens"
+            "0.2.0"
+            (Some "horizon-spec-lens")
+      , horizon-spec-pretty =
+          H.callHorizonGitlab
+            "horizon-spec-pretty"
+            "0.1.0"
+            (Some "horizon-spec-pretty")
       , hosc = H.callHackage "hosc" "0.19.1"
       , hostname = H.callHackage "hostname" "1.0"
       , hourglass = H.callHackage "hourglass" "0.2.12"
