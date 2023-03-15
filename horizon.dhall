@@ -31,10 +31,10 @@ let packages =
       , Decimal = H.callHackage "Decimal" "0.5.2"
       , Diff = H.callHackage "Diff" "0.4.1"
       , Glob = H.callHackage "Glob" "0.10.2"
-      , HaskellNet = H.callHackage "HaskellNet" "0.6.0.2"
       , HTF = H.callHackage "HTF" "0.15.0.0"
       , HTTP = H.callHackage "HTTP" "4000.4.1"
       , HUnit = H.callHackage "HUnit" "1.6.2.0"
+      , HaskellNet = H.callHackage "HaskellNet" "0.6.0.2"
       , Hclip = H.callHackage "Hclip" "3.0.0.4"
       , HsOpenSSL = H.callHackage "HsOpenSSL" "0.11.7.2"
       , HsYAML = H.callHackage "HsYAML" "0.2.1.1"
@@ -550,19 +550,21 @@ let packages =
       , hnix-store-remote = H.callHackage "hnix-store-remote" "0.6.0.0"
       , hopenssl = H.callHackage "hopenssl" "2.2.4"
       , horizon-gen-nix =
-          H.callHorizonGitlab "horizon-gen-nix" "0.9.0" (Some "horizon-gen-nix")
+          H.callTarball
+            "https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix/-/archive/0.9.0/horizon-gen-nix-0.9.0.tar.gz"
+            (Some "horizon-gen-nix/")
       , horizon-spec =
-          H.callHorizonGitlab "horizon-spec" "0.11.0" (Some "horizon-spec")
+          H.callTarball
+            "https://gitlab.horizon-haskell.net/haskell/horizon-spec/-/archive/0.11.0/horizon-spec-0.11.0.tar.gz"
+            (Some "horizon-spec/")
       , horizon-spec-lens =
-          H.callHorizonGitlab
-            "horizon-spec-lens"
-            "0.2.0"
-            (Some "horizon-spec-lens")
+          H.callTarball
+            "https://gitlab.horizon-haskell.net/haskell/horizon-spec-lens/-/archive/0.2.0/horizon-spec-lens-0.2.0.tar.gz"
+            (Some "horizon-spec-lens/")
       , horizon-spec-pretty =
-          H.callHorizonGitlab
-            "horizon-spec-pretty"
-            "0.1.0"
-            (Some "horizon-spec-pretty")
+          H.callTarball
+            "https://gitlab.horizon-haskell.net/haskell/horizon-spec-pretty/-/archive/0.1.0/horizon-spec-pretty-0.1.0.tar.gz"
+            (Some "horizon-spec-pretty/")
       , hosc = H.callHackage "hosc" "0.19.1"
       , hostname = H.callHackage "hostname" "1.0"
       , hourglass = H.callHackage "hourglass" "0.2.12"
@@ -692,9 +694,9 @@ let packages =
       , lazysmallcheck = H.callHackage "lazysmallcheck" "0.6"
       , lens = H.callHackage "lens" "5.2"
       , lens-aeson = H.callHackage "lens-aeson" "1.2.1"
+      , lens-family = H.callHackage "lens-family" "2.1.2"
       , lens-family-core = H.callHackage "lens-family-core" "2.1.2"
       , lens-family-th = H.callHackage "lens-family-th" "0.5.2.1"
-      , lens-family = H.callHackage "lens-family" "2.1.2"
       , libsodium = H.callHackage "libsodium" "1.0.18.2"
       , libsystemd-journal = H.callHackage "libsystemd-journal" "1.4.5"
       , libxml = H.callHackage "libxml" "0.1.1"
@@ -761,7 +763,6 @@ let packages =
       , mockery = H.callHackage "mockery" "0.3.5"
       , mod = H.callHackage "mod" "0.1.2.2"
       , modern-uri = H.callHackage "modern-uri" "0.3.6.0"
-      , monadlist = H.callHackage "monadlist" "0.0.2"
       , monad-control = H.callHackage "monad-control" "1.0.3.1"
       , monad-logger = H.callHackage "monad-logger" "0.3.37"
       , monad-logger-extras = H.callHackage "monad-logger-extras" "0.1.1.1"
@@ -772,6 +773,7 @@ let packages =
       , monad-peel = H.callHackage "monad-peel" "0.2.1.2"
       , monad-primitive = H.callHackage "monad-primitive" "0.1"
       , monad-time = H.callHackage "monad-time" "0.4.0.0"
+      , monadlist = H.callHackage "monadlist" "0.0.2"
       , monads-tf = H.callHackage "monads-tf" "0.1.0.3"
       , mono-traversable = H.callHackage "mono-traversable" "1.0.15.3"
       , monoid-extras = H.callHackage "monoid-extras" "0.6.2"
@@ -798,8 +800,8 @@ let packages =
       , newtype = H.callHackage "newtype" "0.2.2.0"
       , newtype-generics = H.callHackage "newtype-generics" "0.6.2"
       , nix-derivation = H.callHackage "nix-derivation" "1.1.2"
-      , nonempty-vector = H.callHackage "nonempty-vector" "0.2.1.0"
       , non-negative = H.callHackage "non-negative" "0.1.2"
+      , nonempty-vector = H.callHackage "nonempty-vector" "0.2.1.0"
       , nothunks = H.callHackage "nothunks" "0.1.3"
       , numeric-extras = H.callHackage "numeric-extras" "0.1"
       , numeric-prelude = H.callHackage "numeric-prelude" "0.4.4"
@@ -1062,8 +1064,8 @@ let packages =
       , socks = H.callHackage "socks" "0.6.1"
       , some = H.callHackage "some" "1.0.4"
       , sop-core = H.callHackage "sop-core" "0.5.0.1"
-      , sorted-list = H.callHackage "sorted-list" "0.2.1.0"
       , sort = H.callHackage "sort" "1.0.0.0"
+      , sorted-list = H.callHackage "sorted-list" "0.2.1.0"
       , souffle-haskell = H.callHackage "souffle-haskell" "3.5.0"
       , special-values = H.callHackage "special-values" "0.1.0.0"
       , split = H.callHackage "split" "0.2.3.3"
