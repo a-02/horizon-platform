@@ -4,7 +4,7 @@ let H =
 let packages =
       { BNFC = H.callHackage "BNFC" "2.9.4.1"
       , Boolean = H.callHackage "Boolean" "0.2.4"
-      , Cabal = H.callHackage "Cabal" "3.8.1.0"
+      , Cabal = H.callHackage "Cabal" "3.10.1.0"
       , Cabal-QuickCheck =
           H.callGit
             "https://gitlab.haskell.org/ghc/packages/Cabal"
@@ -15,16 +15,12 @@ let packages =
             "https://gitlab.haskell.org/ghc/packages/Cabal"
             "e9fdb85427ad1ef11a25c8b1f2286614c86a65ff"
             (Some "Cabal-described/")
-      , Cabal-syntax =
-          H.callGit
-            "https://gitlab.haskell.org/ghc/packages/Cabal"
-            "e9fdb85427ad1ef11a25c8b1f2286614c86a65ff"
-            (Some "Cabal-syntax/")
       , Cabal-tree-diff =
           H.callGit
             "https://gitlab.haskell.org/ghc/packages/Cabal"
             "e9fdb85427ad1ef11a25c8b1f2286614c86a65ff"
             (Some "Cabal-tree-diff/")
+      , Cabal-syntax = H.callHackage "Cabal-syntax" "3.10.1.0"
       , Chart = H.callHackage "Chart" "1.9.4"
       , Chart-diagrams = H.callHackage "Chart-diagrams" "1.9.4"
       , ChasingBottoms = H.callHackage "ChasingBottoms" "1.3.1.12"
@@ -80,7 +76,7 @@ let packages =
       , asn1-encoding = H.callHackage "asn1-encoding" "0.9.6"
       , asn1-parse = H.callHackage "asn1-parse" "0.9.5"
       , asn1-types = H.callHackage "asn1-types" "0.3.4"
-      , assoc = H.callHackage "assoc" "1.0.2"
+      , assoc = H.callHackage "assoc" "1.1"
       , async = H.callHackage "async" "2.2.4"
       , async-timer = H.callHackage "async-timer" "0.2.0.0"
       , atomic-primops = H.callHackage "atomic-primops" "0.8.4"
@@ -129,7 +125,7 @@ let packages =
             (Some "beam-sqlite/")
       , bech32 = H.callHackage "bech32" "1.1.2"
       , bech32-th = H.callHackage "bech32-th" "1.1.1"
-      , bifunctors = H.callHackage "bifunctors" "5.5.13"
+      , bifunctors = H.callHackage "bifunctors" "5.6.1"
       , bimap = H.callHackage "bimap" "0.5.0"
       , bin = H.callHackage "bin" "0.1.2"
       , binary-orphans = H.callHackage "binary-orphans" "1.0.3"
@@ -149,8 +145,8 @@ let packages =
       , bytestring-builder = H.callHackage "bytestring-builder" "0.10.8.2.0"
       , c2hs = H.callHackage "c2hs" "0.28.8"
       , cabal-doctest = H.callHackage "cabal-doctest" "1.0.9"
-      , cabal-install = H.callHackage "cabal-install" "3.8.1.0"
-      , cabal-install-solver = H.callHackage "cabal-install-solver" "3.8.1.0"
+      , cabal-install = H.callHackage "cabal-install" "3.10.1.0"
+      , cabal-install-solver = H.callHackage "cabal-install-solver" "3.10.1.0"
       , cabal2nix = H.callHackage "cabal2nix" "2.19.1"
       , cache = H.callHackage "cache" "0.1.3.0"
       , call-stack = H.callHackage "call-stack" "0.4.0"
@@ -299,11 +295,7 @@ let packages =
       , dns = H.callHackage "dns" "4.1.0"
       , doclayout = H.callHackage "doclayout" "0.4"
       , doctemplates = H.callHackage "doctemplates" "0.10.0.2"
-      , doctest =
-          H.callGit
-            "https://github.com/sol/doctest"
-            "4eb97c213acf7abe965a3a1b67397199ed155f3c"
-            (None H.Subdir)
+      , doctest = H.callHackage "doctest" "0.21.1"
       , doctest-discover = H.callHackage "doctest-discover" "0.2.0.0"
       , doctest-exitcode-stdio = H.callHackage "doctest-exitcode-stdio" "0.0"
       , doctest-lib = H.callHackage "doctest-lib" "0.1"
@@ -355,7 +347,7 @@ let packages =
       , extensible-exceptions = H.callHackage "extensible-exceptions" "0.1.1.4"
       , extra = H.callHackage "extra" "1.7.12"
       , fail = H.callHackage "fail" "4.9.0.0"
-      , fast-logger = H.callHackage "fast-logger" "3.1.1"
+      , fast-logger = H.callHackage "fast-logger" "3.2.1"
       , fast-math = H.callHackage "fast-math" "1.0.2"
       , fcf-containers = H.callHackage "fcf-containers" "0.7.1"
       , feedback = H.callHackage "feedback" "0.1.0.1"
@@ -380,6 +372,8 @@ let packages =
       , fmlist = H.callHackage "fmlist" "0.9.4"
       , fmt = H.callHackage "fmt" "0.6.3.0"
       , focus = H.callHackage "focus" "1.0.3"
+      , foldable1-classes-compat =
+          H.callHackage "foldable1-classes-compat" "0.1"
       , foldl = H.callHackage "foldl" "1.4.12"
       , force-layout = H.callHackage "force-layout" "0.4.0.6"
       , foreign-store = H.callHackage "foreign-store" "0.2"
@@ -467,11 +461,11 @@ let packages =
       , groups = H.callHackage "groups" "0.5.3"
       , gtk2hs-buildtools = H.callHackage "gtk2hs-buildtools" "0.13.8.3"
       , hackage-db = H.callHackage "hackage-db" "2.1.2"
-      , hackage-security = H.callHackage "hackage-security" "0.6.2.2"
+      , hackage-security = H.callHackage "hackage-security" "0.6.2.3"
       , haddock-library = H.callHackage "haddock-library" "1.11.0"
       , hakyll = H.callHackage "hakyll" "4.15.1.1"
       , half = H.callHackage "half" "0.3.1"
-      , happy = H.callHackage "happy" "1.20.0"
+      , happy = H.callHackage "happy" "1.20.1.1"
       , hashable = H.callHackage "hashable" "1.4.1.0"
       , hashing = H.callHackage "hashing" "0.1.0.1"
       , hashmap = H.callHackage "hashmap" "1.3.3"
@@ -778,7 +772,11 @@ let packages =
       , mono-traversable = H.callHackage "mono-traversable" "1.0.15.3"
       , monoid-extras = H.callHackage "monoid-extras" "0.6.2"
       , monoid-subclasses = H.callHackage "monoid-subclasses" "1.1.3"
-      , monoidal-containers = H.callHackage "monoidal-containers" "0.6.3.0"
+      , monoidal-containers =
+          H.callGit
+            "https://github.com/locallycompact/monoidal-containers"
+            "977140aed7f850ca4e73090475b0f7ff02a7a92e"
+            (None H.Subdir)
       , mtl-compat = H.callHackage "mtl-compat" "0.2.2"
       , mtl-prelude = H.callHackage "mtl-prelude" "2.0.3.1"
       , multiset = H.callHackage "multiset" "0.3.4.3"
@@ -1104,7 +1102,7 @@ let packages =
       , system-fileio = H.callHackage "system-fileio" "0.3.16.4"
       , system-filepath = H.callHackage "system-filepath" "0.4.14"
       , tabular = H.callHackage "tabular" "0.2.2.8"
-      , tagged = H.callHackage "tagged" "0.8.6.1"
+      , tagged = H.callHackage "tagged" "0.8.7"
       , tagsoup = H.callHackage "tagsoup" "0.14.8"
       , tar =
           H.callGit
@@ -1168,7 +1166,7 @@ let packages =
       , th-orphans = H.callHackage "th-orphans" "0.13.14"
       , th-reify-many = H.callHackage "th-reify-many" "0.1.10"
       , th-utilities = H.callHackage "th-utilities" "0.2.5.0"
-      , these = H.callHackage "these" "1.1.1.1"
+      , these = H.callHackage "these" "1.2"
       , these-skinny = H.callHackage "these-skinny" "0.7.5"
       , threads = H.callHackage "threads" "0.5.1.7"
       , tidal = H.callHackage "tidal" "1.8.1"
@@ -1210,7 +1208,11 @@ let packages =
       , universe-reverse-instances =
           H.callHackage "universe-reverse-instances" "1.1.1"
       , unix-bytestring = H.callHackage "unix-bytestring" "0.3.7.8"
-      , unix-compat = H.callHackage "unix-compat" "0.6"
+      , unix-compat =
+          H.callGit
+            "https://github.com/mitchellwrosen/fork--unix-compat"
+            "f28060acd449643d267954647c1bb7c748c35fa9"
+            (None H.Subdir)
       , unix-memory = H.callHackage "unix-memory" "0.1.2"
       , unix-time = H.callHackage "unix-time" "0.4.8"
       , unliftio = H.callHackage "unliftio" "0.2.23.0"

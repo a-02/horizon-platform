@@ -7,10 +7,8 @@
 }:
 mkDerivation {
   pname = "tagged";
-  version = "0.8.6.1";
-  sha256 = "f5e0fcf95f0bb4aa63f428f2c01955a41ea1a42cfcf39145ed631f59a9616c02";
-  revision = "3";
-  editedCabalFile = "19klgkhkca9qgq2ylc41z85x7piagjh8wranriy48dcfkgraw94a";
+  version = "0.8.7";
+  sha256 = "6414eeac27a1633f49e2f78199ced99ce8ce3d70b658cf6d55b1d81ff60cb961";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -19,8 +19,8 @@
 }:
 mkDerivation {
   pname = "Cabal";
-  version = "3.8.1.0";
-  sha256 = "7464cbe6c2f3d7e5d0232023a1a7330621f8b24853cb259fc89a2af85b736608";
+  version = "3.10.1.0";
+  sha256 = "0bdbab8e4c3178016fb0f070d8b62bc3067f93afabfbd3aa17c8065d0ecc98ee";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

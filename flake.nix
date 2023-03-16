@@ -81,7 +81,7 @@
 
           checks = with lint-utils.linters.${system}; {
             dhall-format = dhall-format { src = self; };
-            nixpkgs-fmt = nixpkgs-fmt { src = self; };
+            nixpkgs-fmt = nixpkgs-fmt { src = self; find = "flake.nix"; };
             stylish-haskell = stylish-haskell { src = self; };
           };
 

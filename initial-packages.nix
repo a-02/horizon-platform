@@ -595,6 +595,8 @@ self: with pkgs.haskell.lib; {
 
   focus = self.callPackage (./pkgs/focus.nix) { };
 
+  foldable1-classes-compat = self.callPackage (./pkgs/foldable1-classes-compat.nix) { };
+
   foldl = self.callPackage (./pkgs/foldl.nix) { };
 
   force-layout = self.callPackage (./pkgs/force-layout.nix) { };

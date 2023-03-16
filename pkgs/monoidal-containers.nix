@@ -1,36 +1,22 @@
-{ mkDerivation
-, aeson
-, base
-, containers
-, deepseq
-, hashable
-, lens
-, lib
-, newtype
-, semialign
-, these
-, unordered-containers
-, witherable
+{ mkDerivation, aeson, base, containers, deepseq, fetchgit
+, hashable, lens, lib, newtype, semialign, these
+, unordered-containers, witherable
 }:
 mkDerivation {
   pname = "monoidal-containers";
   version = "0.6.3.0";
-  sha256 = "047e86f1d31c56c8aee60eaff340b57340b1aa9a29f9ecf64679cb9141f98154";
+  src = fetchgit {
+    url = "https://github.com/locallycompact/monoidal-containers";
+    sha256 = "19093cl6v8wlpmmxmk2s88pr0fz51pvhbci4i42frnlfxgqaw0b1";
+    rev = "977140aed7f850ca4e73090475b0f7ff02a7a92e";
+    fetchSubmodules = true;
+  };
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    containers
-    deepseq
-    hashable
-    lens
-    newtype
-    semialign
-    these
-    unordered-containers
-    witherable
+    aeson base containers deepseq hashable lens newtype semialign these
+    unordered-containers witherable
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
