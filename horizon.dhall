@@ -16,7 +16,7 @@ let packages =
             "e9fdb85427ad1ef11a25c8b1f2286614c86a65ff"
             (Some "Cabal-described/")
       , Cabal-tree-diff =
-         H.callGit
+          H.callGit
             "https://gitlab.haskell.org/ghc/packages/Cabal"
             "e9fdb85427ad1ef11a25c8b1f2286614c86a65ff"
             (Some "Cabal-tree-diff/")
@@ -295,11 +295,7 @@ let packages =
       , dns = H.callHackage "dns" "4.1.0"
       , doclayout = H.callHackage "doclayout" "0.4"
       , doctemplates = H.callHackage "doctemplates" "0.10.0.2"
-      , doctest =
-          H.callGit
-            "https://github.com/sol/doctest"
-            "4eb97c213acf7abe965a3a1b67397199ed155f3c"
-            (None H.Subdir)
+      , doctest = H.callHackage "doctest" "0.21.1"
       , doctest-discover = H.callHackage "doctest-discover" "0.2.0.0"
       , doctest-exitcode-stdio = H.callHackage "doctest-exitcode-stdio" "0.0"
       , doctest-lib = H.callHackage "doctest-lib" "0.1"
@@ -376,7 +372,8 @@ let packages =
       , fmlist = H.callHackage "fmlist" "0.9.4"
       , fmt = H.callHackage "fmt" "0.6.3.0"
       , focus = H.callHackage "focus" "1.0.3"
-      , foldable1-classes-compat = H.callHackage "foldable1-classes-compat" "0.1"
+      , foldable1-classes-compat =
+          H.callHackage "foldable1-classes-compat" "0.1"
       , foldl = H.callHackage "foldl" "1.4.12"
       , force-layout = H.callHackage "force-layout" "0.4.0.6"
       , foreign-store = H.callHackage "foreign-store" "0.2"
