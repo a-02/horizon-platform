@@ -772,7 +772,11 @@ let packages =
       , mono-traversable = H.callHackage "mono-traversable" "1.0.15.3"
       , monoid-extras = H.callHackage "monoid-extras" "0.6.2"
       , monoid-subclasses = H.callHackage "monoid-subclasses" "1.1.3"
-      , monoidal-containers = H.callHackage "monoidal-containers" "0.6.3.0"
+      , monoidal-containers =
+          H.callGit
+            "https://github.com/locallycompact/monoidal-containers"
+            "977140aed7f850ca4e73090475b0f7ff02a7a92e"
+            (None H.Subdir)
       , mtl-compat = H.callHackage "mtl-compat" "0.2.2"
       , mtl-prelude = H.callHackage "mtl-prelude" "2.0.3.1"
       , multiset = H.callHackage "multiset" "0.3.4.3"
