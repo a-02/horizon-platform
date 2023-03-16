@@ -1,91 +1,29 @@
-{ mkDerivation
-, Cabal
-, Cabal-syntax
-, QuickCheck
-, aeson
-, base
-, base16-bytestring
-, base64-bytestring
-, bytestring
-, containers
-, cryptohash-sha256
-, directory
-, ed25519
-, filepath
-, ghc-prim
-, lib
-, lukko
-, mtl
-, network
-, network-uri
-, parsec
-, pretty
-, tar
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, template-haskell
-, temporary
-, text
-, time
-, transformers
-, unordered-containers
-, vector
-, zlib
+{ mkDerivation, Cabal, Cabal-syntax, QuickCheck, aeson, base
+, base16-bytestring, base64-bytestring, bytestring, containers
+, cryptohash-sha256, directory, ed25519, filepath, ghc-prim, lib
+, lukko, mtl, network, network-uri, parsec, pretty, tar, tasty
+, tasty-hunit, tasty-quickcheck, template-haskell, temporary, text
+, time, transformers, unordered-containers, vector, zlib
 }:
 mkDerivation {
   pname = "hackage-security";
-  version = "0.6.2.2";
-  sha256 = "a833a31610220506557e96fb6e3e8b05a2e1db8e7ebc06e91bbb699ddde0b276";
+  version = "0.6.2.3";
+  sha256 = "52ee0576971955571d846b8e6c09638f89f4f7881f4a95173e44ccc0d856a066";
   revision = "2";
-  editedCabalFile = "12mrnjyl5z5ng1w4748xi6l8iyq3wcs94qq42kx9hx09d4qklsq0";
+  editedCabalFile = "07i8f4sappqphh39jj9268a6ci7l972qi33p4zydsdrvh5s58h0q";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base16-bytestring
-    base64-bytestring
-    bytestring
-    Cabal
-    Cabal-syntax
-    containers
-    cryptohash-sha256
-    directory
-    ed25519
-    filepath
-    ghc-prim
-    lukko
-    mtl
-    network
-    network-uri
-    parsec
-    pretty
-    tar
-    template-haskell
-    time
-    transformers
-    zlib
+    base base16-bytestring base64-bytestring bytestring Cabal
+    Cabal-syntax containers cryptohash-sha256 directory ed25519
+    filepath ghc-prim lukko mtl network network-uri parsec pretty tar
+    template-haskell time transformers zlib
   ];
   testHaskellDepends = [
-    aeson
-    base
-    bytestring
-    Cabal
-    Cabal-syntax
-    containers
-    network-uri
-    QuickCheck
-    tar
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    temporary
-    text
-    time
-    unordered-containers
-    vector
-    zlib
+    aeson base bytestring Cabal Cabal-syntax containers network-uri
+    QuickCheck tar tasty tasty-hunit tasty-quickcheck temporary text
+    time unordered-containers vector zlib
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
