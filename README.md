@@ -55,7 +55,7 @@ afterwards.
 To use `horizon-shell`.
 
 ```
-nix run 'git+https://gitlab.horizon-haskell.net/shells/horizon-shell?ref=refs/tags/0.0.2'
+nix run 'git+https://gitlab.horizon-haskell.net/shells/horizon-shell?ref=refs/tags/0.0.3'
 ```
 
 See the in-shell help for usage.
