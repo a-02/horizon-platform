@@ -55,23 +55,7 @@ afterwards.
 To use `horizon-shell`.
 
 ```
-nix run 'git+https://gitlab.horizon-haskell.net/shells/horizon-shell?ref=refs/tags/0.0.1'
+nix run 'git+https://gitlab.horizon-haskell.net/shells/horizon-shell?ref=refs/tags/0.0.2'
 ```
 
-The package set will be automatically loaded under the variable `hz`.
-
-```
-let f = L.at "lens" L..~ Just (H.callHackage "lens" "5.1")
-
-:t f
-f :: (L.IxValue t ~ HaskellPackage, L.At t,
-      IsString (L.Index t)) =>
-     t -> t
-
-let hz' = f hz
-
-H.writeHorizonFile hz'
-
-```
-
-Then remember to delete `pkgs/lens.nix` and re-run horizon-gen-nix as usual.
+See the in-shell help for usage.
