@@ -553,7 +553,7 @@ let packages =
             (Some "horizon-spec/")
       , horizon-spec-lens =
           H.callTarball
-            "https://gitlab.horizon-haskell.net/haskell/horizon-spec-lens/-/archive/0.2.0/horizon-spec-lens-0.2.0.tar.gz"
+            "https://gitlab.horizon-haskell.net/haskell/horizon-spec-lens/-/archive/0.2.1/horizon-spec-lens-0.2.1.tar.gz"
             (Some "horizon-spec-lens/")
       , horizon-spec-pretty =
           H.callTarball
