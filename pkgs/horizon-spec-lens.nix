@@ -1,10 +1,10 @@
 { mkDerivation, base, fetchzip, horizon-spec, lens, lib }:
 mkDerivation {
   pname = "horizon-spec-lens";
-  version = "0.2.0";
+  version = "0.2.1";
   src = fetchzip {
-    url = "https://gitlab.horizon-haskell.net/haskell/horizon-spec-lens/-/archive/0.2.0/horizon-spec-lens-0.2.0.tar.gz";
-    sha256 = "0iqpvid9p6gyvbmc45cry2fafmg9khl0wkpn4sc9gfhgxhl2a6gm";
+    url = "https://gitlab.horizon-haskell.net/haskell/horizon-spec-lens/-/archive/0.2.1/horizon-spec-lens-0.2.1.tar.gz";
+    sha256 = "0b2y8isijbfnf8q62mp2lpc287bv5xnkm389k3bi4yd8kyj44w1n";
   };
   postUnpack = "sourceRoot+=/horizon-spec-lens/; echo source root reset to $sourceRoot";
   isLibrary = true;
