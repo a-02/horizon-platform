@@ -743,8 +743,6 @@ self: with pkgs.haskell.lib; {
 
   haddock-library = self.callPackage (./pkgs/haddock-library.nix) { };
 
-  hakyll = self.callPackage (./pkgs/hakyll.nix) { };
-
   half = self.callPackage (./pkgs/half.nix) { };
 
   happy = self.callPackage (./pkgs/happy.nix) { };
@@ -1678,8 +1676,6 @@ self: with pkgs.haskell.lib; {
   singleton-bool = self.callPackage (./pkgs/singleton-bool.nix) { };
 
   singletons = self.callPackage (./pkgs/singletons.nix) { };
-
-  singletons-th = self.callPackage (./pkgs/singletons-th.nix) { };
 
   size-based = self.callPackage (./pkgs/size-based.nix) { };
 

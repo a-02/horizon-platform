@@ -465,7 +465,6 @@ let packages =
       , hackage-db = H.callHackage "hackage-db" "2.1.2"
       , hackage-security = H.callHackage "hackage-security" "0.6.2.3"
       , haddock-library = H.callHackage "haddock-library" "1.11.0"
-      , hakyll = H.callHackage "hakyll" "4.15.1.1"
       , half = H.callHackage "half" "0.3.1"
       , happy = H.callHackage "happy" "1.20.1.1"
       , hashable = H.callHackage "hashable" "1.4.2.0"
@@ -473,7 +472,7 @@ let packages =
       , hashmap = H.callHackage "hashmap" "1.3.3"
       , hashtables = H.callHackage "hashtables" "1.3.1"
       , haskell-language-server =
-          (H.callHackage "haskell-language-server" "1.9.1.0")
+          (H.callHackage "haskell-language-server" "1.9.0.0")
         with flags =
           [ H.CabalFlag.Disable "dynamic"
           , H.CabalFlag.Disable "ormolu"
@@ -1045,7 +1044,6 @@ let packages =
       , simple-sendfile = H.callHackage "simple-sendfile" "0.2.30"
       , singleton-bool = H.callHackage "singleton-bool" "0.1.6"
       , singletons = H.callHackage "singletons" "3.0.2"
-      , singletons-th = H.callHackage "singletons-th" "3.1.1"
       , size-based = H.callHackage "size-based" "0.1.3.1"
       , skylighting = H.callHackage "skylighting" "0.13.2.1"
       , skylighting-core = H.callHackage "skylighting-core" "0.13.2.1"

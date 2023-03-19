@@ -20,8 +20,10 @@
 }:
 mkDerivation {
   pname = "haskell-language-server";
-  version = "1.9.1.0";
-  sha256 = "bc02ff24c4ac1d8749bacfcc7e71ef7cf52c4e3641bdc1472865e10af450a547";
+  version = "1.9.0.0";
+  sha256 = "77d2c056c2a4f6ea0aaae38560054f49b85f41d6abc5ddb5da18b2ef091eaeaf";
+  revision = "1";
+  editedCabalFile = "19y9wid97a2c6x8cx2zq2r0asr8x0wlnvxmrj9qhfpvmk05sqrpm";
   configureFlags = [
     "-f-dynamic" "-f-eval" "-f-floskell" "-f-ormolu" "-f-rename"
     "-f-stylishhaskell"
