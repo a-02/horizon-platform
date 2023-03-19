@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "algebraic-graphs";
-  version = "0.7";
-  sha256 = "51159a0d18690ab51e6709e3c576275402f96f57d901f87d734da6854582e568";
+  version = "0.6.1";
+  sha256 = "2d64982591929cbc9a2f184eeb7271b8a4096672fe725c928ea4b97aeac40a99";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

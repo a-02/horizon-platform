@@ -8,18 +8,18 @@ let packages =
       , Cabal-QuickCheck =
           H.callGit
             "https://gitlab.haskell.org/ghc/packages/Cabal"
-            "e9fdb85427ad1ef11a25c8b1f2286614c86a65ff"
+            "6c95f3fee3cdee859704b6476646cefd4628a850"
             (Some "Cabal-QuickCheck/")
       , Cabal-described =
           H.callGit
             "https://gitlab.haskell.org/ghc/packages/Cabal"
-            "e9fdb85427ad1ef11a25c8b1f2286614c86a65ff"
+            "6c95f3fee3cdee859704b6476646cefd4628a850"
             (Some "Cabal-described/")
       , Cabal-syntax = H.callHackage "Cabal-syntax" "3.10.1.0"
       , Cabal-tree-diff =
           H.callGit
             "https://gitlab.haskell.org/ghc/packages/Cabal"
-            "e9fdb85427ad1ef11a25c8b1f2286614c86a65ff"
+            "6c95f3fee3cdee859704b6476646cefd4628a850"
             (Some "Cabal-tree-diff/")
       , Chart = H.callHackage "Chart" "1.9.4"
       , Chart-diagrams = H.callHackage "Chart-diagrams" "1.9.4"
@@ -64,7 +64,7 @@ let packages =
       , aeson-qq = H.callHackage "aeson-qq" "0.8.4"
       , aeson-yaml = H.callHackage "aeson-yaml" "1.1.0.1"
       , alex = H.callHackage "alex" "3.2.7.1"
-      , algebraic-graphs = H.callHackage "algebraic-graphs" "0.7"
+      , algebraic-graphs = H.callHackage "algebraic-graphs" "0.6.1"
       , alsa-core = H.callHackage "alsa-core" "0.5.0.1"
       , alsa-mixer = H.callHackage "alsa-mixer" "0.3.0"
       , ansi-terminal = H.callHackage "ansi-terminal" "0.11.4"
