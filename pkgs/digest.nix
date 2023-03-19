@@ -1,13 +1,13 @@
 { mkDerivation, base, bytestring, lib, zlib }:
 mkDerivation {
   pname = "digest";
-  version = "0.0.1.3";
-  sha256 = "5596a53e17c036b9b2aefbed069ec819b36fefcd4bed21330ae0ee5be840a3d0";
+  version = "0.0.1.7";
+  sha256 = "b23d6c804e6fed0ac9bb0d35b7aed5785330d63efebe296cf0073dab17e05f0a";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring ];
-  librarySystemDepends = [ zlib ];
+  libraryPkgconfigDepends = [ zlib ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;
@@ -15,7 +15,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  description = "Various cryptographic hashes for bytestrings; CRC32 and Adler32 for now";
-  license = lib.licenses.bsd3;
+  description = "Various hashes for bytestrings; CRC32 and Adler32 for now";
+  license = lib.licenses.bsd2;
   broken = false;
 }

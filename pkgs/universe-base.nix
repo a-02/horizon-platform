@@ -1,17 +1,10 @@
-{ mkDerivation
-, QuickCheck
-, base
-, containers
-, lib
-, tagged
+{ mkDerivation, QuickCheck, base, containers, lib, tagged
 , transformers
 }:
 mkDerivation {
   pname = "universe-base";
-  version = "1.1.3";
-  sha256 = "c59dfe99b76435d13483eff888e020a282ae8451b7b692dc98f348dcec95db52";
-  revision = "3";
-  editedCabalFile = "0hnd5vxsncwyjsindfmsvp9jbixanhmzczhrmd8s8g6imgb0mzyk";
+  version = "1.1.3.1";
+  sha256 = "a3e7ef305d79c58caa25276929f0cd2c129468484502b93b7f9b3b7b77e5732d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, bytestring
-, lib
-, mtl
-, tasty
-, tasty-hunit
+{ mkDerivation, base, bytestring, lib, mtl, tasty, tasty-hunit
 , tasty-quickcheck
 }:
 mkDerivation {
@@ -16,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring tasty ];
   testHaskellDepends = [
-    base
-    bytestring
-    mtl
-    tasty
-    tasty-hunit
-    tasty-quickcheck
+    base bytestring mtl tasty tasty-hunit tasty-quickcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

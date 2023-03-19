@@ -1,12 +1,14 @@
-{ mkDerivation, base, lib }:
+{ mkDerivation, base, base-orphans, lib }:
 mkDerivation {
   pname = "generically";
-  version = "0.1";
-  sha256 = "d5b72880e1d00b24b6c221978d060bea620acc412cdcb62521f3016cbd3f2b71";
+  version = "0.1.1";
+  sha256 = "04c5a436bec4b041f71a733f56a1bd7f435f63dde8d3eb5c1f48d55b4dbc43cf";
+  revision = "1";
+  editedCabalFile = "0pkyhym7q9v03pplpfjg80vmpk0cbgc56panfx9vcbzadvxmx6rb";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
-  libraryHaskellDepends = [ base ];
+  libraryHaskellDepends = [ base base-orphans ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;

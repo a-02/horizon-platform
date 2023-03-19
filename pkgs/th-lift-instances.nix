@@ -1,14 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, containers
-, lib
-, template-haskell
-, text
-, th-lift
-, transformers
-, vector
+{ mkDerivation, QuickCheck, base, bytestring, containers, lib
+, template-haskell, text, th-lift, transformers, vector
 }:
 mkDerivation {
   pname = "th-lift-instances";
@@ -18,23 +9,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    template-haskell
-    text
-    th-lift
-    transformers
-    vector
+    base bytestring containers template-haskell text th-lift
+    transformers vector
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    containers
-    QuickCheck
-    template-haskell
-    text
-    vector
+    base bytestring containers QuickCheck template-haskell text vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,8 +1,8 @@
 { mkDerivation, base, containers, lib, mtl, tasty, tasty-hunit }:
 mkDerivation {
   pname = "syb";
-  version = "0.7.2.1";
-  sha256 = "1807c66f77e66786739387f0ae9f16d150d1cfa9d626afcb729f0e9b442a8d96";
+  version = "0.7.2.3";
+  sha256 = "d0b72daf16a947c4d9cb2d5774072f2153433224a04fd60fad60be9ffac8d91a";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

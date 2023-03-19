@@ -1,12 +1,14 @@
-{ mkDerivation, SDL2, base, bytestring, c2hs, lib }:
+{ mkDerivation, SDL2, base, bytestring, c2hs, lib
+, system-cxx-std-lib
+}:
 mkDerivation {
   pname = "proteaaudio-sdl";
-  version = "0.9.2";
-  sha256 = "8c65a869e7f9af19fc9f7a596b5f12f1551b9008a76b5b85460f304eb6cdc662";
+  version = "0.9.3";
+  sha256 = "57f99c2ca828fd820c618936f970cc70d9457de48ba4ed097531085494b0ee84";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
-  libraryHaskellDepends = [ base bytestring ];
+  libraryHaskellDepends = [ base bytestring system-cxx-std-lib ];
   librarySystemDepends = [ SDL2 ];
   libraryPkgconfigDepends = [ SDL2 ];
   libraryToolDepends = [ c2hs ];

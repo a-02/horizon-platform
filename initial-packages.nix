@@ -293,6 +293,8 @@ self: with pkgs.haskell.lib; {
 
   commonmark-pandoc = self.callPackage (./pkgs/commonmark-pandoc.nix) { };
 
+  commutative-semigroups = self.callPackage (./pkgs/commutative-semigroups.nix) { };
+
   comonad = self.callPackage (./pkgs/comonad.nix) { };
 
   compact = self.callPackage (./pkgs/compact.nix) { };
@@ -881,6 +883,8 @@ self: with pkgs.haskell.lib; {
 
   hslua-core = self.callPackage (./pkgs/hslua-core.nix) { };
 
+  hslua-list = self.callPackage (./pkgs/hslua-list.nix) { };
+
   hslua-marshalling = self.callPackage (./pkgs/hslua-marshalling.nix) { };
 
   hslua-module-doclayout = self.callPackage (./pkgs/hslua-module-doclayout.nix) { };
@@ -896,6 +900,8 @@ self: with pkgs.haskell.lib; {
   hslua-objectorientation = self.callPackage (./pkgs/hslua-objectorientation.nix) { };
 
   hslua-packaging = self.callPackage (./pkgs/hslua-packaging.nix) { };
+
+  hslua-typing = self.callPackage (./pkgs/hslua-typing.nix) { };
 
   hspec = self.callPackage (./pkgs/hspec.nix) { };
 
@@ -1024,6 +1030,8 @@ self: with pkgs.haskell.lib; {
   ipynb = self.callPackage (./pkgs/ipynb.nix) { };
 
   iso8601-time = self.callPackage (./pkgs/iso8601-time.nix) { };
+
+  isomorphism-class = self.callPackage (./pkgs/isomorphism-class.nix) { };
 
   iwlib = self.callPackage (./pkgs/iwlib.nix) { };
 
@@ -1315,6 +1323,8 @@ self: with pkgs.haskell.lib; {
 
   ordered-containers = self.callPackage (./pkgs/ordered-containers.nix) { };
 
+  pager = self.callPackage (./pkgs/pager.nix) { };
+
   pandoc = self.callPackage (./pkgs/pandoc.nix) { };
 
   pandoc-lua-marshal = self.callPackage (./pkgs/pandoc-lua-marshal.nix) { };
@@ -1513,6 +1523,8 @@ self: with pkgs.haskell.lib; {
 
   recursion-schemes = self.callPackage (./pkgs/recursion-schemes.nix) { };
 
+  recv = self.callPackage (./pkgs/recv.nix) { };
+
   reducers = self.callPackage (./pkgs/reducers.nix) { };
 
   ref-tf = self.callPackage (./pkgs/ref-tf.nix) { };
@@ -1687,6 +1699,8 @@ self: with pkgs.haskell.lib; {
 
   skylighting-format-blaze-html = self.callPackage (./pkgs/skylighting-format-blaze-html.nix) { };
 
+  skylighting-format-context = self.callPackage (./pkgs/skylighting-format-context.nix) { };
+
   skylighting-format-latex = self.callPackage (./pkgs/skylighting-format-latex.nix) { };
 
   slugify = self.callPackage (./pkgs/slugify.nix) { };
@@ -1748,6 +1762,8 @@ self: with pkgs.haskell.lib; {
   streaming-commons = self.callPackage (./pkgs/streaming-commons.nix) { };
 
   streamly = self.callPackage (./pkgs/streamly.nix) { };
+
+  streamly-core = self.callPackage (./pkgs/streamly-core.nix) { };
 
   strict = self.callPackage (./pkgs/strict.nix) { };
 
@@ -1847,6 +1863,12 @@ self: with pkgs.haskell.lib; {
 
   texmath = self.callPackage (./pkgs/texmath.nix) { };
 
+  text-ansi = self.callPackage (./pkgs/text-ansi.nix) { };
+
+  text-builder = self.callPackage (./pkgs/text-builder.nix) { };
+
+  text-builder-dev = self.callPackage (./pkgs/text-builder-dev.nix) { };
+
   text-conversions = self.callPackage (./pkgs/text-conversions.nix) { };
 
   text-display = self.callPackage (./pkgs/text-display.nix) { };
@@ -1894,6 +1916,8 @@ self: with pkgs.haskell.lib; {
   threads = self.callPackage (./pkgs/threads.nix) { };
 
   tidal = self.callPackage (./pkgs/tidal.nix) { };
+
+  tidal-link = self.callPackage (./pkgs/tidal-link.nix) { };
 
   time-compat = self.callPackage (./pkgs/time-compat.nix) { };
 

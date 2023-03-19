@@ -1,26 +1,15 @@
-{ mkDerivation
-, base
-, containers
-, ghc
-, lib
-, mtl
-, template-haskell
+{ mkDerivation, base, containers, ghc, lib, mtl, template-haskell
 , transformers
 }:
 mkDerivation {
   pname = "inspection-testing";
-  version = "0.5";
-  sha256 = "b071b714006f7980a2d71ff8bf24cf33289e334a540f4e3121fcb094a6dd5cc5";
+  version = "0.5.0.1";
+  sha256 = "29750b73c578346659c89a146436e2f582fb0f28d1292b8cf0631873278b077f";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    ghc
-    mtl
-    template-haskell
-    transformers
+    base containers ghc mtl template-haskell transformers
   ];
   testHaskellDepends = [ base ];
   enableLibraryProfiling = true;

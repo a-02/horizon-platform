@@ -1,13 +1,17 @@
-{ mkDerivation, base, base16-bytestring, bytestring, lib, text }:
+{ mkDerivation, base, base16-bytestring, bytestring, hspec, lib
+, text
+}:
 mkDerivation {
   pname = "hex-text";
-  version = "0.1.0.7";
-  sha256 = "f60b1668373294f700b720b016e67797bc99b4291bfdac5e357735708ac9def7";
+  version = "0.1.0.8";
+  sha256 = "653924681d94db1e7e8ed9b3be209d17a0fd032683192084d62ee9b6394cf71b";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base base16-bytestring bytestring text ];
-  testHaskellDepends = [ base base16-bytestring bytestring text ];
+  testHaskellDepends = [
+    base base16-bytestring bytestring hspec text
+  ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;

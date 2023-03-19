@@ -1,10 +1,8 @@
 { mkDerivation, Cabal, base, bytestring, lib, postgresql, unix }:
 mkDerivation {
   pname = "postgresql-libpq";
-  version = "0.9.4.3";
-  sha256 = "e3e246dcd55352fce514969a72a6fe37771102034fb8e662fdc7ae780b83d6bd";
-  revision = "3";
-  editedCabalFile = "02cj493a2qxl5hddiq0579079s398hdqqy164pig6d61nl7q66cs";
+  version = "0.9.5.0";
+  sha256 = "d1592bd805c088bb0c136c03eea92af9c1d7dbd85e32d0b6d522fd940f325470";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

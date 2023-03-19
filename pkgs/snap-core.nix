@@ -1,113 +1,34 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, attoparsec
-, base
-, bytestring
-, bytestring-builder
-, case-insensitive
-, containers
-, deepseq
-, directory
-, filepath
-, hashable
-, io-streams
-, lib
-, lifted-base
-, monad-control
-, mtl
-, network
-, network-uri
-, old-locale
-, parallel
-, random
-, readable
-, regex-posix
-, test-framework
-, test-framework-hunit
-, test-framework-quickcheck2
-, text
-, time
-, transformers
-, transformers-base
-, unix-compat
-, unordered-containers
-, vector
-, zlib
+{ mkDerivation, HUnit, QuickCheck, attoparsec, base, bytestring
+, bytestring-builder, case-insensitive, containers, deepseq
+, directory, filepath, hashable, io-streams, lib, lifted-base
+, monad-control, mtl, network, network-uri, old-locale, parallel
+, random, readable, regex-posix, test-framework
+, test-framework-hunit, test-framework-quickcheck2, text, time
+, transformers, transformers-base, unix-compat
+, unordered-containers, vector, zlib
 }:
 mkDerivation {
   pname = "snap-core";
-  version = "1.0.5.0";
-  sha256 = "642aedd244865560b5d656cd460e829a39d859ad031710b79bd112785e38c641";
-  revision = "3";
-  editedCabalFile = "02r6plphl4vqig3xap9amdib0qjd98nqpn5jhy6hsbiwh3p7cy9b";
+  version = "1.0.5.1";
+  sha256 = "a704c1a0e2c4ebfdcc8baf6feab09dd7715bdc9d750f7efb63d06e3965ec0502";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    attoparsec
-    base
-    bytestring
-    bytestring-builder
-    case-insensitive
-    containers
-    directory
-    filepath
-    hashable
-    HUnit
-    io-streams
-    lifted-base
-    monad-control
-    mtl
-    network
-    network-uri
-    old-locale
-    random
-    readable
-    regex-posix
-    text
-    time
-    transformers
-    transformers-base
-    unix-compat
-    unordered-containers
-    vector
+    attoparsec base bytestring bytestring-builder case-insensitive
+    containers directory filepath hashable HUnit io-streams lifted-base
+    monad-control mtl network network-uri old-locale random readable
+    regex-posix text time transformers transformers-base unix-compat
+    unordered-containers vector
   ];
   testHaskellDepends = [
-    attoparsec
-    base
-    bytestring
-    bytestring-builder
-    case-insensitive
-    containers
-    deepseq
-    directory
-    filepath
-    hashable
-    HUnit
-    io-streams
-    lifted-base
-    monad-control
-    mtl
-    network
-    network-uri
-    old-locale
-    parallel
-    QuickCheck
-    random
-    readable
-    regex-posix
-    test-framework
-    test-framework-hunit
-    test-framework-quickcheck2
-    text
-    time
-    transformers
-    transformers-base
-    unix-compat
-    unordered-containers
-    vector
-    zlib
+    attoparsec base bytestring bytestring-builder case-insensitive
+    containers deepseq directory filepath hashable HUnit io-streams
+    lifted-base monad-control mtl network network-uri old-locale
+    parallel QuickCheck random readable regex-posix test-framework
+    test-framework-hunit test-framework-quickcheck2 text time
+    transformers transformers-base unix-compat unordered-containers
+    vector zlib
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

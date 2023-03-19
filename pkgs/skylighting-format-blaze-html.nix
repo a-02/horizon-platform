@@ -1,24 +1,15 @@
-{ mkDerivation
-, base
-, blaze-html
-, containers
-, lib
-, skylighting-core
+{ mkDerivation, base, blaze-html, containers, lib, skylighting-core
 , text
 }:
 mkDerivation {
   pname = "skylighting-format-blaze-html";
-  version = "0.1";
-  sha256 = "eb989a6120798c9d8f1682d0a271e12cf096c3bbe24f605f74033375ac332969";
+  version = "0.1.1";
+  sha256 = "b1139b4df369de93d1ec6d8a2ed02bf11d559f9eaf71c31434fb5b19ba48ef13";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    blaze-html
-    containers
-    skylighting-core
-    text
+    base blaze-html containers skylighting-core text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,58 +1,24 @@
-{ mkDerivation
-, async
-, base
-, bytestring
-, containers
-, directory
-, effectful-core
-, exceptions
-, lib
-, lifted-base
-, process
-, stm
-, tasty
-, tasty-bench
-, tasty-hunit
-, text
-, time
-, unix
-, unliftio
+{ mkDerivation, async, base, bytestring, containers, directory
+, effectful-core, exceptions, lib, lifted-base, primitive, process
+, stm, tasty, tasty-bench, tasty-hunit, text, time, unix, unliftio
 }:
 mkDerivation {
   pname = "effectful";
-  version = "2.1.0.0";
-  sha256 = "76147d4d761d3267607a5f71c5925cbb2e8ae538aacaf6c6ddd9574eabec739b";
+  version = "2.2.2.0";
+  sha256 = "71098017cb64788960eed1de4a88ec0beb6f610d2a3fe88a023b80531a12d7c8";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    async
-    base
-    bytestring
-    directory
-    effectful-core
-    process
-    stm
-    time
+    async base bytestring directory effectful-core process stm time
     unliftio
   ];
   testHaskellDepends = [
-    base
-    containers
-    effectful-core
-    exceptions
-    lifted-base
-    tasty
-    tasty-hunit
-    unliftio
+    base containers effectful-core exceptions lifted-base primitive
+    tasty tasty-hunit unliftio
   ];
   benchmarkHaskellDepends = [
-    async
-    base
-    tasty-bench
-    text
-    unix
-    unliftio
+    async base tasty-bench text unix unliftio
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

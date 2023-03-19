@@ -1,12 +1,5 @@
-{ mkDerivation
-, base
-, blaze-html
-, http-media
-, lib
-, servant
-, servant-server
-, wai
-, warp
+{ mkDerivation, base, blaze-html, http-media, lib, servant
+, servant-server, wai, warp
 }:
 mkDerivation {
   pname = "servant-blaze";

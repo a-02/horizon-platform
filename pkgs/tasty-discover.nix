@@ -1,20 +1,6 @@
-{ mkDerivation
-, Glob
-, base
-, bytestring
-, containers
-, directory
-, filepath
-, hedgehog
-, hspec
-, hspec-core
-, lib
-, tasty
-, tasty-golden
-, tasty-hedgehog
-, tasty-hspec
-, tasty-hunit
-, tasty-quickcheck
+{ mkDerivation, Glob, base, bytestring, containers, directory
+, filepath, hedgehog, hspec, hspec-core, lib, tasty, tasty-golden
+, tasty-hedgehog, tasty-hspec, tasty-hunit, tasty-quickcheck
 , tasty-smallcheck
 }:
 mkDerivation {
@@ -27,37 +13,15 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    directory
-    filepath
-    Glob
-    tasty
+    base containers directory filepath Glob tasty
   ];
   executableHaskellDepends = [
-    base
-    containers
-    directory
-    filepath
-    Glob
+    base containers directory filepath Glob
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    containers
-    directory
-    filepath
-    Glob
-    hedgehog
-    hspec
-    hspec-core
-    tasty
-    tasty-golden
-    tasty-hedgehog
-    tasty-hspec
-    tasty-hunit
-    tasty-quickcheck
-    tasty-smallcheck
+    base bytestring containers directory filepath Glob hedgehog hspec
+    hspec-core tasty tasty-golden tasty-hedgehog tasty-hspec
+    tasty-hunit tasty-quickcheck tasty-smallcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

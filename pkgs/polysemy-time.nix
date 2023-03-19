@@ -1,37 +1,18 @@
-{ mkDerivation
-, aeson
-, base
-, incipit-core
-, lib
-, polysemy-test
-, stm
-, tasty
-, template-haskell
-, time
-, torsor
+{ mkDerivation, aeson, base, incipit-core, lib, polysemy-test
+, tasty, template-haskell, time, torsor
 }:
 mkDerivation {
   pname = "polysemy-time";
-  version = "0.5.1.0";
-  sha256 = "857dbbe99e6e6a1a061aa9cac88a630f2bddc0c748ed8ec8d076b3b44d11e59a";
+  version = "0.6.0.0";
+  sha256 = "5764ea3ab9c8b3c6e5c73fd7700f29ba49c82dc06fbb5f40650783c663b8854e";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    incipit-core
-    stm
-    template-haskell
-    time
-    torsor
+    aeson base incipit-core template-haskell time torsor
   ];
   testHaskellDepends = [
-    base
-    incipit-core
-    polysemy-test
-    tasty
-    time
+    base incipit-core polysemy-test tasty time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

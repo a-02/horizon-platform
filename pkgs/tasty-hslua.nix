@@ -1,24 +1,15 @@
-{ mkDerivation
-, base
-, bytestring
-, hslua-core
-, lib
-, tasty
+{ mkDerivation, base, bytestring, hslua-core, lib, tasty
 , tasty-hunit
 }:
 mkDerivation {
   pname = "tasty-hslua";
-  version = "1.0.2";
-  sha256 = "28ddc669b81528b02a652452de3c0267916b5b58a4ffe43c7b0c3eca14ef6d45";
+  version = "1.1.0";
+  sha256 = "f53dd79c496effff3be54d5706ecdcf3117d04120795f9e54fc80f5ab0097211";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    hslua-core
-    tasty
-    tasty-hunit
+    base bytestring hslua-core tasty tasty-hunit
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

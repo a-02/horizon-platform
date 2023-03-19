@@ -1,46 +1,20 @@
-{ mkDerivation
-, base
-, containers
-, directory
-, dlist
-, exceptions
-, filepath
-, hspec
-, lib
-, path
-, temporary
-, time
-, transformers
+{ mkDerivation, base, containers, directory, dlist, exceptions
+, filepath, hspec, lib, path, temporary, time, transformers
 , unix-compat
 }:
 mkDerivation {
   pname = "path-io";
-  version = "1.7.0";
-  sha256 = "34bd41820298757bda9fbdc8a07ecb574bc4d78d1260025b1644813ea08d21cb";
+  version = "1.8.0";
+  sha256 = "83a6b3f6b8f00ab17b4a24d6e46b07139ae3155f2a2348b2062222398bf406c7";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    directory
-    dlist
-    exceptions
-    filepath
-    path
-    temporary
-    time
-    transformers
-    unix-compat
+    base containers directory dlist exceptions filepath path temporary
+    time transformers unix-compat
   ];
   testHaskellDepends = [
-    base
-    directory
-    exceptions
-    filepath
-    hspec
-    path
-    transformers
+    base directory exceptions filepath hspec path transformers
     unix-compat
   ];
   enableLibraryProfiling = true;

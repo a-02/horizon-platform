@@ -1,34 +1,18 @@
-{ mkDerivation
-, base
-, doctest
-, first-class-families
-, lib
-, syb
-, template-haskell
-, th-abstraction
+{ mkDerivation, base, doctest, first-class-families, lib, syb
+, template-haskell, th-abstraction
 }:
 mkDerivation {
   pname = "type-errors";
-  version = "0.2.0.0";
-  sha256 = "174d509c30ec806117a244add923fee578ba5f3505b0156f4e03a32023892eb4";
-  revision = "3";
-  editedCabalFile = "0ig8qd2g8rd5n78039xhbq7n8r514f8kvbh0mgajav2a5lp549s1";
+  version = "0.2.0.1";
+  sha256 = "d537369e6bef4d7656d5de45e5ebb6687fe3e3666e21abdb78a23d295ff14137";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    first-class-families
-    syb
-    template-haskell
-    th-abstraction
+    base first-class-families syb template-haskell th-abstraction
   ];
   testHaskellDepends = [
-    base
-    doctest
-    first-class-families
-    syb
-    template-haskell
+    base doctest first-class-families syb template-haskell
     th-abstraction
   ];
   enableLibraryProfiling = true;

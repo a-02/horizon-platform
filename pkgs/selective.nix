@@ -1,8 +1,10 @@
 { mkDerivation, QuickCheck, base, containers, lib, transformers }:
 mkDerivation {
   pname = "selective";
-  version = "0.5";
-  sha256 = "b0fda80309a83d8f9eed9b8798b3c8c6626600154948323a8d80ab8e2c2f8da3";
+  version = "0.7";
+  sha256 = "cf1952b03aaa98db4706dbf57ed76b9fa46921fb71c2020d7ad59d721d741c36";
+  revision = "1";
+  editedCabalFile = "0ibky7kzs4rc0dz1m2116fb6q4ziwrb49vjbhfy6ns1qb205ag8f";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

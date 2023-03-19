@@ -1,45 +1,21 @@
-{ mkDerivation
-, QuickCheck
-, base
-, blaze-builder
-, bytestring
-, double-conversion
-, ghc-prim
-, integer-gmp
-, lib
-, old-locale
-, test-framework
-, test-framework-quickcheck2
-, text
-, time
-, vector
+{ mkDerivation, QuickCheck, base, blaze-builder, bytestring
+, double-conversion, ghc-prim, integer-gmp, lib, old-locale
+, test-framework, test-framework-quickcheck2, text, vector
 }:
 mkDerivation {
   pname = "blaze-textual";
-  version = "0.2.2.1";
-  sha256 = "7a9199740189f435b762d98e65f5d7c0c7a1467e36c11210a8d65e76a5e5567e";
+  version = "0.2.3.1";
+  sha256 = "dd2acac978433e4001302190e530829707203febbc664966c3d347ecac5717b2";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    blaze-builder
-    bytestring
-    ghc-prim
-    integer-gmp
-    old-locale
-    text
-    time
+    base blaze-builder bytestring ghc-prim integer-gmp old-locale text
     vector
   ];
   testHaskellDepends = [
-    base
-    blaze-builder
-    bytestring
-    double-conversion
-    QuickCheck
-    test-framework
-    test-framework-quickcheck2
+    base blaze-builder bytestring double-conversion QuickCheck
+    test-framework test-framework-quickcheck2
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
@@ -48,7 +24,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "http://github.com/bos/blaze-textual";
+  homepage = "http://github.com/swamp-agr/blaze-textual";
   description = "Fast rendering of common datatypes";
   license = lib.licenses.bsd3;
   broken = false;

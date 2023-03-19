@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, bytestring
-, lib
-, servant
-, text
-, transformers
+{ mkDerivation, base, bytestring, lib, servant, text, transformers
 }:
 mkDerivation {
   pname = "servant-multipart-api";
@@ -16,11 +10,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    servant
-    text
-    transformers
+    base bytestring servant text transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

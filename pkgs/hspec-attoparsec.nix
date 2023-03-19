@@ -1,11 +1,5 @@
-{ mkDerivation
-, attoparsec
-, base
-, bytestring
-, hspec
-, hspec-expectations
-, lib
-, text
+{ mkDerivation, attoparsec, base, bytestring, hspec
+, hspec-expectations, lib, text
 }:
 mkDerivation {
   pname = "hspec-attoparsec";
@@ -15,19 +9,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    attoparsec
-    base
-    bytestring
-    hspec-expectations
-    text
+    attoparsec base bytestring hspec-expectations text
   ];
   testHaskellDepends = [
-    attoparsec
-    base
-    bytestring
-    hspec
-    hspec-expectations
-    text
+    attoparsec base bytestring hspec hspec-expectations text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

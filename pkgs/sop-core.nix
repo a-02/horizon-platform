@@ -1,10 +1,10 @@
 { mkDerivation, base, deepseq, lib }:
 mkDerivation {
   pname = "sop-core";
-  version = "0.5.0.1";
-  sha256 = "dac367f1608c9bd6c5dd1697e2a30e1b760617023b96e1df7d44c6c017999db0";
+  version = "0.5.0.2";
+  sha256 = "87bffd2254b98ded822d449fcd1c33dbd74d2ce96bf35e7a6714abc5a2297265";
   revision = "1";
-  editedCabalFile = "1d4sagrlhmvai3f4hvb9rn8aqsjbvi00z0mzv1gds9nblshk83xd";
+  editedCabalFile = "1p6zyqja021gyndskn1qnj29glqr0hldyhxplnpxz06hz4xqwngz";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

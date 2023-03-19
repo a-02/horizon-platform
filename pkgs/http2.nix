@@ -1,92 +1,32 @@
-{ mkDerivation
-, Glob
-, aeson
-, aeson-pretty
-, array
-, async
-, base
-, base16-bytestring
-, bytestring
-, case-insensitive
-, containers
-, cryptonite
-, directory
-, filepath
-, gauge
-, heaps
-, hspec
-, hspec-discover
-, http-types
-, lib
-, mwc-random
-, network
-, network-byte-order
-, network-run
-, psqueues
-, stm
-, text
-, time-manager
-, typed-process
-, unix-time
-, unordered-containers
-, vector
+{ mkDerivation, Glob, aeson, aeson-pretty, array, async, base
+, base16-bytestring, bytestring, case-insensitive, containers
+, cryptonite, directory, filepath, gauge, hspec, hspec-discover
+, http-types, lib, network, network-byte-order, network-run
+, psqueues, stm, text, time-manager, typed-process, unix-time
+, unliftio, unordered-containers, vector
 }:
 mkDerivation {
   pname = "http2";
-  version = "3.0.3";
-  sha256 = "1bae426d9b9c7266b89ae13b8ad7dfb548d16efe4c4dda6c0fa35b7b474c69cf";
+  version = "4.1.0";
+  sha256 = "6da8bbdab1c82a3c005c6aceff2d8b0d2e715e55c059dcc4ba61ce14da8e1d4d";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    async
-    base
-    bytestring
-    case-insensitive
-    containers
-    http-types
-    network
-    network-byte-order
-    psqueues
-    stm
-    time-manager
-    unix-time
+    array async base bytestring case-insensitive containers http-types
+    network network-byte-order psqueues stm time-manager unix-time
+    unliftio
   ];
   testHaskellDepends = [
-    aeson
-    aeson-pretty
-    async
-    base
-    base16-bytestring
-    bytestring
-    cryptonite
-    directory
-    filepath
-    Glob
-    hspec
-    http-types
-    network
-    network-byte-order
-    network-run
-    text
-    typed-process
-    unordered-containers
-    vector
+    aeson aeson-pretty async base base16-bytestring bytestring
+    cryptonite directory filepath Glob hspec http-types network
+    network-byte-order network-run text typed-process
+    unordered-containers vector
   ];
   testToolDepends = [ hspec-discover ];
   benchmarkHaskellDepends = [
-    array
-    base
-    bytestring
-    case-insensitive
-    containers
-    gauge
-    heaps
-    mwc-random
-    network-byte-order
-    psqueues
-    stm
+    array base bytestring case-insensitive containers gauge
+    network-byte-order stm
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,24 +1,15 @@
-{ mkDerivation
-, base
-, filepath
-, lib
-, process
-, template-haskell
+{ mkDerivation, base, filepath, lib, process, template-haskell
 , transformers
 }:
 mkDerivation {
   pname = "cmdargs";
-  version = "0.10.21";
-  sha256 = "f7d8ea5c4e6af368d9b5d2eb994fc29235406fbe91916a6dc63bd883025eca75";
+  version = "0.10.22";
+  sha256 = "b8b12e7f8795cf13037bb062d453b86c788eae62558586f59e9419aabe6e9bef";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    filepath
-    process
-    template-haskell
-    transformers
+    base filepath process template-haskell transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

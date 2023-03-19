@@ -1,10 +1,8 @@
 { mkDerivation, aeson, base, bytestring, lib }:
 mkDerivation {
   pname = "deriving-aeson";
-  version = "0.2.8";
-  sha256 = "2dd3824fbb182811655e7ff9a2292ffc9178a29d0ccdcc0d04ef74c54856a938";
-  revision = "1";
-  editedCabalFile = "0pwx7lmdhpipg9ksqkz6xpjzh1aw2hip8y3jsk20ndl4wdzvxak5";
+  version = "0.2.9";
+  sha256 = "c0b2975df7ed5ba668982ba442318c36adfe8be3c32dcf136c13bf9662261833";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

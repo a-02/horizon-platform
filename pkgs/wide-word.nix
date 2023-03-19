@@ -1,41 +1,22 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, deepseq
-, ghc-prim
-, hashable
-, hedgehog
-, lib
-, primitive
-, quickcheck-classes
+{ mkDerivation, QuickCheck, base, binary, bytestring, deepseq
+, ghc-prim, hashable, hedgehog, lib, primitive, quickcheck-classes
 , semirings
 }:
 mkDerivation {
   pname = "wide-word";
-  version = "0.1.3.0";
-  sha256 = "b28ff1f7662e11b3678dc20362f454be093d447b704abfc3f842e5717fd9e00d";
+  version = "0.1.5.0";
+  sha256 = "a732e9fe6eb2c52c744e2250c908126eee4f558ca2d2117a5e6b48023b5b41c0";
   revision = "1";
-  editedCabalFile = "1y1w3ih92dni6bzp4w1hcwn96ahdrk34lmqrgkri2dcdkykwyqwb";
+  editedCabalFile = "0l2rhhj907fa4ydzd03li7g66fkmhk5iyzks1chc9d7wf4ddgplv";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    deepseq
-    ghc-prim
-    hashable
-    primitive
+    base binary deepseq ghc-prim hashable primitive
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    ghc-prim
-    hedgehog
-    primitive
-    QuickCheck
-    quickcheck-classes
-    semirings
+    base binary bytestring ghc-prim hedgehog primitive QuickCheck
+    quickcheck-classes semirings
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

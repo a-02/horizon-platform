@@ -1,24 +1,17 @@
-{ mkDerivation
-, base
-, containers
-, lib
-, syb
-, template-haskell
+{ mkDerivation, base, containers, lib, syb, template-haskell
 , th-abstraction
 }:
 mkDerivation {
   pname = "th-expand-syns";
-  version = "0.4.10.0";
-  sha256 = "f5455844e27578cf937c2eb670f15f6c10a45c29b2599e32bf308245360c9010";
+  version = "0.4.11.0";
+  sha256 = "8acd59ce73078ec6fb39f7555c4bb6cf1e49c256859c30aa8a4fda6d029bf7d0";
+  revision = "1";
+  editedCabalFile = "0kc4czr7bz5wl88fj11h02gn8fwr2azhw5z7ykil6lx7v1b42rg8";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    syb
-    template-haskell
-    th-abstraction
+    base containers syb template-haskell th-abstraction
   ];
   testHaskellDepends = [ base template-haskell th-abstraction ];
   enableLibraryProfiling = true;

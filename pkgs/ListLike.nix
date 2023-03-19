@@ -1,53 +1,21 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, array
-, base
-, bytestring
-, containers
-, deepseq
-, dlist
-, fmlist
-, lib
-, random
-, text
-, utf8-string
-, vector
+{ mkDerivation, HUnit, QuickCheck, array, base, bytestring
+, containers, deepseq, dlist, fmlist, lib, random, text
+, utf8-string, vector
 }:
 mkDerivation {
   pname = "ListLike";
-  version = "4.7.7";
-  sha256 = "0a01cd234aa4a1e97c07ce09e24e6c95f6bb423add96d387fb5bd2e1f2779e40";
-  revision = "1";
-  editedCabalFile = "155y1r051ar9k8vhb54q5ga7a5rzlm4jx1c42pbw7cfy3c8af6hc";
+  version = "4.7.8";
+  sha256 = "9a7929f29011e5647b39b8d6ef1cadf76a6ada19b747eabec5fdc077bc7437d1";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    bytestring
-    containers
-    deepseq
-    dlist
-    fmlist
-    text
-    utf8-string
-    vector
+    array base bytestring containers deepseq dlist fmlist text
+    utf8-string vector
   ];
   testHaskellDepends = [
-    array
-    base
-    bytestring
-    containers
-    dlist
-    fmlist
-    HUnit
-    QuickCheck
-    random
-    text
-    utf8-string
-    vector
+    array base bytestring containers dlist fmlist HUnit QuickCheck
+    random text utf8-string vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

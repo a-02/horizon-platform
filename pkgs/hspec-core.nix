@@ -1,83 +1,26 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, ansi-terminal
-, array
-, base
-, base-orphans
-, call-stack
-, clock
-, deepseq
-, directory
-, filepath
-, ghc
-, ghc-boot-th
-, hspec-expectations
-, hspec-meta
-, lib
-, process
-, quickcheck-io
-, random
-, setenv
-, silently
-, stm
-, temporary
-, tf-random
-, transformers
+{ mkDerivation, HUnit, QuickCheck, ansi-terminal, array, base
+, base-orphans, call-stack, deepseq, directory, filepath
+, haskell-lexer, hspec-expectations, hspec-meta, lib, process
+, quickcheck-io, random, setenv, silently, stm, temporary
+, tf-random, time, transformers
 }:
 mkDerivation {
   pname = "hspec-core";
-  version = "2.10.0.1";
-  sha256 = "144b16e45019c910c857cf4c6815a1f928ded861fc7047d64e1809dd2695a93c";
+  version = "2.10.10";
+  sha256 = "644793717f2f9ee7f778e2f801ea54705bdd0abb71d7a7e40aa75bd98b8f55b6";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ansi-terminal
-    array
-    base
-    call-stack
-    clock
-    deepseq
-    directory
-    filepath
-    ghc
-    ghc-boot-th
-    hspec-expectations
-    HUnit
-    QuickCheck
-    quickcheck-io
-    random
-    setenv
-    stm
-    tf-random
-    transformers
+    ansi-terminal array base call-stack deepseq directory filepath
+    haskell-lexer hspec-expectations HUnit process QuickCheck
+    quickcheck-io random setenv stm tf-random time transformers
   ];
   testHaskellDepends = [
-    ansi-terminal
-    array
-    base
-    base-orphans
-    call-stack
-    clock
-    deepseq
-    directory
-    filepath
-    ghc
-    ghc-boot-th
-    hspec-expectations
-    hspec-meta
-    HUnit
-    process
-    QuickCheck
-    quickcheck-io
-    random
-    setenv
-    silently
-    stm
-    temporary
-    tf-random
-    transformers
+    ansi-terminal array base base-orphans call-stack deepseq directory
+    filepath haskell-lexer hspec-expectations hspec-meta HUnit process
+    QuickCheck quickcheck-io random setenv silently stm temporary
+    tf-random time transformers
   ];
   testToolDepends = [ hspec-meta ];
   enableLibraryProfiling = true;
@@ -88,7 +31,7 @@ mkDerivation {
   doBenchmark = false;
   hyperlinkSource = false;
   testTarget = "--test-option=--skip --test-option='Test.Hspec.Core.Runner.hspecResult runs specs in parallel'";
-  homepage = "http://hspec.github.io/";
+  homepage = "https://hspec.github.io/";
   description = "A Testing Framework for Haskell";
   license = lib.licenses.mit;
   broken = false;

@@ -1,14 +1,5 @@
-{ mkDerivation
-, base
-, containers
-, lib
-, mtl
-, optparse-applicative
-, split
-, stm
-, tagged
-, tasty
-, transformers
+{ mkDerivation, base, containers, lib, mtl, optparse-applicative
+, split, stm, tagged, tasty, transformers
 }:
 mkDerivation {
   pname = "tasty-rerun";
@@ -20,14 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    mtl
-    optparse-applicative
-    split
-    stm
-    tagged
-    tasty
+    base containers mtl optparse-applicative split stm tagged tasty
     transformers
   ];
   enableLibraryProfiling = true;

@@ -1,8 +1,8 @@
 { mkDerivation, base, exceptions, lib, text, transformers }:
 mkDerivation {
   pname = "transformers-except";
-  version = "0.1.2";
-  sha256 = "9925f82037b9aa9d382e98cff91a6ca12009093b7aaa1f583c91429b6ebcfd03";
+  version = "0.1.3";
+  sha256 = "484babf024bd82e87cc8305bd38ae04d40a7c24fa81c487cc603c3c9fd230c0d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

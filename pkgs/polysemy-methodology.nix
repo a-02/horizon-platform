@@ -1,24 +1,15 @@
-{ mkDerivation
-, base
-, lib
-, polysemy
-, polysemy-kvstore
+{ mkDerivation, base, lib, polysemy, polysemy-kvstore
 , polysemy-several
 }:
 mkDerivation {
   pname = "polysemy-methodology";
-  version = "0.2.1.0";
-  sha256 = "2fccb2a89981389d2a2be827025177a32f4196cd46c69992d53af8aa0b35ad9e";
-  revision = "2";
-  editedCabalFile = "0dpancn85f8j3pxhk43lik6fbznp502cc68rkhqkan791kh1bbc7";
+  version = "0.2.2.0";
+  sha256 = "4adedfd60b1590b265fb8ec15e636ec7521f668a1042f96adc6a1083075a1009";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    polysemy
-    polysemy-kvstore
-    polysemy-several
+    base polysemy polysemy-kvstore polysemy-several
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

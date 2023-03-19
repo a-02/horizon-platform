@@ -1,20 +1,6 @@
-{ mkDerivation
-, HUnit
-, aeson
-, base
-, bytestring
-, fast-logger
-, haskell-src-meta
-, hspec
-, lib
-, monad-logger
-, mtl
-, persistent
-, persistent-sqlite
-, resourcet
-, template-haskell
-, text
-, unliftio
+{ mkDerivation, HUnit, aeson, base, bytestring, fast-logger
+, haskell-src-meta, hspec, lib, monad-logger, mtl, persistent
+, persistent-sqlite, resourcet, template-haskell, text, unliftio
 }:
 mkDerivation {
   pname = "persistent-qq";
@@ -24,29 +10,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    haskell-src-meta
-    mtl
-    persistent
-    template-haskell
-    text
+    base haskell-src-meta mtl persistent template-haskell text
   ];
   testHaskellDepends = [
-    aeson
-    base
-    bytestring
-    fast-logger
-    haskell-src-meta
-    hspec
-    HUnit
-    monad-logger
-    mtl
-    persistent
-    persistent-sqlite
-    resourcet
-    template-haskell
-    text
-    unliftio
+    aeson base bytestring fast-logger haskell-src-meta hspec HUnit
+    monad-logger mtl persistent persistent-sqlite resourcet
+    template-haskell text unliftio
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

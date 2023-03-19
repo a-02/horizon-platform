@@ -1,17 +1,10 @@
-{ mkDerivation
-, base
-, c2hs
-, hedgehog
-, lib
-, libsodium
-, tasty
-, tasty-hedgehog
-, tasty-hunit
+{ mkDerivation, base, c2hs, hedgehog, lib, libsodium, tasty
+, tasty-hedgehog, tasty-hunit
 }:
 mkDerivation {
   pname = "libsodium";
-  version = "1.0.18.2";
-  sha256 = "9cc7620f019993b04019df6a2563831beee2eb93b45431fad728c63be7312108";
+  version = "1.0.18.3";
+  sha256 = "da90c7c7908d949186688cbc5069c087b0a77bbde3f0b14bdb1bb1103d78854d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -19,11 +12,7 @@ mkDerivation {
   libraryPkgconfigDepends = [ libsodium ];
   libraryToolDepends = [ c2hs ];
   testHaskellDepends = [
-    base
-    hedgehog
-    tasty
-    tasty-hedgehog
-    tasty-hunit
+    base hedgehog tasty tasty-hedgehog tasty-hunit
   ];
   testPkgconfigDepends = [ libsodium ];
   testToolDepends = [ c2hs ];

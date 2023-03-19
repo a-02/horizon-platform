@@ -1,36 +1,19 @@
-{ mkDerivation
-, QuickCheck
-, adjunctions
-, base
-, bin
-, criterion
-, deepseq
-, distributive
-, fin
-, hashable
-, lib
-, semigroupoids
-, vector
+{ mkDerivation, QuickCheck, adjunctions, base, bin, boring
+, criterion, deepseq, distributive, fin, hashable
+, indexed-traversable, lib, semigroupoids, vector
 }:
 mkDerivation {
   pname = "ral";
-  version = "0.1";
-  sha256 = "048cf2b5b394229503bdd748c93cc19650b4223d01e11e954b373f7595c21241";
-  revision = "2";
-  editedCabalFile = "0a3ryzcmjgyp64f8s2pl95pkz8zddq9qsn76dlimg23gczf1cql4";
+  version = "0.2.1";
+  sha256 = "510fa3a1293a5ff04f605aabafe65e6bdb1a15b085d173ed9bfda317909edab8";
+  revision = "1";
+  editedCabalFile = "12hvk5cz97ljnwa4y8c47hhfg8v1j7n3zqhb99cmrvgm58ar5j4q";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    adjunctions
-    base
-    bin
-    deepseq
-    distributive
-    fin
-    hashable
-    QuickCheck
-    semigroupoids
+    adjunctions base bin boring deepseq distributive fin hashable
+    indexed-traversable QuickCheck semigroupoids
   ];
   benchmarkHaskellDepends = [ base criterion vector ];
   enableLibraryProfiling = true;

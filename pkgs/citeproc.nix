@@ -1,69 +1,24 @@
-{ mkDerivation
-, Diff
-, aeson
-, attoparsec
-, base
-, bytestring
-, case-insensitive
-, containers
-, data-default
-, directory
-, file-embed
-, filepath
-, lib
-, mtl
-, pandoc-types
-, pretty
-, safe
-, scientific
-, text
-, timeit
-, transformers
-, unicode-collation
-, uniplate
-, vector
+{ mkDerivation, Diff, aeson, attoparsec, base, bytestring
+, case-insensitive, containers, data-default, directory, file-embed
+, filepath, lib, mtl, pandoc-types, pretty, safe, scientific, text
+, timeit, transformers, unicode-collation, uniplate, vector
 , xml-conduit
 }:
 mkDerivation {
   pname = "citeproc";
-  version = "0.8.0.1";
-  sha256 = "67a852a7a9e0fa00713996e546045c11360ad9374e450cfe35154e69a0bfbfb7";
+  version = "0.8.1";
+  sha256 = "33523bbd8c38f72c6d606e02d11b93254171f801be4f2a0cb4d34d6626426400";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    attoparsec
-    base
-    bytestring
-    case-insensitive
-    containers
-    data-default
-    file-embed
-    filepath
-    pandoc-types
-    safe
-    scientific
-    text
-    transformers
-    unicode-collation
-    uniplate
-    vector
-    xml-conduit
+    aeson attoparsec base bytestring case-insensitive containers
+    data-default file-embed filepath pandoc-types safe scientific text
+    transformers unicode-collation uniplate vector xml-conduit
   ];
   testHaskellDepends = [
-    aeson
-    base
-    bytestring
-    containers
-    Diff
-    directory
-    filepath
-    mtl
-    pretty
-    text
-    timeit
-    transformers
+    aeson base bytestring containers Diff directory filepath mtl pretty
+    text timeit transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,18 +1,6 @@
-{ mkDerivation
-, base
-, bytestring
-, containers
-, directory
-, filepath
-, hspec
-, lib
-, primitive
-, syb
-, template-haskell
-, text
-, th-abstraction
-, th-orphans
-, vector
+{ mkDerivation, base, bytestring, containers, directory, filepath
+, hspec, lib, primitive, syb, template-haskell, text
+, th-abstraction, th-orphans, vector
 }:
 mkDerivation {
   pname = "th-utilities";
@@ -22,32 +10,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    directory
-    filepath
-    primitive
-    syb
-    template-haskell
-    text
-    th-abstraction
-    th-orphans
+    base bytestring containers directory filepath primitive syb
+    template-haskell text th-abstraction th-orphans
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    containers
-    directory
-    filepath
-    hspec
-    primitive
-    syb
-    template-haskell
-    text
-    th-abstraction
-    th-orphans
-    vector
+    base bytestring containers directory filepath hspec primitive syb
+    template-haskell text th-abstraction th-orphans vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

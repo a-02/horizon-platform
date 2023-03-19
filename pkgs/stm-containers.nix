@@ -1,45 +1,20 @@
-{ mkDerivation
-, HTF
-, QuickCheck
-, base
-, deferred-folds
-, focus
-, foldl
-, free
-, hashable
-, lib
-, list-t
-, quickcheck-text
-, rerebase
-, stm-hamt
-, transformers
+{ mkDerivation, base, deferred-folds, focus, foldl, free, hashable
+, lib, list-t, quickcheck-instances, rerebase, stm-hamt, tasty
+, tasty-hunit, tasty-quickcheck, transformers
 }:
 mkDerivation {
   pname = "stm-containers";
-  version = "1.2";
-  sha256 = "6c4d98b6a3182fa0dd99235cea1aa95a3c876f8be5cbb78f7700a17d64b7177a";
+  version = "1.2.0.2";
+  sha256 = "ad2df570b76e0e5b5d5df69080a53b5167832d624a6954acdca6a706f9813ea4";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    deferred-folds
-    focus
-    hashable
-    list-t
-    stm-hamt
-    transformers
+    base deferred-folds focus hashable list-t stm-hamt transformers
   ];
   testHaskellDepends = [
-    deferred-folds
-    focus
-    foldl
-    free
-    HTF
-    list-t
-    QuickCheck
-    quickcheck-text
-    rerebase
+    deferred-folds focus foldl free list-t quickcheck-instances
+    rerebase tasty tasty-hunit tasty-quickcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

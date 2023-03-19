@@ -1,24 +1,7 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, base
-, bytestring
-, containers
-, hspec
-, hspec-discover
-, http-client
-, http-types
-, jose
-, lib
-, servant
-, servant-auth
-, servant-auth-server
-, servant-client
-, servant-client-core
-, servant-server
-, time
-, transformers
-, wai
+{ mkDerivation, QuickCheck, aeson, base, bytestring, containers
+, hspec, hspec-discover, http-client, http-types, jose, lib
+, servant, servant-auth, servant-auth-server, servant-client
+, servant-client-core, servant-server, time, transformers, wai
 , warp
 }:
 mkDerivation {
@@ -31,31 +14,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    servant
-    servant-auth
-    servant-client-core
+    base bytestring containers servant servant-auth servant-client-core
   ];
   testHaskellDepends = [
-    aeson
-    base
-    bytestring
-    hspec
-    http-client
-    http-types
-    jose
-    QuickCheck
-    servant
-    servant-auth
-    servant-auth-server
-    servant-client
-    servant-server
-    time
-    transformers
-    wai
-    warp
+    aeson base bytestring hspec http-client http-types jose QuickCheck
+    servant servant-auth servant-auth-server servant-client
+    servant-server time transformers wai warp
   ];
   testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;

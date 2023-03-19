@@ -1,19 +1,6 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, aeson
-, aeson-pretty
-, base
-, bytestring
-, directory
-, filepath
-, hspec
-, hspec-core
-, lib
-, quickcheck-arbitrary-adt
-, random
-, silently
-, transformers
+{ mkDerivation, HUnit, QuickCheck, aeson, aeson-pretty, base
+, bytestring, directory, filepath, hspec, hspec-core, lib
+, quickcheck-arbitrary-adt, random, silently, transformers
 }:
 mkDerivation {
   pname = "hspec-golden-aeson";
@@ -23,29 +10,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    aeson-pretty
-    base
-    bytestring
-    directory
-    filepath
-    hspec
-    HUnit
-    QuickCheck
-    quickcheck-arbitrary-adt
-    random
-    transformers
+    aeson aeson-pretty base bytestring directory filepath hspec HUnit
+    QuickCheck quickcheck-arbitrary-adt random transformers
   ];
   testHaskellDepends = [
-    aeson
-    base
-    directory
-    hspec
-    hspec-core
-    QuickCheck
-    quickcheck-arbitrary-adt
-    silently
-    transformers
+    aeson base directory hspec hspec-core QuickCheck
+    quickcheck-arbitrary-adt silently transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

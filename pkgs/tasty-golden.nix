@@ -1,20 +1,6 @@
-{ mkDerivation
-, async
-, base
-, bytestring
-, containers
-, deepseq
-, directory
-, filepath
-, lib
-, mtl
-, optparse-applicative
-, tagged
-, tasty
-, tasty-hunit
-, temporary
-, text
-, typed-process
+{ mkDerivation, async, base, bytestring, containers, deepseq
+, directory, filepath, lib, mtl, optparse-applicative, tagged
+, tasty, tasty-hunit, temporary, text, typed-process
 }:
 mkDerivation {
   pname = "tasty-golden";
@@ -24,29 +10,11 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    async
-    base
-    bytestring
-    containers
-    deepseq
-    directory
-    filepath
-    mtl
-    optparse-applicative
-    tagged
-    tasty
-    temporary
-    text
-    typed-process
+    async base bytestring containers deepseq directory filepath mtl
+    optparse-applicative tagged tasty temporary text typed-process
   ];
   testHaskellDepends = [
-    base
-    directory
-    filepath
-    tasty
-    tasty-hunit
-    temporary
-    typed-process
+    base directory filepath tasty tasty-hunit temporary typed-process
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

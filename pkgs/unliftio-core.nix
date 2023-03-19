@@ -1,10 +1,10 @@
 { mkDerivation, base, lib, transformers }:
 mkDerivation {
   pname = "unliftio-core";
-  version = "0.2.0.1";
-  sha256 = "919f0d1297ea2f5373118553c1df2a9405d8b9e31a8307e829da67d4953c299a";
-  revision = "2";
-  editedCabalFile = "1xx9nmxxg87nhwxgbmmw0xbrppnjc23ppyryar04i3njyg9wvazr";
+  version = "0.2.1.0";
+  sha256 = "99384cba8d56d9d61b85e38a313a93ebcdb78be6566367f0930ef580597fe3e3";
+  revision = "1";
+  editedCabalFile = "19pw6f7hmka8kgnsbrrhp73rdnvdsmagh1s325rxqv5if1km1hwz";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -1,8 +1,8 @@
 { mkDerivation, base, lib, template-haskell }:
 mkDerivation {
   pname = "lift-type";
-  version = "0.1.0.1";
-  sha256 = "aeb79e3090a38130fdb1da374e9e50e132e6bf5e20b45de58af5230d9c8f2585";
+  version = "0.1.1.1";
+  sha256 = "10d81032a69175a9c0c6f97358962ac8e5663b1b9a798fc96c7ec227aad7370d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

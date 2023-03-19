@@ -1,18 +1,10 @@
-{ mkDerivation
-, QuickCheck
-, base
-, containers
-, hspec
-, hspec-discover
-, lib
-, template-haskell
+{ mkDerivation, QuickCheck, base, containers, hspec, hspec-discover
+, lib, template-haskell
 }:
 mkDerivation {
   pname = "reflection";
-  version = "2.1.6";
-  sha256 = "bf3e14917ebb329a53701a3cce0afe670f20037a0148dbfa5cbfa574ed6ba6cd";
-  revision = "1";
-  editedCabalFile = "1bnpkfmagii4mc8258yjy4f4lykflmljkqcifnxpfqv99bszw6pl";
+  version = "2.1.7";
+  sha256 = "6cbb18a8b02871533bb8b641dc6f76813a097d94404e5808bb5d52b0f0e415fd";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

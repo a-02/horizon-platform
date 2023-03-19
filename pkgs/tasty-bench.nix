@@ -1,12 +1,12 @@
-{ mkDerivation, base, containers, deepseq, lib, tasty }:
+{ mkDerivation, base, containers, deepseq, ghc-prim, lib, tasty }:
 mkDerivation {
   pname = "tasty-bench";
-  version = "0.3.2";
-  sha256 = "c83a3d3c37bb652274d062857616a9d1871031e624f5f7139e1cbbf1f47b2249";
+  version = "0.3.3";
+  sha256 = "757486ffcf9d4cd4afee4ff1b78e2174fda37cbda74aa887115e4d55d5531a8e";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
-  libraryHaskellDepends = [ base containers deepseq tasty ];
+  libraryHaskellDepends = [ base containers deepseq ghc-prim tasty ];
   benchmarkHaskellDepends = [ base ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

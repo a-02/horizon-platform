@@ -1,24 +1,15 @@
-{ mkDerivation
-, base
-, commonmark
-, commonmark-extensions
-, lib
-, pandoc-types
-, text
+{ mkDerivation, base, commonmark, commonmark-extensions, lib
+, pandoc-types, text
 }:
 mkDerivation {
   pname = "commonmark-pandoc";
-  version = "0.2.1.2";
-  sha256 = "57554ecd0d1eacdf094e4ca346a9212e0198b467d86153b8494b412df747f1b6";
+  version = "0.2.1.3";
+  sha256 = "77adcf9074299a5b318901d057ebf49a7f032245f2aee783ef475539b0897f21";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    commonmark
-    commonmark-extensions
-    pandoc-types
-    text
+    base commonmark commonmark-extensions pandoc-types text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,41 +1,17 @@
-{ mkDerivation
-, base
-, bytestring
-, containers
-, data-default-class
-, diagrams-core
-, diagrams-lib
-, hashable
-, lens
-, lib
-, monoid-extras
-, mtl
-, semigroups
-, split
-, statestack
+{ mkDerivation, base, bytestring, containers, data-default-class
+, diagrams-core, diagrams-lib, hashable, lens, lib, monoid-extras
+, mtl, semigroups, split, statestack
 }:
 mkDerivation {
   pname = "diagrams-postscript";
-  version = "1.5.1";
-  sha256 = "2f7d9e8ec3e42005dbcf7c18c941bdb9e088be0d48dc095a683d5ce3c7d00286";
-  revision = "2";
-  editedCabalFile = "0w662h38pjmxz029ffxzv2cj6hx2mpzzr180m2340phxjflxr07g";
+  version = "1.5.1.1";
+  sha256 = "842afeee6f4895d9b3d49d21118428c1f85594a76fbf89d84b2ee23101088bcf";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    data-default-class
-    diagrams-core
-    diagrams-lib
-    hashable
-    lens
-    monoid-extras
-    mtl
-    semigroups
-    split
+    base bytestring containers data-default-class diagrams-core
+    diagrams-lib hashable lens monoid-extras mtl semigroups split
     statestack
   ];
   enableLibraryProfiling = true;

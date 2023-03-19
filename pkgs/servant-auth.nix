@@ -1,13 +1,5 @@
-{ mkDerivation
-, aeson
-, base
-, containers
-, jose
-, lens
-, lib
-, servant
-, text
-, unordered-containers
+{ mkDerivation, aeson, base, containers, jose, lens, lib, servant
+, text, unordered-containers
 }:
 mkDerivation {
   pname = "servant-auth";
@@ -19,14 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    containers
-    jose
-    lens
-    servant
-    text
-    unordered-containers
+    aeson base containers jose lens servant text unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

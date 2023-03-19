@@ -1,45 +1,24 @@
-{ mkDerivation
-, OneTuple
-, QuickCheck
-, base
-, containers
-, indexed-traversable
-, lib
-, quickcheck-instances
-, tagged
-, tasty
-, tasty-quickcheck
-, transformers
-, unordered-containers
-, vector
+{ mkDerivation, OneTuple, QuickCheck, base, containers
+, indexed-traversable, lib, quickcheck-instances, tagged, tasty
+, tasty-quickcheck, transformers, unordered-containers, vector
 }:
 mkDerivation {
   pname = "indexed-traversable-instances";
-  version = "0.1.1.1";
-  sha256 = "895ee5063d59e2b58930ca6fa54885bb11f19c8b7c7ba6c7b014f9431cdcc0b0";
+  version = "0.1.1.2";
+  sha256 = "0f9b4e895ccc819f74d15f913c93613cc74cab74dbb05d7e305aa387bdbe374a";
+  revision = "1";
+  editedCabalFile = "1vyfs8xwxm2ipgiinzrp41pl0cy2xrmx7a9iim4vlz1sca1yv4xl";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    indexed-traversable
-    OneTuple
-    tagged
-    unordered-containers
+    base indexed-traversable OneTuple tagged unordered-containers
     vector
   ];
   testHaskellDepends = [
-    base
-    containers
-    indexed-traversable
-    OneTuple
-    QuickCheck
-    quickcheck-instances
-    tasty
-    tasty-quickcheck
-    transformers
-    unordered-containers
-    vector
+    base containers indexed-traversable OneTuple QuickCheck
+    quickcheck-instances tasty tasty-quickcheck transformers
+    unordered-containers vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

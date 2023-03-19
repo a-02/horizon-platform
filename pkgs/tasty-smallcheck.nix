@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, lib
-, optparse-applicative
-, smallcheck
-, tagged
+{ mkDerivation, base, lib, optparse-applicative, smallcheck, tagged
 , tasty
 }:
 mkDerivation {
@@ -16,11 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    optparse-applicative
-    smallcheck
-    tagged
-    tasty
+    base optparse-applicative smallcheck tagged tasty
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

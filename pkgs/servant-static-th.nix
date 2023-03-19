@@ -1,25 +1,7 @@
-{ mkDerivation
-, Glob
-, base
-, blaze-html
-, bytestring
-, containers
-, directory
-, doctest
-, filepath
-, hspec-wai
-, http-media
-, lib
-, semigroups
-, servant
-, servant-blaze
-, servant-server
-, tasty
-, tasty-hspec
-, tasty-hunit
-, template-haskell
-, text
-, wai
+{ mkDerivation, Glob, base, blaze-html, bytestring, containers
+, directory, doctest, filepath, hspec-wai, http-media, lib
+, semigroups, servant, servant-blaze, servant-server, tasty
+, tasty-hspec, tasty-hunit, template-haskell, text, wai
 }:
 mkDerivation {
   pname = "servant-static-th";
@@ -29,36 +11,14 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    blaze-html
-    bytestring
-    containers
-    directory
-    filepath
-    http-media
-    semigroups
-    servant
-    servant-blaze
-    servant-server
-    template-haskell
+    base blaze-html bytestring containers directory filepath http-media
+    semigroups servant servant-blaze servant-server template-haskell
     text
   ];
   testHaskellDepends = [
-    base
-    blaze-html
-    bytestring
-    directory
-    doctest
-    filepath
-    Glob
-    hspec-wai
-    servant
-    servant-blaze
-    servant-server
-    tasty
-    tasty-hspec
-    tasty-hunit
-    wai
+    base blaze-html bytestring directory doctest filepath Glob
+    hspec-wai servant servant-blaze servant-server tasty tasty-hspec
+    tasty-hunit wai
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

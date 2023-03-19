@@ -1,32 +1,9 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, attoparsec
-, base
-, base-compat
-, bifunctors
-, bytestring
-, case-insensitive
-, constraints
-, deepseq
-, fetchgit
-, hspec
-, hspec-discover
-, http-api-data
-, http-media
-, http-types
-, lib
-, mmorph
-, mtl
-, network-uri
-, quickcheck-instances
-, singleton-bool
-, sop-core
-, string-conversions
-, tagged
-, text
-, transformers
-, vault
+{ mkDerivation, QuickCheck, aeson, attoparsec, base, base-compat
+, bifunctors, bytestring, case-insensitive, constraints, deepseq
+, fetchgit, hspec, hspec-discover, http-api-data, http-media
+, http-types, lib, mmorph, mtl, network-uri, quickcheck-instances
+, singleton-bool, sop-core, string-conversions, tagged, text
+, transformers, vault
 }:
 mkDerivation {
   pname = "servant";
@@ -42,43 +19,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    attoparsec
-    base
-    base-compat
-    bifunctors
-    bytestring
-    case-insensitive
-    constraints
-    deepseq
-    http-api-data
-    http-media
-    http-types
-    mmorph
-    mtl
-    network-uri
-    QuickCheck
-    singleton-bool
-    sop-core
-    string-conversions
-    tagged
-    text
-    transformers
-    vault
+    aeson attoparsec base base-compat bifunctors bytestring
+    case-insensitive constraints deepseq http-api-data http-media
+    http-types mmorph mtl network-uri QuickCheck singleton-bool
+    sop-core string-conversions tagged text transformers vault
   ];
   testHaskellDepends = [
-    aeson
-    base
-    base-compat
-    bytestring
-    hspec
-    http-media
-    mtl
-    QuickCheck
-    quickcheck-instances
-    string-conversions
-    text
-    transformers
+    aeson base base-compat bytestring hspec http-media mtl QuickCheck
+    quickcheck-instances string-conversions text transformers
   ];
   testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;

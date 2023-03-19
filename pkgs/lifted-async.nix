@@ -1,46 +1,20 @@
-{ mkDerivation
-, HUnit
-, async
-, base
-, constraints
-, deepseq
-, lib
-, lifted-base
-, monad-control
-, mtl
-, tasty
-, tasty-bench
-, tasty-expected-failure
-, tasty-hunit
-, tasty-th
-, transformers-base
+{ mkDerivation, HUnit, async, base, constraints, deepseq, lib
+, lifted-base, monad-control, mtl, tasty, tasty-bench
+, tasty-expected-failure, tasty-hunit, tasty-th, transformers-base
 }:
 mkDerivation {
   pname = "lifted-async";
-  version = "0.10.2.1";
-  sha256 = "0d05715f44bb5464f97bac46302a81338271375b07c54c90efb33b1c0e298e48";
+  version = "0.10.2.4";
+  sha256 = "9bed4dee15f40c35a4d92a2d8ca29e4a9fe7904a5b773486dfef58040a3ebe5d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    async
-    base
-    constraints
-    lifted-base
-    monad-control
-    transformers-base
+    async base constraints lifted-base monad-control transformers-base
   ];
   testHaskellDepends = [
-    async
-    base
-    HUnit
-    lifted-base
-    monad-control
-    mtl
-    tasty
-    tasty-expected-failure
-    tasty-hunit
-    tasty-th
+    async base HUnit lifted-base monad-control mtl tasty
+    tasty-expected-failure tasty-hunit tasty-th
   ];
   benchmarkHaskellDepends = [ async base deepseq tasty-bench ];
   enableLibraryProfiling = true;

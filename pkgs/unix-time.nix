@@ -1,31 +1,16 @@
-{ mkDerivation
-, QuickCheck
-, base
-, binary
-, bytestring
-, hspec
-, hspec-discover
-, lib
-, old-locale
-, old-time
-, time
+{ mkDerivation, QuickCheck, base, binary, bytestring, hspec
+, hspec-discover, lib, old-locale, old-time, time
 }:
 mkDerivation {
   pname = "unix-time";
-  version = "0.4.8";
-  sha256 = "fedeb6a11bcb5396f50a30166a6bb05e56fc9866be4066718404bd8940ace843";
+  version = "0.4.9";
+  sha256 = "490734d4860e065aa92fb3f54dc07ba5fa61b4a0c6fb9989f38d5713bcac8b08";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base binary bytestring old-time ];
   testHaskellDepends = [
-    base
-    bytestring
-    hspec
-    old-locale
-    old-time
-    QuickCheck
-    time
+    base bytestring hspec old-locale old-time QuickCheck time
   ];
   testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;

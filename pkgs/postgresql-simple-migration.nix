@@ -1,14 +1,5 @@
-{ mkDerivation
-, base
-, base64-bytestring
-, bytestring
-, cryptohash
-, directory
-, hspec
-, lib
-, postgresql-simple
-, text
-, time
+{ mkDerivation, base, base64-bytestring, bytestring, cryptohash
+, directory, hspec, lib, postgresql-simple, text, time
 }:
 mkDerivation {
   pname = "postgresql-simple-migration";
@@ -20,23 +11,12 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base64-bytestring
-    bytestring
-    cryptohash
-    directory
-    postgresql-simple
-    time
+    base base64-bytestring bytestring cryptohash directory
+    postgresql-simple time
   ];
   executableHaskellDepends = [
-    base
-    base64-bytestring
-    bytestring
-    cryptohash
-    directory
-    postgresql-simple
-    text
-    time
+    base base64-bytestring bytestring cryptohash directory
+    postgresql-simple text time
   ];
   testHaskellDepends = [ base bytestring hspec postgresql-simple ];
   enableLibraryProfiling = true;

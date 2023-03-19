@@ -1,46 +1,20 @@
-{ mkDerivation
-, QuickCheck
-, base
-, clock
-, criterion
-, double-conversion
-, ghc-prim
-, hspec
-, lib
-, old-locale
-, scientific
-, text
-, time
+{ mkDerivation, QuickCheck, base, clock, criterion
+, double-conversion, hspec, lib, old-locale, scientific, text, time
 , transformers
 }:
 mkDerivation {
   pname = "formatting";
-  version = "7.1.3";
-  sha256 = "8061bbe29278e6b7bb2268b00e1717385643dfa04e7b58b012bd53b342142cef";
-  revision = "2";
-  editedCabalFile = "1i3qkhxqhvqd7mqfdc1mbizw1fin7vp4dwzayc2y0sqcbg7kkns7";
+  version = "7.2.0";
+  sha256 = "c07b18177af614e7e5f32e6fd924f7b35c1b1c219b3491608ee8e7276e706a6d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    clock
-    double-conversion
-    ghc-prim
-    old-locale
-    scientific
-    text
-    time
+    base clock double-conversion old-locale scientific text time
     transformers
   ];
-  testHaskellDepends = [ base ghc-prim hspec scientific text ];
-  benchmarkHaskellDepends = [
-    base
-    criterion
-    ghc-prim
-    QuickCheck
-    text
-  ];
+  testHaskellDepends = [ base hspec scientific text time ];
+  benchmarkHaskellDepends = [ base criterion QuickCheck text ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;

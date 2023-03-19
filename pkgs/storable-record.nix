@@ -1,24 +1,15 @@
-{ mkDerivation
-, QuickCheck
-, base
-, lib
-, semigroups
-, transformers
+{ mkDerivation, QuickCheck, base, lib, semigroups, transformers
 , utility-ht
 }:
 mkDerivation {
   pname = "storable-record";
-  version = "0.0.6";
-  sha256 = "cd09cc2dda10c3addcb6a1f71f964fb33fd8ab4d2b4acd94cd08dfbc180b8cb4";
+  version = "0.0.7";
+  sha256 = "bec546c894d39182af50415743af226456a5f79da281d1a3c0b7db11362a2eb0";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    QuickCheck
-    semigroups
-    transformers
-    utility-ht
+    base QuickCheck semigroups transformers utility-ht
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

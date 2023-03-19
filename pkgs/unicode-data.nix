@@ -1,22 +1,15 @@
-{ mkDerivation
-, base
-, deepseq
-, hspec
-, hspec-discover
-, lib
-, tasty
-, tasty-bench
-}:
+{ mkDerivation, base, deepseq, hspec, lib, tasty, tasty-bench }:
 mkDerivation {
   pname = "unicode-data";
-  version = "0.3.1";
-  sha256 = "be1f815497a7c4d46395ba6dfc49f811a9716a670381f89f102b7df0f0f35c60";
+  version = "0.4.0.1";
+  sha256 = "37a5dea6801940beb65c4ac4b9d0f7e653a686cf773507f0ca61c210e0b06080";
+  revision = "1";
+  editedCabalFile = "1lvsn8r1xh8ip5gyrbwv7pk41yf2ynjimpd6g4am3n7j92djc7h8";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base ];
   testHaskellDepends = [ base hspec ];
-  testToolDepends = [ hspec-discover ];
   benchmarkHaskellDepends = [ base deepseq tasty tasty-bench ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

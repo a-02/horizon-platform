@@ -1,42 +1,17 @@
-{ mkDerivation
-, array
-, async
-, base
-, bytestring
-, containers
-, deepseq
-, ghc-prim
-, hashable
-, lib
-, mtl
-, mtl-compat
-, stm
-, text
-, transformers
+{ mkDerivation, array, async, base, bytestring, containers, deepseq
+, ghc-prim, hashable, lib, mtl, mtl-compat, stm, text, transformers
 , transformers-compat
 }:
 mkDerivation {
   pname = "protolude";
-  version = "0.3.2";
-  sha256 = "7ec019f3d445563a54fad8ba89564bffaae6028798a1cc3f033f5b425ef7a344";
+  version = "0.3.3";
+  sha256 = "6c39ded2c7e9f7b1a508e4400f0151cb325f4d80e35010c1d5afa58b48971a46";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    async
-    base
-    bytestring
-    containers
-    deepseq
-    ghc-prim
-    hashable
-    mtl
-    mtl-compat
-    stm
-    text
-    transformers
-    transformers-compat
+    array async base bytestring containers deepseq ghc-prim hashable
+    mtl mtl-compat stm text transformers transformers-compat
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

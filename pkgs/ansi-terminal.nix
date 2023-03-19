@@ -1,8 +1,8 @@
 { mkDerivation, base, colour, lib }:
 mkDerivation {
   pname = "ansi-terminal";
-  version = "0.11.3";
-  sha256 = "f4d563ecf71fb1d304bcdcad478d97efd9f61f6d9d4797a5d56e7722a92a9e6b";
+  version = "0.11.4";
+  sha256 = "7898e48f0a535c1857cde52c803f28096ba89759461fe4d157fd55dcdb420e25";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

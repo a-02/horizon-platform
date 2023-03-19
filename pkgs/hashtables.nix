@@ -1,42 +1,20 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, ghc-prim
-, hashable
-, lib
-, mwc-random
-, primitive
-, test-framework
-, test-framework-hunit
-, test-framework-quickcheck2
-, vector
+{ mkDerivation, HUnit, QuickCheck, base, ghc-prim, hashable, lib
+, mwc-random, primitive, test-framework, test-framework-hunit
+, test-framework-quickcheck2, vector
 }:
 mkDerivation {
   pname = "hashtables";
-  version = "1.3";
-  sha256 = "af785a6d13842ebbd804b0ec174dd957a2591b224434e3ce883f537321f90dd3";
+  version = "1.3.1";
+  sha256 = "6f3d40eb22ab87279b9a0bf51c22307706b240c90a664c82bfae2392268c59c3";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    ghc-prim
-    hashable
-    primitive
-    vector
+    base ghc-prim hashable primitive vector
   ];
   testHaskellDepends = [
-    base
-    ghc-prim
-    hashable
-    HUnit
-    mwc-random
-    primitive
-    QuickCheck
-    test-framework
-    test-framework-hunit
-    test-framework-quickcheck2
+    base ghc-prim hashable HUnit mwc-random primitive QuickCheck
+    test-framework test-framework-hunit test-framework-quickcheck2
     vector
   ];
   enableLibraryProfiling = true;

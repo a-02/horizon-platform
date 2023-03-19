@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, containers
-, lib
-, mtl
-, safe
-, template-haskell
+{ mkDerivation, base, containers, lib, mtl, safe, template-haskell
 , th-expand-syns
 }:
 mkDerivation {
@@ -15,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    mtl
-    safe
-    template-haskell
-    th-expand-syns
+    base containers mtl safe template-haskell th-expand-syns
   ];
   testHaskellDepends = [ base template-haskell ];
   enableLibraryProfiling = true;

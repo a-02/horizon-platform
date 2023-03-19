@@ -1,55 +1,25 @@
-{ mkDerivation
-, QuickCheck
-, base
-, binary
-, bytestring
-, containers
-, lib
-, parsec
-, quickcheck-instances
-, tasty
-, tasty-bench
-, tasty-hunit
-, tasty-quickcheck
-, template-haskell
-, text
-, text-icu
-, th-lift-instances
-, unicode-transforms
+{ mkDerivation, QuickCheck, base, binary, bytestring, containers
+, lib, parsec, quickcheck-instances, tasty, tasty-bench
+, tasty-hunit, tasty-quickcheck, template-haskell, text, text-icu
+, th-lift-instances, unicode-transforms
 }:
 mkDerivation {
   pname = "unicode-collation";
-  version = "0.1.3.2";
-  sha256 = "ec54952221a8bb79d5dbd9abd4501ffcce4be07fbe500928394c108ea010cb66";
+  version = "0.1.3.4";
+  sha256 = "b08dbe9bb269d6eda2639cdfc63caee136794f46c16a1ad51b5305dd2ea6d429";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    binary
-    bytestring
-    containers
-    parsec
-    template-haskell
-    text
+    base binary bytestring containers parsec template-haskell text
     th-lift-instances
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    text
+    base bytestring tasty tasty-hunit tasty-quickcheck text
     unicode-transforms
   ];
   benchmarkHaskellDepends = [
-    base
-    QuickCheck
-    quickcheck-instances
-    tasty-bench
-    text
-    text-icu
+    base QuickCheck quickcheck-instances tasty-bench text text-icu
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

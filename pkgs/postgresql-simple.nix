@@ -1,77 +1,27 @@
-{ mkDerivation
-, HUnit
-, Only
-, aeson
-, attoparsec
-, base
-, base16-bytestring
-, bytestring
-, bytestring-builder
-, case-insensitive
-, containers
-, cryptohash-md5
-, filepath
-, hashable
-, inspection-testing
-, lib
-, postgresql-libpq
-, scientific
-, tasty
-, tasty-golden
-, tasty-hunit
-, template-haskell
-, text
-, time-compat
-, transformers
-, uuid-types
-, vector
+{ mkDerivation, HUnit, Only, aeson, attoparsec, base
+, base16-bytestring, bytestring, bytestring-builder
+, case-insensitive, containers, cryptohash-md5, filepath, hashable
+, inspection-testing, lib, postgresql-libpq, scientific, tasty
+, tasty-golden, tasty-hunit, template-haskell, text, time-compat
+, transformers, uuid-types, vector
 }:
 mkDerivation {
   pname = "postgresql-simple";
-  version = "0.6.4";
-  sha256 = "6d90394203ea3aa27cae4492569ab14bf175cd2d30112e565ffb92dbe95ce267";
-  revision = "8";
-  editedCabalFile = "1qavb3qs1g307pc19k9y3yvqp0c1srwsplijvayn9ldp0bxdy6q8";
+  version = "0.6.5";
+  sha256 = "fda53ab2a72bbe402947526ccb02f9928563eae03e0832bb871c00912e455e96";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    attoparsec
-    base
-    bytestring
-    bytestring-builder
-    case-insensitive
-    containers
-    hashable
-    Only
-    postgresql-libpq
-    scientific
-    template-haskell
-    text
-    time-compat
-    transformers
-    uuid-types
-    vector
+    aeson attoparsec base bytestring bytestring-builder
+    case-insensitive containers hashable Only postgresql-libpq
+    scientific template-haskell text time-compat transformers
+    uuid-types vector
   ];
   testHaskellDepends = [
-    aeson
-    base
-    base16-bytestring
-    bytestring
-    case-insensitive
-    containers
-    cryptohash-md5
-    filepath
-    HUnit
-    inspection-testing
-    postgresql-libpq
-    tasty
-    tasty-golden
-    tasty-hunit
-    text
-    time-compat
-    vector
+    aeson base base16-bytestring bytestring case-insensitive containers
+    cryptohash-md5 filepath HUnit inspection-testing postgresql-libpq
+    tasty tasty-golden tasty-hunit text time-compat vector
   ];
   benchmarkHaskellDepends = [ base vector ];
   enableLibraryProfiling = true;

@@ -1,56 +1,20 @@
-{ mkDerivation
-, HUnit
-, array
-, base
-, binary
-, bytestring
-, containers
-, digest
-, directory
-, filepath
-, lib
-, mtl
-, pretty
-, process
-, temporary
-, text
-, time
-, unix
-, which
-, zlib
+{ mkDerivation, HUnit, array, base, binary, bytestring, containers
+, digest, directory, filepath, lib, mtl, pretty, process, temporary
+, text, time, unix, which, zlib
 }:
 mkDerivation {
   pname = "zip-archive";
-  version = "0.4.2.2";
-  sha256 = "a4016b404356e5fe38a89fceb8c88b01251f7e3fe7832323a50a3f732a346709";
+  version = "0.4.3";
+  sha256 = "68050fa0f139848db0ea422ea9af1a65b652abf5168db7dafaf1bded5b045d05";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    binary
-    bytestring
-    containers
-    digest
-    directory
-    filepath
-    mtl
-    pretty
-    text
-    time
-    unix
-    zlib
+    array base binary bytestring containers digest directory filepath
+    mtl pretty text time unix zlib
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    directory
-    filepath
-    HUnit
-    process
-    temporary
-    time
+    base bytestring directory filepath HUnit process temporary time
     unix
   ];
   testToolDepends = [ which ];
