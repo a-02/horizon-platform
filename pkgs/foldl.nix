@@ -1,46 +1,21 @@
-{ mkDerivation
-, base
-, bytestring
-, comonad
-, containers
-, contravariant
-, criterion
-, doctest
-, hashable
-, lib
-, primitive
-, profunctors
-, random
-, semigroupoids
-, text
-, transformers
-, unordered-containers
-, vector
+{ mkDerivation, base, bytestring, comonad, containers
+, contravariant, criterion, doctest, hashable, lib, primitive
+, profunctors, random, semigroupoids, text, transformers
+, unordered-containers, vector
 }:
 mkDerivation {
   pname = "foldl";
-  version = "1.4.12";
-  sha256 = "4f59360d96fb9ff10861944dd8a89b2448ea2b7dedc376546f4de80125f5c47d";
-  revision = "5";
-  editedCabalFile = "1b97k85zryid7x2ygi92ilv480ahfjn5yf1f4blllwyxn7zgvjv4";
+  version = "1.4.14";
+  sha256 = "8c056f8eea4b598aa584b7d752221e71b380ef675b97dd5d779fa12662560e46";
+  revision = "1";
+  editedCabalFile = "0v055cj7sw5xa7v0lm2gryfhj8nxhnjrs1zm9nnxyzgv2aivb8vc";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    comonad
-    containers
-    contravariant
-    hashable
-    primitive
-    profunctors
-    random
-    semigroupoids
-    text
-    transformers
-    unordered-containers
-    vector
+    base bytestring comonad containers contravariant hashable primitive
+    profunctors random semigroupoids text transformers
+    unordered-containers vector
   ];
   testHaskellDepends = [ base doctest ];
   benchmarkHaskellDepends = [ base criterion ];

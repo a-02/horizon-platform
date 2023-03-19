@@ -1,15 +1,10 @@
-{ mkDerivation
-, QuickCheck
-, base
-, ghc-prim
-, hspec
-, hspec-discover
+{ mkDerivation, QuickCheck, base, ghc-prim, hspec, hspec-discover
 , lib
 }:
 mkDerivation {
   pname = "base-orphans";
-  version = "0.8.7";
-  sha256 = "888fd67f0dbe932778f5b170922ce80d0dcab1680ee98f1d6fcc362f20d9e447";
+  version = "0.9.0";
+  sha256 = "613ed4d8241ed5a648a59ae6569a6962990bb545711d020d49fb83fa12d16e62";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

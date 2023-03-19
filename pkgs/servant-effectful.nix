@@ -1,16 +1,5 @@
-{ mkDerivation
-, base
-, effectful-core
-, fetchgit
-, hashable
-, lib
-, mtl
-, servant
-, servant-server
-, tasty
-, tasty-hunit
-, wai
-, warp
+{ mkDerivation, base, effectful-core, fetchgit, hashable, lib, mtl
+, servant, servant-server, tasty, tasty-hunit, wai, warp
 }:
 mkDerivation {
   pname = "servant-effectful";
@@ -25,22 +14,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    effectful-core
-    hashable
-    mtl
-    servant
-    servant-server
-    wai
-    warp
+    base effectful-core hashable mtl servant servant-server wai warp
   ];
   testHaskellDepends = [
-    base
-    effectful-core
-    hashable
-    servant
-    servant-server
-    tasty
+    base effectful-core hashable servant servant-server tasty
     tasty-hunit
   ];
   enableLibraryProfiling = true;

@@ -1,12 +1,12 @@
-{ mkDerivation, QuickCheck, base, lib, mtl, random }:
+{ mkDerivation, QuickCheck, base, containers, lib, mtl, random }:
 mkDerivation {
   pname = "quickcheck-dynamic";
-  version = "2.0.0";
-  sha256 = "78082446894d9522a1e9f9589f758fef2fcb7778d9427fe8ce1cedc156ea48ed";
+  version = "3.0.2";
+  sha256 = "1e02d4067495fdd7e13c99accc1efceebce6ff1408e617f1a56dbaa247d9e345";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
-  libraryHaskellDepends = [ base mtl QuickCheck random ];
+  libraryHaskellDepends = [ base containers mtl QuickCheck random ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;

@@ -1,47 +1,21 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, directory
-, file-embed
-, filepath
-, hslua-core
-, hslua-marshalling
-, lib
-, lua-arbitrary
-, tasty
-, tasty-hunit
-, text
+{ mkDerivation, QuickCheck, base, bytestring, directory, file-embed
+, filepath, hslua-core, hslua-marshalling, lib, lua-arbitrary
+, tasty, tasty-hunit, text
 }:
 mkDerivation {
   pname = "tasty-lua";
-  version = "1.0.2";
-  sha256 = "9b37ed879487ea31dec48c5f1823e445de9bb29ef8ad893de7106f2dd9dbdeee";
+  version = "1.1.0";
+  sha256 = "33434b2a41080120886be023d43d1b52b18367fecc8693f4e5d06d28c855c7ae";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    file-embed
-    hslua-core
-    hslua-marshalling
-    lua-arbitrary
-    QuickCheck
-    tasty
-    text
+    base bytestring file-embed hslua-core hslua-marshalling
+    lua-arbitrary QuickCheck tasty text
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    directory
-    filepath
-    hslua-core
-    hslua-marshalling
-    lua-arbitrary
-    QuickCheck
-    tasty
-    tasty-hunit
+    base bytestring directory filepath hslua-core hslua-marshalling
+    lua-arbitrary QuickCheck tasty tasty-hunit
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

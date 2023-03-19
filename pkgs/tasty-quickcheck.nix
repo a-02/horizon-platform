@@ -1,13 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, lib
-, optparse-applicative
-, pcre-light
-, random
-, tagged
-, tasty
-, tasty-hunit
+{ mkDerivation, QuickCheck, base, lib, optparse-applicative
+, pcre-light, random, tagged, tasty, tasty-hunit
 }:
 mkDerivation {
   pname = "tasty-quickcheck";
@@ -17,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    optparse-applicative
-    QuickCheck
-    random
-    tagged
-    tasty
+    base optparse-applicative QuickCheck random tagged tasty
   ];
   testHaskellDepends = [ base pcre-light tasty tasty-hunit ];
   enableLibraryProfiling = true;

@@ -1,28 +1,8 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, base
-, base-compat
-, base64-bytestring
-, bytestring
-, constraints
-, containers
-, deepseq
-, exceptions
-, fetchgit
-, free
-, hspec
-, hspec-discover
-, http-media
-, http-types
-, lib
-, network-uri
-, safe
-, servant
-, sop-core
-, template-haskell
-, text
-, transformers
+{ mkDerivation, QuickCheck, aeson, base, base-compat
+, base64-bytestring, bytestring, constraints, containers, deepseq
+, exceptions, fetchgit, free, hspec, hspec-discover, http-media
+, http-types, lib, network-uri, safe, servant, sop-core
+, template-haskell, text, transformers
 }:
 mkDerivation {
   pname = "servant-client-core";
@@ -38,24 +18,9 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    base-compat
-    base64-bytestring
-    bytestring
-    constraints
-    containers
-    deepseq
-    exceptions
-    free
-    http-media
-    http-types
-    network-uri
-    safe
-    servant
-    sop-core
-    template-haskell
-    text
+    aeson base base-compat base64-bytestring bytestring constraints
+    containers deepseq exceptions free http-media http-types
+    network-uri safe servant sop-core template-haskell text
     transformers
   ];
   testHaskellDepends = [ base base-compat deepseq hspec QuickCheck ];

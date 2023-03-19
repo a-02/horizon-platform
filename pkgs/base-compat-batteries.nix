@@ -1,20 +1,16 @@
-{ mkDerivation
-, QuickCheck
-, base
-, base-compat
-, ghc-prim
-, hspec
-, hspec-discover
-, lib
+{ mkDerivation, OneTuple, QuickCheck, base, base-compat
+, foldable1-classes-compat, ghc-prim, hspec, hspec-discover, lib
 }:
 mkDerivation {
   pname = "base-compat-batteries";
-  version = "0.12.2";
-  sha256 = "ede9092e07f904e0759160bf1ecd3fb7eb043bae6dc89a37c3dc94829ec5eb99";
+  version = "0.13.0";
+  sha256 = "3768af40d1d64f9b0845a8ddb18e63ba3a4c765d0d96db9dc28b5b66d1232f98";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
-  libraryHaskellDepends = [ base base-compat ghc-prim ];
+  libraryHaskellDepends = [
+    base base-compat foldable1-classes-compat ghc-prim OneTuple
+  ];
   testHaskellDepends = [ base hspec QuickCheck ];
   testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;

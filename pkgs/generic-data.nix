@@ -1,42 +1,22 @@
-{ mkDerivation
-, ap-normalize
-, base
-, base-orphans
-, contravariant
-, criterion
-, deepseq
-, generic-lens
-, ghc-boot-th
-, lib
-, one-liner
-, show-combinators
-, tasty
-, tasty-hunit
+{ mkDerivation, ap-normalize, base, base-orphans, contravariant
+, deepseq, generic-lens, ghc-boot-th, lib, one-liner
+, show-combinators, tasty, tasty-bench, tasty-hunit
 }:
 mkDerivation {
   pname = "generic-data";
-  version = "1.0.0.0";
-  sha256 = "0fa021b8d0d879d9f1d81c792bf596ccc88ebdaf94dc0c1d1d3cadcf47eacab1";
+  version = "1.1.0.0";
+  sha256 = "b12cbc4d99b35f3638aa47a5c45a8f1b3b633ac0d2fff24a0c10ec72089bbccb";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ap-normalize
-    base
-    base-orphans
-    contravariant
-    ghc-boot-th
+    ap-normalize base base-orphans contravariant ghc-boot-th
     show-combinators
   ];
   testHaskellDepends = [
-    base
-    generic-lens
-    one-liner
-    show-combinators
-    tasty
-    tasty-hunit
+    base generic-lens one-liner show-combinators tasty tasty-hunit
   ];
-  benchmarkHaskellDepends = [ base criterion deepseq ];
+  benchmarkHaskellDepends = [ base deepseq tasty-bench ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;

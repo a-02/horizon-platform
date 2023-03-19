@@ -1,18 +1,10 @@
-{ mkDerivation
-, Cabal
-, base
-, bytestring
-, lib
-, network
-, openssl
+{ mkDerivation, Cabal, base, bytestring, lib, network, openssl
 , time
 }:
 mkDerivation {
   pname = "HsOpenSSL";
-  version = "0.11.7.2";
-  sha256 = "8536c0939e52c990b2998a4ac5ff2b5886e1701b41b9934a87df8ec910754d7b";
-  revision = "3";
-  editedCabalFile = "0nsqxym87s48029laqba4nzwpk7nrk35x7wmpjqfnbrj82ddcshd";
+  version = "0.11.7.5";
+  sha256 = "e1f85ebe2ac9207414f2ad0b1c7c972f336e8f15ca182e42a5886909962d1478";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

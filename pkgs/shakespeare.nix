@@ -1,27 +1,8 @@
-{ mkDerivation
-, HUnit
-, aeson
-, base
-, blaze-html
-, blaze-markup
-, bytestring
-, containers
-, directory
-, exceptions
-, file-embed
-, ghc-prim
-, hspec
-, lib
-, parsec
-, process
-, scientific
-, template-haskell
-, text
-, th-lift
-, time
-, transformers
-, unordered-containers
-, vector
+{ mkDerivation, HUnit, aeson, base, blaze-html, blaze-markup
+, bytestring, containers, directory, exceptions, file-embed
+, ghc-prim, hspec, lib, parsec, process, scientific
+, template-haskell, text, th-lift, time, transformers
+, unordered-containers, vector
 }:
 mkDerivation {
   pname = "shakespeare";
@@ -31,45 +12,15 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    blaze-html
-    blaze-markup
-    bytestring
-    containers
-    directory
-    exceptions
-    file-embed
-    ghc-prim
-    parsec
-    process
-    scientific
-    template-haskell
-    text
-    th-lift
-    time
-    transformers
-    unordered-containers
-    vector
+    aeson base blaze-html blaze-markup bytestring containers directory
+    exceptions file-embed ghc-prim parsec process scientific
+    template-haskell text th-lift time transformers
+    unordered-containers vector
   ];
   testHaskellDepends = [
-    aeson
-    base
-    blaze-html
-    blaze-markup
-    bytestring
-    containers
-    directory
-    exceptions
-    ghc-prim
-    hspec
-    HUnit
-    parsec
-    process
-    template-haskell
-    text
-    time
-    transformers
+    aeson base blaze-html blaze-markup bytestring containers directory
+    exceptions ghc-prim hspec HUnit parsec process template-haskell
+    text time transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

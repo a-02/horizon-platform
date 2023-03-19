@@ -1,54 +1,16 @@
-{ mkDerivation
-, base
-, base16-bytestring
-, bytestring
-, containers
-, directory
-, extra
-, filepath
-, hie-bios
-, hslogger
-, implicit-hie
-, lib
-, process
-, temporary
-, text
-, time
-, transformers
-, unix-compat
-, unordered-containers
-, vector
-, yaml
+{ mkDerivation, base, directory, extra, filepath, hie-bios
+, implicit-hie, lib, process, transformers
 }:
 mkDerivation {
   pname = "implicit-hie-cradle";
-  version = "0.5.0.0";
-  sha256 = "3e6a8958052b95665932ed6f951e9e4c30c016b3f8aba1b7d7735f0a188ecc31";
-  revision = "1";
-  editedCabalFile = "0naa4dk7bgg8icx5xy38jpg7gxx9pirqz4gx0ggj5g2r787zcxj2";
+  version = "0.5.0.1";
+  sha256 = "ee5623f8476e01c83dee8acbe5df4049613a5ff6b1831b00eec406c12785cae7";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base16-bytestring
-    bytestring
-    containers
-    directory
-    extra
-    filepath
-    hie-bios
-    hslogger
-    implicit-hie
-    process
-    temporary
-    text
-    time
+    base directory extra filepath hie-bios implicit-hie process
     transformers
-    unix-compat
-    unordered-containers
-    vector
-    yaml
   ];
   testHaskellDepends = [ base ];
   enableLibraryProfiling = true;

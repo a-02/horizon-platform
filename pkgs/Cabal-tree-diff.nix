@@ -1,18 +1,12 @@
-{ mkDerivation
-, Cabal
-, Cabal-syntax
-, base
-, fetchgit
-, lib
-, tree-diff
+{ mkDerivation, Cabal, Cabal-syntax, base, fetchgit, lib, tree-diff
 }:
 mkDerivation {
   pname = "Cabal-tree-diff";
-  version = "3.9.0.0";
+  version = "3.10.1.0";
   src = fetchgit {
     url = "https://gitlab.haskell.org/ghc/packages/Cabal";
-    sha256 = "13prqza1wk1gc0az8lizrm97w6rwxv5lzvy5a4gahpr2wsliqjfg";
-    rev = "e9fdb85427ad1ef11a25c8b1f2286614c86a65ff";
+    sha256 = "19wz3prd374yfpb37v0zj2fxsf2aqvskbkwpwhnjqszn8j3ddihi";
+    rev = "6c95f3fee3cdee859704b6476646cefd4628a850";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/Cabal-tree-diff/; echo source root reset to $sourceRoot";

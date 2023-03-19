@@ -1,51 +1,22 @@
-{ mkDerivation
-, QuickCheck
-, base
-, base-compat
-, base-orphans
-, containers
-, ghc-boot-th
-, ghc-prim
-, hspec
-, hspec-discover
-, lib
-, tagged
-, template-haskell
-, th-abstraction
-, transformers
-, transformers-compat
-, void
+{ mkDerivation, QuickCheck, base, base-compat, base-orphans
+, containers, ghc-boot-th, ghc-prim, hspec, hspec-discover, lib
+, tagged, template-haskell, th-abstraction, transformers
+, transformers-compat, void
 }:
 mkDerivation {
   pname = "deriving-compat";
-  version = "0.6.1";
-  sha256 = "6bfda1bb730fdad50251f7875dff2802fea3388cfd4ea232f34a03218cae9d26";
-  revision = "1";
-  editedCabalFile = "0m3ywfvj96yqrdyv6mgnmdhlsvjjn89wl0n1n7v2m60zaan14cgh";
+  version = "0.6.3";
+  sha256 = "b1bf97012db9012a74af4b13cb3454afb7afa1db54c0f6e4bd7c10349e66692a";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    ghc-boot-th
-    ghc-prim
-    template-haskell
-    th-abstraction
-    transformers
-    transformers-compat
+    base containers ghc-boot-th ghc-prim template-haskell
+    th-abstraction transformers transformers-compat
   ];
   testHaskellDepends = [
-    base
-    base-compat
-    base-orphans
-    hspec
-    QuickCheck
-    tagged
-    template-haskell
-    transformers
-    transformers-compat
-    void
+    base base-compat base-orphans hspec QuickCheck tagged
+    template-haskell transformers transformers-compat void
   ];
   testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;

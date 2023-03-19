@@ -1,16 +1,10 @@
-{ mkDerivation
-, base
-, bytestring
-, lib
-, mtl
-, tasty
-, tasty-hunit
+{ mkDerivation, base, bytestring, lib, mtl, tasty, tasty-hunit
 , text
 }:
 mkDerivation {
   pname = "parsec";
-  version = "3.1.15.1";
-  sha256 = "abe4901531185505d4360e633e8d79ccc90325a0bac7f666eecad30f7f7f98dd";
+  version = "3.1.16.1";
+  sha256 = "a41962e5d76ea68658876735b8d5b755e0eff336b079d0a2f439c364755d1246";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

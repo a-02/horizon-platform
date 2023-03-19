@@ -1,43 +1,20 @@
-{ mkDerivation
-, base
-, commonmark
-, containers
-, emojis
-, filepath
-, lib
-, network-uri
-, parsec
-, tasty
-, tasty-bench
-, tasty-hunit
-, text
+{ mkDerivation, base, commonmark, containers, emojis, filepath, lib
+, network-uri, parsec, tasty, tasty-bench, tasty-hunit, text
 , transformers
 }:
 mkDerivation {
   pname = "commonmark-extensions";
-  version = "0.2.3.3";
-  sha256 = "f41efcf3cc0b876437de8dc69accf8cab9674b77325a6bf038caf62e96ce3e01";
+  version = "0.2.3.4";
+  sha256 = "a084efe90311f8a0d83d8622ef76f17dfdb974a84b74df454cf906b0ee64665e";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    commonmark
-    containers
-    emojis
-    filepath
-    network-uri
-    parsec
-    text
+    base commonmark containers emojis filepath network-uri parsec text
     transformers
   ];
   testHaskellDepends = [
-    base
-    commonmark
-    parsec
-    tasty
-    tasty-hunit
-    text
+    base commonmark parsec tasty tasty-hunit text
   ];
   benchmarkHaskellDepends = [ base commonmark tasty-bench text ];
   enableLibraryProfiling = true;

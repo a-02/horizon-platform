@@ -1,53 +1,24 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, deepseq
-, filepath
-, ghc-prim
-, hspec
-, lib
-, path
-, path-io
-, split
-, tasty-bench
-, text
+{ mkDerivation, QuickCheck, base, bytestring, deepseq, filepath
+, ghc-prim, hspec, lib, path, path-io, split, tasty-bench, text
 , unicode-data
 }:
 mkDerivation {
   pname = "unicode-transforms";
   version = "0.4.0.1";
   sha256 = "3278e1e1d648da4bcd7368658ae091a89080e88a2f44db9df5136711e99649fc";
-  revision = "2";
-  editedCabalFile = "1imm3svpz2shilj2kmmmcyy5yd4c1mpmz5v1gvjrr98hrab2i9x7";
+  revision = "3";
+  editedCabalFile = "1hx6v04g4g1d8y8nm26k7vkhgfqmcch5xhvljlz67grw0j5d1zxd";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    ghc-prim
-    text
-    unicode-data
+    base bytestring ghc-prim text unicode-data
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    deepseq
-    hspec
-    QuickCheck
-    split
-    text
-    unicode-data
+    base bytestring deepseq hspec QuickCheck split text unicode-data
   ];
   benchmarkHaskellDepends = [
-    base
-    deepseq
-    filepath
-    path
-    path-io
-    tasty-bench
-    text
+    base deepseq filepath path path-io tasty-bench text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

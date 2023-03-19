@@ -1,30 +1,16 @@
-{ mkDerivation
-, base
-, deepseq
-, doctest
-, hedgehog
-, hspec
-, hspec-hedgehog
-, lib
-, selective
-, text
+{ mkDerivation, base, deepseq, doctest, hedgehog, hspec
+, hspec-hedgehog, lib, selective, text
 }:
 mkDerivation {
   pname = "validation-selective";
-  version = "0.1.0.2";
-  sha256 = "016fde31529afad0cfe70ec3215fa85e38147582248696af6b135df950655bbf";
+  version = "0.2.0.0";
+  sha256 = "9a884e97e6a64f2cacadec8d5ea7e8ba7562d0c8fa9ab7cd5c34055eaec64987";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base deepseq selective ];
   testHaskellDepends = [
-    base
-    doctest
-    hedgehog
-    hspec
-    hspec-hedgehog
-    selective
-    text
+    base doctest hedgehog hspec hspec-hedgehog selective text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

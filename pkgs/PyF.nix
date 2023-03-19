@@ -1,51 +1,20 @@
-{ mkDerivation
-, HUnit
-, base
-, bytestring
-, deepseq
-, filepath
-, ghc
-, ghc-boot
-, hspec
-, lib
-, mtl
-, parsec
-, process
-, template-haskell
-, temporary
-, text
-, time
+{ mkDerivation, HUnit, base, bytestring, deepseq, filepath, ghc
+, hspec, lib, mtl, parsec, process, template-haskell, temporary
+, text, time
 }:
 mkDerivation {
   pname = "PyF";
-  version = "0.11.1.0";
-  sha256 = "8fd451ac23e5e63813c464e1a8ac98ba5c2fb11599441c80fe9ebc0186e61c1f";
+  version = "0.11.1.1";
+  sha256 = "f3607099f3357bce93bf1b3034c702b833d1114966b922267136340f262d3324";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    ghc
-    ghc-boot
-    mtl
-    parsec
-    template-haskell
-    text
-    time
+    base bytestring ghc mtl parsec template-haskell text time
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    deepseq
-    filepath
-    hspec
-    HUnit
-    process
-    template-haskell
-    temporary
-    text
-    time
+    base bytestring deepseq filepath hspec HUnit process
+    template-haskell temporary text time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

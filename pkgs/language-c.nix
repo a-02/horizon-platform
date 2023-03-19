@@ -1,36 +1,16 @@
-{ mkDerivation
-, alex
-, array
-, base
-, bytestring
-, containers
-, deepseq
-, directory
-, filepath
-, happy
-, lib
-, mtl
-, pretty
-, process
+{ mkDerivation, alex, array, base, bytestring, containers, deepseq
+, directory, filepath, happy, lib, mtl, pretty, process
 }:
 mkDerivation {
   pname = "language-c";
-  version = "0.9.1";
-  sha256 = "94359566eb5da62f539fa62500f8a861db4e3eafb956d66c6821d6ffad96ad3c";
+  version = "0.9.2";
+  sha256 = "b2310d2fda16df72e9f8f63ef18bec2e09ae3aff5891dc948c3d9cb72cef6cb3";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    bytestring
-    containers
-    deepseq
-    directory
-    filepath
-    mtl
-    pretty
-    process
+    array base bytestring containers deepseq directory filepath mtl
+    pretty process
   ];
   libraryToolDepends = [ alex happy ];
   testHaskellDepends = [ base directory filepath process ];

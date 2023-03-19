@@ -1,36 +1,9 @@
-{ mkDerivation
-, Diff
-, QuickCheck
-, aeson
-, ansi-terminal
-, ansi-wl-pprint
-, base
-, base-compat
-, bytestring
-, bytestring-builder
-, containers
-, criterion
-, deepseq
-, hashable
-, lib
-, parsec
-, parsers
-, pretty
-, primitive
-, scientific
-, semialign
-, strict
-, tagged
-, tasty
-, tasty-golden
-, tasty-quickcheck
-, text
-, these
-, time
-, trifecta
-, unordered-containers
-, uuid-types
-, vector
+{ mkDerivation, Diff, QuickCheck, aeson, ansi-terminal
+, ansi-wl-pprint, base, base-compat, bytestring, bytestring-builder
+, containers, criterion, deepseq, hashable, lib, parsec, parsers
+, pretty, primitive, scientific, semialign, strict, tagged, tasty
+, tasty-golden, tasty-quickcheck, text, these, time, trifecta
+, unordered-containers, uuid-types, vector
 }:
 mkDerivation {
   pname = "tree-diff";
@@ -40,45 +13,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    ansi-terminal
-    ansi-wl-pprint
-    base
-    base-compat
-    bytestring
-    bytestring-builder
-    containers
-    deepseq
-    hashable
-    parsec
-    parsers
-    pretty
-    primitive
-    QuickCheck
-    scientific
-    semialign
-    strict
-    tagged
-    text
-    these
-    time
-    unordered-containers
-    uuid-types
-    vector
+    aeson ansi-terminal ansi-wl-pprint base base-compat bytestring
+    bytestring-builder containers deepseq hashable parsec parsers
+    pretty primitive QuickCheck scientific semialign strict tagged text
+    these time unordered-containers uuid-types vector
   ];
   testHaskellDepends = [
-    ansi-terminal
-    ansi-wl-pprint
-    base
-    base-compat
-    parsec
-    primitive
-    QuickCheck
-    tagged
-    tasty
-    tasty-golden
-    tasty-quickcheck
-    trifecta
+    ansi-terminal ansi-wl-pprint base base-compat parsec primitive
+    QuickCheck tagged tasty tasty-golden tasty-quickcheck trifecta
   ];
   benchmarkHaskellDepends = [ base criterion deepseq Diff ];
   enableLibraryProfiling = true;

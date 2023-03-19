@@ -1,14 +1,5 @@
-{ mkDerivation
-, base
-, base-compat
-, fetchgit
-, hspec
-, hspec-discover
-, http-types
-, lens
-, lib
-, servant
-, text
+{ mkDerivation, base, base-compat, fetchgit, hspec, hspec-discover
+, http-types, lens, lib, servant, text
 }:
 mkDerivation {
   pname = "servant-foreign";
@@ -24,12 +15,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base-compat
-    http-types
-    lens
-    servant
-    text
+    base base-compat http-types lens servant text
   ];
   testHaskellDepends = [ base hspec servant ];
   testToolDepends = [ hspec-discover ];

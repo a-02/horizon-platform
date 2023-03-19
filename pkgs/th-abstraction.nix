@@ -1,22 +1,14 @@
-{ mkDerivation
-, base
-, containers
-, ghc-prim
-, lib
-, template-haskell
+{ mkDerivation, base, containers, ghc-prim, lib, template-haskell
 }:
 mkDerivation {
   pname = "th-abstraction";
-  version = "0.4.5.0";
-  sha256 = "00d5e24f247e328bd9898d5af5915c1e86b134b4d40baa680258635f95031526";
+  version = "0.5.0.0";
+  sha256 = "8258dc3ab7188af5826e2467032b52a931a3af4d8a93d4a094210e240a8a9964";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    ghc-prim
-    template-haskell
+    base containers ghc-prim template-haskell
   ];
   testHaskellDepends = [ base containers template-haskell ];
   enableLibraryProfiling = true;

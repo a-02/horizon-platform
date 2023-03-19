@@ -1,10 +1,8 @@
 { mkDerivation, aeson, base, constraints, lib, template-haskell }:
 mkDerivation {
   pname = "constraints-extras";
-  version = "0.3.2.1";
-  sha256 = "d7f571c6634105e8fbb5ad6685775c7d06e84cd4ece51dfd4276e2fe34e65c70";
-  revision = "1";
-  editedCabalFile = "1smha6ljia9bfgdy1h0lkgi9464rwa9lnw7rqfi1c23pzyiw13lh";
+  version = "0.4.0.0";
+  sha256 = "f639594f340986e7647616194dec57a85490ca60e3b0f5197d011675da242ec7";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

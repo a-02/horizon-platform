@@ -1,12 +1,5 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, hedgehog
-, hspec
-, hspec-core
-, lib
-, splitmix
+{ mkDerivation, HUnit, QuickCheck, base, hedgehog, hspec
+, hspec-core, lib, splitmix
 }:
 mkDerivation {
   pname = "hspec-hedgehog";
@@ -18,13 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    hedgehog
-    hspec
-    hspec-core
-    HUnit
-    QuickCheck
-    splitmix
+    base hedgehog hspec hspec-core HUnit QuickCheck splitmix
   ];
   testHaskellDepends = [ base hedgehog hspec ];
   enableLibraryProfiling = true;

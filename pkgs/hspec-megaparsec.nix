@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, containers
-, hspec
-, hspec-expectations
-, lib
+{ mkDerivation, base, containers, hspec, hspec-expectations, lib
 , megaparsec
 }:
 mkDerivation {
@@ -14,10 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    hspec-expectations
-    megaparsec
+    base containers hspec-expectations megaparsec
   ];
   testHaskellDepends = [ base hspec hspec-expectations megaparsec ];
   enableLibraryProfiling = true;

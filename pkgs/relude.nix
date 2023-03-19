@@ -1,54 +1,23 @@
-{ mkDerivation
-, Glob
-, base
-, bytestring
-, containers
-, deepseq
-, doctest
-, ghc-prim
-, hashable
-, hedgehog
-, lib
-, mtl
-, stm
-, tasty-bench
-, text
-, transformers
-, unordered-containers
+{ mkDerivation, Glob, base, bytestring, containers, deepseq
+, doctest, ghc-prim, hashable, hedgehog, lib, mtl, stm, tasty-bench
+, text, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "relude";
-  version = "1.1.0.0";
-  sha256 = "b51df08a93ef1331dd56389e158e67ac7b68c62cc1561c2890d3572c764ab609";
+  version = "1.2.0.0";
+  sha256 = "cbe177b3df1abf848704a1095f046af8006cb0e185151c00a19c8faa6f2c1273";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    deepseq
-    ghc-prim
-    hashable
-    mtl
-    stm
-    text
-    transformers
-    unordered-containers
+    base bytestring containers deepseq ghc-prim hashable mtl stm text
+    transformers unordered-containers
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    containers
-    doctest
-    Glob
-    hedgehog
-    text
+    base bytestring containers doctest Glob hedgehog text
   ];
   benchmarkHaskellDepends = [
-    base
-    tasty-bench
-    unordered-containers
+    base tasty-bench unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

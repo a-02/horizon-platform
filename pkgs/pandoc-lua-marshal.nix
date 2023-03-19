@@ -1,56 +1,23 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, containers
-, exceptions
-, hslua
-, hslua-marshalling
-, lib
-, lua
-, pandoc-types
-, safe
-, tasty
-, tasty-hunit
-, tasty-lua
-, tasty-quickcheck
-, text
+{ mkDerivation, QuickCheck, aeson, base, bytestring, containers
+, exceptions, hslua, hslua-list, hslua-marshalling, lib, lua
+, pandoc-types, safe, tasty, tasty-hunit, tasty-lua
+, tasty-quickcheck, text
 }:
 mkDerivation {
   pname = "pandoc-lua-marshal";
-  version = "0.1.7";
-  sha256 = "b29415580645e78824b134f8508eae3800cab4fd647d736622c0d286dc59c95e";
+  version = "0.2.2";
+  sha256 = "22231c24a7b228b3d0b99dcfb77657b410f8a95f02b6bde365b434a8f1882679";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    exceptions
-    hslua
-    hslua-marshalling
-    lua
-    pandoc-types
-    safe
-    text
+    aeson base bytestring containers exceptions hslua hslua-list
+    hslua-marshalling lua pandoc-types safe text
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    containers
-    exceptions
-    hslua
-    hslua-marshalling
-    lua
-    pandoc-types
-    QuickCheck
-    safe
-    tasty
-    tasty-hunit
-    tasty-lua
-    tasty-quickcheck
-    text
+    aeson base bytestring containers exceptions hslua hslua-list
+    hslua-marshalling lua pandoc-types QuickCheck safe tasty
+    tasty-hunit tasty-lua tasty-quickcheck text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

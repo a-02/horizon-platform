@@ -1,13 +1,5 @@
-{ mkDerivation
-, ansi-terminal
-, base
-, containers
-, lib
-, optparse-applicative
-, stm
-, tagged
-, transformers
-, unix
+{ mkDerivation, ansi-terminal, base, containers, lib
+, optparse-applicative, stm, tagged, transformers, unix
 }:
 mkDerivation {
   pname = "tasty";
@@ -17,14 +9,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ansi-terminal
-    base
-    containers
-    optparse-applicative
-    stm
-    tagged
-    transformers
-    unix
+    ansi-terminal base containers optparse-applicative stm tagged
+    transformers unix
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

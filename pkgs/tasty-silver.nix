@@ -1,26 +1,7 @@
-{ mkDerivation
-, ansi-terminal
-, async
-, base
-, bytestring
-, containers
-, deepseq
-, directory
-, filepath
-, lib
-, mtl
-, optparse-applicative
-, process
-, process-extras
-, regex-tdfa
-, silently
-, stm
-, tagged
-, tasty
-, tasty-hunit
-, temporary
-, text
-, transformers
+{ mkDerivation, ansi-terminal, async, base, bytestring, containers
+, deepseq, directory, filepath, lib, mtl, optparse-applicative
+, process, process-extras, regex-tdfa, silently, stm, tagged, tasty
+, tasty-hunit, temporary, text, transformers
 }:
 mkDerivation {
   pname = "tasty-silver";
@@ -30,37 +11,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ansi-terminal
-    async
-    base
-    bytestring
-    containers
-    deepseq
-    directory
-    filepath
-    mtl
-    optparse-applicative
-    process
-    process-extras
-    regex-tdfa
-    silently
-    stm
-    tagged
-    tasty
-    temporary
-    text
-    transformers
+    ansi-terminal async base bytestring containers deepseq directory
+    filepath mtl optparse-applicative process process-extras regex-tdfa
+    silently stm tagged tasty temporary text transformers
   ];
   testHaskellDepends = [
-    base
-    directory
-    filepath
-    process
-    silently
-    tasty
-    tasty-hunit
-    temporary
-    transformers
+    base directory filepath process silently tasty tasty-hunit
+    temporary transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

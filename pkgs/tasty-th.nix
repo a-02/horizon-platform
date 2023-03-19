@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, haskell-src-exts
-, lib
-, tasty
-, tasty-hunit
+{ mkDerivation, base, haskell-src-exts, lib, tasty, tasty-hunit
 , template-haskell
 }:
 mkDerivation {
@@ -14,10 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    haskell-src-exts
-    tasty
-    template-haskell
+    base haskell-src-exts tasty template-haskell
   ];
   testHaskellDepends = [ base tasty-hunit ];
   enableLibraryProfiling = true;

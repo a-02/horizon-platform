@@ -1,19 +1,6 @@
-{ mkDerivation
-, aeson
-, async
-, base
-, bytestring
-, conduit
-, exceptions
-, lib
-, monad-control
-, resourcet
-, servant-server
-, text
-, wai
-, wai-websockets
-, warp
-, websockets
+{ mkDerivation, aeson, async, base, bytestring, conduit, exceptions
+, lib, monad-control, resourcet, servant-server, text, wai
+, wai-websockets, warp, websockets
 }:
 mkDerivation {
   pname = "servant-websockets";
@@ -23,30 +10,11 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    async
-    base
-    bytestring
-    conduit
-    exceptions
-    monad-control
-    resourcet
-    servant-server
-    text
-    wai
-    wai-websockets
-    warp
-    websockets
+    aeson async base bytestring conduit exceptions monad-control
+    resourcet servant-server text wai wai-websockets warp websockets
   ];
   executableHaskellDepends = [
-    aeson
-    base
-    conduit
-    servant-server
-    text
-    wai
-    warp
-    websockets
+    aeson base conduit servant-server text wai warp websockets
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,30 +1,20 @@
-{ mkDerivation
-, base
-, containers
-, effectful
-, exceptions
-, lib
-, template-haskell
-, th-abstraction
+{ mkDerivation, base, containers, effectful-core, exceptions, lib
+, template-haskell, th-abstraction
 }:
 mkDerivation {
   pname = "effectful-th";
-  version = "1.0.0.0";
-  sha256 = "302605bbc2bb8a1b97308d9611faf5e121958b846cbeb9421e2657a902ef7a63";
-  revision = "3";
-  editedCabalFile = "1nqwvgdvqgh4dvkidyaga7jd95p3hn54hy5gwadsvyf9lll4vjck";
+  version = "1.0.0.1";
+  sha256 = "4ee3882a61a876aa3ca1ab3174347d8442688323f20f30a2d48f54fab4dbaba7";
+  revision = "2";
+  editedCabalFile = "15s8yvxf7sbi1vx5ylnrnxc1b694ndmdac0f5bi8v0cg6sjijkzw";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    effectful
-    exceptions
-    template-haskell
+    base containers effectful-core exceptions template-haskell
     th-abstraction
   ];
-  testHaskellDepends = [ base effectful ];
+  testHaskellDepends = [ base effectful-core ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;

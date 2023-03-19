@@ -1,66 +1,24 @@
-{ mkDerivation
-, async
-, base
-, compact
-, constraints
-, containers
-, contravariant
-, exceptions
-, ghc-prim
-, hspec
-, hspec-discover
-, lib
-, mtl
-, polysemy
-, polysemy-plugin
-, random
-, reflection
-, streaming
-, text
-, transformers
+{ mkDerivation, async, base, constraints, containers, contravariant
+, exceptions, ghc-compact, ghc-prim, hspec, hspec-discover, lib
+, mtl, polysemy, polysemy-plugin, random, reflection, streaming
+, text, transformers
 }:
 mkDerivation {
   pname = "polysemy-zoo";
-  version = "0.8.0.0";
-  sha256 = "8c46937c61c980ac3024c4eeb1bf32a686eb2c5bcc2a65fad25d102512c89afa";
+  version = "0.8.1.0";
+  sha256 = "2d786f3e178f49a17d7d0e21b58a763da1a032ef8136b492700f3856ef94145d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    async
-    base
-    compact
-    constraints
-    containers
-    contravariant
-    exceptions
-    ghc-prim
-    mtl
-    polysemy
-    random
-    reflection
-    streaming
-    text
+    async base constraints containers contravariant exceptions
+    ghc-compact ghc-prim mtl polysemy random reflection streaming text
     transformers
   ];
   testHaskellDepends = [
-    async
-    base
-    compact
-    constraints
-    containers
-    contravariant
-    exceptions
-    ghc-prim
-    hspec
-    mtl
-    polysemy
-    polysemy-plugin
-    random
-    reflection
-    streaming
-    text
-    transformers
+    async base constraints containers contravariant exceptions
+    ghc-compact ghc-prim hspec mtl polysemy polysemy-plugin random
+    reflection streaming text transformers
   ];
   testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;

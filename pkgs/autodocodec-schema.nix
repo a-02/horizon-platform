@@ -1,36 +1,17 @@
-{ mkDerivation
-, aeson
-, autodocodec
-, base
-, containers
-, lib
-, mtl
-, text
-, unordered-containers
-, validity
-, validity-aeson
-, validity-containers
-, validity-text
+{ mkDerivation, aeson, autodocodec, base, containers, lib, mtl
+, text, unordered-containers, validity, validity-aeson
+, validity-containers, validity-text
 }:
 mkDerivation {
   pname = "autodocodec-schema";
-  version = "0.1.0.2";
-  sha256 = "7178bc6b356bf744918202312a71eb0c4fb9b2dfe70680c4acd8d8a5d0977c6f";
+  version = "0.1.0.3";
+  sha256 = "bccda22edd27c0122af6eb1a30ea2c1f0a1af7ac819cf004e8945e60837369e5";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    autodocodec
-    base
-    containers
-    mtl
-    text
-    unordered-containers
-    validity
-    validity-aeson
-    validity-containers
-    validity-text
+    aeson autodocodec base containers mtl text unordered-containers
+    validity validity-aeson validity-containers validity-text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

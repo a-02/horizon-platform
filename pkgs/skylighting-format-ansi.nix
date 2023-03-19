@@ -1,12 +1,5 @@
-{ mkDerivation
-, ansi-terminal
-, base
-, binary
-, colour
-, containers
-, lib
-, skylighting-core
-, text
+{ mkDerivation, ansi-terminal, base, binary, colour, containers
+, lib, skylighting-core, text
 }:
 mkDerivation {
   pname = "skylighting-format-ansi";
@@ -16,13 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ansi-terminal
-    base
-    binary
-    colour
-    containers
-    skylighting-core
-    text
+    ansi-terminal base binary colour containers skylighting-core text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

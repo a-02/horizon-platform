@@ -1,10 +1,8 @@
 { mkDerivation, base, lib, mtl, transformers }:
 mkDerivation {
   pname = "statestack";
-  version = "0.3.1";
-  sha256 = "f9d2a2b7047a867c6eb3233db9528148fd773bdd0bdec29c13eb9f10dce71341";
-  revision = "1";
-  editedCabalFile = "1bvx9s7zssczqpwwgqw4cgmfdw1wjy0mwqlndjgnkjjn4nm31ml8";
+  version = "0.3.1.1";
+  sha256 = "cd55733032b34d671852c7b6d05c1645cea2f280ac35221d480cf721d5c7879c";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

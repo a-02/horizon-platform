@@ -1,59 +1,21 @@
-{ mkDerivation
-, base
-, bifunctors
-, bytestring
-, clock
-, colour
-, containers
-, criterion
-, deepseq
-, exceptions
-, hosc
-, lib
-, microspec
-, mtl
-, network
-, parsec
-, primitive
-, random
-, text
-, transformers
-, weigh
+{ mkDerivation, base, bytestring, clock, colour, containers
+, criterion, deepseq, exceptions, hosc, lib, microspec, mtl
+, network, parsec, primitive, random, text, tidal-link
+, transformers, weigh
 }:
 mkDerivation {
   pname = "tidal";
-  version = "1.8.1";
-  sha256 = "093611c3d977bc5972a4446573de5358e80ef015185ed84ad27af82415040000";
-  revision = "1";
-  editedCabalFile = "0mnxl1ynxf2cgqlrbkshw8qngiw7b6lf0lsjkd6hjhkh2xbxgxzx";
+  version = "1.9.4";
+  sha256 = "61dbc51935327c79d2714ab334a7abb1e81c1b3a0363d8de0018618a6901d788";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    base
-    bifunctors
-    bytestring
-    clock
-    colour
-    containers
-    deepseq
-    exceptions
-    hosc
-    mtl
-    network
-    parsec
-    primitive
-    random
-    text
-    transformers
+    base bytestring clock colour containers deepseq exceptions hosc mtl
+    network parsec primitive random text tidal-link transformers
   ];
   testHaskellDepends = [
-    base
-    containers
-    deepseq
-    hosc
-    microspec
-    parsec
+    base containers deepseq hosc microspec parsec
   ];
   benchmarkHaskellDepends = [ base criterion weigh ];
   enableLibraryProfiling = true;

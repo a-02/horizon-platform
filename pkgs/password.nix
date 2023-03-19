@@ -1,58 +1,24 @@
-{ mkDerivation
-, Cabal
-, QuickCheck
-, base
-, base-compat
-, base64
-, bytestring
-, cabal-doctest
-, cryptonite
-, doctest
-, lib
-, memory
-, password-types
-, quickcheck-instances
-, scrypt
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, template-haskell
-, text
+{ mkDerivation, Cabal, QuickCheck, base, base-compat, base64
+, bytestring, cabal-doctest, cryptonite, doctest, lib, memory
+, password-types, quickcheck-instances, scrypt, tasty, tasty-hunit
+, tasty-quickcheck, template-haskell, text
 }:
 mkDerivation {
   pname = "password";
-  version = "3.0.2.0";
-  sha256 = "14c5b664ec2d3064059f8de7170c4eb10e847397de9f98a841b8ea5ea6cf4c24";
+  version = "3.0.2.1";
+  sha256 = "e935fcab166fae63e1fc02155d12e61881d1daac8edfca9f125ea7f44aa2d60d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   setupHaskellDepends = [ base Cabal cabal-doctest ];
   libraryHaskellDepends = [
-    base
-    base64
-    bytestring
-    cryptonite
-    memory
-    password-types
-    template-haskell
-    text
+    base base64 bytestring cryptonite memory password-types
+    template-haskell text
   ];
   testHaskellDepends = [
-    base
-    base-compat
-    bytestring
-    cryptonite
-    doctest
-    memory
-    password-types
-    QuickCheck
-    quickcheck-instances
-    scrypt
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    template-haskell
-    text
+    base base-compat base64 bytestring cryptonite doctest memory
+    password-types QuickCheck quickcheck-instances scrypt tasty
+    tasty-hunit tasty-quickcheck template-haskell text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

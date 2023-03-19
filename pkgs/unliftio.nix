@@ -1,78 +1,26 @@
-{ mkDerivation
-, QuickCheck
-, async
-, base
-, bytestring
-, containers
-, deepseq
-, directory
-, filepath
-, gauge
-, hspec
-, lib
-, process
-, safe-exceptions
-, stm
-, time
-, transformers
-, unix
-, unliftio-core
+{ mkDerivation, QuickCheck, async, base, bytestring, containers
+, deepseq, directory, filepath, gauge, hspec, lib, process
+, safe-exceptions, stm, time, transformers, unix, unliftio-core
 }:
 mkDerivation {
   pname = "unliftio";
-  version = "0.2.23.0";
-  sha256 = "2d86a3deef6d801991aa6c837c5e6c0d3db916f33226be1428a5a04f626be4fd";
+  version = "0.2.24.0";
+  sha256 = "fd8ab9b84cec794570faa53e88cf83af2bf7f5566baebf6b664892178d50229b";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    async
-    base
-    bytestring
-    deepseq
-    directory
-    filepath
-    process
-    safe-exceptions
-    stm
-    time
-    transformers
-    unix
-    unliftio-core
+    async base bytestring deepseq directory filepath process
+    safe-exceptions stm time transformers unix unliftio-core
   ];
   testHaskellDepends = [
-    async
-    base
-    bytestring
-    containers
-    deepseq
-    directory
-    filepath
-    hspec
-    process
-    QuickCheck
-    safe-exceptions
-    stm
-    time
-    transformers
-    unix
+    async base bytestring containers deepseq directory filepath hspec
+    process QuickCheck safe-exceptions stm time transformers unix
     unliftio-core
   ];
   benchmarkHaskellDepends = [
-    async
-    base
-    bytestring
-    deepseq
-    directory
-    filepath
-    gauge
-    process
-    safe-exceptions
-    stm
-    time
-    transformers
-    unix
-    unliftio-core
+    async base bytestring deepseq directory filepath gauge process
+    safe-exceptions stm time transformers unix unliftio-core
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

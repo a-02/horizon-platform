@@ -1,20 +1,6 @@
-{ mkDerivation
-, array
-, base
-, binary
-, bytestring
-, containers
-, deepseq
-, directory
-, filepath
-, lib
-, mtl
-, parsec
-, pretty
-, text
-, time
-, transformers
-, unix
+{ mkDerivation, array, base, binary, bytestring, containers
+, deepseq, directory, filepath, lib, mtl, parsec, pretty, text
+, time, transformers, unix
 }:
 mkDerivation {
   pname = "Cabal-syntax";
@@ -24,21 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    binary
-    bytestring
-    containers
-    deepseq
-    directory
-    filepath
-    mtl
-    parsec
-    pretty
-    text
-    time
-    transformers
-    unix
+    array base binary bytestring containers deepseq directory filepath
+    mtl parsec pretty text time transformers unix
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

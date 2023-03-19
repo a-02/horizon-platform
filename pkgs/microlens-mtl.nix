@@ -1,24 +1,15 @@
-{ mkDerivation
-, base
-, lib
-, microlens
-, mtl
-, transformers
+{ mkDerivation, base, lib, microlens, mtl, transformers
 , transformers-compat
 }:
 mkDerivation {
   pname = "microlens-mtl";
-  version = "0.2.0.2";
-  sha256 = "66971668f376717fdbe75e3b8ac99d2efd89c746b41355f6d388a63352a43278";
+  version = "0.2.0.3";
+  sha256 = "4d6b6af37179814fe47e11763ea61b423b698bc15869f94e82c6a5e9fd079fc6";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    microlens
-    mtl
-    transformers
-    transformers-compat
+    base microlens mtl transformers transformers-compat
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

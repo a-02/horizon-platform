@@ -1,18 +1,10 @@
-{ mkDerivation
-, base
-, http-media
-, lib
-, lucid
-, servant
-, servant-server
-, text
-, wai
-, warp
+{ mkDerivation, base, http-media, lib, lucid, servant
+, servant-server, text, wai, warp
 }:
 mkDerivation {
   pname = "servant-lucid";
-  version = "0.9.0.5";
-  sha256 = "df55d4cb266bb95f31f658bef0e13c17a7b16e13068cc9931160620885911d7a";
+  version = "0.9.0.6";
+  sha256 = "a03973035722f9aee7a67fcbb6f44a2d515284e21b0bbf236fda3207132709fd";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

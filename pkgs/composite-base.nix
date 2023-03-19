@@ -1,59 +1,23 @@
-{ mkDerivation
-, QuickCheck
-, base
-, deepseq
-, exceptions
-, hspec
-, lens
-, lib
-, monad-control
-, mtl
-, profunctors
-, template-haskell
-, text
-, transformers
-, transformers-base
-, unliftio-core
-, vinyl
+{ mkDerivation, QuickCheck, base, deepseq, exceptions, hspec, lens
+, lib, monad-control, mtl, profunctors, template-haskell, text
+, transformers, transformers-base, unliftio-core, vinyl
 }:
 mkDerivation {
   pname = "composite-base";
-  version = "0.8.1.0";
-  sha256 = "a8de050a65b8d3febfd48ea0d7b9bb215c8473b7dda7760d7c2df279a92258a3";
+  version = "0.8.2.1";
+  sha256 = "31b7fe24885d2db164524a4477058157592ae06a75da5259f0eafc5760555544";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    deepseq
-    exceptions
-    lens
-    monad-control
-    mtl
-    profunctors
-    template-haskell
-    text
-    transformers
-    transformers-base
-    unliftio-core
+    base deepseq exceptions lens monad-control mtl profunctors
+    template-haskell text transformers transformers-base unliftio-core
     vinyl
   ];
   testHaskellDepends = [
-    base
-    deepseq
-    exceptions
-    hspec
-    lens
-    monad-control
-    mtl
-    profunctors
-    QuickCheck
-    template-haskell
-    text
-    transformers
-    transformers-base
-    unliftio-core
-    vinyl
+    base deepseq exceptions hspec lens monad-control mtl profunctors
+    QuickCheck template-haskell text transformers transformers-base
+    unliftio-core vinyl
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

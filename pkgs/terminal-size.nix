@@ -1,8 +1,8 @@
 { mkDerivation, base, lib }:
 mkDerivation {
   pname = "terminal-size";
-  version = "0.3.3";
-  sha256 = "8c174c8fa7200be2caffd6d25f789fd3c73f4b7b02989f332a42d7901fca60c3";
+  version = "0.3.4";
+  sha256 = "b0f070d6926cdaacf3a412c5518e5c23afca1e0ed00808a5328c96e468b67f49";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -1,16 +1,5 @@
-{ mkDerivation
-, aeson
-, attoparsec
-, base
-, bytestring
-, hashable
-, lib
-, microlens
-, scientific
-, tasty
-, tasty-hunit
-, text
-, vector
+{ mkDerivation, aeson, attoparsec, base, bytestring, hashable, lib
+, microlens, scientific, tasty, tasty-hunit, text, vector
 }:
 mkDerivation {
   pname = "microlens-aeson";
@@ -20,25 +9,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    attoparsec
-    base
-    bytestring
-    hashable
-    microlens
-    scientific
-    text
+    aeson attoparsec base bytestring hashable microlens scientific text
     vector
   ];
   testHaskellDepends = [
-    aeson
-    base
-    bytestring
-    hashable
-    microlens
-    tasty
-    tasty-hunit
-    text
+    aeson base bytestring hashable microlens tasty tasty-hunit text
     vector
   ];
   enableLibraryProfiling = true;

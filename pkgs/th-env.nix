@@ -1,8 +1,4 @@
-{ mkDerivation
-, base
-, lib
-, markdown-unlit
-, template-haskell
+{ mkDerivation, base, lib, markdown-unlit, template-haskell
 , th-compat
 }:
 mkDerivation {

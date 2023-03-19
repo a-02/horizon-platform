@@ -1,54 +1,23 @@
-{ mkDerivation
-, base
-, bytestring
-, conduit
-, conduit-extra
-, exceptions
-, fast-logger
-, lib
-, lifted-base
-, monad-control
-, monad-loops
-, mtl
-, resourcet
-, stm
-, stm-chans
-, template-haskell
-, text
-, transformers
-, transformers-base
-, transformers-compat
+{ mkDerivation, base, bytestring, conduit, conduit-extra
+, exceptions, fast-logger, lib, lifted-base, monad-control
+, monad-loops, mtl, resourcet, stm, stm-chans, template-haskell
+, text, transformers, transformers-base, transformers-compat
 , unliftio-core
 }:
 mkDerivation {
   pname = "monad-logger";
-  version = "0.3.37";
-  sha256 = "0604d581a039c5d1d61c9dce7331c63cf2a68482ee32f0ff38927d24882a47fc";
-  revision = "3";
-  editedCabalFile = "1dzkw08b4ijacdw0vcfxlr13rd819x2yj7b6sr9jrrwicd45zm1z";
+  version = "0.3.39";
+  sha256 = "d3f23b047dda7a3f74b89289a3171c1059d50898f63f671006baab61e01729a5";
+  revision = "1";
+  editedCabalFile = "0nj4qpmp6i5lmfbk7f1shljx8g2062fq6y857y4f9avp1cb9zm7d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    conduit
-    conduit-extra
-    exceptions
-    fast-logger
-    lifted-base
-    monad-control
-    monad-loops
-    mtl
-    resourcet
-    stm
-    stm-chans
-    template-haskell
-    text
-    transformers
-    transformers-base
-    transformers-compat
-    unliftio-core
+    base bytestring conduit conduit-extra exceptions fast-logger
+    lifted-base monad-control monad-loops mtl resourcet stm stm-chans
+    template-haskell text transformers transformers-base
+    transformers-compat unliftio-core
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

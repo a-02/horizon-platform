@@ -1,32 +1,9 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, aeson
-, base
-, blaze-html
-, bytestring
-, conduit
-, containers
-, exceptions
-, hspec
-, hspec-expectations
-, http-api-data
-, lib
-, monad-control
-, monad-logger
-, mtl
-, path-pieces
-, persistent
-, quickcheck-instances
-, random
-, resourcet
-, text
-, time
-, transformers
-, transformers-base
-, unliftio
-, unliftio-core
-, unordered-containers
+{ mkDerivation, HUnit, QuickCheck, aeson, base, blaze-html
+, bytestring, conduit, containers, exceptions, hspec
+, hspec-expectations, http-api-data, lib, monad-control
+, monad-logger, mtl, path-pieces, persistent, quickcheck-instances
+, random, resourcet, text, time, transformers, transformers-base
+, unliftio, unliftio-core, unordered-containers
 }:
 mkDerivation {
   pname = "persistent-test";
@@ -36,33 +13,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    blaze-html
-    bytestring
-    conduit
-    containers
-    exceptions
-    hspec
-    hspec-expectations
-    http-api-data
-    HUnit
-    monad-control
-    monad-logger
-    mtl
-    path-pieces
-    persistent
-    QuickCheck
-    quickcheck-instances
-    random
-    resourcet
-    text
-    time
-    transformers
-    transformers-base
-    unliftio
-    unliftio-core
-    unordered-containers
+    aeson base blaze-html bytestring conduit containers exceptions
+    hspec hspec-expectations http-api-data HUnit monad-control
+    monad-logger mtl path-pieces persistent QuickCheck
+    quickcheck-instances random resourcet text time transformers
+    transformers-base unliftio unliftio-core unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

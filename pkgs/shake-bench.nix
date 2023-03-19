@@ -1,21 +1,6 @@
-{ mkDerivation
-, Chart
-, Chart-diagrams
-, aeson
-, base
-, bytestring
-, diagrams-contrib
-, diagrams-core
-, diagrams-lib
-, diagrams-svg
-, directory
-, extra
-, filepath
-, lens
-, lens-aeson
-, lib
-, mtl
-, shake
+{ mkDerivation, Chart, Chart-diagrams, aeson, base, bytestring
+, diagrams-contrib, diagrams-core, diagrams-lib, diagrams-svg
+, directory, extra, filepath, lens, lens-aeson, lib, mtl, shake
 , text
 }:
 mkDerivation {
@@ -26,23 +11,9 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    bytestring
-    Chart
-    Chart-diagrams
-    diagrams-contrib
-    diagrams-core
-    diagrams-lib
-    diagrams-svg
-    directory
-    extra
-    filepath
-    lens
-    lens-aeson
-    mtl
-    shake
-    text
+    aeson base bytestring Chart Chart-diagrams diagrams-contrib
+    diagrams-core diagrams-lib diagrams-svg directory extra filepath
+    lens lens-aeson mtl shake text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

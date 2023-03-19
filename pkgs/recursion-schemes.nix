@@ -1,35 +1,19 @@
-{ mkDerivation
-, HUnit
-, base
-, base-orphans
-, comonad
-, containers
-, data-fix
-, free
-, lib
-, template-haskell
-, th-abstraction
+{ mkDerivation, HUnit, base, base-orphans, comonad, containers
+, data-fix, free, lib, template-haskell, th-abstraction
 , transformers
 }:
 mkDerivation {
   pname = "recursion-schemes";
-  version = "5.2.2.2";
-  sha256 = "66c3492a2fb10cea81348d0828c518b96b39f354d9e37d028a3fa279933c1405";
+  version = "5.2.2.4";
+  sha256 = "0c151bc90a9a28bab2beced0e450103e102f754ddfebb8f924fc8a3b11c4db43";
   revision = "1";
-  editedCabalFile = "1l6wbzx8804pb6p8gvk45hal6sz8r1gvyxb8aa9ih6j8pqv4q04c";
+  editedCabalFile = "1sb3pc1z40ss6rmiqifhcawiw1qdxc1mahcbwgfsfvpxlbmzlrrb";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base-orphans
-    comonad
-    containers
-    data-fix
-    free
-    template-haskell
-    th-abstraction
-    transformers
+    base base-orphans comonad containers data-fix free template-haskell
+    th-abstraction transformers
   ];
   testHaskellDepends = [ base HUnit template-haskell transformers ];
   enableLibraryProfiling = true;

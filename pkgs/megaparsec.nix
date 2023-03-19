@@ -1,45 +1,20 @@
-{ mkDerivation
-, base
-, bytestring
-, case-insensitive
-, containers
-, criterion
-, deepseq
-, lib
-, mtl
-, parser-combinators
-, scientific
-, text
-, transformers
-, weigh
+{ mkDerivation, base, bytestring, case-insensitive, containers
+, criterion, deepseq, lib, mtl, parser-combinators, scientific
+, text, transformers, weigh
 }:
 mkDerivation {
   pname = "megaparsec";
-  version = "9.2.2";
-  sha256 = "a48b03e55c0b9efcc88ce4236186fb6eee3acb64336987dd9c98daf4d96aa234";
+  version = "9.3.0";
+  sha256 = "19fcb0846f0e609a242790cae828247e8b70b8739ef24c11f92d52c8862e6005";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    case-insensitive
-    containers
-    deepseq
-    mtl
-    parser-combinators
-    scientific
-    text
-    transformers
+    base bytestring case-insensitive containers deepseq mtl
+    parser-combinators scientific text transformers
   ];
   benchmarkHaskellDepends = [
-    base
-    bytestring
-    containers
-    criterion
-    deepseq
-    text
-    weigh
+    base bytestring containers criterion deepseq text weigh
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

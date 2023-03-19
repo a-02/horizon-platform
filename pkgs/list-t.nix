@@ -1,34 +1,15 @@
-{ mkDerivation
-, HTF
-, base
-, base-prelude
-, foldl
-, lib
-, logict
-, mmorph
-, monad-control
-, mtl
-, mtl-prelude
-, semigroups
-, transformers
-, transformers-base
+{ mkDerivation, HTF, base, base-prelude, foldl, lib, logict, mmorph
+, monad-control, mtl, mtl-prelude, transformers, transformers-base
 }:
 mkDerivation {
   pname = "list-t";
-  version = "1.0.5.3";
-  sha256 = "adf3d36457d4c505bd7c9d5f81760145102d10d66503240fe24c3882947b6e48";
+  version = "1.0.5.6";
+  sha256 = "4f13658a166fc5b07ef57145ef266e3fb2426ed3c96bff89e556e12de7608bc6";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    foldl
-    logict
-    mmorph
-    monad-control
-    mtl
-    semigroups
-    transformers
+    base foldl logict mmorph monad-control mtl transformers
     transformers-base
   ];
   testHaskellDepends = [ base-prelude HTF mmorph mtl-prelude ];

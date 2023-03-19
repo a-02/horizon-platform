@@ -1,51 +1,23 @@
-{ mkDerivation
-, aeson
-, base
-, base-orphans
-, bytestring
-, containers
-, deepseq
-, directory
-, filepath
-, lib
-, parsec
-, tasty
-, tasty-hunit
-, text
-, transformers
-, unordered-containers
-, vector
+{ mkDerivation, aeson, base, base-orphans, bytestring, containers
+, deepseq, directory, filepath, lib, parsec, tasty, tasty-hunit
+, text, transformers, unordered-containers, vector
 }:
 mkDerivation {
   pname = "microstache";
-  version = "1.0.2.2";
-  sha256 = "f0a1dbef45a137e1af0e29ea4b9585788217cc1c6f1db7d68a4f659916dd36ac";
+  version = "1.0.2.3";
+  sha256 = "df7a13175783603bfb095e7a5eda9a24eec7d5fd490946d107ad578bb436d29a";
+  revision = "1";
+  editedCabalFile = "04chnz0dcf30a5x90kwqdiad1qbyimmiqgbm38b6m3w72k408hfi";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    containers
-    deepseq
-    directory
-    filepath
-    parsec
-    text
-    transformers
-    unordered-containers
-    vector
+    aeson base containers deepseq directory filepath parsec text
+    transformers unordered-containers vector
   ];
   testHaskellDepends = [
-    aeson
-    base
-    base-orphans
-    bytestring
-    containers
-    parsec
-    tasty
-    tasty-hunit
-    text
+    aeson base base-orphans bytestring containers parsec tasty
+    tasty-hunit text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

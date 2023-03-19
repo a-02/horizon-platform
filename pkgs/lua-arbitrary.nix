@@ -1,8 +1,8 @@
 { mkDerivation, QuickCheck, base, lib, lua }:
 mkDerivation {
   pname = "lua-arbitrary";
-  version = "1.0.1";
-  sha256 = "aadeb5fbcd7de95a64374a959ffc6b341db171fd3db570d1cc0cfae3f7bce205";
+  version = "1.0.1.1";
+  sha256 = "d5f6143d9c99d44453fff535b912ad0d7ce8cb5500b1d9dc47947952e2637b4d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

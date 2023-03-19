@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, containers
-, lib
-, syb
-, template-haskell
+{ mkDerivation, base, containers, lib, syb, template-haskell
 , th-abstraction
 }:
 mkDerivation {
@@ -14,11 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    syb
-    template-haskell
-    th-abstraction
+    base containers syb template-haskell th-abstraction
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

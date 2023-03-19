@@ -1,15 +1,5 @@
-{ mkDerivation
-, base
-, containers
-, ghc-boot-th
-, lib
-, mtl
-, singletons
-, syb
-, template-haskell
-, th-desugar
-, th-orphans
-, transformers
+{ mkDerivation, base, containers, ghc-boot-th, lib, mtl, singletons
+, syb, template-haskell, th-desugar, th-orphans, transformers
 }:
 mkDerivation {
   pname = "singletons-th";
@@ -19,16 +9,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    ghc-boot-th
-    mtl
-    singletons
-    syb
-    template-haskell
-    th-desugar
-    th-orphans
-    transformers
+    base containers ghc-boot-th mtl singletons syb template-haskell
+    th-desugar th-orphans transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

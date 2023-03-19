@@ -1,12 +1,5 @@
-{ mkDerivation
-, HUnit
-, base
-, bytestring
-, http-types
-, lib
-, tasty
-, wai
-, wai-extra
+{ mkDerivation, HUnit, base, bytestring, http-types, lib, tasty
+, wai, wai-extra
 }:
 mkDerivation {
   pname = "tasty-wai";
@@ -16,13 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    http-types
-    HUnit
-    tasty
-    wai
-    wai-extra
+    base bytestring http-types HUnit tasty wai wai-extra
   ];
   testHaskellDepends = [ base http-types tasty wai ];
   enableLibraryProfiling = true;

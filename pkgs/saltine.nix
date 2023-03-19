@@ -1,49 +1,24 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, criterion
-, deepseq
-, hashable
-, lib
-, libsodium
-, profunctors
-, semigroups
-, test-framework
-, test-framework-quickcheck2
-, text
+{ mkDerivation, QuickCheck, base, bytestring, criterion, deepseq
+, hashable, lib, libsodium, profunctors, semigroups, test-framework
+, test-framework-quickcheck2, text
 }:
 mkDerivation {
   pname = "saltine";
-  version = "0.2.0.1";
-  sha256 = "ce6867a08a308bc5155cb4c5a146837cf6c5e056dd0d0151f9f0838b2eed2ea0";
+  version = "0.2.1.0";
+  sha256 = "aa8b3d7af6ccf7930e403388782413111b6246206ad772dd982d83551f963cd9";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    deepseq
-    hashable
-    profunctors
-    text
+    base bytestring deepseq hashable profunctors text
   ];
   libraryPkgconfigDepends = [ libsodium ];
   testHaskellDepends = [
-    base
-    bytestring
-    QuickCheck
-    semigroups
-    test-framework
-    test-framework-quickcheck2
-    text
+    base bytestring QuickCheck semigroups test-framework
+    test-framework-quickcheck2 text
   ];
   benchmarkHaskellDepends = [
-    base
-    bytestring
-    criterion
-    deepseq
-    text
+    base bytestring criterion deepseq text
   ];
   benchmarkSystemDepends = [ libsodium ];
   enableLibraryProfiling = true;

@@ -1,23 +1,17 @@
-{ mkDerivation
-, base
-, directory
-, filepath
-, hspec
-, hspec-core
-, lib
-, optparse-applicative
-, silently
+{ mkDerivation, base, directory, filepath, hspec, hspec-core
+, hspec-discover, lib, optparse-applicative, silently
 }:
 mkDerivation {
   pname = "hspec-golden";
-  version = "0.2.0.0";
-  sha256 = "d322dd7d625dd3f1c5fd30e7965be127744bfa0f6b337983352f44d1c771e969";
+  version = "0.2.0.1";
+  sha256 = "bc64db188b166235d92a3d42efc6c29a41535fda41830cbb03b7e5b9d75d8725";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base directory filepath hspec-core ];
   executableHaskellDepends = [ base directory optparse-applicative ];
   testHaskellDepends = [ base directory hspec hspec-core silently ];
+  testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;

@@ -1,91 +1,26 @@
-{ mkDerivation
-, Cabal
-, Glob
-, HUnit
-, QuickCheck
-, base
-, base-compat
-, code-page
-, containers
-, deepseq
-, directory
-, exceptions
-, extra
-, filepath
-, ghc
-, ghc-paths
-, hspec
-, hspec-core
-, hspec-discover
-, lib
-, mockery
-, pretty
-, process
-, random
-, setenv
-, silently
-, stringbuilder
-, syb
-, template-haskell
-, transformers
-, unordered-containers
+{ mkDerivation, Cabal, Glob, HUnit, QuickCheck, base, base-compat
+, code-page, containers, deepseq, directory, exceptions, filepath
+, ghc, ghc-paths, hspec, hspec-core, lib, mockery, process, random
+, setenv, silently, stringbuilder, syb, template-haskell
+, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "doctest-parallel";
-  version = "0.2.5";
-  sha256 = "ec63fdcb9b26084a52d8603d39745abfcfa621b6c99be66803d8bd4ba927be1c";
-  revision = "1";
-  editedCabalFile = "1q81qjz9af9a57xyxz6kci28shl4r9y3lrl3rckknhqwcy1ahqz4";
+  version = "0.3.0.1";
+  sha256 = "21a8c51254b9f95420925812b17b759cadff2c05e1580abb7b885028fa745f9d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base-compat
-    Cabal
-    code-page
-    containers
-    deepseq
-    directory
-    exceptions
-    extra
-    filepath
-    ghc
-    ghc-paths
-    Glob
-    pretty
-    process
-    random
-    syb
-    template-haskell
-    transformers
-    unordered-containers
+    base base-compat Cabal code-page containers deepseq directory
+    exceptions filepath ghc ghc-paths Glob process random syb
+    template-haskell transformers unordered-containers
   ];
   testHaskellDepends = [
-    base
-    base-compat
-    code-page
-    containers
-    deepseq
-    directory
-    exceptions
-    filepath
-    ghc
-    ghc-paths
-    hspec
-    hspec-core
-    hspec-discover
-    HUnit
-    mockery
-    process
-    QuickCheck
-    setenv
-    silently
-    stringbuilder
-    syb
-    transformers
+    base base-compat code-page containers deepseq directory exceptions
+    filepath ghc ghc-paths hspec hspec-core HUnit mockery process
+    QuickCheck setenv silently stringbuilder syb transformers
   ];
-  testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;

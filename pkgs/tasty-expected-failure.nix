@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, hedgehog
-, lib
-, tagged
-, tasty
-, tasty-golden
-, tasty-hedgehog
-, tasty-hunit
-, unbounded-delays
+{ mkDerivation, base, hedgehog, lib, tagged, tasty, tasty-golden
+, tasty-hedgehog, tasty-hunit, unbounded-delays
 }:
 mkDerivation {
   pname = "tasty-expected-failure";
@@ -18,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base tagged tasty unbounded-delays ];
   testHaskellDepends = [
-    base
-    hedgehog
-    tasty
-    tasty-golden
-    tasty-hedgehog
-    tasty-hunit
+    base hedgehog tasty tasty-golden tasty-hedgehog tasty-hunit
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

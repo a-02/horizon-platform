@@ -1,10 +1,8 @@
 { mkDerivation, base, deepseq, lib }:
 mkDerivation {
   pname = "some";
-  version = "1.0.4";
-  sha256 = "446f9586d1cc9b7507f08ef7b178a7cff971bcf258d9658deacb7b65f18e3874";
-  revision = "1";
-  editedCabalFile = "0hwq21d0y2iwcrkdhqkq76fna90dsdzrkk6ryh9hbg71lf768ih9";
+  version = "1.0.5";
+  sha256 = "b0de79de39b5e02bbef673ed8af2a81cb9184a7fe5eb978e4bb0d906fddc915f";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

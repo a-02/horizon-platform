@@ -1,14 +1,5 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, base-orphans
-, call-stack
-, hspec
-, hspec-core
-, hspec-discover
-, lib
-, smallcheck
+{ mkDerivation, HUnit, QuickCheck, base, base-orphans, call-stack
+, hspec, hspec-core, hspec-discover, lib, smallcheck
 }:
 mkDerivation {
   pname = "hspec-smallcheck";
@@ -18,20 +9,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    call-stack
-    hspec-core
-    HUnit
-    smallcheck
+    base call-stack hspec-core HUnit smallcheck
   ];
   testHaskellDepends = [
-    base
-    base-orphans
-    call-stack
-    hspec
-    hspec-core
-    HUnit
-    QuickCheck
+    base base-orphans call-stack hspec hspec-core HUnit QuickCheck
     smallcheck
   ];
   testToolDepends = [ hspec-discover ];

@@ -1,71 +1,27 @@
-{ mkDerivation
-, async
-, base
-, bytestring
-, containers
-, deepseq
-, directory
-, doctest
-, filepath
-, lib
-, markdown-unlit
-, mtl
-, process
-, split
-, stringsearch
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, template-haskell
-, temporary
-, unix
+{ mkDerivation, Cabal, PyF, async, base, bytestring, cabal-doctest
+, containers, deepseq, directory, doctest, filepath, lib
+, markdown-unlit, mtl, process, split, stringsearch, tasty
+, tasty-hunit, tasty-quickcheck, template-haskell, temporary, unix
 , utf8-string
 }:
 mkDerivation {
   pname = "shh";
-  version = "0.7.2.0";
-  sha256 = "9e04100e43696cd6457c7d9e93eae313e5a9176c36b6108f7d70f3d6efdc9265";
-  revision = "1";
-  editedCabalFile = "054bjhpkni3nr6zsilj77gdgb2yw5s1gzm257zz4kigpjjjndr0a";
+  version = "0.7.2.1";
+  sha256 = "dbdaa98e8f5714e4d7bc6234d2e9371c3b613219febd529f323ccd560fc086dc";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
+  setupHaskellDepends = [ base Cabal cabal-doctest ];
   libraryHaskellDepends = [
-    async
-    base
-    bytestring
-    containers
-    deepseq
-    directory
-    filepath
-    mtl
-    process
-    split
-    stringsearch
-    template-haskell
-    unix
-    utf8-string
+    async base bytestring containers deepseq directory filepath mtl
+    process split stringsearch template-haskell unix utf8-string
   ];
   executableHaskellDepends = [
-    async
-    base
-    bytestring
-    deepseq
-    directory
-    temporary
-    unix
+    async base bytestring deepseq directory temporary unix
   ];
   testHaskellDepends = [
-    async
-    base
-    bytestring
-    directory
-    doctest
-    filepath
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    utf8-string
+    async base bytestring directory doctest filepath PyF tasty
+    tasty-hunit tasty-quickcheck utf8-string
   ];
   testToolDepends = [ markdown-unlit ];
   enableLibraryProfiling = true;

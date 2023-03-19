@@ -1,48 +1,24 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, bytestring
-, containers
-, deepseq
-, ghc-bignum
-, ghc-prim
-, lib
-, random
-, test-framework
-, test-framework-hunit
-, test-framework-quickcheck2
-, text
-, unix
+{ mkDerivation, HUnit, QuickCheck, base, bytestring, containers
+, deepseq, filepath, ghc-bignum, ghc-prim, lib, random
+, test-framework, test-framework-hunit, test-framework-quickcheck2
+, text, unix
 }:
 mkDerivation {
   pname = "hashable";
-  version = "1.4.1.0";
-  sha256 = "e1b305c280e66ad827edeaedd6933b9fc4174f626882877eab2a08344e665e87";
+  version = "1.4.2.0";
+  sha256 = "1b4000ea82b81f69d46d0af4152c10c6303873510738e24cfc4767760d30e3f8";
+  revision = "1";
+  editedCabalFile = "12nmnmm2kyjalkvmz0l1l895ikc938lwppx8iykxnhamblrr4msq";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    deepseq
-    ghc-bignum
-    ghc-prim
+    base bytestring containers deepseq filepath ghc-bignum ghc-prim
     text
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    ghc-prim
-    HUnit
-    QuickCheck
-    random
-    test-framework
-    test-framework-hunit
-    test-framework-quickcheck2
-    text
-    unix
+    base bytestring ghc-prim HUnit QuickCheck random test-framework
+    test-framework-hunit test-framework-quickcheck2 text unix
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

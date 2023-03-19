@@ -1,28 +1,15 @@
-{ mkDerivation
-, base
-, containers
-, lib
-, microlens
-, tagged
-, template-haskell
-, th-abstraction
-, transformers
+{ mkDerivation, base, containers, lib, microlens, tagged
+, template-haskell, th-abstraction, transformers
 }:
 mkDerivation {
   pname = "microlens-th";
-  version = "0.4.3.10";
-  sha256 = "2c50100235949c00defcdb8c01d8eb5e2e45e524a9b552d3c0c8bb8224ece2b5";
-  revision = "1";
-  editedCabalFile = "142wksvc854qmd665qd6mwzik8g02yzfpjk1fpxw4mlcns06y4m2";
+  version = "0.4.3.11";
+  sha256 = "f21aaadea14a90fef53fa661eb375ac492c88c3bf023592fdd13e4ee285352ee";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    microlens
-    template-haskell
-    th-abstraction
+    base containers microlens template-haskell th-abstraction
     transformers
   ];
   testHaskellDepends = [ base microlens tagged ];

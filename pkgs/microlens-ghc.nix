@@ -1,26 +1,15 @@
-{ mkDerivation
-, array
-, base
-, bytestring
-, containers
-, lib
-, microlens
+{ mkDerivation, array, base, bytestring, containers, lib, microlens
 , transformers
 }:
 mkDerivation {
   pname = "microlens-ghc";
-  version = "0.4.14.0";
-  sha256 = "618fc86da128ac23e27d384e8d889486c13b9922884a6633a03199369f1592c7";
+  version = "0.4.14.1";
+  sha256 = "56709b10a1b3feba4fc107d7302a51020d90f893b8aac913f8b85750f663dcc0";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    bytestring
-    containers
-    microlens
-    transformers
+    array base bytestring containers microlens transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,8 +1,8 @@
 { mkDerivation, Glob, base, doctest, lib }:
 mkDerivation {
   pname = "co-log-core";
-  version = "0.3.1.0";
-  sha256 = "29720bee51dd0c89f35e27b89985a469a0436dc58750f4825874572e2a6317ec";
+  version = "0.3.2.0";
+  sha256 = "3495edd3a0c4a1bf4b9dbc30df0a23bdb14848f57a8b71cfa81511ab38c11ee5";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

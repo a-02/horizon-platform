@@ -1,10 +1,8 @@
 { mkDerivation, base, lib, mtl, parsec, tasty, tasty-hunit, text }:
 mkDerivation {
   pname = "jira-wiki-markup";
-  version = "1.4.0";
-  sha256 = "1c210d3c575779a7b5b974e6873b265117944746862b5bb40684903a8decca5c";
-  revision = "1";
-  editedCabalFile = "043x87s8lyg0ck2krwdn1ncr0sxc7p03jmgykwyvg8c7i56n3m7n";
+  version = "1.5.1";
+  sha256 = "9ca23d369c3ccf1b3ffb209dda8e6288a5f5901fb8235113825fa48d3ae8e520";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

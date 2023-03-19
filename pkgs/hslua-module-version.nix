@@ -1,40 +1,19 @@
-{ mkDerivation
-, base
-, filepath
-, hslua-core
-, hslua-marshalling
-, hslua-packaging
-, lib
-, tasty
-, tasty-hunit
-, tasty-lua
-, text
+{ mkDerivation, base, filepath, hslua-core, hslua-marshalling
+, hslua-packaging, lib, tasty, tasty-hunit, tasty-lua, text
 }:
 mkDerivation {
   pname = "hslua-module-version";
-  version = "1.0.3";
-  sha256 = "c519b28f5dabf8f0137a3dbb589847bf6a73ad2ea210cc14045feda7d6a244ec";
+  version = "1.1.0";
+  sha256 = "a46bbca58b8ddaba17871ca9787f8ceeaa9f5ae9580cdc41b7b902b33c0f65d8";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    filepath
-    hslua-core
-    hslua-marshalling
-    hslua-packaging
-    text
+    base filepath hslua-core hslua-marshalling hslua-packaging text
   ];
   testHaskellDepends = [
-    base
-    filepath
-    hslua-core
-    hslua-marshalling
-    hslua-packaging
-    tasty
-    tasty-hunit
-    tasty-lua
-    text
+    base filepath hslua-core hslua-marshalling hslua-packaging tasty
+    tasty-hunit tasty-lua text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

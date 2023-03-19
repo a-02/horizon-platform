@@ -1,18 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, base-compat
-, bytestring
-, case-insensitive
-, hspec
-, hspec-core
-, hspec-expectations
-, http-types
-, lib
-, text
-, transformers
-, wai
-, wai-extra
+{ mkDerivation, QuickCheck, base, base-compat, bytestring
+, case-insensitive, hspec, hspec-core, hspec-expectations
+, http-types, lib, text, transformers, wai, wai-extra
 }:
 mkDerivation {
   pname = "hspec-wai";
@@ -22,32 +10,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base-compat
-    bytestring
-    case-insensitive
-    hspec-core
-    hspec-expectations
-    http-types
-    QuickCheck
-    text
-    transformers
-    wai
+    base base-compat bytestring case-insensitive hspec-core
+    hspec-expectations http-types QuickCheck text transformers wai
     wai-extra
   ];
   testHaskellDepends = [
-    base
-    base-compat
-    bytestring
-    case-insensitive
-    hspec
-    hspec-core
-    hspec-expectations
-    http-types
-    QuickCheck
-    text
-    transformers
-    wai
+    base base-compat bytestring case-insensitive hspec hspec-core
+    hspec-expectations http-types QuickCheck text transformers wai
     wai-extra
   ];
   enableLibraryProfiling = true;

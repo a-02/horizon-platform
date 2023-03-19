@@ -1,41 +1,20 @@
-{ mkDerivation
-, base
-, deepseq
-, integer-gmp
-, lib
-, primitive
-, quickcheck-classes
-, quickcheck-classes-base
-, semirings
-, tasty
-, tasty-bench
-, tasty-quickcheck
-, vector
+{ mkDerivation, base, containers, deepseq, ghc-bignum, lib
+, primitive, quickcheck-classes, quickcheck-classes-base, semirings
+, tasty, tasty-bench, tasty-quickcheck, vector
 }:
 mkDerivation {
   pname = "mod";
-  version = "0.1.2.2";
-  sha256 = "db98ad817c45e89984428cae6b5f88074220955035520cafe552ce2146f32255";
+  version = "0.2.0.1";
+  sha256 = "2a63f8e4e88545093cd57df02911906554e77704df3ee5c7a12044e48630e872";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    deepseq
-    integer-gmp
-    primitive
-    semirings
-    vector
+    base deepseq ghc-bignum primitive semirings vector
   ];
   testHaskellDepends = [
-    base
-    primitive
-    quickcheck-classes
-    quickcheck-classes-base
-    semirings
-    tasty
-    tasty-quickcheck
-    vector
+    base containers primitive quickcheck-classes
+    quickcheck-classes-base semirings tasty tasty-quickcheck vector
   ];
   benchmarkHaskellDepends = [ base tasty-bench ];
   enableLibraryProfiling = true;
