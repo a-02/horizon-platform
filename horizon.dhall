@@ -557,7 +557,7 @@ let packages =
             (Some "horizon-spec-lens/")
       , horizon-spec-pretty =
           H.callTarball
-            "https://gitlab.horizon-haskell.net/haskell/horizon-spec-pretty/-/archive/0.1.0/horizon-spec-pretty-0.1.0.tar.gz"
+            "https://gitlab.horizon-haskell.net/haskell/horizon-spec-pretty/-/archive/0.1.1/horizon-spec-pretty-0.1.1.tar.gz"
             (Some "horizon-spec-pretty/")
       , hosc = H.callHackage "hosc" "0.19.1"
       , hostname = H.callHackage "hostname" "1.0"
