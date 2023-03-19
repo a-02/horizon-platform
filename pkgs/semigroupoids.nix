@@ -1,20 +1,21 @@
 { mkDerivation, base, base-orphans, bifunctors, comonad, containers
-, contravariant, distributive, foldable1-classes-compat, hashable
-, lib, tagged, template-haskell, transformers, transformers-compat
+, contravariant, distributive, hashable, lib, tagged
+, template-haskell, transformers, transformers-compat
 , unordered-containers
 }:
 mkDerivation {
   pname = "semigroupoids";
-  version = "6.0.0.1";
-  sha256 = "7da38a9891bdf8205fd6522cdb712956b8c0bf5c52983da60295c8e057d77934";
+  version = "5.3.7";
+  sha256 = "6d45cdb6c58c75ca588859b80b2c92b6f48590a03e065c24ce5d767a6a963799";
+  revision = "1";
+  editedCabalFile = "063xzbp4p93kbaygn26rzs4wmwf01mcj7d4qfsiwf39gd0wkf2dc";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base base-orphans bifunctors comonad containers contravariant
-    distributive foldable1-classes-compat hashable tagged
-    template-haskell transformers transformers-compat
-    unordered-containers
+    distributive hashable tagged template-haskell transformers
+    transformers-compat unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
