@@ -636,7 +636,6 @@ let packages =
       , infer-license = H.callHackage "infer-license" "0.2.0"
       , ini = H.callHackage "ini" "0.4.2"
       , inline-c = H.callHackage "inline-c" "0.9.1.6"
-      , inline-r = H.callHackage "inline-r" "1.0.0"
       , insert-ordered-containers =
           H.callHackage "insert-ordered-containers" "0.2.5.1"
       , inspection-testing = H.callHackage "inspection-testing" "0.5.0.1"
@@ -777,11 +776,6 @@ let packages =
       , mono-traversable = H.callHackage "mono-traversable" "1.0.15.3"
       , monoid-extras = H.callHackage "monoid-extras" "0.6.2"
       , monoid-subclasses = H.callHackage "monoid-subclasses" "1.2.2"
-      , monoidal-containers =
-          H.callGit
-            "https://github.com/locallycompact/monoidal-containers"
-            "977140aed7f850ca4e73090475b0f7ff02a7a92e"
-            (None H.Subdir)
       , mtl-compat = H.callHackage "mtl-compat" "0.2.2"
       , mtl-prelude = H.callHackage "mtl-prelude" "2.0.3.1"
       , multiset = H.callHackage "multiset" "0.3.4.3"
@@ -927,7 +921,6 @@ let packages =
       , quickcheck-classes = H.callHackage "quickcheck-classes" "0.6.5.0"
       , quickcheck-classes-base =
           H.callHackage "quickcheck-classes-base" "0.6.2.0"
-      , quickcheck-dynamic = H.callHackage "quickcheck-dynamic" "3.0.2"
       , quickcheck-instances = H.callHackage "quickcheck-instances" "0.3.29.1"
       , quickcheck-io = H.callHackage "quickcheck-io" "0.2.0"
       , quickcheck-text = H.callHackage "quickcheck-text" "0.1.2.1"
@@ -1027,7 +1020,6 @@ let packages =
       , servant-multipart = H.callHackage "servant-multipart" "0.12.1"
       , servant-multipart-api = H.callHackage "servant-multipart-api" "0.12.1"
       , servant-openapi3 = H.callHackage "servant-openapi3" "2.0.1.6"
-      , servant-polysemy = H.callHackage "servant-polysemy" "0.1.4"
       , servant-server =
           H.callGit
             "https://github.com/TeofilC/servant"
@@ -1053,7 +1045,7 @@ let packages =
       , simple-sendfile = H.callHackage "simple-sendfile" "0.2.30"
       , singleton-bool = H.callHackage "singleton-bool" "0.1.6"
       , singletons = H.callHackage "singletons" "3.0.2"
-      , singletons-th = H.callHackage "singletons-th" "3.2"
+      , singletons-th = H.callHackage "singletons-th" "3.1.1"
       , size-based = H.callHackage "size-based" "0.1.3.1"
       , skylighting = H.callHackage "skylighting" "0.13.2.1"
       , skylighting-core = H.callHackage "skylighting-core" "0.13.2.1"
@@ -1202,7 +1194,7 @@ let packages =
       , transformers-base = H.callHackage "transformers-base" "0.4.6"
       , transformers-compat = H.callHackage "transformers-compat" "0.7.2"
       , transformers-except = H.callHackage "transformers-except" "0.1.3"
-      , tree-diff = H.callHackage "tree-diff" "0.3"
+      , tree-diff = H.callHackage "tree-diff" "0.2.2"
       , trifecta = H.callHackage "trifecta" "2.1.2"
       , tuple = H.callHackage "tuple" "0.3.0.2"
       , turtle = H.callHackage "turtle" "1.6.1"

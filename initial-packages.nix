@@ -1003,8 +1003,6 @@ self: with pkgs.haskell.lib; {
 
   inline-c = self.callPackage (./pkgs/inline-c.nix) { };
 
-  inline-r = self.callPackage (./pkgs/inline-r.nix) { };
-
   insert-ordered-containers = self.callPackage (./pkgs/insert-ordered-containers.nix) { };
 
   inspection-testing = self.callPackage (./pkgs/inspection-testing.nix) { };
@@ -1230,8 +1228,6 @@ self: with pkgs.haskell.lib; {
   monoid-extras = self.callPackage (./pkgs/monoid-extras.nix) { };
 
   monoid-subclasses = self.callPackage (./pkgs/monoid-subclasses.nix) { };
-
-  monoidal-containers = self.callPackage (./pkgs/monoidal-containers.nix) { };
 
   mtl-compat = self.callPackage (./pkgs/mtl-compat.nix) { };
 
@@ -1489,8 +1485,6 @@ self: with pkgs.haskell.lib; {
 
   quickcheck-classes-base = self.callPackage (./pkgs/quickcheck-classes-base.nix) { };
 
-  quickcheck-dynamic = self.callPackage (./pkgs/quickcheck-dynamic.nix) { };
-
   quickcheck-instances = self.callPackage (./pkgs/quickcheck-instances.nix) { };
 
   quickcheck-io = self.callPackage (./pkgs/quickcheck-io.nix) { };
@@ -1644,8 +1638,6 @@ self: with pkgs.haskell.lib; {
   servant-multipart-api = self.callPackage (./pkgs/servant-multipart-api.nix) { };
 
   servant-openapi3 = self.callPackage (./pkgs/servant-openapi3.nix) { };
-
-  servant-polysemy = self.callPackage (./pkgs/servant-polysemy.nix) { };
 
   servant-server = self.callPackage (./pkgs/servant-server.nix) { };
 

@@ -7,8 +7,8 @@
 }:
 mkDerivation {
   pname = "tree-diff";
-  version = "0.3";
-  sha256 = "a1c05636cedf521bc2e2898f0668fc7264f3396f5484be6ec6a8b9b2e5c11c8b";
+  version = "0.2.2";
+  sha256 = "008390239dd942095b487b4a59e54faf18d51db5a4462177f301b763c0d5743c";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -21,7 +21,6 @@ mkDerivation {
   testHaskellDepends = [
     ansi-terminal ansi-wl-pprint base base-compat parsec primitive
     QuickCheck tagged tasty tasty-golden tasty-quickcheck trifecta
-    unordered-containers
   ];
   benchmarkHaskellDepends = [ base criterion deepseq Diff ];
   enableLibraryProfiling = true;
