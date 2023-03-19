@@ -899,7 +899,7 @@ let packages =
       , prettyprinter-ansi-terminal =
           H.callHackage "prettyprinter-ansi-terminal" "1.1.3"
       , primes = H.callHackage "primes" "0.2.1.0"
-      , primitive = H.callHackage "primitive" "0.8.0.0"
+      , primitive = H.callHackage "primitive" "0.7.4.0"
       , primitive-addr = H.callHackage "primitive-addr" "0.1.0.2"
       , primitive-extras = H.callHackage "primitive-extras" "0.10.1.6"
       , primitive-offset = H.callHackage "primitive-offset" "0.2.0.0"
