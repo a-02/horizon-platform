@@ -1222,11 +1222,7 @@ let packages =
       , universe-reverse-instances =
           H.callHackage "universe-reverse-instances" "1.1.1"
       , unix-bytestring = H.callHackage "unix-bytestring" "0.3.7.8"
-      , unix-compat =
-          H.callGit
-            "https://github.com/mitchellwrosen/fork--unix-compat"
-            "f28060acd449643d267954647c1bb7c748c35fa9"
-            (None H.Subdir)
+      , unix-compat = H.callHackage "unix-compat" "0.7"
       , unix-memory = H.callHackage "unix-memory" "0.1.2"
       , unix-time = H.callHackage "unix-time" "0.4.9"
       , unliftio = H.callHackage "unliftio" "0.2.24.0"
