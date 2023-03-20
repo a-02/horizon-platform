@@ -987,8 +987,8 @@ let packages =
       , serialise = H.callHackage "serialise" "0.2.6.0"
       , servant =
           H.callGit
-            "https://github.com/TeofilC/servant"
-            "76fc90a51f915230bbe1e0d1dbe9727fcdc7a0fc"
+            "https://github.com/haskell-servant/servant"
+            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
             (Some "servant/")
       , servant-auth = H.callHackage "servant-auth" "0.4.1.0"
       , servant-auth-client = H.callHackage "servant-auth-client" "0.4.1.0"
@@ -996,13 +996,13 @@ let packages =
       , servant-blaze = H.callHackage "servant-blaze" "0.9.1"
       , servant-client =
           H.callGit
-            "https://github.com/TeofilC/servant"
-            "76fc90a51f915230bbe1e0d1dbe9727fcdc7a0fc"
+            "https://github.com/haskell-servant/servant"
+            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
             (Some "servant-client/")
       , servant-client-core =
           H.callGit
-            "https://github.com/TeofilC/servant"
-            "76fc90a51f915230bbe1e0d1dbe9727fcdc7a0fc"
+            "https://github.com/haskell-servant/servant"
+            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
             (Some "servant-client-core/")
       , servant-docs = H.callHackage "servant-docs" "0.12"
       , servant-effectful =
@@ -1012,8 +1012,8 @@ let packages =
             (None H.Subdir)
       , servant-foreign =
           H.callGit
-            "https://github.com/TeofilC/servant"
-            "76fc90a51f915230bbe1e0d1dbe9727fcdc7a0fc"
+            "https://github.com/haskell-servant/servant"
+            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
             (Some "servant-foreign/")
       , servant-lucid = H.callHackage "servant-lucid" "0.9.0.6"
       , servant-multipart = H.callHackage "servant-multipart" "0.12.1"
@@ -1021,8 +1021,8 @@ let packages =
       , servant-openapi3 = H.callHackage "servant-openapi3" "2.0.1.6"
       , servant-server =
           H.callGit
-            "https://github.com/TeofilC/servant"
-            "76fc90a51f915230bbe1e0d1dbe9727fcdc7a0fc"
+            "https://github.com/haskell-servant/servant"
+            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
             (Some "servant-server/")
       , servant-static-th = H.callHackage "servant-static-th" "1.0.0.0"
       , servant-swagger = H.callHackage "servant-swagger" "1.1.11"

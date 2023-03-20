@@ -10,9 +10,9 @@ mkDerivation {
   pname = "servant-client";
   version = "0.19";
   src = fetchgit {
-    url = "https://github.com/TeofilC/servant";
-    sha256 = "0f6vkm44p93ln63plk4vfavadcgxjiqr8xncxrjqzp2mcql6qdmh";
-    rev = "76fc90a51f915230bbe1e0d1dbe9727fcdc7a0fc";
+    url = "https://github.com/haskell-servant/servant";
+    sha256 = "0ay4q9jy3xkn5j1k91snfdndi6j91hlri9h79m429j0d8v5vnj7i";
+    rev = "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/servant-client/; echo source root reset to $sourceRoot";
