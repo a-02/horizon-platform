@@ -1079,7 +1079,11 @@ let packages =
       , storable-tuple = H.callHackage "storable-tuple" "0.1"
       , store = H.callHackage "store" "0.7.16"
       , store-core = H.callHackage "store-core" "0.4.4.4"
-      , streaming = H.callHackage "streaming" "0.2.3.1"
+      , streaming =
+          H.callGit
+            "https://github.com/haskell-streaming/streaming"
+            "b6ec199103c078a07b3dcd197ab39020b2136426"
+            (None H.Subdir)
       , streaming-binary = H.callHackage "streaming-binary" "0.3.0.1"
       , streaming-bytestring = H.callHackage "streaming-bytestring" "0.2.4"
       , streaming-commons = H.callHackage "streaming-commons" "0.2.2.5"

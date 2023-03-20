@@ -1,30 +1,20 @@
-{ mkDerivation
-, QuickCheck
-, base
-, containers
-, ghc-prim
-, hspec
-, lib
-, mmorph
-, mtl
-, transformers
-, transformers-base
+{ mkDerivation, QuickCheck, base, containers, fetchgit, ghc-prim
+, hspec, lib, mmorph, mtl, transformers, transformers-base
 }:
 mkDerivation {
   pname = "streaming";
   version = "0.2.3.1";
-  sha256 = "fc5efae393750b9729ce5c5e979edcd3b9a5bf41ab927636174b01f999ffea88";
+  src = fetchgit {
+    url = "https://github.com/haskell-streaming/streaming";
+    sha256 = "193qwgzpd6ryzi3sl3x6bc5kk47whqhw0mfr0jqfdwrspj50ccdd";
+    rev = "b6ec199103c078a07b3dcd197ab39020b2136426";
+    fetchSubmodules = true;
+  };
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    ghc-prim
-    mmorph
-    mtl
-    transformers
-    transformers-base
+    base containers ghc-prim mmorph mtl transformers transformers-base
   ];
   testHaskellDepends = [ base hspec QuickCheck ];
   enableLibraryProfiling = true;
