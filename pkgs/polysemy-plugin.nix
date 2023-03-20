@@ -1,55 +1,22 @@
-{ mkDerivation
-, Cabal
-, base
-, cabal-doctest
-, containers
-, doctest
-, fetchgit
-, ghc
-, ghc-tcplugins-extra
-, hspec
-, hspec-discover
-, inspection-testing
-, lib
-, polysemy
-, should-not-typecheck
-, syb
+{ mkDerivation, Cabal, base, cabal-doctest, containers, doctest
+, ghc, ghc-tcplugins-extra, hspec, hspec-discover
+, inspection-testing, lib, polysemy, should-not-typecheck, syb
 , transformers
 }:
 mkDerivation {
   pname = "polysemy-plugin";
-  version = "0.4.3.1";
-  src = fetchgit {
-    url = "https://github.com/locallycompact/polysemy";
-    sha256 = "1sy2jmwcg9aw4a6rji36djhkxhxnh50pqhaa3jhjfv2dsw652bcz";
-    rev = "bd944ca000c1ca69602d4723e3859af431b9d0c4";
-    fetchSubmodules = true;
-  };
-  postUnpack = "sourceRoot+=/polysemy-plugin/; echo source root reset to $sourceRoot";
+  version = "0.4.4.0";
+  sha256 = "6d4826df1d7507f0d7723b3c30e843eb7f5fd618095d412f99b41e002a69e7ce";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   setupHaskellDepends = [ base Cabal cabal-doctest ];
   libraryHaskellDepends = [
-    base
-    containers
-    ghc
-    ghc-tcplugins-extra
-    polysemy
-    syb
-    transformers
+    base containers ghc ghc-tcplugins-extra polysemy syb transformers
   ];
   testHaskellDepends = [
-    base
-    containers
-    doctest
-    ghc
-    ghc-tcplugins-extra
-    hspec
-    inspection-testing
-    polysemy
-    should-not-typecheck
-    syb
+    base containers doctest ghc ghc-tcplugins-extra hspec
+    hspec-discover inspection-testing polysemy should-not-typecheck syb
     transformers
   ];
   testToolDepends = [ hspec-discover ];

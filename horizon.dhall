@@ -764,7 +764,11 @@ let packages =
       , monad-logger = H.callHackage "monad-logger" "0.3.39"
       , monad-logger-extras = H.callHackage "monad-logger-extras" "0.1.1.1"
       , monad-loops = H.callHackage "monad-loops" "0.4.3"
-      , monad-par = H.callHackage "monad-par" "0.3.5"
+      , monad-par =
+          H.callGit
+            "https://github.com/locallycompact/monad-par"
+            "4f5b44fc85095e08cc159e4fc54a7d78dc41eccf"
+            (Some "monad-par")
       , monad-par-extras = H.callHackage "monad-par-extras" "0.3.3"
       , monad-parallel = H.callHackage "monad-parallel" "0.8"
       , monad-peel = H.callHackage "monad-peel" "0.2.1.2"
@@ -872,11 +876,7 @@ let packages =
       , polysemy-kvstore = H.callHackage "polysemy-kvstore" "0.1.3.0"
       , polysemy-methodology = H.callHackage "polysemy-methodology" "0.2.2.0"
       , polysemy-path = H.callHackage "polysemy-path" "0.2.1.0"
-      , polysemy-plugin =
-          H.callGit
-            "https://github.com/locallycompact/polysemy"
-            "bd944ca000c1ca69602d4723e3859af431b9d0c4"
-            (Some "polysemy-plugin/")
+      , polysemy-plugin = H.callHackage "polysemy-plugin" "0.4.4.0"
       , polysemy-several = H.callHackage "polysemy-several" "0.1.1.0"
       , polysemy-test = H.callHackage "polysemy-test" "0.7.0.0"
       , polysemy-time = H.callHackage "polysemy-time" "0.6.0.0"
@@ -1079,7 +1079,11 @@ let packages =
       , storable-tuple = H.callHackage "storable-tuple" "0.1"
       , store = H.callHackage "store" "0.7.16"
       , store-core = H.callHackage "store-core" "0.4.4.4"
-      , streaming = H.callHackage "streaming" "0.2.3.1"
+      , streaming =
+          H.callGit
+            "https://github.com/haskell-streaming/streaming"
+            "b6ec199103c078a07b3dcd197ab39020b2136426"
+            (None H.Subdir)
       , streaming-binary = H.callHackage "streaming-binary" "0.3.0.1"
       , streaming-bytestring = H.callHackage "streaming-bytestring" "0.2.4"
       , streaming-commons = H.callHackage "streaming-commons" "0.2.2.5"
@@ -1097,7 +1101,11 @@ let packages =
       , svg-builder = H.callHackage "svg-builder" "0.1.1"
       , swagger2 = H.callHackage "swagger2" "2.8.6"
       , syb = H.callHackage "syb" "0.7.2.3"
-      , sydtest = H.callHackage "sydtest" "0.13.0.1"
+      , sydtest =
+          H.callGit
+            "https://github.com/locallycompact/sydtest"
+            "01c7d35b822c66a68e4d2ba5594858afbcc1cbf0"
+            (Some "sydtest")
       , sydtest-discover = H.callHackage "sydtest-discover" "0.0.0.2"
       , system-fileio = H.callHackage "system-fileio" "0.3.16.4"
       , system-filepath = H.callHackage "system-filepath" "0.4.14"
