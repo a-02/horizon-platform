@@ -764,7 +764,11 @@ let packages =
       , monad-logger = H.callHackage "monad-logger" "0.3.39"
       , monad-logger-extras = H.callHackage "monad-logger-extras" "0.1.1.1"
       , monad-loops = H.callHackage "monad-loops" "0.4.3"
-      , monad-par = H.callHackage "monad-par" "0.3.5"
+      , monad-par =
+          H.callGit
+            "https://github.com/locallycompact/monad-par"
+            "4f5b44fc85095e08cc159e4fc54a7d78dc41eccf"
+            (Some "monad-par")
       , monad-par-extras = H.callHackage "monad-par-extras" "0.3.3"
       , monad-parallel = H.callHackage "monad-parallel" "0.8"
       , monad-peel = H.callHackage "monad-peel" "0.2.1.2"
@@ -1097,7 +1101,11 @@ let packages =
       , svg-builder = H.callHackage "svg-builder" "0.1.1"
       , swagger2 = H.callHackage "swagger2" "2.8.6"
       , syb = H.callHackage "syb" "0.7.2.3"
-      , sydtest = H.callHackage "sydtest" "0.13.0.1"
+      , sydtest =
+          H.callGit
+            "https://github.com/locallycompact/sydtest"
+            "01c7d35b822c66a68e4d2ba5594858afbcc1cbf0"
+            (Some "sydtest")
       , sydtest-discover = H.callHackage "sydtest-discover" "0.0.0.2"
       , system-fileio = H.callHackage "system-fileio" "0.3.16.4"
       , system-filepath = H.callHackage "system-filepath" "0.4.14"
