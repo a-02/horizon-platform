@@ -876,11 +876,7 @@ let packages =
       , polysemy-kvstore = H.callHackage "polysemy-kvstore" "0.1.3.0"
       , polysemy-methodology = H.callHackage "polysemy-methodology" "0.2.2.0"
       , polysemy-path = H.callHackage "polysemy-path" "0.2.1.0"
-      , polysemy-plugin =
-          H.callGit
-            "https://github.com/locallycompact/polysemy"
-            "bd944ca000c1ca69602d4723e3859af431b9d0c4"
-            (Some "polysemy-plugin/")
+      , polysemy-plugin = H.callHackage "polysemy-plugin" "0.4.4.0"
       , polysemy-several = H.callHackage "polysemy-several" "0.1.1.0"
       , polysemy-test = H.callHackage "polysemy-test" "0.7.0.0"
       , polysemy-time = H.callHackage "polysemy-time" "0.6.0.0"
