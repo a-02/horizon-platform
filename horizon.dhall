@@ -651,6 +651,7 @@ let packages =
       , iso8601-time = H.callHackage "iso8601-time" "0.1.5"
       , isomorphism-class = H.callHackage "isomorphism-class" "0.1.0.9"
       , iwlib = H.callHackage "iwlib" "0.1.2"
+      , jailbreak-cabal = H.callHackage "jailbreak-cabal" "1.4"
       , jira-wiki-markup = H.callHackage "jira-wiki-markup" "1.5.1"
       , jose = H.callHackage "jose" "0.10"
       , js-chart = H.callHackage "js-chart" "2.9.4.1"
