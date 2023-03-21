@@ -1031,6 +1031,8 @@ self: with pkgs.haskell.lib; {
 
   iwlib = self.callPackage (./pkgs/iwlib.nix) { };
 
+  jailbreak-cabal = self.callPackage (./pkgs/jailbreak-cabal.nix) { };
+
   jira-wiki-markup = self.callPackage (./pkgs/jira-wiki-markup.nix) { };
 
   jose = self.callPackage (./pkgs/jose.nix) { };
