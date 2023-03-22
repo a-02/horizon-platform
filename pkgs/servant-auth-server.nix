@@ -1,16 +1,21 @@
 { mkDerivation, QuickCheck, aeson, base, base64-bytestring
 , blaze-builder, bytestring, case-insensitive, cookie
-, data-default-class, entropy, hspec, hspec-discover, http-client
-, http-types, jose, lens, lens-aeson, lib, markdown-unlit, memory
-, monad-time, mtl, servant, servant-auth, servant-server, tagged
-, text, time, transformers, unordered-containers, wai, warp, wreq
+, data-default-class, entropy, fetchgit, hspec, hspec-discover
+, http-client, http-types, jose, lens, lens-aeson, lib
+, markdown-unlit, memory, monad-time, mtl, servant, servant-auth
+, servant-server, tagged, text, time, transformers
+, unordered-containers, wai, warp, wreq
 }:
 mkDerivation {
   pname = "servant-auth-server";
   version = "0.4.7.0";
-  sha256 = "42da496b14f250495131d92280e007634dbed580cea7bc423cbe87877b2f24d4";
-  revision = "4";
-  editedCabalFile = "1qcgm2pqi5qjqk27632h69j8ishls6cby8gghvww73wi63fqii9n";
+  src = fetchgit {
+    url = "https://github.com/haskell-servant/servant";
+    sha256 = "0ay4q9jy3xkn5j1k91snfdndi6j91hlri9h79m429j0d8v5vnj7i";
+    rev = "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a";
+    fetchSubmodules = true;
+  };
+  postUnpack = "sourceRoot+=/servant-auth/servant-auth-server/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -23,7 +28,7 @@ mkDerivation {
   testHaskellDepends = [
     aeson base bytestring case-insensitive hspec http-client http-types
     jose lens lens-aeson mtl QuickCheck servant servant-auth
-    servant-server time transformers wai warp wreq
+    servant-server text time transformers wai warp wreq
   ];
   testToolDepends = [ hspec-discover markdown-unlit ];
   enableLibraryProfiling = true;
@@ -33,7 +38,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "http://github.com/haskell-servant/servant/servant-auth#readme";
+  homepage = "https://github.com/haskell-servant/servant/tree/master/servant-auth#readme";
   description = "servant-server/servant-auth compatibility";
   license = lib.licenses.bsd3;
   broken = false;

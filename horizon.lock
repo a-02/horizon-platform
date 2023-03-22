@@ -3232,7 +3232,7 @@
   }
 , { mapKey = "servant-auth-server"
   , mapValue =
-      "2302e6933924608a2b5f6f216ac58f6439fbc2ec52b4eec1453533279c9521dd"
+      "12661e3f795b50af9cbf92092b4a15335a8766bfe9ed5629c73aeefd941071a9"
   }
 , { mapKey = "servant-blaze"
   , mapValue =
