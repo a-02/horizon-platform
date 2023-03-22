@@ -1,25 +1,7 @@
-{ mkDerivation
-, aeson
-, base
-, bytestring
-, containers
-, dlist
-, fetchgit
-, free
-, ghc-prim
-, hashable
-, lib
-, microlens
-, mtl
-, network-uri
-, scientific
-, tagged
-, tasty
-, tasty-hunit
-, text
-, time
-, vector
-, vector-sized
+{ mkDerivation, aeson, base, bytestring, containers, dlist
+, fetchgit, free, ghc-prim, hashable, lib, microlens, mtl
+, network-uri, scientific, tagged, tasty, tasty-hunit, text, time
+, vector, vector-sized
 }:
 mkDerivation {
   pname = "beam-core";
@@ -35,31 +17,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    bytestring
-    containers
-    dlist
-    free
-    ghc-prim
-    hashable
-    microlens
-    mtl
-    network-uri
-    scientific
-    tagged
-    text
-    time
-    vector
+    aeson base bytestring containers dlist free ghc-prim hashable
+    microlens mtl network-uri scientific tagged text time vector
     vector-sized
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    tasty
-    tasty-hunit
-    text
-    time
+    base bytestring tasty tasty-hunit text time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

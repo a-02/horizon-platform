@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, blaze-builder
-, lib
-, lucid
-, text
-, transformers
+{ mkDerivation, base, blaze-builder, lib, lucid, text, transformers
 }:
 mkDerivation {
   pname = "lucid-svg";
@@ -14,11 +8,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    blaze-builder
-    lucid
-    text
-    transformers
+    base blaze-builder lucid text transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

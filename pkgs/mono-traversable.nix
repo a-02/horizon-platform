@@ -1,21 +1,6 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, bytestring
-, containers
-, foldl
-, gauge
-, hashable
-, hspec
-, lib
-, mwc-random
-, split
-, text
-, transformers
-, unordered-containers
-, vector
-, vector-algorithms
+{ mkDerivation, HUnit, QuickCheck, base, bytestring, containers
+, foldl, gauge, hashable, hspec, lib, mwc-random, split, text
+, transformers, unordered-containers, vector, vector-algorithms
 }:
 mkDerivation {
   pname = "mono-traversable";
@@ -25,29 +10,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    hashable
-    split
-    text
-    transformers
-    unordered-containers
-    vector
-    vector-algorithms
+    base bytestring containers hashable split text transformers
+    unordered-containers vector vector-algorithms
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    containers
-    foldl
-    hspec
-    HUnit
-    QuickCheck
-    text
-    transformers
-    unordered-containers
-    vector
+    base bytestring containers foldl hspec HUnit QuickCheck text
+    transformers unordered-containers vector
   ];
   benchmarkHaskellDepends = [ base gauge mwc-random vector ];
   enableLibraryProfiling = true;

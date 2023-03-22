@@ -1,20 +1,8 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, base
-, criterion
-, deepseq
-, genvalidity
-, genvalidity-criterion
-, genvalidity-hspec
-, genvalidity-scientific
-, genvalidity-text
-, genvalidity-unordered-containers
-, genvalidity-vector
-, hspec
-, lib
-, validity
-, validity-aeson
+{ mkDerivation, QuickCheck, aeson, base, criterion, deepseq
+, genvalidity, genvalidity-criterion, genvalidity-hspec
+, genvalidity-scientific, genvalidity-text
+, genvalidity-unordered-containers, genvalidity-vector, hspec, lib
+, validity, validity-aeson
 }:
 mkDerivation {
   pname = "genvalidity-aeson";
@@ -24,30 +12,15 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    genvalidity
-    genvalidity-scientific
-    genvalidity-text
-    genvalidity-unordered-containers
-    genvalidity-vector
-    QuickCheck
-    validity
-    validity-aeson
+    aeson base genvalidity genvalidity-scientific genvalidity-text
+    genvalidity-unordered-containers genvalidity-vector QuickCheck
+    validity validity-aeson
   ];
   testHaskellDepends = [
-    aeson
-    base
-    deepseq
-    genvalidity
-    genvalidity-hspec
-    hspec
+    aeson base deepseq genvalidity genvalidity-hspec hspec
   ];
   benchmarkHaskellDepends = [
-    aeson
-    base
-    criterion
-    genvalidity-criterion
+    aeson base criterion genvalidity-criterion
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

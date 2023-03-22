@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, base-compat
-, bytestring
-, directory
-, filepath
-, hspec
-, lib
-, logging-facade
-, temporary
+{ mkDerivation, base, base-compat, bytestring, directory, filepath
+, hspec, lib, logging-facade, temporary
 }:
 mkDerivation {
   pname = "mockery";
@@ -17,22 +9,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base-compat
-    bytestring
-    directory
-    filepath
-    logging-facade
+    base base-compat bytestring directory filepath logging-facade
     temporary
   ];
   testHaskellDepends = [
-    base
-    base-compat
-    bytestring
-    directory
-    filepath
-    hspec
-    logging-facade
+    base base-compat bytestring directory filepath hspec logging-facade
     temporary
   ];
   enableLibraryProfiling = true;

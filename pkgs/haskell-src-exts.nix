@@ -1,19 +1,6 @@
-{ mkDerivation
-, array
-, base
-, containers
-, directory
-, filepath
-, ghc-prim
-, happy
-, lib
-, mtl
-, pretty
-, pretty-show
-, smallcheck
-, tasty
-, tasty-golden
-, tasty-smallcheck
+{ mkDerivation, array, base, containers, directory, filepath
+, ghc-prim, happy, lib, mtl, pretty, pretty-show, smallcheck, tasty
+, tasty-golden, tasty-smallcheck
 }:
 mkDerivation {
   pname = "haskell-src-exts";
@@ -25,16 +12,8 @@ mkDerivation {
   libraryHaskellDepends = [ array base ghc-prim pretty ];
   libraryToolDepends = [ happy ];
   testHaskellDepends = [
-    base
-    containers
-    directory
-    filepath
-    mtl
-    pretty-show
-    smallcheck
-    tasty
-    tasty-golden
-    tasty-smallcheck
+    base containers directory filepath mtl pretty-show smallcheck tasty
+    tasty-golden tasty-smallcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

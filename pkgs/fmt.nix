@@ -1,24 +1,7 @@
-{ mkDerivation
-, QuickCheck
-, base
-, base64-bytestring
-, bytestring
-, call-stack
-, containers
-, criterion
-, deepseq
-, doctest
-, doctest-discover
-, formatting
-, hspec
-, interpolate
-, lib
-, microlens
-, neat-interpolation
-, text
-, time
-, time-locale-compat
-, vector
+{ mkDerivation, QuickCheck, base, base64-bytestring, bytestring
+, call-stack, containers, criterion, deepseq, doctest
+, doctest-discover, formatting, hspec, interpolate, lib, microlens
+, neat-interpolation, text, time, time-locale-compat, vector
 }:
 mkDerivation {
   pname = "fmt";
@@ -28,40 +11,17 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base64-bytestring
-    bytestring
-    call-stack
-    containers
-    formatting
-    microlens
-    text
-    time
-    time-locale-compat
+    base base64-bytestring bytestring call-stack containers formatting
+    microlens text time time-locale-compat
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    call-stack
-    containers
-    doctest
-    hspec
-    neat-interpolation
-    QuickCheck
-    text
-    vector
+    base bytestring call-stack containers doctest hspec
+    neat-interpolation QuickCheck text vector
   ];
   testToolDepends = [ doctest-discover ];
   benchmarkHaskellDepends = [
-    base
-    bytestring
-    containers
-    criterion
-    deepseq
-    formatting
-    interpolate
-    text
-    vector
+    base bytestring containers criterion deepseq formatting interpolate
+    text vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

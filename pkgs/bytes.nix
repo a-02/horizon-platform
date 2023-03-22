@@ -1,20 +1,6 @@
-{ mkDerivation
-, base
-, binary
-, binary-orphans
-, bytestring
-, cereal
-, containers
-, hashable
-, lib
-, mtl
-, scientific
-, text
-, time
-, transformers
-, transformers-compat
-, unordered-containers
-, void
+{ mkDerivation, base, binary, binary-orphans, bytestring, cereal
+, containers, hashable, lib, mtl, scientific, text, time
+, transformers, transformers-compat, unordered-containers, void
 }:
 mkDerivation {
   pname = "bytes";
@@ -26,21 +12,9 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    binary
-    binary-orphans
-    bytestring
-    cereal
-    containers
-    hashable
-    mtl
-    scientific
-    text
-    time
-    transformers
-    transformers-compat
-    unordered-containers
-    void
+    base binary binary-orphans bytestring cereal containers hashable
+    mtl scientific text time transformers transformers-compat
+    unordered-containers void
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

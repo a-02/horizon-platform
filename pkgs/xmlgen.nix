@@ -1,17 +1,5 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, blaze-builder
-, bytestring
-, containers
-, criterion
-, filepath
-, hxt
-, lib
-, mtl
-, process
-, text
+{ mkDerivation, HUnit, QuickCheck, base, blaze-builder, bytestring
+, containers, criterion, filepath, hxt, lib, mtl, process, text
 , unix
 }:
 mkDerivation {
@@ -24,24 +12,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    blaze-builder
-    bytestring
-    containers
-    mtl
-    text
+    base blaze-builder bytestring containers mtl text
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    containers
-    filepath
-    HUnit
-    hxt
-    process
-    QuickCheck
-    text
-    unix
+    base bytestring containers filepath HUnit hxt process QuickCheck
+    text unix
   ];
   benchmarkHaskellDepends = [ base bytestring criterion text ];
   enableLibraryProfiling = true;

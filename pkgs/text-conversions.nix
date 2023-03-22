@@ -1,12 +1,5 @@
-{ mkDerivation
-, base
-, base16-bytestring
-, base64-bytestring
-, bytestring
-, hspec
-, hspec-discover
-, lib
-, text
+{ mkDerivation, base, base16-bytestring, base64-bytestring
+, bytestring, hspec, hspec-discover, lib, text
 }:
 mkDerivation {
   pname = "text-conversions";
@@ -16,11 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base16-bytestring
-    base64-bytestring
-    bytestring
-    text
+    base base16-bytestring base64-bytestring bytestring text
   ];
   testHaskellDepends = [ base bytestring hspec text ];
   testToolDepends = [ hspec-discover ];

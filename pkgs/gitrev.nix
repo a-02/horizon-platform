@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, base-compat
-, directory
-, filepath
-, lib
-, process
-, template-haskell
+{ mkDerivation, base, base-compat, directory, filepath, lib
+, process, template-haskell
 }:
 mkDerivation {
   pname = "gitrev";
@@ -15,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base-compat
-    directory
-    filepath
-    process
-    template-haskell
+    base base-compat directory filepath process template-haskell
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

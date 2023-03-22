@@ -1,16 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, criterion
-, exceptions
-, lib
-, mmorph
-, mtl
-, optparse-applicative
-, test-framework
-, test-framework-quickcheck2
-, transformers
-, void
+{ mkDerivation, QuickCheck, base, criterion, exceptions, lib
+, mmorph, mtl, optparse-applicative, test-framework
+, test-framework-quickcheck2, transformers, void
 }:
 mkDerivation {
   pname = "pipes";
@@ -22,27 +12,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    exceptions
-    mmorph
-    mtl
-    transformers
-    void
+    base exceptions mmorph mtl transformers void
   ];
   testHaskellDepends = [
-    base
-    mtl
-    QuickCheck
-    test-framework
-    test-framework-quickcheck2
+    base mtl QuickCheck test-framework test-framework-quickcheck2
     transformers
   ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    mtl
-    optparse-applicative
-    transformers
+    base criterion mtl optparse-applicative transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,20 +1,6 @@
-{ mkDerivation
-, aeson
-, base
-, containers
-, deepseq
-, dlist
-, filepath
-, ghc
-, ghcide
-, hls-graph
-, hls-plugin-api
-, hls-test-utils
-, lib
-, lsp
-, text
-, transformers
-, unordered-containers
+{ mkDerivation, aeson, base, containers, deepseq, dlist, filepath
+, ghc, ghcide, hls-graph, hls-plugin-api, hls-test-utils, lib, lsp
+, text, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "hls-qualify-imported-names-plugin";
@@ -24,19 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    containers
-    deepseq
-    dlist
-    ghc
-    ghcide
-    hls-graph
-    hls-plugin-api
-    lsp
-    text
-    transformers
-    unordered-containers
+    aeson base containers deepseq dlist ghc ghcide hls-graph
+    hls-plugin-api lsp text transformers unordered-containers
   ];
   testHaskellDepends = [ base filepath hls-test-utils text ];
   enableLibraryProfiling = true;

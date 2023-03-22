@@ -1,24 +1,7 @@
-{ mkDerivation
-, aeson
-, base
-, containers
-, extra
-, filepath
-, ghc
-, ghc-boot-th
-, ghc-exactprint
-, ghcide
-, hls-plugin-api
-, hls-refactor-plugin
-, hls-test-utils
-, lens
-, lib
-, lsp
-, lsp-test
-, mtl
-, text
-, transformers
-, unordered-containers
+{ mkDerivation, aeson, base, containers, extra, filepath, ghc
+, ghc-boot-th, ghc-exactprint, ghcide, hls-plugin-api
+, hls-refactor-plugin, hls-test-utils, lens, lib, lsp, lsp-test
+, mtl, text, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "hls-gadt-plugin";
@@ -28,31 +11,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    containers
-    extra
-    ghc
-    ghc-boot-th
-    ghc-exactprint
-    ghcide
-    hls-plugin-api
-    hls-refactor-plugin
-    lens
-    lsp
-    mtl
-    text
-    transformers
+    aeson base containers extra ghc ghc-boot-th ghc-exactprint ghcide
+    hls-plugin-api hls-refactor-plugin lens lsp mtl text transformers
     unordered-containers
   ];
   testHaskellDepends = [
-    base
-    filepath
-    hls-test-utils
-    lens
-    lsp
-    lsp-test
-    text
+    base filepath hls-test-utils lens lsp lsp-test text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

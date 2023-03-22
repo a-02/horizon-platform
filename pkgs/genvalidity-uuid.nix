@@ -1,15 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, criterion
-, genvalidity
-, genvalidity-criterion
-, genvalidity-hspec
-, hspec
-, lib
-, uuid
-, validity
-, validity-uuid
+{ mkDerivation, QuickCheck, base, criterion, genvalidity
+, genvalidity-criterion, genvalidity-hspec, hspec, lib, uuid
+, validity, validity-uuid
 }:
 mkDerivation {
   pname = "genvalidity-uuid";
@@ -19,28 +10,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    genvalidity
-    QuickCheck
-    uuid
-    validity
-    validity-uuid
+    base genvalidity QuickCheck uuid validity validity-uuid
   ];
   testHaskellDepends = [
-    base
-    genvalidity
-    genvalidity-hspec
-    hspec
-    QuickCheck
-    uuid
+    base genvalidity genvalidity-hspec hspec QuickCheck uuid
   ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    genvalidity
-    genvalidity-criterion
-    QuickCheck
-    uuid
+    base criterion genvalidity genvalidity-criterion QuickCheck uuid
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

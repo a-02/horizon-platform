@@ -1,15 +1,5 @@
-{ mkDerivation
-, HUnit
-, attoparsec
-, base
-, containers
-, css-text
-, hspec
-, lib
-, network-uri
-, tagsoup
-, text
-, utf8-string
+{ mkDerivation, HUnit, attoparsec, base, containers, css-text
+, hspec, lib, network-uri, tagsoup, text, utf8-string
 }:
 mkDerivation {
   pname = "xss-sanitize";
@@ -19,26 +9,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    attoparsec
-    base
-    containers
-    css-text
-    network-uri
-    tagsoup
-    text
+    attoparsec base containers css-text network-uri tagsoup text
     utf8-string
   ];
   testHaskellDepends = [
-    attoparsec
-    base
-    containers
-    css-text
-    hspec
-    HUnit
-    network-uri
-    tagsoup
-    text
-    utf8-string
+    attoparsec base containers css-text hspec HUnit network-uri tagsoup
+    text utf8-string
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

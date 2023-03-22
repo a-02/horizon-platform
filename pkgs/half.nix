@@ -1,13 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, binary
-, bytestring
-, deepseq
-, lib
-, template-haskell
-, test-framework
-, test-framework-quickcheck2
+{ mkDerivation, QuickCheck, base, binary, bytestring, deepseq, lib
+, template-haskell, test-framework, test-framework-quickcheck2
 }:
 mkDerivation {
   pname = "half";
@@ -18,11 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base binary deepseq template-haskell ];
   testHaskellDepends = [
-    base
-    binary
-    bytestring
-    QuickCheck
-    test-framework
+    base binary bytestring QuickCheck test-framework
     test-framework-quickcheck2
   ];
   enableLibraryProfiling = true;

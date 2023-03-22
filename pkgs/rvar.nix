@@ -1,10 +1,4 @@
-{ mkDerivation
-, MonadPrompt
-, base
-, bytestring
-, lib
-, mtl
-, random
+{ mkDerivation, MonadPrompt, base, bytestring, lib, mtl, random
 , transformers
 }:
 mkDerivation {
@@ -15,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    MonadPrompt
-    mtl
-    random
-    transformers
+    base bytestring MonadPrompt mtl random transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

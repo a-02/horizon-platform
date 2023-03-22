@@ -1,14 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, clock
-, data-default
-, doctest
-, http-types
-, lib
-, prometheus-client
-, text
-, wai
+{ mkDerivation, base, bytestring, clock, data-default, doctest
+, http-types, lib, prometheus-client, text, wai
 }:
 mkDerivation {
   pname = "wai-middleware-prometheus";
@@ -18,14 +9,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    clock
-    data-default
-    http-types
-    prometheus-client
-    text
-    wai
+    base bytestring clock data-default http-types prometheus-client
+    text wai
   ];
   testHaskellDepends = [ base doctest prometheus-client ];
   enableLibraryProfiling = true;

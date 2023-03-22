@@ -1,14 +1,5 @@
-{ mkDerivation
-, base
-, containers
-, dhall
-, fetchzip
-, lib
-, path
-, path-dhall-instance
-, template-haskell
-, text
-, th-lift
+{ mkDerivation, base, containers, dhall, fetchzip, lib, path
+, path-dhall-instance, template-haskell, text, th-lift
 }:
 mkDerivation {
   pname = "horizon-spec";
@@ -22,14 +13,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    dhall
-    path
-    path-dhall-instance
-    template-haskell
-    text
-    th-lift
+    base containers dhall path path-dhall-instance template-haskell
+    text th-lift
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

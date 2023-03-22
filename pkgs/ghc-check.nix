@@ -1,17 +1,6 @@
-{ mkDerivation
-, base
-, containers
-, directory
-, filepath
-, ghc
-, ghc-boot
-, ghc-paths
-, lib
-, process
-, safe-exceptions
-, template-haskell
-, th-compat
-, transformers
+{ mkDerivation, base, containers, directory, filepath, ghc
+, ghc-boot, ghc-paths, lib, process, safe-exceptions
+, template-haskell, th-compat, transformers
 }:
 mkDerivation {
   pname = "ghc-check";
@@ -21,18 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    directory
-    filepath
-    ghc
-    ghc-boot
-    ghc-paths
-    process
-    safe-exceptions
-    template-haskell
-    th-compat
-    transformers
+    base containers directory filepath ghc ghc-boot ghc-paths process
+    safe-exceptions template-haskell th-compat transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

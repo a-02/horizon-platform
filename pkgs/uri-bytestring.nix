@@ -1,24 +1,7 @@
-{ mkDerivation
-, HUnit
-, attoparsec
-, base
-, base-compat
-, blaze-builder
-, bytestring
-, containers
-, criterion
-, deepseq
-, deepseq-generics
-, hedgehog
-, lib
-, network-uri
-, safe
-, tasty
-, tasty-hedgehog
-, tasty-hunit
-, template-haskell
-, th-lift-instances
-, transformers
+{ mkDerivation, HUnit, attoparsec, base, base-compat, blaze-builder
+, bytestring, containers, criterion, deepseq, deepseq-generics
+, hedgehog, lib, network-uri, safe, tasty, tasty-hedgehog
+, tasty-hunit, template-haskell, th-lift-instances, transformers
 }:
 mkDerivation {
   pname = "uri-bytestring";
@@ -28,36 +11,15 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    attoparsec
-    base
-    blaze-builder
-    bytestring
-    containers
-    template-haskell
-    th-lift-instances
+    attoparsec base blaze-builder bytestring containers
+    template-haskell th-lift-instances
   ];
   testHaskellDepends = [
-    attoparsec
-    base
-    base-compat
-    blaze-builder
-    bytestring
-    containers
-    hedgehog
-    HUnit
-    safe
-    tasty
-    tasty-hedgehog
-    tasty-hunit
-    transformers
+    attoparsec base base-compat blaze-builder bytestring containers
+    hedgehog HUnit safe tasty tasty-hedgehog tasty-hunit transformers
   ];
   benchmarkHaskellDepends = [
-    base
-    blaze-builder
-    bytestring
-    criterion
-    deepseq
-    deepseq-generics
+    base blaze-builder bytestring criterion deepseq deepseq-generics
     network-uri
   ];
   enableLibraryProfiling = true;

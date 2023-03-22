@@ -1,16 +1,6 @@
-{ mkDerivation
-, base
-, containers
-, criterion
-, hspec
-, lib
-, microlens
-, microlens-platform
-, mtl
-, pcre-light
-, regex-pcre-builtin
-, template-haskell
-, text
+{ mkDerivation, base, containers, criterion, hspec, lib, microlens
+, microlens-platform, mtl, pcre-light, regex-pcre-builtin
+, template-haskell, text
 }:
 mkDerivation {
   pname = "pcre2";
@@ -20,34 +10,15 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    microlens
-    mtl
-    template-haskell
-    text
+    base containers microlens mtl template-haskell text
   ];
   testHaskellDepends = [
-    base
-    containers
-    hspec
-    microlens
-    microlens-platform
-    mtl
-    template-haskell
-    text
+    base containers hspec microlens microlens-platform mtl
+    template-haskell text
   ];
   benchmarkHaskellDepends = [
-    base
-    containers
-    criterion
-    microlens
-    microlens-platform
-    mtl
-    pcre-light
-    regex-pcre-builtin
-    template-haskell
-    text
+    base containers criterion microlens microlens-platform mtl
+    pcre-light regex-pcre-builtin template-haskell text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

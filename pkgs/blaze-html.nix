@@ -1,16 +1,6 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, blaze-builder
-, blaze-markup
-, bytestring
-, containers
-, lib
-, test-framework
-, test-framework-hunit
-, test-framework-quickcheck2
-, text
+{ mkDerivation, HUnit, QuickCheck, base, blaze-builder
+, blaze-markup, bytestring, containers, lib, test-framework
+, test-framework-hunit, test-framework-quickcheck2, text
 }:
 mkDerivation {
   pname = "blaze-html";
@@ -22,24 +12,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    blaze-builder
-    blaze-markup
-    bytestring
-    text
+    base blaze-builder blaze-markup bytestring text
   ];
   testHaskellDepends = [
-    base
-    blaze-builder
-    blaze-markup
-    bytestring
-    containers
-    HUnit
-    QuickCheck
-    test-framework
-    test-framework-hunit
-    test-framework-quickcheck2
-    text
+    base blaze-builder blaze-markup bytestring containers HUnit
+    QuickCheck test-framework test-framework-hunit
+    test-framework-quickcheck2 text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

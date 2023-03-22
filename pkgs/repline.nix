@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, containers
-, exceptions
-, haskeline
-, lib
-, mtl
+{ mkDerivation, base, containers, exceptions, haskeline, lib, mtl
 , process
 }:
 mkDerivation {
@@ -15,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    exceptions
-    haskeline
-    mtl
-    process
+    base containers exceptions haskeline mtl process
   ];
   testHaskellDepends = [ base containers mtl process ];
   enableLibraryProfiling = true;

@@ -1,14 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, containers
-, criterion
-, extra
-, hashable
-, hspec
-, lib
-, quickcheck-instances
+{ mkDerivation, QuickCheck, base, bytestring, containers, criterion
+, extra, hashable, hspec, lib, quickcheck-instances
 , unordered-containers
 }:
 mkDerivation {
@@ -21,20 +12,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    extra
-    hashable
-    unordered-containers
+    base containers extra hashable unordered-containers
   ];
   testHaskellDepends = [ base containers hspec QuickCheck ];
   benchmarkHaskellDepends = [
-    base
-    bytestring
-    criterion
-    hashable
-    QuickCheck
-    quickcheck-instances
+    base bytestring criterion hashable QuickCheck quickcheck-instances
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

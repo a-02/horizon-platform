@@ -1,24 +1,7 @@
-{ mkDerivation
-, base
-, bytestring
-, containers
-, deepseq
-, doctest
-, lib
-, mtl
-, primitive
-, rdtsc
-, smallcheck
-, split
-, splitmix
-, stm
-, tasty
-, tasty-bench
-, tasty-hunit
-, tasty-inspection-testing
-, tasty-smallcheck
-, time
-, transformers
+{ mkDerivation, base, bytestring, containers, deepseq, doctest, lib
+, mtl, primitive, rdtsc, smallcheck, split, splitmix, stm, tasty
+, tasty-bench, tasty-hunit, tasty-inspection-testing
+, tasty-smallcheck, time, transformers
 }:
 mkDerivation {
   pname = "random";
@@ -29,27 +12,11 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring deepseq mtl splitmix ];
   testHaskellDepends = [
-    base
-    bytestring
-    containers
-    doctest
-    smallcheck
-    stm
-    tasty
-    tasty-hunit
-    tasty-inspection-testing
-    tasty-smallcheck
-    transformers
+    base bytestring containers doctest smallcheck stm tasty tasty-hunit
+    tasty-inspection-testing tasty-smallcheck transformers
   ];
   benchmarkHaskellDepends = [
-    base
-    mtl
-    primitive
-    rdtsc
-    split
-    splitmix
-    tasty-bench
-    time
+    base mtl primitive rdtsc split splitmix tasty-bench time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

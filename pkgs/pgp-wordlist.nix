@@ -1,16 +1,5 @@
-{ mkDerivation
-, HUnit
-, base
-, bytestring
-, containers
-, deepseq
-, doctest
-, lib
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, text
-, vector
+{ mkDerivation, HUnit, base, bytestring, containers, deepseq
+, doctest, lib, tasty, tasty-hunit, tasty-quickcheck, text, vector
 }:
 mkDerivation {
   pname = "pgp-wordlist";
@@ -21,15 +10,8 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring containers text vector ];
   testHaskellDepends = [
-    base
-    bytestring
-    deepseq
-    doctest
-    HUnit
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    text
+    base bytestring deepseq doctest HUnit tasty tasty-hunit
+    tasty-quickcheck text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

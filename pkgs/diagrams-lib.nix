@@ -1,45 +1,11 @@
-{ mkDerivation
-, JuicyPixels
-, QuickCheck
-, active
-, adjunctions
-, array
-, base
-, bytestring
-, cereal
-, colour
-, containers
-, criterion
-, data-default-class
-, deepseq
-, diagrams-core
-, diagrams-solve
-, directory
-, distributive
-, dual-tree
-, exceptions
-, filepath
-, fingertree
-, fsnotify
-, hashable
-, intervals
-, lens
-, lib
-, linear
-, monoid-extras
-, mtl
-, numeric-extras
-, optparse-applicative
-, process
-, profunctors
-, semigroups
-, tagged
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, text
-, transformers
-, unordered-containers
+{ mkDerivation, JuicyPixels, QuickCheck, active, adjunctions, array
+, base, bytestring, cereal, colour, containers, criterion
+, data-default-class, deepseq, diagrams-core, diagrams-solve
+, directory, distributive, dual-tree, exceptions, filepath
+, fingertree, fsnotify, hashable, intervals, lens, lib, linear
+, monoid-extras, mtl, numeric-extras, optparse-applicative, process
+, profunctors, semigroups, tagged, tasty, tasty-hunit
+, tasty-quickcheck, text, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "diagrams-lib";
@@ -51,51 +17,16 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    active
-    adjunctions
-    array
-    base
-    bytestring
-    cereal
-    colour
-    containers
-    data-default-class
-    diagrams-core
-    diagrams-solve
-    directory
-    distributive
-    dual-tree
-    exceptions
-    filepath
-    fingertree
-    fsnotify
-    hashable
-    intervals
-    JuicyPixels
-    lens
-    linear
-    monoid-extras
-    mtl
-    optparse-applicative
-    process
-    profunctors
-    semigroups
-    tagged
-    text
-    transformers
-    unordered-containers
+    active adjunctions array base bytestring cereal colour containers
+    data-default-class diagrams-core diagrams-solve directory
+    distributive dual-tree exceptions filepath fingertree fsnotify
+    hashable intervals JuicyPixels lens linear monoid-extras mtl
+    optparse-applicative process profunctors semigroups tagged text
+    transformers unordered-containers
   ];
   testHaskellDepends = [
-    base
-    deepseq
-    diagrams-solve
-    distributive
-    lens
-    numeric-extras
-    QuickCheck
-    tasty
-    tasty-hunit
-    tasty-quickcheck
+    base deepseq diagrams-solve distributive lens numeric-extras
+    QuickCheck tasty tasty-hunit tasty-quickcheck
   ];
   benchmarkHaskellDepends = [ base criterion diagrams-core ];
   enableLibraryProfiling = true;

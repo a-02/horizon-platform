@@ -1,27 +1,8 @@
-{ mkDerivation
-, base
-, base16-bytestring
-, bytestring
-, containers
-, cryptohash-sha1
-, directory
-, expiring-cache-map
-, filepath
-, hspec
-, hspec-discover
-, hspec-expectations-lifted
-, hspec-wai
-, http-types
-, lib
-, mime-types
-, mockery
-, old-locale
-, scotty
-, semigroups
-, text
-, time
-, wai
-, wai-extra
+{ mkDerivation, base, base16-bytestring, bytestring, containers
+, cryptohash-sha1, directory, expiring-cache-map, filepath, hspec
+, hspec-discover, hspec-expectations-lifted, hspec-wai, http-types
+, lib, mime-types, mockery, old-locale, scotty, semigroups, text
+, time, wai, wai-extra
 }:
 mkDerivation {
   pname = "wai-middleware-static";
@@ -33,31 +14,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base16-bytestring
-    bytestring
-    containers
-    cryptohash-sha1
-    directory
-    expiring-cache-map
-    filepath
-    http-types
-    mime-types
-    old-locale
-    semigroups
-    text
-    time
-    wai
+    base base16-bytestring bytestring containers cryptohash-sha1
+    directory expiring-cache-map filepath http-types mime-types
+    old-locale semigroups text time wai
   ];
   testHaskellDepends = [
-    base
-    hspec
-    hspec-expectations-lifted
-    hspec-wai
-    http-types
-    mockery
-    scotty
-    wai-extra
+    base hspec hspec-expectations-lifted hspec-wai http-types mockery
+    scotty wai-extra
   ];
   testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;

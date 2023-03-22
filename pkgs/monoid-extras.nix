@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, criterion
-, groups
-, lib
-, semigroupoids
+{ mkDerivation, base, criterion, groups, lib, semigroupoids
 , semigroups
 }:
 mkDerivation {

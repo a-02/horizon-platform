@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, fail
-, lib
-, megaparsec
-, mtl
-, parsers
-, semigroups
-, text
-, transformers
+{ mkDerivation, base, fail, lib, megaparsec, mtl, parsers
+, semigroups, text, transformers
 }:
 mkDerivation {
   pname = "parsers-megaparsec";
@@ -19,14 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    fail
-    megaparsec
-    mtl
-    parsers
-    semigroups
-    text
-    transformers
+    base fail megaparsec mtl parsers semigroups text transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

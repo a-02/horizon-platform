@@ -1,11 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, lib
-, numtype-dk
-, tasty
-, tasty-hunit
-, tasty-quickcheck
+{ mkDerivation, QuickCheck, base, lib, numtype-dk, tasty
+, tasty-hunit, tasty-quickcheck
 }:
 mkDerivation {
   pname = "exact-pi";
@@ -16,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base numtype-dk ];
   testHaskellDepends = [
-    base
-    numtype-dk
-    QuickCheck
-    tasty
-    tasty-hunit
-    tasty-quickcheck
+    base numtype-dk QuickCheck tasty tasty-hunit tasty-quickcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

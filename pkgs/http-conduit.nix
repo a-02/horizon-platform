@@ -1,37 +1,9 @@
-{ mkDerivation
-, HUnit
-, aeson
-, attoparsec
-, base
-, blaze-builder
-, bytestring
-, case-insensitive
-, conduit
-, conduit-extra
-, connection
-, cookie
-, data-default-class
-, hspec
-, http-client
-, http-client-tls
-, http-types
-, lib
-, mtl
-, network
-, resourcet
-, streaming-commons
-, temporary
-, text
-, time
-, tls
-, transformers
-, unliftio
-, unliftio-core
-, utf8-string
-, wai
-, wai-conduit
-, warp
-, warp-tls
+{ mkDerivation, HUnit, aeson, attoparsec, base, blaze-builder
+, bytestring, case-insensitive, conduit, conduit-extra, connection
+, cookie, data-default-class, hspec, http-client, http-client-tls
+, http-types, lib, mtl, network, resourcet, streaming-commons
+, temporary, text, time, tls, transformers, unliftio, unliftio-core
+, utf8-string, wai, wai-conduit, warp, warp-tls
 }:
 mkDerivation {
   pname = "http-conduit";
@@ -41,49 +13,15 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    attoparsec
-    base
-    bytestring
-    conduit
-    conduit-extra
-    http-client
-    http-client-tls
-    http-types
-    mtl
-    resourcet
-    transformers
-    unliftio-core
+    aeson attoparsec base bytestring conduit conduit-extra http-client
+    http-client-tls http-types mtl resourcet transformers unliftio-core
   ];
   testHaskellDepends = [
-    aeson
-    base
-    blaze-builder
-    bytestring
-    case-insensitive
-    conduit
-    conduit-extra
-    connection
-    cookie
-    data-default-class
-    hspec
-    http-client
-    http-types
-    HUnit
-    network
-    resourcet
-    streaming-commons
-    temporary
-    text
-    time
-    tls
-    transformers
-    unliftio
-    utf8-string
-    wai
-    wai-conduit
-    warp
-    warp-tls
+    aeson base blaze-builder bytestring case-insensitive conduit
+    conduit-extra connection cookie data-default-class hspec
+    http-client http-types HUnit network resourcet streaming-commons
+    temporary text time tls transformers unliftio utf8-string wai
+    wai-conduit warp warp-tls
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

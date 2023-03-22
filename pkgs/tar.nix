@@ -1,18 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, array
-, base
-, bytestring
-, containers
-, deepseq
-, directory
-, fetchgit
-, filepath
-, lib
-, tasty
-, tasty-bench
-, tasty-quickcheck
-, time
+{ mkDerivation, QuickCheck, array, base, bytestring, containers
+, deepseq, directory, fetchgit, filepath, lib, tasty, tasty-bench
+, tasty-quickcheck, time
 }:
 mkDerivation {
   pname = "tar";
@@ -27,38 +15,15 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    bytestring
-    containers
-    deepseq
-    directory
-    filepath
-    time
+    array base bytestring containers deepseq directory filepath time
   ];
   testHaskellDepends = [
-    array
-    base
-    bytestring
-    containers
-    deepseq
-    directory
-    filepath
-    QuickCheck
-    tasty
-    tasty-quickcheck
-    time
+    array base bytestring containers deepseq directory filepath
+    QuickCheck tasty tasty-quickcheck time
   ];
   benchmarkHaskellDepends = [
-    array
-    base
-    bytestring
-    containers
-    deepseq
-    directory
-    filepath
-    tasty-bench
-    time
+    array base bytestring containers deepseq directory filepath
+    tasty-bench time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

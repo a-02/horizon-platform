@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, haskell-src-exts
-, language-haskell-extract
-, lib
-, regex-posix
-, template-haskell
-, test-framework
+{ mkDerivation, base, haskell-src-exts, language-haskell-extract
+, lib, regex-posix, template-haskell, test-framework
 }:
 mkDerivation {
   pname = "test-framework-th";
@@ -15,12 +9,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    haskell-src-exts
-    language-haskell-extract
-    regex-posix
-    template-haskell
-    test-framework
+    base haskell-src-exts language-haskell-extract regex-posix
+    template-haskell test-framework
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

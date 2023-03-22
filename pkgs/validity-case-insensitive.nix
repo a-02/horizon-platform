@@ -1,10 +1,5 @@
-{ mkDerivation
-, base
-, case-insensitive
-, genvalidity-hspec
-, hspec
-, lib
-, validity
+{ mkDerivation, base, case-insensitive, genvalidity-hspec, hspec
+, lib, validity
 }:
 mkDerivation {
   pname = "validity-case-insensitive";
@@ -15,11 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base case-insensitive validity ];
   testHaskellDepends = [
-    base
-    case-insensitive
-    genvalidity-hspec
-    hspec
-    validity
+    base case-insensitive genvalidity-hspec hspec validity
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

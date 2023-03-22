@@ -1,16 +1,6 @@
-{ mkDerivation
-, base
-, containers
-, effectful
-, effectful-core
-, fetchgit
-, hedgehog
-, kvstore-effectful
-, kvstore-effectful-spec
-, lib
-, tasty
-, tasty-hedgehog
-, transformers
+{ mkDerivation, base, containers, effectful, effectful-core
+, fetchgit, hedgehog, kvstore-effectful, kvstore-effectful-spec
+, lib, tasty, tasty-hedgehog, transformers
 }:
 mkDerivation {
   pname = "kvstore-effectful-statemap";
@@ -26,22 +16,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    effectful
-    kvstore-effectful
+    base containers effectful kvstore-effectful
   ];
   testHaskellDepends = [
-    base
-    containers
-    effectful
-    effectful-core
-    hedgehog
-    kvstore-effectful
-    kvstore-effectful-spec
-    tasty
-    tasty-hedgehog
-    transformers
+    base containers effectful effectful-core hedgehog kvstore-effectful
+    kvstore-effectful-spec tasty tasty-hedgehog transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

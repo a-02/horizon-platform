@@ -1,14 +1,6 @@
-{ mkDerivation
-, aeson
-, autodocodec
-, base
-, bytestring
-, lib
-, servant-multipart
-, servant-multipart-api
-, text
-, unordered-containers
-, vector
+{ mkDerivation, aeson, autodocodec, base, bytestring, lib
+, servant-multipart, servant-multipart-api, text
+, unordered-containers, vector
 }:
 mkDerivation {
   pname = "autodocodec-servant-multipart";
@@ -18,15 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    autodocodec
-    base
-    bytestring
-    servant-multipart
-    servant-multipart-api
-    text
-    unordered-containers
-    vector
+    aeson autodocodec base bytestring servant-multipart
+    servant-multipart-api text unordered-containers vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

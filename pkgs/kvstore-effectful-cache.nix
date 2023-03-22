@@ -1,19 +1,6 @@
-{ mkDerivation
-, base
-, cache
-, containers
-, effectful
-, effectful-cache
-, effectful-core
-, fetchgit
-, hashable
-, hedgehog
-, kvstore-effectful
-, kvstore-effectful-spec
-, lib
-, tasty
-, tasty-hedgehog
-, transformers
+{ mkDerivation, base, cache, containers, effectful, effectful-cache
+, effectful-core, fetchgit, hashable, hedgehog, kvstore-effectful
+, kvstore-effectful-spec, lib, tasty, tasty-hedgehog, transformers
 }:
 mkDerivation {
   pname = "kvstore-effectful-cache";
@@ -29,28 +16,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    cache
-    containers
-    effectful
-    effectful-cache
-    hashable
+    base cache containers effectful effectful-cache hashable
     kvstore-effectful
   ];
   testHaskellDepends = [
-    base
-    cache
-    containers
-    effectful
-    effectful-cache
-    effectful-core
-    hashable
-    hedgehog
-    kvstore-effectful
-    kvstore-effectful-spec
-    tasty
-    tasty-hedgehog
-    transformers
+    base cache containers effectful effectful-cache effectful-core
+    hashable hedgehog kvstore-effectful kvstore-effectful-spec tasty
+    tasty-hedgehog transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

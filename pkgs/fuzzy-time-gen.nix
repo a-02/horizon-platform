@@ -1,18 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, containers
-, criterion
-, fuzzy-time
-, genvalidity
-, genvalidity-criterion
-, genvalidity-hspec
-, genvalidity-text
-, genvalidity-time
-, hspec
-, lib
-, megaparsec
-, text
+{ mkDerivation, QuickCheck, base, containers, criterion, fuzzy-time
+, genvalidity, genvalidity-criterion, genvalidity-hspec
+, genvalidity-text, genvalidity-time, hspec, lib, megaparsec, text
 , time
 }:
 mkDerivation {
@@ -23,33 +11,15 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    fuzzy-time
-    genvalidity
-    genvalidity-time
-    megaparsec
-    QuickCheck
-    time
+    base containers fuzzy-time genvalidity genvalidity-time megaparsec
+    QuickCheck time
   ];
   testHaskellDepends = [
-    base
-    fuzzy-time
-    genvalidity
-    genvalidity-hspec
-    genvalidity-text
-    genvalidity-time
-    hspec
-    megaparsec
-    QuickCheck
-    text
-    time
+    base fuzzy-time genvalidity genvalidity-hspec genvalidity-text
+    genvalidity-time hspec megaparsec QuickCheck text time
   ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    fuzzy-time
-    genvalidity-criterion
+    base criterion fuzzy-time genvalidity-criterion
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

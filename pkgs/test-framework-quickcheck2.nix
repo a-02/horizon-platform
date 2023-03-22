@@ -1,10 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, extensible-exceptions
-, lib
-, random
-, test-framework
+{ mkDerivation, QuickCheck, base, extensible-exceptions, lib
+, random, test-framework
 }:
 mkDerivation {
   pname = "test-framework-quickcheck2";
@@ -16,11 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    extensible-exceptions
-    QuickCheck
-    random
-    test-framework
+    base extensible-exceptions QuickCheck random test-framework
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,10 +1,4 @@
-{ mkDerivation
-, HUnit
-, array
-, base
-, containers
-, criterion
-, deepseq
+{ mkDerivation, HUnit, array, base, containers, criterion, deepseq
 , lib
 }:
 mkDerivation {

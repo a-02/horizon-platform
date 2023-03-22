@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, cassava
-, hspec
-, hspec-megaparsec
-, lib
-, megaparsec
-, unordered-containers
-, vector
+{ mkDerivation, base, bytestring, cassava, hspec, hspec-megaparsec
+, lib, megaparsec, unordered-containers, vector
 }:
 mkDerivation {
   pname = "cassava-megaparsec";
@@ -19,20 +11,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    cassava
-    megaparsec
-    unordered-containers
-    vector
+    base bytestring cassava megaparsec unordered-containers vector
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    cassava
-    hspec
-    hspec-megaparsec
-    vector
+    base bytestring cassava hspec hspec-megaparsec vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

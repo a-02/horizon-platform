@@ -1,14 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, genvalidity
-, genvalidity-hspec
-, genvalidity-time
-, hspec
-, lib
-, time
-, validity
-, validity-time
+{ mkDerivation, QuickCheck, base, genvalidity, genvalidity-hspec
+, genvalidity-time, hspec, lib, time, validity, validity-time
 }:
 mkDerivation {
   pname = "pretty-relative-time";
@@ -19,15 +10,8 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base time validity validity-time ];
   testHaskellDepends = [
-    base
-    genvalidity
-    genvalidity-hspec
-    genvalidity-time
-    hspec
-    QuickCheck
-    time
-    validity
-    validity-time
+    base genvalidity genvalidity-hspec genvalidity-time hspec
+    QuickCheck time validity validity-time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

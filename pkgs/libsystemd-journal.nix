@@ -1,20 +1,6 @@
-{ mkDerivation
-, base
-, bytestring
-, hashable
-, hsyslog
-, lib
-, pipes
-, pipes-safe
-, semigroups
-, systemd
-, text
-, transformers
-, uniplate
-, unix-bytestring
-, unordered-containers
-, uuid
-, vector
+{ mkDerivation, base, bytestring, hashable, hsyslog, lib, pipes
+, pipes-safe, semigroups, systemd, text, transformers, uniplate
+, unix-bytestring, unordered-containers, uuid, vector
 }:
 mkDerivation {
   pname = "libsystemd-journal";
@@ -24,19 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    hashable
-    hsyslog
-    pipes
-    pipes-safe
-    semigroups
-    text
-    transformers
-    uniplate
-    unix-bytestring
-    unordered-containers
-    uuid
+    base bytestring hashable hsyslog pipes pipes-safe semigroups text
+    transformers uniplate unix-bytestring unordered-containers uuid
     vector
   ];
   libraryPkgconfigDepends = [ systemd ];

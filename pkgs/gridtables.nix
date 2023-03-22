@@ -1,13 +1,5 @@
-{ mkDerivation
-, array
-, base
-, containers
-, doclayout
-, lib
-, parsec
-, tasty
-, tasty-hunit
-, text
+{ mkDerivation, array, base, containers, doclayout, lib, parsec
+, tasty, tasty-hunit, text
 }:
 mkDerivation {
   pname = "gridtables";
@@ -17,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    containers
-    doclayout
-    parsec
-    text
+    array base containers doclayout parsec text
   ];
   testHaskellDepends = [ array base parsec tasty tasty-hunit text ];
   enableLibraryProfiling = true;

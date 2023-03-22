@@ -1,19 +1,6 @@
-{ mkDerivation
-, RSA
-, SHA
-, base
-, base64-bytestring
-, blaze-builder
-, bytestring
-, crypto-pubkey-types
-, data-default
-, http-client
-, http-types
-, lib
-, random
-, time
-, transformers
-, transformers-compat
+{ mkDerivation, RSA, SHA, base, base64-bytestring, blaze-builder
+, bytestring, crypto-pubkey-types, data-default, http-client
+, http-types, lib, random, time, transformers, transformers-compat
 }:
 mkDerivation {
   pname = "authenticate-oauth";
@@ -25,20 +12,9 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base64-bytestring
-    blaze-builder
-    bytestring
-    crypto-pubkey-types
-    data-default
-    http-client
-    http-types
-    random
-    RSA
-    SHA
-    time
-    transformers
-    transformers-compat
+    base base64-bytestring blaze-builder bytestring crypto-pubkey-types
+    data-default http-client http-types random RSA SHA time
+    transformers transformers-compat
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

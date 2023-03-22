@@ -1,14 +1,5 @@
-{ mkDerivation
-, HUnit
-, base
-, bytestring
-, criterion
-, deepseq
-, hashable
-, lib
-, test-framework
-, test-framework-hunit
-, text
+{ mkDerivation, HUnit, base, bytestring, criterion, deepseq
+, hashable, lib, test-framework, test-framework-hunit, text
 }:
 mkDerivation {
   pname = "case-insensitive";
@@ -19,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring deepseq hashable text ];
   testHaskellDepends = [
-    base
-    bytestring
-    HUnit
-    test-framework
-    test-framework-hunit
-    text
+    base bytestring HUnit test-framework test-framework-hunit text
   ];
   benchmarkHaskellDepends = [ base bytestring criterion deepseq ];
   enableLibraryProfiling = true;

@@ -1,13 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, criterion
-, genvalidity
-, genvalidity-criterion
-, genvalidity-hspec
-, hspec
-, lib
-, time
+{ mkDerivation, QuickCheck, base, criterion, genvalidity
+, genvalidity-criterion, genvalidity-hspec, hspec, lib, time
 , validity-time
 }:
 mkDerivation {
@@ -18,18 +10,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    genvalidity
-    QuickCheck
-    time
-    validity-time
+    base genvalidity QuickCheck time validity-time
   ];
   testHaskellDepends = [ base genvalidity-hspec hspec time ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    genvalidity-criterion
-    time
+    base criterion genvalidity-criterion time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

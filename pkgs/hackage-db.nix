@@ -1,16 +1,5 @@
-{ mkDerivation
-, Cabal
-, aeson
-, base
-, bytestring
-, containers
-, directory
-, exceptions
-, filepath
-, lib
-, tar
-, time
-, utf8-string
+{ mkDerivation, Cabal, aeson, base, bytestring, containers
+, directory, exceptions, filepath, lib, tar, time, utf8-string
 }:
 mkDerivation {
   pname = "hackage-db";
@@ -22,17 +11,8 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    bytestring
-    Cabal
-    containers
-    directory
-    exceptions
-    filepath
-    tar
-    time
-    utf8-string
+    aeson base bytestring Cabal containers directory exceptions
+    filepath tar time utf8-string
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

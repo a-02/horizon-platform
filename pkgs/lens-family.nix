@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, containers
-, lens-family-core
-, lib
-, mtl
+{ mkDerivation, base, containers, lens-family-core, lib, mtl
 , transformers
 }:
 mkDerivation {
@@ -14,11 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    lens-family-core
-    mtl
-    transformers
+    base containers lens-family-core mtl transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

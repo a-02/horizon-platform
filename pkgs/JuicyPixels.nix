@@ -1,15 +1,5 @@
-{ mkDerivation
-, base
-, binary
-, bytestring
-, containers
-, deepseq
-, lib
-, mtl
-, primitive
-, transformers
-, vector
-, zlib
+{ mkDerivation, base, binary, bytestring, containers, deepseq, lib
+, mtl, primitive, transformers, vector, zlib
 }:
 mkDerivation {
   pname = "JuicyPixels";
@@ -19,16 +9,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    binary
-    bytestring
-    containers
-    deepseq
-    mtl
-    primitive
-    transformers
-    vector
-    zlib
+    base binary bytestring containers deepseq mtl primitive
+    transformers vector zlib
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

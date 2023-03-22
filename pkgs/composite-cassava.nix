@@ -1,14 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, cassava
-, composite-base
-, lib
-, tasty
-, tasty-hunit
-, text
-, unordered-containers
-, vector
+{ mkDerivation, base, bytestring, cassava, composite-base, lib
+, tasty, tasty-hunit, text, unordered-containers, vector
 }:
 mkDerivation {
   pname = "composite-cassava";
@@ -18,23 +9,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    cassava
-    composite-base
-    text
-    unordered-containers
-    vector
+    base cassava composite-base text unordered-containers vector
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    cassava
-    composite-base
-    tasty
-    tasty-hunit
-    text
-    unordered-containers
-    vector
+    base bytestring cassava composite-base tasty tasty-hunit text
+    unordered-containers vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

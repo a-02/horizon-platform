@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, lib
-, text
-, validity
-, validity-bytestring
-, validity-text
+{ mkDerivation, base, bytestring, lib, text, validity
+, validity-bytestring, validity-text
 }:
 mkDerivation {
   pname = "safe-coloured-text";
@@ -15,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    text
-    validity
-    validity-bytestring
-    validity-text
+    base bytestring text validity validity-bytestring validity-text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

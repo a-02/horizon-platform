@@ -1,15 +1,5 @@
-{ mkDerivation
-, aeson
-, attoparsec
-, base
-, base-compat
-, bytestring
-, cmdargs
-, lib
-, scientific
-, text
-, unordered-containers
-, vector
+{ mkDerivation, aeson, attoparsec, base, base-compat, bytestring
+, cmdargs, lib, scientific, text, unordered-containers, vector
 }:
 mkDerivation {
   pname = "aeson-pretty";
@@ -21,21 +11,11 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    base-compat
-    bytestring
-    scientific
-    text
-    unordered-containers
-    vector
+    aeson base base-compat bytestring scientific text
+    unordered-containers vector
   ];
   executableHaskellDepends = [
-    aeson
-    attoparsec
-    base
-    bytestring
-    cmdargs
+    aeson attoparsec base bytestring cmdargs
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

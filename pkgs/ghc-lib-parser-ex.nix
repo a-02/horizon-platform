@@ -1,15 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, containers
-, directory
-, extra
-, filepath
-, ghc-lib-parser
-, lib
-, tasty
-, tasty-hunit
-, uniplate
+{ mkDerivation, base, bytestring, containers, directory, extra
+, filepath, ghc-lib-parser, lib, tasty, tasty-hunit, uniplate
 }:
 mkDerivation {
   pname = "ghc-lib-parser-ex";
@@ -19,20 +9,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    ghc-lib-parser
-    uniplate
+    base bytestring containers ghc-lib-parser uniplate
   ];
   testHaskellDepends = [
-    base
-    directory
-    extra
-    filepath
-    ghc-lib-parser
-    tasty
-    tasty-hunit
+    base directory extra filepath ghc-lib-parser tasty tasty-hunit
     uniplate
   ];
   enableLibraryProfiling = true;

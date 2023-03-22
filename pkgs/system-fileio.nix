@@ -1,14 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, chell
-, lib
-, system-filepath
-, temporary
-, text
-, time
-, transformers
-, unix
+{ mkDerivation, base, bytestring, chell, lib, system-filepath
+, temporary, text, time, transformers, unix
 }:
 mkDerivation {
   pname = "system-fileio";
@@ -18,23 +9,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    system-filepath
-    text
-    time
-    unix
+    base bytestring system-filepath text time unix
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    chell
-    system-filepath
-    temporary
-    text
-    time
-    transformers
-    unix
+    base bytestring chell system-filepath temporary text time
+    transformers unix
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

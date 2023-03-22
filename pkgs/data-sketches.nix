@@ -1,19 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, criterion
-, data-sketches-core
-, ghc-prim
-, hspec
-, hspec-discover
-, lib
-, mtl
-, mwc-random
-, pretty-show
-, primitive
-, statistics
-, vector
-, vector-algorithms
+{ mkDerivation, QuickCheck, base, criterion, data-sketches-core
+, ghc-prim, hspec, hspec-discover, lib, mtl, mwc-random
+, pretty-show, primitive, statistics, vector, vector-algorithms
 }:
 mkDerivation {
   pname = "data-sketches";
@@ -23,41 +10,18 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    data-sketches-core
-    ghc-prim
-    mtl
-    mwc-random
-    primitive
-    vector
+    base data-sketches-core ghc-prim mtl mwc-random primitive vector
     vector-algorithms
   ];
   testHaskellDepends = [
-    base
-    data-sketches-core
-    ghc-prim
-    hspec
-    hspec-discover
-    mtl
-    mwc-random
-    pretty-show
-    primitive
-    QuickCheck
-    statistics
-    vector
+    base data-sketches-core ghc-prim hspec hspec-discover mtl
+    mwc-random pretty-show primitive QuickCheck statistics vector
     vector-algorithms
   ];
   testToolDepends = [ hspec-discover ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    data-sketches-core
-    ghc-prim
-    mtl
-    mwc-random
-    primitive
-    vector
-    vector-algorithms
+    base criterion data-sketches-core ghc-prim mtl mwc-random primitive
+    vector vector-algorithms
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

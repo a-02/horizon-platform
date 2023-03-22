@@ -1,16 +1,5 @@
-{ mkDerivation
-, base
-, erf
-, lib
-, math-functions
-, monad-loops
-, mtl
-, random
-, random-shuffle
-, rvar
-, syb
-, template-haskell
-, transformers
+{ mkDerivation, base, erf, lib, math-functions, monad-loops, mtl
+, random, random-shuffle, rvar, syb, template-haskell, transformers
 , vector
 }:
 mkDerivation {
@@ -21,18 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    erf
-    math-functions
-    monad-loops
-    mtl
-    random
-    random-shuffle
-    rvar
-    syb
-    template-haskell
-    transformers
-    vector
+    base erf math-functions monad-loops mtl random random-shuffle rvar
+    syb template-haskell transformers vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

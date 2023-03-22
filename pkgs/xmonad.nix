@@ -1,19 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, X11
-, base
-, containers
-, data-default-class
-, directory
-, filepath
-, lib
-, mtl
-, process
-, quickcheck-classes
-, setlocale
-, time
-, transformers
-, unix
+{ mkDerivation, QuickCheck, X11, base, containers
+, data-default-class, directory, filepath, lib, mtl, process
+, quickcheck-classes, setlocale, time, transformers, unix
 }:
 mkDerivation {
   pname = "xmonad";
@@ -25,26 +12,12 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    data-default-class
-    directory
-    filepath
-    mtl
-    process
-    setlocale
-    time
-    transformers
-    unix
-    X11
+    base containers data-default-class directory filepath mtl process
+    setlocale time transformers unix X11
   ];
   executableHaskellDepends = [ base ];
   testHaskellDepends = [
-    base
-    containers
-    QuickCheck
-    quickcheck-classes
-    X11
+    base containers QuickCheck quickcheck-classes X11
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

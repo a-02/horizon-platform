@@ -1,24 +1,8 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, containers
-, criterion
-, dirforest
-, fetchgit
-, filepath
-, genvalidity
-, genvalidity-bytestring
-, genvalidity-containers
-, genvalidity-criterion
-, genvalidity-hspec
-, genvalidity-hspec-aeson
-, genvalidity-path
-, genvalidity-text
-, hspec
-, lib
-, path
-, path-io
+{ mkDerivation, QuickCheck, base, bytestring, containers, criterion
+, dirforest, fetchgit, filepath, genvalidity
+, genvalidity-bytestring, genvalidity-containers
+, genvalidity-criterion, genvalidity-hspec, genvalidity-hspec-aeson
+, genvalidity-path, genvalidity-text, hspec, lib, path, path-io
 , pretty-show
 }:
 mkDerivation {
@@ -35,37 +19,16 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    dirforest
-    filepath
-    genvalidity
-    genvalidity-containers
-    genvalidity-path
-    path
-    QuickCheck
+    base containers dirforest filepath genvalidity
+    genvalidity-containers genvalidity-path path QuickCheck
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    containers
-    dirforest
-    filepath
-    genvalidity-bytestring
-    genvalidity-hspec
-    genvalidity-hspec-aeson
-    hspec
-    path
-    path-io
-    pretty-show
-    QuickCheck
+    base bytestring containers dirforest filepath
+    genvalidity-bytestring genvalidity-hspec genvalidity-hspec-aeson
+    hspec path path-io pretty-show QuickCheck
   ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    dirforest
-    genvalidity
-    genvalidity-criterion
+    base criterion dirforest genvalidity genvalidity-criterion
     genvalidity-text
   ];
   enableLibraryProfiling = true;

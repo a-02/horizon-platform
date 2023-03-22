@@ -1,21 +1,7 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, base
-, base-compat
-, deepseq
-, hashable
-, indexed-traversable
-, lens
-, lib
-, optics-core
-, optics-extra
-, semigroupoids
-, tasty
-, tasty-quickcheck
-, text
-, transformers
-, unordered-containers
+{ mkDerivation, QuickCheck, aeson, base, base-compat, deepseq
+, hashable, indexed-traversable, lens, lib, optics-core
+, optics-extra, semigroupoids, tasty, tasty-quickcheck, text
+, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "insert-ordered-containers";
@@ -27,31 +13,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    deepseq
-    hashable
-    indexed-traversable
-    lens
-    optics-core
-    optics-extra
-    semigroupoids
-    text
-    transformers
-    unordered-containers
+    aeson base deepseq hashable indexed-traversable lens optics-core
+    optics-extra semigroupoids text transformers unordered-containers
   ];
   testHaskellDepends = [
-    aeson
-    base
-    base-compat
-    hashable
-    lens
-    QuickCheck
-    semigroupoids
-    tasty
-    tasty-quickcheck
-    text
-    unordered-containers
+    aeson base base-compat hashable lens QuickCheck semigroupoids tasty
+    tasty-quickcheck text unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,17 +1,6 @@
-{ mkDerivation
-, base
-, basement
-, bytestring
-, containers
-, data-default-class
-, lib
-, network
-, socks
-, tls
-, x509
-, x509-store
-, x509-system
-, x509-validation
+{ mkDerivation, base, basement, bytestring, containers
+, data-default-class, lib, network, socks, tls, x509, x509-store
+, x509-system, x509-validation
 }:
 mkDerivation {
   pname = "connection";
@@ -23,18 +12,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    basement
-    bytestring
-    containers
-    data-default-class
-    network
-    socks
-    tls
-    x509
-    x509-store
-    x509-system
-    x509-validation
+    base basement bytestring containers data-default-class network
+    socks tls x509 x509-store x509-system x509-validation
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

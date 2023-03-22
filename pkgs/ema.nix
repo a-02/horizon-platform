@@ -1,34 +1,10 @@
-{ mkDerivation
-, aeson
-, async
-, base
-, constraints-extras
-, data-default
-, dependent-sum
-, dependent-sum-template
-, directory
-, file-embed
-, filepath
-, filepattern
-, http-types
-, lib
-, lvar
-, monad-logger
-, monad-logger-extras
-, mtl
-, neat-interpolation
-, optics-core
-, optparse-applicative
-, relude
-, sop-core
-, text
-, unliftio
-, url-slug
-, wai
-, wai-middleware-static
-, wai-websockets
-, warp
-, websockets
+{ mkDerivation, aeson, async, base, constraints-extras
+, data-default, dependent-sum, dependent-sum-template, directory
+, file-embed, filepath, filepattern, http-types, lib, lvar
+, monad-logger, monad-logger-extras, mtl, neat-interpolation
+, optics-core, optparse-applicative, relude, sop-core, text
+, unliftio, url-slug, wai, wai-middleware-static, wai-websockets
+, warp, websockets
 }:
 mkDerivation {
   pname = "ema";
@@ -38,35 +14,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    aeson
-    async
-    base
-    constraints-extras
-    data-default
-    dependent-sum
-    dependent-sum-template
-    directory
-    file-embed
-    filepath
-    filepattern
-    http-types
-    lvar
-    monad-logger
-    monad-logger-extras
-    mtl
-    neat-interpolation
-    optics-core
-    optparse-applicative
-    relude
-    sop-core
-    text
-    unliftio
-    url-slug
-    wai
-    wai-middleware-static
-    wai-websockets
-    warp
-    websockets
+    aeson async base constraints-extras data-default dependent-sum
+    dependent-sum-template directory file-embed filepath filepattern
+    http-types lvar monad-logger monad-logger-extras mtl
+    neat-interpolation optics-core optparse-applicative relude sop-core
+    text unliftio url-slug wai wai-middleware-static wai-websockets
+    warp websockets
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

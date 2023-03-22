@@ -1,11 +1,5 @@
-{ mkDerivation
-, HUnit
-, base
-, extensible-exceptions
-, lib
-, test-framework
-, test-framework-hunit
-, transformers
+{ mkDerivation, HUnit, base, extensible-exceptions, lib
+, test-framework, test-framework-hunit, transformers
 }:
 mkDerivation {
   pname = "monad-peel";
@@ -15,17 +9,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    extensible-exceptions
-    transformers
+    base extensible-exceptions transformers
   ];
   testHaskellDepends = [
-    base
-    extensible-exceptions
-    HUnit
-    test-framework
-    test-framework-hunit
-    transformers
+    base extensible-exceptions HUnit test-framework
+    test-framework-hunit transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

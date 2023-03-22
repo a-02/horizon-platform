@@ -1,31 +1,8 @@
-{ mkDerivation
-, ansi-terminal
-, async
-, barbies
-, base
-, bytestring
-, concurrent-output
-, containers
-, deepseq
-, directory
-, erf
-, exceptions
-, lib
-, lifted-async
-, mmorph
-, monad-control
-, mtl
-, pretty-show
-, primitive
-, random
-, resourcet
-, stm
-, template-haskell
-, text
-, time
-, transformers
-, transformers-base
-, wl-pprint-annotated
+{ mkDerivation, ansi-terminal, async, barbies, base, bytestring
+, concurrent-output, containers, deepseq, directory, erf
+, exceptions, lib, lifted-async, mmorph, monad-control, mtl
+, pretty-show, primitive, random, resourcet, stm, template-haskell
+, text, time, transformers, transformers-base, wl-pprint-annotated
 }:
 mkDerivation {
   pname = "hedgehog";
@@ -35,41 +12,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ansi-terminal
-    async
-    barbies
-    base
-    bytestring
-    concurrent-output
-    containers
-    deepseq
-    directory
-    erf
-    exceptions
-    lifted-async
-    mmorph
-    monad-control
-    mtl
-    pretty-show
-    primitive
-    random
-    resourcet
-    stm
-    template-haskell
-    text
-    time
-    transformers
-    transformers-base
+    ansi-terminal async barbies base bytestring concurrent-output
+    containers deepseq directory erf exceptions lifted-async mmorph
+    monad-control mtl pretty-show primitive random resourcet stm
+    template-haskell text time transformers transformers-base
     wl-pprint-annotated
   ];
   testHaskellDepends = [
-    base
-    containers
-    mmorph
-    mtl
-    pretty-show
-    text
-    transformers
+    base containers mmorph mtl pretty-show text transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

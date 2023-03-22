@@ -1,17 +1,6 @@
-{ mkDerivation
-, base
-, bytestring
-, case-insensitive
-, file-embed
-, http-types
-, lib
-, network
-, text
-, transformers
-, wai
-, wai-app-static
-, warp
-, websockets
+{ mkDerivation, base, bytestring, case-insensitive, file-embed
+, http-types, lib, network, text, transformers, wai, wai-app-static
+, warp, websockets
 }:
 mkDerivation {
   pname = "wai-websockets";
@@ -21,28 +10,12 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    case-insensitive
-    http-types
-    network
-    transformers
-    wai
-    websockets
+    base bytestring case-insensitive http-types network transformers
+    wai websockets
   ];
   executableHaskellDepends = [
-    base
-    bytestring
-    case-insensitive
-    file-embed
-    http-types
-    network
-    text
-    transformers
-    wai
-    wai-app-static
-    warp
-    websockets
+    base bytestring case-insensitive file-embed http-types network text
+    transformers wai wai-app-static warp websockets
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

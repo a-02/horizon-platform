@@ -1,15 +1,5 @@
-{ mkDerivation
-, base
-, base-compat
-, directory
-, exceptions
-, filepath
-, lib
-, random
-, tasty
-, tasty-hunit
-, transformers
-, unix
+{ mkDerivation, base, base-compat, directory, exceptions, filepath
+, lib, random, tasty, tasty-hunit, transformers, unix
 }:
 mkDerivation {
   pname = "temporary";
@@ -19,22 +9,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    directory
-    exceptions
-    filepath
-    random
-    transformers
-    unix
+    base directory exceptions filepath random transformers unix
   ];
   testHaskellDepends = [
-    base
-    base-compat
-    directory
-    filepath
-    tasty
-    tasty-hunit
-    unix
+    base base-compat directory filepath tasty tasty-hunit unix
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

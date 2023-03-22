@@ -1,26 +1,7 @@
-{ mkDerivation
-, Cabal
-, Diff
-, aeson
-, aeson-pretty
-, base
-, bytestring
-, dhall
-, dhall-json
-, directory
-, filepath
-, hpack
-, lib
-, megaparsec
-, microlens
-, optparse-applicative
-, prettyprinter
-, tasty
-, tasty-golden
-, text
-, transformers
-, utf8-string
-, yaml
+{ mkDerivation, Cabal, Diff, aeson, aeson-pretty, base, bytestring
+, dhall, dhall-json, directory, filepath, hpack, lib, megaparsec
+, microlens, optparse-applicative, prettyprinter, tasty
+, tasty-golden, text, transformers, utf8-string, yaml
 }:
 mkDerivation {
   pname = "hpack-dhall";
@@ -30,59 +11,18 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    aeson-pretty
-    base
-    bytestring
-    dhall
-    dhall-json
-    filepath
-    hpack
-    megaparsec
-    microlens
-    prettyprinter
-    text
-    transformers
-    yaml
+    aeson aeson-pretty base bytestring dhall dhall-json filepath hpack
+    megaparsec microlens prettyprinter text transformers yaml
   ];
   executableHaskellDepends = [
-    aeson
-    aeson-pretty
-    base
-    bytestring
-    dhall
-    dhall-json
-    filepath
-    hpack
-    megaparsec
-    microlens
-    optparse-applicative
-    prettyprinter
-    text
-    transformers
-    yaml
+    aeson aeson-pretty base bytestring dhall dhall-json filepath hpack
+    megaparsec microlens optparse-applicative prettyprinter text
+    transformers yaml
   ];
   testHaskellDepends = [
-    aeson
-    aeson-pretty
-    base
-    bytestring
-    Cabal
-    dhall
-    dhall-json
-    Diff
-    directory
-    filepath
-    hpack
-    megaparsec
-    microlens
-    prettyprinter
-    tasty
-    tasty-golden
-    text
-    transformers
-    utf8-string
-    yaml
+    aeson aeson-pretty base bytestring Cabal dhall dhall-json Diff
+    directory filepath hpack megaparsec microlens prettyprinter tasty
+    tasty-golden text transformers utf8-string yaml
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, containers
-, deepseq
-, lib
-, process
-, random
-, splitmix
-, template-haskell
-, transformers
+{ mkDerivation, base, containers, deepseq, lib, process, random
+, splitmix, template-haskell, transformers
 }:
 mkDerivation {
   pname = "QuickCheck";
@@ -17,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    deepseq
-    random
-    splitmix
-    template-haskell
+    base containers deepseq random splitmix template-haskell
     transformers
   ];
   testHaskellDepends = [ base deepseq process ];

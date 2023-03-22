@@ -1,11 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, criterion
-, deepseq
-, genvalidity
-, lib
-, vector
+{ mkDerivation, QuickCheck, base, criterion, deepseq, genvalidity
+, lib, vector
 }:
 mkDerivation {
   pname = "genvalidity-criterion";
@@ -15,18 +9,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    criterion
-    deepseq
-    genvalidity
-    QuickCheck
-    vector
+    base criterion deepseq genvalidity QuickCheck vector
   ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    genvalidity
-    QuickCheck
+    base criterion genvalidity QuickCheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

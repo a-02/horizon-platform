@@ -1,17 +1,6 @@
-{ mkDerivation
-, adjunctions
-, base
-, containers
-, distributive
-, dual-tree
-, lens
-, lib
-, linear
-, monoid-extras
-, mtl
-, profunctors
-, semigroups
-, unordered-containers
+{ mkDerivation, adjunctions, base, containers, distributive
+, dual-tree, lens, lib, linear, monoid-extras, mtl, profunctors
+, semigroups, unordered-containers
 }:
 mkDerivation {
   pname = "diagrams-core";
@@ -23,18 +12,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    adjunctions
-    base
-    containers
-    distributive
-    dual-tree
-    lens
-    linear
-    monoid-extras
-    mtl
-    profunctors
-    semigroups
-    unordered-containers
+    adjunctions base containers distributive dual-tree lens linear
+    monoid-extras mtl profunctors semigroups unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

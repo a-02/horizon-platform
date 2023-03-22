@@ -1,22 +1,6 @@
-{ mkDerivation
-, aeson
-, base
-, containers
-, deepseq
-, extra
-, filepath
-, ghc
-, ghc-boot-th
-, ghc-exactprint
-, ghcide
-, hls-graph
-, hls-plugin-api
-, hls-test-utils
-, lens
-, lib
-, lsp
-, lsp-types
-, text
+{ mkDerivation, aeson, base, containers, deepseq, extra, filepath
+, ghc, ghc-boot-th, ghc-exactprint, ghcide, hls-graph
+, hls-plugin-api, hls-test-utils, lens, lib, lsp, lsp-types, text
 , transformers
 }:
 mkDerivation {
@@ -27,30 +11,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    containers
-    deepseq
-    extra
-    ghc
-    ghc-boot-th
-    ghc-exactprint
-    ghcide
-    hls-graph
-    hls-plugin-api
-    lens
-    lsp
-    text
-    transformers
+    aeson base containers deepseq extra ghc ghc-boot-th ghc-exactprint
+    ghcide hls-graph hls-plugin-api lens lsp text transformers
   ];
   testHaskellDepends = [
-    aeson
-    base
-    filepath
-    ghcide
-    hls-plugin-api
-    hls-test-utils
-    lens
+    aeson base filepath ghcide hls-plugin-api hls-test-utils lens
     lsp-types
   ];
   enableLibraryProfiling = true;

@@ -1,11 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, ansi-wl-pprint
-, base
-, lib
-, process
-, transformers
-, transformers-compat
+{ mkDerivation, QuickCheck, ansi-wl-pprint, base, lib, process
+, transformers, transformers-compat
 }:
 mkDerivation {
   pname = "optparse-applicative";
@@ -15,11 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ansi-wl-pprint
-    base
-    process
-    transformers
-    transformers-compat
+    ansi-wl-pprint base process transformers transformers-compat
   ];
   testHaskellDepends = [ base QuickCheck ];
   enableLibraryProfiling = true;

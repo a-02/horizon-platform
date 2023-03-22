@@ -1,20 +1,6 @@
-{ mkDerivation
-, base
-, bytestring
-, deepseq
-, exceptions
-, ghc-prim
-, lib
-, mmorph
-, mtl
-, resourcet
-, smallcheck
-, streaming
-, tasty
-, tasty-hunit
-, tasty-smallcheck
-, transformers
-, transformers-base
+{ mkDerivation, base, bytestring, deepseq, exceptions, ghc-prim
+, lib, mmorph, mtl, resourcet, smallcheck, streaming, tasty
+, tasty-hunit, tasty-smallcheck, transformers, transformers-base
 }:
 mkDerivation {
   pname = "streaming-bytestring";
@@ -24,28 +10,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    deepseq
-    exceptions
-    ghc-prim
-    mmorph
-    mtl
-    resourcet
-    streaming
-    transformers
-    transformers-base
+    base bytestring deepseq exceptions ghc-prim mmorph mtl resourcet
+    streaming transformers transformers-base
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    resourcet
-    smallcheck
-    streaming
-    tasty
-    tasty-hunit
-    tasty-smallcheck
-    transformers
+    base bytestring resourcet smallcheck streaming tasty tasty-hunit
+    tasty-smallcheck transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

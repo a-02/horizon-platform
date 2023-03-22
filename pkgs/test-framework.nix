@@ -1,20 +1,6 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, ansi-terminal
-, ansi-wl-pprint
-, base
-, bytestring
-, containers
-, hostname
-, lib
-, libxml
-, old-locale
-, random
-, regex-posix
-, semigroups
-, time
-, xml
+{ mkDerivation, HUnit, QuickCheck, ansi-terminal, ansi-wl-pprint
+, base, bytestring, containers, hostname, lib, libxml, old-locale
+, random, regex-posix, semigroups, time, xml
 }:
 mkDerivation {
   pname = "test-framework";
@@ -26,33 +12,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ansi-terminal
-    ansi-wl-pprint
-    base
-    containers
-    hostname
-    old-locale
-    random
-    regex-posix
-    time
-    xml
+    ansi-terminal ansi-wl-pprint base containers hostname old-locale
+    random regex-posix time xml
   ];
   testHaskellDepends = [
-    ansi-terminal
-    ansi-wl-pprint
-    base
-    bytestring
-    containers
-    hostname
-    HUnit
-    libxml
-    old-locale
-    QuickCheck
-    random
-    regex-posix
-    semigroups
-    time
-    xml
+    ansi-terminal ansi-wl-pprint base bytestring containers hostname
+    HUnit libxml old-locale QuickCheck random regex-posix semigroups
+    time xml
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

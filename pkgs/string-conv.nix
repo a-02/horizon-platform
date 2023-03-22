@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, lib
-, quickcheck-instances
-, tasty
-, tasty-quickcheck
-, text
+{ mkDerivation, base, bytestring, lib, quickcheck-instances, tasty
+, tasty-quickcheck, text
 }:
 mkDerivation {
   pname = "string-conv";
@@ -16,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring text ];
   testHaskellDepends = [
-    base
-    bytestring
-    quickcheck-instances
-    tasty
-    tasty-quickcheck
-    text
+    base bytestring quickcheck-instances tasty tasty-quickcheck text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

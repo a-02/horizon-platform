@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, containers
-, ghc-prim
-, lib
-, text
+{ mkDerivation, base, containers, ghc-prim, lib, text
 , unordered-containers
 }:
 mkDerivation {
@@ -16,11 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    ghc-prim
-    text
-    unordered-containers
+    base containers ghc-prim text unordered-containers
   ];
   benchmarkHaskellDepends = [ base ];
   enableLibraryProfiling = true;

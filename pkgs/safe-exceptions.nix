@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, deepseq
-, exceptions
-, hspec
-, lib
-, transformers
+{ mkDerivation, base, deepseq, exceptions, hspec, lib, transformers
 , void
 }:
 mkDerivation {

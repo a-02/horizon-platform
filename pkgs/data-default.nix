@@ -1,10 +1,6 @@
-{ mkDerivation
-, base
-, data-default-class
-, data-default-instances-containers
-, data-default-instances-dlist
-, data-default-instances-old-locale
-, lib
+{ mkDerivation, base, data-default-class
+, data-default-instances-containers, data-default-instances-dlist
+, data-default-instances-old-locale, lib
 }:
 mkDerivation {
   pname = "data-default";
@@ -14,11 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    data-default-class
-    data-default-instances-containers
-    data-default-instances-dlist
-    data-default-instances-old-locale
+    base data-default-class data-default-instances-containers
+    data-default-instances-dlist data-default-instances-old-locale
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

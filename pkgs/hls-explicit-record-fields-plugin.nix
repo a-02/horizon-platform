@@ -1,20 +1,6 @@
-{ mkDerivation
-, base
-, containers
-, filepath
-, ghc-boot-th
-, ghcide
-, hls-graph
-, hls-plugin-api
-, hls-test-utils
-, lens
-, lib
-, lsp
-, lsp-test
-, syb
-, text
-, transformers
-, unordered-containers
+{ mkDerivation, base, containers, filepath, ghc-boot-th, ghcide
+, hls-graph, hls-plugin-api, hls-test-utils, lens, lib, lsp
+, lsp-test, syb, text, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "hls-explicit-record-fields-plugin";
@@ -24,25 +10,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    ghc-boot-th
-    ghcide
-    hls-graph
-    hls-plugin-api
-    lens
-    lsp
-    syb
-    text
-    transformers
-    unordered-containers
+    base containers ghc-boot-th ghcide hls-graph hls-plugin-api lens
+    lsp syb text transformers unordered-containers
   ];
   testHaskellDepends = [
-    base
-    filepath
-    hls-test-utils
-    lsp-test
-    text
+    base filepath hls-test-utils lsp-test text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

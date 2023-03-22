@@ -1,23 +1,7 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, criterion
-, deepseq
-, directory
-, doctest
-, doctest-discover
-, exceptions
-, ghc-prim
-, hedgehog
-, hspec
-, hspec-discover
-, hw-hspec-hedgehog
-, lib
-, mmap
-, transformers
-, unliftio-core
-, vector
+{ mkDerivation, QuickCheck, base, bytestring, criterion, deepseq
+, directory, doctest, doctest-discover, exceptions, ghc-prim
+, hedgehog, hspec, hspec-discover, hw-hspec-hedgehog, lib, mmap
+, transformers, unliftio-core, vector
 }:
 mkDerivation {
   pname = "hw-prim";
@@ -27,38 +11,17 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    deepseq
-    ghc-prim
-    mmap
-    transformers
-    unliftio-core
+    base bytestring deepseq ghc-prim mmap transformers unliftio-core
     vector
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    directory
-    doctest
-    doctest-discover
-    exceptions
-    hedgehog
-    hspec
-    hw-hspec-hedgehog
-    mmap
-    QuickCheck
-    transformers
+    base bytestring directory doctest doctest-discover exceptions
+    hedgehog hspec hw-hspec-hedgehog mmap QuickCheck transformers
     vector
   ];
   testToolDepends = [ doctest-discover hspec-discover ];
   benchmarkHaskellDepends = [
-    base
-    bytestring
-    criterion
-    mmap
-    transformers
-    vector
+    base bytestring criterion mmap transformers vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

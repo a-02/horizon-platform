@@ -1,25 +1,7 @@
-{ mkDerivation
-, aeson
-, base
-, bytestring
-, containers
-, deepseq
-, extra
-, filepath
-, ghcide
-, hashable
-, hls-plugin-api
-, hls-test-utils
-, lens
-, lib
-, lsp
-, lsp-test
-, mtl
-, semigroupoids
-, tasty-hunit
-, text
-, transformers
-, vector
+{ mkDerivation, aeson, base, bytestring, containers, deepseq, extra
+, filepath, ghcide, hashable, hls-plugin-api, hls-test-utils, lens
+, lib, lsp, lsp-test, mtl, semigroupoids, tasty-hunit, text
+, transformers, vector
 }:
 mkDerivation {
   pname = "hls-code-range-plugin";
@@ -29,36 +11,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    containers
-    deepseq
-    extra
-    ghcide
-    hashable
-    hls-plugin-api
-    lens
-    lsp
-    mtl
-    semigroupoids
-    text
-    transformers
-    vector
+    aeson base containers deepseq extra ghcide hashable hls-plugin-api
+    lens lsp mtl semigroupoids text transformers vector
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    containers
-    filepath
-    ghcide
-    hls-test-utils
-    lens
-    lsp
-    lsp-test
-    tasty-hunit
-    text
-    transformers
-    vector
+    base bytestring containers filepath ghcide hls-test-utils lens lsp
+    lsp-test tasty-hunit text transformers vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

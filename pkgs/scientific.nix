@@ -1,55 +1,24 @@
-{ mkDerivation
-, QuickCheck
-, base
-, binary
-, bytestring
-, containers
-, criterion
-, deepseq
-, hashable
-, integer-logarithms
-, lib
-, primitive
-, smallcheck
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, tasty-smallcheck
-, template-haskell
-, text
+{ mkDerivation, QuickCheck, base, binary, bytestring, containers
+, criterion, deepseq, hashable, integer-logarithms, lib, primitive
+, smallcheck, tasty, tasty-hunit, tasty-quickcheck
+, tasty-smallcheck, template-haskell, text
 }:
 mkDerivation {
   pname = "scientific";
   version = "0.3.7.0";
   sha256 = "a3a121c4b3d68fb8b9f8c709ab012e48f090ed553609247a805ad070d6b343a9";
-  revision = "3";
-  editedCabalFile = "1n67w1b64q59nn4845z3kr8rm0x0p7bi3cyp6n1dpnfs8k4l8x2i";
+  revision = "5";
+  editedCabalFile = "149d776lnss2ggsv3qpsdbx1vvi57m2q2401d19k8fln0s8i1n16";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    binary
-    bytestring
-    containers
-    deepseq
-    hashable
-    integer-logarithms
-    primitive
-    template-haskell
-    text
+    base binary bytestring containers deepseq hashable
+    integer-logarithms primitive template-haskell text
   ];
   testHaskellDepends = [
-    base
-    binary
-    bytestring
-    QuickCheck
-    smallcheck
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    tasty-smallcheck
-    text
+    base binary bytestring QuickCheck smallcheck tasty tasty-hunit
+    tasty-quickcheck tasty-smallcheck text
   ];
   benchmarkHaskellDepends = [ base criterion ];
   enableLibraryProfiling = true;

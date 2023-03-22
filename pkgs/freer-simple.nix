@@ -1,17 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, criterion
-, extensible-effects
-, free
-, lib
-, mtl
-, natural-transformation
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, template-haskell
-, transformers-base
+{ mkDerivation, QuickCheck, base, criterion, extensible-effects
+, free, lib, mtl, natural-transformation, tasty, tasty-hunit
+, tasty-quickcheck, template-haskell, transformers-base
 }:
 mkDerivation {
   pname = "freer-simple";
@@ -21,25 +10,14 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    natural-transformation
-    template-haskell
-    transformers-base
+    base natural-transformation template-haskell transformers-base
   ];
   executableHaskellDepends = [ base ];
   testHaskellDepends = [
-    base
-    QuickCheck
-    tasty
-    tasty-hunit
-    tasty-quickcheck
+    base QuickCheck tasty tasty-hunit tasty-quickcheck
   ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    extensible-effects
-    free
-    mtl
+    base criterion extensible-effects free mtl
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

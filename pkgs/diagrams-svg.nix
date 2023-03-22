@@ -1,23 +1,7 @@
-{ mkDerivation
-, JuicyPixels
-, base
-, base64-bytestring
-, bytestring
-, colour
-, containers
-, diagrams-core
-, diagrams-lib
-, filepath
-, hashable
-, lens
-, lib
-, monoid-extras
-, mtl
-, optparse-applicative
-, semigroups
-, split
-, svg-builder
-, text
+{ mkDerivation, JuicyPixels, base, base64-bytestring, bytestring
+, colour, containers, diagrams-core, diagrams-lib, filepath
+, hashable, lens, lib, monoid-extras, mtl, optparse-applicative
+, semigroups, split, svg-builder, text
 }:
 mkDerivation {
   pname = "diagrams-svg";
@@ -29,24 +13,9 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base64-bytestring
-    bytestring
-    colour
-    containers
-    diagrams-core
-    diagrams-lib
-    filepath
-    hashable
-    JuicyPixels
-    lens
-    monoid-extras
-    mtl
-    optparse-applicative
-    semigroups
-    split
-    svg-builder
-    text
+    base base64-bytestring bytestring colour containers diagrams-core
+    diagrams-lib filepath hashable JuicyPixels lens monoid-extras mtl
+    optparse-applicative semigroups split svg-builder text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

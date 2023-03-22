@@ -1,12 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, ekg-core
-, lib
-, network
-, text
-, time
-, unordered-containers
+{ mkDerivation, base, bytestring, ekg-core, lib, network, text
+, time, unordered-containers
 }:
 mkDerivation {
   pname = "ekg-statsd";
@@ -16,13 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    ekg-core
-    network
-    text
-    time
-    unordered-containers
+    base bytestring ekg-core network text time unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

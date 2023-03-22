@@ -1,18 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, data-default-class
-, deepseq
-, erf
-, gauge
-, lib
-, primitive
-, random
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, vector
-, vector-th-unbox
+{ mkDerivation, QuickCheck, base, data-default-class, deepseq, erf
+, gauge, lib, primitive, random, tasty, tasty-hunit
+, tasty-quickcheck, vector, vector-th-unbox
 }:
 mkDerivation {
   pname = "math-functions";
@@ -22,31 +10,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    data-default-class
-    deepseq
-    primitive
-    vector
+    base data-default-class deepseq primitive vector
   ];
   testHaskellDepends = [
-    base
-    data-default-class
-    deepseq
-    erf
-    primitive
-    QuickCheck
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    vector
-    vector-th-unbox
+    base data-default-class deepseq erf primitive QuickCheck tasty
+    tasty-hunit tasty-quickcheck vector vector-th-unbox
   ];
   benchmarkHaskellDepends = [
-    base
-    data-default-class
-    gauge
-    random
-    vector
+    base data-default-class gauge random vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

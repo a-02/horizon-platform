@@ -7,11 +7,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    basement
-    bytestring
-    cereal
-    network
+    base basement bytestring cereal network
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

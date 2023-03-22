@@ -1,12 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, deepseq
-, lib
-, tasty
-, tasty-discover
-, tasty-hunit
-, tasty-quickcheck
+{ mkDerivation, QuickCheck, base, deepseq, lib, tasty
+, tasty-discover, tasty-hunit, tasty-quickcheck
 }:
 mkDerivation {
   pname = "generic-arbitrary";
@@ -17,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base QuickCheck ];
   testHaskellDepends = [
-    base
-    deepseq
-    QuickCheck
-    tasty
-    tasty-discover
-    tasty-hunit
+    base deepseq QuickCheck tasty tasty-discover tasty-hunit
     tasty-quickcheck
   ];
   testToolDepends = [ tasty-discover ];

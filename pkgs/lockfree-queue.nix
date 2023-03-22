@@ -1,13 +1,5 @@
-{ mkDerivation
-, HUnit
-, abstract-deque
-, abstract-deque-tests
-, atomic-primops
-, base
-, bytestring
-, ghc-prim
-, lib
-, test-framework
+{ mkDerivation, HUnit, abstract-deque, abstract-deque-tests
+, atomic-primops, base, bytestring, ghc-prim, lib, test-framework
 , test-framework-hunit
 }:
 mkDerivation {
@@ -18,21 +10,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    abstract-deque
-    atomic-primops
-    base
-    ghc-prim
+    abstract-deque atomic-primops base ghc-prim
   ];
   testHaskellDepends = [
-    abstract-deque
-    abstract-deque-tests
-    atomic-primops
-    base
-    bytestring
-    ghc-prim
-    HUnit
-    test-framework
-    test-framework-hunit
+    abstract-deque abstract-deque-tests atomic-primops base bytestring
+    ghc-prim HUnit test-framework test-framework-hunit
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

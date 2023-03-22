@@ -1,23 +1,6 @@
-{ mkDerivation
-, alex
-, array
-, base
-, binary
-, bytestring
-, containers
-, deepseq
-, directory
-, exceptions
-, filepath
-, ghc-prim
-, happy
-, lib
-, parsec
-, pretty
-, process
-, time
-, transformers
-, unix
+{ mkDerivation, alex, array, base, binary, bytestring, containers
+, deepseq, directory, exceptions, filepath, ghc-prim, happy, lib
+, parsec, pretty, process, time, transformers, unix
 }:
 mkDerivation {
   pname = "ghc-lib-parser";
@@ -27,22 +10,9 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    array
-    base
-    binary
-    bytestring
-    containers
-    deepseq
-    directory
-    exceptions
-    filepath
-    ghc-prim
-    parsec
-    pretty
-    process
-    time
-    transformers
-    unix
+    array base binary bytestring containers deepseq directory
+    exceptions filepath ghc-prim parsec pretty process time
+    transformers unix
   ];
   libraryToolDepends = [ alex happy ];
   enableLibraryProfiling = true;

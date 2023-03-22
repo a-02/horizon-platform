@@ -1,8 +1,8 @@
 { mkDerivation, Cabal, base, directory, filepath, lib }:
 mkDerivation {
   pname = "autoexporter";
-  version = "2.0.0.2";
-  sha256 = "f1de55da144f0bfaf1e1d9194684d61cd0a7ff825b3a7aae687631daa5a3a880";
+  version = "2.0.0.8";
+  sha256 = "d36e930ff1ad4365efbd62d24dbbb3ed80919e2774973a29a2f74b00e72186a8";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

@@ -1,10 +1,4 @@
-{ mkDerivation
-, QuickCheck
-, base
-, hspec
-, hspec-core
-, lib
-, random
+{ mkDerivation, QuickCheck, base, hspec, hspec-core, lib, random
 , validity
 }:
 mkDerivation {

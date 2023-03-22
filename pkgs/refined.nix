@@ -1,15 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, base
-, bytestring
-, deepseq
-, exceptions
-, hashable
-, lib
-, mtl
-, template-haskell
-, text
+{ mkDerivation, QuickCheck, aeson, base, bytestring, deepseq
+, exceptions, hashable, lib, mtl, template-haskell, text
 , these-skinny
 }:
 mkDerivation {
@@ -20,17 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    bytestring
-    deepseq
-    exceptions
-    hashable
-    mtl
-    QuickCheck
-    template-haskell
-    text
-    these-skinny
+    aeson base bytestring deepseq exceptions hashable mtl QuickCheck
+    template-haskell text these-skinny
   ];
   testHaskellDepends = [ base QuickCheck ];
   enableLibraryProfiling = true;

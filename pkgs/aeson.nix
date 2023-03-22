@@ -13,8 +13,8 @@ mkDerivation {
   pname = "aeson";
   version = "2.1.2.1";
   sha256 = "5d4042b903ce181ee023bbf908f37a3f55e820c5f0df102683b87f963e3522c6";
-  revision = "2";
-  editedCabalFile = "16ykqg5051pbqrqx0gp3zb3gvfgl5sm3wdnym9y6gv7mg525jkn8";
+  revision = "3";
+  editedCabalFile = "19qj4s625b34kw8ryb2ji0hs6dg2m116x913s722bab316k653av";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

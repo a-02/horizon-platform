@@ -1,11 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, genvalidity
-, hspec
-, lib
-, pretty-show
-, validity
+{ mkDerivation, QuickCheck, base, genvalidity, hspec, lib
+, pretty-show, validity
 }:
 mkDerivation {
   pname = "genvalidity-property";
@@ -15,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    genvalidity
-    hspec
-    pretty-show
-    QuickCheck
-    validity
+    base genvalidity hspec pretty-show QuickCheck validity
   ];
   testHaskellDepends = [ base genvalidity hspec QuickCheck ];
   enableLibraryProfiling = true;

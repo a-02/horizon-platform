@@ -1,13 +1,5 @@
-{ mkDerivation
-, Cabal
-, QuickCheck
-, base
-, bytestring
-, chell
-, chell-quickcheck
-, deepseq
-, lib
-, text
+{ mkDerivation, Cabal, QuickCheck, base, bytestring, chell
+, chell-quickcheck, deepseq, lib, text
 }:
 mkDerivation {
   pname = "system-filepath";
@@ -21,12 +13,7 @@ mkDerivation {
   setupHaskellDepends = [ base Cabal ];
   libraryHaskellDepends = [ base bytestring deepseq text ];
   testHaskellDepends = [
-    base
-    bytestring
-    chell
-    chell-quickcheck
-    QuickCheck
-    text
+    base bytestring chell chell-quickcheck QuickCheck text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

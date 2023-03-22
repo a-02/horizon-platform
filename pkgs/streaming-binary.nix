@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, binary
-, bytestring
-, hspec
-, lib
-, streaming
+{ mkDerivation, base, binary, bytestring, hspec, lib, streaming
 , streaming-bytestring
 }:
 mkDerivation {
@@ -15,19 +9,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    binary
-    bytestring
-    streaming
-    streaming-bytestring
+    base binary bytestring streaming streaming-bytestring
   ];
   testHaskellDepends = [
-    base
-    binary
-    bytestring
-    hspec
-    streaming
-    streaming-bytestring
+    base binary bytestring hspec streaming streaming-bytestring
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

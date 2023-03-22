@@ -1,16 +1,5 @@
-{ mkDerivation
-, aeson
-, base
-, bytestring
-, http-conduit
-, lib
-, mtl
-, network
-, random
-, resourcet
-, text
-, time
-, unordered-containers
+{ mkDerivation, aeson, base, bytestring, http-conduit, lib, mtl
+, network, random, resourcet, text, time, unordered-containers
 , uuid-types
 }:
 mkDerivation {
@@ -21,18 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    bytestring
-    http-conduit
-    mtl
-    network
-    random
-    resourcet
-    text
-    time
-    unordered-containers
-    uuid-types
+    aeson base bytestring http-conduit mtl network random resourcet
+    text time unordered-containers uuid-types
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

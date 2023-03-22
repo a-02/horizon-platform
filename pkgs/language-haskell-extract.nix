@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, fetchgit
-, lib
-, regex-posix
-, template-haskell
+{ mkDerivation, base, fetchgit, lib, regex-posix, template-haskell
 }:
 mkDerivation {
   pname = "language-haskell-extract";

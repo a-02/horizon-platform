@@ -1,11 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, containers
-, deepseq
-, exceptions
-, lib
-, template-haskell
+{ mkDerivation, QuickCheck, base, containers, deepseq, exceptions
+, lib, template-haskell
 }:
 mkDerivation {
   pname = "bimap";
@@ -16,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base containers deepseq exceptions ];
   testHaskellDepends = [
-    base
-    containers
-    deepseq
-    exceptions
-    QuickCheck
-    template-haskell
+    base containers deepseq exceptions QuickCheck template-haskell
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

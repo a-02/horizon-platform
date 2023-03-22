@@ -1,15 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, attoparsec
-, base
-, containers
-, criterion
-, deepseq
-, filepath
-, lib
-, pretty-show
-, text
-, vector
+{ mkDerivation, QuickCheck, attoparsec, base, containers, criterion
+, deepseq, filepath, lib, pretty-show, text, vector
 }:
 mkDerivation {
   pname = "nix-derivation";
@@ -21,22 +11,11 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    attoparsec
-    base
-    containers
-    deepseq
-    filepath
-    text
-    vector
+    attoparsec base containers deepseq filepath text vector
   ];
   executableHaskellDepends = [ attoparsec base pretty-show text ];
   testHaskellDepends = [
-    attoparsec
-    base
-    filepath
-    QuickCheck
-    text
-    vector
+    attoparsec base filepath QuickCheck text vector
   ];
   benchmarkHaskellDepends = [ attoparsec base criterion text ];
   enableLibraryProfiling = true;

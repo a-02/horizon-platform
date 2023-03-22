@@ -1,13 +1,5 @@
-{ mkDerivation
-, Cabal
-, base
-, bytestring
-, cabal-doctest
-, doctest
-, entropy
-, lib
-, primitive
-, random
+{ mkDerivation, Cabal, base, bytestring, cabal-doctest, doctest
+, entropy, lib, primitive, random
 }:
 mkDerivation {
   pname = "pcg-random";
@@ -18,11 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   setupHaskellDepends = [ base Cabal cabal-doctest ];
   libraryHaskellDepends = [
-    base
-    bytestring
-    entropy
-    primitive
-    random
+    base bytestring entropy primitive random
   ];
   testHaskellDepends = [ base doctest ];
   enableLibraryProfiling = true;

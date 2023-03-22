@@ -1,23 +1,7 @@
-{ mkDerivation
-, attoparsec
-, base
-, blaze-html
-, blaze-markup
-, bytestring
-, call-stack
-, conduit
-, conduit-extra
-, containers
-, data-default
-, directory
-, filepath
-, hspec
-, lib
-, text
-, transformers
-, xml-conduit
-, xml-types
-, xss-sanitize
+{ mkDerivation, attoparsec, base, blaze-html, blaze-markup
+, bytestring, call-stack, conduit, conduit-extra, containers
+, data-default, directory, filepath, hspec, lib, text, transformers
+, xml-conduit, xml-types, xss-sanitize
 }:
 mkDerivation {
   pname = "markdown";
@@ -27,34 +11,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    attoparsec
-    base
-    blaze-html
-    blaze-markup
-    conduit
-    conduit-extra
-    containers
-    data-default
-    text
-    transformers
-    xml-conduit
-    xml-types
+    attoparsec base blaze-html blaze-markup conduit conduit-extra
+    containers data-default text transformers xml-conduit xml-types
     xss-sanitize
   ];
   testHaskellDepends = [
-    base
-    blaze-html
-    bytestring
-    call-stack
-    conduit
-    conduit-extra
-    containers
-    directory
-    filepath
-    hspec
-    text
-    transformers
-    xss-sanitize
+    base blaze-html bytestring call-stack conduit conduit-extra
+    containers directory filepath hspec text transformers xss-sanitize
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, containers
-, deepseq
-, lib
-, tasty
-, tasty-hunit
+{ mkDerivation, base, containers, deepseq, lib, tasty, tasty-hunit
 , text
 }:
 mkDerivation {
@@ -18,12 +12,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base containers deepseq text ];
   testHaskellDepends = [
-    base
-    containers
-    deepseq
-    tasty
-    tasty-hunit
-    text
+    base containers deepseq tasty tasty-hunit text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,11 +1,5 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, lib
-, test-framework
-, test-framework-hunit
-, test-framework-quickcheck2
+{ mkDerivation, HUnit, QuickCheck, base, lib, test-framework
+, test-framework-hunit, test-framework-quickcheck2
 }:
 mkDerivation {
   pname = "fingertree";
@@ -16,11 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base ];
   testHaskellDepends = [
-    base
-    HUnit
-    QuickCheck
-    test-framework
-    test-framework-hunit
+    base HUnit QuickCheck test-framework test-framework-hunit
     test-framework-quickcheck2
   ];
   enableLibraryProfiling = true;

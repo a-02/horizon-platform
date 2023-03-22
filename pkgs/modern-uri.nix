@@ -1,25 +1,7 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, containers
-, contravariant
-, criterion
-, deepseq
-, exceptions
-, hashable
-, hspec
-, hspec-discover
-, hspec-megaparsec
-, lib
-, megaparsec
-, mtl
-, profunctors
-, reflection
-, tagged
-, template-haskell
-, text
-, weigh
+{ mkDerivation, QuickCheck, base, bytestring, containers
+, contravariant, criterion, deepseq, exceptions, hashable, hspec
+, hspec-discover, hspec-megaparsec, lib, megaparsec, mtl
+, profunctors, reflection, tagged, template-haskell, text, weigh
 }:
 mkDerivation {
   pname = "modern-uri";
@@ -29,40 +11,16 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    contravariant
-    deepseq
-    exceptions
-    hashable
-    megaparsec
-    mtl
-    profunctors
-    QuickCheck
-    reflection
-    tagged
-    template-haskell
-    text
+    base bytestring containers contravariant deepseq exceptions
+    hashable megaparsec mtl profunctors QuickCheck reflection tagged
+    template-haskell text
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    hspec
-    hspec-megaparsec
-    megaparsec
-    QuickCheck
-    text
+    base bytestring hspec hspec-megaparsec megaparsec QuickCheck text
   ];
   testToolDepends = [ hspec-discover ];
   benchmarkHaskellDepends = [
-    base
-    bytestring
-    criterion
-    deepseq
-    megaparsec
-    text
-    weigh
+    base bytestring criterion deepseq megaparsec text weigh
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

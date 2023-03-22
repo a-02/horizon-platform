@@ -1,12 +1,5 @@
-{ mkDerivation
-, aeson
-, base
-, hspec
-, lib
-, validity
-, validity-scientific
-, validity-text
-, validity-unordered-containers
+{ mkDerivation, aeson, base, hspec, lib, validity
+, validity-scientific, validity-text, validity-unordered-containers
 , validity-vector
 }:
 mkDerivation {
@@ -17,13 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    validity
-    validity-scientific
-    validity-text
-    validity-unordered-containers
-    validity-vector
+    aeson base validity validity-scientific validity-text
+    validity-unordered-containers validity-vector
   ];
   testHaskellDepends = [ aeson base hspec validity ];
   enableLibraryProfiling = true;

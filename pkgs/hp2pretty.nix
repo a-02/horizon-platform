@@ -1,15 +1,5 @@
-{ mkDerivation
-, array
-, attoparsec
-, base
-, containers
-, filepath
-, floatshow
-, lib
-, mtl
-, optparse-applicative
-, semigroups
-, text
+{ mkDerivation, array, attoparsec, base, containers, filepath
+, floatshow, lib, mtl, optparse-applicative, semigroups, text
 }:
 mkDerivation {
   pname = "hp2pretty";
@@ -19,16 +9,8 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   executableHaskellDepends = [
-    array
-    attoparsec
-    base
-    containers
-    filepath
-    floatshow
-    mtl
-    optparse-applicative
-    semigroups
-    text
+    array attoparsec base containers filepath floatshow mtl
+    optparse-applicative semigroups text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

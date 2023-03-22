@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, chell
-, chell-quickcheck
-, containers
-, lib
-, monads-tf
-, transformers
+{ mkDerivation, base, chell, chell-quickcheck, containers, lib
+, monads-tf, transformers
 }:
 mkDerivation {
   pname = "options";
@@ -16,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base containers monads-tf transformers ];
   testHaskellDepends = [
-    base
-    chell
-    chell-quickcheck
-    containers
-    monads-tf
-    transformers
+    base chell chell-quickcheck containers monads-tf transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

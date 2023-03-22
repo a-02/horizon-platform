@@ -1,12 +1,5 @@
-{ mkDerivation
-, base
-, deepseq
-, indexed-traversable
-, lib
-, random
-, tasty
-, tasty-bench
-, tasty-quickcheck
+{ mkDerivation, base, deepseq, indexed-traversable, lib, random
+, tasty, tasty-bench, tasty-quickcheck
 }:
 mkDerivation {
   pname = "pqueue";

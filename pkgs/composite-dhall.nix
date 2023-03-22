@@ -1,12 +1,5 @@
-{ mkDerivation
-, base
-, composite-base
-, dhall
-, lib
-, tasty
-, tasty-hunit
-, text
-, vinyl
+{ mkDerivation, base, composite-base, dhall, lib, tasty
+, tasty-hunit, text, vinyl
 }:
 mkDerivation {
   pname = "composite-dhall";
@@ -17,13 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base composite-base dhall text vinyl ];
   testHaskellDepends = [
-    base
-    composite-base
-    dhall
-    tasty
-    tasty-hunit
-    text
-    vinyl
+    base composite-base dhall tasty tasty-hunit text vinyl
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

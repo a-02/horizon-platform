@@ -1,13 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, checkers
-, containers
-, deepseq
-, doctest
-, lib
-, tasty
-, tasty-quickcheck
+{ mkDerivation, QuickCheck, base, checkers, containers, deepseq
+, doctest, lib, tasty, tasty-quickcheck
 }:
 mkDerivation {
   pname = "multiset";
@@ -18,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base containers deepseq ];
   testHaskellDepends = [
-    base
-    checkers
-    doctest
-    QuickCheck
-    tasty
-    tasty-quickcheck
+    base checkers doctest QuickCheck tasty tasty-quickcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,16 +1,5 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, byteable
-, bytestring
-, criterion
-, cryptonite
-, ghc-prim
-, lib
-, memory
-, tasty
-, tasty-hunit
+{ mkDerivation, HUnit, QuickCheck, base, byteable, bytestring
+, criterion, cryptonite, ghc-prim, lib, memory, tasty, tasty-hunit
 , tasty-quickcheck
 }:
 mkDerivation {
@@ -21,21 +10,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    byteable
-    bytestring
-    cryptonite
-    ghc-prim
-    memory
+    base byteable bytestring cryptonite ghc-prim memory
   ];
   testHaskellDepends = [
-    base
-    byteable
-    bytestring
-    HUnit
-    QuickCheck
-    tasty
-    tasty-hunit
+    base byteable bytestring HUnit QuickCheck tasty tasty-hunit
     tasty-quickcheck
   ];
   benchmarkHaskellDepends = [ base byteable bytestring criterion ];

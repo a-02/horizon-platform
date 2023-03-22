@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, directory
-, filepath
-, hspec
-, lib
-, text
+{ mkDerivation, base, directory, filepath, hspec, lib, text
 , text-metrics
 }:
 mkDerivation {
@@ -15,19 +9,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    directory
-    filepath
-    text
-    text-metrics
+    base directory filepath text text-metrics
   ];
   testHaskellDepends = [
-    base
-    directory
-    filepath
-    hspec
-    text
-    text-metrics
+    base directory filepath hspec text text-metrics
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

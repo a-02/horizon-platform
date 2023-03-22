@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, criterion
-, lib
-, quickcheck-assertions
-, quickcheck-instances
-, tasty
+{ mkDerivation, base, bytestring, criterion, lib
+, quickcheck-assertions, quickcheck-instances, tasty
 , tasty-quickcheck
 }:
 mkDerivation {
@@ -17,11 +11,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring ];
   testHaskellDepends = [
-    base
-    bytestring
-    quickcheck-assertions
-    quickcheck-instances
-    tasty
+    base bytestring quickcheck-assertions quickcheck-instances tasty
     tasty-quickcheck
   ];
   benchmarkHaskellDepends = [ base bytestring criterion ];

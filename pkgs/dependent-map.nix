@@ -1,8 +1,4 @@
-{ mkDerivation
-, base
-, constraints-extras
-, containers
-, dependent-sum
+{ mkDerivation, base, constraints-extras, containers, dependent-sum
 , lib
 }:
 mkDerivation {
@@ -15,10 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    constraints-extras
-    containers
-    dependent-sum
+    base constraints-extras containers dependent-sum
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

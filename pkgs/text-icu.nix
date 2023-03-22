@@ -1,21 +1,6 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, array
-, base
-, bytestring
-, deepseq
-, directory
-, ghc-prim
-, icu
-, icu-i18n
-, lib
-, random
-, test-framework
-, test-framework-hunit
-, test-framework-quickcheck2
-, text
-, time
+{ mkDerivation, HUnit, QuickCheck, array, base, bytestring, deepseq
+, directory, ghc-prim, icu, icu-i18n, lib, random, test-framework
+, test-framework-hunit, test-framework-quickcheck2, text, time
 }:
 mkDerivation {
   pname = "text-icu";
@@ -28,19 +13,9 @@ mkDerivation {
   librarySystemDepends = [ icu ];
   libraryPkgconfigDepends = [ icu-i18n ];
   testHaskellDepends = [
-    array
-    base
-    bytestring
-    deepseq
-    directory
-    ghc-prim
-    HUnit
-    QuickCheck
-    random
-    test-framework
-    test-framework-hunit
-    test-framework-quickcheck2
-    text
+    array base bytestring deepseq directory ghc-prim HUnit QuickCheck
+    random test-framework test-framework-hunit
+    test-framework-quickcheck2 text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

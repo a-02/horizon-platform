@@ -1,15 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, async
-, base
-, deepseq
-, hspec
-, lib
-, lifted-base
-, monad-control
-, stm
-, transformers
-, transformers-base
+{ mkDerivation, QuickCheck, async, base, deepseq, hspec, lib
+, lifted-base, monad-control, stm, transformers, transformers-base
 }:
 mkDerivation {
   pname = "enclosed-exceptions";
@@ -19,24 +9,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    deepseq
-    lifted-base
-    monad-control
-    transformers
+    base deepseq lifted-base monad-control transformers
     transformers-base
   ];
   testHaskellDepends = [
-    async
-    base
-    deepseq
-    hspec
-    lifted-base
-    monad-control
-    QuickCheck
-    stm
-    transformers
-    transformers-base
+    async base deepseq hspec lifted-base monad-control QuickCheck stm
+    transformers transformers-base
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

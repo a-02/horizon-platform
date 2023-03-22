@@ -1,12 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, genvalidity
-, lib
-, pretty-show
-, sydtest
-, sydtest-discover
-, validity
+{ mkDerivation, QuickCheck, base, genvalidity, lib, pretty-show
+, sydtest, sydtest-discover, validity
 }:
 mkDerivation {
   pname = "genvalidity-sydtest";
@@ -16,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    genvalidity
-    pretty-show
-    QuickCheck
-    sydtest
-    validity
+    base genvalidity pretty-show QuickCheck sydtest validity
   ];
   testHaskellDepends = [ base genvalidity QuickCheck sydtest ];
   testToolDepends = [ sydtest-discover ];

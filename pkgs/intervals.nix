@@ -1,9 +1,4 @@
-{ mkDerivation
-, QuickCheck
-, array
-, base
-, distributive
-, ghc-prim
+{ mkDerivation, QuickCheck, array, base, distributive, ghc-prim
 , lib
 }:
 mkDerivation {

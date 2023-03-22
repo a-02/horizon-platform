@@ -1,16 +1,5 @@
-{ mkDerivation
-, async
-, base
-, bytestring
-, criterion
-, cryptonite
-, entropy
-, ghc-prim
-, lib
-, mwc-random
-, pcg-random
-, primitive
-, random
+{ mkDerivation, async, base, bytestring, criterion, cryptonite
+, entropy, ghc-prim, lib, mwc-random, pcg-random, primitive, random
 }:
 mkDerivation {
   pname = "random-bytestring";
@@ -21,17 +10,8 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring mwc-random pcg-random ];
   benchmarkHaskellDepends = [
-    async
-    base
-    bytestring
-    criterion
-    cryptonite
-    entropy
-    ghc-prim
-    mwc-random
-    pcg-random
-    primitive
-    random
+    async base bytestring criterion cryptonite entropy ghc-prim
+    mwc-random pcg-random primitive random
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

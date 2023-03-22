@@ -1,16 +1,6 @@
-{ mkDerivation
-, adjunctions
-, base
-, binary
-, comonad
-, deepseq
-, distributive
-, finite-typelits
-, hashable
-, indexed-list-literals
-, lib
-, primitive
-, vector
+{ mkDerivation, adjunctions, base, binary, comonad, deepseq
+, distributive, finite-typelits, hashable, indexed-list-literals
+, lib, primitive, vector
 }:
 mkDerivation {
   pname = "vector-sized";
@@ -22,17 +12,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    adjunctions
-    base
-    binary
-    comonad
-    deepseq
-    distributive
-    finite-typelits
-    hashable
-    indexed-list-literals
-    primitive
-    vector
+    adjunctions base binary comonad deepseq distributive
+    finite-typelits hashable indexed-list-literals primitive vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

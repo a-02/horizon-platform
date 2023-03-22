@@ -1,18 +1,6 @@
-{ mkDerivation
-, base
-, bytestring
-, conduit
-, conduit-combinators
-, conduit-extra
-, cryptonite
-, exceptions
-, lib
-, memory
-, resourcet
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, transformers
+{ mkDerivation, base, bytestring, conduit, conduit-combinators
+, conduit-extra, cryptonite, exceptions, lib, memory, resourcet
+, tasty, tasty-hunit, tasty-quickcheck, transformers
 }:
 mkDerivation {
   pname = "cryptonite-conduit";
@@ -24,26 +12,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    conduit
-    conduit-extra
-    cryptonite
-    exceptions
-    memory
-    resourcet
-    transformers
+    base bytestring conduit conduit-extra cryptonite exceptions memory
+    resourcet transformers
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    conduit
-    conduit-combinators
-    cryptonite
-    memory
-    tasty
-    tasty-hunit
-    tasty-quickcheck
+    base bytestring conduit conduit-combinators cryptonite memory tasty
+    tasty-hunit tasty-quickcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

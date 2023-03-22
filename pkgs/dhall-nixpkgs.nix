@@ -1,24 +1,7 @@
-{ mkDerivation
-, aeson
-, base
-, base16-bytestring
-, base64-bytestring
-, bytestring
-, data-fix
-, dhall
-, foldl
-, hnix
-, lens-family-core
-, lib
-, megaparsec
-, mmorph
-, neat-interpolation
-, network-uri
-, optparse-applicative
-, prettyprinter
-, text
-, transformers
-, turtle
+{ mkDerivation, aeson, base, base16-bytestring, base64-bytestring
+, bytestring, data-fix, dhall, foldl, hnix, lens-family-core, lib
+, megaparsec, mmorph, neat-interpolation, network-uri
+, optparse-applicative, prettyprinter, text, transformers, turtle
 }:
 mkDerivation {
   pname = "dhall-nixpkgs";
@@ -30,25 +13,10 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   executableHaskellDepends = [
-    aeson
-    base
-    base16-bytestring
-    base64-bytestring
-    bytestring
-    data-fix
-    dhall
-    foldl
-    hnix
-    lens-family-core
-    megaparsec
-    mmorph
-    neat-interpolation
-    network-uri
-    optparse-applicative
-    prettyprinter
-    text
-    transformers
-    turtle
+    aeson base base16-bytestring base64-bytestring bytestring data-fix
+    dhall foldl hnix lens-family-core megaparsec mmorph
+    neat-interpolation network-uri optparse-applicative prettyprinter
+    text transformers turtle
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, comonad
-, hashable
-, keys
-, lib
-, pointed
-, semigroupoids
-, semigroups
-, vector
+{ mkDerivation, base, comonad, hashable, keys, lib, pointed
+, semigroupoids, semigroups, vector
 }:
 mkDerivation {
   pname = "vector-instances";
@@ -19,14 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    comonad
-    hashable
-    keys
-    pointed
-    semigroupoids
-    semigroups
-    vector
+    base comonad hashable keys pointed semigroupoids semigroups vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

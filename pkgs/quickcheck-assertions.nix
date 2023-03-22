@@ -1,10 +1,4 @@
-{ mkDerivation
-, QuickCheck
-, base
-, hspec
-, ieee754
-, lib
-, pretty-show
+{ mkDerivation, QuickCheck, base, hspec, ieee754, lib, pretty-show
 }:
 mkDerivation {
   pname = "quickcheck-assertions";

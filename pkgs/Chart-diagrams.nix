@@ -1,24 +1,7 @@
-{ mkDerivation
-, Chart
-, SVGFonts
-, base
-, blaze-markup
-, bytestring
-, colour
-, containers
-, data-default-class
-, diagrams-core
-, diagrams-lib
-, diagrams-postscript
-, diagrams-svg
-, lens
-, lib
-, mtl
-, old-locale
-, operational
-, svg-builder
-, text
-, time
+{ mkDerivation, Chart, SVGFonts, base, blaze-markup, bytestring
+, colour, containers, data-default-class, diagrams-core
+, diagrams-lib, diagrams-postscript, diagrams-svg, lens, lib, mtl
+, old-locale, operational, svg-builder, text, time
 }:
 mkDerivation {
   pname = "Chart-diagrams";
@@ -28,25 +11,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    base
-    blaze-markup
-    bytestring
-    Chart
-    colour
-    containers
-    data-default-class
-    diagrams-core
-    diagrams-lib
-    diagrams-postscript
-    diagrams-svg
-    lens
-    mtl
-    old-locale
-    operational
-    svg-builder
-    SVGFonts
-    text
-    time
+    base blaze-markup bytestring Chart colour containers
+    data-default-class diagrams-core diagrams-lib diagrams-postscript
+    diagrams-svg lens mtl old-locale operational svg-builder SVGFonts
+    text time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

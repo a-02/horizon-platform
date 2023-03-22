@@ -1,14 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, SHA
-, base
-, binary
-, bytestring
-, crypto-api
-, crypto-pubkey-types
-, lib
-, tagged
-, test-framework
+{ mkDerivation, QuickCheck, SHA, base, binary, bytestring
+, crypto-api, crypto-pubkey-types, lib, tagged, test-framework
 , test-framework-quickcheck2
 }:
 mkDerivation {
@@ -19,24 +10,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    binary
-    bytestring
-    crypto-api
-    crypto-pubkey-types
-    SHA
+    base binary bytestring crypto-api crypto-pubkey-types SHA
   ];
   testHaskellDepends = [
-    base
-    binary
-    bytestring
-    crypto-api
-    crypto-pubkey-types
-    QuickCheck
-    SHA
-    tagged
-    test-framework
-    test-framework-quickcheck2
+    base binary bytestring crypto-api crypto-pubkey-types QuickCheck
+    SHA tagged test-framework test-framework-quickcheck2
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

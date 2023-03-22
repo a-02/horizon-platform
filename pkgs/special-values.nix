@@ -9,11 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    ieee754
-    scientific
-    text
+    base bytestring ieee754 scientific text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

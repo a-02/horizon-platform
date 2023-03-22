@@ -1,31 +1,9 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, base
-, case-insensitive
-, containers
-, criterion
-, deepseq
-, dlist
-, email-validate
-, foldl
-, hashable
-, hspec
-, hspec-megaparsec
-, html-entity-map
-, lib
-, lucid
-, megaparsec
-, microlens
-, microlens-th
-, modern-uri
-, mtl
-, parser-combinators
-, text
-, text-metrics
-, unordered-containers
-, weigh
-, yaml
+{ mkDerivation, QuickCheck, aeson, base, case-insensitive
+, containers, criterion, deepseq, dlist, email-validate, foldl
+, hashable, hspec, hspec-megaparsec, html-entity-map, lib, lucid
+, megaparsec, microlens, microlens-th, modern-uri, mtl
+, parser-combinators, text, text-metrics, unordered-containers
+, weigh, yaml
 }:
 mkDerivation {
   pname = "mmark";
@@ -37,39 +15,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    aeson
-    base
-    case-insensitive
-    containers
-    deepseq
-    dlist
-    email-validate
-    foldl
-    hashable
-    html-entity-map
-    lucid
-    megaparsec
-    microlens
-    microlens-th
-    modern-uri
-    mtl
-    parser-combinators
-    text
-    text-metrics
-    unordered-containers
-    yaml
+    aeson base case-insensitive containers deepseq dlist email-validate
+    foldl hashable html-entity-map lucid megaparsec microlens
+    microlens-th modern-uri mtl parser-combinators text text-metrics
+    unordered-containers yaml
   ];
   testHaskellDepends = [
-    aeson
-    base
-    foldl
-    hspec
-    hspec-megaparsec
-    lucid
-    megaparsec
-    modern-uri
-    QuickCheck
-    text
+    aeson base foldl hspec hspec-megaparsec lucid megaparsec modern-uri
+    QuickCheck text
   ];
   benchmarkHaskellDepends = [ base criterion text weigh ];
   enableLibraryProfiling = true;

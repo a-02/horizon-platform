@@ -1,28 +1,7 @@
-{ mkDerivation
-, aeson
-, base
-, beam-core
-, bytestring
-, containers
-, deepseq
-, dependent-map
-, dependent-sum
-, fetchgit
-, free
-, ghc-prim
-, hashable
-, haskell-src-exts
-, lib
-, microlens
-, mtl
-, parallel
-, pqueue
-, pretty
-, scientific
-, text
-, time
-, unordered-containers
-, uuid-types
+{ mkDerivation, aeson, base, beam-core, bytestring, containers
+, deepseq, dependent-map, dependent-sum, fetchgit, free, ghc-prim
+, hashable, haskell-src-exts, lib, microlens, mtl, parallel, pqueue
+, pretty, scientific, text, time, unordered-containers, uuid-types
 , vector
 }:
 mkDerivation {
@@ -39,29 +18,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    beam-core
-    bytestring
-    containers
-    deepseq
-    dependent-map
-    dependent-sum
-    free
-    ghc-prim
-    hashable
-    haskell-src-exts
-    microlens
-    mtl
-    parallel
-    pqueue
-    pretty
-    scientific
-    text
-    time
-    unordered-containers
-    uuid-types
-    vector
+    aeson base beam-core bytestring containers deepseq dependent-map
+    dependent-sum free ghc-prim hashable haskell-src-exts microlens mtl
+    parallel pqueue pretty scientific text time unordered-containers
+    uuid-types vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

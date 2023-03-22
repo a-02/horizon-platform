@@ -1,20 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, base
-, base-compat
-, base64-bytestring
-, binary
-, bytestring
-, cereal
-, deepseq
-, hashable
-, http-api-data
-, lib
-, serialise
-, tasty
-, tasty-quickcheck
-, text
+{ mkDerivation, QuickCheck, aeson, base, base-compat
+, base64-bytestring, binary, bytestring, cereal, deepseq, hashable
+, http-api-data, lib, serialise, tasty, tasty-quickcheck, text
 }:
 mkDerivation {
   pname = "base64-bytestring-type";
@@ -26,29 +12,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    base-compat
-    base64-bytestring
-    binary
-    bytestring
-    cereal
-    deepseq
-    hashable
-    http-api-data
-    QuickCheck
-    serialise
-    text
+    aeson base base-compat base64-bytestring binary bytestring cereal
+    deepseq hashable http-api-data QuickCheck serialise text
   ];
   testHaskellDepends = [
-    aeson
-    base
-    binary
-    bytestring
-    cereal
-    http-api-data
-    serialise
-    tasty
+    aeson base binary bytestring cereal http-api-data serialise tasty
     tasty-quickcheck
   ];
   enableLibraryProfiling = true;

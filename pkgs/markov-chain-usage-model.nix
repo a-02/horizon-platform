@@ -1,12 +1,5 @@
-{ mkDerivation
-, base
-, doctest
-, lib
-, matrix
-, tasty
-, tasty-discover
-, tasty-hunit
-, vector
+{ mkDerivation, base, doctest, lib, matrix, tasty, tasty-discover
+, tasty-hunit, vector
 }:
 mkDerivation {
   pname = "markov-chain-usage-model";
@@ -17,13 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base matrix vector ];
   testHaskellDepends = [
-    base
-    doctest
-    matrix
-    tasty
-    tasty-discover
-    tasty-hunit
-    vector
+    base doctest matrix tasty tasty-discover tasty-hunit vector
   ];
   testToolDepends = [ tasty-discover ];
   enableLibraryProfiling = true;

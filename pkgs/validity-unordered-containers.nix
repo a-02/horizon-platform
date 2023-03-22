@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, hashable
-, lib
-, unordered-containers
-, validity
+{ mkDerivation, base, hashable, lib, unordered-containers, validity
 }:
 mkDerivation {
   pname = "validity-unordered-containers";
@@ -13,10 +8,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    hashable
-    unordered-containers
-    validity
+    base hashable unordered-containers validity
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, filepath
-, genvalidity-hspec
-, hspec
-, lib
-, path
+{ mkDerivation, base, filepath, genvalidity-hspec, hspec, lib, path
 , validity
 }:
 mkDerivation {
@@ -16,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base filepath path validity ];
   testHaskellDepends = [
-    base
-    filepath
-    genvalidity-hspec
-    hspec
-    path
-    validity
+    base filepath genvalidity-hspec hspec path validity
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

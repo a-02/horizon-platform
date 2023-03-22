@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, doctest
-, doctest-discover
-, hedgehog
-, lib
+{ mkDerivation, base, doctest, doctest-discover, hedgehog, lib
 , vector
 }:
 mkDerivation {

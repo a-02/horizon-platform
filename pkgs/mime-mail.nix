@@ -1,14 +1,5 @@
-{ mkDerivation
-, base
-, base64-bytestring
-, blaze-builder
-, bytestring
-, filepath
-, hspec
-, lib
-, process
-, random
-, text
+{ mkDerivation, base, base64-bytestring, blaze-builder, bytestring
+, filepath, hspec, lib, process, random, text
 }:
 mkDerivation {
   pname = "mime-mail";
@@ -18,14 +9,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base64-bytestring
-    blaze-builder
-    bytestring
-    filepath
-    process
-    random
-    text
+    base base64-bytestring blaze-builder bytestring filepath process
+    random text
   ];
   testHaskellDepends = [ base blaze-builder bytestring hspec text ];
   enableLibraryProfiling = true;

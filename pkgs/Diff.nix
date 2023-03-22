@@ -1,13 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, array
-, base
-, directory
-, lib
-, pretty
-, process
-, test-framework
-, test-framework-quickcheck2
+{ mkDerivation, QuickCheck, array, base, directory, lib, pretty
+, process, test-framework, test-framework-quickcheck2
 }:
 mkDerivation {
   pname = "Diff";
@@ -18,13 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ array base pretty ];
   testHaskellDepends = [
-    array
-    base
-    directory
-    pretty
-    process
-    QuickCheck
-    test-framework
+    array base directory pretty process QuickCheck test-framework
     test-framework-quickcheck2
   ];
   enableLibraryProfiling = true;

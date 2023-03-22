@@ -1,12 +1,5 @@
-{ mkDerivation
-, base
-, base-orphans
-, generic-deriving
-, hspec
-, hspec-discover
-, lib
-, tagged
-, transformers
+{ mkDerivation, base, base-orphans, generic-deriving, hspec
+, hspec-discover, lib, tagged, transformers
 }:
 mkDerivation {
   pname = "distributive";

@@ -1,40 +1,18 @@
-{ mkDerivation
-, autodocodec
-, autodocodec-schema
-, base
-, bytestring
-, containers
-, lib
-, path
-, path-io
-, safe-coloured-text
-, scientific
-, text
-, unordered-containers
-, vector
-, yaml
+{ mkDerivation, autodocodec, autodocodec-schema, base, bytestring
+, containers, lib, path, path-io, safe-coloured-text, scientific
+, text, unordered-containers, vector, yaml
 }:
 mkDerivation {
   pname = "autodocodec-yaml";
-  version = "0.2.0.2";
-  sha256 = "3d5f811541866f95f44842227bc5d643e7dfa316f1b3075c22d9f3dc6fcd9698";
+  version = "0.2.0.3";
+  sha256 = "6ea45746fafee0e7c286cd96c0dccb26e8466552c5dd990bc1d83e09fe1f8e01";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    autodocodec
-    autodocodec-schema
-    base
-    bytestring
-    containers
-    path
-    path-io
-    safe-coloured-text
-    scientific
-    text
-    unordered-containers
-    vector
-    yaml
+    autodocodec autodocodec-schema base bytestring containers path
+    path-io safe-coloured-text scientific text unordered-containers
+    vector yaml
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

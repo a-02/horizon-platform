@@ -1,11 +1,5 @@
-{ mkDerivation
-, aeson
-, base
-, bytestring
-, directory
-, doctest
-, filepath
-, lib
+{ mkDerivation, aeson, base, bytestring, directory, doctest
+, filepath, lib
 }:
 mkDerivation {
   pname = "doctest-discover";
@@ -15,20 +9,10 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    bytestring
-    directory
-    doctest
-    filepath
+    aeson base bytestring directory doctest filepath
   ];
   executableHaskellDepends = [
-    aeson
-    base
-    bytestring
-    directory
-    doctest
-    filepath
+    aeson base bytestring directory doctest filepath
   ];
   testHaskellDepends = [ base doctest ];
   enableLibraryProfiling = true;

@@ -1,17 +1,5 @@
-{ mkDerivation
-, aeson
-, base
-, containers
-, deepseq
-, filepath
-, ghc
-, ghcide
-, hls-graph
-, hls-plugin-api
-, hls-test-utils
-, lib
-, lsp
-, text
+{ mkDerivation, aeson, base, containers, deepseq, filepath, ghc
+, ghcide, hls-graph, hls-plugin-api, hls-test-utils, lib, lsp, text
 , unordered-containers
 }:
 mkDerivation {
@@ -22,17 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    containers
-    deepseq
-    ghc
-    ghcide
-    hls-graph
-    hls-plugin-api
-    lsp
-    text
-    unordered-containers
+    aeson base containers deepseq ghc ghcide hls-graph hls-plugin-api
+    lsp text unordered-containers
   ];
   testHaskellDepends = [ base filepath hls-test-utils text ];
   enableLibraryProfiling = true;

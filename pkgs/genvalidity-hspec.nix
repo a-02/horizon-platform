@@ -1,13 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, genvalidity
-, genvalidity-property
-, hspec
-, hspec-core
-, lib
-, transformers
-, validity
+{ mkDerivation, QuickCheck, base, genvalidity, genvalidity-property
+, hspec, hspec-core, lib, transformers, validity
 }:
 mkDerivation {
   pname = "genvalidity-hspec";
@@ -17,21 +9,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    genvalidity
-    genvalidity-property
-    hspec
-    hspec-core
-    QuickCheck
-    transformers
-    validity
+    base genvalidity genvalidity-property hspec hspec-core QuickCheck
+    transformers validity
   ];
   testHaskellDepends = [
-    base
-    genvalidity
-    hspec
-    hspec-core
-    QuickCheck
+    base genvalidity hspec hspec-core QuickCheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

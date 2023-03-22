@@ -1,16 +1,5 @@
-{ mkDerivation
-, base
-, containers
-, criterion
-, deepseq
-, emojis
-, lib
-, mtl
-, safe
-, tasty
-, tasty-golden
-, tasty-hunit
-, tasty-quickcheck
+{ mkDerivation, base, containers, criterion, deepseq, emojis, lib
+, mtl, safe, tasty, tasty-golden, tasty-hunit, tasty-quickcheck
 , text
 }:
 mkDerivation {
@@ -24,22 +13,11 @@ mkDerivation {
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [ base containers emojis mtl safe text ];
   testHaskellDepends = [
-    base
-    emojis
-    mtl
-    tasty
-    tasty-golden
-    tasty-hunit
-    tasty-quickcheck
+    base emojis mtl tasty tasty-golden tasty-hunit tasty-quickcheck
     text
   ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    deepseq
-    emojis
-    mtl
-    text
+    base criterion deepseq emojis mtl text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

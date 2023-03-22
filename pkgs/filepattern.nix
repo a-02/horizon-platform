@@ -1,10 +1,4 @@
-{ mkDerivation
-, QuickCheck
-, base
-, directory
-, extra
-, filepath
-, lib
+{ mkDerivation, QuickCheck, base, directory, extra, filepath, lib
 }:
 mkDerivation {
   pname = "filepattern";

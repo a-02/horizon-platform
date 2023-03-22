@@ -1,19 +1,6 @@
-{ mkDerivation
-, asn1-encoding
-, asn1-parse
-, asn1-types
-, base
-, bytestring
-, containers
-, cryptonite
-, hourglass
-, lib
-, memory
-, mtl
-, pem
-, tasty
-, tasty-quickcheck
-, transformers
+{ mkDerivation, asn1-encoding, asn1-parse, asn1-types, base
+, bytestring, containers, cryptonite, hourglass, lib, memory, mtl
+, pem, tasty, tasty-quickcheck, transformers
 }:
 mkDerivation {
   pname = "x509";
@@ -23,26 +10,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    asn1-encoding
-    asn1-parse
-    asn1-types
-    base
-    bytestring
-    containers
-    cryptonite
-    hourglass
-    memory
-    pem
-    transformers
+    asn1-encoding asn1-parse asn1-types base bytestring containers
+    cryptonite hourglass memory pem transformers
   ];
   testHaskellDepends = [
-    asn1-types
-    base
-    bytestring
-    cryptonite
-    hourglass
-    mtl
-    tasty
+    asn1-types base bytestring cryptonite hourglass mtl tasty
     tasty-quickcheck
   ];
   enableLibraryProfiling = true;

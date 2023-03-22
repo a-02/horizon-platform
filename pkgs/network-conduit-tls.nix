@@ -1,18 +1,6 @@
-{ mkDerivation
-, HUnit
-, base
-, bytestring
-, conduit
-, conduit-extra
-, connection
-, data-default-class
-, lib
-, mtl
-, network
-, streaming-commons
-, tls
-, transformers
-, unliftio-core
+{ mkDerivation, HUnit, base, bytestring, conduit, conduit-extra
+, connection, data-default-class, lib, mtl, network
+, streaming-commons, tls, transformers, unliftio-core
 }:
 mkDerivation {
   pname = "network-conduit-tls";
@@ -22,26 +10,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    conduit
-    conduit-extra
-    connection
-    data-default-class
-    network
-    streaming-commons
-    tls
-    transformers
-    unliftio-core
+    base bytestring conduit conduit-extra connection data-default-class
+    network streaming-commons tls transformers unliftio-core
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    conduit
-    conduit-extra
-    connection
-    HUnit
-    mtl
+    base bytestring conduit conduit-extra connection HUnit mtl
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

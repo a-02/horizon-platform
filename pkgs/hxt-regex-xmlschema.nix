@@ -1,13 +1,5 @@
-{ mkDerivation
-, HUnit
-, base
-, bytestring
-, criterion
-, deepseq
-, hxt-charproperties
-, lib
-, parsec
-, text
+{ mkDerivation, HUnit, base, bytestring, criterion, deepseq
+, hxt-charproperties, lib, parsec, text
 }:
 mkDerivation {
   pname = "hxt-regex-xmlschema";
@@ -17,20 +9,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    hxt-charproperties
-    parsec
-    text
+    base bytestring hxt-charproperties parsec text
   ];
   testHaskellDepends = [ base bytestring HUnit parsec text ];
   benchmarkHaskellDepends = [
-    base
-    bytestring
-    criterion
-    deepseq
-    parsec
-    text
+    base bytestring criterion deepseq parsec text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

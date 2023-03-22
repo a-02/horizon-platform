@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, containers
-, data-default-class
-, lens
-, lib
+{ mkDerivation, base, containers, data-default-class, lens, lib
 , linear
 }:
 mkDerivation {
@@ -16,11 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    data-default-class
-    lens
-    linear
+    base containers data-default-class lens linear
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

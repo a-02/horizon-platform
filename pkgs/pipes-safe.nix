@@ -1,14 +1,5 @@
-{ mkDerivation
-, base
-, containers
-, exceptions
-, lib
-, monad-control
-, mtl
-, pipes
-, primitive
-, transformers
-, transformers-base
+{ mkDerivation, base, containers, exceptions, lib, monad-control
+, mtl, pipes, primitive, transformers, transformers-base
 }:
 mkDerivation {
   pname = "pipes-safe";
@@ -20,15 +11,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    exceptions
-    monad-control
-    mtl
-    pipes
-    primitive
-    transformers
-    transformers-base
+    base containers exceptions monad-control mtl pipes primitive
+    transformers transformers-base
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

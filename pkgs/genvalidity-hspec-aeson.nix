@@ -1,17 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, base
-, bytestring
-, deepseq
-, genvalidity
-, genvalidity-aeson
-, genvalidity-hspec
-, genvalidity-property
-, genvalidity-text
-, hspec
-, lib
-, text
+{ mkDerivation, QuickCheck, aeson, base, bytestring, deepseq
+, genvalidity, genvalidity-aeson, genvalidity-hspec
+, genvalidity-property, genvalidity-text, hspec, lib, text
 , validity
 }:
 mkDerivation {
@@ -22,26 +11,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    bytestring
-    deepseq
-    genvalidity
-    genvalidity-hspec
-    hspec
+    aeson base bytestring deepseq genvalidity genvalidity-hspec hspec
     QuickCheck
   ];
   testHaskellDepends = [
-    aeson
-    base
-    genvalidity
-    genvalidity-aeson
-    genvalidity-hspec
-    genvalidity-property
-    genvalidity-text
-    hspec
-    QuickCheck
-    text
+    aeson base genvalidity genvalidity-aeson genvalidity-hspec
+    genvalidity-property genvalidity-text hspec QuickCheck text
     validity
   ];
   enableLibraryProfiling = true;

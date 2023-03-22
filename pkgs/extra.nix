@@ -1,14 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, clock
-, directory
-, filepath
-, lib
-, process
-, quickcheck-instances
-, time
-, unix
+{ mkDerivation, QuickCheck, base, clock, directory, filepath, lib
+, process, quickcheck-instances, time, unix
 }:
 mkDerivation {
   pname = "extra";
@@ -18,21 +9,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    clock
-    directory
-    filepath
-    process
-    time
-    unix
+    base clock directory filepath process time unix
   ];
   testHaskellDepends = [
-    base
-    directory
-    filepath
-    QuickCheck
-    quickcheck-instances
-    unix
+    base directory filepath QuickCheck quickcheck-instances unix
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

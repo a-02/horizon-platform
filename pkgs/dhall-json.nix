@@ -1,26 +1,8 @@
-{ mkDerivation
-, aeson
-, aeson-pretty
-, aeson-yaml
-, ansi-terminal
-, base
-, bytestring
-, containers
-, dhall
-, exceptions
-, filepath
-, lens-family-core
-, lib
-, optparse-applicative
-, prettyprinter
-, prettyprinter-ansi-terminal
-, scientific
-, tasty
-, tasty-hunit
-, tasty-silver
-, text
-, unordered-containers
-, vector
+{ mkDerivation, aeson, aeson-pretty, aeson-yaml, ansi-terminal
+, base, bytestring, containers, dhall, exceptions, filepath
+, lens-family-core, lib, optparse-applicative, prettyprinter
+, prettyprinter-ansi-terminal, scientific, tasty, tasty-hunit
+, tasty-silver, text, unordered-containers, vector
 }:
 mkDerivation {
   pname = "dhall-json";
@@ -32,45 +14,16 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    aeson-pretty
-    aeson-yaml
-    base
-    bytestring
-    containers
-    dhall
-    exceptions
-    filepath
-    lens-family-core
-    optparse-applicative
-    prettyprinter
-    scientific
-    text
-    unordered-containers
-    vector
+    aeson aeson-pretty aeson-yaml base bytestring containers dhall
+    exceptions filepath lens-family-core optparse-applicative
+    prettyprinter scientific text unordered-containers vector
   ];
   executableHaskellDepends = [
-    aeson
-    aeson-pretty
-    ansi-terminal
-    base
-    bytestring
-    dhall
-    exceptions
-    optparse-applicative
-    prettyprinter
-    prettyprinter-ansi-terminal
-    text
+    aeson aeson-pretty ansi-terminal base bytestring dhall exceptions
+    optparse-applicative prettyprinter prettyprinter-ansi-terminal text
   ];
   testHaskellDepends = [
-    aeson
-    base
-    bytestring
-    dhall
-    tasty
-    tasty-hunit
-    tasty-silver
-    text
+    aeson base bytestring dhall tasty tasty-hunit tasty-silver text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

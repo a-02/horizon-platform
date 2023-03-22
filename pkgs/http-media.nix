@@ -1,12 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, case-insensitive
-, containers
-, lib
-, test-framework
-, test-framework-quickcheck2
+{ mkDerivation, QuickCheck, base, bytestring, case-insensitive
+, containers, lib, test-framework, test-framework-quickcheck2
 , utf8-string
 }:
 mkDerivation {
@@ -19,21 +12,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    case-insensitive
-    containers
-    utf8-string
+    base bytestring case-insensitive containers utf8-string
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    case-insensitive
-    containers
-    QuickCheck
-    test-framework
-    test-framework-quickcheck2
-    utf8-string
+    base bytestring case-insensitive containers QuickCheck
+    test-framework test-framework-quickcheck2 utf8-string
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,13 +1,5 @@
-{ mkDerivation
-, SDL2
-, SDL2_gfx
-, base
-, lib
-, lifted-base
-, monad-control
-, sdl2
-, template-haskell
-, vector
+{ mkDerivation, SDL2, SDL2_gfx, base, lib, lifted-base
+, monad-control, sdl2, template-haskell, vector
 }:
 mkDerivation {
   pname = "sdl2-gfx";
@@ -17,12 +9,7 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    lifted-base
-    monad-control
-    sdl2
-    template-haskell
-    vector
+    base lifted-base monad-control sdl2 template-haskell vector
   ];
   librarySystemDepends = [ SDL2_gfx ];
   libraryPkgconfigDepends = [ SDL2 SDL2_gfx ];

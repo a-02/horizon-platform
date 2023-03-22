@@ -1,15 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, directory
-, filepath
-, hspec
-, lib
-, process
-, template-haskell
-, temporary
-, th-compat
-, unliftio
+{ mkDerivation, base, bytestring, directory, filepath, hspec, lib
+, process, template-haskell, temporary, th-compat, unliftio
 }:
 mkDerivation {
   pname = "githash";
@@ -19,25 +9,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    directory
-    filepath
-    process
-    template-haskell
+    base bytestring directory filepath process template-haskell
     th-compat
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    directory
-    filepath
-    hspec
-    process
-    template-haskell
-    temporary
-    th-compat
-    unliftio
+    base bytestring directory filepath hspec process template-haskell
+    temporary th-compat unliftio
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

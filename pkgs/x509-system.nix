@@ -1,15 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, containers
-, directory
-, filepath
-, lib
-, mtl
-, pem
-, process
-, x509
-, x509-store
+{ mkDerivation, base, bytestring, containers, directory, filepath
+, lib, mtl, pem, process, x509, x509-store
 }:
 mkDerivation {
   pname = "x509-system";
@@ -19,15 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    directory
-    filepath
-    mtl
-    pem
-    process
-    x509
+    base bytestring containers directory filepath mtl pem process x509
     x509-store
   ];
   enableLibraryProfiling = true;

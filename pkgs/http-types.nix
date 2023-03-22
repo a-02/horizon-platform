@@ -1,14 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, array
-, base
-, bytestring
-, case-insensitive
-, doctest
-, hspec
-, lib
-, quickcheck-instances
-, text
+{ mkDerivation, QuickCheck, array, base, bytestring
+, case-insensitive, doctest, hspec, lib, quickcheck-instances, text
 }:
 mkDerivation {
   pname = "http-types";
@@ -18,20 +9,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    bytestring
-    case-insensitive
-    text
+    array base bytestring case-insensitive text
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    doctest
-    hspec
-    QuickCheck
-    quickcheck-instances
-    text
+    base bytestring doctest hspec QuickCheck quickcheck-instances text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

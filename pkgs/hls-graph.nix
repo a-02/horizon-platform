@@ -1,34 +1,8 @@
-{ mkDerivation
-, aeson
-, async
-, base
-, bytestring
-, containers
-, deepseq
-, directory
-, exceptions
-, extra
-, filepath
-, focus
-, hashable
-, hspec
-, hspec-discover
-, js-dgtable
-, js-flot
-, js-jquery
-, lib
-, list-t
-, stm
-, stm-containers
-, tasty
-, tasty-hspec
-, tasty-hunit
-, tasty-rerun
-, text
-, time
-, transformers
-, unliftio
-, unordered-containers
+{ mkDerivation, aeson, async, base, bytestring, containers, deepseq
+, directory, exceptions, extra, filepath, focus, hashable, hspec
+, hspec-discover, js-dgtable, js-flot, js-jquery, lib, list-t, stm
+, stm-containers, tasty, tasty-hspec, tasty-hunit, tasty-rerun
+, text, time, transformers, unliftio, unordered-containers
 }:
 mkDerivation {
   pname = "hls-graph";
@@ -38,45 +12,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    aeson
-    async
-    base
-    bytestring
-    containers
-    deepseq
-    directory
-    exceptions
-    extra
-    filepath
-    focus
-    hashable
-    js-dgtable
-    js-flot
-    js-jquery
-    list-t
-    stm
-    stm-containers
-    text
-    time
-    transformers
-    unliftio
+    aeson async base bytestring containers deepseq directory exceptions
+    extra filepath focus hashable js-dgtable js-flot js-jquery list-t
+    stm stm-containers text time transformers unliftio
     unordered-containers
   ];
   testHaskellDepends = [
-    base
-    containers
-    directory
-    extra
-    filepath
-    hspec
-    stm
-    stm-containers
-    tasty
-    tasty-hspec
-    tasty-hunit
-    tasty-rerun
-    text
-    unordered-containers
+    base containers directory extra filepath hspec stm stm-containers
+    tasty tasty-hspec tasty-hunit tasty-rerun text unordered-containers
   ];
   testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;

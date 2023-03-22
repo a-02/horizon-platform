@@ -1,23 +1,6 @@
-{ mkDerivation
-, aeson
-, base
-, bytestring
-, containers
-, deepseq
-, directory
-, extra
-, ghc
-, ghcide
-, hashable
-, hls-plugin-api
-, lib
-, lsp
-, lsp-types
-, retrie
-, safe-exceptions
-, stm
-, text
-, transformers
+{ mkDerivation, aeson, base, bytestring, containers, deepseq
+, directory, extra, ghc, ghcide, hashable, hls-plugin-api, lib, lsp
+, lsp-types, retrie, safe-exceptions, stm, text, transformers
 , unordered-containers
 }:
 mkDerivation {
@@ -28,25 +11,9 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    bytestring
-    containers
-    deepseq
-    directory
-    extra
-    ghc
-    ghcide
-    hashable
-    hls-plugin-api
-    lsp
-    lsp-types
-    retrie
-    safe-exceptions
-    stm
-    text
-    transformers
-    unordered-containers
+    aeson base bytestring containers deepseq directory extra ghc ghcide
+    hashable hls-plugin-api lsp lsp-types retrie safe-exceptions stm
+    text transformers unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

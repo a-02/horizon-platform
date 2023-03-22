@@ -1,18 +1,6 @@
-{ mkDerivation
-, async
-, base
-, bytestring
-, criterion
-, deepseq
-, exceptions
-, hspec
-, hspec-expectations-lifted
-, lib
-, monad-control
-, postgresql-libpq
-, postgresql-simple
-, tmp-postgres
-, transformers
+{ mkDerivation, async, base, bytestring, criterion, deepseq
+, exceptions, hspec, hspec-expectations-lifted, lib, monad-control
+, postgresql-libpq, postgresql-simple, tmp-postgres, transformers
 }:
 mkDerivation {
   pname = "pg-transact";
@@ -22,30 +10,15 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    exceptions
-    monad-control
-    postgresql-simple
+    base bytestring exceptions monad-control postgresql-simple
     transformers
   ];
   testHaskellDepends = [
-    async
-    base
-    bytestring
-    exceptions
-    hspec
-    hspec-expectations-lifted
-    postgresql-libpq
-    postgresql-simple
-    tmp-postgres
+    async base bytestring exceptions hspec hspec-expectations-lifted
+    postgresql-libpq postgresql-simple tmp-postgres
   ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    deepseq
-    postgresql-simple
-    tmp-postgres
+    base criterion deepseq postgresql-simple tmp-postgres
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

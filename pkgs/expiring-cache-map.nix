@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, bytestring
-, containers
-, hashable
-, lib
-, time
+{ mkDerivation, base, bytestring, containers, hashable, lib, time
 , unordered-containers
 }:
 mkDerivation {
@@ -17,18 +11,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    hashable
-    unordered-containers
+    base containers hashable unordered-containers
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    containers
-    hashable
-    time
-    unordered-containers
+    base bytestring containers hashable time unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, hspec
-, lib
-, quickcheck-text
-, should-not-typecheck
-, text
+{ mkDerivation, base, bytestring, hspec, lib, quickcheck-text
+, should-not-typecheck, text
 }:
 mkDerivation {
   pname = "text-display";
@@ -16,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring text ];
   testHaskellDepends = [
-    base
-    bytestring
-    hspec
-    quickcheck-text
-    should-not-typecheck
-    text
+    base bytestring hspec quickcheck-text should-not-typecheck text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

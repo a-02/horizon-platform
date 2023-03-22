@@ -1,35 +1,8 @@
-{ mkDerivation
-, Diff
-, Glob
-, aeson
-, aeson-pretty
-, ansi-terminal
-, async
-, base
-, bytestring
-, co-log-core
-, conduit
-, conduit-parse
-, containers
-, data-default
-, directory
-, exceptions
-, extra
-, filepath
-, hspec
-, lens
-, lib
-, lsp
-, lsp-types
-, mtl
-, parser-combinators
-, process
-, some
-, text
-, time
-, transformers
-, unix
-, unliftio
+{ mkDerivation, Diff, Glob, aeson, aeson-pretty, ansi-terminal
+, async, base, bytestring, co-log-core, conduit, conduit-parse
+, containers, data-default, directory, exceptions, extra, filepath
+, hspec, lens, lib, lsp, lsp-types, mtl, parser-combinators
+, process, some, text, time, transformers, unix, unliftio
 , unordered-containers
 }:
 mkDerivation {
@@ -40,50 +13,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    aeson-pretty
-    ansi-terminal
-    async
-    base
-    bytestring
-    co-log-core
-    conduit
-    conduit-parse
-    containers
-    data-default
-    Diff
-    directory
-    exceptions
-    filepath
-    Glob
-    lens
-    lsp
-    lsp-types
-    mtl
-    parser-combinators
-    process
-    some
-    text
-    time
-    transformers
-    unix
-    unordered-containers
+    aeson aeson-pretty ansi-terminal async base bytestring co-log-core
+    conduit conduit-parse containers data-default Diff directory
+    exceptions filepath Glob lens lsp lsp-types mtl parser-combinators
+    process some text time transformers unix unordered-containers
   ];
   testHaskellDepends = [
-    aeson
-    base
-    co-log-core
-    data-default
-    directory
-    filepath
-    hspec
-    lens
-    lsp
-    mtl
-    parser-combinators
-    process
-    text
-    unliftio
+    aeson base co-log-core data-default directory filepath hspec lens
+    lsp mtl parser-combinators process text unliftio
     unordered-containers
   ];
   testToolDepends = [ lsp ];

@@ -1,33 +1,9 @@
-{ mkDerivation
-, HUnit
-, MonadRandom
-, QuickCheck
-, base
-, circle-packing
-, colour
-, containers
-, cubicbezier
-, data-default
-, data-default-class
-, diagrams-core
-, diagrams-lib
-, diagrams-solve
-, force-layout
-, hashable
-, lens
-, lib
-, linear
-, mfsolve
-, monoid-extras
-, mtl
-, mtl-compat
-, parsec
-, random
-, semigroups
-, split
-, test-framework
-, test-framework-hunit
-, test-framework-quickcheck2
+{ mkDerivation, HUnit, MonadRandom, QuickCheck, base
+, circle-packing, colour, containers, cubicbezier, data-default
+, data-default-class, diagrams-core, diagrams-lib, diagrams-solve
+, force-layout, hashable, lens, lib, linear, mfsolve, monoid-extras
+, mtl, mtl-compat, parsec, random, semigroups, split
+, test-framework, test-framework-hunit, test-framework-quickcheck2
 , text
 }:
 mkDerivation {
@@ -40,40 +16,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    circle-packing
-    colour
-    containers
-    cubicbezier
-    data-default
-    data-default-class
-    diagrams-core
-    diagrams-lib
-    diagrams-solve
-    force-layout
-    hashable
-    lens
-    linear
-    mfsolve
-    MonadRandom
-    monoid-extras
-    mtl
-    mtl-compat
-    parsec
-    random
-    semigroups
-    split
-    text
+    base circle-packing colour containers cubicbezier data-default
+    data-default-class diagrams-core diagrams-lib diagrams-solve
+    force-layout hashable lens linear mfsolve MonadRandom monoid-extras
+    mtl mtl-compat parsec random semigroups split text
   ];
   testHaskellDepends = [
-    base
-    containers
-    diagrams-lib
-    HUnit
-    QuickCheck
-    test-framework
-    test-framework-hunit
-    test-framework-quickcheck2
+    base containers diagrams-lib HUnit QuickCheck test-framework
+    test-framework-hunit test-framework-quickcheck2
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

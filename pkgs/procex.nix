@@ -1,13 +1,5 @@
-{ mkDerivation
-, async
-, base
-, bytestring
-, containers
-, deepseq
-, hspec
-, lib
-, unix
-, utf8-string
+{ mkDerivation, async, base, bytestring, containers, deepseq, hspec
+, lib, unix, utf8-string
 }:
 mkDerivation {
   pname = "procex";
@@ -17,13 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    async
-    base
-    bytestring
-    containers
-    deepseq
-    unix
-    utf8-string
+    async base bytestring containers deepseq unix utf8-string
   ];
   testHaskellDepends = [ async base bytestring hspec unix ];
   enableLibraryProfiling = true;

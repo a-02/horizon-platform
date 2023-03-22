@@ -1,19 +1,6 @@
-{ mkDerivation
-, HUnit
-, Only
-, attoparsec
-, base
-, base16-bytestring
-, blaze-builder
-, blaze-textual
-, bytestring
-, containers
-, direct-sqlite
-, lib
-, template-haskell
-, text
-, time
-, transformers
+{ mkDerivation, HUnit, Only, attoparsec, base, base16-bytestring
+, blaze-builder, blaze-textual, bytestring, containers
+, direct-sqlite, lib, template-haskell, text, time, transformers
 }:
 mkDerivation {
   pname = "sqlite-simple";
@@ -23,27 +10,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    attoparsec
-    base
-    blaze-builder
-    blaze-textual
-    bytestring
-    containers
-    direct-sqlite
-    Only
-    template-haskell
-    text
-    time
-    transformers
+    attoparsec base blaze-builder blaze-textual bytestring containers
+    direct-sqlite Only template-haskell text time transformers
   ];
   testHaskellDepends = [
-    base
-    base16-bytestring
-    bytestring
-    direct-sqlite
-    HUnit
-    text
-    time
+    base base16-bytestring bytestring direct-sqlite HUnit text time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

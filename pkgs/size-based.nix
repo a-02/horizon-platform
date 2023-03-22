@@ -1,8 +1,4 @@
-{ mkDerivation
-, base
-, dictionary-sharing
-, lib
-, template-haskell
+{ mkDerivation, base, dictionary-sharing, lib, template-haskell
 , testing-type-modifiers
 }:
 mkDerivation {
@@ -13,10 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    dictionary-sharing
-    template-haskell
-    testing-type-modifiers
+    base dictionary-sharing template-haskell testing-type-modifiers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

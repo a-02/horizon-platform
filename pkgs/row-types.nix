@@ -1,14 +1,5 @@
-{ mkDerivation
-, base
-, constraints
-, deepseq
-, gauge
-, generic-lens
-, hashable
-, lib
-, profunctors
-, text
-, unordered-containers
+{ mkDerivation, base, constraints, deepseq, gauge, generic-lens
+, hashable, lib, profunctors, text, unordered-containers
 }:
 mkDerivation {
   pname = "row-types";
@@ -18,13 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    constraints
-    deepseq
-    generic-lens
-    hashable
-    profunctors
-    text
+    base constraints deepseq generic-lens hashable profunctors text
     unordered-containers
   ];
   testHaskellDepends = [ base generic-lens ];

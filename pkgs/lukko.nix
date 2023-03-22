@@ -1,13 +1,5 @@
-{ mkDerivation
-, async
-, base
-, bytestring
-, filepath
-, lib
-, singleton-bool
-, tasty
-, tasty-expected-failure
-, tasty-hunit
+{ mkDerivation, async, base, bytestring, filepath, lib
+, singleton-bool, tasty, tasty-expected-failure, tasty-hunit
 , temporary
 }:
 mkDerivation {
@@ -21,15 +13,8 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base ];
   testHaskellDepends = [
-    async
-    base
-    bytestring
-    filepath
-    singleton-bool
-    tasty
-    tasty-expected-failure
-    tasty-hunit
-    temporary
+    async base bytestring filepath singleton-bool tasty
+    tasty-expected-failure tasty-hunit temporary
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

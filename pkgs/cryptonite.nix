@@ -1,18 +1,6 @@
-{ mkDerivation
-, base
-, basement
-, bytestring
-, deepseq
-, gauge
-, ghc-prim
-, integer-gmp
-, lib
-, memory
-, random
-, tasty
-, tasty-hunit
-, tasty-kat
-, tasty-quickcheck
+{ mkDerivation, base, basement, bytestring, deepseq, gauge
+, ghc-prim, integer-gmp, lib, memory, random, tasty, tasty-hunit
+, tasty-kat, tasty-quickcheck
 }:
 mkDerivation {
   pname = "cryptonite";
@@ -22,30 +10,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    basement
-    bytestring
-    deepseq
-    ghc-prim
-    integer-gmp
-    memory
+    base basement bytestring deepseq ghc-prim integer-gmp memory
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    memory
-    tasty
-    tasty-hunit
-    tasty-kat
-    tasty-quickcheck
+    base bytestring memory tasty tasty-hunit tasty-kat tasty-quickcheck
   ];
   benchmarkHaskellDepends = [
-    base
-    bytestring
-    deepseq
-    gauge
-    memory
-    random
+    base bytestring deepseq gauge memory random
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

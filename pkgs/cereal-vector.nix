@@ -1,10 +1,4 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, cereal
-, lib
-, vector
+{ mkDerivation, QuickCheck, base, bytestring, cereal, lib, vector
 }:
 mkDerivation {
   pname = "cereal-vector";

@@ -1,32 +1,8 @@
-{ mkDerivation
-, base
-, base16-bytestring
-, bytestring
-, containers
-, cryptohash-sha256
-, dhall
-, directory
-, doctest
-, file-embed
-, filepath
-, foldl
-, lens-family-core
-, lib
-, lucid
-, megaparsec
-, mmark
-, mtl
-, optparse-applicative
-, path
-, path-io
-, pretty
-, prettyprinter
-, tasty
-, tasty-hunit
-, tasty-silver
-, text
-, transformers
-, turtle
+{ mkDerivation, base, base16-bytestring, bytestring, containers
+, cryptohash-sha256, dhall, directory, doctest, file-embed
+, filepath, foldl, lens-family-core, lib, lucid, megaparsec, mmark
+, mtl, optparse-applicative, path, path-io, pretty, prettyprinter
+, tasty, tasty-hunit, tasty-silver, text, transformers, turtle
 }:
 mkDerivation {
   pname = "dhall-docs";
@@ -38,45 +14,15 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    base
-    base16-bytestring
-    bytestring
-    containers
-    cryptohash-sha256
-    dhall
-    directory
-    file-embed
-    filepath
-    lens-family-core
-    lucid
-    megaparsec
-    mmark
-    mtl
-    optparse-applicative
-    path
-    path-io
-    prettyprinter
-    text
-    transformers
+    base base16-bytestring bytestring containers cryptohash-sha256
+    dhall directory file-embed filepath lens-family-core lucid
+    megaparsec mmark mtl optparse-applicative path path-io
+    prettyprinter text transformers
   ];
   executableHaskellDepends = [ base dhall ];
   testHaskellDepends = [
-    base
-    bytestring
-    containers
-    dhall
-    directory
-    doctest
-    filepath
-    foldl
-    lucid
-    path
-    path-io
-    pretty
-    tasty
-    tasty-hunit
-    tasty-silver
-    text
+    base bytestring containers dhall directory doctest filepath foldl
+    lucid path path-io pretty tasty tasty-hunit tasty-silver text
     turtle
   ];
   enableLibraryProfiling = true;

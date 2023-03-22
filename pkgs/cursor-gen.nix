@@ -1,20 +1,7 @@
-{ mkDerivation
-, QuickCheck
-, base
-, containers
-, criterion
-, cursor
-, genvalidity
-, genvalidity-containers
-, genvalidity-criterion
-, genvalidity-hspec
-, genvalidity-hspec-optics
-, genvalidity-text
-, hspec
-, lib
-, microlens
-, pretty-show
-, text
+{ mkDerivation, QuickCheck, base, containers, criterion, cursor
+, genvalidity, genvalidity-containers, genvalidity-criterion
+, genvalidity-hspec, genvalidity-hspec-optics, genvalidity-text
+, hspec, lib, microlens, pretty-show, text
 }:
 mkDerivation {
   pname = "cursor-gen";
@@ -24,32 +11,15 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    cursor
-    genvalidity
-    genvalidity-containers
-    genvalidity-text
-    QuickCheck
-    text
+    base containers cursor genvalidity genvalidity-containers
+    genvalidity-text QuickCheck text
   ];
   testHaskellDepends = [
-    base
-    containers
-    cursor
-    genvalidity-hspec
-    genvalidity-hspec-optics
-    hspec
-    microlens
-    pretty-show
-    QuickCheck
-    text
+    base containers cursor genvalidity-hspec genvalidity-hspec-optics
+    hspec microlens pretty-show QuickCheck text
   ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    cursor
-    genvalidity-criterion
+    base criterion cursor genvalidity-criterion
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

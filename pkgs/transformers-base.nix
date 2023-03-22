@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, base-orphans
-, lib
-, stm
-, transformers
+{ mkDerivation, base, base-orphans, lib, stm, transformers
 , transformers-compat
 }:
 mkDerivation {
@@ -14,11 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base-orphans
-    stm
-    transformers
-    transformers-compat
+    base base-orphans stm transformers transformers-compat
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, deepseq
-, lib
-, tasty
-, tasty-hunit
+{ mkDerivation, base, deepseq, lib, tasty, tasty-hunit
 , tasty-quickcheck
 }:
 mkDerivation {
@@ -17,11 +12,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base ];
   testHaskellDepends = [
-    base
-    deepseq
-    tasty
-    tasty-hunit
-    tasty-quickcheck
+    base deepseq tasty tasty-hunit tasty-quickcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

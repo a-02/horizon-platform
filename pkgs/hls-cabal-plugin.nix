@@ -1,25 +1,7 @@
-{ mkDerivation
-, Cabal
-, base
-, bytestring
-, deepseq
-, directory
-, extra
-, filepath
-, ghcide
-, hashable
-, hls-graph
-, hls-plugin-api
-, hls-test-utils
-, lens
-, lib
-, lsp
-, lsp-types
-, regex-tdfa
-, stm
-, tasty-hunit
-, text
-, unordered-containers
+{ mkDerivation, Cabal, base, bytestring, deepseq, directory, extra
+, filepath, ghcide, hashable, hls-graph, hls-plugin-api
+, hls-test-utils, lens, lib, lsp, lsp-types, regex-tdfa, stm
+, tasty-hunit, text, unordered-containers
 }:
 mkDerivation {
   pname = "hls-cabal-plugin";
@@ -29,33 +11,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    Cabal
-    deepseq
-    directory
-    extra
-    ghcide
-    hashable
-    hls-graph
-    hls-plugin-api
-    lsp
-    lsp-types
-    regex-tdfa
-    stm
-    text
+    base bytestring Cabal deepseq directory extra ghcide hashable
+    hls-graph hls-plugin-api lsp lsp-types regex-tdfa stm text
     unordered-containers
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    filepath
-    ghcide
-    hls-test-utils
-    lens
-    lsp-types
-    tasty-hunit
-    text
+    base bytestring filepath ghcide hls-test-utils lens lsp-types
+    tasty-hunit text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

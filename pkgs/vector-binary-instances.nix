@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, binary
-, bytestring
-, deepseq
-, lib
-, tasty
-, tasty-bench
-, tasty-quickcheck
-, vector
+{ mkDerivation, base, binary, bytestring, deepseq, lib, tasty
+, tasty-bench, tasty-quickcheck, vector
 }:
 mkDerivation {
   pname = "vector-binary-instances";
@@ -21,12 +13,7 @@ mkDerivation {
   libraryHaskellDepends = [ base binary vector ];
   testHaskellDepends = [ base binary tasty tasty-quickcheck vector ];
   benchmarkHaskellDepends = [
-    base
-    binary
-    bytestring
-    deepseq
-    tasty-bench
-    vector
+    base binary bytestring deepseq tasty-bench vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

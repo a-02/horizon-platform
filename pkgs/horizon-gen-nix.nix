@@ -1,24 +1,7 @@
-{ mkDerivation
-, Cabal-syntax
-, base
-, cabal2nix
-, containers
-, dhall
-, directory
-, distribution-nixpkgs
-, either
-, fetchzip
-, horizon-spec
-, language-nix
-, lens
-, lib
-, optparse-applicative
-, path
-, path-dhall-instance
-, pretty
-, raw-strings-qq
-, silently
-, sydtest
+{ mkDerivation, Cabal-syntax, base, cabal2nix, containers, dhall
+, directory, distribution-nixpkgs, either, fetchzip, horizon-spec
+, language-nix, lens, lib, optparse-applicative, path
+, path-dhall-instance, pretty, raw-strings-qq, silently, sydtest
 , text
 }:
 mkDerivation {
@@ -33,24 +16,10 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    Cabal-syntax
-    cabal2nix
-    containers
-    dhall
-    directory
-    distribution-nixpkgs
-    either
-    horizon-spec
-    language-nix
-    lens
-    optparse-applicative
-    path
-    path-dhall-instance
-    pretty
-    raw-strings-qq
-    silently
-    text
+    base Cabal-syntax cabal2nix containers dhall directory
+    distribution-nixpkgs either horizon-spec language-nix lens
+    optparse-applicative path path-dhall-instance pretty raw-strings-qq
+    silently text
   ];
   executableHaskellDepends = [ base directory path sydtest ];
   enableLibraryProfiling = true;

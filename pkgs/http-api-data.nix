@@ -1,24 +1,7 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, attoparsec
-, attoparsec-iso8601
-, base
-, base-compat
-, bytestring
-, containers
-, cookie
-, hashable
-, hspec
-, hspec-discover
-, http-types
-, lib
-, quickcheck-instances
-, tagged
-, text
-, time-compat
-, transformers
-, unordered-containers
+{ mkDerivation, HUnit, QuickCheck, attoparsec, attoparsec-iso8601
+, base, base-compat, bytestring, containers, cookie, hashable
+, hspec, hspec-discover, http-types, lib, quickcheck-instances
+, tagged, text, time-compat, transformers, unordered-containers
 , uuid-types
 }:
 mkDerivation {
@@ -31,34 +14,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    attoparsec
-    attoparsec-iso8601
-    base
-    base-compat
-    bytestring
-    containers
-    cookie
-    hashable
-    http-types
-    tagged
-    text
-    time-compat
-    transformers
-    unordered-containers
-    uuid-types
+    attoparsec attoparsec-iso8601 base base-compat bytestring
+    containers cookie hashable http-types tagged text time-compat
+    transformers unordered-containers uuid-types
   ];
   testHaskellDepends = [
-    base
-    base-compat
-    bytestring
-    cookie
-    hspec
-    HUnit
-    QuickCheck
-    quickcheck-instances
-    text
-    time-compat
-    unordered-containers
+    base base-compat bytestring cookie hspec HUnit QuickCheck
+    quickcheck-instances text time-compat unordered-containers
     uuid-types
   ];
   testToolDepends = [ hspec-discover ];

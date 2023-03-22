@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, effectful-core
-, fetchgit
-, lib
-, tasty
-, tasty-hunit
-, time
+{ mkDerivation, base, effectful-core, fetchgit, lib, tasty
+, tasty-hunit, time
 }:
 mkDerivation {
   pname = "time-effectful";
@@ -21,11 +15,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base effectful-core time ];
   testHaskellDepends = [
-    base
-    effectful-core
-    tasty
-    tasty-hunit
-    time
+    base effectful-core tasty tasty-hunit time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

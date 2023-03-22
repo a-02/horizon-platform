@@ -1,18 +1,7 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, criterion
-, doctest
-, lib
-, monad-control
-, mtl
-, silently
-, test-framework
-, test-framework-hunit
-, test-framework-quickcheck2
-, test-framework-th
-, transformers-base
+{ mkDerivation, HUnit, QuickCheck, base, criterion, doctest, lib
+, monad-control, mtl, silently, test-framework
+, test-framework-hunit, test-framework-quickcheck2
+, test-framework-th, transformers-base
 }:
 mkDerivation {
   pname = "extensible-effects";
@@ -25,27 +14,13 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base monad-control transformers-base ];
   testHaskellDepends = [
-    base
-    doctest
-    HUnit
-    monad-control
-    mtl
-    QuickCheck
-    silently
-    test-framework
-    test-framework-hunit
-    test-framework-quickcheck2
+    base doctest HUnit monad-control mtl QuickCheck silently
+    test-framework test-framework-hunit test-framework-quickcheck2
     test-framework-th
   ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    HUnit
-    mtl
-    test-framework
-    test-framework-hunit
-    test-framework-quickcheck2
-    test-framework-th
+    base criterion HUnit mtl test-framework test-framework-hunit
+    test-framework-quickcheck2 test-framework-th
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

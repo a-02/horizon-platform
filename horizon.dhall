@@ -769,7 +769,7 @@ let packages =
           H.callGit
             "https://github.com/locallycompact/monad-par"
             "4f5b44fc85095e08cc159e4fc54a7d78dc41eccf"
-            (Some "monad-par")
+            (Some "monad-par/")
       , monad-par-extras = H.callHackage "monad-par-extras" "0.3.3"
       , monad-parallel = H.callHackage "monad-parallel" "0.8"
       , monad-peel = H.callHackage "monad-peel" "0.2.1.2"
@@ -993,7 +993,11 @@ let packages =
             (Some "servant/")
       , servant-auth = H.callHackage "servant-auth" "0.4.1.0"
       , servant-auth-client = H.callHackage "servant-auth-client" "0.4.1.0"
-      , servant-auth-server = H.callHackage "servant-auth-server" "0.4.7.0"
+      , servant-auth-server =
+          H.callGit
+            "https://github.com/haskell-servant/servant"
+            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
+            (Some "servant-auth/servant-auth-server/")
       , servant-blaze = H.callHackage "servant-blaze" "0.9.1"
       , servant-client =
           H.callGit
@@ -1106,7 +1110,7 @@ let packages =
           H.callGit
             "https://github.com/locallycompact/sydtest"
             "01c7d35b822c66a68e4d2ba5594858afbcc1cbf0"
-            (Some "sydtest")
+            (Some "sydtest/")
       , sydtest-discover = H.callHackage "sydtest-discover" "0.0.0.2"
       , system-fileio = H.callHackage "system-fileio" "0.3.16.4"
       , system-filepath = H.callHackage "system-filepath" "0.4.14"

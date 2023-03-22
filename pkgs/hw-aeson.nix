@@ -1,18 +1,6 @@
-{ mkDerivation
-, aeson
-, base
-, bytestring
-, containers
-, doctest
-, doctest-discover
-, hashable
-, hedgehog
-, hspec
-, hspec-discover
-, lib
-, text
-, text-short
-, unordered-containers
+{ mkDerivation, aeson, base, bytestring, containers, doctest
+, doctest-discover, hashable, hedgehog, hspec, hspec-discover, lib
+, text, text-short, unordered-containers
 }:
 mkDerivation {
   pname = "hw-aeson";
@@ -24,22 +12,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    bytestring
-    containers
-    hashable
-    text
-    text-short
+    aeson base bytestring containers hashable text text-short
     unordered-containers
   ];
   testHaskellDepends = [
-    aeson
-    base
-    doctest
-    doctest-discover
-    hedgehog
-    hspec
+    aeson base doctest doctest-discover hedgehog hspec
   ];
   testToolDepends = [ doctest-discover hspec-discover ];
   enableLibraryProfiling = true;

@@ -1,23 +1,7 @@
-{ mkDerivation
-, QuickCheck
-, ansi-wl-pprint
-, base
-, base-compat
-, bytestring
-, containers
-, deepseq
-, doctest
-, gauge
-, lib
-, mtl
-, pgp-wordlist
-, quickcheck-instances
-, random
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, text
-, transformers
+{ mkDerivation, QuickCheck, ansi-wl-pprint, base, base-compat
+, bytestring, containers, deepseq, doctest, gauge, lib, mtl
+, pgp-wordlist, quickcheck-instances, random, tasty, tasty-hunit
+, tasty-quickcheck, text, transformers
 }:
 mkDerivation {
   pname = "prettyprinter";
@@ -28,29 +12,12 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base text ];
   testHaskellDepends = [
-    base
-    bytestring
-    doctest
-    pgp-wordlist
-    QuickCheck
-    quickcheck-instances
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    text
+    base bytestring doctest pgp-wordlist QuickCheck
+    quickcheck-instances tasty tasty-hunit tasty-quickcheck text
   ];
   benchmarkHaskellDepends = [
-    ansi-wl-pprint
-    base
-    base-compat
-    containers
-    deepseq
-    gauge
-    mtl
-    QuickCheck
-    random
-    text
-    transformers
+    ansi-wl-pprint base base-compat containers deepseq gauge mtl
+    QuickCheck random text transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

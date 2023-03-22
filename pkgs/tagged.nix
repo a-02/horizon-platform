@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, deepseq
-, lib
-, template-haskell
-, transformers
+{ mkDerivation, base, deepseq, lib, template-haskell, transformers
 }:
 mkDerivation {
   pname = "tagged";
@@ -13,10 +8,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    deepseq
-    template-haskell
-    transformers
+    base deepseq template-haskell transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

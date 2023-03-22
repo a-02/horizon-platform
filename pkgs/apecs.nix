@@ -1,15 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, array
-, base
-, containers
-, criterion
-, exceptions
-, lib
-, linear
-, mtl
-, template-haskell
-, vector
+{ mkDerivation, QuickCheck, array, base, containers, criterion
+, exceptions, lib, linear, mtl, template-haskell, vector
 }:
 mkDerivation {
   pname = "apecs";
@@ -21,13 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    containers
-    exceptions
-    mtl
-    template-haskell
-    vector
+    array base containers exceptions mtl template-haskell vector
   ];
   testHaskellDepends = [ base containers linear QuickCheck vector ];
   benchmarkHaskellDepends = [ base criterion linear ];

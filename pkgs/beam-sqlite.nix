@@ -1,27 +1,8 @@
-{ mkDerivation
-, aeson
-, attoparsec
-, base
-, beam-core
-, beam-migrate
-, bytestring
-, dlist
-, fetchgit
-, free
-, hashable
-, lib
-, monad-control
-, mtl
-, network-uri
-, scientific
-, sqlite-simple
-, tasty
-, tasty-expected-failure
-, tasty-hunit
-, text
-, time
-, transformers-base
-, unix
+{ mkDerivation, aeson, attoparsec, base, beam-core, beam-migrate
+, bytestring, dlist, fetchgit, free, hashable, lib, monad-control
+, mtl, network-uri, scientific, sqlite-simple, tasty
+, tasty-expected-failure, tasty-hunit, text, time
+, transformers-base, unix
 }:
 mkDerivation {
   pname = "beam-sqlite";
@@ -37,35 +18,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    attoparsec
-    base
-    beam-core
-    beam-migrate
-    bytestring
-    dlist
-    free
-    hashable
-    monad-control
-    mtl
-    network-uri
-    scientific
-    sqlite-simple
-    text
-    time
-    transformers-base
-    unix
+    aeson attoparsec base beam-core beam-migrate bytestring dlist free
+    hashable monad-control mtl network-uri scientific sqlite-simple
+    text time transformers-base unix
   ];
   testHaskellDepends = [
-    base
-    beam-core
-    beam-migrate
-    sqlite-simple
-    tasty
-    tasty-expected-failure
-    tasty-hunit
-    text
-    time
+    base beam-core beam-migrate sqlite-simple tasty
+    tasty-expected-failure tasty-hunit text time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

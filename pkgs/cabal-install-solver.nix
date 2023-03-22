@@ -1,19 +1,6 @@
-{ mkDerivation
-, Cabal
-, Cabal-syntax
-, array
-, base
-, bytestring
-, containers
-, edit-distance
-, filepath
-, lib
-, mtl
-, pretty
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, transformers
+{ mkDerivation, Cabal, Cabal-syntax, array, base, bytestring
+, containers, edit-distance, filepath, lib, mtl, pretty, tasty
+, tasty-hunit, tasty-quickcheck, transformers
 }:
 mkDerivation {
   pname = "cabal-install-solver";
@@ -23,25 +10,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    bytestring
-    Cabal
-    Cabal-syntax
-    containers
-    edit-distance
-    filepath
-    mtl
-    pretty
-    transformers
+    array base bytestring Cabal Cabal-syntax containers edit-distance
+    filepath mtl pretty transformers
   ];
   testHaskellDepends = [
-    base
-    Cabal
-    Cabal-syntax
-    tasty
-    tasty-hunit
-    tasty-quickcheck
+    base Cabal Cabal-syntax tasty tasty-hunit tasty-quickcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

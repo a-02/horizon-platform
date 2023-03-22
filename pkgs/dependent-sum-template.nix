@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, constraints-extras
-, dependent-sum
-, lib
-, template-haskell
-, th-abstraction
-, th-extras
+{ mkDerivation, base, constraints-extras, dependent-sum, lib
+, template-haskell, th-abstraction, th-extras
 }:
 mkDerivation {
   pname = "dependent-sum-template";
@@ -15,11 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    dependent-sum
-    template-haskell
-    th-abstraction
-    th-extras
+    base dependent-sum template-haskell th-abstraction th-extras
   ];
   testHaskellDepends = [ base constraints-extras dependent-sum ];
   enableLibraryProfiling = true;

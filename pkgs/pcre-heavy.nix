@@ -1,14 +1,5 @@
-{ mkDerivation
-, Glob
-, base
-, base-compat
-, bytestring
-, doctest
-, lib
-, pcre-light
-, semigroups
-, string-conversions
-, template-haskell
+{ mkDerivation, Glob, base, base-compat, bytestring, doctest, lib
+, pcre-light, semigroups, string-conversions, template-haskell
 }:
 mkDerivation {
   pname = "pcre-heavy";
@@ -20,13 +11,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base-compat
-    bytestring
-    pcre-light
-    semigroups
-    string-conversions
-    template-haskell
+    base base-compat bytestring pcre-light semigroups
+    string-conversions template-haskell
   ];
   testHaskellDepends = [ base doctest Glob ];
   enableLibraryProfiling = true;

@@ -1,13 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, lib
-, quickcheck-instances
-, rerebase
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, transformers
+{ mkDerivation, QuickCheck, base, lib, quickcheck-instances
+, rerebase, tasty, tasty-hunit, tasty-quickcheck, transformers
 }:
 mkDerivation {
   pname = "focus";
@@ -18,11 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base transformers ];
   testHaskellDepends = [
-    QuickCheck
-    quickcheck-instances
-    rerebase
-    tasty
-    tasty-hunit
+    QuickCheck quickcheck-instances rerebase tasty tasty-hunit
     tasty-quickcheck
   ];
   enableLibraryProfiling = true;

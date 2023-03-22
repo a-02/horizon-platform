@@ -1,11 +1,5 @@
-{ mkDerivation
-, HUnit
-, base
-, containers
-, lib
-, test-framework
-, test-framework-hunit
-, test-framework-quickcheck2
+{ mkDerivation, HUnit, base, containers, lib, test-framework
+, test-framework-hunit, test-framework-quickcheck2
 }:
 mkDerivation {
   pname = "partial-order";
@@ -16,11 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base containers ];
   testHaskellDepends = [
-    base
-    containers
-    HUnit
-    test-framework
-    test-framework-hunit
+    base containers HUnit test-framework test-framework-hunit
     test-framework-quickcheck2
   ];
   enableLibraryProfiling = true;

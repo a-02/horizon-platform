@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, conduit
-, http-types
-, lib
-, transformers
-, wai
+{ mkDerivation, base, bytestring, conduit, http-types, lib
+, transformers, wai
 }:
 mkDerivation {
   pname = "wai-conduit";
@@ -15,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    conduit
-    http-types
-    transformers
-    wai
+    base bytestring conduit http-types transformers wai
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

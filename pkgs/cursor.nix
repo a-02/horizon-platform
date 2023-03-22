@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, containers
-, deepseq
-, lib
-, microlens
-, text
-, validity
-, validity-containers
-, validity-text
+{ mkDerivation, base, containers, deepseq, lib, microlens, text
+, validity, validity-containers, validity-text
 }:
 mkDerivation {
   pname = "cursor";
@@ -17,13 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    deepseq
-    microlens
-    text
-    validity
-    validity-containers
+    base containers deepseq microlens text validity validity-containers
     validity-text
   ];
   enableLibraryProfiling = true;

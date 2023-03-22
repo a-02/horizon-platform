@@ -1,44 +1,20 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, containers
-, deepseq
-, lib
-, mtl
-, parsec
-, tasty
-, tasty-quickcheck
-, text
-, transformers
+{ mkDerivation, QuickCheck, base, bytestring, containers, deepseq
+, lib, mtl, parsec, tasty, tasty-quickcheck, text, transformers
 }:
 mkDerivation {
   pname = "HsYAML";
   version = "0.2.1.1";
   sha256 = "465bb4fc90979c19bedf6db2053f9ac54537b4912d5827d7e2135d42ef5ef628";
-  revision = "1";
-  editedCabalFile = "0jmbgrjywcblrd8k6zzv2b5givdz83f479y15v5gs0r93z25xpmv";
+  revision = "2";
+  editedCabalFile = "0r2yh96nhmlfy2vj2c7i5703brv4lp9cw5v044j7s8487jvv70d6";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    deepseq
-    mtl
-    parsec
-    text
-    transformers
+    base bytestring containers deepseq mtl parsec text transformers
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    containers
-    mtl
-    QuickCheck
-    tasty
-    tasty-quickcheck
+    base bytestring containers mtl QuickCheck tasty tasty-quickcheck
     text
   ];
   enableLibraryProfiling = true;

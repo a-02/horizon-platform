@@ -1,17 +1,6 @@
-{ mkDerivation
-, base
-, bytestring
-, containers
-, lib
-, parsec
-, tasty
-, tasty-bench
-, tasty-hunit
-, tasty-quickcheck
-, text
-, transformers
-, unicode-data
-, unicode-transforms
+{ mkDerivation, base, bytestring, containers, lib, parsec, tasty
+, tasty-bench, tasty-hunit, tasty-quickcheck, text, transformers
+, unicode-data, unicode-transforms
 }:
 mkDerivation {
   pname = "commonmark";
@@ -21,22 +10,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    parsec
-    text
-    transformers
-    unicode-data
+    base bytestring containers parsec text transformers unicode-data
     unicode-transforms
   ];
   testHaskellDepends = [
-    base
-    parsec
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    text
+    base parsec tasty tasty-hunit tasty-quickcheck text
     unicode-transforms
   ];
   benchmarkHaskellDepends = [ base tasty-bench text ];

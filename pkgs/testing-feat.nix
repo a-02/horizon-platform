@@ -1,8 +1,4 @@
-{ mkDerivation
-, QuickCheck
-, base
-, lib
-, size-based
+{ mkDerivation, QuickCheck, base, lib, size-based
 , testing-type-modifiers
 }:
 mkDerivation {
@@ -13,10 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    QuickCheck
-    size-based
-    testing-type-modifiers
+    base QuickCheck size-based testing-type-modifiers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

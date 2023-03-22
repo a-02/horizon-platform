@@ -1,12 +1,5 @@
-{ mkDerivation
-, MonadRandom
-, base
-, lib
-, random
-, random-shuffle
-, safe
-, statistics
-, vector
+{ mkDerivation, MonadRandom, base, lib, random, random-shuffle
+, safe, statistics, vector
 }:
 mkDerivation {
   pname = "statistics-linreg";
@@ -16,13 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    MonadRandom
-    random
-    random-shuffle
-    safe
-    statistics
-    vector
+    base MonadRandom random random-shuffle safe statistics vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

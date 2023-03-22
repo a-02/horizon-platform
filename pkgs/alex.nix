@@ -1,10 +1,4 @@
-{ mkDerivation
-, array
-, base
-, containers
-, directory
-, happy
-, lib
+{ mkDerivation, array, base, containers, directory, happy, lib
 , process
 }:
 mkDerivation {

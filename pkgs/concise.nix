@@ -1,13 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, lens
-, lib
-, quickcheck-instances
-, tasty
-, tasty-quickcheck
-, text
+{ mkDerivation, QuickCheck, base, bytestring, lens, lib
+, quickcheck-instances, tasty, tasty-quickcheck, text
 }:
 mkDerivation {
   pname = "concise";
@@ -18,14 +10,8 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring lens text ];
   testHaskellDepends = [
-    base
-    bytestring
-    lens
-    QuickCheck
-    quickcheck-instances
-    tasty
-    tasty-quickcheck
-    text
+    base bytestring lens QuickCheck quickcheck-instances tasty
+    tasty-quickcheck text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

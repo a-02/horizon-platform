@@ -1,15 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, deepseq
-, hashable
-, lib
-, mtl
-, quickcheck-instances
-, rerebase
-, strict-list
-, tasty
-, tasty-hunit
+{ mkDerivation, QuickCheck, base, deepseq, hashable, lib, mtl
+, quickcheck-instances, rerebase, strict-list, tasty, tasty-hunit
 , tasty-quickcheck
 }:
 mkDerivation {
@@ -21,11 +11,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base deepseq hashable mtl strict-list ];
   testHaskellDepends = [
-    QuickCheck
-    quickcheck-instances
-    rerebase
-    tasty
-    tasty-hunit
+    QuickCheck quickcheck-instances rerebase tasty tasty-hunit
     tasty-quickcheck
   ];
   enableLibraryProfiling = true;

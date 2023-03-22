@@ -1,39 +1,10 @@
-{ mkDerivation
-, algebraic-graphs
-, attoparsec
-, base
-, base16-bytestring
-, base64-bytestring
-, binary
-, bytestring
-, cereal
-, containers
-, cryptonite
-, directory
-, filepath
-, hashable
-, hspec
-, lib
-, lifted-base
-, memory
-, monad-control
-, mtl
-, nix-derivation
-, process
-, relude
-, saltine
-, tasty
-, tasty-discover
-, tasty-golden
-, tasty-hspec
-, tasty-hunit
-, tasty-quickcheck
-, temporary
-, text
-, time
-, unix
-, unordered-containers
-, vector
+{ mkDerivation, algebraic-graphs, attoparsec, base
+, base16-bytestring, base64-bytestring, binary, bytestring, cereal
+, containers, cryptonite, directory, filepath, hashable, hspec, lib
+, lifted-base, memory, monad-control, mtl, nix-derivation, process
+, relude, saltine, tasty, tasty-discover, tasty-golden, tasty-hspec
+, tasty-hunit, tasty-quickcheck, temporary, text, time, unix
+, unordered-containers, vector
 }:
 mkDerivation {
   pname = "hnix-store-core";
@@ -43,53 +14,17 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    algebraic-graphs
-    attoparsec
-    base
-    base16-bytestring
-    base64-bytestring
-    bytestring
-    cereal
-    containers
-    cryptonite
-    directory
-    filepath
-    hashable
-    lifted-base
-    memory
-    monad-control
-    mtl
-    nix-derivation
-    relude
-    saltine
-    text
-    time
-    unix
-    unordered-containers
+    algebraic-graphs attoparsec base base16-bytestring
+    base64-bytestring bytestring cereal containers cryptonite directory
+    filepath hashable lifted-base memory monad-control mtl
+    nix-derivation relude saltine text time unix unordered-containers
     vector
   ];
   testHaskellDepends = [
-    attoparsec
-    base
-    base16-bytestring
-    base64-bytestring
-    binary
-    bytestring
-    containers
-    cryptonite
-    directory
-    filepath
-    hspec
-    process
-    relude
-    tasty
-    tasty-golden
-    tasty-hspec
-    tasty-hunit
-    tasty-quickcheck
-    temporary
-    text
-    unix
+    attoparsec base base16-bytestring base64-bytestring binary
+    bytestring containers cryptonite directory filepath hspec process
+    relude tasty tasty-golden tasty-hspec tasty-hunit tasty-quickcheck
+    temporary text unix
   ];
   testToolDepends = [ tasty-discover ];
   enableLibraryProfiling = true;

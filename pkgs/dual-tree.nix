@@ -1,9 +1,4 @@
-{ mkDerivation
-, QuickCheck
-, base
-, lib
-, monoid-extras
-, semigroups
+{ mkDerivation, QuickCheck, base, lib, monoid-extras, semigroups
 , testing-feat
 }:
 mkDerivation {
@@ -15,11 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base monoid-extras semigroups ];
   testHaskellDepends = [
-    base
-    monoid-extras
-    QuickCheck
-    semigroups
-    testing-feat
+    base monoid-extras QuickCheck semigroups testing-feat
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

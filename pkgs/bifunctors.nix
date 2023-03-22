@@ -1,17 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, assoc
-, base
-, comonad
-, containers
-, foldable1-classes-compat
-, hspec
-, hspec-discover
-, lib
-, tagged
-, template-haskell
-, th-abstraction
-, transformers
+{ mkDerivation, QuickCheck, assoc, base, comonad, containers
+, foldable1-classes-compat, hspec, hspec-discover, lib, tagged
+, template-haskell, th-abstraction, transformers
 , transformers-compat
 }:
 mkDerivation {
@@ -22,22 +11,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    assoc
-    base
-    comonad
-    containers
-    foldable1-classes-compat
-    tagged
-    template-haskell
-    th-abstraction
-    transformers
+    assoc base comonad containers foldable1-classes-compat tagged
+    template-haskell th-abstraction transformers
   ];
   testHaskellDepends = [
-    base
-    hspec
-    QuickCheck
-    template-haskell
-    transformers
+    base hspec QuickCheck template-haskell transformers
     transformers-compat
   ];
   testToolDepends = [ hspec-discover ];

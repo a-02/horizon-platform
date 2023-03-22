@@ -1,11 +1,4 @@
-{ mkDerivation
-, HUnit
-, base
-, bytestring
-, containers
-, lib
-, mtl
-, pcre
+{ mkDerivation, HUnit, base, bytestring, containers, lib, mtl, pcre
 }:
 mkDerivation {
   pname = "pcre-light";

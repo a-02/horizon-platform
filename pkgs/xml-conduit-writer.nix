@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, containers
-, data-default
-, dlist
-, lib
-, mtl
-, text
-, xml-conduit
-, xml-types
+{ mkDerivation, base, containers, data-default, dlist, lib, mtl
+, text, xml-conduit, xml-types
 }:
 mkDerivation {
   pname = "xml-conduit-writer";
@@ -17,14 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    data-default
-    dlist
-    mtl
-    text
-    xml-conduit
-    xml-types
+    base containers data-default dlist mtl text xml-conduit xml-types
   ];
   testHaskellDepends = [ base text ];
   enableLibraryProfiling = true;

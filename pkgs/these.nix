@@ -1,11 +1,5 @@
-{ mkDerivation
-, assoc
-, base
-, binary
-, deepseq
-, foldable1-classes-compat
-, hashable
-, lib
+{ mkDerivation, assoc, base, binary, deepseq
+, foldable1-classes-compat, hashable, lib
 }:
 mkDerivation {
   pname = "these";
@@ -15,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    assoc
-    base
-    binary
-    deepseq
-    foldable1-classes-compat
-    hashable
+    assoc base binary deepseq foldable1-classes-compat hashable
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

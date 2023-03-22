@@ -1,18 +1,6 @@
-{ mkDerivation
-, base
-, binary
-, bytestring
-, containers
-, deepseq
-, directory
-, filepath
-, hxt-charproperties
-, hxt-regex-xmlschema
-, hxt-unicode
-, lib
-, mtl
-, network-uri
-, parsec
+{ mkDerivation, base, binary, bytestring, containers, deepseq
+, directory, filepath, hxt-charproperties, hxt-regex-xmlschema
+, hxt-unicode, lib, mtl, network-uri, parsec
 }:
 mkDerivation {
   pname = "hxt";
@@ -22,18 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    binary
-    bytestring
-    containers
-    deepseq
-    directory
-    filepath
-    hxt-charproperties
-    hxt-regex-xmlschema
-    hxt-unicode
-    mtl
-    network-uri
+    base binary bytestring containers deepseq directory filepath
+    hxt-charproperties hxt-regex-xmlschema hxt-unicode mtl network-uri
     parsec
   ];
   enableLibraryProfiling = true;
