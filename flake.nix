@@ -11,7 +11,7 @@
     get-flake.url = "github:ursi/get-flake";
     flake-parts.url = "github:hercules-ci/flake-parts";
     horizon-shell-flake = {
-      url = "git+https://gitlab.horizon-haskell.net/shells/horizon-shell";
+      url = "git+https://gitlab.horizon-haskell.net/shells/horizon-shell?ref=refs/tags/0.0.8";
       flake = false;
     };
     lint-utils.url = "git+https://gitlab.homotopic.tech/nix/lint-utils";
