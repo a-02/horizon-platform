@@ -11,5 +11,8 @@ final: prev: {
   iwlib = null;
 
   libsystemd-journal = null;
+
+  sdl2-mixer = null;
+
 }
 
