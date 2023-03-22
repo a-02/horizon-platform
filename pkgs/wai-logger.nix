@@ -1,15 +1,5 @@
-{ mkDerivation
-, Cabal
-, base
-, byteorder
-, bytestring
-, cabal-doctest
-, doctest
-, fast-logger
-, http-types
-, lib
-, network
-, wai
+{ mkDerivation, Cabal, base, byteorder, bytestring, cabal-doctest
+, doctest, fast-logger, http-types, lib, network, wai
 }:
 mkDerivation {
   pname = "wai-logger";
@@ -20,13 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   setupHaskellDepends = [ base Cabal cabal-doctest ];
   libraryHaskellDepends = [
-    base
-    byteorder
-    bytestring
-    fast-logger
-    http-types
-    network
-    wai
+    base byteorder bytestring fast-logger http-types network wai
   ];
   testHaskellDepends = [ base doctest ];
   enableLibraryProfiling = true;

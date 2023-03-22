@@ -1,26 +1,8 @@
-{ mkDerivation
-, QuickCheck
-, array
-, base
-, bytestring
-, containers
-, indexed-profunctors
-, inspection-testing
-, lens
-, lib
-, mtl
-, optics-core
-, optics-extra
-, optics-th
-, random
-, tasty
-, tasty-bench
-, tasty-hunit
-, tasty-quickcheck
-, template-haskell
-, transformers
-, unordered-containers
-, vector
+{ mkDerivation, QuickCheck, array, base, bytestring, containers
+, indexed-profunctors, inspection-testing, lens, lib, mtl
+, optics-core, optics-extra, optics-th, random, tasty, tasty-bench
+, tasty-hunit, tasty-quickcheck, template-haskell, transformers
+, unordered-containers, vector
 }:
 mkDerivation {
   pname = "optics";
@@ -30,38 +12,17 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    containers
-    mtl
-    optics-core
-    optics-extra
-    optics-th
+    array base containers mtl optics-core optics-extra optics-th
     transformers
   ];
   testHaskellDepends = [
-    base
-    containers
-    indexed-profunctors
-    inspection-testing
-    mtl
-    optics-core
-    QuickCheck
-    random
-    tasty
-    tasty-hunit
-    tasty-quickcheck
+    base containers indexed-profunctors inspection-testing mtl
+    optics-core QuickCheck random tasty tasty-hunit tasty-quickcheck
     template-haskell
   ];
   benchmarkHaskellDepends = [
-    base
-    bytestring
-    containers
-    lens
-    tasty-bench
-    transformers
-    unordered-containers
-    vector
+    base bytestring containers lens tasty-bench transformers
+    unordered-containers vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

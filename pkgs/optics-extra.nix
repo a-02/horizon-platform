@@ -1,18 +1,6 @@
-{ mkDerivation
-, array
-, base
-, bytestring
-, containers
-, hashable
-, indexed-profunctors
-, indexed-traversable-instances
-, lib
-, mtl
-, optics-core
-, text
-, transformers
-, unordered-containers
-, vector
+{ mkDerivation, array, base, bytestring, containers, hashable
+, indexed-profunctors, indexed-traversable-instances, lib, mtl
+, optics-core, text, transformers, unordered-containers, vector
 }:
 mkDerivation {
   pname = "optics-extra";
@@ -24,19 +12,9 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    bytestring
-    containers
-    hashable
-    indexed-profunctors
-    indexed-traversable-instances
-    mtl
-    optics-core
-    text
-    transformers
-    unordered-containers
-    vector
+    array base bytestring containers hashable indexed-profunctors
+    indexed-traversable-instances mtl optics-core text transformers
+    unordered-containers vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

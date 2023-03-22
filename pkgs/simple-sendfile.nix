@@ -1,16 +1,5 @@
-{ mkDerivation
-, HUnit
-, base
-, bytestring
-, conduit
-, conduit-extra
-, directory
-, hspec
-, lib
-, network
-, process
-, resourcet
-, unix
+{ mkDerivation, HUnit, base, bytestring, conduit, conduit-extra
+, directory, hspec, lib, network, process, resourcet, unix
 }:
 mkDerivation {
   pname = "simple-sendfile";
@@ -21,17 +10,8 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring network unix ];
   testHaskellDepends = [
-    base
-    bytestring
-    conduit
-    conduit-extra
-    directory
-    hspec
-    HUnit
-    network
-    process
-    resourcet
-    unix
+    base bytestring conduit conduit-extra directory hspec HUnit network
+    process resourcet unix
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

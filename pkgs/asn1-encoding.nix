@@ -1,12 +1,5 @@
-{ mkDerivation
-, asn1-types
-, base
-, bytestring
-, hourglass
-, lib
-, mtl
-, tasty
-, tasty-quickcheck
+{ mkDerivation, asn1-types, base, bytestring, hourglass, lib, mtl
+, tasty, tasty-quickcheck
 }:
 mkDerivation {
   pname = "asn1-encoding";
@@ -19,13 +12,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ asn1-types base bytestring hourglass ];
   testHaskellDepends = [
-    asn1-types
-    base
-    bytestring
-    hourglass
-    mtl
-    tasty
-    tasty-quickcheck
+    asn1-types base bytestring hourglass mtl tasty tasty-quickcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

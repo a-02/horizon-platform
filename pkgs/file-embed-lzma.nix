@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, directory
-, filepath
-, lib
-, lzma
-, template-haskell
-, text
-, transformers
+{ mkDerivation, base, bytestring, directory, filepath, lib, lzma
+, template-haskell, text, transformers
 }:
 mkDerivation {
   pname = "file-embed-lzma";
@@ -17,13 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    directory
-    filepath
-    lzma
-    template-haskell
-    text
+    base bytestring directory filepath lzma template-haskell text
     transformers
   ];
   testHaskellDepends = [ base bytestring ];

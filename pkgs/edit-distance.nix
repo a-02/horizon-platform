@@ -1,17 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, array
-, base
-, containers
-, criterion
-, deepseq
-, lib
-, process
-, random
-, test-framework
-, test-framework-quickcheck2
-, time
-, unix
+{ mkDerivation, QuickCheck, array, base, containers, criterion
+, deepseq, lib, process, random, test-framework
+, test-framework-quickcheck2, time, unix
 }:
 mkDerivation {
   pname = "edit-distance";
@@ -24,24 +13,11 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ array base containers random ];
   testHaskellDepends = [
-    array
-    base
-    containers
-    QuickCheck
-    random
-    test-framework
+    array base containers QuickCheck random test-framework
     test-framework-quickcheck2
   ];
   benchmarkHaskellDepends = [
-    array
-    base
-    containers
-    criterion
-    deepseq
-    process
-    random
-    time
-    unix
+    array base containers criterion deepseq process random time unix
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

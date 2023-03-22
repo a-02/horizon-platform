@@ -1,18 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, base
-, bytestring
-, containers
-, criterion
-, deepseq
-, lib
-, parsec
-, pretty
-, tasty
-, tasty-quickcheck
-, unordered-containers
-, vector
+{ mkDerivation, QuickCheck, aeson, base, bytestring, containers
+, criterion, deepseq, lib, parsec, pretty, tasty, tasty-quickcheck
+, unordered-containers, vector
 }:
 mkDerivation {
   pname = "canonical-json";
@@ -22,23 +10,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    deepseq
-    parsec
-    pretty
+    base bytestring containers deepseq parsec pretty
   ];
   testHaskellDepends = [
-    aeson
-    base
-    bytestring
-    containers
-    QuickCheck
-    tasty
-    tasty-quickcheck
-    unordered-containers
-    vector
+    aeson base bytestring containers QuickCheck tasty tasty-quickcheck
+    unordered-containers vector
   ];
   benchmarkHaskellDepends = [ base bytestring containers criterion ];
   enableLibraryProfiling = true;

@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, directory
-, filepath
-, hspec
-, lib
-, temporary
-, text
-, unix-compat
+{ mkDerivation, base, bytestring, directory, filepath, hspec, lib
+, temporary, text, unix-compat
 }:
 mkDerivation {
   pname = "atomic-write";
@@ -17,22 +9,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    directory
-    filepath
-    temporary
-    text
-    unix-compat
+    base bytestring directory filepath temporary text unix-compat
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    filepath
-    hspec
-    temporary
-    text
-    unix-compat
+    base bytestring filepath hspec temporary text unix-compat
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

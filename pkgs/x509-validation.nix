@@ -1,20 +1,6 @@
-{ mkDerivation
-, asn1-encoding
-, asn1-types
-, base
-, bytestring
-, containers
-, cryptonite
-, data-default-class
-, hourglass
-, lib
-, memory
-, mtl
-, pem
-, tasty
-, tasty-hunit
-, x509
-, x509-store
+{ mkDerivation, asn1-encoding, asn1-types, base, bytestring
+, containers, cryptonite, data-default-class, hourglass, lib
+, memory, mtl, pem, tasty, tasty-hunit, x509, x509-store
 }:
 mkDerivation {
   pname = "x509-validation";
@@ -24,32 +10,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    asn1-encoding
-    asn1-types
-    base
-    bytestring
-    containers
-    cryptonite
-    data-default-class
-    hourglass
-    memory
-    mtl
-    pem
-    x509
-    x509-store
+    asn1-encoding asn1-types base bytestring containers cryptonite
+    data-default-class hourglass memory mtl pem x509 x509-store
   ];
   testHaskellDepends = [
-    asn1-encoding
-    asn1-types
-    base
-    bytestring
-    cryptonite
-    data-default-class
-    hourglass
-    memory
-    tasty
-    tasty-hunit
-    x509
+    asn1-encoding asn1-types base bytestring cryptonite
+    data-default-class hourglass memory tasty tasty-hunit x509
     x509-store
   ];
   enableLibraryProfiling = true;

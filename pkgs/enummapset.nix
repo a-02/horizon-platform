@@ -1,15 +1,5 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, aeson
-, array
-, base
-, containers
-, deepseq
-, ghc-prim
-, lib
-, test-framework
-, test-framework-hunit
+{ mkDerivation, HUnit, QuickCheck, aeson, array, base, containers
+, deepseq, ghc-prim, lib, test-framework, test-framework-hunit
 , test-framework-quickcheck2
 }:
 mkDerivation {
@@ -21,17 +11,8 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ aeson base containers deepseq ];
   testHaskellDepends = [
-    aeson
-    array
-    base
-    containers
-    deepseq
-    ghc-prim
-    HUnit
-    QuickCheck
-    test-framework
-    test-framework-hunit
-    test-framework-quickcheck2
+    aeson array base containers deepseq ghc-prim HUnit QuickCheck
+    test-framework test-framework-hunit test-framework-quickcheck2
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

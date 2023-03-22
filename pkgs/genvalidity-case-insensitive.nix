@@ -1,13 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, case-insensitive
-, criterion
-, genvalidity
-, genvalidity-criterion
-, genvalidity-hspec
-, hspec
-, lib
+{ mkDerivation, QuickCheck, base, case-insensitive, criterion
+, genvalidity, genvalidity-criterion, genvalidity-hspec, hspec, lib
 , validity-case-insensitive
 }:
 mkDerivation {
@@ -18,23 +10,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    case-insensitive
-    genvalidity
-    validity-case-insensitive
+    base case-insensitive genvalidity validity-case-insensitive
   ];
   testHaskellDepends = [
-    base
-    case-insensitive
-    genvalidity-hspec
-    hspec
+    base case-insensitive genvalidity-hspec hspec
   ];
   benchmarkHaskellDepends = [
-    base
-    case-insensitive
-    criterion
-    genvalidity
-    genvalidity-criterion
+    base case-insensitive criterion genvalidity genvalidity-criterion
     QuickCheck
   ];
   enableLibraryProfiling = true;

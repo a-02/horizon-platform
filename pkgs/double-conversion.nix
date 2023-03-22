@@ -1,14 +1,6 @@
-{ mkDerivation
-, HUnit
-, base
-, bytestring
-, ghc-prim
-, lib
-, system-cxx-std-lib
-, test-framework
-, test-framework-hunit
-, test-framework-quickcheck2
-, text
+{ mkDerivation, HUnit, base, bytestring, ghc-prim, lib
+, system-cxx-std-lib, test-framework, test-framework-hunit
+, test-framework-quickcheck2, text
 }:
 mkDerivation {
   pname = "double-conversion";
@@ -20,20 +12,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    ghc-prim
-    system-cxx-std-lib
-    text
+    base bytestring ghc-prim system-cxx-std-lib text
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    HUnit
-    test-framework
-    test-framework-hunit
-    test-framework-quickcheck2
-    text
+    base bytestring HUnit test-framework test-framework-hunit
+    test-framework-quickcheck2 text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

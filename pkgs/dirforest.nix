@@ -1,15 +1,5 @@
-{ mkDerivation
-, aeson
-, base
-, containers
-, deepseq
-, fetchgit
-, filepath
-, lib
-, path
-, path-io
-, validity
-, validity-containers
+{ mkDerivation, aeson, base, containers, deepseq, fetchgit
+, filepath, lib, path, path-io, validity, validity-containers
 , validity-path
 }:
 mkDerivation {
@@ -26,16 +16,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    containers
-    deepseq
-    filepath
-    path
-    path-io
-    validity
-    validity-containers
-    validity-path
+    aeson base containers deepseq filepath path path-io validity
+    validity-containers validity-path
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

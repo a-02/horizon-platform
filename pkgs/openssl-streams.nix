@@ -1,13 +1,5 @@
-{ mkDerivation
-, HUnit
-, HsOpenSSL
-, base
-, bytestring
-, io-streams
-, lib
-, network
-, test-framework
-, test-framework-hunit
+{ mkDerivation, HUnit, HsOpenSSL, base, bytestring, io-streams, lib
+, network, test-framework, test-framework-hunit
 }:
 mkDerivation {
   pname = "openssl-streams";
@@ -19,20 +11,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    HsOpenSSL
-    io-streams
-    network
+    base bytestring HsOpenSSL io-streams network
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    HsOpenSSL
-    HUnit
-    io-streams
-    network
-    test-framework
+    base bytestring HsOpenSSL HUnit io-streams network test-framework
     test-framework-hunit
   ];
   enableLibraryProfiling = true;

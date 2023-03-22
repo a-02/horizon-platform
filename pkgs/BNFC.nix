@@ -1,24 +1,6 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, alex
-, array
-, base
-, containers
-, deepseq
-, directory
-, filepath
-, happy
-, hspec
-, hspec-discover
-, lib
-, mtl
-, pretty
-, process
-, string-qq
-, temporary
-, time
-, transformers
+{ mkDerivation, HUnit, QuickCheck, alex, array, base, containers
+, deepseq, directory, filepath, happy, hspec, hspec-discover, lib
+, mtl, pretty, process, string-qq, temporary, time, transformers
 }:
 mkDerivation {
   pname = "BNFC";
@@ -28,37 +10,14 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    containers
-    deepseq
-    directory
-    filepath
-    mtl
-    pretty
-    process
-    string-qq
-    time
-    transformers
+    array base containers deepseq directory filepath mtl pretty process
+    string-qq time transformers
   ];
   libraryToolDepends = [ alex happy ];
   executableHaskellDepends = [ base ];
   testHaskellDepends = [
-    array
-    base
-    containers
-    deepseq
-    directory
-    filepath
-    hspec
-    HUnit
-    mtl
-    pretty
-    process
-    QuickCheck
-    string-qq
-    temporary
-    time
+    array base containers deepseq directory filepath hspec HUnit mtl
+    pretty process QuickCheck string-qq temporary time
   ];
   testToolDepends = [ alex happy hspec-discover ];
   enableLibraryProfiling = true;

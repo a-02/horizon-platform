@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, criterion
-, deepseq
-, lib
-, primitive
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, vector
+{ mkDerivation, base, criterion, deepseq, lib, primitive, tasty
+, tasty-hunit, tasty-quickcheck, vector
 }:
 mkDerivation {
   pname = "matrices";
@@ -18,11 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base deepseq primitive vector ];
   testHaskellDepends = [
-    base
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    vector
+    base tasty tasty-hunit tasty-quickcheck vector
   ];
   benchmarkHaskellDepends = [ base criterion vector ];
   enableLibraryProfiling = true;

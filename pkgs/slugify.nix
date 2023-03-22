@@ -1,10 +1,4 @@
-{ mkDerivation
-, QuickCheck
-, base
-, hspec
-, hspec-discover
-, lib
-, text
+{ mkDerivation, QuickCheck, base, hspec, hspec-discover, lib, text
 , unicode-transforms
 }:
 mkDerivation {

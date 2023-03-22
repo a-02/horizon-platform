@@ -1,15 +1,5 @@
-{ mkDerivation
-, array
-, base
-, colour
-, data-default-class
-, lens
-, lib
-, mtl
-, old-locale
-, operational
-, time
-, vector
+{ mkDerivation, array, base, colour, data-default-class, lens, lib
+, mtl, old-locale, operational, time, vector
 }:
 mkDerivation {
   pname = "Chart";
@@ -19,16 +9,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    colour
-    data-default-class
-    lens
-    mtl
-    old-locale
-    operational
-    time
-    vector
+    array base colour data-default-class lens mtl old-locale
+    operational time vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

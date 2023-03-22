@@ -1,13 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, genvalidity
-, genvalidity-hspec
-, hspec
-, lib
-, validity
-, validity-vector
-, vector
+{ mkDerivation, QuickCheck, base, genvalidity, genvalidity-hspec
+, hspec, lib, validity, validity-vector, vector
 }:
 mkDerivation {
   pname = "genvalidity-vector";
@@ -17,19 +9,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    genvalidity
-    QuickCheck
-    validity
-    validity-vector
-    vector
+    base genvalidity QuickCheck validity validity-vector vector
   ];
   testHaskellDepends = [
-    base
-    genvalidity
-    genvalidity-hspec
-    hspec
-    vector
+    base genvalidity genvalidity-hspec hspec vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -7,10 +7,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    asn1-encoding
-    asn1-types
-    base
-    bytestring
+    asn1-encoding asn1-types base bytestring
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

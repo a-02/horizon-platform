@@ -1,21 +1,6 @@
-{ mkDerivation
-, HUnit
-, base
-, deepseq
-, directory
-, filepath
-, hedgehog
-, lib
-, process
-, safe-exceptions
-, tasty
-, tasty-discover
-, tasty-hedgehog
-, tasty-hunit
-, temporary
-, text
-, th-env
-, unix
+{ mkDerivation, HUnit, base, deepseq, directory, filepath, hedgehog
+, lib, process, safe-exceptions, tasty, tasty-discover
+, tasty-hedgehog, tasty-hunit, temporary, text, th-env, unix
 }:
 mkDerivation {
   pname = "with-utf8";
@@ -26,26 +11,11 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base safe-exceptions text ];
   executableHaskellDepends = [
-    base
-    directory
-    filepath
-    process
-    safe-exceptions
-    text
-    th-env
+    base directory filepath process safe-exceptions text th-env
   ];
   testHaskellDepends = [
-    base
-    deepseq
-    hedgehog
-    HUnit
-    safe-exceptions
-    tasty
-    tasty-hedgehog
-    tasty-hunit
-    temporary
-    text
-    unix
+    base deepseq hedgehog HUnit safe-exceptions tasty tasty-hedgehog
+    tasty-hunit temporary text unix
   ];
   testToolDepends = [ tasty-discover ];
   enableLibraryProfiling = true;

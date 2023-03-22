@@ -1,15 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, boring
-, dec
-, deepseq
-, hashable
-, inspection-testing
-, lib
-, some
-, tagged
-, universe-base
+{ mkDerivation, QuickCheck, base, boring, dec, deepseq, hashable
+, inspection-testing, lib, some, tagged, universe-base
 }:
 mkDerivation {
   pname = "fin";
@@ -21,14 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    boring
-    dec
-    deepseq
-    hashable
-    QuickCheck
-    some
-    universe-base
+    base boring dec deepseq hashable QuickCheck some universe-base
   ];
   testHaskellDepends = [ base inspection-testing tagged ];
   enableLibraryProfiling = true;

@@ -1,16 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, criterion
-, deepseq
-, directory
-, doctest
-, fetchgit
-, filepath
-, ghc-prim
-, hlint
-, lib
+{ mkDerivation, QuickCheck, base, bytestring, criterion, deepseq
+, directory, doctest, fetchgit, filepath, ghc-prim, hlint, lib
 }:
 mkDerivation {
   pname = "ed25519";
@@ -26,13 +15,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring ghc-prim ];
   testHaskellDepends = [
-    base
-    bytestring
-    directory
-    doctest
-    filepath
-    hlint
-    QuickCheck
+    base bytestring directory doctest filepath hlint QuickCheck
   ];
   benchmarkHaskellDepends = [ base bytestring criterion deepseq ];
   enableLibraryProfiling = true;

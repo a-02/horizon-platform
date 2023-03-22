@@ -1,12 +1,5 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, deepseq
-, lib
-, test-framework
-, test-framework-hunit
-, test-framework-quickcheck2
+{ mkDerivation, HUnit, QuickCheck, base, deepseq, lib
+, test-framework, test-framework-hunit, test-framework-quickcheck2
 }:
 mkDerivation {
   pname = "Decimal";
@@ -17,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base deepseq ];
   testHaskellDepends = [
-    base
-    deepseq
-    HUnit
-    QuickCheck
-    test-framework
-    test-framework-hunit
+    base deepseq HUnit QuickCheck test-framework test-framework-hunit
     test-framework-quickcheck2
   ];
   enableLibraryProfiling = true;

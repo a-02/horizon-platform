@@ -1,19 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, attoparsec
-, base
-, base-orphans
-, binary
-, bytestring
-, charset
-, containers
-, lib
-, mtl
-, parsec
-, quickcheck-instances
-, scientific
-, text
-, transformers
+{ mkDerivation, QuickCheck, attoparsec, base, base-orphans, binary
+, bytestring, charset, containers, lib, mtl, parsec
+, quickcheck-instances, scientific, text, transformers
 , unordered-containers
 }:
 mkDerivation {
@@ -24,26 +11,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    attoparsec
-    base
-    base-orphans
-    binary
-    charset
-    containers
-    mtl
-    parsec
-    scientific
-    text
-    transformers
-    unordered-containers
+    attoparsec base base-orphans binary charset containers mtl parsec
+    scientific text transformers unordered-containers
   ];
   testHaskellDepends = [
-    attoparsec
-    base
-    bytestring
-    parsec
-    QuickCheck
-    quickcheck-instances
+    attoparsec base bytestring parsec QuickCheck quickcheck-instances
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

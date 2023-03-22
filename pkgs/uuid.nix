@@ -1,19 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, binary
-, bytestring
-, cryptohash-md5
-, cryptohash-sha1
-, entropy
-, lib
-, network-info
-, random
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, text
-, time
+{ mkDerivation, QuickCheck, base, binary, bytestring
+, cryptohash-md5, cryptohash-sha1, entropy, lib, network-info
+, random, tasty, tasty-hunit, tasty-quickcheck, text, time
 , uuid-types
 }:
 mkDerivation {
@@ -26,25 +13,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    binary
-    bytestring
-    cryptohash-md5
-    cryptohash-sha1
-    entropy
-    network-info
-    random
-    text
-    time
-    uuid-types
+    base binary bytestring cryptohash-md5 cryptohash-sha1 entropy
+    network-info random text time uuid-types
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    QuickCheck
-    random
-    tasty
-    tasty-hunit
+    base bytestring QuickCheck random tasty tasty-hunit
     tasty-quickcheck
   ];
   enableLibraryProfiling = true;

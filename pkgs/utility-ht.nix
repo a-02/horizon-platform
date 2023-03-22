@@ -1,9 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, doctest-exitcode-stdio
-, doctest-lib
-, lib
+{ mkDerivation, QuickCheck, base, doctest-exitcode-stdio
+, doctest-lib, lib
 }:
 mkDerivation {
   pname = "utility-ht";
@@ -14,10 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base ];
   testHaskellDepends = [
-    base
-    doctest-exitcode-stdio
-    doctest-lib
-    QuickCheck
+    base doctest-exitcode-stdio doctest-lib QuickCheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

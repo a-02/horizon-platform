@@ -1,10 +1,4 @@
-{ mkDerivation
-, QuickCheck
-, base
-, deepseq
-, lens
-, lib
-, parsec-class
+{ mkDerivation, QuickCheck, base, deepseq, lens, lib, parsec-class
 , pretty
 }:
 mkDerivation {
@@ -17,12 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    deepseq
-    lens
-    parsec-class
-    pretty
-    QuickCheck
+    base deepseq lens parsec-class pretty QuickCheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

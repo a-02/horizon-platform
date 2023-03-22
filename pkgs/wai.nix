@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, hspec
-, hspec-discover
-, http-types
-, lib
-, network
-, text
-, vault
+{ mkDerivation, base, bytestring, hspec, hspec-discover, http-types
+, lib, network, text, vault
 }:
 mkDerivation {
   pname = "wai";
@@ -17,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    http-types
-    network
-    text
-    vault
+    base bytestring http-types network text vault
   ];
   testHaskellDepends = [ base bytestring hspec ];
   testToolDepends = [ hspec-discover ];

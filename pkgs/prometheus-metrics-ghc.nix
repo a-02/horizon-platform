@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, doctest
-, lib
-, prometheus-client
-, text
+{ mkDerivation, base, doctest, lib, prometheus-client, text
 , utf8-string
 }:
 mkDerivation {
@@ -14,10 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    prometheus-client
-    text
-    utf8-string
+    base prometheus-client text utf8-string
   ];
   testHaskellDepends = [ base doctest prometheus-client ];
   enableLibraryProfiling = true;

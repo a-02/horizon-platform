@@ -1,18 +1,6 @@
-{ mkDerivation
-, aeson
-, base
-, base64-bytestring
-, bytestring
-, containers
-, directory
-, filepath
-, lib
-, microlens
-, microlens-aeson
-, tasty
-, tasty-hunit
-, text
-, unordered-containers
+{ mkDerivation, aeson, base, base64-bytestring, bytestring
+, containers, directory, filepath, lib, microlens, microlens-aeson
+, tasty, tasty-hunit, text, unordered-containers
 }:
 mkDerivation {
   pname = "ipynb";
@@ -24,25 +12,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    base64-bytestring
-    bytestring
-    containers
-    text
+    aeson base base64-bytestring bytestring containers text
     unordered-containers
   ];
   testHaskellDepends = [
-    aeson
-    base
-    bytestring
-    directory
-    filepath
-    microlens
-    microlens-aeson
-    tasty
-    tasty-hunit
-    text
+    aeson base bytestring directory filepath microlens microlens-aeson
+    tasty tasty-hunit text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

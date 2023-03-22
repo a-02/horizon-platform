@@ -1,15 +1,5 @@
-{ mkDerivation
-, aeson
-, base
-, bytestring
-, lib
-, string-qq
-, tasty
-, tasty-discover
-, tasty-hunit
-, text
-, unordered-containers
-, vector
+{ mkDerivation, aeson, base, bytestring, lib, string-qq, tasty
+, tasty-discover, tasty-hunit, text, unordered-containers, vector
 , yaml
 }:
 mkDerivation {
@@ -22,22 +12,11 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    bytestring
-    text
-    unordered-containers
-    vector
+    aeson base bytestring text unordered-containers vector
   ];
   testHaskellDepends = [
-    aeson
-    base
-    bytestring
-    string-qq
-    tasty
-    tasty-hunit
-    unordered-containers
-    yaml
+    aeson base bytestring string-qq tasty tasty-hunit
+    unordered-containers yaml
   ];
   testToolDepends = [ tasty-discover ];
   enableLibraryProfiling = true;

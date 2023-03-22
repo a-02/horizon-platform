@@ -1,28 +1,17 @@
-{ mkDerivation
-, array
-, base
-, bytestring
-, containers
-, lib
-, regex-base
-, text
+{ mkDerivation, array, base, bytestring, containers, lib
+, regex-base, text
 }:
 mkDerivation {
   pname = "regex-pcre-builtin";
   version = "0.95.2.3.8.44";
   sha256 = "cacea6a45faf93df8afbf50ecb09f87acabfed0477cba4746205649eb52ec55e";
-  revision = "2";
-  editedCabalFile = "19ryjv8va9bjwhfk4v81lsvi91aj7aw1cflggywjpmw001qr419d";
+  revision = "3";
+  editedCabalFile = "071s6k97z0wiqx5rga360awgj0a031gqm725835xxszdz36w0mbv";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    bytestring
-    containers
-    regex-base
-    text
+    array base bytestring containers regex-base text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

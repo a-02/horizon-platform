@@ -1,24 +1,7 @@
-{ mkDerivation
-, Cabal-syntax
-, Diff
-, HUnit
-, base
-, bytestring
-, containers
-, data-default
-, directory
-, fail
-, filemanip
-, filepath
-, free
-, ghc
-, ghc-boot
-, ghc-paths
-, lib
-, mtl
-, ordered-containers
-, silently
-, syb
+{ mkDerivation, Cabal-syntax, Diff, HUnit, base, bytestring
+, containers, data-default, directory, fail, filemanip, filepath
+, free, ghc, ghc-boot, ghc-paths, lib, mtl, ordered-containers
+, silently, syb
 }:
 mkDerivation {
   pname = "ghc-exactprint";
@@ -28,39 +11,13 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    data-default
-    directory
-    fail
-    filepath
-    free
-    ghc
-    ghc-boot
-    mtl
-    ordered-containers
-    syb
+    base bytestring containers data-default directory fail filepath
+    free ghc ghc-boot mtl ordered-containers syb
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    Cabal-syntax
-    containers
-    data-default
-    Diff
-    directory
-    fail
-    filemanip
-    filepath
-    ghc
-    ghc-boot
-    ghc-paths
-    HUnit
-    mtl
-    ordered-containers
-    silently
-    syb
+    base bytestring Cabal-syntax containers data-default Diff directory
+    fail filemanip filepath ghc ghc-boot ghc-paths HUnit mtl
+    ordered-containers silently syb
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

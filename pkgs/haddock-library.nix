@@ -1,18 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, base-compat
-, containers
-, deepseq
-, directory
-, filepath
-, hspec
-, hspec-discover
-, lib
-, optparse-applicative
-, parsec
-, text
-, tree-diff
+{ mkDerivation, QuickCheck, base, base-compat, containers, deepseq
+, directory, filepath, hspec, hspec-discover, lib
+, optparse-applicative, parsec, text, tree-diff
 }:
 mkDerivation {
   pname = "haddock-library";
@@ -25,18 +13,8 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base containers parsec text ];
   testHaskellDepends = [
-    base
-    base-compat
-    containers
-    deepseq
-    directory
-    filepath
-    hspec
-    optparse-applicative
-    parsec
-    QuickCheck
-    text
-    tree-diff
+    base base-compat containers deepseq directory filepath hspec
+    optparse-applicative parsec QuickCheck text tree-diff
   ];
   testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;

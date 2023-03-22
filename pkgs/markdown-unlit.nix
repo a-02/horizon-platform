@@ -1,14 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, base-compat
-, directory
-, hspec
-, hspec-discover
-, lib
-, silently
-, stringbuilder
-, temporary
+{ mkDerivation, QuickCheck, base, base-compat, directory, hspec
+, hspec-discover, lib, silently, stringbuilder, temporary
 }:
 mkDerivation {
   pname = "markdown-unlit";
@@ -20,13 +11,7 @@ mkDerivation {
   libraryHaskellDepends = [ base base-compat ];
   executableHaskellDepends = [ base base-compat ];
   testHaskellDepends = [
-    base
-    base-compat
-    directory
-    hspec
-    QuickCheck
-    silently
-    stringbuilder
+    base base-compat directory hspec QuickCheck silently stringbuilder
     temporary
   ];
   testToolDepends = [ hspec-discover ];

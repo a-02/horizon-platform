@@ -1,25 +1,7 @@
-{ mkDerivation
-, QuickCheck
-, asn1-encoding
-, asn1-types
-, async
-, base
-, bytestring
-, cereal
-, cryptonite
-, data-default-class
-, gauge
-, hourglass
-, lib
-, memory
-, mtl
-, network
-, tasty
-, tasty-quickcheck
-, transformers
-, x509
-, x509-store
-, x509-validation
+{ mkDerivation, QuickCheck, asn1-encoding, asn1-types, async, base
+, bytestring, cereal, cryptonite, data-default-class, gauge
+, hourglass, lib, memory, mtl, network, tasty, tasty-quickcheck
+, transformers, x509, x509-store, x509-validation
 }:
 mkDerivation {
   pname = "tls";
@@ -29,50 +11,17 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    asn1-encoding
-    asn1-types
-    async
-    base
-    bytestring
-    cereal
-    cryptonite
-    data-default-class
-    hourglass
-    memory
-    mtl
-    network
-    transformers
-    x509
-    x509-store
-    x509-validation
+    asn1-encoding asn1-types async base bytestring cereal cryptonite
+    data-default-class hourglass memory mtl network transformers x509
+    x509-store x509-validation
   ];
   testHaskellDepends = [
-    asn1-types
-    async
-    base
-    bytestring
-    cryptonite
-    data-default-class
-    hourglass
-    QuickCheck
-    tasty
-    tasty-quickcheck
-    x509
-    x509-validation
+    asn1-types async base bytestring cryptonite data-default-class
+    hourglass QuickCheck tasty tasty-quickcheck x509 x509-validation
   ];
   benchmarkHaskellDepends = [
-    asn1-types
-    async
-    base
-    bytestring
-    cryptonite
-    data-default-class
-    gauge
-    hourglass
-    QuickCheck
-    tasty-quickcheck
-    x509
-    x509-validation
+    asn1-types async base bytestring cryptonite data-default-class
+    gauge hourglass QuickCheck tasty-quickcheck x509 x509-validation
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

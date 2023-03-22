@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, containers
-, exceptions
-, hspec
-, lib
-, mtl
-, primitive
-, transformers
-, unliftio-core
+{ mkDerivation, base, containers, exceptions, hspec, lib, mtl
+, primitive, transformers, unliftio-core
 }:
 mkDerivation {
   pname = "resourcet";
@@ -17,13 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    exceptions
-    mtl
-    primitive
-    transformers
-    unliftio-core
+    base containers exceptions mtl primitive transformers unliftio-core
   ];
   testHaskellDepends = [ base exceptions hspec transformers ];
   enableLibraryProfiling = true;

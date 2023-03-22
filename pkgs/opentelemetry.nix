@@ -1,10 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, exceptions
-, ghc-trace-events
-, hashable
-, lib
+{ mkDerivation, base, bytestring, exceptions, ghc-trace-events
+, hashable, lib
 }:
 mkDerivation {
   pname = "opentelemetry";
@@ -14,11 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    exceptions
-    ghc-trace-events
-    hashable
+    base bytestring exceptions ghc-trace-events hashable
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

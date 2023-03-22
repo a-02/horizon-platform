@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, bytestring
-, generic-monoid
-, hspec
-, lib
-, split
+{ mkDerivation, base, bytestring, generic-monoid, hspec, lib, split
 , uri-bytestring
 }:
 mkDerivation {
@@ -15,11 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    generic-monoid
-    split
-    uri-bytestring
+    base bytestring generic-monoid split uri-bytestring
   ];
   testHaskellDepends = [ base hspec ];
   enableLibraryProfiling = true;

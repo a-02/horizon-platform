@@ -1,14 +1,5 @@
-{ mkDerivation
-, base
-, deepseq
-, doctest
-, doctest-discover
-, hedgehog
-, hspec
-, hspec-discover
-, hw-hspec-hedgehog
-, hw-prim
-, lib
+{ mkDerivation, base, deepseq, doctest, doctest-discover, hedgehog
+, hspec, hspec-discover, hw-hspec-hedgehog, hw-prim, lib
 }:
 mkDerivation {
   pname = "hw-fingertree";
@@ -21,12 +12,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base deepseq hw-prim ];
   testHaskellDepends = [
-    base
-    deepseq
-    doctest
-    doctest-discover
-    hedgehog
-    hspec
+    base deepseq doctest doctest-discover hedgehog hspec
     hw-hspec-hedgehog
   ];
   testToolDepends = [ doctest-discover hspec-discover ];

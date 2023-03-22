@@ -1,13 +1,5 @@
-{ mkDerivation
-, HUnit
-, async
-, base
-, lib
-, random
-, stm
-, test-framework
-, test-framework-hunit
-, unbounded-delays
+{ mkDerivation, HUnit, async, base, lib, random, stm
+, test-framework, test-framework-hunit, unbounded-delays
 }:
 mkDerivation {
   pname = "concurrent-extra";
@@ -18,13 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base stm unbounded-delays ];
   testHaskellDepends = [
-    async
-    base
-    HUnit
-    random
-    stm
-    test-framework
-    test-framework-hunit
+    async base HUnit random stm test-framework test-framework-hunit
     unbounded-delays
   ];
   enableLibraryProfiling = true;

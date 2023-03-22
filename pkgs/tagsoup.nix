@@ -1,14 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, containers
-, deepseq
-, directory
-, lib
-, process
-, text
-, time
+{ mkDerivation, QuickCheck, base, bytestring, containers, deepseq
+, directory, lib, process, text, time
 }:
 mkDerivation {
   pname = "tagsoup";
@@ -19,13 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring containers text ];
   testHaskellDepends = [
-    base
-    bytestring
-    deepseq
-    directory
-    process
-    QuickCheck
-    time
+    base bytestring deepseq directory process QuickCheck time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

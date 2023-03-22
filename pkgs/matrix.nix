@@ -1,15 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, criterion
-, deepseq
-, lib
-, loop
-, primitive
-, semigroups
-, tasty
-, tasty-quickcheck
-, vector
+{ mkDerivation, QuickCheck, base, criterion, deepseq, lib, loop
+, primitive, semigroups, tasty, tasty-quickcheck, vector
 }:
 mkDerivation {
   pname = "matrix";
@@ -21,12 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    deepseq
-    loop
-    primitive
-    semigroups
-    vector
+    base deepseq loop primitive semigroups vector
   ];
   testHaskellDepends = [ base QuickCheck tasty tasty-quickcheck ];
   benchmarkHaskellDepends = [ base criterion ];

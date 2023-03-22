@@ -1,17 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, containers
-, deepseq
-, hashable
-, lib
-, primes
-, singletons
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, tasty-th
-, template-haskell
+{ mkDerivation, QuickCheck, base, containers, deepseq, hashable
+, lib, primes, singletons, tasty, tasty-hunit, tasty-quickcheck
+, tasty-th, template-haskell
 }:
 mkDerivation {
   pname = "finite-field";
@@ -21,24 +10,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    deepseq
-    hashable
-    singletons
-    template-haskell
+    base deepseq hashable singletons template-haskell
   ];
   testHaskellDepends = [
-    base
-    containers
-    deepseq
-    hashable
-    primes
-    QuickCheck
-    singletons
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    tasty-th
+    base containers deepseq hashable primes QuickCheck singletons tasty
+    tasty-hunit tasty-quickcheck tasty-th
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,12 +1,5 @@
-{ mkDerivation
-, base
-, deepseq
-, ghc-prim
-, lib
-, mwc-random
-, primitive
-, vector
-, vector-algorithms
+{ mkDerivation, base, deepseq, ghc-prim, lib, mwc-random, primitive
+, vector, vector-algorithms
 }:
 mkDerivation {
   pname = "data-sketches-core";
@@ -16,22 +9,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    deepseq
-    ghc-prim
-    mwc-random
-    primitive
-    vector
-    vector-algorithms
+    base deepseq ghc-prim mwc-random primitive vector vector-algorithms
   ];
   testHaskellDepends = [
-    base
-    deepseq
-    ghc-prim
-    mwc-random
-    primitive
-    vector
-    vector-algorithms
+    base deepseq ghc-prim mwc-random primitive vector vector-algorithms
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,13 +1,5 @@
-{ mkDerivation
-, array
-, base
-, filepath
-, ghc-prim
-, happy
-, haskell-lexer
-, lib
-, pretty
-, text
+{ mkDerivation, array, base, filepath, ghc-prim, happy
+, haskell-lexer, lib, pretty, text
 }:
 mkDerivation {
   pname = "pretty-show";
@@ -17,13 +9,7 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    array
-    base
-    filepath
-    ghc-prim
-    haskell-lexer
-    pretty
-    text
+    array base filepath ghc-prim haskell-lexer pretty text
   ];
   libraryToolDepends = [ happy ];
   executableHaskellDepends = [ base ];

@@ -1,13 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, array
-, base
-, bytestring
-, containers
-, ghc-prim
-, lib
-, test-framework
-, test-framework-quickcheck2
+{ mkDerivation, QuickCheck, array, base, bytestring, containers
+, ghc-prim, lib, test-framework, test-framework-quickcheck2
 }:
 mkDerivation {
   pname = "cereal";
@@ -17,17 +9,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    bytestring
-    containers
-    ghc-prim
+    array base bytestring containers ghc-prim
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    QuickCheck
-    test-framework
+    base bytestring QuickCheck test-framework
     test-framework-quickcheck2
   ];
   enableLibraryProfiling = true;

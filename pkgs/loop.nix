@@ -1,11 +1,4 @@
-{ mkDerivation
-, base
-, criterion
-, foldl
-, hspec
-, lib
-, mtl
-, random
+{ mkDerivation, base, criterion, foldl, hspec, lib, mtl, random
 , vector
 }:
 mkDerivation {
@@ -18,12 +11,7 @@ mkDerivation {
   libraryHaskellDepends = [ base ];
   testHaskellDepends = [ base hspec mtl ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    foldl
-    mtl
-    random
-    vector
+    base criterion foldl mtl random vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

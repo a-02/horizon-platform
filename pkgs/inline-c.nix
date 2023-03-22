@@ -1,22 +1,7 @@
-{ mkDerivation
-, QuickCheck
-, ansi-wl-pprint
-, base
-, bytestring
-, containers
-, hashable
-, hspec
-, lib
-, mtl
-, parsec
-, parsers
-, raw-strings-qq
-, regex-posix
-, split
-, template-haskell
-, transformers
-, unordered-containers
-, vector
+{ mkDerivation, QuickCheck, ansi-wl-pprint, base, bytestring
+, containers, hashable, hspec, lib, mtl, parsec, parsers
+, raw-strings-qq, regex-posix, split, template-haskell
+, transformers, unordered-containers, vector
 }:
 mkDerivation {
   pname = "inline-c";
@@ -26,34 +11,13 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ansi-wl-pprint
-    base
-    bytestring
-    containers
-    hashable
-    mtl
-    parsec
-    parsers
-    template-haskell
-    transformers
-    unordered-containers
-    vector
+    ansi-wl-pprint base bytestring containers hashable mtl parsec
+    parsers template-haskell transformers unordered-containers vector
   ];
   testHaskellDepends = [
-    ansi-wl-pprint
-    base
-    containers
-    hashable
-    hspec
-    parsers
-    QuickCheck
-    raw-strings-qq
-    regex-posix
-    split
-    template-haskell
-    transformers
-    unordered-containers
-    vector
+    ansi-wl-pprint base containers hashable hspec parsers QuickCheck
+    raw-strings-qq regex-posix split template-haskell transformers
+    unordered-containers vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

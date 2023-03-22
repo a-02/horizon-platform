@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, directory
-, filepath
-, lib
-, prometheus-client
-, regex-applicative
-, text
-, unix
-, unix-memory
+{ mkDerivation, base, directory, filepath, lib, prometheus-client
+, regex-applicative, text, unix, unix-memory
 }:
 mkDerivation {
   pname = "prometheus-proc";
@@ -17,14 +9,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    directory
-    filepath
-    prometheus-client
-    regex-applicative
-    text
-    unix
-    unix-memory
+    base directory filepath prometheus-client regex-applicative text
+    unix unix-memory
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

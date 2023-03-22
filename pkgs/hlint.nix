@@ -1,30 +1,8 @@
-{ mkDerivation
-, aeson
-, ansi-terminal
-, base
-, bytestring
-, cmdargs
-, containers
-, cpphs
-, data-default
-, deriving-aeson
-, directory
-, extra
-, file-embed
-, filepath
-, filepattern
-, ghc-lib-parser
-, ghc-lib-parser-ex
-, hscolour
-, lib
-, process
-, refact
-, text
-, transformers
-, uniplate
-, unordered-containers
-, utf8-string
-, vector
+{ mkDerivation, aeson, ansi-terminal, base, bytestring, cmdargs
+, containers, cpphs, data-default, deriving-aeson, directory, extra
+, file-embed, filepath, filepattern, ghc-lib-parser
+, ghc-lib-parser-ex, hscolour, lib, process, refact, text
+, transformers, uniplate, unordered-containers, utf8-string, vector
 , yaml
 }:
 mkDerivation {
@@ -35,32 +13,11 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    aeson
-    ansi-terminal
-    base
-    bytestring
-    cmdargs
-    containers
-    cpphs
-    data-default
-    deriving-aeson
-    directory
-    extra
-    file-embed
-    filepath
-    filepattern
-    ghc-lib-parser
-    ghc-lib-parser-ex
-    hscolour
-    process
-    refact
-    text
-    transformers
-    uniplate
-    unordered-containers
-    utf8-string
-    vector
-    yaml
+    aeson ansi-terminal base bytestring cmdargs containers cpphs
+    data-default deriving-aeson directory extra file-embed filepath
+    filepattern ghc-lib-parser ghc-lib-parser-ex hscolour process
+    refact text transformers uniplate unordered-containers utf8-string
+    vector yaml
   ];
   executableHaskellDepends = [ base ];
   enableLibraryProfiling = true;

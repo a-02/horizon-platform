@@ -1,19 +1,6 @@
-{ mkDerivation
-, aeson
-, base
-, containers
-, deepseq
-, filepath
-, ghc
-, ghcide
-, hls-explicit-imports-plugin
-, hls-graph
-, hls-plugin-api
-, hls-test-utils
-, lib
-, lsp
-, text
-, unordered-containers
+{ mkDerivation, aeson, base, containers, deepseq, filepath, ghc
+, ghcide, hls-explicit-imports-plugin, hls-graph, hls-plugin-api
+, hls-test-utils, lib, lsp, text, unordered-containers
 }:
 mkDerivation {
   pname = "hls-refine-imports-plugin";
@@ -23,17 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    containers
-    deepseq
-    ghc
-    ghcide
-    hls-explicit-imports-plugin
-    hls-graph
-    hls-plugin-api
-    lsp
-    text
+    aeson base containers deepseq ghc ghcide
+    hls-explicit-imports-plugin hls-graph hls-plugin-api lsp text
     unordered-containers
   ];
   testHaskellDepends = [ base filepath hls-test-utils text ];

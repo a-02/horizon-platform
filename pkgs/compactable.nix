@@ -1,27 +1,8 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, base
-, base-compat
-, bifunctors
-, containers
-, contravariant
-, data-default-class
-, deepseq
-, fetchgit
-, hashable
-, keys
-, lens
-, lib
-, semigroupoids
-, sydtest
-, sydtest-discover
-, these
-, transformers
-, transformers-compat
-, unordered-containers
-, vector
-, vector-instances
+{ mkDerivation, QuickCheck, aeson, base, base-compat, bifunctors
+, containers, contravariant, data-default-class, deepseq, fetchgit
+, hashable, keys, lens, lib, semigroupoids, sydtest
+, sydtest-discover, these, transformers, transformers-compat
+, unordered-containers, vector, vector-instances
 }:
 mkDerivation {
   pname = "compactable";
@@ -36,34 +17,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    base-compat
-    bifunctors
-    containers
-    contravariant
-    data-default-class
-    deepseq
-    hashable
-    keys
-    lens
-    QuickCheck
-    semigroupoids
-    these
-    transformers
-    transformers-compat
-    unordered-containers
-    vector
-    vector-instances
+    aeson base base-compat bifunctors containers contravariant
+    data-default-class deepseq hashable keys lens QuickCheck
+    semigroupoids these transformers transformers-compat
+    unordered-containers vector vector-instances
   ];
   testHaskellDepends = [
-    base
-    containers
-    QuickCheck
-    sydtest
-    sydtest-discover
-    these
-    vector
+    base containers QuickCheck sydtest sydtest-discover these vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

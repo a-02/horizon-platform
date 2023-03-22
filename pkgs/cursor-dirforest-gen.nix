@@ -1,23 +1,8 @@
-{ mkDerivation
-, QuickCheck
-, base
-, containers
-, criterion
-, cursor
-, cursor-dirforest
-, cursor-gen
-, dirforest
-, fetchgit
-, filepath
-, genvalidity
-, genvalidity-containers
-, genvalidity-criterion
-, genvalidity-dirforest
-, genvalidity-hspec
-, genvalidity-hspec-optics
-, hspec
-, lib
-, path
+{ mkDerivation, QuickCheck, base, containers, criterion, cursor
+, cursor-dirforest, cursor-gen, dirforest, fetchgit, filepath
+, genvalidity, genvalidity-containers, genvalidity-criterion
+, genvalidity-dirforest, genvalidity-hspec
+, genvalidity-hspec-optics, hspec, lib, path
 }:
 mkDerivation {
   pname = "cursor-dirforest-gen";
@@ -33,37 +18,16 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    cursor
-    cursor-dirforest
-    cursor-gen
-    dirforest
-    filepath
-    genvalidity
-    genvalidity-containers
-    genvalidity-dirforest
-    path
-    QuickCheck
+    base containers cursor cursor-dirforest cursor-gen dirforest
+    filepath genvalidity genvalidity-containers genvalidity-dirforest
+    path QuickCheck
   ];
   testHaskellDepends = [
-    base
-    cursor
-    cursor-dirforest
-    cursor-gen
-    dirforest
-    genvalidity-hspec
-    genvalidity-hspec-optics
-    hspec
-    path
-    QuickCheck
+    base cursor cursor-dirforest cursor-gen dirforest genvalidity-hspec
+    genvalidity-hspec-optics hspec path QuickCheck
   ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    cursor-dirforest
-    genvalidity-criterion
-    QuickCheck
+    base criterion cursor-dirforest genvalidity-criterion QuickCheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

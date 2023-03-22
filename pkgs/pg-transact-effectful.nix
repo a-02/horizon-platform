@@ -1,12 +1,5 @@
-{ mkDerivation
-, base
-, effectful-core
-, fetchgit
-, lib
-, mtl
-, pg-transact
-, postgresql-simple
-, resource-pool
+{ mkDerivation, base, effectful-core, fetchgit, lib, mtl
+, pg-transact, postgresql-simple, resource-pool
 }:
 mkDerivation {
   pname = "pg-transact-effectful";
@@ -21,12 +14,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    effectful-core
-    mtl
-    pg-transact
-    postgresql-simple
-    resource-pool
+    base effectful-core mtl pg-transact postgresql-simple resource-pool
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

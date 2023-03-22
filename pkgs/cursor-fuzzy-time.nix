@@ -1,16 +1,5 @@
-{ mkDerivation
-, base
-, containers
-, cursor
-, deepseq
-, fuzzy-time
-, lib
-, megaparsec
-, microlens
-, text
-, time
-, validity
-, validity-time
+{ mkDerivation, base, containers, cursor, deepseq, fuzzy-time, lib
+, megaparsec, microlens, text, time, validity, validity-time
 }:
 mkDerivation {
   pname = "cursor-fuzzy-time";
@@ -20,17 +9,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    cursor
-    deepseq
-    fuzzy-time
-    megaparsec
-    microlens
-    text
-    time
-    validity
-    validity-time
+    base containers cursor deepseq fuzzy-time megaparsec microlens text
+    time validity validity-time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

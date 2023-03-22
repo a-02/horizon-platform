@@ -1,12 +1,5 @@
-{ mkDerivation
-, base
-, clock
-, hashable
-, hspec
-, lib
-, stm
-, transformers
-, unordered-containers
+{ mkDerivation, base, clock, hashable, hspec, lib, stm
+, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "cache";
@@ -16,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    clock
-    hashable
-    stm
-    transformers
-    unordered-containers
+    base clock hashable stm transformers unordered-containers
   ];
   testHaskellDepends = [ base clock hspec stm transformers ];
   enableLibraryProfiling = true;

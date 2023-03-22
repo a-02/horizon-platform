@@ -1,73 +1,25 @@
-{ mkDerivation
-, Glob
-, HsYAML
-, aeson
-, base
-, bytestring
-, containers
-, criterion
-, doclayout
-, filepath
-, lib
-, mtl
-, parsec
-, safe
-, scientific
-, tasty
-, tasty-golden
-, tasty-hunit
-, temporary
-, text
-, text-conversions
-, vector
+{ mkDerivation, Glob, aeson, base, bytestring, containers
+, criterion, doclayout, filepath, lib, mtl, parsec, safe
+, scientific, tasty, tasty-golden, tasty-hunit, temporary, text
+, text-conversions, vector
 }:
 mkDerivation {
   pname = "doctemplates";
-  version = "0.10.0.2";
-  sha256 = "a7749f36083c23ec72fa1a37c1ff72ab9ff470478be23686f80532d209d3402b";
-  revision = "1";
-  editedCabalFile = "17r6ig72bzqd59p11sjaf9y27pm4yig1a1s1igs57s88cy47qz05";
+  version = "0.11";
+  sha256 = "e0080c7f030e98ce6156fd31e77df4c83b8f3ee049beee5006ce923a0169546b";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    aeson
-    base
-    containers
-    doclayout
-    filepath
-    HsYAML
-    mtl
-    parsec
-    safe
-    scientific
-    text
-    text-conversions
-    vector
+    aeson base containers doclayout filepath mtl parsec safe scientific
+    text text-conversions vector
   ];
   testHaskellDepends = [
-    aeson
-    base
-    bytestring
-    containers
-    doclayout
-    filepath
-    Glob
-    tasty
-    tasty-golden
-    tasty-hunit
-    temporary
-    text
+    aeson base bytestring containers doclayout filepath Glob tasty
+    tasty-golden tasty-hunit temporary text
   ];
   benchmarkHaskellDepends = [
-    aeson
-    base
-    containers
-    criterion
-    doclayout
-    filepath
-    mtl
-    text
+    aeson base containers criterion doclayout filepath mtl text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

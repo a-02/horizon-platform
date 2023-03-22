@@ -1,24 +1,7 @@
-{ mkDerivation
-, async
-, base
-, bytestring
-, containers
-, directory
-, exceptions
-, filepath
-, hinotify
-, lib
-, monad-control
-, random
-, retry
-, safe-exceptions
-, sandwich
-, temporary
-, text
-, time
-, unix
-, unix-compat
-, unliftio
+{ mkDerivation, async, base, bytestring, containers, directory
+, exceptions, filepath, hinotify, lib, monad-control, random, retry
+, safe-exceptions, sandwich, temporary, text, time, unix
+, unix-compat, unliftio
 }:
 mkDerivation {
   pname = "fsnotify";
@@ -28,33 +11,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    async
-    base
-    bytestring
-    containers
-    directory
-    filepath
-    hinotify
-    monad-control
-    safe-exceptions
-    text
-    time
-    unix
-    unix-compat
+    async base bytestring containers directory filepath hinotify
+    monad-control safe-exceptions text time unix unix-compat
   ];
   testHaskellDepends = [
-    async
-    base
-    directory
-    exceptions
-    filepath
-    random
-    retry
-    safe-exceptions
-    sandwich
-    temporary
-    unix-compat
-    unliftio
+    async base directory exceptions filepath random retry
+    safe-exceptions sandwich temporary unix-compat unliftio
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

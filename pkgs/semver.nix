@@ -1,13 +1,5 @@
-{ mkDerivation
-, attoparsec
-, base
-, criterion
-, deepseq
-, hashable
-, lib
-, tasty
-, tasty-hunit
-, text
+{ mkDerivation, attoparsec, base, criterion, deepseq, hashable, lib
+, tasty, tasty-hunit, text
 }:
 mkDerivation {
   pname = "semver";

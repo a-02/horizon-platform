@@ -1,20 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, array
-, base
-, base58-bytestring
-, bytestring
-, containers
-, deepseq
-, extra
-, hspec
-, hspec-discover
-, lib
-, memory
-, optparse-applicative
-, process
-, text
-, vector
+{ mkDerivation, QuickCheck, array, base, base58-bytestring
+, bytestring, containers, deepseq, extra, hspec, hspec-discover
+, lib, memory, optparse-applicative, process, text, vector
 }:
 mkDerivation {
   pname = "bech32";
@@ -24,35 +10,15 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    bytestring
-    containers
-    extra
-    text
+    array base bytestring containers extra text
   ];
   executableHaskellDepends = [
-    base
-    base58-bytestring
-    bytestring
-    extra
-    memory
-    optparse-applicative
+    base base58-bytestring bytestring extra memory optparse-applicative
     text
   ];
   testHaskellDepends = [
-    base
-    base58-bytestring
-    bytestring
-    containers
-    deepseq
-    extra
-    hspec
-    memory
-    process
-    QuickCheck
-    text
-    vector
+    base base58-bytestring bytestring containers deepseq extra hspec
+    memory process QuickCheck text vector
   ];
   testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;

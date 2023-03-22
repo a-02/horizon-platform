@@ -1,19 +1,6 @@
-{ mkDerivation
-, ansi-terminal
-, base
-, cmdargs
-, containers
-, directory
-, extra
-, filepath
-, fsnotify
-, lib
-, process
-, tasty
-, tasty-hunit
-, terminal-size
-, time
-, unix
+{ mkDerivation, ansi-terminal, base, cmdargs, containers, directory
+, extra, filepath, fsnotify, lib, process, tasty, tasty-hunit
+, terminal-size, time, unix
 }:
 mkDerivation {
   pname = "ghcid";
@@ -23,44 +10,15 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ansi-terminal
-    base
-    cmdargs
-    directory
-    extra
-    filepath
-    process
-    time
+    ansi-terminal base cmdargs directory extra filepath process time
   ];
   executableHaskellDepends = [
-    ansi-terminal
-    base
-    cmdargs
-    containers
-    directory
-    extra
-    filepath
-    fsnotify
-    process
-    terminal-size
-    time
-    unix
+    ansi-terminal base cmdargs containers directory extra filepath
+    fsnotify process terminal-size time unix
   ];
   testHaskellDepends = [
-    ansi-terminal
-    base
-    cmdargs
-    containers
-    directory
-    extra
-    filepath
-    fsnotify
-    process
-    tasty
-    tasty-hunit
-    terminal-size
-    time
-    unix
+    ansi-terminal base cmdargs containers directory extra filepath
+    fsnotify process tasty tasty-hunit terminal-size time unix
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

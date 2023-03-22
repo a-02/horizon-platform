@@ -1,13 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, boring
-, dec
-, deepseq
-, fin
-, hashable
-, lib
-, some
+{ mkDerivation, QuickCheck, base, boring, dec, deepseq, fin
+, hashable, lib, some
 }:
 mkDerivation {
   pname = "bin";
@@ -19,14 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    boring
-    dec
-    deepseq
-    fin
-    hashable
-    QuickCheck
-    some
+    base boring dec deepseq fin hashable QuickCheck some
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

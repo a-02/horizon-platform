@@ -1,18 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, filepath
-, ghcide
-, hls-plugin-api
-, hls-test-utils
-, lib
-, lsp
-, lsp-types
-, regex-tdfa
-, syb
-, text
-, transformers
-, unordered-containers
+{ mkDerivation, QuickCheck, base, filepath, ghcide, hls-plugin-api
+, hls-test-utils, lib, lsp, lsp-types, regex-tdfa, syb, text
+, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "hls-change-type-signature-plugin";
@@ -22,24 +10,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    ghcide
-    hls-plugin-api
-    lsp-types
-    regex-tdfa
-    syb
-    text
-    transformers
-    unordered-containers
+    base ghcide hls-plugin-api lsp-types regex-tdfa syb text
+    transformers unordered-containers
   ];
   testHaskellDepends = [
-    base
-    filepath
-    hls-test-utils
-    lsp
-    QuickCheck
-    regex-tdfa
-    text
+    base filepath hls-test-utils lsp QuickCheck regex-tdfa text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

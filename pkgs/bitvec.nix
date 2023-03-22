@@ -1,18 +1,6 @@
-{ mkDerivation
-, base
-, bytestring
-, containers
-, deepseq
-, ghc-bignum
-, lib
-, primitive
-, quickcheck-classes
-, quickcheck-classes-base
-, random
-, tasty
-, tasty-bench
-, tasty-quickcheck
-, vector
+{ mkDerivation, base, bytestring, containers, deepseq, ghc-bignum
+, lib, primitive, quickcheck-classes, quickcheck-classes-base
+, random, tasty, tasty-bench, tasty-quickcheck, vector
 }:
 mkDerivation {
   pname = "bitvec";
@@ -22,30 +10,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    deepseq
-    ghc-bignum
-    primitive
-    vector
+    base bytestring deepseq ghc-bignum primitive vector
   ];
   testHaskellDepends = [
-    base
-    ghc-bignum
-    primitive
-    quickcheck-classes
-    quickcheck-classes-base
-    tasty
-    tasty-quickcheck
-    vector
+    base ghc-bignum primitive quickcheck-classes
+    quickcheck-classes-base tasty tasty-quickcheck vector
   ];
   benchmarkHaskellDepends = [
-    base
-    containers
-    ghc-bignum
-    random
-    tasty-bench
-    vector
+    base containers ghc-bignum random tasty-bench vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

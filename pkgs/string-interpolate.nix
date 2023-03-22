@@ -1,70 +1,28 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, criterion
-, deepseq
-, formatting
-, haskell-src-exts
-, haskell-src-meta
-, hspec
-, hspec-core
-, interpolate
-, lib
-, neat-interpolation
-, quickcheck-instances
-, quickcheck-text
-, quickcheck-unicode
-, split
-, template-haskell
-, text
-, text-conversions
-, unordered-containers
-, utf8-string
+{ mkDerivation, QuickCheck, base, bytestring, criterion, deepseq
+, formatting, haskell-src-exts, haskell-src-meta, hspec, hspec-core
+, interpolate, lib, neat-interpolation, quickcheck-instances
+, quickcheck-text, quickcheck-unicode, split, template-haskell
+, text, text-conversions, unordered-containers, utf8-string
 }:
 mkDerivation {
   pname = "string-interpolate";
-  version = "0.3.1.2";
-  sha256 = "17c214e2a644c433d79e3d6b9e5dab9077d79be9de4b9e208308e3196b82b73e";
-  revision = "1";
-  editedCabalFile = "1nrpng7r59a25z4qns8vy26rvp1wgn5f4bs8ism40q66ags8f2ad";
+  version = "0.3.2.0";
+  sha256 = "9a7713beeaea33d712f74377c57e036b337fb7da851c73f6c479fa9dc521ade9";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    haskell-src-exts
-    haskell-src-meta
-    split
-    template-haskell
-    text
-    text-conversions
-    utf8-string
+    base bytestring haskell-src-exts haskell-src-meta split
+    template-haskell text text-conversions utf8-string
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    hspec
-    hspec-core
-    QuickCheck
-    quickcheck-instances
-    quickcheck-text
-    quickcheck-unicode
-    template-haskell
-    text
+    base bytestring hspec hspec-core QuickCheck quickcheck-instances
+    quickcheck-text quickcheck-unicode template-haskell text
     unordered-containers
   ];
   benchmarkHaskellDepends = [
-    base
-    bytestring
-    criterion
-    deepseq
-    formatting
-    interpolate
-    neat-interpolation
-    QuickCheck
-    text
+    base bytestring criterion deepseq formatting interpolate
+    neat-interpolation QuickCheck text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,36 +1,9 @@
-{ mkDerivation
-, HUnit
-, aeson
-, ansi-terminal
-, base
-, base64-bytestring
-, bytestring
-, call-stack
-, case-insensitive
-, containers
-, cookie
-, data-default-class
-, directory
-, fast-logger
-, hspec
-, hspec-discover
-, http-types
-, iproute
-, lib
-, network
-, resourcet
-, streaming-commons
-, temporary
-, text
-, time
-, transformers
-, unix
-, vault
-, wai
-, wai-logger
-, warp
-, word8
-, zlib
+{ mkDerivation, HUnit, aeson, ansi-terminal, base
+, base64-bytestring, bytestring, call-stack, case-insensitive
+, containers, cookie, data-default-class, directory, fast-logger
+, hspec, hspec-discover, http-types, iproute, lib, network
+, resourcet, streaming-commons, temporary, text, time, transformers
+, unix, vault, wai, wai-logger, warp, word8, zlib
 }:
 mkDerivation {
   pname = "wai-extra";
@@ -42,53 +15,16 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    ansi-terminal
-    base
-    base64-bytestring
-    bytestring
-    call-stack
-    case-insensitive
-    containers
-    cookie
-    data-default-class
-    directory
-    fast-logger
-    http-types
-    HUnit
-    iproute
-    network
-    resourcet
-    streaming-commons
-    text
-    time
-    transformers
-    unix
-    vault
-    wai
-    wai-logger
-    warp
-    word8
+    aeson ansi-terminal base base64-bytestring bytestring call-stack
+    case-insensitive containers cookie data-default-class directory
+    fast-logger http-types HUnit iproute network resourcet
+    streaming-commons text time transformers unix vault wai wai-logger
+    warp word8
   ];
   testHaskellDepends = [
-    aeson
-    base
-    bytestring
-    case-insensitive
-    cookie
-    directory
-    fast-logger
-    hspec
-    http-types
-    HUnit
-    iproute
-    resourcet
-    temporary
-    text
-    time
-    wai
-    warp
-    zlib
+    aeson base bytestring case-insensitive cookie directory fast-logger
+    hspec http-types HUnit iproute resourcet temporary text time wai
+    warp zlib
   ];
   testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;

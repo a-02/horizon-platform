@@ -1,19 +1,6 @@
-{ mkDerivation
-, aeson
-, aeson-pretty
-, base
-, bytestring
-, cborg
-, criterion
-, deepseq
-, directory
-, lib
-, process
-, scientific
-, text
-, unordered-containers
-, vector
-, zlib
+{ mkDerivation, aeson, aeson-pretty, base, bytestring, cborg
+, criterion, deepseq, directory, lib, process, scientific, text
+, unordered-containers, vector, zlib
 }:
 mkDerivation {
   pname = "cborg-json";
@@ -25,24 +12,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    aeson-pretty
-    base
-    cborg
-    scientific
-    text
-    unordered-containers
+    aeson aeson-pretty base cborg scientific text unordered-containers
     vector
   ];
   benchmarkHaskellDepends = [
-    aeson
-    base
-    bytestring
-    cborg
-    criterion
-    deepseq
-    directory
-    process
+    aeson base bytestring cborg criterion deepseq directory process
     zlib
   ];
   enableLibraryProfiling = true;

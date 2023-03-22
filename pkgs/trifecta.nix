@@ -1,31 +1,9 @@
-{ mkDerivation
-, QuickCheck
-, ansi-terminal
-, array
-, base
-, blaze-builder
-, blaze-html
-, blaze-markup
-, bytestring
-, charset
-, comonad
-, containers
-, deepseq
-, fingertree
-, ghc-prim
-, hashable
-, indexed-traversable
-, lens
-, lib
-, mtl
-, parsers
-, prettyprinter
-, prettyprinter-ansi-terminal
-, profunctors
-, reducers
-, transformers
-, unordered-containers
-, utf8-string
+{ mkDerivation, QuickCheck, ansi-terminal, array, base
+, blaze-builder, blaze-html, blaze-markup, bytestring, charset
+, comonad, containers, deepseq, fingertree, ghc-prim, hashable
+, indexed-traversable, lens, lib, mtl, parsers, prettyprinter
+, prettyprinter-ansi-terminal, profunctors, reducers, transformers
+, unordered-containers, utf8-string
 }:
 mkDerivation {
   pname = "trifecta";
@@ -37,31 +15,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ansi-terminal
-    array
-    base
-    blaze-builder
-    blaze-html
-    blaze-markup
-    bytestring
-    charset
-    comonad
-    containers
-    deepseq
-    fingertree
-    ghc-prim
-    hashable
-    indexed-traversable
-    lens
-    mtl
-    parsers
-    prettyprinter
-    prettyprinter-ansi-terminal
-    profunctors
-    reducers
-    transformers
-    unordered-containers
-    utf8-string
+    ansi-terminal array base blaze-builder blaze-html blaze-markup
+    bytestring charset comonad containers deepseq fingertree ghc-prim
+    hashable indexed-traversable lens mtl parsers prettyprinter
+    prettyprinter-ansi-terminal profunctors reducers transformers
+    unordered-containers utf8-string
   ];
   testHaskellDepends = [ base parsers QuickCheck ];
   enableLibraryProfiling = true;

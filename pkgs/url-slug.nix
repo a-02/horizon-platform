@@ -1,10 +1,4 @@
-{ mkDerivation
-, aeson
-, base
-, lib
-, relude
-, text
-, unicode-transforms
+{ mkDerivation, aeson, base, lib, relude, text, unicode-transforms
 , uri-encode
 }:
 mkDerivation {
@@ -15,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    relude
-    text
-    unicode-transforms
-    uri-encode
+    aeson base relude text unicode-transforms uri-encode
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

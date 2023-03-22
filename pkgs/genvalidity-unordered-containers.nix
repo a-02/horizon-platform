@@ -1,13 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, genvalidity
-, genvalidity-hspec
-, hashable
-, hspec
-, lib
-, unordered-containers
-, validity
+{ mkDerivation, QuickCheck, base, genvalidity, genvalidity-hspec
+, hashable, hspec, lib, unordered-containers, validity
 , validity-unordered-containers
 }:
 mkDerivation {
@@ -18,20 +10,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    genvalidity
-    hashable
-    QuickCheck
-    unordered-containers
-    validity
+    base genvalidity hashable QuickCheck unordered-containers validity
     validity-unordered-containers
   ];
   testHaskellDepends = [
-    base
-    genvalidity
-    genvalidity-hspec
-    hspec
-    unordered-containers
+    base genvalidity genvalidity-hspec hspec unordered-containers
     validity
   ];
   enableLibraryProfiling = true;

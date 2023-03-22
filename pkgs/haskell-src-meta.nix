@@ -1,15 +1,5 @@
-{ mkDerivation
-, HUnit
-, base
-, containers
-, haskell-src-exts
-, lib
-, pretty
-, syb
-, tasty
-, tasty-hunit
-, template-haskell
-, th-orphans
+{ mkDerivation, HUnit, base, containers, haskell-src-exts, lib
+, pretty, syb, tasty, tasty-hunit, template-haskell, th-orphans
 }:
 mkDerivation {
   pname = "haskell-src-meta";
@@ -19,22 +9,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    haskell-src-exts
-    pretty
-    syb
-    template-haskell
-    th-orphans
+    base haskell-src-exts pretty syb template-haskell th-orphans
   ];
   testHaskellDepends = [
-    base
-    containers
-    haskell-src-exts
-    HUnit
-    pretty
-    syb
-    tasty
-    tasty-hunit
+    base containers haskell-src-exts HUnit pretty syb tasty tasty-hunit
     template-haskell
   ];
   enableLibraryProfiling = true;

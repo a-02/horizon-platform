@@ -1,17 +1,5 @@
-{ mkDerivation
-, base
-, conduit
-, dlist
-, lib
-, mtl
-, parsers
-, resourcet
-, safe
-, safe-exceptions
-, tasty
-, tasty-hunit
-, text
-, transformers
+{ mkDerivation, base, conduit, dlist, lib, mtl, parsers, resourcet
+, safe, safe-exceptions, tasty, tasty-hunit, text, transformers
 }:
 mkDerivation {
   pname = "conduit-parse";
@@ -23,24 +11,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    conduit
-    dlist
-    mtl
-    parsers
-    safe
-    safe-exceptions
-    text
+    base conduit dlist mtl parsers safe safe-exceptions text
     transformers
   ];
   testHaskellDepends = [
-    base
-    conduit
-    mtl
-    parsers
-    resourcet
-    safe-exceptions
-    tasty
+    base conduit mtl parsers resourcet safe-exceptions tasty
     tasty-hunit
   ];
   enableLibraryProfiling = true;

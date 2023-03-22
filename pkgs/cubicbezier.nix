@@ -1,19 +1,6 @@
-{ mkDerivation
-, base
-, containers
-, fast-math
-, integration
-, lib
-, matrices
-, microlens
-, microlens-mtl
-, microlens-th
-, mtl
-, parsec
-, tasty
-, tasty-hunit
-, vector
-, vector-space
+{ mkDerivation, base, containers, fast-math, integration, lib
+, matrices, microlens, microlens-mtl, microlens-th, mtl, parsec
+, tasty, tasty-hunit, vector, vector-space
 }:
 mkDerivation {
   pname = "cubicbezier";
@@ -25,17 +12,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    fast-math
-    integration
-    matrices
-    microlens
-    microlens-mtl
-    microlens-th
-    mtl
-    vector
-    vector-space
+    base containers fast-math integration matrices microlens
+    microlens-mtl microlens-th mtl vector vector-space
   ];
   testHaskellDepends = [ base parsec tasty tasty-hunit ];
   enableLibraryProfiling = true;

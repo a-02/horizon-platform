@@ -1,16 +1,5 @@
-{ mkDerivation
-, array
-, base
-, bytestring
-, containers
-, directory
-, doctest-parallel
-, filepath
-, lib
-, mtl
-, parsec
-, regex-base
-, text
+{ mkDerivation, array, base, bytestring, containers, directory
+, doctest-parallel, filepath, lib, mtl, parsec, regex-base, text
 , utf8-string
 }:
 mkDerivation {
@@ -21,27 +10,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    bytestring
-    containers
-    mtl
-    parsec
-    regex-base
-    text
+    array base bytestring containers mtl parsec regex-base text
   ];
   testHaskellDepends = [
-    array
-    base
-    bytestring
-    containers
-    directory
-    doctest-parallel
-    filepath
-    mtl
-    regex-base
-    text
-    utf8-string
+    array base bytestring containers directory doctest-parallel
+    filepath mtl regex-base text utf8-string
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

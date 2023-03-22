@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, bech32
-, hspec
-, hspec-discover
-, lib
-, template-haskell
-, text
+{ mkDerivation, base, bech32, hspec, hspec-discover, lib
+, template-haskell, text
 }:
 mkDerivation {
   pname = "bech32-th";

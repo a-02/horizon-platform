@@ -1,18 +1,6 @@
-{ mkDerivation
-, Cabal
-, QuickCheck
-, base
-, base-compat
-, bytestring
-, cabal-doctest
-, doctest
-, lib
-, memory
-, quickcheck-instances
-, tasty
-, tasty-quickcheck
-, template-haskell
-, text
+{ mkDerivation, Cabal, QuickCheck, base, base-compat, bytestring
+, cabal-doctest, doctest, lib, memory, quickcheck-instances, tasty
+, tasty-quickcheck, template-haskell, text
 }:
 mkDerivation {
   pname = "password-types";
@@ -26,15 +14,8 @@ mkDerivation {
   setupHaskellDepends = [ base Cabal cabal-doctest ];
   libraryHaskellDepends = [ base bytestring memory text ];
   testHaskellDepends = [
-    base
-    base-compat
-    doctest
-    QuickCheck
-    quickcheck-instances
-    tasty
-    tasty-quickcheck
-    template-haskell
-    text
+    base base-compat doctest QuickCheck quickcheck-instances tasty
+    tasty-quickcheck template-haskell text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

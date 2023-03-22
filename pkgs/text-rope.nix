@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, deepseq
-, lib
-, random
-, tasty
-, tasty-bench
-, tasty-quickcheck
-, text
-, vector
+{ mkDerivation, base, deepseq, lib, random, tasty, tasty-bench
+, tasty-quickcheck, text, vector
 }:
 mkDerivation {
   pname = "text-rope";

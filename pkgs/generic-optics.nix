@@ -1,12 +1,5 @@
-{ mkDerivation
-, HUnit
-, base
-, doctest
-, generic-lens-core
-, inspection-testing
-, lib
-, optics-core
-, text
+{ mkDerivation, HUnit, base, doctest, generic-lens-core
+, inspection-testing, lib, optics-core, text
 }:
 mkDerivation {
   pname = "generic-optics";
@@ -18,17 +11,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    generic-lens-core
-    optics-core
-    text
+    base generic-lens-core optics-core text
   ];
   testHaskellDepends = [
-    base
-    doctest
-    HUnit
-    inspection-testing
-    optics-core
+    base doctest HUnit inspection-testing optics-core
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,22 +1,7 @@
-{ mkDerivation
-, attoparsec
-, base
-, blaze-markup
-, blaze-svg
-, bytestring
-, cereal
-, cereal-vector
-, containers
-, data-default-class
-, diagrams-core
-, diagrams-lib
-, directory
-, lib
-, parsec
-, split
-, text
-, vector
-, xml
+{ mkDerivation, attoparsec, base, blaze-markup, blaze-svg
+, bytestring, cereal, cereal-vector, containers, data-default-class
+, diagrams-core, diagrams-lib, directory, lib, parsec, split, text
+, vector, xml
 }:
 mkDerivation {
   pname = "SVGFonts";
@@ -26,23 +11,9 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    attoparsec
-    base
-    blaze-markup
-    blaze-svg
-    bytestring
-    cereal
-    cereal-vector
-    containers
-    data-default-class
-    diagrams-core
-    diagrams-lib
-    directory
-    parsec
-    split
-    text
-    vector
-    xml
+    attoparsec base blaze-markup blaze-svg bytestring cereal
+    cereal-vector containers data-default-class diagrams-core
+    diagrams-lib directory parsec split text vector xml
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

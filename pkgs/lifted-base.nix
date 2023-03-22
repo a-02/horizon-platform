@@ -1,15 +1,6 @@
-{ mkDerivation
-, HUnit
-, base
-, criterion
-, lib
-, monad-control
-, monad-peel
-, test-framework
-, test-framework-hunit
-, transformers
-, transformers-base
-, transformers-compat
+{ mkDerivation, HUnit, base, criterion, lib, monad-control
+, monad-peel, test-framework, test-framework-hunit, transformers
+, transformers-base, transformers-compat
 }:
 mkDerivation {
   pname = "lifted-base";
@@ -20,21 +11,11 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base monad-control transformers-base ];
   testHaskellDepends = [
-    base
-    HUnit
-    monad-control
-    test-framework
-    test-framework-hunit
-    transformers
-    transformers-base
-    transformers-compat
+    base HUnit monad-control test-framework test-framework-hunit
+    transformers transformers-base transformers-compat
   ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    monad-control
-    monad-peel
-    transformers
+    base criterion monad-control monad-peel transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

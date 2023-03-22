@@ -1,15 +1,5 @@
-{ mkDerivation
-, attoparsec
-, base
-, directory
-, filepath
-, filepattern
-, hspec
-, hspec-attoparsec
-, lib
-, text
-, transformers
-, yaml
+{ mkDerivation, attoparsec, base, directory, filepath, filepattern
+, hspec, hspec-attoparsec, lib, text, transformers, yaml
 }:
 mkDerivation {
   pname = "implicit-hie";
@@ -19,36 +9,16 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    attoparsec
-    base
-    directory
-    filepath
-    filepattern
-    text
-    transformers
+    attoparsec base directory filepath filepattern text transformers
     yaml
   ];
   executableHaskellDepends = [
-    attoparsec
-    base
-    directory
-    filepath
-    filepattern
-    text
-    transformers
+    attoparsec base directory filepath filepattern text transformers
     yaml
   ];
   testHaskellDepends = [
-    attoparsec
-    base
-    directory
-    filepath
-    filepattern
-    hspec
-    hspec-attoparsec
-    text
-    transformers
-    yaml
+    attoparsec base directory filepath filepattern hspec
+    hspec-attoparsec text transformers yaml
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

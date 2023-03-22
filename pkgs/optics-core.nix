@@ -1,11 +1,5 @@
-{ mkDerivation
-, array
-, base
-, containers
-, indexed-profunctors
-, indexed-traversable
-, lib
-, transformers
+{ mkDerivation, array, base, containers, indexed-profunctors
+, indexed-traversable, lib, transformers
 }:
 mkDerivation {
   pname = "optics-core";
@@ -17,11 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    containers
-    indexed-profunctors
-    indexed-traversable
+    array base containers indexed-profunctors indexed-traversable
     transformers
   ];
   enableLibraryProfiling = true;

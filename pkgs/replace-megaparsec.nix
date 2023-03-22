@@ -1,11 +1,5 @@
-{ mkDerivation
-, Cabal
-, base
-, bytestring
-, lib
-, megaparsec
-, parser-combinators
-, text
+{ mkDerivation, Cabal, base, bytestring, lib, megaparsec
+, parser-combinators, text
 }:
 mkDerivation {
   pname = "replace-megaparsec";
@@ -15,11 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    megaparsec
-    parser-combinators
-    text
+    base bytestring megaparsec parser-combinators text
   ];
   testHaskellDepends = [ base bytestring Cabal megaparsec text ];
   enableLibraryProfiling = true;

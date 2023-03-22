@@ -1,18 +1,6 @@
-{ mkDerivation
-, aeson
-, attoparsec
-, base
-, base-compat
-, ghc-prim
-, haskell-src-meta
-, hspec
-, hspec-discover
-, lib
-, parsec
-, scientific
-, template-haskell
-, text
-, vector
+{ mkDerivation, aeson, attoparsec, base, base-compat, ghc-prim
+, haskell-src-meta, hspec, hspec-discover, lib, parsec, scientific
+, template-haskell, text, vector
 }:
 mkDerivation {
   pname = "aeson-qq";
@@ -22,30 +10,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    attoparsec
-    base
-    base-compat
-    haskell-src-meta
-    parsec
-    scientific
-    template-haskell
-    text
-    vector
+    aeson attoparsec base base-compat haskell-src-meta parsec
+    scientific template-haskell text vector
   ];
   testHaskellDepends = [
-    aeson
-    attoparsec
-    base
-    base-compat
-    ghc-prim
-    haskell-src-meta
-    hspec
-    parsec
-    scientific
-    template-haskell
-    text
-    vector
+    aeson attoparsec base base-compat ghc-prim haskell-src-meta hspec
+    parsec scientific template-haskell text vector
   ];
   testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;

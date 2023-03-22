@@ -1,12 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, lib
-, mtl
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, unix
+{ mkDerivation, QuickCheck, base, lib, mtl, tasty, tasty-hunit
+, tasty-quickcheck, unix
 }:
 mkDerivation {
   pname = "unix-memory";
@@ -17,13 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [ base ];
   testHaskellDepends = [
-    base
-    mtl
-    QuickCheck
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    unix
+    base mtl QuickCheck tasty tasty-hunit tasty-quickcheck unix
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

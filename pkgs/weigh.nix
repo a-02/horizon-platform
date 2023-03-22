@@ -1,11 +1,4 @@
-{ mkDerivation
-, base
-, deepseq
-, ghc
-, lib
-, mtl
-, process
-, split
+{ mkDerivation, base, deepseq, ghc, lib, mtl, process, split
 , temporary
 }:
 mkDerivation {
@@ -18,13 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    deepseq
-    ghc
-    mtl
-    process
-    split
-    temporary
+    base deepseq ghc mtl process split temporary
   ];
   testHaskellDepends = [ base deepseq ];
   enableLibraryProfiling = true;

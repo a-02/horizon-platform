@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, containers
-, control-monad-free
-, haskeline
-, lib
-, mtl
-, transformers
+{ mkDerivation, base, containers, control-monad-free, haskeline
+, lib, mtl, transformers
 }:
 mkDerivation {
   pname = "wizards";
@@ -17,12 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    control-monad-free
-    haskeline
-    mtl
-    transformers
+    base containers control-monad-free haskeline mtl transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

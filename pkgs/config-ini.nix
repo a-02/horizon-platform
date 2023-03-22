@@ -1,14 +1,5 @@
-{ mkDerivation
-, base
-, containers
-, directory
-, hedgehog
-, ini
-, lib
-, megaparsec
-, text
-, transformers
-, unordered-containers
+{ mkDerivation, base, containers, directory, hedgehog, ini, lib
+, megaparsec, text, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "config-ini";
@@ -18,21 +9,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    megaparsec
-    text
-    transformers
-    unordered-containers
+    base containers megaparsec text transformers unordered-containers
   ];
   testHaskellDepends = [
-    base
-    containers
-    directory
-    hedgehog
-    ini
-    text
-    unordered-containers
+    base containers directory hedgehog ini text unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

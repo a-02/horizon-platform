@@ -1,11 +1,5 @@
-{ mkDerivation
-, attoparsec
-, base
-, base-compat-batteries
-, lib
-, text
-, time
-, time-compat
+{ mkDerivation, attoparsec, base, base-compat-batteries, lib, text
+, time, time-compat
 }:
 mkDerivation {
   pname = "attoparsec-iso8601";
@@ -15,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    attoparsec
-    base
-    base-compat-batteries
-    text
-    time
-    time-compat
+    attoparsec base base-compat-batteries text time time-compat
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

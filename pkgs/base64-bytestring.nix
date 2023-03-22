@@ -1,13 +1,5 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, bytestring
-, criterion
-, deepseq
-, lib
-, test-framework
-, test-framework-hunit
+{ mkDerivation, HUnit, QuickCheck, base, bytestring, criterion
+, deepseq, lib, test-framework, test-framework-hunit
 , test-framework-quickcheck2
 }:
 mkDerivation {
@@ -19,13 +11,8 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring ];
   testHaskellDepends = [
-    base
-    bytestring
-    HUnit
-    QuickCheck
-    test-framework
-    test-framework-hunit
-    test-framework-quickcheck2
+    base bytestring HUnit QuickCheck test-framework
+    test-framework-hunit test-framework-quickcheck2
   ];
   benchmarkHaskellDepends = [ base bytestring criterion deepseq ];
   enableLibraryProfiling = true;

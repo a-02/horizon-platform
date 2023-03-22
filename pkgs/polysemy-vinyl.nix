@@ -1,10 +1,5 @@
-{ mkDerivation
-, base
-, lib
-, polysemy
-, polysemy-extra
-, polysemy-several
-, vinyl
+{ mkDerivation, base, lib, polysemy, polysemy-extra
+, polysemy-several, vinyl
 }:
 mkDerivation {
   pname = "polysemy-vinyl";
@@ -16,11 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    polysemy
-    polysemy-extra
-    polysemy-several
-    vinyl
+    base polysemy polysemy-extra polysemy-several vinyl
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

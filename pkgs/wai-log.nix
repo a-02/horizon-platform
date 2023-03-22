@@ -1,15 +1,5 @@
-{ mkDerivation
-, aeson
-, base
-, bytestring
-, http-types
-, lib
-, log-base
-, string-conversions
-, text
-, time
-, uuid
-, wai
+{ mkDerivation, aeson, base, bytestring, http-types, lib, log-base
+, string-conversions, text, time, uuid, wai
 }:
 mkDerivation {
   pname = "wai-log";
@@ -19,16 +9,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    bytestring
-    http-types
-    log-base
-    string-conversions
-    text
-    time
-    uuid
-    wai
+    aeson base bytestring http-types log-base string-conversions text
+    time uuid wai
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

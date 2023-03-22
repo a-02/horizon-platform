@@ -1,21 +1,7 @@
-{ mkDerivation
-, QuickCheck
-, adjunctions
-, base
-, base-compat
-, boring
-, criterion
-, deepseq
-, distributive
-, fin
-, hashable
-, indexed-traversable
-, inspection-testing
-, lib
-, semigroupoids
-, tagged
-, transformers
-, vector
+{ mkDerivation, QuickCheck, adjunctions, base, base-compat, boring
+, criterion, deepseq, distributive, fin, hashable
+, indexed-traversable, inspection-testing, lib, semigroupoids
+, tagged, transformers, vector
 }:
 mkDerivation {
   pname = "vec";
@@ -27,24 +13,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    adjunctions
-    base
-    boring
-    deepseq
-    distributive
-    fin
-    hashable
-    indexed-traversable
-    QuickCheck
-    semigroupoids
-    transformers
+    adjunctions base boring deepseq distributive fin hashable
+    indexed-traversable QuickCheck semigroupoids transformers
   ];
   testHaskellDepends = [
-    base
-    base-compat
-    fin
-    inspection-testing
-    tagged
+    base base-compat fin inspection-testing tagged
   ];
   benchmarkHaskellDepends = [ base criterion fin vector ];
   enableLibraryProfiling = true;

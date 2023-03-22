@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, bytestring
-, ghc-prim
-, lib
-, primitive
-, text
+{ mkDerivation, base, bytestring, ghc-prim, lib, primitive, text
 , transformers
 }:
 mkDerivation {
@@ -17,12 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    ghc-prim
-    primitive
-    text
-    transformers
+    base bytestring ghc-prim primitive text transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,19 +1,6 @@
-{ mkDerivation
-, attoparsec
-, base
-, binary
-, bytestring
-, containers
-, cryptonite
-, hnix-store-core
-, lib
-, mtl
-, network
-, nix-derivation
-, relude
-, text
-, time
-, unordered-containers
+{ mkDerivation, attoparsec, base, binary, bytestring, containers
+, cryptonite, hnix-store-core, lib, mtl, network, nix-derivation
+, relude, text, time, unordered-containers
 }:
 mkDerivation {
   pname = "hnix-store-remote";
@@ -23,19 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    attoparsec
-    base
-    binary
-    bytestring
-    containers
-    cryptonite
-    hnix-store-core
-    mtl
-    network
-    nix-derivation
-    relude
-    text
-    time
+    attoparsec base binary bytestring containers cryptonite
+    hnix-store-core mtl network nix-derivation relude text time
     unordered-containers
   ];
   enableLibraryProfiling = true;

@@ -1,12 +1,5 @@
-{ mkDerivation
-, base
-, containers
-, distributive
-, indexed-traversable
-, lib
-, tagged
-, transformers
-, transformers-compat
+{ mkDerivation, base, containers, distributive, indexed-traversable
+, lib, tagged, transformers, transformers-compat
 }:
 mkDerivation {
   pname = "comonad";
@@ -18,13 +11,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    distributive
-    indexed-traversable
-    tagged
-    transformers
-    transformers-compat
+    base containers distributive indexed-traversable tagged
+    transformers transformers-compat
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

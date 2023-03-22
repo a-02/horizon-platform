@@ -9,10 +9,7 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    contravariant
-    hedgehog
-    transformers
+    base contravariant hedgehog transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

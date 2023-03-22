@@ -1,18 +1,6 @@
-{ mkDerivation
-, asn1-encoding
-, asn1-types
-, base
-, bytestring
-, containers
-, cryptonite
-, directory
-, filepath
-, lib
-, mtl
-, pem
-, tasty
-, tasty-hunit
-, x509
+{ mkDerivation, asn1-encoding, asn1-types, base, bytestring
+, containers, cryptonite, directory, filepath, lib, mtl, pem, tasty
+, tasty-hunit, x509
 }:
 mkDerivation {
   pname = "x509-store";
@@ -22,17 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    asn1-encoding
-    asn1-types
-    base
-    bytestring
-    containers
-    cryptonite
-    directory
-    filepath
-    mtl
-    pem
-    x509
+    asn1-encoding asn1-types base bytestring containers cryptonite
+    directory filepath mtl pem x509
   ];
   testHaskellDepends = [ base bytestring tasty tasty-hunit x509 ];
   enableLibraryProfiling = true;

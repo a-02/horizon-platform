@@ -1,15 +1,5 @@
-{ mkDerivation
-, HUnit
-, base
-, blaze-html
-, bytestring
-, cheapskate
-, criterion
-, discount
-, lib
-, markdown
-, sundown
-, text
+{ mkDerivation, HUnit, base, blaze-html, bytestring, cheapskate
+, criterion, discount, lib, markdown, sundown, text
 }:
 mkDerivation {
   pname = "cmark-gfm";
@@ -21,14 +11,7 @@ mkDerivation {
   libraryHaskellDepends = [ base bytestring text ];
   testHaskellDepends = [ base HUnit text ];
   benchmarkHaskellDepends = [
-    base
-    blaze-html
-    cheapskate
-    criterion
-    discount
-    markdown
-    sundown
-    text
+    base blaze-html cheapskate criterion discount markdown sundown text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

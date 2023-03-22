@@ -1,12 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, gauge
-, hspec
-, lib
-, text
-, transformers
-, unliftio
+{ mkDerivation, base, bytestring, gauge, hspec, lib, text
+, transformers, unliftio
 }:
 mkDerivation {
   pname = "say";
@@ -17,20 +10,10 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring text transformers ];
   testHaskellDepends = [
-    base
-    bytestring
-    hspec
-    text
-    transformers
-    unliftio
+    base bytestring hspec text transformers unliftio
   ];
   benchmarkHaskellDepends = [
-    base
-    bytestring
-    gauge
-    text
-    transformers
-    unliftio
+    base bytestring gauge text transformers unliftio
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

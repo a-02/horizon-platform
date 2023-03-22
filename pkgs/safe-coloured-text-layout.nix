@@ -1,12 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, lib
-, safe-coloured-text
-, sydtest
-, sydtest-discover
-, text
-, validity
+{ mkDerivation, base, bytestring, lib, safe-coloured-text, sydtest
+, sydtest-discover, text, validity
 }:
 mkDerivation {
   pname = "safe-coloured-text-layout";
@@ -17,11 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base safe-coloured-text text validity ];
   testHaskellDepends = [
-    base
-    bytestring
-    safe-coloured-text
-    sydtest
-    text
+    base bytestring safe-coloured-text sydtest text
   ];
   testToolDepends = [ sydtest-discover ];
   enableLibraryProfiling = true;

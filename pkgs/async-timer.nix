@@ -1,14 +1,5 @@
-{ mkDerivation
-, async
-, base
-, containers
-, criterion
-, lib
-, safe-exceptions
-, tasty
-, tasty-hunit
-, unliftio
-, unliftio-core
+{ mkDerivation, async, base, containers, criterion, lib
+, safe-exceptions, tasty, tasty-hunit, unliftio, unliftio-core
 }:
 mkDerivation {
   pname = "async-timer";
@@ -18,19 +9,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    async
-    base
-    safe-exceptions
-    unliftio
-    unliftio-core
+    async base safe-exceptions unliftio unliftio-core
   ];
   testHaskellDepends = [
-    async
-    base
-    containers
-    criterion
-    tasty
-    tasty-hunit
+    async base containers criterion tasty tasty-hunit
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

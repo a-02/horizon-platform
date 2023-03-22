@@ -1,20 +1,6 @@
-{ mkDerivation
-, HUnit
-, base
-, bifunctors
-, blaze-builder
-, bytestring
-, containers
-, criterion
-, deepseq
-, hashable
-, hspec
-, lib
-, mmorph
-, mtl
-, parsec
-, text
-, transformers
+{ mkDerivation, HUnit, base, bifunctors, blaze-builder, bytestring
+, containers, criterion, deepseq, hashable, hspec, lib, mmorph, mtl
+, parsec, text, transformers
 }:
 mkDerivation {
   pname = "lucid";
@@ -26,33 +12,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    blaze-builder
-    bytestring
-    containers
-    hashable
-    mmorph
-    mtl
-    text
+    base blaze-builder bytestring containers hashable mmorph mtl text
     transformers
   ];
   testHaskellDepends = [
-    base
-    bifunctors
-    hspec
-    HUnit
-    mtl
-    parsec
-    text
+    base bifunctors hspec HUnit mtl parsec text
   ];
   benchmarkHaskellDepends = [
-    base
-    blaze-builder
-    bytestring
-    criterion
-    deepseq
-    text
-    transformers
+    base blaze-builder bytestring criterion deepseq text transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

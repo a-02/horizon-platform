@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, bytestring
-, directory
-, filepath
-, lib
+{ mkDerivation, base, bytestring, directory, filepath, lib
 , template-haskell
 }:
 mkDerivation {
@@ -14,11 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    directory
-    filepath
-    template-haskell
+    base bytestring directory filepath template-haskell
   ];
   testHaskellDepends = [ base bytestring filepath ];
   enableLibraryProfiling = true;

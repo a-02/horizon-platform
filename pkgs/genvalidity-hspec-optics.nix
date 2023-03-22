@@ -1,13 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, genvalidity
-, genvalidity-hspec
-, genvalidity-property
-, hspec
-, lib
-, microlens
-, validity
+{ mkDerivation, QuickCheck, base, genvalidity, genvalidity-hspec
+, genvalidity-property, hspec, lib, microlens, validity
 }:
 mkDerivation {
   pname = "genvalidity-hspec-optics";
@@ -17,21 +9,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    genvalidity
-    genvalidity-hspec
-    hspec
-    microlens
-    QuickCheck
+    base genvalidity genvalidity-hspec hspec microlens QuickCheck
   ];
   testHaskellDepends = [
-    base
-    genvalidity
-    genvalidity-hspec
-    genvalidity-property
-    hspec
-    microlens
-    validity
+    base genvalidity genvalidity-hspec genvalidity-property hspec
+    microlens validity
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

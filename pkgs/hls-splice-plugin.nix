@@ -1,26 +1,7 @@
-{ mkDerivation
-, aeson
-, base
-, containers
-, dlist
-, extra
-, filepath
-, foldl
-, ghc
-, ghc-exactprint
-, ghcide
-, hls-plugin-api
-, hls-refactor-plugin
-, hls-test-utils
-, lens
-, lib
-, lsp
-, retrie
-, syb
-, text
-, transformers
-, unliftio-core
-, unordered-containers
+{ mkDerivation, aeson, base, containers, dlist, extra, filepath
+, foldl, ghc, ghc-exactprint, ghcide, hls-plugin-api
+, hls-refactor-plugin, hls-test-utils, lens, lib, lsp, retrie, syb
+, text, transformers, unliftio-core, unordered-containers
 }:
 mkDerivation {
   pname = "hls-splice-plugin";
@@ -30,25 +11,9 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    containers
-    dlist
-    extra
-    foldl
-    ghc
-    ghc-exactprint
-    ghcide
-    hls-plugin-api
-    hls-refactor-plugin
-    lens
-    lsp
-    retrie
-    syb
-    text
-    transformers
-    unliftio-core
-    unordered-containers
+    aeson base containers dlist extra foldl ghc ghc-exactprint ghcide
+    hls-plugin-api hls-refactor-plugin lens lsp retrie syb text
+    transformers unliftio-core unordered-containers
   ];
   testHaskellDepends = [ base filepath hls-test-utils text ];
   enableLibraryProfiling = true;

@@ -1,12 +1,5 @@
-{ mkDerivation
-, base
-, hashable
-, lib
-, mtl
-, mtl-compat
-, tasty
-, tasty-hunit
-, unordered-containers
+{ mkDerivation, base, hashable, lib, mtl, mtl-compat, tasty
+, tasty-hunit, unordered-containers
 }:
 mkDerivation {
   pname = "mfsolve";
@@ -18,11 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    hashable
-    mtl
-    mtl-compat
-    unordered-containers
+    base hashable mtl mtl-compat unordered-containers
   ];
   testHaskellDepends = [ base tasty tasty-hunit ];
   enableLibraryProfiling = true;

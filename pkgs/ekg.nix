@@ -1,18 +1,6 @@
-{ mkDerivation
-, aeson
-, base
-, bytestring
-, ekg-core
-, ekg-json
-, filepath
-, lib
-, network
-, snap-core
-, snap-server
-, text
-, time
-, transformers
-, unordered-containers
+{ mkDerivation, aeson, base, bytestring, ekg-core, ekg-json
+, filepath, lib, network, snap-core, snap-server, text, time
+, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "ekg";
@@ -24,19 +12,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    aeson
-    base
-    bytestring
-    ekg-core
-    ekg-json
-    filepath
-    network
-    snap-core
-    snap-server
-    text
-    time
-    transformers
-    unordered-containers
+    aeson base bytestring ekg-core ekg-json filepath network snap-core
+    snap-server text time transformers unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

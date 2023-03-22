@@ -1,17 +1,6 @@
-{ mkDerivation
-, attoparsec
-, base
-, blaze-builder
-, bytestring
-, deepseq
-, doctest
-, gauge
-, hedgehog
-, lib
-, semigroups
-, tasty
-, tasty-hedgehog
-, tasty-hunit
+{ mkDerivation, attoparsec, base, blaze-builder, bytestring
+, deepseq, doctest, gauge, hedgehog, lib, semigroups, tasty
+, tasty-hedgehog, tasty-hunit
 }:
 mkDerivation {
   pname = "bsb-http-chunked";
@@ -24,23 +13,11 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring ];
   testHaskellDepends = [
-    attoparsec
-    base
-    blaze-builder
-    bytestring
-    doctest
-    hedgehog
-    tasty
-    tasty-hedgehog
-    tasty-hunit
+    attoparsec base blaze-builder bytestring doctest hedgehog tasty
+    tasty-hedgehog tasty-hunit
   ];
   benchmarkHaskellDepends = [
-    base
-    blaze-builder
-    bytestring
-    deepseq
-    gauge
-    semigroups
+    base blaze-builder bytestring deepseq gauge semigroups
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

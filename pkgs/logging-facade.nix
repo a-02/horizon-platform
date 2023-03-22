@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, call-stack
-, hspec
-, hspec-discover
-, lib
+{ mkDerivation, base, call-stack, hspec, hspec-discover, lib
 , transformers
 }:
 mkDerivation {

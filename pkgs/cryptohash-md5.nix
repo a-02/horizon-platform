@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, base16-bytestring
-, bytestring
-, criterion
-, lib
-, pureMD5
-, tasty
-, tasty-hunit
-, tasty-quickcheck
+{ mkDerivation, base, base16-bytestring, bytestring, criterion, lib
+, pureMD5, tasty, tasty-hunit, tasty-quickcheck
 }:
 mkDerivation {
   pname = "cryptohash-md5";
@@ -20,12 +12,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring ];
   testHaskellDepends = [
-    base
-    base16-bytestring
-    bytestring
-    pureMD5
-    tasty
-    tasty-hunit
+    base base16-bytestring bytestring pureMD5 tasty tasty-hunit
     tasty-quickcheck
   ];
   benchmarkHaskellDepends = [ base bytestring criterion ];

@@ -1,22 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, X11
-, X11-xft
-, base
-, bytestring
-, containers
-, deepseq
-, directory
-, filepath
-, hspec
-, lib
-, mtl
-, process
-, random
-, time
-, unix
-, utf8-string
-, xmonad
+{ mkDerivation, QuickCheck, X11, X11-xft, base, bytestring
+, containers, deepseq, directory, filepath, hspec, lib, mtl
+, process, random, time, unix, utf8-string, xmonad
 }:
 mkDerivation {
   pname = "xmonad-contrib";
@@ -28,38 +12,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    deepseq
-    directory
-    filepath
-    mtl
-    process
-    random
-    time
-    unix
-    utf8-string
-    X11
-    X11-xft
-    xmonad
+    base bytestring containers deepseq directory filepath mtl process
+    random time unix utf8-string X11 X11-xft xmonad
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    containers
-    deepseq
-    directory
-    hspec
-    mtl
-    process
-    QuickCheck
-    random
-    time
-    unix
-    utf8-string
-    X11
-    xmonad
+    base bytestring containers deepseq directory hspec mtl process
+    QuickCheck random time unix utf8-string X11 xmonad
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -7,10 +7,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    QuickCheck
-    transformers
+    base containers QuickCheck transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

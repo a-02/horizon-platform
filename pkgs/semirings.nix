@@ -1,10 +1,5 @@
-{ mkDerivation
-, base
-, base-compat-batteries
-, containers
-, hashable
-, lib
-, unordered-containers
+{ mkDerivation, base, base-compat-batteries, containers, hashable
+, lib, unordered-containers
 }:
 mkDerivation {
   pname = "semirings";
@@ -16,11 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base-compat-batteries
-    containers
-    hashable
-    unordered-containers
+    base base-compat-batteries containers hashable unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

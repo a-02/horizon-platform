@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, containers
-, lib
-, smallcheck
-, tasty
-, tasty-smallcheck
-, transformers
+{ mkDerivation, base, containers, lib, smallcheck, tasty
+, tasty-smallcheck, transformers
 }:
 mkDerivation {
   pname = "filtrable";

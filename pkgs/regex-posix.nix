@@ -1,9 +1,4 @@
-{ mkDerivation
-, array
-, base
-, bytestring
-, containers
-, lib
+{ mkDerivation, array, base, bytestring, containers, lib
 , regex-base
 }:
 mkDerivation {
@@ -16,11 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    bytestring
-    containers
-    regex-base
+    array base bytestring containers regex-base
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

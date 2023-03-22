@@ -1,16 +1,5 @@
-{ mkDerivation
-, base
-, containers
-, cursor
-, deepseq
-, dirforest
-, fetchgit
-, filepath
-, lib
-, microlens
-, path
-, text
-, validity
+{ mkDerivation, base, containers, cursor, deepseq, dirforest
+, fetchgit, filepath, lib, microlens, path, text, validity
 , validity-path
 }:
 mkDerivation {
@@ -27,17 +16,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    cursor
-    deepseq
-    dirforest
-    filepath
-    microlens
-    path
-    text
-    validity
-    validity-path
+    base containers cursor deepseq dirforest filepath microlens path
+    text validity validity-path
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

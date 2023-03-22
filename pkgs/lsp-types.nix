@@ -1,31 +1,8 @@
-{ mkDerivation
-, Diff
-, QuickCheck
-, aeson
-, base
-, binary
-, containers
-, data-default
-, deepseq
-, dlist
-, exceptions
-, filepath
-, hashable
-, hspec
-, hspec-discover
-, lens
-, lib
-, mod
-, mtl
-, network-uri
-, quickcheck-instances
-, safe
-, scientific
-, some
-, template-haskell
-, text
-, tuple
-, unordered-containers
+{ mkDerivation, Diff, QuickCheck, aeson, base, binary, containers
+, data-default, deepseq, dlist, exceptions, filepath, hashable
+, hspec, hspec-discover, lens, lib, mod, mtl, network-uri
+, quickcheck-instances, safe, scientific, some, template-haskell
+, text, tuple, unordered-containers
 }:
 mkDerivation {
   pname = "lsp-types";
@@ -35,39 +12,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    binary
-    containers
-    data-default
-    deepseq
-    Diff
-    dlist
-    exceptions
-    filepath
-    hashable
-    lens
-    mod
-    mtl
-    network-uri
-    safe
-    scientific
-    some
-    template-haskell
-    text
-    unordered-containers
+    aeson base binary containers data-default deepseq Diff dlist
+    exceptions filepath hashable lens mod mtl network-uri safe
+    scientific some template-haskell text unordered-containers
   ];
   testHaskellDepends = [
-    aeson
-    base
-    filepath
-    hspec
-    lens
-    network-uri
-    QuickCheck
-    quickcheck-instances
-    text
-    tuple
+    aeson base filepath hspec lens network-uri QuickCheck
+    quickcheck-instances text tuple
   ];
   testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;

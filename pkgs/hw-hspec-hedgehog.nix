@@ -1,14 +1,5 @@
-{ mkDerivation
-, HUnit
-, base
-, call-stack
-, doctest
-, doctest-discover
-, hedgehog
-, hspec
-, hspec-discover
-, lib
-, transformers
+{ mkDerivation, HUnit, base, call-stack, doctest, doctest-discover
+, hedgehog, hspec, hspec-discover, lib, transformers
 }:
 mkDerivation {
   pname = "hw-hspec-hedgehog";
@@ -20,21 +11,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    call-stack
-    hedgehog
-    hspec
-    HUnit
-    transformers
+    base call-stack hedgehog hspec HUnit transformers
   ];
   testHaskellDepends = [
-    base
-    call-stack
-    doctest
-    doctest-discover
-    hedgehog
-    hspec
-    HUnit
+    base call-stack doctest doctest-discover hedgehog hspec HUnit
   ];
   testToolDepends = [ doctest-discover hspec-discover ];
   enableLibraryProfiling = true;

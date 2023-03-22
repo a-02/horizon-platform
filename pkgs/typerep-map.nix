@@ -1,18 +1,6 @@
-{ mkDerivation
-, base
-, containers
-, criterion
-, deepseq
-, dependent-map
-, dependent-sum
-, ghc-prim
-, ghc-typelits-knownnat
-, hedgehog
-, hspec
-, hspec-hedgehog
-, lib
-, primitive
-, vector
+{ mkDerivation, base, containers, criterion, deepseq, dependent-map
+, dependent-sum, ghc-prim, ghc-typelits-knownnat, hedgehog, hspec
+, hspec-hedgehog, lib, primitive, vector
 }:
 mkDerivation {
   pname = "typerep-map";
@@ -22,26 +10,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    deepseq
-    ghc-prim
-    primitive
-    vector
+    base containers deepseq ghc-prim primitive vector
   ];
   testHaskellDepends = [
-    base
-    ghc-typelits-knownnat
-    hedgehog
-    hspec
-    hspec-hedgehog
+    base ghc-typelits-knownnat hedgehog hspec hspec-hedgehog
   ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    deepseq
-    dependent-map
-    dependent-sum
+    base criterion deepseq dependent-map dependent-sum
     ghc-typelits-knownnat
   ];
   enableLibraryProfiling = true;

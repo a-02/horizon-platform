@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, deepseq
-, directory
-, lib
-, nanospec
-, temporary
+{ mkDerivation, base, deepseq, directory, lib, nanospec, temporary
 }:
 mkDerivation {
   pname = "silently";

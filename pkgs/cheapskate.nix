@@ -1,15 +1,5 @@
-{ mkDerivation
-, base
-, blaze-html
-, bytestring
-, containers
-, data-default
-, deepseq
-, lib
-, mtl
-, syb
-, text
-, uniplate
+{ mkDerivation, base, blaze-html, bytestring, containers
+, data-default, deepseq, lib, mtl, syb, text, uniplate
 , xss-sanitize
 }:
 mkDerivation {
@@ -22,16 +12,8 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    blaze-html
-    containers
-    data-default
-    deepseq
-    mtl
-    syb
-    text
-    uniplate
-    xss-sanitize
+    base blaze-html containers data-default deepseq mtl syb text
+    uniplate xss-sanitize
   ];
   executableHaskellDepends = [ base blaze-html bytestring text ];
   enableLibraryProfiling = true;

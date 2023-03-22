@@ -1,13 +1,5 @@
-{ mkDerivation
-, array
-, attoparsec
-, base
-, bytestring
-, doctest
-, hspec
-, lib
-, old-locale
-, time
+{ mkDerivation, array, attoparsec, base, bytestring, doctest, hspec
+, lib, old-locale, time
 }:
 mkDerivation {
   pname = "http-date";
@@ -18,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ array attoparsec base bytestring time ];
   testHaskellDepends = [
-    base
-    bytestring
-    doctest
-    hspec
-    old-locale
-    time
+    base bytestring doctest hspec old-locale time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

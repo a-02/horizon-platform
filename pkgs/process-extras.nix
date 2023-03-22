@@ -1,15 +1,5 @@
-{ mkDerivation
-, HUnit
-, ListLike
-, base
-, bytestring
-, data-default
-, deepseq
-, generic-deriving
-, lib
-, mtl
-, process
-, text
+{ mkDerivation, HUnit, ListLike, base, bytestring, data-default
+, deepseq, generic-deriving, lib, mtl, process, text
 }:
 mkDerivation {
   pname = "process-extras";
@@ -19,15 +9,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    data-default
-    deepseq
-    generic-deriving
-    ListLike
-    mtl
-    process
-    text
+    base bytestring data-default deepseq generic-deriving ListLike mtl
+    process text
   ];
   testHaskellDepends = [ base HUnit ];
   enableLibraryProfiling = true;

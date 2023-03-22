@@ -1,10 +1,4 @@
-{ mkDerivation
-, async
-, base
-, bytestring
-, containers
-, directory
-, lib
+{ mkDerivation, async, base, bytestring, containers, directory, lib
 , unix
 }:
 mkDerivation {

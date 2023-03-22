@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, lib
-, mtl
-, transformers
-, transformers-compat
+{ mkDerivation, base, lib, mtl, transformers, transformers-compat
 }:
 mkDerivation {
   pname = "mmorph";
@@ -15,10 +10,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    mtl
-    transformers
-    transformers-compat
+    base mtl transformers transformers-compat
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

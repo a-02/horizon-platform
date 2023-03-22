@@ -1,21 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, attoparsec
-, base
-, bytestring
-, clock
-, containers
-, criterion
-, derp
-, fin
-, lib
-, parsec
-, quickcheck-instances
-, tasty
-, tasty-quickcheck
-, transformers
-, vec
+{ mkDerivation, QuickCheck, aeson, attoparsec, base, bytestring
+, clock, containers, criterion, derp, fin, lib, parsec
+, quickcheck-instances, tasty, tasty-quickcheck, transformers, vec
 }:
 mkDerivation {
   pname = "rere";
@@ -27,34 +12,15 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    fin
-    parsec
-    QuickCheck
-    transformers
-    vec
+    base containers fin parsec QuickCheck transformers vec
   ];
   testHaskellDepends = [
-    base
-    containers
-    QuickCheck
-    quickcheck-instances
-    tasty
+    base containers QuickCheck quickcheck-instances tasty
     tasty-quickcheck
   ];
   benchmarkHaskellDepends = [
-    aeson
-    attoparsec
-    base
-    bytestring
-    clock
-    containers
-    criterion
-    derp
-    fin
-    parsec
-    vec
+    aeson attoparsec base bytestring clock containers criterion derp
+    fin parsec vec
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

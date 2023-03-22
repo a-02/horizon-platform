@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, data-default-class
-, lib
-, libX11
-, libXScrnSaver
-, libXext
-, libXinerama
-, libXrandr
-, libXrender
+{ mkDerivation, base, data-default-class, lib, libX11
+, libXScrnSaver, libXext, libXinerama, libXrandr, libXrender
 }:
 mkDerivation {
   pname = "X11";
@@ -18,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base data-default-class ];
   librarySystemDepends = [
-    libX11
-    libXext
-    libXinerama
-    libXrandr
-    libXrender
-    libXScrnSaver
+    libX11 libXext libXinerama libXrandr libXrender libXScrnSaver
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

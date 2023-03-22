@@ -1,20 +1,6 @@
-{ mkDerivation
-, base
-, containers
-, extra
-, filepath
-, fuzzy
-, ghc
-, ghcide
-, hls-plugin-api
-, hls-test-utils
-, lens
-, lib
-, lsp
-, lsp-types
-, text
-, transformers
-, unordered-containers
+{ mkDerivation, base, containers, extra, filepath, fuzzy, ghc
+, ghcide, hls-plugin-api, hls-test-utils, lens, lib, lsp, lsp-types
+, text, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "hls-pragmas-plugin";
@@ -24,26 +10,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    extra
-    fuzzy
-    ghc
-    ghcide
-    hls-plugin-api
-    lens
-    lsp
-    text
-    transformers
-    unordered-containers
+    base containers extra fuzzy ghc ghcide hls-plugin-api lens lsp text
+    transformers unordered-containers
   ];
   testHaskellDepends = [
-    base
-    filepath
-    hls-test-utils
-    lens
-    lsp-types
-    text
+    base filepath hls-test-utils lens lsp-types text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

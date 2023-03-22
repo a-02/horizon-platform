@@ -1,12 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, lens
-, lib
-, linear
-, semigroupoids
-, semigroups
-, vector
+{ mkDerivation, QuickCheck, base, lens, lib, linear, semigroupoids
+, semigroups, vector
 }:
 mkDerivation {
   pname = "active";
@@ -18,21 +11,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    lens
-    linear
-    semigroupoids
-    semigroups
-    vector
+    base lens linear semigroupoids semigroups vector
   ];
   testHaskellDepends = [
-    base
-    lens
-    linear
-    QuickCheck
-    semigroupoids
-    semigroups
-    vector
+    base lens linear QuickCheck semigroupoids semigroups vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

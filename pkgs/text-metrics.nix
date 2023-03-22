@@ -1,14 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, containers
-, criterion
-, deepseq
-, hspec
-, lib
-, text
-, vector
-, weigh
+{ mkDerivation, QuickCheck, base, containers, criterion, deepseq
+, hspec, lib, text, vector, weigh
 }:
 mkDerivation {
   pname = "text-metrics";

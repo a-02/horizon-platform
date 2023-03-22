@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, lib
-, smallcheck
-, test-framework
-, transformers
+{ mkDerivation, base, lib, smallcheck, test-framework, transformers
 }:
 mkDerivation {
   pname = "test-framework-smallcheck";
@@ -13,10 +8,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    smallcheck
-    test-framework
-    transformers
+    base smallcheck test-framework transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

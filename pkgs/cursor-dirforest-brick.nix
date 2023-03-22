@@ -1,14 +1,5 @@
-{ mkDerivation
-, base
-, brick
-, containers
-, cursor
-, cursor-brick
-, cursor-dirforest
-, dirforest
-, fetchgit
-, lib
-, vty
+{ mkDerivation, base, brick, containers, cursor, cursor-brick
+, cursor-dirforest, dirforest, fetchgit, lib, vty
 }:
 mkDerivation {
   pname = "cursor-dirforest-brick";
@@ -24,14 +15,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    brick
-    containers
-    cursor
-    cursor-brick
-    cursor-dirforest
-    dirforest
-    vty
+    base brick containers cursor cursor-brick cursor-dirforest
+    dirforest vty
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

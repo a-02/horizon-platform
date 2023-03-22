@@ -1,11 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, hspec
-, lens
-, lib
-, template-haskell
-, transformers
+{ mkDerivation, QuickCheck, base, hspec, lens, lib
+, template-haskell, transformers
 }:
 mkDerivation {
   pname = "quickcheck-arbitrary-adt";
@@ -16,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base QuickCheck ];
   testHaskellDepends = [
-    base
-    hspec
-    lens
-    QuickCheck
-    template-haskell
-    transformers
+    base hspec lens QuickCheck template-haskell transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

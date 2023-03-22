@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, containers
-, lib
-, quickcheck-instances
-, tasty
+{ mkDerivation, base, containers, lib, quickcheck-instances, tasty
 , tasty-quickcheck
 }:
 mkDerivation {
@@ -17,11 +12,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base ];
   testHaskellDepends = [
-    base
-    containers
-    quickcheck-instances
-    tasty
-    tasty-quickcheck
+    base containers quickcheck-instances tasty tasty-quickcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

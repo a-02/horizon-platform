@@ -1,34 +1,9 @@
-{ mkDerivation
-, aeson
-, async
-, base
-, binary
-, bytestring
-, containers
-, data-default
-, deepseq
-, directory
-, extra
-, filepath
-, ghcide
-, ghcide-test-utils
-, hashable
-, hls-graph
-, hls-plugin-api
-, implicit-hie
-, lens
-, lib
-, lsp-test
-, lsp-types
-, optparse-applicative
-, parser-combinators
-, process
-, safe-exceptions
-, shake
-, tasty
-, tasty-hunit
-, tasty-rerun
-, text
+{ mkDerivation, aeson, async, base, binary, bytestring, containers
+, data-default, deepseq, directory, extra, filepath, ghcide
+, ghcide-test-utils, hashable, hls-graph, hls-plugin-api
+, implicit-hie, lens, lib, lsp-test, lsp-types
+, optparse-applicative, parser-combinators, process
+, safe-exceptions, shake, tasty, tasty-hunit, tasty-rerun, text
 }:
 mkDerivation {
   pname = "ghcide-bench";
@@ -38,56 +13,18 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    async
-    base
-    binary
-    bytestring
-    deepseq
-    directory
-    extra
-    filepath
-    ghcide
-    ghcide-test-utils
-    hashable
-    lens
-    lsp-test
-    lsp-types
-    optparse-applicative
-    parser-combinators
-    process
-    safe-exceptions
-    shake
-    text
+    aeson async base binary bytestring deepseq directory extra filepath
+    ghcide ghcide-test-utils hashable lens lsp-test lsp-types
+    optparse-applicative parser-combinators process safe-exceptions
+    shake text
   ];
   executableHaskellDepends = [
-    aeson
-    base
-    bytestring
-    containers
-    data-default
-    directory
-    extra
-    filepath
-    hls-graph
-    hls-plugin-api
-    lens
-    lsp-test
-    lsp-types
-    optparse-applicative
-    process
-    safe-exceptions
-    shake
-    tasty-hunit
-    text
+    aeson base bytestring containers data-default directory extra
+    filepath hls-graph hls-plugin-api lens lsp-test lsp-types
+    optparse-applicative process safe-exceptions shake tasty-hunit text
   ];
   testHaskellDepends = [
-    base
-    extra
-    lsp-test
-    tasty
-    tasty-hunit
-    tasty-rerun
+    base extra lsp-test tasty tasty-hunit tasty-rerun
   ];
   testToolDepends = [ ghcide implicit-hie ];
   enableLibraryProfiling = true;

@@ -1,16 +1,6 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, bytestring
-, cereal
-, crypto-api
-, directory
-, filepath
-, lib
-, test-framework
-, test-framework-hunit
-, test-framework-quickcheck2
+{ mkDerivation, HUnit, QuickCheck, base, bytestring, cereal
+, crypto-api, directory, filepath, lib, test-framework
+, test-framework-hunit, test-framework-quickcheck2
 }:
 mkDerivation {
   pname = "crypto-api-tests";
@@ -20,16 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    base
-    bytestring
-    cereal
-    crypto-api
-    directory
-    filepath
-    HUnit
-    QuickCheck
-    test-framework
-    test-framework-hunit
+    base bytestring cereal crypto-api directory filepath HUnit
+    QuickCheck test-framework test-framework-hunit
     test-framework-quickcheck2
   ];
   enableLibraryProfiling = true;

@@ -1,15 +1,5 @@
-{ mkDerivation
-, HUnit
-, base
-, bytestring
-, containers
-, deepseq
-, lib
-, network
-, network-bsd
-, old-locale
-, time
-, unix
+{ mkDerivation, HUnit, base, bytestring, containers, deepseq, lib
+, network, network-bsd, old-locale, time, unix
 }:
 mkDerivation {
   pname = "hslogger";
@@ -21,15 +11,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    containers
-    deepseq
-    network
-    network-bsd
-    old-locale
-    time
-    unix
+    base bytestring containers deepseq network network-bsd old-locale
+    time unix
   ];
   testHaskellDepends = [ base HUnit ];
   enableLibraryProfiling = true;

@@ -1,17 +1,5 @@
-{ mkDerivation
-, Cabal
-, alex
-, array
-, base
-, containers
-, directory
-, filepath
-, happy
-, hashtables
-, lib
-, pretty
-, process
-, random
+{ mkDerivation, Cabal, alex, array, base, containers, directory
+, filepath, happy, hashtables, lib, pretty, process, random
 }:
 mkDerivation {
   pname = "gtk2hs-buildtools";
@@ -21,16 +9,8 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    array
-    base
-    Cabal
-    containers
-    directory
-    filepath
-    hashtables
-    pretty
-    process
-    random
+    array base Cabal containers directory filepath hashtables pretty
+    process random
   ];
   libraryToolDepends = [ alex happy ];
   executableHaskellDepends = [ base ];

@@ -1,15 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, deepseq
-, hspec
-, lib
-, math-functions
-, primitive
-, vector
-, vector-algorithms
-, vector-binary-instances
-, vector-th-unbox
+{ mkDerivation, QuickCheck, base, deepseq, hspec, lib
+, math-functions, primitive, vector, vector-algorithms
+, vector-binary-instances, vector-th-unbox
 }:
 mkDerivation {
   pname = "dense-linear-algebra";
@@ -19,14 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    deepseq
-    math-functions
-    primitive
-    vector
-    vector-algorithms
-    vector-binary-instances
-    vector-th-unbox
+    base deepseq math-functions primitive vector vector-algorithms
+    vector-binary-instances vector-th-unbox
   ];
   testHaskellDepends = [ base hspec QuickCheck ];
   enableLibraryProfiling = true;

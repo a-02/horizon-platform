@@ -1,33 +1,9 @@
-{ mkDerivation
-, HUnit
-, HsOpenSSL
-, aeson
-, aeson-pretty
-, attoparsec
-, base
-, base64-bytestring
-, blaze-builder
-, bytestring
-, case-insensitive
-, directory
-, filepath
-, ghc-prim
-, hspec
-, hspec-expectations
-, http-common
-, io-streams
-, lib
-, lifted-base
-, mtl
-, network
-, network-uri
-, openssl-streams
-, random
-, snap-core
-, snap-server
-, text
-, transformers
-, unordered-containers
+{ mkDerivation, HUnit, HsOpenSSL, aeson, aeson-pretty, attoparsec
+, base, base64-bytestring, blaze-builder, bytestring
+, case-insensitive, directory, filepath, ghc-prim, hspec
+, hspec-expectations, http-common, io-streams, lib, lifted-base
+, mtl, network, network-uri, openssl-streams, random, snap-core
+, snap-server, text, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "http-streams";
@@ -37,54 +13,17 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    attoparsec
-    base
-    base64-bytestring
-    blaze-builder
-    bytestring
-    case-insensitive
-    directory
-    filepath
-    HsOpenSSL
-    http-common
-    io-streams
-    mtl
-    network
-    network-uri
-    openssl-streams
-    text
-    transformers
-    unordered-containers
+    aeson attoparsec base base64-bytestring blaze-builder bytestring
+    case-insensitive directory filepath HsOpenSSL http-common
+    io-streams mtl network network-uri openssl-streams text
+    transformers unordered-containers
   ];
   testHaskellDepends = [
-    aeson
-    aeson-pretty
-    attoparsec
-    base
-    base64-bytestring
-    blaze-builder
-    bytestring
-    case-insensitive
-    directory
-    ghc-prim
-    HsOpenSSL
-    hspec
-    hspec-expectations
-    http-common
-    HUnit
-    io-streams
-    lifted-base
-    mtl
-    network
-    network-uri
-    openssl-streams
-    random
-    snap-core
-    snap-server
-    text
-    transformers
-    unordered-containers
+    aeson aeson-pretty attoparsec base base64-bytestring blaze-builder
+    bytestring case-insensitive directory ghc-prim HsOpenSSL hspec
+    hspec-expectations http-common HUnit io-streams lifted-base mtl
+    network network-uri openssl-streams random snap-core snap-server
+    text transformers unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

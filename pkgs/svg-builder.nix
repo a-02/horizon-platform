@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, blaze-builder
-, bytestring
-, hashable
-, lib
-, text
-, unordered-containers
+{ mkDerivation, base, blaze-builder, bytestring, hashable, lib
+, text, unordered-containers
 }:
 mkDerivation {
   pname = "svg-builder";
@@ -17,12 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    blaze-builder
-    bytestring
-    hashable
-    text
-    unordered-containers
+    base blaze-builder bytestring hashable text unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

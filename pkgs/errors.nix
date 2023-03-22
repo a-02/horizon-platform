@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, exceptions
-, lib
-, safe
-, text
-, transformers
+{ mkDerivation, base, exceptions, lib, safe, text, transformers
 , transformers-compat
 }:
 mkDerivation {
@@ -17,12 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    exceptions
-    safe
-    text
-    transformers
-    transformers-compat
+    base exceptions safe text transformers transformers-compat
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

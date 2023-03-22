@@ -1,26 +1,9 @@
-{ mkDerivation
-, autodocodec
-, autodocodec-yaml
-, base
-, bytestring
-, conduit
-, containers
-, envparse
-, fsnotify
-, lib
-, optparse-applicative
-, path
-, path-io
-, pretty-show
-, safe-coloured-text
-, safe-coloured-text-layout
-, safe-coloured-text-terminfo
-, text
-, time
-, typed-process
-, unix
-, unliftio
-, yaml
+{ mkDerivation, autodocodec, autodocodec-yaml, base, bytestring
+, conduit, containers, envparse, fsnotify, lib
+, optparse-applicative, path, path-io, pretty-show
+, safe-coloured-text, safe-coloured-text-layout
+, safe-coloured-text-terminfo, text, time, typed-process, unix
+, unliftio, yaml
 }:
 mkDerivation {
   pname = "feedback";
@@ -30,26 +13,10 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    autodocodec
-    autodocodec-yaml
-    base
-    bytestring
-    conduit
-    containers
-    envparse
-    fsnotify
-    optparse-applicative
-    path
-    path-io
-    pretty-show
-    safe-coloured-text
-    safe-coloured-text-layout
-    safe-coloured-text-terminfo
-    text
-    time
-    typed-process
-    unix
-    unliftio
+    autodocodec autodocodec-yaml base bytestring conduit containers
+    envparse fsnotify optparse-applicative path path-io pretty-show
+    safe-coloured-text safe-coloured-text-layout
+    safe-coloured-text-terminfo text time typed-process unix unliftio
     yaml
   ];
   executableHaskellDepends = [ base ];

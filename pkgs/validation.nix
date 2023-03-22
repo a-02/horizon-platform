@@ -1,14 +1,5 @@
-{ mkDerivation
-, HUnit
-, assoc
-, base
-, bifunctors
-, deepseq
-, hedgehog
-, lens
-, lib
-, semigroupoids
-, semigroups
+{ mkDerivation, HUnit, assoc, base, bifunctors, deepseq, hedgehog
+, lens, lib, semigroupoids, semigroups
 }:
 mkDerivation {
   pname = "validation";
@@ -18,13 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    assoc
-    base
-    bifunctors
-    deepseq
-    lens
-    semigroupoids
-    semigroups
+    assoc base bifunctors deepseq lens semigroupoids semigroups
   ];
   testHaskellDepends = [ base hedgehog HUnit lens semigroups ];
   enableLibraryProfiling = true;

@@ -1,22 +1,6 @@
-{ mkDerivation
-, HUnit
-, PSQueue
-, QuickCheck
-, array
-, base
-, containers
-, criterion
-, deepseq
-, fingertree-psqueue
-, ghc-prim
-, hashable
-, lib
-, mtl
-, random
-, tagged
-, tasty
-, tasty-hunit
-, tasty-quickcheck
+{ mkDerivation, HUnit, PSQueue, QuickCheck, array, base, containers
+, criterion, deepseq, fingertree-psqueue, ghc-prim, hashable, lib
+, mtl, random, tagged, tasty, tasty-hunit, tasty-quickcheck
 , unordered-containers
 }:
 mkDerivation {
@@ -28,30 +12,12 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base deepseq ghc-prim hashable ];
   testHaskellDepends = [
-    array
-    base
-    deepseq
-    ghc-prim
-    hashable
-    HUnit
-    QuickCheck
-    tagged
-    tasty
-    tasty-hunit
-    tasty-quickcheck
+    array base deepseq ghc-prim hashable HUnit QuickCheck tagged tasty
+    tasty-hunit tasty-quickcheck
   ];
   benchmarkHaskellDepends = [
-    base
-    containers
-    criterion
-    deepseq
-    fingertree-psqueue
-    ghc-prim
-    hashable
-    mtl
-    PSQueue
-    random
-    unordered-containers
+    base containers criterion deepseq fingertree-psqueue ghc-prim
+    hashable mtl PSQueue random unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, basement
-, bytestring
-, deepseq
-, foundation
-, ghc-prim
-, lib
+{ mkDerivation, base, basement, bytestring, deepseq, foundation
+, ghc-prim, lib
 }:
 mkDerivation {
   pname = "memory";
@@ -15,11 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    basement
-    bytestring
-    deepseq
-    ghc-prim
+    base basement bytestring deepseq ghc-prim
   ];
   testHaskellDepends = [ base basement bytestring foundation ];
   enableLibraryProfiling = true;

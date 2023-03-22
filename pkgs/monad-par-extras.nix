@@ -1,12 +1,5 @@
-{ mkDerivation
-, abstract-par
-, base
-, cereal
-, deepseq
-, lib
-, mtl
-, random
-, transformers
+{ mkDerivation, abstract-par, base, cereal, deepseq, lib, mtl
+, random, transformers
 }:
 mkDerivation {
   pname = "monad-par-extras";
@@ -16,13 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    abstract-par
-    base
-    cereal
-    deepseq
-    mtl
-    random
-    transformers
+    abstract-par base cereal deepseq mtl random transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

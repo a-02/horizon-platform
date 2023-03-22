@@ -3,8 +3,8 @@ mkDerivation {
   pname = "universe-reverse-instances";
   version = "1.1.1";
   sha256 = "c4127e12a6af8d8e05f87e546a57fdc0bd7b7f47eaf85d4a0f1826c998cdfb73";
-  revision = "2";
-  editedCabalFile = "1mp9222337rdcc6x5kg6hm14npbmq2igg0h6gmyvn1jd4x5cg9dx";
+  revision = "3";
+  editedCabalFile = "1skyr1b7jvlbphlnf373qx78qd41cz643cn7ssyncwbv30ndbs23";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

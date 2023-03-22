@@ -1,16 +1,5 @@
-{ mkDerivation
-, base
-, directory
-, filepath
-, ghcide
-, hls-plugin-api
-, hls-test-utils
-, lens
-, lib
-, lsp-types
-, process
-, text
-, transformers
+{ mkDerivation, base, directory, filepath, ghcide, hls-plugin-api
+, hls-test-utils, lens, lib, lsp-types, process, text, transformers
 }:
 mkDerivation {
   pname = "hls-cabal-fmt-plugin";
@@ -20,16 +9,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    directory
-    filepath
-    ghcide
-    hls-plugin-api
-    lens
-    lsp-types
-    process
-    text
-    transformers
+    base directory filepath ghcide hls-plugin-api lens lsp-types
+    process text transformers
   ];
   testHaskellDepends = [ base directory filepath hls-test-utils ];
   enableLibraryProfiling = true;

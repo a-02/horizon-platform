@@ -1,10 +1,4 @@
-{ mkDerivation
-, aeson
-, base
-, ekg-core
-, fetchgit
-, lib
-, text
+{ mkDerivation, aeson, base, ekg-core, fetchgit, lib, text
 , unordered-containers
 }:
 mkDerivation {
@@ -20,11 +14,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    ekg-core
-    text
-    unordered-containers
+    aeson base ekg-core text unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

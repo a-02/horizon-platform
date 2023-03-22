@@ -1,17 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, array
-, base
-, criterion
-, genvalidity
-, genvalidity-criterion
-, genvalidity-hspec
-, hspec
-, lib
-, random
-, text
-, validity
-, validity-text
+{ mkDerivation, QuickCheck, array, base, criterion, genvalidity
+, genvalidity-criterion, genvalidity-hspec, hspec, lib, random
+, text, validity, validity-text
 }:
 mkDerivation {
   pname = "genvalidity-text";
@@ -21,30 +10,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    genvalidity
-    QuickCheck
-    random
-    text
-    validity
+    array base genvalidity QuickCheck random text validity
     validity-text
   ];
   testHaskellDepends = [
-    base
-    genvalidity
-    genvalidity-hspec
-    hspec
-    QuickCheck
-    text
+    base genvalidity genvalidity-hspec hspec QuickCheck text
   ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    genvalidity
-    genvalidity-criterion
-    QuickCheck
-    text
+    base criterion genvalidity genvalidity-criterion QuickCheck text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,12 +1,5 @@
-{ mkDerivation
-, SDL2
-, SDL2_image
-, base
-, bytestring
-, lib
-, sdl2
-, template-haskell
-, text
+{ mkDerivation, SDL2, SDL2_image, base, bytestring, lib, sdl2
+, template-haskell, text
 }:
 mkDerivation {
   pname = "sdl2-image";
@@ -16,11 +9,7 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    sdl2
-    template-haskell
-    text
+    base bytestring sdl2 template-haskell text
   ];
   librarySystemDepends = [ SDL2_image ];
   libraryPkgconfigDepends = [ SDL2 SDL2_image ];

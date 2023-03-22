@@ -1,11 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, lib
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, text
+{ mkDerivation, QuickCheck, base, lib, tasty, tasty-hunit
+, tasty-quickcheck, text
 }:
 mkDerivation {
   pname = "rope-utf16-splay";
@@ -16,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base text ];
   testHaskellDepends = [
-    base
-    QuickCheck
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    text
+    base QuickCheck tasty tasty-hunit tasty-quickcheck text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

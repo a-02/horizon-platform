@@ -1,14 +1,5 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, deepseq
-, hashable
-, lib
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, tasty-th
+{ mkDerivation, HUnit, QuickCheck, base, deepseq, hashable, lib
+, tasty, tasty-hunit, tasty-quickcheck, tasty-th
 }:
 mkDerivation {
   pname = "extended-reals";
@@ -21,13 +12,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base deepseq hashable ];
   testHaskellDepends = [
-    base
-    deepseq
-    HUnit
-    QuickCheck
-    tasty
-    tasty-hunit
-    tasty-quickcheck
+    base deepseq HUnit QuickCheck tasty tasty-hunit tasty-quickcheck
     tasty-th
   ];
   enableLibraryProfiling = true;

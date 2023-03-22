@@ -1,11 +1,5 @@
-{ mkDerivation
-, base
-, lib
-, monad-primitive
-, mwc-random
-, primitive
-, transformers
-, vector
+{ mkDerivation, base, lib, monad-primitive, mwc-random, primitive
+, transformers, vector
 }:
 mkDerivation {
   pname = "mwc-random-monad";
@@ -15,12 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    monad-primitive
-    mwc-random
-    primitive
-    transformers
-    vector
+    base monad-primitive mwc-random primitive transformers vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

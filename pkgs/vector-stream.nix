@@ -3,8 +3,8 @@ mkDerivation {
   pname = "vector-stream";
   version = "0.1.0.0";
   sha256 = "a888210f6467f155090653734be5cc920406a07227e0d3adb59096716fdb806c";
-  revision = "1";
-  editedCabalFile = "18sm3vd1qim9r3m40wgvnmcrfz1zl051yy84dffnp4si9vfgic09";
+  revision = "2";
+  editedCabalFile = "1jldm2bh9d0y7vmyv3l85ilps4n8ypqr6da0cgqg5dfi3hlxbmpm";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

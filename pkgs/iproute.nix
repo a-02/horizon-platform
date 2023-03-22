@@ -1,15 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, appar
-, base
-, byteorder
-, bytestring
-, containers
-, doctest
-, hspec
-, lib
-, network
-, safe
+{ mkDerivation, QuickCheck, appar, base, byteorder, bytestring
+, containers, doctest, hspec, lib, network, safe
 }:
 mkDerivation {
   pname = "iproute";
@@ -19,24 +9,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    appar
-    base
-    byteorder
-    bytestring
-    containers
-    network
+    appar base byteorder bytestring containers network
   ];
   testHaskellDepends = [
-    appar
-    base
-    byteorder
-    bytestring
-    containers
-    doctest
-    hspec
-    network
-    QuickCheck
-    safe
+    appar base byteorder bytestring containers doctest hspec network
+    QuickCheck safe
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

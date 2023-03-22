@@ -1,32 +1,18 @@
-{ mkDerivation
-, base
-, base-orphans
-, bifunctors
-, comonad
-, contravariant
-, distributive
-, lib
-, tagged
-, transformers
+{ mkDerivation, base, base-orphans, bifunctors, comonad
+, contravariant, distributive, lib, tagged, transformers
 }:
 mkDerivation {
   pname = "profunctors";
   version = "5.6.2";
   sha256 = "65955d7b50525a4a3bccdab1d982d2ae342897fd38140d5a94b5ef3800d8c92a";
-  revision = "2";
-  editedCabalFile = "1dhg8bys9qnfbvhy4cm4fivanmnik4rg0spshkwyp9s3j88qadix";
+  revision = "3";
+  editedCabalFile = "0y2g5dhmvkbd8zsckpgxd1g4hr3g56g0iqi6crjjc8wqd12bly71";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base-orphans
-    bifunctors
-    comonad
-    contravariant
-    distributive
-    tagged
-    transformers
+    base base-orphans bifunctors comonad contravariant distributive
+    tagged transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

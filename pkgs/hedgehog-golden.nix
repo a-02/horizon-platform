@@ -1,16 +1,5 @@
-{ mkDerivation
-, Diff
-, aeson
-, aeson-pretty
-, base
-, bytestring
-, containers
-, directory
-, extra
-, fetchgit
-, hedgehog
-, lib
-, text
+{ mkDerivation, Diff, aeson, aeson-pretty, base, bytestring
+, containers, directory, extra, fetchgit, hedgehog, lib, text
 , with-utf8
 }:
 mkDerivation {
@@ -26,16 +15,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    aeson
-    aeson-pretty
-    base
-    bytestring
-    containers
-    Diff
-    directory
-    extra
-    hedgehog
-    text
+    aeson aeson-pretty base bytestring containers Diff directory extra
+    hedgehog text
   ];
   testHaskellDepends = [ aeson base hedgehog with-utf8 ];
   enableLibraryProfiling = true;

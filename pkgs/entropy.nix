@@ -1,12 +1,5 @@
-{ mkDerivation
-, Cabal
-, base
-, bytestring
-, directory
-, filepath
-, lib
-, process
-, unix
+{ mkDerivation, Cabal, base, bytestring, directory, filepath, lib
+, process, unix
 }:
 mkDerivation {
   pname = "entropy";

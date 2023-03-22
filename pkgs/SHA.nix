@@ -1,12 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, array
-, base
-, binary
-, bytestring
-, lib
-, test-framework
-, test-framework-quickcheck2
+{ mkDerivation, QuickCheck, array, base, binary, bytestring, lib
+, test-framework, test-framework-quickcheck2
 }:
 mkDerivation {
   pname = "SHA";
@@ -17,12 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ array base binary bytestring ];
   testHaskellDepends = [
-    array
-    base
-    binary
-    bytestring
-    QuickCheck
-    test-framework
+    array base binary bytestring QuickCheck test-framework
     test-framework-quickcheck2
   ];
   enableLibraryProfiling = true;

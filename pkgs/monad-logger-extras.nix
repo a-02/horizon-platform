@@ -1,11 +1,5 @@
-{ mkDerivation
-, ansi-terminal
-, base
-, bytestring
-, hsyslog
-, lib
-, monad-logger
-, mtl
+{ mkDerivation, ansi-terminal, base, bytestring, hsyslog, lib
+, monad-logger, mtl
 }:
 mkDerivation {
   pname = "monad-logger-extras";
@@ -15,12 +9,7 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ansi-terminal
-    base
-    bytestring
-    hsyslog
-    monad-logger
-    mtl
+    ansi-terminal base bytestring hsyslog monad-logger mtl
   ];
   executableHaskellDepends = [ base monad-logger ];
   enableLibraryProfiling = true;

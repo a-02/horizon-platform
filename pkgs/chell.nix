@@ -1,14 +1,5 @@
-{ mkDerivation
-, ansi-terminal
-, base
-, bytestring
-, lib
-, options
-, patience
-, random
-, template-haskell
-, text
-, transformers
+{ mkDerivation, ansi-terminal, base, bytestring, lib, options
+, patience, random, template-haskell, text, transformers
 }:
 mkDerivation {
   pname = "chell";
@@ -18,15 +9,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ansi-terminal
-    base
-    bytestring
-    options
-    patience
-    random
-    template-haskell
-    text
-    transformers
+    ansi-terminal base bytestring options patience random
+    template-haskell text transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,9 +1,4 @@
-{ mkDerivation
-, array
-, base
-, bytestring
-, containers
-, lib
+{ mkDerivation, array, base, bytestring, containers, lib
 , unordered-containers
 }:
 mkDerivation {
@@ -14,11 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    bytestring
-    containers
-    unordered-containers
+    array base bytestring containers unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

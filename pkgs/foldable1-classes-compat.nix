@@ -1,16 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, containers
-, criterion
-, deepseq
-, ghc-prim
-, lib
-, quickcheck-instances
-, tagged
-, test-framework
-, test-framework-quickcheck2
-, transformers
+{ mkDerivation, QuickCheck, base, containers, criterion, deepseq
+, ghc-prim, lib, quickcheck-instances, tagged, test-framework
+, test-framework-quickcheck2, transformers
 }:
 mkDerivation {
   pname = "foldable1-classes-compat";
@@ -22,27 +12,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    ghc-prim
-    tagged
-    transformers
+    base containers ghc-prim tagged transformers
   ];
   testHaskellDepends = [
-    base
-    containers
-    QuickCheck
-    quickcheck-instances
-    test-framework
-    test-framework-quickcheck2
-    transformers
+    base containers QuickCheck quickcheck-instances test-framework
+    test-framework-quickcheck2 transformers
   ];
   benchmarkHaskellDepends = [
-    base
-    containers
-    criterion
-    deepseq
-    transformers
+    base containers criterion deepseq transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

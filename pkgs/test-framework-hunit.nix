@@ -1,8 +1,4 @@
-{ mkDerivation
-, HUnit
-, base
-, extensible-exceptions
-, lib
+{ mkDerivation, HUnit, base, extensible-exceptions, lib
 , test-framework
 }:
 mkDerivation {
@@ -15,10 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    extensible-exceptions
-    HUnit
-    test-framework
+    base extensible-exceptions HUnit test-framework
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

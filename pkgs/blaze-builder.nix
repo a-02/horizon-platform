@@ -1,16 +1,6 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, bytestring
-, deepseq
-, ghc-prim
-, lib
-, test-framework
-, test-framework-hunit
-, test-framework-quickcheck2
-, text
-, utf8-string
+{ mkDerivation, HUnit, QuickCheck, base, bytestring, deepseq
+, ghc-prim, lib, test-framework, test-framework-hunit
+, test-framework-quickcheck2, text, utf8-string
 }:
 mkDerivation {
   pname = "blaze-builder";
@@ -23,15 +13,8 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring deepseq ghc-prim text ];
   testHaskellDepends = [
-    base
-    bytestring
-    HUnit
-    QuickCheck
-    test-framework
-    test-framework-hunit
-    test-framework-quickcheck2
-    text
-    utf8-string
+    base bytestring HUnit QuickCheck test-framework
+    test-framework-hunit test-framework-quickcheck2 text utf8-string
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

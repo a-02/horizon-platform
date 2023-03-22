@@ -1,11 +1,4 @@
-{ mkDerivation
-, async
-, base
-, hspec
-, lib
-, network
-, stm
-, transformers
+{ mkDerivation, async, base, hspec, lib, network, stm, transformers
 }:
 mkDerivation {
   pname = "port-utils";

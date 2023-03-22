@@ -1,10 +1,4 @@
-{ mkDerivation
-, HUnit
-, base
-, deepseq
-, ghc-prim
-, lib
-, test-framework
+{ mkDerivation, HUnit, base, deepseq, ghc-prim, lib, test-framework
 , test-framework-hunit
 }:
 mkDerivation {
@@ -18,12 +12,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base deepseq ghc-prim ];
   testHaskellDepends = [
-    base
-    deepseq
-    ghc-prim
-    HUnit
-    test-framework
-    test-framework-hunit
+    base deepseq ghc-prim HUnit test-framework test-framework-hunit
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

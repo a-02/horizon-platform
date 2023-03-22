@@ -1,14 +1,5 @@
-{ mkDerivation
-, HUnit
-, abstract-deque
-, array
-, base
-, containers
-, lib
-, random
-, test-framework
-, test-framework-hunit
-, time
+{ mkDerivation, HUnit, abstract-deque, array, base, containers, lib
+, random, test-framework, test-framework-hunit, time
 }:
 mkDerivation {
   pname = "abstract-deque-tests";
@@ -18,26 +9,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    abstract-deque
-    array
-    base
-    containers
-    HUnit
-    random
-    test-framework
-    test-framework-hunit
-    time
+    abstract-deque array base containers HUnit random test-framework
+    test-framework-hunit time
   ];
   testHaskellDepends = [
-    abstract-deque
-    array
-    base
-    containers
-    HUnit
-    random
-    test-framework
-    test-framework-hunit
-    time
+    abstract-deque array base containers HUnit random test-framework
+    test-framework-hunit time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

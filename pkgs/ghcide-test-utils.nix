@@ -1,19 +1,6 @@
-{ mkDerivation
-, aeson
-, base
-, containers
-, data-default
-, directory
-, extra
-, filepath
-, ghcide
-, hls-plugin-api
-, lens
-, lib
-, lsp-test
-, lsp-types
-, tasty-hunit
-, text
+{ mkDerivation, aeson, base, containers, data-default, directory
+, extra, filepath, ghcide, hls-plugin-api, lens, lib, lsp-test
+, lsp-types, tasty-hunit, text
 }:
 mkDerivation {
   pname = "ghcide-test-utils";
@@ -23,20 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    containers
-    data-default
-    directory
-    extra
-    filepath
-    ghcide
-    hls-plugin-api
-    lens
-    lsp-test
-    lsp-types
-    tasty-hunit
-    text
+    aeson base containers data-default directory extra filepath ghcide
+    hls-plugin-api lens lsp-test lsp-types tasty-hunit text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

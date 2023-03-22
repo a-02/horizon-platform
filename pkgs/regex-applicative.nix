@@ -1,21 +1,7 @@
-{ mkDerivation
-, attoparsec
-, base
-, bytestring
-, containers
-, criterion
-, deepseq
-, filtrable
-, lib
-, megaparsec
-, parsec
-, parsers
-, parsers-megaparsec
-, smallcheck
-, tasty
-, tasty-hunit
-, tasty-smallcheck
-, transformers
+{ mkDerivation, attoparsec, base, bytestring, containers, criterion
+, deepseq, filtrable, lib, megaparsec, parsec, parsers
+, parsers-megaparsec, smallcheck, tasty, tasty-hunit
+, tasty-smallcheck, transformers
 }:
 mkDerivation {
   pname = "regex-applicative";
@@ -26,25 +12,12 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base containers filtrable transformers ];
   testHaskellDepends = [
-    base
-    containers
-    filtrable
-    smallcheck
-    tasty
-    tasty-hunit
-    tasty-smallcheck
-    transformers
+    base containers filtrable smallcheck tasty tasty-hunit
+    tasty-smallcheck transformers
   ];
   benchmarkHaskellDepends = [
-    attoparsec
-    base
-    bytestring
-    criterion
-    deepseq
-    megaparsec
-    parsec
-    parsers
-    parsers-megaparsec
+    attoparsec base bytestring criterion deepseq megaparsec parsec
+    parsers parsers-megaparsec
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

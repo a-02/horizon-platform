@@ -1,13 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, base
-, criterion
-, genvalidity
-, genvalidity-criterion
-, genvalidity-hspec
-, hspec
-, lib
-, path
+{ mkDerivation, QuickCheck, base, criterion, genvalidity
+, genvalidity-criterion, genvalidity-hspec, hspec, lib, path
 , validity-path
 }:
 mkDerivation {
@@ -18,20 +10,11 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    genvalidity
-    path
-    QuickCheck
-    validity-path
+    base genvalidity path QuickCheck validity-path
   ];
   testHaskellDepends = [ base genvalidity-hspec hspec path ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    genvalidity
-    genvalidity-criterion
-    path
-    QuickCheck
+    base criterion genvalidity genvalidity-criterion path QuickCheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

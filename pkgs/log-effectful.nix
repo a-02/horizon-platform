@@ -1,12 +1,5 @@
-{ mkDerivation
-, aeson
-, base
-, effectful-core
-, fetchgit
-, lib
-, log-base
-, text
-, time
+{ mkDerivation, aeson, base, effectful-core, fetchgit, lib
+, log-base, text, time
 }:
 mkDerivation {
   pname = "log-effectful";

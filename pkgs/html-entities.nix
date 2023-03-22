@@ -1,9 +1,4 @@
-{ mkDerivation
-, attoparsec
-, base
-, lib
-, text
-, unordered-containers
+{ mkDerivation, attoparsec, base, lib, text, unordered-containers
 }:
 mkDerivation {
   pname = "html-entities";
@@ -13,10 +8,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    attoparsec
-    base
-    text
-    unordered-containers
+    attoparsec base text unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

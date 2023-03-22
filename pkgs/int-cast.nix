@@ -1,8 +1,4 @@
-{ mkDerivation
-, QuickCheck
-, base
-, lib
-, test-framework
+{ mkDerivation, QuickCheck, base, lib, test-framework
 , test-framework-quickcheck2
 }:
 mkDerivation {
@@ -16,10 +12,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base ];
   testHaskellDepends = [
-    base
-    QuickCheck
-    test-framework
-    test-framework-quickcheck2
+    base QuickCheck test-framework test-framework-quickcheck2
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

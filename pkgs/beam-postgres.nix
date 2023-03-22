@@ -1,36 +1,9 @@
-{ mkDerivation
-, aeson
-, attoparsec
-, base
-, beam-core
-, beam-migrate
-, bytestring
-, case-insensitive
-, conduit
-, fetchgit
-, free
-, hashable
-, haskell-src-exts
-, hedgehog
-, lib
-, lifted-base
-, monad-control
-, mtl
-, network-uri
-, postgresql-libpq
-, postgresql-simple
-, scientific
-, tagged
-, tasty
-, tasty-hunit
-, text
-, time
-, tmp-postgres
-, transformers-base
-, unordered-containers
-, uuid
-, uuid-types
-, vector
+{ mkDerivation, aeson, attoparsec, base, beam-core, beam-migrate
+, bytestring, case-insensitive, conduit, fetchgit, free, hashable
+, haskell-src-exts, hedgehog, lib, lifted-base, monad-control, mtl
+, network-uri, postgresql-libpq, postgresql-simple, scientific
+, tagged, tasty, tasty-hunit, text, time, tmp-postgres
+, transformers-base, unordered-containers, uuid, uuid-types, vector
 }:
 mkDerivation {
   pname = "beam-postgres";
@@ -46,46 +19,15 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    attoparsec
-    base
-    beam-core
-    beam-migrate
-    bytestring
-    case-insensitive
-    conduit
-    free
-    hashable
-    haskell-src-exts
-    lifted-base
-    monad-control
-    mtl
-    network-uri
-    postgresql-libpq
-    postgresql-simple
-    scientific
-    tagged
-    text
-    time
-    transformers-base
-    unordered-containers
-    uuid-types
-    vector
+    aeson attoparsec base beam-core beam-migrate bytestring
+    case-insensitive conduit free hashable haskell-src-exts lifted-base
+    monad-control mtl network-uri postgresql-libpq postgresql-simple
+    scientific tagged text time transformers-base unordered-containers
+    uuid-types vector
   ];
   testHaskellDepends = [
-    aeson
-    base
-    beam-core
-    beam-migrate
-    bytestring
-    hedgehog
-    postgresql-simple
-    tasty
-    tasty-hunit
-    text
-    tmp-postgres
-    uuid
-    vector
+    aeson base beam-core beam-migrate bytestring hedgehog
+    postgresql-simple tasty tasty-hunit text tmp-postgres uuid vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

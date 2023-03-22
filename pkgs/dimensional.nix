@@ -1,18 +1,6 @@
-{ mkDerivation
-, Glob
-, QuickCheck
-, base
-, criterion
-, deepseq
-, doctest
-, exact-pi
-, hspec
-, hspec-discover
-, ieee754
-, lib
-, numtype-dk
-, template-haskell
-, vector
+{ mkDerivation, Glob, QuickCheck, base, criterion, deepseq, doctest
+, exact-pi, hspec, hspec-discover, ieee754, lib, numtype-dk
+, template-haskell, vector
 }:
 mkDerivation {
   pname = "dimensional";
@@ -22,20 +10,10 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    deepseq
-    exact-pi
-    ieee754
-    numtype-dk
-    vector
+    base deepseq exact-pi ieee754 numtype-dk vector
   ];
   testHaskellDepends = [
-    base
-    doctest
-    Glob
-    hspec
-    QuickCheck
-    template-haskell
+    base doctest Glob hspec QuickCheck template-haskell
   ];
   testToolDepends = [ hspec-discover ];
   benchmarkHaskellDepends = [ base criterion deepseq ];

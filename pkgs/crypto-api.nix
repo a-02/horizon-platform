@@ -1,10 +1,4 @@
-{ mkDerivation
-, base
-, bytestring
-, cereal
-, entropy
-, lib
-, tagged
+{ mkDerivation, base, bytestring, cereal, entropy, lib, tagged
 , transformers
 }:
 mkDerivation {
@@ -17,12 +11,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    cereal
-    entropy
-    tagged
-    transformers
+    base bytestring cereal entropy tagged transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

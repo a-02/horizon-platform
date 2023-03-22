@@ -1,13 +1,5 @@
-{ mkDerivation
-, auto-update
-, base
-, basement
-, bytestring
-, clock
-, lib
-, memory
-, psqueues
-, tls
+{ mkDerivation, auto-update, base, basement, bytestring, clock, lib
+, memory, psqueues, tls
 }:
 mkDerivation {
   pname = "tls-session-manager";
@@ -17,14 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    auto-update
-    base
-    basement
-    bytestring
-    clock
-    memory
-    psqueues
-    tls
+    auto-update base basement bytestring clock memory psqueues tls
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

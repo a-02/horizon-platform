@@ -1,15 +1,5 @@
-{ mkDerivation
-, QuickCheck
-, ansi-terminal
-, base
-, base-compat
-, containers
-, deepseq
-, doctest
-, gauge
-, lib
-, prettyprinter
-, text
+{ mkDerivation, QuickCheck, ansi-terminal, base, base-compat
+, containers, deepseq, doctest, gauge, lib, prettyprinter, text
 }:
 mkDerivation {
   pname = "prettyprinter-ansi-terminal";
@@ -21,13 +11,7 @@ mkDerivation {
   libraryHaskellDepends = [ ansi-terminal base prettyprinter text ];
   testHaskellDepends = [ base doctest ];
   benchmarkHaskellDepends = [
-    base
-    base-compat
-    containers
-    deepseq
-    gauge
-    prettyprinter
-    QuickCheck
+    base base-compat containers deepseq gauge prettyprinter QuickCheck
     text
   ];
   enableLibraryProfiling = true;

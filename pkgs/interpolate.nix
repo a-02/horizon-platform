@@ -1,14 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, base-compat
-, bytestring
-, haskell-src-meta
-, hspec
-, lib
-, quickcheck-instances
-, template-haskell
-, text
+{ mkDerivation, QuickCheck, base, base-compat, bytestring
+, haskell-src-meta, hspec, lib, quickcheck-instances
+, template-haskell, text
 }:
 mkDerivation {
   pname = "interpolate";
@@ -19,15 +11,8 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base haskell-src-meta template-haskell ];
   testHaskellDepends = [
-    base
-    base-compat
-    bytestring
-    haskell-src-meta
-    hspec
-    QuickCheck
-    quickcheck-instances
-    template-haskell
-    text
+    base base-compat bytestring haskell-src-meta hspec QuickCheck
+    quickcheck-instances template-haskell text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

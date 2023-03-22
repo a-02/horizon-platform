@@ -1,13 +1,5 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, bytestring
-, lib
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, xz
+{ mkDerivation, HUnit, QuickCheck, base, bytestring, lib, tasty
+, tasty-hunit, tasty-quickcheck, xz
 }:
 mkDerivation {
   pname = "lzma";
@@ -19,13 +11,7 @@ mkDerivation {
   libraryHaskellDepends = [ base bytestring ];
   librarySystemDepends = [ xz ];
   testHaskellDepends = [
-    base
-    bytestring
-    HUnit
-    QuickCheck
-    tasty
-    tasty-hunit
-    tasty-quickcheck
+    base bytestring HUnit QuickCheck tasty tasty-hunit tasty-quickcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

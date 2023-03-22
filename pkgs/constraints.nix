@@ -1,15 +1,5 @@
-{ mkDerivation
-, base
-, binary
-, deepseq
-, ghc-prim
-, hashable
-, hspec
-, hspec-discover
-, lib
-, mtl
-, transformers
-, transformers-compat
+{ mkDerivation, base, binary, deepseq, ghc-prim, hashable, hspec
+, hspec-discover, lib, mtl, transformers, transformers-compat
 , type-equality
 }:
 mkDerivation {
@@ -20,15 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    binary
-    deepseq
-    ghc-prim
-    hashable
-    mtl
-    transformers
-    transformers-compat
-    type-equality
+    base binary deepseq ghc-prim hashable mtl transformers
+    transformers-compat type-equality
   ];
   testHaskellDepends = [ base hspec ];
   testToolDepends = [ hspec-discover ];

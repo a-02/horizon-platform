@@ -1,17 +1,6 @@
-{ mkDerivation
-, base
-, base64-bytestring
-, blaze-builder
-, bytestring
-, case-insensitive
-, directory
-, lib
-, mtl
-, network
-, random
-, text
-, transformers
-, unordered-containers
+{ mkDerivation, base, base64-bytestring, blaze-builder, bytestring
+, case-insensitive, directory, lib, mtl, network, random, text
+, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "http-common";
@@ -21,18 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    base64-bytestring
-    blaze-builder
-    bytestring
-    case-insensitive
-    directory
-    mtl
-    network
-    random
-    text
-    transformers
-    unordered-containers
+    base base64-bytestring blaze-builder bytestring case-insensitive
+    directory mtl network random text transformers unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

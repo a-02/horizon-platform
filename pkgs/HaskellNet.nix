@@ -1,17 +1,5 @@
-{ mkDerivation
-, array
-, base
-, base64
-, bytestring
-, cryptohash-md5
-, lib
-, mime-mail
-, mtl
-, network
-, network-bsd
-, old-time
-, pretty
-, text
+{ mkDerivation, array, base, base64, bytestring, cryptohash-md5
+, lib, mime-mail, mtl, network, network-bsd, old-time, pretty, text
 }:
 mkDerivation {
   pname = "HaskellNet";
@@ -21,18 +9,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    base64
-    bytestring
-    cryptohash-md5
-    mime-mail
-    mtl
-    network
-    network-bsd
-    old-time
-    pretty
-    text
+    array base base64 bytestring cryptohash-md5 mime-mail mtl network
+    network-bsd old-time pretty text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

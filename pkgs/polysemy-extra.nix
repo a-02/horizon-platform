@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, containers
-, lib
-, polysemy
-, polysemy-kvstore
+{ mkDerivation, base, containers, lib, polysemy, polysemy-kvstore
 }:
 mkDerivation {
   pname = "polysemy-extra";
@@ -13,10 +8,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    polysemy
-    polysemy-kvstore
+    base containers polysemy polysemy-kvstore
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

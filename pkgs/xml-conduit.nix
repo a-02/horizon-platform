@@ -1,24 +1,7 @@
-{ mkDerivation
-, Cabal
-, HUnit
-, attoparsec
-, base
-, blaze-html
-, blaze-markup
-, bytestring
-, cabal-doctest
-, conduit
-, conduit-extra
-, containers
-, data-default-class
-, deepseq
-, doctest
-, hspec
-, lib
-, resourcet
-, text
-, transformers
-, xml-types
+{ mkDerivation, Cabal, HUnit, attoparsec, base, blaze-html
+, blaze-markup, bytestring, cabal-doctest, conduit, conduit-extra
+, containers, data-default-class, deepseq, doctest, hspec, lib
+, resourcet, text, transformers, xml-types
 }:
 mkDerivation {
   pname = "xml-conduit";
@@ -31,35 +14,13 @@ mkDerivation {
   enableSeparateDataOutput = false;
   setupHaskellDepends = [ base Cabal cabal-doctest ];
   libraryHaskellDepends = [
-    attoparsec
-    base
-    blaze-html
-    blaze-markup
-    bytestring
-    conduit
-    conduit-extra
-    containers
-    data-default-class
-    deepseq
-    resourcet
-    text
-    transformers
-    xml-types
+    attoparsec base blaze-html blaze-markup bytestring conduit
+    conduit-extra containers data-default-class deepseq resourcet text
+    transformers xml-types
   ];
   testHaskellDepends = [
-    base
-    blaze-markup
-    bytestring
-    conduit
-    conduit-extra
-    containers
-    doctest
-    hspec
-    HUnit
-    resourcet
-    text
-    transformers
-    xml-types
+    base blaze-markup bytestring conduit conduit-extra containers
+    doctest hspec HUnit resourcet text transformers xml-types
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

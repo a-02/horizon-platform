@@ -1,20 +1,6 @@
-{ mkDerivation
-, aeson
-, base
-, bytestring
-, ekg-core
-, ekg-json
-, filepath
-, http-types
-, lib
-, network
-, text
-, time
-, transformers
-, unordered-containers
-, wai
-, wai-app-static
-, warp
+{ mkDerivation, aeson, base, bytestring, ekg-core, ekg-json
+, filepath, http-types, lib, network, text, time, transformers
+, unordered-containers, wai, wai-app-static, warp
 }:
 mkDerivation {
   pname = "ekg-wai";
@@ -24,21 +10,8 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    aeson
-    base
-    bytestring
-    ekg-core
-    ekg-json
-    filepath
-    http-types
-    network
-    text
-    time
-    transformers
-    unordered-containers
-    wai
-    wai-app-static
-    warp
+    aeson base bytestring ekg-core ekg-json filepath http-types network
+    text time transformers unordered-containers wai wai-app-static warp
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

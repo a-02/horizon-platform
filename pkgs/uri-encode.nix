@@ -1,9 +1,4 @@
-{ mkDerivation
-, base
-, bytestring
-, lib
-, network-uri
-, text
+{ mkDerivation, base, bytestring, lib, network-uri, text
 , utf8-string
 }:
 mkDerivation {
@@ -16,11 +11,7 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    network-uri
-    text
-    utf8-string
+    base bytestring network-uri text utf8-string
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

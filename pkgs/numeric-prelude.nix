@@ -1,18 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, array
-, base
-, containers
-, deepseq
-, doctest-exitcode-stdio
-, doctest-lib
-, lib
-, non-negative
-, parsec
-, random
-, semigroups
-, storable-record
-, utility-ht
+{ mkDerivation, QuickCheck, array, base, containers, deepseq
+, doctest-exitcode-stdio, doctest-lib, lib, non-negative, parsec
+, random, semigroups, storable-record, utility-ht
 }:
 mkDerivation {
   pname = "numeric-prelude";
@@ -22,24 +10,11 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    array
-    base
-    containers
-    deepseq
-    non-negative
-    parsec
-    QuickCheck
-    random
-    semigroups
-    storable-record
-    utility-ht
+    array base containers deepseq non-negative parsec QuickCheck random
+    semigroups storable-record utility-ht
   ];
   testHaskellDepends = [
-    base
-    doctest-exitcode-stdio
-    doctest-lib
-    QuickCheck
-    random
+    base doctest-exitcode-stdio doctest-lib QuickCheck random
     utility-ht
   ];
   enableLibraryProfiling = true;

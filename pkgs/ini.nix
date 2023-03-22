@@ -1,9 +1,4 @@
-{ mkDerivation
-, attoparsec
-, base
-, hspec
-, lib
-, text
+{ mkDerivation, attoparsec, base, hspec, lib, text
 , unordered-containers
 }:
 mkDerivation {
@@ -14,10 +9,7 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    attoparsec
-    base
-    text
-    unordered-containers
+    attoparsec base text unordered-containers
   ];
   testHaskellDepends = [ base hspec unordered-containers ];
   enableLibraryProfiling = true;

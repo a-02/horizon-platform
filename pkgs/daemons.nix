@@ -1,20 +1,6 @@
-{ mkDerivation
-, HUnit
-, base
-, bytestring
-, cereal
-, containers
-, data-default
-, directory
-, filepath
-, ghc-prim
-, lib
-, network
-, pipes
-, test-framework
-, test-framework-hunit
-, transformers
-, unix
+{ mkDerivation, HUnit, base, bytestring, cereal, containers
+, data-default, directory, filepath, ghc-prim, lib, network, pipes
+, test-framework, test-framework-hunit, transformers, unix
 }:
 mkDerivation {
   pname = "daemons";
@@ -24,38 +10,16 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    base
-    bytestring
-    cereal
-    data-default
-    directory
-    filepath
-    ghc-prim
-    network
-    pipes
-    transformers
-    unix
+    base bytestring cereal data-default directory filepath ghc-prim
+    network pipes transformers unix
   ];
   executableHaskellDepends = [
-    base
-    bytestring
-    cereal
-    containers
-    data-default
-    ghc-prim
-    network
-    pipes
-    transformers
+    base bytestring cereal containers data-default ghc-prim network
+    pipes transformers
   ];
   testHaskellDepends = [
-    base
-    data-default
-    directory
-    ghc-prim
-    HUnit
-    test-framework
-    test-framework-hunit
-    unix
+    base data-default directory ghc-prim HUnit test-framework
+    test-framework-hunit unix
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

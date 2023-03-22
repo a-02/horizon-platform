@@ -1,13 +1,5 @@
-{ mkDerivation
-, base
-, bytestring
-, directory
-, githash
-, lib
-, optparse-applicative
-, template-haskell
-, th-compat
-, transformers
+{ mkDerivation, base, bytestring, directory, githash, lib
+, optparse-applicative, template-haskell, th-compat, transformers
 }:
 mkDerivation {
   pname = "optparse-simple";
@@ -17,11 +9,7 @@ mkDerivation {
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    githash
-    optparse-applicative
-    template-haskell
-    th-compat
+    base githash optparse-applicative template-haskell th-compat
     transformers
   ];
   testHaskellDepends = [ base bytestring directory ];

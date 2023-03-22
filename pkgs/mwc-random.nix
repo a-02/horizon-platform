@@ -1,19 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, doctest
-, gauge
-, lib
-, math-functions
-, mersenne-random
-, primitive
-, random
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, time
-, vector
+{ mkDerivation, QuickCheck, base, bytestring, doctest, gauge, lib
+, math-functions, mersenne-random, primitive, random, tasty
+, tasty-hunit, tasty-quickcheck, time, vector
 }:
 mkDerivation {
   pname = "mwc-random";
@@ -25,31 +12,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    math-functions
-    primitive
-    random
-    time
-    vector
+    base math-functions primitive random time vector
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    doctest
-    primitive
-    QuickCheck
-    random
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    vector
+    base bytestring doctest primitive QuickCheck random tasty
+    tasty-hunit tasty-quickcheck vector
   ];
   benchmarkHaskellDepends = [
-    base
-    gauge
-    mersenne-random
-    random
-    vector
+    base gauge mersenne-random random vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,9 +1,4 @@
-{ mkDerivation
-, HUnit
-, base
-, deepseq
-, hspec
-, hspec-expectations
+{ mkDerivation, HUnit, base, deepseq, hspec, hspec-expectations
 , lib
 }:
 mkDerivation {
@@ -15,11 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base deepseq HUnit ];
   testHaskellDepends = [
-    base
-    deepseq
-    hspec
-    hspec-expectations
-    HUnit
+    base deepseq hspec hspec-expectations HUnit
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

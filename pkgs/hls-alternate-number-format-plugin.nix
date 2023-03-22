@@ -1,25 +1,7 @@
-{ mkDerivation
-, QuickCheck
-, aeson
-, base
-, containers
-, extra
-, filepath
-, ghc-boot-th
-, ghcide
-, hie-compat
-, hls-graph
-, hls-plugin-api
-, hls-test-utils
-, lens
-, lib
-, lsp
-, mtl
-, regex-tdfa
-, syb
-, tasty-quickcheck
-, text
-, unordered-containers
+{ mkDerivation, QuickCheck, aeson, base, containers, extra
+, filepath, ghc-boot-th, ghcide, hie-compat, hls-graph
+, hls-plugin-api, hls-test-utils, lens, lib, lsp, mtl, regex-tdfa
+, syb, tasty-quickcheck, text, unordered-containers
 }:
 mkDerivation {
   pname = "hls-alternate-number-format-plugin";
@@ -29,32 +11,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson
-    base
-    containers
-    extra
-    ghc-boot-th
-    ghcide
-    hie-compat
-    hls-graph
-    hls-plugin-api
-    lens
-    lsp
-    mtl
-    regex-tdfa
-    syb
-    text
+    aeson base containers extra ghc-boot-th ghcide hie-compat hls-graph
+    hls-plugin-api lens lsp mtl regex-tdfa syb text
     unordered-containers
   ];
   testHaskellDepends = [
-    base
-    filepath
-    hls-test-utils
-    lsp
-    QuickCheck
-    regex-tdfa
-    tasty-quickcheck
-    text
+    base filepath hls-test-utils lsp QuickCheck regex-tdfa
+    tasty-quickcheck text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

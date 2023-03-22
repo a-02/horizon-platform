@@ -1,15 +1,6 @@
-{ mkDerivation
-, QuickCheck
-, base
-, lib
-, megaparsec
-, quickcheck-instances
-, rerebase
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, template-haskell
-, text
+{ mkDerivation, QuickCheck, base, lib, megaparsec
+, quickcheck-instances, rerebase, tasty, tasty-hunit
+, tasty-quickcheck, template-haskell, text
 }:
 mkDerivation {
   pname = "neat-interpolation";
@@ -20,11 +11,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base megaparsec template-haskell text ];
   testHaskellDepends = [
-    QuickCheck
-    quickcheck-instances
-    rerebase
-    tasty
-    tasty-hunit
+    QuickCheck quickcheck-instances rerebase tasty tasty-hunit
     tasty-quickcheck
   ];
   enableLibraryProfiling = true;

@@ -1,20 +1,6 @@
-{ mkDerivation
-, HUnit
-, base
-, exceptions
-, ghc-prim
-, hedgehog
-, lib
-, mtl
-, mtl-compat
-, random
-, stm
-, tasty
-, tasty-hedgehog
-, tasty-hunit
-, time
-, transformers
-, unliftio-core
+{ mkDerivation, HUnit, base, exceptions, ghc-prim, hedgehog, lib
+, mtl, mtl-compat, random, stm, tasty, tasty-hedgehog, tasty-hunit
+, time, transformers, unliftio-core
 }:
 mkDerivation {
   pname = "retry";
@@ -24,31 +10,12 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    exceptions
-    ghc-prim
-    mtl
-    mtl-compat
-    random
-    transformers
+    base exceptions ghc-prim mtl mtl-compat random transformers
     unliftio-core
   ];
   testHaskellDepends = [
-    base
-    exceptions
-    ghc-prim
-    hedgehog
-    HUnit
-    mtl
-    mtl-compat
-    random
-    stm
-    tasty
-    tasty-hedgehog
-    tasty-hunit
-    time
-    transformers
-    unliftio-core
+    base exceptions ghc-prim hedgehog HUnit mtl mtl-compat random stm
+    tasty tasty-hedgehog tasty-hunit time transformers unliftio-core
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -1,35 +1,8 @@
-{ mkDerivation
-, QuickCheck
-, base
-, bytestring
-, cereal
-, conduit
-, containers
-, criterion
-, deepseq
-, directory
-, exceptions
-, extra
-, filepath
-, lens
-, lib
-, network
-, parsec
-, process
-, random
-, resourcet
-, split
-, tasty
-, tasty-hunit
-, tasty-quickcheck
-, template-haskell
-, text
-, th-lift
-, transformers
-, unix
-, vector
-, xml-conduit
-, xml-types
+{ mkDerivation, QuickCheck, base, bytestring, cereal, conduit
+, containers, criterion, deepseq, directory, exceptions, extra
+, filepath, lens, lib, network, parsec, process, random, resourcet
+, split, tasty, tasty-hunit, tasty-quickcheck, template-haskell
+, text, th-lift, transformers, unix, vector, xml-conduit, xml-types
 }:
 mkDerivation {
   pname = "dbus";
@@ -39,49 +12,14 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    bytestring
-    cereal
-    conduit
-    containers
-    deepseq
-    exceptions
-    filepath
-    lens
-    network
-    parsec
-    random
-    split
-    template-haskell
-    text
-    th-lift
-    transformers
-    unix
-    vector
-    xml-conduit
-    xml-types
+    base bytestring cereal conduit containers deepseq exceptions
+    filepath lens network parsec random split template-haskell text
+    th-lift transformers unix vector xml-conduit xml-types
   ];
   testHaskellDepends = [
-    base
-    bytestring
-    cereal
-    containers
-    directory
-    extra
-    filepath
-    network
-    parsec
-    process
-    QuickCheck
-    random
-    resourcet
-    tasty
-    tasty-hunit
-    tasty-quickcheck
-    text
-    transformers
-    unix
-    vector
+    base bytestring cereal containers directory extra filepath network
+    parsec process QuickCheck random resourcet tasty tasty-hunit
+    tasty-quickcheck text transformers unix vector
   ];
   benchmarkHaskellDepends = [ base criterion ];
   enableLibraryProfiling = true;

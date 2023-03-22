@@ -1,17 +1,6 @@
-{ mkDerivation
-, HUnit
-, QuickCheck
-, base
-, containers
-, directory
-, dlist
-, filepath
-, lib
-, test-framework
-, test-framework-hunit
-, test-framework-quickcheck2
-, transformers
-, transformers-compat
+{ mkDerivation, HUnit, QuickCheck, base, containers, directory
+, dlist, filepath, lib, test-framework, test-framework-hunit
+, test-framework-quickcheck2, transformers, transformers-compat
 }:
 mkDerivation {
   pname = "Glob";
@@ -23,27 +12,13 @@ mkDerivation {
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base
-    containers
-    directory
-    dlist
-    filepath
-    transformers
+    base containers directory dlist filepath transformers
     transformers-compat
   ];
   testHaskellDepends = [
-    base
-    containers
-    directory
-    dlist
-    filepath
-    HUnit
-    QuickCheck
-    test-framework
-    test-framework-hunit
-    test-framework-quickcheck2
-    transformers
-    transformers-compat
+    base containers directory dlist filepath HUnit QuickCheck
+    test-framework test-framework-hunit test-framework-quickcheck2
+    transformers transformers-compat
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

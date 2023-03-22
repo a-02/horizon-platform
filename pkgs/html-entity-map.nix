@@ -10,10 +10,7 @@ mkDerivation {
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base text unordered-containers ];
   benchmarkHaskellDepends = [
-    base
-    criterion
-    text
-    unordered-containers
+    base criterion text unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
