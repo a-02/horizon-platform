@@ -38,7 +38,7 @@ stable sources are used.
 The package set is generated from the `horizon.dhall` using the following command:
 
 ```
-nix run 'git+https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix?ref=refs/tags/0.9.0'
+nix run 'git+https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix?ref=refs/tags/0.10.0'
 ```
 
 This will generate both the packages folder and the package set file. If you
@@ -55,7 +55,7 @@ afterwards.
 To use `horizon-shell`.
 
 ```
-nix run 'git+https://gitlab.horizon-haskell.net/shells/horizon-shell?ref=refs/tags/0.0.3'
+nix run 'git+https://gitlab.horizon-haskell.net/shells/horizon-shell?ref=refs/tags/0.0.7'
 ```
 
 See the in-shell help for usage.
