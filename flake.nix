@@ -60,14 +60,14 @@
             legacyPackages;
 
           devShell = pkgs.mkShell {
-              buildInputs = [
-                horizon-shell.packages.${system}.default
-              ];
-              shellHook = ''
-                horizon-shell
-                exit
-              '';
-           };
+            buildInputs = [
+              horizon-shell.packages.${system}.default
+            ];
+            shellHook = ''
+              horizon-shell
+              exit
+            '';
+          };
 
         in
         {
