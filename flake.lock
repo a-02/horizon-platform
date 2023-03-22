@@ -33,6 +33,37 @@
         "type": "github"
       }
     },
+    "get-flake": {
+      "locked": {
+        "lastModified": 1673819588,
+        "narHash": "sha256-gRtwKAlu4htvS6dxyZnW3n+vMS1acqnMGVHqxUdETeY=",
+        "owner": "ursi",
+        "repo": "get-flake",
+        "rev": "e0917b6f564aa5acefb1484b5baf76da21746c3c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ursi",
+        "repo": "get-flake",
+        "type": "github"
+      }
+    },
+    "horizon-shell-flake": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1679341258,
+        "narHash": "sha256-iVB9GSar0Varbxi0ed98S/1mqXfqcATGpeENOFcjv98=",
+        "ref": "refs/heads/master",
+        "rev": "c6b62503082814851d3a78fc64b80c4fd02cb290",
+        "revCount": 18,
+        "type": "git",
+        "url": "https://gitlab.horizon-haskell.net/shells/horizon-shell"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitlab.horizon-haskell.net/shells/horizon-shell"
+      }
+    },
     "lint-utils": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -105,6 +136,8 @@
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
+        "get-flake": "get-flake",
+        "horizon-shell-flake": "horizon-shell-flake",
         "lint-utils": "lint-utils",
         "nixpkgs": "nixpkgs_2"
       }

@@ -31,22 +31,32 @@ This package set has the following policy.
 
 ## Updating the package set
 
-The package set is generated from the `horizon.dhall` using the following command:
+The package set is generated from the `horizon.dhall`. You can edit this in one
+of two ways: manually using a text edit, or programatically using
+`horizon-shell`.
+
+### Manual
+
+Edit the `horizon.dhall` file and add or change some package data.
+
+Run `horizon-gen-nix` from the remote repository.
 
 ```
 nix run 'git+https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix?ref=refs/tags/0.10.0'
 ```
 
-If you need to do additional manual overrides to the nix code, such as
-`addPkgconfigDepends`, edit the `configuration.nix` overlay, which is applied
-afterwards.
-
-## Programmmatic Updates
+### Programatic
 
 To use `horizon-shell`.
 
 ```
-nix run 'git+https://gitlab.horizon-haskell.net/shells/horizon-shell?ref=refs/tags/0.0.7'
+nix develop
 ```
 
 See the in-shell help for usage.
+
+### Tweaking
+
+If you need to do additional manual overrides to the nix code, such as
+`addPkgconfigDepends`, edit the `configuration/common.nix` overlay, which is
+applied last.
