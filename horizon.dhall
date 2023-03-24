@@ -219,11 +219,6 @@ let packages =
       , cryptonite = H.callHackage "cryptonite" "0.30"
       , cryptonite-conduit = H.callHackage "cryptonite-conduit" "0.2.2"
       , css-text = H.callHackage "css-text" "0.1.3.0"
-      , csv =
-          H.callGit
-            "https://gitlab.homotopic.tech/horizon/adopted/csv"
-            "d02b89bbad79136b52fd1197f087466cf51573dd"
-            (None H.Subdir)
       , cubicbezier = H.callHackage "cubicbezier" "0.6.0.6"
       , cursor = H.callHackage "cursor" "0.3.2.0"
       , cursor-brick = H.callHackage "cursor-brick" "0.1.0.1"
@@ -501,8 +496,6 @@ let packages =
       , hie-compat = H.callHackage "hie-compat" "0.3.1.0"
       , hiedb = H.callHackage "hiedb" "0.4.2.0"
       , hinotify = H.callHackage "hinotify" "0.4.1"
-      , hledger = H.callHackage "hledger" "1.29.1"
-      , hledger-lib = H.callHackage "hledger-lib" "1.29.1"
       , hlint = H.callHackage "hlint" "3.5"
       , hls-alternate-number-format-plugin =
           H.callHackage "hls-alternate-number-format-plugin" "1.3.0.0"
@@ -1106,15 +1099,10 @@ let packages =
       , svg-builder = H.callHackage "svg-builder" "0.1.1"
       , swagger2 = H.callHackage "swagger2" "2.8.6"
       , syb = H.callHackage "syb" "0.7.2.3"
-      , sydtest =
-          H.callGit
-            "https://github.com/locallycompact/sydtest"
-            "01c7d35b822c66a68e4d2ba5594858afbcc1cbf0"
-            (Some "sydtest/")
+      , sydtest = H.callHackage "sydtest" "0.13.0.2"
       , sydtest-discover = H.callHackage "sydtest-discover" "0.0.0.2"
       , system-fileio = H.callHackage "system-fileio" "0.3.16.4"
       , system-filepath = H.callHackage "system-filepath" "0.4.14"
-      , tabular = H.callHackage "tabular" "0.2.2.8"
       , tagged = H.callHackage "tagged" "0.8.7"
       , tagsoup = H.callHackage "tagsoup" "0.14.8"
       , tar =

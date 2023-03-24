@@ -51,15 +51,16 @@
     "horizon-shell-flake": {
       "flake": false,
       "locked": {
-        "lastModified": 1679341258,
-        "narHash": "sha256-iVB9GSar0Varbxi0ed98S/1mqXfqcATGpeENOFcjv98=",
-        "ref": "refs/heads/master",
-        "rev": "c6b62503082814851d3a78fc64b80c4fd02cb290",
-        "revCount": 18,
+        "lastModified": 1679524452,
+        "narHash": "sha256-xzNxvLVa3o0F/z4CnBDORv2Y6PfxjlGv7b7LybIyCSg=",
+        "ref": "refs/tags/0.0.8",
+        "rev": "21b8913803cefeb287bb244c7ee335638233db7f",
+        "revCount": 21,
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/shells/horizon-shell"
       },
       "original": {
+        "ref": "refs/tags/0.0.8",
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/shells/horizon-shell"
       }
