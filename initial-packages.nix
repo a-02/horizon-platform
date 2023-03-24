@@ -367,8 +367,6 @@ self: with pkgs.haskell.lib; {
 
   css-text = self.callPackage (./pkgs/css-text.nix) { };
 
-  csv = self.callPackage (./pkgs/csv.nix) { };
-
   cubicbezier = self.callPackage (./pkgs/cubicbezier.nix) { };
 
   cursor = self.callPackage (./pkgs/cursor.nix) { };
@@ -788,10 +786,6 @@ self: with pkgs.haskell.lib; {
   hiedb = self.callPackage (./pkgs/hiedb.nix) { };
 
   hinotify = self.callPackage (./pkgs/hinotify.nix) { };
-
-  hledger = self.callPackage (./pkgs/hledger.nix) { };
-
-  hledger-lib = self.callPackage (./pkgs/hledger-lib.nix) { };
 
   hlint = self.callPackage (./pkgs/hlint.nix) { };
 
@@ -1786,8 +1780,6 @@ self: with pkgs.haskell.lib; {
   system-fileio = self.callPackage (./pkgs/system-fileio.nix) { };
 
   system-filepath = self.callPackage (./pkgs/system-filepath.nix) { };
-
-  tabular = self.callPackage (./pkgs/tabular.nix) { };
 
   tagged = self.callPackage (./pkgs/tagged.nix) { };
 

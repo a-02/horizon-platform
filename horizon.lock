@@ -730,10 +730,6 @@
   , mapValue =
       "3ce6e46df7723d23ef3aac1ff1ef10def3c1dda5e14d3f82b4f13ea5ea445a3f"
   }
-, { mapKey = "csv"
-  , mapValue =
-      "0079b6751eaad78696c3c10d782cd50ca725f0c1730ece9fabcf7e91e02a3dd2"
-  }
 , { mapKey = "cubicbezier"
   , mapValue =
       "3e69cfe343c0810a091af55107ac17531c5ab2fed99b07a7f5c03c7abe98357e"
@@ -1573,14 +1569,6 @@
 , { mapKey = "hinotify"
   , mapValue =
       "9f3f233ef3a527bebf9971292abb7d4caf3ad61fdf8078a2970c4bc8a3237663"
-  }
-, { mapKey = "hledger"
-  , mapValue =
-      "ffdf0a681d39c0507f7af82be53f9a7b85263762fe4377521f76a3635c8ce018"
-  }
-, { mapKey = "hledger-lib"
-  , mapValue =
-      "c4ad3fbcdaa63a1258f7023a90081296a196a086284aa8899ae7ce2098a4d5cb"
   }
 , { mapKey = "hlint"
   , mapValue =
@@ -3569,10 +3557,6 @@
 , { mapKey = "system-filepath"
   , mapValue =
       "56762209e2da8441cbca331d6467c1a1a3cf572b3a2353e3e2be4cf15ae3d536"
-  }
-, { mapKey = "tabular"
-  , mapValue =
-      "ce27e6ad12e2df14b6c43106c6523db2d87ca7692bd5a9fdacae424e7bd6a0c4"
   }
 , { mapKey = "tagged"
   , mapValue =
