@@ -1,20 +1,14 @@
 { mkDerivation, MonadRandom, QuickCheck, async, autodocodec
 , autodocodec-yaml, base, bytestring, containers, dlist, envparse
-, fetchgit, filepath, lib, mtl, optparse-applicative, path, path-io
+, filepath, lib, mtl, optparse-applicative, path, path-io
 , pretty-show, quickcheck-io, random, random-shuffle, safe
 , safe-coloured-text, safe-coloured-text-terminfo, stm
 , sydtest-discover, text, vector
 }:
 mkDerivation {
   pname = "sydtest";
-  version = "0.13.0.1";
-  src = fetchgit {
-    url = "https://github.com/locallycompact/sydtest";
-    sha256 = "0ab1v9lqaq42ajndsddcaqbjv9467iaidp1vwmyb65ic0g0wl4nz";
-    rev = "01c7d35b822c66a68e4d2ba5594858afbcc1cbf0";
-    fetchSubmodules = true;
-  };
-  postUnpack = "sourceRoot+=/sydtest/; echo source root reset to $sourceRoot";
+  version = "0.13.0.2";
+  sha256 = "34113504c1890a4aa57ea9a594bee6ab1fea48170e638d9b78b9bc52c18e2606";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

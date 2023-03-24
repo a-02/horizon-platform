@@ -1106,11 +1106,7 @@ let packages =
       , svg-builder = H.callHackage "svg-builder" "0.1.1"
       , swagger2 = H.callHackage "swagger2" "2.8.6"
       , syb = H.callHackage "syb" "0.7.2.3"
-      , sydtest =
-          H.callGit
-            "https://github.com/locallycompact/sydtest"
-            "01c7d35b822c66a68e4d2ba5594858afbcc1cbf0"
-            (Some "sydtest/")
+      , sydtest = H.callHackage "sydtest" "0.13.0.2"
       , sydtest-discover = H.callHackage "sydtest-discover" "0.0.0.2"
       , system-fileio = H.callHackage "system-fileio" "0.3.16.4"
       , system-filepath = H.callHackage "system-filepath" "0.4.14"
