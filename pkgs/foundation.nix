@@ -1,8 +1,14 @@
-{ mkDerivation, base, basement, gauge, ghc-prim, lib }:
+{ mkDerivation, base, basement, fetchgit, gauge, ghc-prim, lib }:
 mkDerivation {
   pname = "foundation";
   version = "0.0.29";
-  sha256 = "34839bab424ffd5aed228271d75b15a84ed94eab515e44be909a9b37948173c1";
+  src = fetchgit {
+    url = "https://gitlab.rescue.horizon-haskell.net/hackage/foundation";
+    sha256 = "1l1idylvv25xp40zxxb5iim4xarpxfycwh85rmgabb0mbz4gw5rb";
+    rev = "d3136f4bb8b69e273535352620e53f2196941b35";
+    fetchSubmodules = true;
+  };
+  postUnpack = "sourceRoot+=/foundation/; echo source root reset to $sourceRoot";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

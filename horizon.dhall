@@ -375,7 +375,11 @@ let packages =
       , force-layout = H.callHackage "force-layout" "0.4.0.6"
       , foreign-store = H.callHackage "foreign-store" "0.2"
       , formatting = H.callHackage "formatting" "7.2.0"
-      , foundation = H.callHackage "foundation" "0.0.29"
+      , foundation =
+          H.callGit
+            "https://gitlab.rescue.horizon-haskell.net/hackage/foundation"
+            "d3136f4bb8b69e273535352620e53f2196941b35"
+            (Some "foundation/")
       , fourmolu = H.callHackage "fourmolu" "0.10.1.0"
       , free = H.callHackage "free" "5.2"
       , freer-simple = H.callHackage "freer-simple" "1.2.1.2"
