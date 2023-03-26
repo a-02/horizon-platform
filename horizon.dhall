@@ -375,7 +375,11 @@ let packages =
       , force-layout = H.callHackage "force-layout" "0.4.0.6"
       , foreign-store = H.callHackage "foreign-store" "0.2"
       , formatting = H.callHackage "formatting" "7.2.0"
-      , foundation = H.callHackage "foundation" "0.0.29"
+      , foundation =
+          H.callGit
+            "https://gitlab.rescue.horizon-haskell.net/hackage/foundation"
+            "d3136f4bb8b69e273535352620e53f2196941b35"
+            (Some "foundation/")
       , fourmolu = H.callHackage "fourmolu" "0.10.1.0"
       , free = H.callHackage "free" "5.2"
       , freer-simple = H.callHackage "freer-simple" "1.2.1.2"
@@ -494,7 +498,7 @@ let packages =
       , hex-text = H.callHackage "hex-text" "0.1.0.8"
       , hie-bios = H.callHackage "hie-bios" "0.11.0"
       , hie-compat = H.callHackage "hie-compat" "0.3.1.0"
-      , hiedb = H.callHackage "hiedb" "0.4.2.0"
+      , hiedb = H.callHackage "hiedb" "0.4.3.0"
       , hinotify = H.callHackage "hinotify" "0.4.1"
       , hlint = H.callHackage "hlint" "3.5"
       , hls-alternate-number-format-plugin =
@@ -950,7 +954,7 @@ let packages =
       , resolv = H.callHackage "resolv" "0.1.2.0"
       , resource-pool = H.callHackage "resource-pool" "0.4.0.0"
       , resourcet = H.callHackage "resourcet" "1.3.0"
-      , retrie = H.callHackage "retrie" "1.2.1.1"
+      , retrie = H.callHackage "retrie" "1.2.2"
       , retry = H.callHackage "retry" "0.9.3.0"
       , rope-utf16-splay = H.callHackage "rope-utf16-splay" "0.4.0.0"
       , row-types = H.callHackage "row-types" "1.0.1.2"

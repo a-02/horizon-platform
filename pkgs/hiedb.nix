@@ -6,8 +6,10 @@
 }:
 mkDerivation {
   pname = "hiedb";
-  version = "0.4.2.0";
-  sha256 = "9cca518eaa6a5d747c32ca7f50c7ba3c7454fb96239796bbbd6d2cc7cb61b908";
+  version = "0.4.3.0";
+  sha256 = "609c200782f79120dbb77d0dc26f6db0dda5e976ef1855d3d19024d23fbbbe06";
+  revision = "1";
+  editedCabalFile = "0yaxg7463625spx0dxg4znzyl8zq93mnb393wp6x11n29jd3l20r";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

@@ -1208,7 +1208,7 @@
   }
 , { mapKey = "foundation"
   , mapValue =
-      "2ea0d484c16d8c494f53f025f45bb02f531cf8e3b582ada43107eb3207840059"
+      "7727c13ef6bcc86c712f04dfafd34ff86b71c162895ed6560ab688653e79dc77"
   }
 , { mapKey = "fourmolu"
   , mapValue =
@@ -1564,7 +1564,7 @@
   }
 , { mapKey = "hiedb"
   , mapValue =
-      "a5a9992671f0d0bd55a9a7f770aad884a6e9bfe7e0ed73ec06cd35e638b48065"
+      "4871ce6e67de933f5210ec42add8d66ade1f231f34d5fff2edbab0f091cef167"
   }
 , { mapKey = "hinotify"
   , mapValue =
@@ -3100,7 +3100,7 @@
   }
 , { mapKey = "retrie"
   , mapValue =
-      "9bf3de3718f7c5a9d91dc99593bc483f95fdb73e3743d22753a8e314a65236b0"
+      "b4b9646ad9540c7e2a9baefacab277722f7a6829540735b6be52b9c04d22c26a"
   }
 , { mapKey = "retry"
   , mapValue =
