@@ -7,10 +7,8 @@
 }:
 mkDerivation {
   pname = "retrie";
-  version = "1.2.1.1";
-  sha256 = "74abc7b1968df4455cd104338a81a38f3db89ac963c8fd918f5c5273db14bfab";
-  revision = "1";
-  editedCabalFile = "1j5ppfzdcqbnik6cccqlwb62496z473y26r2ad763q0l5v6lhqfq";
+  version = "1.2.2";
+  sha256 = "8a9569eb4296a17584a47c65c5b5a27ab09f53614f0d64214f200ebdfb719b77";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
