@@ -150,6 +150,10 @@
   , mapValue =
       "bcef2a0f7821af0e5604f7e867da64a655c68ee1837905f2a1b23b20bea12a33"
   }
+, { mapKey = "Unixutils"
+  , mapValue =
+      "8c9633535cde0efc7a52cac58c1e4a4636d23c8783298081e8ae944e0988aa49"
+  }
 , { mapKey = "X11"
   , mapValue =
       "82426357feed8067aec32d7f4bee9d4149d3045908cded43f974a69c2b2a5b9d"

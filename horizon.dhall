@@ -52,6 +52,7 @@ let packages =
       , StateVar = H.callHackage "StateVar" "1.2.2"
       , Stream = H.callHackage "Stream" "0.4.7.2"
       , Unique = H.callHackage "Unique" "0.4.7.9"
+      , Unixutils = H.callHackage "Unixutils" "1.54.2"
       , X11 = H.callHackage "X11" "1.10.3"
       , X11-xft = H.callHackage "X11-xft" "0.3.4"
       , abstract-deque = H.callHackage "abstract-deque" "0.3"

@@ -77,6 +77,8 @@ self: with pkgs.haskell.lib; {
 
   Unique = self.callPackage (./pkgs/Unique.nix) { };
 
+  Unixutils = self.callPackage (./pkgs/Unixutils.nix) { };
+
   X11 = self.callPackage (./pkgs/X11.nix) { };
 
   X11-xft = self.callPackage (./pkgs/X11-xft.nix) { };
