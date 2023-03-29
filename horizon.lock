@@ -1682,6 +1682,10 @@
   , mapValue =
       "65337f51b558af4c6736e7d45e073585798d0dabd2485f5c72eabf8c4fae0096"
   }
+, { mapKey = "hoogle"
+  , mapValue =
+      "66f07284ff6a1a15f3645a96b1530146c0c407e6ccd616df55f64027e4fbccb2"
+  }
 , { mapKey = "hopenssl"
   , mapValue =
       "db8dfc299721ae2d80a9efdf4e90ab78a413ad4a54af0181fc3a594eb63dc98d"

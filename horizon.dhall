@@ -541,6 +541,7 @@ let packages =
             (None H.Subdir)
       , hnix-store-core = H.callHackage "hnix-store-core" "0.6.1.0"
       , hnix-store-remote = H.callHackage "hnix-store-remote" "0.6.0.0"
+      , hoogle = H.callHackage "hoogle" "5.0.18.3"
       , hopenssl = H.callHackage "hopenssl" "2.2.5"
       , horizon-gen-nix =
           H.callTarball

@@ -843,6 +843,8 @@ self: with pkgs.haskell.lib; {
 
   hnix-store-remote = self.callPackage (./pkgs/hnix-store-remote.nix) { };
 
+  hoogle = self.callPackage (./pkgs/hoogle.nix) { };
+
   hopenssl = self.callPackage (./pkgs/hopenssl.nix) { };
 
   horizon-gen-nix = self.callPackage (./pkgs/horizon-gen-nix.nix) { };
