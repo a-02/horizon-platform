@@ -753,6 +753,7 @@ let packages =
       , microstache = H.callHackage "microstache" "1.0.2.3"
       , mime-mail = H.callHackage "mime-mail" "0.5.1"
       , mime-types = H.callHackage "mime-types" "0.1.1.0"
+      , minio-hs = H.callHackage "minio-hs" "1.6.0"
       , mmap = H.callHackage "mmap" "0.5.9"
       , mmark = H.callHackage "mmark" "0.0.7.6"
       , mmorph = H.callHackage "mmorph" "1.2.0"

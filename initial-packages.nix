@@ -1183,6 +1183,8 @@ self: with pkgs.haskell.lib; {
 
   mime-types = self.callPackage (./pkgs/mime-types.nix) { };
 
+  minio-hs = self.callPackage (./pkgs/minio-hs.nix) { };
+
   mmap = self.callPackage (./pkgs/mmap.nix) { };
 
   mmark = self.callPackage (./pkgs/mmark.nix) { };

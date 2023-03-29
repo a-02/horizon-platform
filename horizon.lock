@@ -2362,6 +2362,10 @@
   , mapValue =
       "a1f3e947a2023e3d7544ff2938bcceaa519cea3199a133d41f3ff3e2dbf77b16"
   }
+, { mapKey = "minio-hs"
+  , mapValue =
+      "1b3e288059fa60322e9a1ddbe925d04c6422232ba56be0a3f1f1ba2de49ebcac"
+  }
 , { mapKey = "mmap"
   , mapValue =
       "2aab92c741a6c906eed2817a308fc7eae18972cae21ef0a942b3f1554070c557"
