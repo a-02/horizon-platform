@@ -591,6 +591,8 @@ self: with pkgs.haskell.lib; {
 
   flag = self.callPackage (./pkgs/flag.nix) { };
 
+  flag-dhall-instance = self.callPackage (./pkgs/flag-dhall-instance.nix) { };
+
   floatshow = self.callPackage (./pkgs/floatshow.nix) { };
 
   fmlist = self.callPackage (./pkgs/fmlist.nix) { };
