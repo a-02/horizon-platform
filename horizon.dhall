@@ -366,6 +366,7 @@ let packages =
       , finite-typelits = H.callHackage "finite-typelits" "0.1.6.0"
       , first-class-families = H.callHackage "first-class-families" "0.8.0.1"
       , fixed = H.callHackage "fixed" "0.3"
+      , flag = H.callHackage "flag" "0.1.0.0"
       , floatshow = H.callHackage "floatshow" "0.2.4"
       , fmlist = H.callHackage "fmlist" "0.9.4"
       , fmt = H.callHackage "fmt" "0.6.3.0"

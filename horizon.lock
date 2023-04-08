@@ -1174,6 +1174,10 @@
   , mapValue =
       "123d9ab2235250ede2690c9854d9187c1eda0b8d06d73806071820f8981bd6b7"
   }
+, { mapKey = "flag"
+  , mapValue =
+      "d2ae9835e43e558ed603bf0b06f6f2d89cb5e55468e1561dcedf728ac456e933"
+  }
 , { mapKey = "floatshow"
   , mapValue =
       "d8e8542f57ceb0917e2602f0a2a1985fd0242bc7a151e669b1cad2be713dde25"
