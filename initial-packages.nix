@@ -2055,6 +2055,8 @@ self: with pkgs.haskell.lib; {
 
   vector-th-unbox = self.callPackage (./pkgs/vector-th-unbox.nix) { };
 
+  version-natural = self.callPackage (./pkgs/version-natural.nix) { };
+
   vinyl = self.callPackage (./pkgs/vinyl.nix) { };
 
   void = self.callPackage (./pkgs/void.nix) { };

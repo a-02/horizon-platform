@@ -4106,6 +4106,10 @@
   , mapValue =
       "dbd9e053265d94f2ebe7126b3e0faa011ffd4388a697754f5da0ead8b38dc8f6"
   }
+, { mapKey = "version-natural"
+  , mapValue =
+      "4a25ceffd4ac77c68978b2b4da942962e2a6dbc7d8ce6ace1fa1adc78a2d97ec"
+  }
 , { mapKey = "vinyl"
   , mapValue =
       "9f4f91c398ef61abb3500f1a392011b6fb6c3e980141eecaea35f453ca07ded1"
