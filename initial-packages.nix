@@ -2057,6 +2057,8 @@ self: with pkgs.haskell.lib; {
 
   version-natural = self.callPackage (./pkgs/version-natural.nix) { };
 
+  version-natural-dhall-instance = self.callPackage (./pkgs/version-natural-dhall-instance.nix) { };
+
   vinyl = self.callPackage (./pkgs/vinyl.nix) { };
 
   void = self.callPackage (./pkgs/void.nix) { };
