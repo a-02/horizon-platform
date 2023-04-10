@@ -4112,7 +4112,7 @@
   }
 , { mapKey = "version-natural-dhall-instance"
   , mapValue =
-      "8e677467fd90dcf159199122d63fc50c1b0c05ed5c0b53706e75b6af78ada699"
+      "0e4425e4ca5d16f2e27e5bff552f02eb94537b349255bc79f0322d8c98aa2702"
   }
 , { mapKey = "vinyl"
   , mapValue =

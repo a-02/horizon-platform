@@ -1266,7 +1266,7 @@ let packages =
       , vector-th-unbox = H.callHackage "vector-th-unbox" "0.2.2"
       , version-natural = H.callHackage "version-natural" "0.1.0.0"
       , version-natural-dhall-instance =
-          H.callHackage "version-natural-dhall-instance" "0.1.0.0"
+          H.callHackage "version-natural-dhall-instance" "0.2.0.0"
       , vinyl = H.callHackage "vinyl" "0.14.3"
       , void = H.callHackage "void" "0.7.3"
       , vty = H.callHackage "vty" "5.38"
