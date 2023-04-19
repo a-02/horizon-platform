@@ -4258,14 +4258,6 @@
   , mapValue =
       "aeac0e76759cb8619684b88819ac5a77adebf5ab31ff742f70b53065d36622fc"
   }
-, { mapKey = "xmonad"
-  , mapValue =
-      "bd06ce3270b688e30225ab533fa0cbbed2ffc80226529b83ceeca899e7a8ebb7"
-  }
-, { mapKey = "xmonad-contrib"
-  , mapValue =
-      "331d6b1fcb6ee755bee39c1073d53ffedb768d226cb8acfededc6fd09f514fe0"
-  }
 , { mapKey = "xss-sanitize"
   , mapValue =
       "e4c3bfb0cabee974da9e5d0ee58dedb23f836ba2f41472f737e79ce84524845e"

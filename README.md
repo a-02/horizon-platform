@@ -24,8 +24,6 @@ This package set has the following policy.
   * servant
   * sydtest
   * tasty
-  * xmonad-contrib
-  * xmonad
   * wai-app-static
   * warp
 
