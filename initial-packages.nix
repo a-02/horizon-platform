@@ -2131,10 +2131,6 @@ self: with pkgs.haskell.lib; {
 
   xmlgen = self.callPackage (./pkgs/xmlgen.nix) { };
 
-  xmonad = self.callPackage (./pkgs/xmonad.nix) { };
-
-  xmonad-contrib = self.callPackage (./pkgs/xmonad-contrib.nix) { };
-
   xss-sanitize = self.callPackage (./pkgs/xss-sanitize.nix) { };
 
   yaml = self.callPackage (./pkgs/yaml.nix) { };
