@@ -14,7 +14,7 @@
       url = "git+https://gitlab.horizon-haskell.net/shells/horizon-shell?ref=refs/tags/0.0.8";
       flake = false;
     };
-    lint-utils.url = "git+https://gitlab.homotopic.tech/nix/lint-utils";
+    lint-utils.url = "git+https://gitlab.nixica.dev/nix/lint-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   };
 
