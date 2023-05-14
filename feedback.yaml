@@ -1,0 +1,10 @@
+loops:
+  build:
+    command: nix build github:srid/devour-flake -L --no-link --print-out-paths --override-input flake .
+    filter:
+      find: '*.nix'
+  check: nix flake check -L
+  gen:
+    command: nix run 'git+https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix?ref=refs/tags/0.10.0'
+    filter:
+      find: horizon.dhall
