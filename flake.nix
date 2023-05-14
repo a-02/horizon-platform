@@ -39,13 +39,13 @@
           haskellLib = pkgs.haskell.lib.compose;
 
           legacyPackages = pkgs.callPackage (nixpkgs + /pkgs/development/haskell-modules) {
-            buildHaskellPackages = pkgs.haskell.packages.ghc944;
+            buildHaskellPackages = pkgs.haskell.packages.ghc945;
             compilerConfig = pkgs.callPackage ./configuration/ghc.nix { inherit haskellLib; };
             configurationArm = { pkgs, haskellLib }: self: super: { };
             configurationCommon = import ./configuration/common.nix;
             configurationDarwin = import ./configuration/darwin.nix;
             configurationNix = { pkgs, haskellLib }: self: super: { };
-            ghc = pkgs.haskell.compiler.ghc944;
+            ghc = pkgs.haskell.compiler.ghc945;
             inherit haskellLib;
             initialPackages = import ./initial-packages.nix;
             nonHackagePackages = self: super: { };
