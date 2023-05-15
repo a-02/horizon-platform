@@ -989,25 +989,25 @@ let packages =
       , servant =
           H.callGit
             "https://github.com/haskell-servant/servant"
-            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
+            "7ae787371333556a7b84778631ed91d1d73e8370"
             (Some "servant/")
       , servant-auth = H.callHackage "servant-auth" "0.4.1.0"
       , servant-auth-client = H.callHackage "servant-auth-client" "0.4.1.0"
       , servant-auth-server =
           H.callGit
             "https://github.com/haskell-servant/servant"
-            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
+            "7ae787371333556a7b84778631ed91d1d73e8370"
             (Some "servant-auth/servant-auth-server/")
       , servant-blaze = H.callHackage "servant-blaze" "0.9.1"
       , servant-client =
           H.callGit
             "https://github.com/haskell-servant/servant"
-            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
+            "7ae787371333556a7b84778631ed91d1d73e8370"
             (Some "servant-client/")
       , servant-client-core =
           H.callGit
             "https://github.com/haskell-servant/servant"
-            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
+            "7ae787371333556a7b84778631ed91d1d73e8370"
             (Some "servant-client-core/")
       , servant-docs = H.callHackage "servant-docs" "0.12"
       , servant-effectful =
@@ -1018,7 +1018,7 @@ let packages =
       , servant-foreign =
           H.callGit
             "https://github.com/haskell-servant/servant"
-            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
+            "7ae787371333556a7b84778631ed91d1d73e8370"
             (Some "servant-foreign/")
       , servant-lucid = H.callHackage "servant-lucid" "0.9.0.6"
       , servant-multipart = H.callHackage "servant-multipart" "0.12.1"
@@ -1027,7 +1027,7 @@ let packages =
       , servant-server =
           H.callGit
             "https://github.com/haskell-servant/servant"
-            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
+            "7ae787371333556a7b84778631ed91d1d73e8370"
             (Some "servant-server/")
       , servant-static-th = H.callHackage "servant-static-th" "1.0.0.0"
       , servant-websockets = H.callHackage "servant-websockets" "2.0.0"

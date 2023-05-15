@@ -11,8 +11,8 @@ mkDerivation {
   version = "0.4.7.0";
   src = fetchgit {
     url = "https://github.com/haskell-servant/servant";
-    sha256 = "0ay4q9jy3xkn5j1k91snfdndi6j91hlri9h79m429j0d8v5vnj7i";
-    rev = "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a";
+    sha256 = "0ck3l8nj42nan8abdzvkl4ynb2l9nhnsq2zjl24d7sgca860fi57";
+    rev = "7ae787371333556a7b84778631ed91d1d73e8370";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/servant-auth/servant-auth-server/; echo source root reset to $sourceRoot";

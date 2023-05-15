@@ -3,7 +3,7 @@
 , hspec, hspec-discover, http-api-data, http-client, http-media
 , http-types, kan-extensions, lib, markdown-unlit, monad-control
 , mtl, network, semigroupoids, servant, servant-client-core
-, servant-server, sop-core, stm, tdigest, text, time, transformers
+, servant-server, sop-core, stm, text, time, transformers
 , transformers-base, transformers-compat, wai, warp
 }:
 mkDerivation {
@@ -11,8 +11,8 @@ mkDerivation {
   version = "0.19";
   src = fetchgit {
     url = "https://github.com/haskell-servant/servant";
-    sha256 = "0ay4q9jy3xkn5j1k91snfdndi6j91hlri9h79m429j0d8v5vnj7i";
-    rev = "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a";
+    sha256 = "0ck3l8nj42nan8abdzvkl4ynb2l9nhnsq2zjl24d7sgca860fi57";
+    rev = "7ae787371333556a7b84778631ed91d1d73e8370";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/servant-client/; echo source root reset to $sourceRoot";
@@ -29,7 +29,7 @@ mkDerivation {
     aeson base base-compat bytestring entropy hspec http-api-data
     http-client http-types HUnit kan-extensions markdown-unlit mtl
     network QuickCheck servant servant-client-core servant-server
-    sop-core stm tdigest text transformers transformers-compat wai warp
+    sop-core stm text transformers transformers-compat wai warp
   ];
   testToolDepends = [ hspec-discover markdown-unlit ];
   enableLibraryProfiling = true;
