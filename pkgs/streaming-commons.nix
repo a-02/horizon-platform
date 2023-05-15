@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "streaming-commons";
-  version = "0.2.2.5";
-  sha256 = "ca50819bdb2b248ced790e9faab07a3a5369ef702d9f9a932f26438bbeeca704";
+  version = "0.2.2.6";
+  sha256 = "0180958a882eb0f6262b812fe886c2b1b8285474b5b958f814ae4f05409fbf79";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

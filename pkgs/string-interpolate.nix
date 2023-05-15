@@ -6,8 +6,8 @@
 }:
 mkDerivation {
   pname = "string-interpolate";
-  version = "0.3.2.0";
-  sha256 = "9a7713beeaea33d712f74377c57e036b337fb7da851c73f6c479fa9dc521ade9";
+  version = "0.3.2.1";
+  sha256 = "392f017d7df229af537f87f79ffef0df5030cc48b77765f0e6c1580db7bbfdd4";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

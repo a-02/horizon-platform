@@ -3,10 +3,8 @@
 }:
 mkDerivation {
   pname = "hackage-db";
-  version = "2.1.2";
-  sha256 = "57d97acdfb10f5159d841029b695f778bcd9923ef82581acaadf04af841548aa";
-  revision = "1";
-  editedCabalFile = "12k9vm584l6glfkj92j1b2498g2sijdb8ypjmbb01yfn2xgbhkiv";
+  version = "2.1.3";
+  sha256 = "6b7fb10990d8265f45687af4764a0f9392d49417de8ae433880795c77be2f7e7";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

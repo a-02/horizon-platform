@@ -1,8 +1,8 @@
 { mkDerivation, base, lib, mtl, transformers }:
 mkDerivation {
   pname = "mtl-prelude";
-  version = "2.0.3.1";
-  sha256 = "c4a6dda093d63bd2161f55030c5825903dfa9b7d5e766c487fd848cb2aa01233";
+  version = "2.0.3.2";
+  sha256 = "40e83a8b08d1d95a1d15430f2d2923bbafe587b9491880ccb93feefe4215a0e9";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

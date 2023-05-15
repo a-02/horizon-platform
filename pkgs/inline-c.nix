@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "inline-c";
-  version = "0.9.1.6";
-  sha256 = "d567b818011b2331d428dd731db024f2662d11f748e015ad33d08aeb48225f19";
+  version = "0.9.1.7";
+  sha256 = "53276d02f4940b55da2fe485180bee3ead289f5ab78d70ff4e51334c5e769c71";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

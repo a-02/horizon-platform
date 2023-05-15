@@ -4,10 +4,8 @@
 }:
 mkDerivation {
   pname = "diagrams-core";
-  version = "1.5.0.1";
-  sha256 = "16ce30fbea3c77fc3debcd2c835a822b61f7da43839265819e70c49e61b961bf";
-  revision = "1";
-  editedCabalFile = "1gahbyv00xyr4pcmpq4g95jyh7844fp8z0g9l2ybifv4s73vdrym";
+  version = "1.5.1";
+  sha256 = "460ac1ccf2f161b1f5598b08cd607ef95d1cb851b46bc501cbeab847b2587521";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "generic-deriving";
-  version = "1.14.3";
-  sha256 = "9e4fa5082b36685db2e79f34ebc835c30ba9032a9b04673e21089742d28fbc40";
+  version = "1.14.4";
+  sha256 = "372b87b2c91ed4ceff8602024a484944f4653456066755803b5cb268fed8195c";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

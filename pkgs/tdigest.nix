@@ -1,19 +1,17 @@
-{ mkDerivation, base, base-compat, binary, deepseq, lib, reducers
-, semigroupoids, semigroups, tasty, tasty-quickcheck, transformers
-, vector, vector-algorithms
+{ mkDerivation, base, base-compat, binary, deepseq
+, foldable1-classes-compat, lib, reducers, semigroups, tasty
+, tasty-quickcheck, transformers, vector, vector-algorithms
 }:
 mkDerivation {
   pname = "tdigest";
-  version = "0.2.1.1";
-  sha256 = "a3998575ff5d180e6383d5bd5fc7c8e5fcfdb0c03e16f5f9089935a4d97173b7";
-  revision = "3";
-  editedCabalFile = "0a39vwf37hkh06rn79blr3bw7ij05pgpxrkc9cldgdd5p4gvn1qn";
+  version = "0.3";
+  sha256 = "6ba5e689297f22e45e8b240a27397285cbf76c65b631f58c5d48f579048a4d0a";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base base-compat binary deepseq reducers semigroupoids transformers
-    vector vector-algorithms
+    base base-compat binary deepseq foldable1-classes-compat reducers
+    transformers vector vector-algorithms
   ];
   testHaskellDepends = [
     base base-compat binary deepseq semigroups tasty tasty-quickcheck

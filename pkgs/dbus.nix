@@ -6,8 +6,8 @@
 }:
 mkDerivation {
   pname = "dbus";
-  version = "1.2.27";
-  sha256 = "1ffd66fc70d476cfe1649bdb49dbef9ed3820bc6b2c805e2a65140741a4c7352";
+  version = "1.2.28";
+  sha256 = "7c13a768f396975d228188465a7683efa9253ab792cde0da1662171487654a48";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

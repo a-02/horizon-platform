@@ -3,10 +3,8 @@
 }:
 mkDerivation {
   pname = "generic-lens";
-  version = "2.2.1.0";
-  sha256 = "ea82e34d694f15086d643f34312e319ff7fa529fd776fcf935fabf988c21569d";
-  revision = "1";
-  editedCabalFile = "1wzxvfi9kzhbglih1syqhx42kcsvlinnfc338fl731k6hc95hmlm";
+  version = "2.2.2.0";
+  sha256 = "868dc9c8cd02150b419859c3c8a53a62e5b41f5f3fd5d46bb355eb1074288b68";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

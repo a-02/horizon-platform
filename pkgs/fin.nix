@@ -3,10 +3,10 @@
 }:
 mkDerivation {
   pname = "fin";
-  version = "0.2.1";
-  sha256 = "3bd36e39865f355f943bb82e4fd7ff1af8d310b8166cd4b53d2516e3c2b5f393";
+  version = "0.3";
+  sha256 = "e20d0377e9c9a86b05959b6acb1ab3991dd977ffab46c56e239a5f4052e31c37";
   revision = "1";
-  editedCabalFile = "0qk48l13k8xr0qcs4nr5mpr5y84s8apdm5wlqldjdl9l3qbp58aw";
+  editedCabalFile = "14f3mg6hjwy8yycrkj8p925kwb6hjzy2hm6yb4fwl243w92yf5qa";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

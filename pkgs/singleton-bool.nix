@@ -1,10 +1,8 @@
 { mkDerivation, base, boring, dec, deepseq, lib, some }:
 mkDerivation {
   pname = "singleton-bool";
-  version = "0.1.6";
-  sha256 = "5ca3f4802ba0dd89d1817e78f7fbf6900fb5f176f10fc00bdfe395fe572383dd";
-  revision = "2";
-  editedCabalFile = "1l4nx664awgwzk3ih5idsgnj220jqdr1c55241xjv7fz7lwyhh5r";
+  version = "0.1.7";
+  sha256 = "1c2d196386c3697e884fcc8bef530506045a4860a5f669cc8416358b473bb29b";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

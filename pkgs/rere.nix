@@ -1,13 +1,18 @@
 { mkDerivation, QuickCheck, aeson, attoparsec, base, bytestring
-, clock, containers, criterion, derp, fin, lib, parsec
+, clock, containers, criterion, derp, fetchgit, fin, lib, parsec
 , quickcheck-instances, tasty, tasty-quickcheck, transformers, vec
 }:
 mkDerivation {
   pname = "rere";
   version = "0.2";
-  sha256 = "99fa400d5f3392fae6037c65e9cbf09cee837f753181f4fbf5f7f2ca20750969";
-  revision = "2";
-  editedCabalFile = "1gbf04s2rjs8kn1g28kd5qm8rvq6fdna88l1plw67q19v9rkxidp";
+  src = fetchgit {
+    url = "https://github.com/phadej/rere";
+    sha256 = "114i6z7rskynf2dnnq13wsi5di3m4m4zw4mf64qvfxrmry3kci1f";
+    rev = "5173ca929506b0cb9751fce5635164fcb36d7467";
+    fetchSubmodules = true;
+  };
+  revision = "3";
+  editedCabalFile = "01d112sii06yz06lpw5i7q3v4gshha9f0d7vpdc0yj2v34f45crv";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

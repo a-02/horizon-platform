@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "incipit-base";
-  version = "0.5.0.0";
-  sha256 = "40429f0615920f9251f63e2b37556fa013d70e9ab327323c4b8281d597aa75c0";
+  version = "0.5.1.0";
+  sha256 = "de6a23c15c1549a9e3a7da1c453946b5f6bc60dcd11343a334188e205376b62e";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

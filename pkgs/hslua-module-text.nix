@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "hslua-module-text";
-  version = "1.1.0";
-  sha256 = "103349066fb9258ef1a49832f2ea90abbb5a06cada12056774432812461d95cb";
+  version = "1.1.0.1";
+  sha256 = "2bd85de6dc58c78493a859de7af9db8b996b443fcdd640da75143d7680a83fa1";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

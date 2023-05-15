@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "retry";
-  version = "0.9.3.0";
-  sha256 = "c11e5dcb6fc9b7a327ebdf9188edcbe39fce64e728294e41a61e9ad94fa84ecd";
+  version = "0.9.3.1";
+  sha256 = "622e35114b920f76fa2e1ae6515575b9973fac19c679f5426ea6574a5d0b7ed6";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

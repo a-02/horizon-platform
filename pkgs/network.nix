@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "network";
-  version = "3.1.2.8";
-  sha256 = "fde2d4b065f1984c76755004c64a29ae9ec52c8bf74f2485d805ef577e7c7822";
+  version = "3.1.2.9";
+  sha256 = "0cbf95e4653dbfecc3907e10e7e7bbddb9dd673f172848a0ff3131ab3efdd900";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

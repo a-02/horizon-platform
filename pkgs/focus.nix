@@ -1,18 +1,15 @@
-{ mkDerivation, QuickCheck, base, lib, quickcheck-instances
-, rerebase, tasty, tasty-hunit, tasty-quickcheck, transformers
+{ mkDerivation, base, lib, rerebase, tasty, tasty-hunit
+, transformers
 }:
 mkDerivation {
   pname = "focus";
-  version = "1.0.3";
-  sha256 = "353050e457bfe945ce8bda3513206a9d3fd2ac93112791953d2afd32017e060e";
+  version = "1.0.3.1";
+  sha256 = "3d31ce2b4bd997eddcd2cfcf2d8afc81112fa8e00c4342e39da0f31a6c7a9098";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base transformers ];
-  testHaskellDepends = [
-    QuickCheck quickcheck-instances rerebase tasty tasty-hunit
-    tasty-quickcheck
-  ];
+  testHaskellDepends = [ rerebase tasty tasty-hunit ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;

@@ -1,19 +1,19 @@
 { mkDerivation, base, containers, doctest, first-class-families
-, ghc-prim, lib, mtl, text
+, ghc-prim, hspec, lib, text
 }:
 mkDerivation {
   pname = "fcf-containers";
-  version = "0.8.0";
-  sha256 = "48a38cc08cda7c9cba45fa3f0e2d98a668bf7ec3aa329fe872bbe82ebc8eddc8";
+  version = "0.8.2";
+  sha256 = "412b3003791d8e32c9a084d054973e9bfea13eb0a3947784907d3aeb1ef50a35";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base containers first-class-families ghc-prim mtl text
+    base containers first-class-families ghc-prim text
   ];
   executableHaskellDepends = [ base first-class-families ];
   testHaskellDepends = [
-    base containers doctest first-class-families ghc-prim text
+    base containers doctest first-class-families ghc-prim hspec text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

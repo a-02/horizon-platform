@@ -8,8 +8,8 @@
 }:
 mkDerivation {
   pname = "swagger2";
-  version = "2.8.6";
-  sha256 = "0481821f9145310e75a8171fbc59f825d14385c83c1f8cba3bf97762194a7fb3";
+  version = "2.8.7";
+  sha256 = "917a973aea5369c203decc5d209220fd2e33e6efa188fc7aa49b97482ad43708";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

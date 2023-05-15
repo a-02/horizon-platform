@@ -111,6 +111,8 @@ self: with pkgs.haskell.lib; {
 
   ansi-terminal = self.callPackage (./pkgs/ansi-terminal.nix) { };
 
+  ansi-terminal-types = self.callPackage (./pkgs/ansi-terminal-types.nix) { };
+
   ansi-wl-pprint = self.callPackage (./pkgs/ansi-wl-pprint.nix) { };
 
   ap-normalize = self.callPackage (./pkgs/ap-normalize.nix) { };
@@ -1494,8 +1496,6 @@ self: with pkgs.haskell.lib; {
   quickcheck-unicode = self.callPackage (./pkgs/quickcheck-unicode.nix) { };
 
   quiet = self.callPackage (./pkgs/quiet.nix) { };
-
-  ral = self.callPackage (./pkgs/ral.nix) { };
 
   random = self.callPackage (./pkgs/random.nix) { };
 

@@ -9,8 +9,8 @@
 }:
 mkDerivation {
   pname = "katip";
-  version = "0.8.7.2";
-  sha256 = "d990751023c8dbfaa3626bb237ffecf9b7c76f7938c14b620ac2e39aefab070a";
+  version = "0.8.7.4";
+  sha256 = "5b62c9345bc20c2d9eed9643e38db0ff6fd5831ab158a3d9b10f29cfc863333e";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

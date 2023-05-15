@@ -2,8 +2,8 @@
 }:
 mkDerivation {
   pname = "lucid-svg";
-  version = "0.7.1";
-  sha256 = "16b89597d0d2ba99939f327309ff7dbac2e475784d18c94e646833057ec12eb3";
+  version = "0.7.1.1";
+  sha256 = "2dbb8f0575ec7a731442a449d86437e997626d07a1bb2516e20c95baac93d19b";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

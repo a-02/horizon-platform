@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "easy-file";
-  version = "0.2.3";
-  sha256 = "0437d8c2a5efe4bd703f2627495f28092f0256b3d2dab191c9d08a6351074cc9";
+  version = "0.2.5";
+  sha256 = "ee0fa0914b3bb3662838a689d7cd23a2785ccbc29def366664f994bc524ff2bb";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

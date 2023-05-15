@@ -6,10 +6,8 @@
 }:
 mkDerivation {
   pname = "http-api-data";
-  version = "0.5";
-  sha256 = "f7edb4202cd6567e9ec5cda94dec0a823ca0ef00cf2fd7ec2cf80d946776b73f";
-  revision = "1";
-  editedCabalFile = "1gcqa0lm804cqv1xdaxz87mg0fv7d98i57px8al7qgdzpldma17k";
+  version = "0.5.1";
+  sha256 = "6166c64824e139a2727cc31af44d0077f66eb3921a20973bc6e98ff9fb77122b";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

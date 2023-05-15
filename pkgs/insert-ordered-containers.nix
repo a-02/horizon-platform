@@ -5,10 +5,8 @@
 }:
 mkDerivation {
   pname = "insert-ordered-containers";
-  version = "0.2.5.1";
-  sha256 = "f9a8217d7afa8ddeb7e6fbe1e4c37e40e31d26561acf9d8b01e8f7e3d703ccd6";
-  revision = "3";
-  editedCabalFile = "11awwf3lm3qzjqxy8gw9cizr30228cjwhqzff7wvjvdx131s0raa";
+  version = "0.2.5.2";
+  sha256 = "9a5ef8f7660d336a4f819c3f0dbb7143caff12a21dac76b3bb3d0eacd8c26c79";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

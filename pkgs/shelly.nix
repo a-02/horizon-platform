@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "shelly";
-  version = "1.12.0";
-  sha256 = "2f6658d27ce0a7b7beebf939f3adc60dd9d963bf57d9e2f691194af17356bd9e";
+  version = "1.12.1";
+  sha256 = "135a264422228c9b13232c28206ee9fb0498dd15767d6a9f857bb30202f80c77";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

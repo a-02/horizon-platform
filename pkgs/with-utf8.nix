@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "with-utf8";
-  version = "1.0.2.3";
-  sha256 = "0707ce5868c96379ed4f8486e1791a798cf2a254fda9801a7fb65944aeb5b035";
+  version = "1.0.2.4";
+  sha256 = "559d5e59fcbe0c1e9f4879c05f38952ecf16a7c476feccb83ce7169ecb42ff62";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

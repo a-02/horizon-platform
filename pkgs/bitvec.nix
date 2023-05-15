@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "bitvec";
-  version = "1.1.3.0";
-  sha256 = "1c4c3af50a1fcf46e46e2fa9e0493fffaf62de3607ae7553d18015f8a1a60551";
+  version = "1.1.4.0";
+  sha256 = "68f0b1e01604ca8bdeaef47b3621faec456d6f76d6820a321eccd4d3749454a8";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -17,7 +17,7 @@ mkDerivation {
     quickcheck-classes-base tasty tasty-quickcheck vector
   ];
   benchmarkHaskellDepends = [
-    base containers ghc-bignum random tasty-bench vector
+    base containers ghc-bignum random tasty tasty-bench vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

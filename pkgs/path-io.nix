@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "path-io";
-  version = "1.8.0";
-  sha256 = "83a6b3f6b8f00ab17b4a24d6e46b07139ae3155f2a2348b2062222398bf406c7";
+  version = "1.8.1";
+  sha256 = "9ad37f36cdc89402c9979e33ed62810754049bea7f4dd5f4749258e4dcef0ade";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

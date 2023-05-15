@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "haskell-src-meta";
-  version = "0.8.11";
-  sha256 = "3ca7fb27deceb3116682c24d9c122dc4c328a7566c39076c924f407556077af2";
+  version = "0.8.12";
+  sha256 = "027819e7caffef8812176d89952d6946115caba271e2b919ba5ec19f13d9ba89";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

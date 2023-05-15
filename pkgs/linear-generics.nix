@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "linear-generics";
-  version = "0.2.1";
-  sha256 = "ad23ba9ae3c0a542e6140b1481e3d2e9a8e092888d79949cfadd560d43d89497";
+  version = "0.2.2";
+  sha256 = "495fba692e196c6635c3aa2593c627646c9e384d40b4d455037e7af571384553";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "monoid-subclasses";
-  version = "1.2.2";
-  sha256 = "627b1a46cbfbb829cdb6cf1200d717062c388d56f698cec61f582e56ed5c0ca4";
+  version = "1.2.3";
+  sha256 = "fec14348bab9cb26768de7b9092489fe040d7001603ab1f461910fce4f52d0dd";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
