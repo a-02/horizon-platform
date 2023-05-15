@@ -565,8 +565,6 @@ self: with pkgs.haskell.lib; {
 
   file-embed = self.callPackage (./pkgs/file-embed.nix) { };
 
-  file-embed-lzma = self.callPackage (./pkgs/file-embed-lzma.nix) { };
-
   filelock = self.callPackage (./pkgs/filelock.nix) { };
 
   filemanip = self.callPackage (./pkgs/filemanip.nix) { };
@@ -1143,8 +1141,6 @@ self: with pkgs.haskell.lib; {
 
   lvar = self.callPackage (./pkgs/lvar.nix) { };
 
-  lzma = self.callPackage (./pkgs/lzma.nix) { };
-
   managed = self.callPackage (./pkgs/managed.nix) { };
 
   markdown = self.callPackage (./pkgs/markdown.nix) { };
@@ -1646,12 +1642,6 @@ self: with pkgs.haskell.lib; {
   servant-server = self.callPackage (./pkgs/servant-server.nix) { };
 
   servant-static-th = self.callPackage (./pkgs/servant-static-th.nix) { };
-
-  servant-swagger = self.callPackage (./pkgs/servant-swagger.nix) { };
-
-  servant-swagger-ui = self.callPackage (./pkgs/servant-swagger-ui.nix) { };
-
-  servant-swagger-ui-core = self.callPackage (./pkgs/servant-swagger-ui-core.nix) { };
 
   servant-websockets = self.callPackage (./pkgs/servant-websockets.nix) { };
 

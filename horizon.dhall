@@ -350,7 +350,6 @@ let packages =
       , fcf-containers = H.callHackage "fcf-containers" "0.8.0"
       , feedback = H.callHackage "feedback" "0.1.0.1"
       , file-embed = H.callHackage "file-embed" "0.0.15.0"
-      , file-embed-lzma = H.callHackage "file-embed-lzma" "0.0.1"
       , filelock = H.callHackage "filelock" "0.1.1.5"
       , filemanip = H.callHackage "filemanip" "0.3.6.3"
       , filepattern = H.callHackage "filepattern" "0.1.3"
@@ -731,7 +730,6 @@ let packages =
       , lucid-svg = H.callHackage "lucid-svg" "0.7.1"
       , lukko = H.callHackage "lukko" "0.1.1.3"
       , lvar = H.callHackage "lvar" "0.1.0.0"
-      , lzma = H.callHackage "lzma" "0.0.0.4"
       , managed = H.callHackage "managed" "1.0.10"
       , markdown = H.callHackage "markdown" "0.1.17.5"
       , markdown-unlit = H.callHackage "markdown-unlit" "0.5.1"
@@ -991,25 +989,25 @@ let packages =
       , servant =
           H.callGit
             "https://github.com/haskell-servant/servant"
-            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
+            "7ae787371333556a7b84778631ed91d1d73e8370"
             (Some "servant/")
       , servant-auth = H.callHackage "servant-auth" "0.4.1.0"
       , servant-auth-client = H.callHackage "servant-auth-client" "0.4.1.0"
       , servant-auth-server =
           H.callGit
             "https://github.com/haskell-servant/servant"
-            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
+            "7ae787371333556a7b84778631ed91d1d73e8370"
             (Some "servant-auth/servant-auth-server/")
       , servant-blaze = H.callHackage "servant-blaze" "0.9.1"
       , servant-client =
           H.callGit
             "https://github.com/haskell-servant/servant"
-            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
+            "7ae787371333556a7b84778631ed91d1d73e8370"
             (Some "servant-client/")
       , servant-client-core =
           H.callGit
             "https://github.com/haskell-servant/servant"
-            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
+            "7ae787371333556a7b84778631ed91d1d73e8370"
             (Some "servant-client-core/")
       , servant-docs = H.callHackage "servant-docs" "0.12"
       , servant-effectful =
@@ -1020,7 +1018,7 @@ let packages =
       , servant-foreign =
           H.callGit
             "https://github.com/haskell-servant/servant"
-            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
+            "7ae787371333556a7b84778631ed91d1d73e8370"
             (Some "servant-foreign/")
       , servant-lucid = H.callHackage "servant-lucid" "0.9.0.6"
       , servant-multipart = H.callHackage "servant-multipart" "0.12.1"
@@ -1029,13 +1027,9 @@ let packages =
       , servant-server =
           H.callGit
             "https://github.com/haskell-servant/servant"
-            "0cda2d0ac87dc0dd47744134e44ab0b1647fe09a"
+            "7ae787371333556a7b84778631ed91d1d73e8370"
             (Some "servant-server/")
       , servant-static-th = H.callHackage "servant-static-th" "1.0.0.0"
-      , servant-swagger = H.callHackage "servant-swagger" "1.1.11"
-      , servant-swagger-ui = H.callHackage "servant-swagger-ui" "0.3.5.4.5.0"
-      , servant-swagger-ui-core =
-          H.callHackage "servant-swagger-ui-core" "0.3.5"
       , servant-websockets = H.callHackage "servant-websockets" "2.0.0"
       , setenv = H.callHackage "setenv" "0.1.1.3"
       , setlocale = H.callHackage "setlocale" "1.0.0.10"

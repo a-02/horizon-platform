@@ -1126,10 +1126,6 @@
   , mapValue =
       "d8e9de90539350c483b5c0c877aa74d6617a0a0960fa0ddfc68a515a16f12dcc"
   }
-, { mapKey = "file-embed-lzma"
-  , mapValue =
-      "13d4ee5e0e9bc5f3c21269d3d129b31e0764302fd2708a8dbee01c484077f8ba"
-  }
 , { mapKey = "filelock"
   , mapValue =
       "f7bcf57b14747da3b182c2a854706148041cd6ca197b1604da59efb66dd4b689"
@@ -2282,10 +2278,6 @@
   , mapValue =
       "5ec7e0ed7bcb4e9506f4c09fd55f9b32d556c38bfe8e85a4b73e3e9ef9c99a41"
   }
-, { mapKey = "lzma"
-  , mapValue =
-      "3f7ed56699d3f4730212b6e764d5d8291a0b14c6332f73267f601a845a9e950d"
-  }
 , { mapKey = "managed"
   , mapValue =
       "a58a60b854a97809ddecdc2c6472cabb94dbc068412a1c2fbfcca9959728b2bc"
@@ -3228,7 +3220,7 @@
   }
 , { mapKey = "servant"
   , mapValue =
-      "0d9b9fd3c7dad87590d8c2a5bee1f2f8b2e1a02815edbd238ce194951dd829a5"
+      "d34dee0d36f6b46c9e77d5b712de51ff7b1fd1ca0fcbf1a3bd660e9ae5caba58"
   }
 , { mapKey = "servant-auth"
   , mapValue =
@@ -3240,7 +3232,7 @@
   }
 , { mapKey = "servant-auth-server"
   , mapValue =
-      "12661e3f795b50af9cbf92092b4a15335a8766bfe9ed5629c73aeefd941071a9"
+      "a9c11377b125655574babdaafa803c769a85d492ab743fc0483c144a1b894f4e"
   }
 , { mapKey = "servant-blaze"
   , mapValue =
@@ -3248,11 +3240,11 @@
   }
 , { mapKey = "servant-client"
   , mapValue =
-      "cb115c85423a092d4ebecd30ea879f50df1f1e16eee95e47a644a6fc57fd412a"
+      "c929d1a849c60a8f9dc40b0a053502215b1d32cd42e0b1421e40380b309b63fc"
   }
 , { mapKey = "servant-client-core"
   , mapValue =
-      "d18463f13f2cb38ad49c576ef20dea98ca952484e825ec7638a5a37b638f8c75"
+      "fdd6563b22e001721f7c047964c1026d10abf5ec7f50d8b16cae4f3f72016309"
   }
 , { mapKey = "servant-docs"
   , mapValue =
@@ -3264,7 +3256,7 @@
   }
 , { mapKey = "servant-foreign"
   , mapValue =
-      "adfd9a22e2eda6df507a38820063046d0d8aabfd15774193e2db40f591e2e1ea"
+      "97f2df673440eacab512e8b97ef65de790f781905530367b23e601d8bf95ee78"
   }
 , { mapKey = "servant-lucid"
   , mapValue =
@@ -3284,23 +3276,11 @@
   }
 , { mapKey = "servant-server"
   , mapValue =
-      "1286a1b3abfc99fe31ff5aa179c52d396d78c82ccbd6ca2b5151628e024bb7ff"
+      "9a091d4f9107d66de309e5dcadb41860b38d44179e7f3fb7885909990a022331"
   }
 , { mapKey = "servant-static-th"
   , mapValue =
       "7efa33dfb317416d7a1b48495addf0056581c7875999b4537197b3c4db833ec0"
-  }
-, { mapKey = "servant-swagger"
-  , mapValue =
-      "0e451b7b42609bd095b9d882ef8754b99735e1f11d768efd9f4f88e4ee68eee3"
-  }
-, { mapKey = "servant-swagger-ui"
-  , mapValue =
-      "e56f596211a5fa3208009db19e5a4e2ff9920ff08a00863984e99434129606c6"
-  }
-, { mapKey = "servant-swagger-ui-core"
-  , mapValue =
-      "bcf6acda36b56682f597d49b27f6e1f596f8cd68404ef99edf0f3abf551fe357"
   }
 , { mapKey = "servant-websockets"
   , mapValue =
