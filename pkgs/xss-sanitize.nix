@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "xss-sanitize";
-  version = "0.3.7.1";
-  sha256 = "303c15935f0e54dd0ef1b3665d307e4e74e2a3e9f8d4612a2133ac8a04f4b5d2";
+  version = "0.3.7.2";
+  sha256 = "1bbb7f5be1f4590124c76458fb798bfd9bf8114dce338d5881ad89188a9dc946";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

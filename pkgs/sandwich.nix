@@ -8,8 +8,8 @@
 }:
 mkDerivation {
   pname = "sandwich";
-  version = "0.1.3.0";
-  sha256 = "85f033c2c811ede03ef72d73ad1a7883511fa834db634bf8df1c36b9263c6f91";
+  version = "0.1.3.2";
+  sha256 = "53798b02cbe82103e27104b57592e92ac957a6d08ff71922534af7719adf5d46";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

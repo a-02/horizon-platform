@@ -1,17 +1,15 @@
 { mkDerivation, base, comonad, hashable, keys, lib, pointed
-, semigroupoids, semigroups, vector
+, semigroupoids, vector
 }:
 mkDerivation {
   pname = "vector-instances";
-  version = "3.4";
-  sha256 = "1b0246ef0cf8372d61d5c7840d857f49299af2304b5107510377255ed4dd5381";
-  revision = "1";
-  editedCabalFile = "177jllmcv0517vppc4lx0l0kvicgaf1h060lkcnv7fl0hnp16zf5";
+  version = "3.4.2";
+  sha256 = "34d92d6e77f64e8f7d79cde4a1d61799faec1b760b144935afc6f4a78877d667";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base comonad hashable keys pointed semigroupoids semigroups vector
+    base comonad hashable keys pointed semigroupoids vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

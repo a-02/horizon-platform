@@ -1,8 +1,8 @@
 { mkDerivation, base, containers, deepseq, ghc-prim, lib, tasty }:
 mkDerivation {
   pname = "tasty-bench";
-  version = "0.3.3";
-  sha256 = "757486ffcf9d4cd4afee4ff1b78e2174fda37cbda74aa887115e4d55d5531a8e";
+  version = "0.3.4";
+  sha256 = "4de671ebafafe5cba7ba14a4503f25ac080a8eedc4e9f815b5cb3ba8f8a9ce1e";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

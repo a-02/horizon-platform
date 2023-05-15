@@ -5,10 +5,8 @@
 }:
 mkDerivation {
   pname = "vec";
-  version = "0.4.1";
-  sha256 = "0b158e65bbbf65c2b6626785ce21633b8037bcbef28f0869f5e64c4549fb6507";
-  revision = "1";
-  editedCabalFile = "156w28mz6d1gdp907j14v5xvj5y786h5pi4bfgvri592zwd2p46b";
+  version = "0.5";
+  sha256 = "0a2403f857ba10ff6f159b4ded0930d0d3cf046bef29de1d5929f9e51356209f";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

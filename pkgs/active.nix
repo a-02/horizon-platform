@@ -3,19 +3,15 @@
 }:
 mkDerivation {
   pname = "active";
-  version = "0.2.0.16";
-  sha256 = "f1187ebbffd560c4eb39864f8ad0a6aac4585ba6c956ba5572e90632bdcee2bb";
-  revision = "1";
-  editedCabalFile = "0cyfwrr5c14f5rgrf8dv7i8qsrnmnzigw0xp6l88kfxd61zhk4n8";
+  version = "0.2.0.17";
+  sha256 = "0e804cbcf8c10cf95e8a21b8a1caf6cb526f64519399fb4fbbdfc8bcb2ca57f8";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base lens linear semigroupoids semigroups vector
   ];
-  testHaskellDepends = [
-    base lens linear QuickCheck semigroupoids semigroups vector
-  ];
+  testHaskellDepends = [ base linear QuickCheck semigroups ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;

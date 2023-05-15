@@ -4,10 +4,8 @@
 }:
 mkDerivation {
   pname = "nothunks";
-  version = "0.1.3";
-  sha256 = "c191e9c3d86ca006bf8d85adfd936ff997759120b0fcfaf4960a56d8bd850e53";
-  revision = "1";
-  editedCabalFile = "0z82wai5sq6a7988dms7j412q9224kxnlhd00fp3k4ff6f9r0gpi";
+  version = "0.1.4";
+  sha256 = "888a02eb74d70b39372421020420924cf746afcffd370b99535ada562faa1375";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -25,6 +23,6 @@ mkDerivation {
   doBenchmark = false;
   hyperlinkSource = false;
   description = "Examine values for unexpected thunks";
-  license = lib.licenses.mit;
+  license = lib.licenses.asl20;
   broken = false;
 }

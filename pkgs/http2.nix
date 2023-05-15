@@ -7,8 +7,8 @@
 }:
 mkDerivation {
   pname = "http2";
-  version = "4.1.0";
-  sha256 = "6da8bbdab1c82a3c005c6aceff2d8b0d2e715e55c059dcc4ba61ce14da8e1d4d";
+  version = "4.1.2";
+  sha256 = "15fc296032c0965fd3d1c5d3b421ba548265878e9fcfeb45e279718d31b09c60";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

@@ -1,8 +1,8 @@
 { mkDerivation, base, bytestring, lib }:
 mkDerivation {
   pname = "unix-bytestring";
-  version = "0.3.7.8";
-  sha256 = "f493296358602ae133bc93cd3c7100a1a94fc97c3176edcac0b8f87ad96f4074";
+  version = "0.4.0";
+  sha256 = "0466a30964af0e4b3874adcfed1a486b480b10a12532bfd13a7a26b39d0fef6e";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

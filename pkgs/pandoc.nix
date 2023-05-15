@@ -15,8 +15,8 @@
 }:
 mkDerivation {
   pname = "pandoc";
-  version = "3.1.1";
-  sha256 = "d8bf5ca02a54b10bc0980848eb10697fa5c83d0c452a9afcea2ec823a9168537";
+  version = "3.1.2";
+  sha256 = "b682d21b46ea969cfac0f72d1739d9b4595875638f5d9b86a55edc2d916e1cec";
   configureFlags = [ "-f-trypandoc" ];
   isLibrary = true;
   isExecutable = false;

@@ -4,10 +4,8 @@
 }:
 mkDerivation {
   pname = "doclayout";
-  version = "0.4";
-  sha256 = "7d2ede4024d1f5e5d918fd799f7e046b03023434e327bc1e1c1402eeb8ffb3a3";
-  revision = "1";
-  editedCabalFile = "0djwb7nrdablc0iy1qakrxpd4m7nn0w94vhb78il3jhjbj2ji179";
+  version = "0.4.0.1";
+  sha256 = "f7d3515d41abdfd7a5b69f28bf9520f591881364262698fd49686506b570b30b";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = true;

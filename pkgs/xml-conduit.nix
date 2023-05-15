@@ -5,10 +5,8 @@
 }:
 mkDerivation {
   pname = "xml-conduit";
-  version = "1.9.1.1";
-  sha256 = "bdb117606c0b56ca735564465b14b50f77f84c9e52e31d966ac8d4556d3ff0ff";
-  revision = "2";
-  editedCabalFile = "0m6sknp9xxz8a3dhvyfpyjvxp8ph511w19j4vj1qsd6hl2pazjy6";
+  version = "1.9.1.2";
+  sha256 = "959b46fa0ba0568fdfdd213070245999244a934ca9a4ab6e30141f2d605648dd";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

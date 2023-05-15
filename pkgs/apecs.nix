@@ -3,10 +3,8 @@
 }:
 mkDerivation {
   pname = "apecs";
-  version = "0.9.4";
-  sha256 = "7e134eea093551112539ab5727bb127b7a4a6906c96636024f8c0966a06b9740";
-  revision = "1";
-  editedCabalFile = "1n0sz1230fp65dv462ss15yma6g1dxxlamj7idgl3kg9gdwv70sn";
+  version = "0.9.5";
+  sha256 = "3fdc0547f257ea6ec9abe972148188e673fa1859f53695989761bad7fd9a01d8";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -1,19 +1,15 @@
-{ mkDerivation, QuickCheck, base, deepseq, hashable, lib
-, quickcheck-instances, rerebase, semigroupoids, tasty, tasty-hunit
-, tasty-quickcheck
+{ mkDerivation, base, deepseq, hashable, lib, rerebase
+, semigroupoids, tasty, tasty-quickcheck
 }:
 mkDerivation {
   pname = "strict-list";
-  version = "0.1.7";
-  sha256 = "70cd8accb5e1f68273b07c6cfe64e27f08815df59e2606bc5ed6f2fdcbb20e36";
+  version = "0.1.7.1";
+  sha256 = "81050df562928f71918f0f8c0f0541bf87c3d5a820c250a5b0e5992e99f37faf";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base deepseq hashable semigroupoids ];
-  testHaskellDepends = [
-    QuickCheck quickcheck-instances rerebase tasty tasty-hunit
-    tasty-quickcheck
-  ];
+  testHaskellDepends = [ rerebase tasty tasty-quickcheck ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;

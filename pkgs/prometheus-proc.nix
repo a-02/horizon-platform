@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "prometheus-proc";
-  version = "0.1.4.0";
-  sha256 = "de92520596bb07957a13cede7a0b43eb6fec5ec6f92d5b466141cf5058b02c6a";
+  version = "0.1.5.0";
+  sha256 = "0e0fb1702e423490762c247c99de2ba0df66bc7e75e5811a7e29e79ee035694e";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

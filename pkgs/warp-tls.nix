@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "warp-tls";
-  version = "3.3.5";
-  sha256 = "87e55aa5688d3d86fec6e23e0796af9d8816956506d5eb13e737cad2dbd7a9f0";
+  version = "3.3.6";
+  sha256 = "ae8070500bfb81b256630b0f792451b26265b9eb1f2ba6d1696cf9ed96965bb5";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

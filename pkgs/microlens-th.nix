@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "microlens-th";
-  version = "0.4.3.11";
-  sha256 = "f21aaadea14a90fef53fa661eb375ac492c88c3bf023592fdd13e4ee285352ee";
+  version = "0.4.3.13";
+  sha256 = "e73bcd5af020ca705684725ddfded4567130f117d70fe17b4f898a19cce281bc";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -20,7 +20,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "http://github.com/monadfix/microlens";
+  homepage = "http://github.com/stevenfontanella/microlens";
   description = "Automatic generation of record lenses for microlens";
   license = lib.licenses.bsd3;
   broken = false;

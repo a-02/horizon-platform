@@ -1,20 +1,21 @@
-{ mkDerivation, aeson, aeson-pretty, async, base, bytestring
-, deepseq, directory, exceptions, filepath, hedgehog, hw-aeson, lib
-, mmorph, mtl, network, process, resourcet, stm, temporary, text
-, time, transformers, unliftio, unordered-containers, yaml
+{ mkDerivation, Diff, aeson, aeson-pretty, async, base, bytestring
+, deepseq, directory, exceptions, filepath, hedgehog, http-conduit
+, hw-aeson, lib, mmorph, mtl, network, process, resourcet, stm, tar
+, temporary, text, time, transformers, unliftio
+, unordered-containers, yaml, zlib
 }:
 mkDerivation {
   pname = "hedgehog-extras";
-  version = "0.4.0.1";
-  sha256 = "43ad73740aea9c4cd5cfbd2c44ed82c022a2d84d02ef70c233bb85e218c45317";
+  version = "0.4.5.1";
+  sha256 = "1016afe36cf0fc1b2a83baafd2920b7643391cf927d46c85044569b9d3431ee3";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson aeson-pretty async base bytestring deepseq directory
-    exceptions filepath hedgehog hw-aeson mmorph mtl network process
-    resourcet stm temporary text time transformers unliftio
-    unordered-containers yaml
+    aeson aeson-pretty async base bytestring deepseq Diff directory
+    exceptions filepath hedgehog http-conduit hw-aeson mmorph mtl
+    network process resourcet stm tar temporary text time transformers
+    unliftio unordered-containers yaml zlib
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

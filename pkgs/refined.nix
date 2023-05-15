@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "refined";
-  version = "0.8";
-  sha256 = "3a477dd64a741708e32223a5deb79d297a36804ede759a8a50ed96c7bcad7f62";
+  version = "0.8.1";
+  sha256 = "35ae42f02aaa7dadbbdd6e9b53a5425b3a2d6bd9249235f6679a61f30e0f2735";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

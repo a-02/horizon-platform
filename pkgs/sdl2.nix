@@ -3,10 +3,8 @@
 }:
 mkDerivation {
   pname = "sdl2";
-  version = "2.5.4.0";
-  sha256 = "d5231b6fbf6d83f928168f05f6174b8776d8e97b55228dc8ec3391ef22bc65bc";
-  revision = "2";
-  editedCabalFile = "1yxzq4gb6ig3d94lc76i5d50fa0j1fxr1wdlmgwhkvlfd4xnh6sg";
+  version = "2.5.5.0";
+  sha256 = "23fdaa896e528620f31afeb763422d0c27d758e587215ff0c1387d6e6b3551cd";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = true;

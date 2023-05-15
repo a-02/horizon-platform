@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "pcg-random";
-  version = "0.1.3.7";
-  sha256 = "e6c8c26841b5d0d6d9e2816e952e397062730fd1a0bc13cf7c3ebcba6dc1d2d0";
+  version = "0.1.4.0";
+  sha256 = "6ec9a7d627331ea0262118b741434ef517f096a678cb74ecd563fd3ed6641626";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

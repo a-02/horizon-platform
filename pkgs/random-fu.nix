@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "random-fu";
-  version = "0.3.0.0";
-  sha256 = "a19d158d0f2b6df51d32c9e6df7cf6bbd94b7a1af81acfb4fe505f410e5ae4c7";
+  version = "0.3.0.1";
+  sha256 = "06e6691279e4fcf176d79ad33a4ca6a8d7d831123d64d798f3e5aae4b7c45e40";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

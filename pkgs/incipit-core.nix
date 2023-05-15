@@ -1,8 +1,8 @@
 { mkDerivation, base, incipit-base, lib, polysemy }:
 mkDerivation {
   pname = "incipit-core";
-  version = "0.5.0.0";
-  sha256 = "d2b3a6cef9b87f0aedb37af6e1257959b109d382a93a19cd88d609b1c56dcb9d";
+  version = "0.5.1.0";
+  sha256 = "de6c0f072bc850ff2624127312e0bd9222d95470daf16312ae07db0bfd0597b3";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -1,8 +1,8 @@
 { mkDerivation, base, lib, stm }:
 mkDerivation {
   pname = "stm-chans";
-  version = "3.0.0.6";
-  sha256 = "ea6e3e83b67380ada44a566014e2611ef9f98142a8bbb91583fb598425760a12";
+  version = "3.0.0.9";
+  sha256 = "7a060df537cb93c98380a770f88d4a1ff08b79fe07203c859be7bc815dc1325d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

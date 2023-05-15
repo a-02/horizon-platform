@@ -6,8 +6,8 @@
 }:
 mkDerivation {
   pname = "shakespeare";
-  version = "2.0.30";
-  sha256 = "5c8dfe55db93303aafb03cfd969dc831d14bf4971a5fa1e5eae2459f64be1e0d";
+  version = "2.1.0";
+  sha256 = "3f59d2a4d6e5d59d932503adf15d53bccad388012ff86f806daedfd7c24e9fe1";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -6,8 +6,8 @@
 }:
 mkDerivation {
   pname = "apply-refact";
-  version = "0.12.0.0";
-  sha256 = "cc1fa24dd2cc02591217363eb0c3852ff215a124a3d28ee9d46cd7f29fdf9477";
+  version = "0.13.0.0";
+  sha256 = "2fa91f16329d4e97caeab578a66f045b5e7593785e73df99a4b27b0465f18dc5";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

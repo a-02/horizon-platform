@@ -1,13 +1,17 @@
-{ mkDerivation, async, base, lib, mtl, tasty, tasty-hunit }:
+{ mkDerivation, async, base, lib, mtl, tasty, tasty-hunit
+, transformers
+}:
 mkDerivation {
   pname = "logict";
-  version = "0.8.0.0";
-  sha256 = "fe926df295bc43df794247360e7a0a0dfdc778bce986f8aadba98fe52228fb56";
+  version = "0.8.1.0";
+  sha256 = "d3dc47581c8484220e57c8f827e0d44f8c04f054aba9ba1797ee15b897e3b813";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
-  libraryHaskellDepends = [ base mtl ];
-  testHaskellDepends = [ async base mtl tasty tasty-hunit ];
+  libraryHaskellDepends = [ base mtl transformers ];
+  testHaskellDepends = [
+    async base mtl tasty tasty-hunit transformers
+  ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;

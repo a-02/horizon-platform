@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "gtk2hs-buildtools";
-  version = "0.13.8.3";
-  sha256 = "3b0344e4ce5774ca50f0fa5e0c930f282ca84c50317e6f1148325528c6069539";
+  version = "0.13.10.0";
+  sha256 = "dcbb47e95da9a59d3058485d352bb2a66830cb741ccce078d56940938a1d8573";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = true;
