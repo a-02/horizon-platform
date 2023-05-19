@@ -1765,6 +1765,8 @@ self: with pkgs.haskell.lib; {
 
   stringsearch = self.callPackage (./pkgs/stringsearch.nix) { };
 
+  stripeapi = self.callPackage (./pkgs/stripeapi.nix) { };
+
   sundown = self.callPackage (./pkgs/sundown.nix) { };
 
   svg-builder = self.callPackage (./pkgs/svg-builder.nix) { };

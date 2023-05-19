@@ -1102,6 +1102,7 @@ let packages =
       , string-qq = H.callHackage "string-qq" "0.0.4"
       , stringbuilder = H.callHackage "stringbuilder" "0.5.1"
       , stringsearch = H.callHackage "stringsearch" "0.3.6.6"
+      , stripeapi = H.callHackage "stripeapi" "3.0.0.0"
       , sundown = H.callHackage "sundown" "0.6"
       , svg-builder = H.callHackage "svg-builder" "0.1.1"
       , swagger2 = H.callHackage "swagger2" "2.8.7"
