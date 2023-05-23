@@ -9,6 +9,8 @@ mkDerivation {
   pname = "retrie";
   version = "1.2.2";
   sha256 = "8a9569eb4296a17584a47c65c5b5a27ab09f53614f0d64214f200ebdfb719b77";
+  revision = "1";
+  editedCabalFile = "01lcgn0jlmg3s8q1zrsbal2hz3x07gf0lzqjmf3h946a0lkpfal9";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

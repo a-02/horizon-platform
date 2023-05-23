@@ -1,6 +1,6 @@
 { pkgs, haskellLib }:
 
-with pkgs.haskell.lib;
+with haskellLib;
 
 final: prev: {
 

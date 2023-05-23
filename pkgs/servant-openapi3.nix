@@ -9,8 +9,8 @@ mkDerivation {
   pname = "servant-openapi3";
   version = "2.0.1.6";
   sha256 = "322a2181fb2becb20b80ad8319dd3ce1874d89cd344a8d8a4e17d1428d1dbfc3";
-  revision = "2";
-  editedCabalFile = "0i7brbai4dd2f2jxi1b5i824iiq5nm932zkcp6gzfxiva82m1f4f";
+  revision = "3";
+  editedCabalFile = "0pnj7ns6lk5jb2p7i7y2mdyi7bcvf0yj23fzzc3z532zj8a28vaq";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

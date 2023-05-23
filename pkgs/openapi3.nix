@@ -10,8 +10,8 @@ mkDerivation {
   pname = "openapi3";
   version = "3.2.3";
   sha256 = "d4e4570955bcc66fde72c3070bc3ef4bcf54b82ef71448f6541256d79dfa736b";
-  revision = "1";
-  editedCabalFile = "1wvvwh13pfwl015k2hm8h7fylfjimfm16w56a8sx9aqxf0x03cdh";
+  revision = "3";
+  editedCabalFile = "1cp12nvndc2hpgjxv2j8p0nhrii9hawjsgph6yrcg88ckihy7zaz";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

@@ -11,6 +11,8 @@ mkDerivation {
   pname = "snap-core";
   version = "1.0.5.1";
   sha256 = "a704c1a0e2c4ebfdcc8baf6feab09dd7715bdc9d750f7efb63d06e3965ec0502";
+  revision = "1";
+  editedCabalFile = "1hmkk9gxvrrs6ddf7l8i6ajdgdw4zgd103al67ggrh7whjyg2i0d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

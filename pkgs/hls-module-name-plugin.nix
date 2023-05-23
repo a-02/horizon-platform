@@ -6,6 +6,8 @@ mkDerivation {
   pname = "hls-module-name-plugin";
   version = "1.1.1.0";
   sha256 = "821b5fe4d44077a07b898db2188bcfefb919316004612a666c3f783e677ee01a";
+  revision = "2";
+  editedCabalFile = "1d639q3vbj2xb4zd74w2zvdl89dq56d8ly5s4nla8p2x7bfsnr3x";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

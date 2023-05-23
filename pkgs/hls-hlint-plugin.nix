@@ -9,6 +9,8 @@ mkDerivation {
   pname = "hls-hlint-plugin";
   version = "1.1.2.0";
   sha256 = "795cb9fbe79058a9ccf5477276cebf429116dd652d46c3dfbce8fea400b65c9f";
+  revision = "2";
+  editedCabalFile = "01ivgwyim5wd5q0p4ni5lr6ypcbikcapqq6f8kxwxyskpn7p7gyr";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

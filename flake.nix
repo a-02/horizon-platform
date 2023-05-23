@@ -10,6 +10,7 @@
   inputs = {
     get-flake.url = "github:ursi/get-flake";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    horizon-core.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-core?ref=sts-945";
     horizon-shell-flake = {
       url = "git+https://gitlab.horizon-haskell.net/shells/horizon-shell?ref=refs/tags/0.0.8";
       flake = false;
@@ -23,6 +24,7 @@
     { self
     , get-flake
     , flake-parts
+    , horizon-core
     , horizon-shell-flake
     , lint-utils
     , nixpkgs
@@ -34,30 +36,23 @@
         let
           pkgs = nixpkgs.legacyPackages.${system};
 
+        in
+        with pkgs.lib;
+        let
           horizon-shell = get-flake horizon-shell-flake;
 
-          haskellLib = pkgs.haskell.lib.compose;
+          haskellLib = pkgs.haskell.lib;
 
-          legacyPackages = pkgs.callPackage (nixpkgs + /pkgs/development/haskell-modules) {
-            buildHaskellPackages = pkgs.haskell.packages.ghc945;
-            compilerConfig = pkgs.callPackage ./configuration/ghc.nix { inherit haskellLib; };
-            configurationArm = { pkgs, haskellLib }: self: super: { };
-            configurationCommon = import ./configuration/common.nix;
-            configurationDarwin = import ./configuration/darwin.nix;
-            configurationNix = { pkgs, haskellLib }: self: super: { };
-            ghc = pkgs.haskell.compiler.ghc945;
-            inherit haskellLib;
-            initialPackages = import ./initial-packages.nix;
-            nonHackagePackages = self: super: { };
-          };
 
-          packages = pkgs.lib.filterAttrs
-            (n: v: v != null
-              && builtins.typeOf v == "set"
-              && pkgs.lib.hasAttr "type" v
-              && v.type == "derivation"
-              && v.meta.broken == false)
-            legacyPackages;
+          overrides = composeManyExtensions [
+            (import ./overlay.nix { inherit pkgs; })
+            (import ./configuration/common.nix { inherit pkgs haskellLib; })
+            (import (./configuration + "/${system}.nix") { inherit pkgs haskellLib; })
+          ];
+
+          legacyPackages = horizon-core.legacyPackages.${system}.extend overrides;
+
+          packages = filterAttrs (_: isDerivation) legacyPackages;
 
           devShell = pkgs.mkShell {
             buildInputs = [

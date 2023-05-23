@@ -6,8 +6,8 @@ mkDerivation {
   pname = "http-media";
   version = "0.8.0.0";
   sha256 = "398279d1dff5b60cd8b8c650caceca248ea1184d694bedf5df5426963b2b9c53";
-  revision = "7";
-  editedCabalFile = "1sm8bnrqvwkj7f60x4s8vfsj6lfi0knq38im35x88wk8s9whg6jd";
+  revision = "8";
+  editedCabalFile = "08r5iq0hi1y4y1b6vdi4kp52blvxzmd9gxa38xwzz86xnz84xvzl";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

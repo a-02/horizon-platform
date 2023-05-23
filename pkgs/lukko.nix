@@ -6,8 +6,8 @@ mkDerivation {
   pname = "lukko";
   version = "0.1.1.3";
   sha256 = "a80efb60cfa3dae18682c01980d76d5f7e413e191cd186992e1bf7388d48ab1f";
-  revision = "3";
-  editedCabalFile = "1a6spmbiv3ias40sjrnsxfgr1d5mwg039a2q7113zb7i9n6c1m7g";
+  revision = "4";
+  editedCabalFile = "0ij1wcciiplk381xzxr7xcnywfbh5caflffnvlzqmg8bz3j4xdcs";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

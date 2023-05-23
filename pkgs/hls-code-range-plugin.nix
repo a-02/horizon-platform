@@ -7,6 +7,8 @@ mkDerivation {
   pname = "hls-code-range-plugin";
   version = "1.1.0.0";
   sha256 = "198cc8308967cbb1b3616316da42ac12f6469a071f753c8a5086cc7754c3f1e3";
+  revision = "2";
+  editedCabalFile = "12dp9ar1k2y3qdvg6ngfpf9wzfrq7h24yg0hsswk3p6kdr9qb1z9";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
