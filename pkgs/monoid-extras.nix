@@ -5,6 +5,8 @@ mkDerivation {
   pname = "monoid-extras";
   version = "0.6.2";
   sha256 = "9ceec9125e4727c40bb1622319fb77f2d2fac39735f533afdb7f33e118b85de1";
+  revision = "1";
+  editedCabalFile = "1xl89p6qcir69qg0kn4443swl4kcgl3vm8dbfi86dgr5z6zvpxhc";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

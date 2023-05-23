@@ -3,6 +3,8 @@ mkDerivation {
   pname = "finite-typelits";
   version = "0.1.6.0";
   sha256 = "3046456b3b3b7a202da7dc61f909e5925f9eaa57d5e03ce81d3f76ca7d3b0438";
+  revision = "1";
+  editedCabalFile = "0v7m5hhkkj4wyfas6a9a59sxx05rvfmhnd2qwp0wryd40f52xwmr";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

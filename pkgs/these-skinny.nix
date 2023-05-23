@@ -3,8 +3,8 @@ mkDerivation {
   pname = "these-skinny";
   version = "0.7.5";
   sha256 = "726933193bb33d9731a2ed794c07c3ff8952fb0baef5ebbd7dc3b2a3e5746cd9";
-  revision = "1";
-  editedCabalFile = "1paqqcdbqr91gvvs0anq30pkdd37g70ql4v11lszl6dzjl6yy3d5";
+  revision = "2";
+  editedCabalFile = "158rp41bdzzz2hc17vn5c1j6llcmbirajv0hsq2d76j38nyh7d94";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

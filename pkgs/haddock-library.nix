@@ -6,8 +6,8 @@ mkDerivation {
   pname = "haddock-library";
   version = "1.11.0";
   sha256 = "7c075ec9a378b0a2d9d605e72135201e6c7ff316564f2c974113582f43bea20a";
-  revision = "1";
-  editedCabalFile = "0mqwr0vbpj9zw7f1p5kdd7hsr76gs1ijmh8h9hak47nphffi1fxv";
+  revision = "2";
+  editedCabalFile = "04hvk5q2x8j75z1yknfxa1607hwb8xx4k5bgdq8qmw2a5zkb5fyy";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -9,6 +9,8 @@ mkDerivation {
   pname = "scotty";
   version = "0.12.1";
   sha256 = "1e2a33ff37765d9e1de7fc7b8f20a75b91b008ada60c1e445df06c7fc614db4a";
+  revision = "1";
+  editedCabalFile = "04l4vr53can02jyl6yfxis61al03f4i1p5l2vmdwd8qb3g9026xs";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

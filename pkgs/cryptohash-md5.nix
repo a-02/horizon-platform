@@ -5,8 +5,8 @@ mkDerivation {
   pname = "cryptohash-md5";
   version = "0.11.101.0";
   sha256 = "3b08db0ae39df2b44e83053ad30d7546a4c6200a852c22a240a7e03ae1080f05";
-  revision = "1";
-  editedCabalFile = "0s2f5cd46lqymmbpcnzlxsim5qk8yrr52j5mmi31zrhd24b3bqln";
+  revision = "2";
+  editedCabalFile = "112lx16przdk80m269rqizma0lxaij52l4haspb0cd07rbgp50cd";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -23,7 +23,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "https://github.com/hvr/cryptohash-md5";
+  homepage = "https://github.com/haskell-hvr/cryptohash-md5";
   description = "Fast, pure and practical MD5 implementation";
   license = lib.licenses.bsd3;
   broken = false;

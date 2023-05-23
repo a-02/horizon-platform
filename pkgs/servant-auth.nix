@@ -5,8 +5,8 @@ mkDerivation {
   pname = "servant-auth";
   version = "0.4.1.0";
   sha256 = "add973fe8bcc1b68eaaf90a1ec8fd6933d11eabf3854f91371b77d6827b5ef21";
-  revision = "4";
-  editedCabalFile = "0qgaq8if56fh1ydx8crb24p5cb5axx3n1lnx8klvvkamwrbr870a";
+  revision = "5";
+  editedCabalFile = "0azlfs9dvzcf2r3kbm76wmalyhg1w0vi9gc4xlwp8m2n509qhbda";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -20,7 +20,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "http://github.com/haskell-servant/servant/servant-auth#readme";
+  homepage = "https://github.com/haskell-servant/servant/tree/master/servant-auth#readme";
   description = "Authentication combinators for servant";
   license = lib.licenses.bsd3;
   broken = false;

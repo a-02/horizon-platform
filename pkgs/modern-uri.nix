@@ -7,6 +7,8 @@ mkDerivation {
   pname = "modern-uri";
   version = "0.3.6.0";
   sha256 = "cf3c5b2cbbab9b8f3c171488ff8056dd1c37de011301090345689fc7138d43d2";
+  revision = "1";
+  editedCabalFile = "0bfg0m3iynx41am17l9gb8di3kaldz9129s34vsc1qx5y13dnwl3";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

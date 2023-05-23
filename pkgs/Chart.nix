@@ -5,6 +5,8 @@ mkDerivation {
   pname = "Chart";
   version = "1.9.4";
   sha256 = "35068f14d9100f3156b9d2cd86b928a20ec832f596412203ee65e814888d9d7a";
+  revision = "1";
+  editedCabalFile = "0l9irzb4zq5jhgl1rvwgxz6rrzxjndj4arjv7adlzs5zl43iazqr";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

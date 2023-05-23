@@ -8,6 +8,8 @@ mkDerivation {
   pname = "linear-base";
   version = "0.3.1";
   sha256 = "10ec4ba4068762362f9921e824ea06e3a69efa08d89ad593e8a5a7113d5fa8be";
+  revision = "1";
+  editedCabalFile = "153nkw2i7n22xzfj8q2xmzsh77pr7pay8v3gc1xli491qmsc0fcd";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

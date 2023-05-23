@@ -11,6 +11,8 @@ mkDerivation {
   pname = "snap-server";
   version = "1.1.2.1";
   sha256 = "a47457fd746db202711b6a6b34a8575daa291a01a99cd0900e639aadc06fca7e";
+  revision = "1";
+  editedCabalFile = "09ljp1m8lv2khp6m76sj96qa3gr5v19c5caz54jlvinj7k6bhhfm";
   configureFlags = [ "-fopenssl" ];
   isLibrary = true;
   isExecutable = true;

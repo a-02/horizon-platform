@@ -3,8 +3,8 @@ mkDerivation {
   pname = "setlocale";
   version = "1.0.0.10";
   sha256 = "3972ff10c22318f5451215dc886c1535fea5ab7dfefe5ce461b1603865423ba7";
-  revision = "2";
-  editedCabalFile = "1k4idj2xl9dg5nfz128xazrrydz9mgm3bbjrc0cyby8n3c0ij9x1";
+  revision = "3";
+  editedCabalFile = "1ich9zjmwc73ilblmbakl627mqpncyd79vnpkflms65qylqj6dvk";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
