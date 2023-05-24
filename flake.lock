@@ -106,11 +106,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1684842805,
-        "narHash": "sha256-nAh4KOMt4NkylxdArJL5TYE/25Uhsm8dEdNTh3mP8RE=",
+        "lastModified": 1684941550,
+        "narHash": "sha256-MOoPeMdE44onMg7p47rVEYR2xlob/Gs88InvzPB1aIE=",
         "ref": "sts-945",
-        "rev": "22168fcf69ff1a47819c5de3c03374d1c511d24f",
-        "revCount": 1055,
+        "rev": "6226e1cdda6d908a177706492de5fdbf3b3772b0",
+        "revCount": 1057,
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-core"
       },
