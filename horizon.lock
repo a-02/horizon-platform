@@ -1058,6 +1058,10 @@
   , mapValue =
       "cb70a83b40160c5206fe4f2bb548486e71f2ec461b3dbd0d3900c4bc638d5325"
   }
+, { mapKey = "hint"
+  , mapValue =
+      "d1be859e62cf62a0b7acaf11ba55820b0271db7943d64d968f6fb4678671f6e7"
+  }
 , { mapKey = "hlint"
   , mapValue =
       "de9cc7a97e0a5b79de08dddedc2bbdc0645d93db23108656b43d5328ba50599a"

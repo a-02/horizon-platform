@@ -531,6 +531,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hinotify = final.callPackage (./pkgs/hinotify.nix) { };
 
+  hint = final.callPackage (./pkgs/hint.nix) { };
+
   hlint = final.callPackage (./pkgs/hlint.nix) { };
 
   hls-alternate-number-format-plugin = final.callPackage (./pkgs/hls-alternate-number-format-plugin.nix) { };
