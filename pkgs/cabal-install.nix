@@ -10,8 +10,10 @@
 }:
 mkDerivation {
   pname = "cabal-install";
-  version = "3.10.1.0";
-  sha256 = "995de368555449230e0762b259377ed720798717f4dd26a4fa711e8e41c7838d";
+  version = "3.8.1.0";
+  sha256 = "61ce436f2e14e12bf07ea1c81402362f46275014cd841a76566f0766d0ea67e6";
+  revision = "3";
+  editedCabalFile = "14l2jvyrzhgkmgkrkhmb6cb1vy4pgcg3q8dgyg8vszpm0mb1ws77";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

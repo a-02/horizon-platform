@@ -260,11 +260,11 @@
   }
 , { mapKey = "cabal-install"
   , mapValue =
-      "4ab64ffdc186f5bb7a2b373d55379846962df7adbac7344a80d6e986cb50d0d7"
+      "fd2294df1599586608fc7dd0797a6095f473d35c91ab21d93503e28a99fa73c3"
   }
 , { mapKey = "cabal-install-solver"
   , mapValue =
-      "3e8e76bf69b3f8aae7fff83b7197fd0340c1a025d67439bb7c2840c09b9ae61a"
+      "83ab01d8bc94f20d343e44d059a87f5b104a998e8b4c44399e63a47372545418"
   }
 , { mapKey = "cache"
   , mapValue =
