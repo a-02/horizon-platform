@@ -151,7 +151,6 @@ let packages =
             (Some "cursor-dirforest-gen/")
       , cursor-fuzzy-time = H.callHackage "cursor-fuzzy-time" "0.0.0.0"
       , cursor-gen = H.callHackage "cursor-gen" "0.4.0.0"
-      , daemons = H.callHackage "daemons" "0.3.0"
       , data-binary-ieee754 = H.callHackage "data-binary-ieee754" "0.4.4"
       , data-ordlist = H.callHackage "data-ordlist" "0.4.7.0"
       , data-sketches = H.callHackage "data-sketches" "0.3.1.0"

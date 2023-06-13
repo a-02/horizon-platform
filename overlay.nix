@@ -231,8 +231,6 @@ final: prev: with pkgs.haskell.lib; {
 
   cursor-gen = final.callPackage (./pkgs/cursor-gen.nix) { };
 
-  daemons = final.callPackage (./pkgs/daemons.nix) { };
-
   data-binary-ieee754 = final.callPackage (./pkgs/data-binary-ieee754.nix) { };
 
   data-ordlist = final.callPackage (./pkgs/data-ordlist.nix) { };

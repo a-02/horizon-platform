@@ -458,10 +458,6 @@
   , mapValue =
       "9b88cb29fa27e0d1223fbc7c3e9c0a21077c7d65b7d717618c6516ecb8a56236"
   }
-, { mapKey = "daemons"
-  , mapValue =
-      "63a120fbeccf398388e5d18ab216e0b1fcfeb7e450846fa13239953d81ab9bb1"
-  }
 , { mapKey = "data-binary-ieee754"
   , mapValue =
       "745e2aaa3c9cc4da276e72edfd6de1db38fb65737a59f09410715cf965a13e06"
