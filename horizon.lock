@@ -204,19 +204,19 @@
   }
 , { mapKey = "beam-core"
   , mapValue =
-      "e5781709abdcd75d7c8583213b2c24a98857b977173168c1cd218b9e729607fd"
+      "18f9feef7f22ee326974bbdf35f161d8241cb2cc7af62bfa6491dc2a76142a68"
   }
 , { mapKey = "beam-migrate"
   , mapValue =
-      "6f93c2699c220069070f118f1318964f4fea17c5b35f616724b35b1ed4e0b11b"
+      "1f81869896d9ab2287bf25d66b5f5269bd2d3c20ed5600d1cc81ff02631e511a"
   }
 , { mapKey = "beam-postgres"
   , mapValue =
-      "4033bf629152fcafe3885a7cc795c663fd1361a3135e7b1cfabe67f9e1a52611"
+      "9e3707c147ac07e4d8db15c997bd21e3dae7417c2f3d1fe6dc6c3da496c3b9fd"
   }
 , { mapKey = "beam-sqlite"
   , mapValue =
-      "41a7228e807b688fe9a37a84cfc63610352419ce4217e84af6a6b8e4f1482d90"
+      "d0c50528c1e216654f103b366556b776c17ca10d9707ac1e1ebf4f4aa136cd7d"
   }
 , { mapKey = "bech32"
   , mapValue =
