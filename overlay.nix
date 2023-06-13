@@ -509,6 +509,8 @@ final: prev: with pkgs.haskell.lib; {
 
   haskell-src = final.callPackage (./pkgs/haskell-src.nix) { };
 
+  hdaemonize = final.callPackage (./pkgs/hdaemonize.nix) { };
+
   heaps = final.callPackage (./pkgs/heaps.nix) { };
 
   hedgehog-extras = final.callPackage (./pkgs/hedgehog-extras.nix) { };
