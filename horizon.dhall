@@ -84,8 +84,8 @@ let packages =
       , brick = H.callHackage "brick" "1.9"
       , bytes = H.callHackage "bytes" "0.17.2"
       , c2hs = H.callHackage "c2hs" "0.28.8"
-      , cabal-install = H.callHackage "cabal-install" "3.10.1.0"
-      , cabal-install-solver = H.callHackage "cabal-install-solver" "3.10.1.0"
+      , cabal-install = H.callHackage "cabal-install" "3.8.1.0"
+      , cabal-install-solver = H.callHackage "cabal-install-solver" "3.8.1.0"
       , cache = H.callHackage "cache" "0.1.3.0"
       , canonical-json = H.callHackage "canonical-json" "0.6.0.1"
       , casing = H.callHackage "casing" "0.1.4.1"
@@ -151,7 +151,6 @@ let packages =
             (Some "cursor-dirforest-gen/")
       , cursor-fuzzy-time = H.callHackage "cursor-fuzzy-time" "0.0.0.0"
       , cursor-gen = H.callHackage "cursor-gen" "0.4.0.0"
-      , daemons = H.callHackage "daemons" "0.3.0"
       , data-binary-ieee754 = H.callHackage "data-binary-ieee754" "0.4.4"
       , data-ordlist = H.callHackage "data-ordlist" "0.4.7.0"
       , data-sketches = H.callHackage "data-sketches" "0.3.1.0"
@@ -337,6 +336,7 @@ let packages =
           , H.CabalFlag.Disable "floskell"
           ]
       , haskell-src = H.callHackage "haskell-src" "1.0.4"
+      , hdaemonize = H.callHackage "hdaemonize" "0.5.6"
       , heaps = H.callHackage "heaps" "0.4"
       , hedgehog-extras = H.callHackage "hedgehog-extras" "0.4.5.1"
       , hedgehog-fn = H.callHackage "hedgehog-fn" "1.0"
@@ -352,7 +352,11 @@ let packages =
       , hie-compat = H.callHackage "hie-compat" "0.3.1.0"
       , hiedb = H.callHackage "hiedb" "0.4.3.0"
       , hinotify = H.callHackage "hinotify" "0.4.1"
-      , hint = H.callGit "https://github.com/haskell-hint/hint" "7803c34c8ae1d83c0f7c13fe6b30fcb3abd0ac51" (None H.Subdir)
+      , hint =
+          H.callGit
+            "https://github.com/haskell-hint/hint"
+            "7803c34c8ae1d83c0f7c13fe6b30fcb3abd0ac51"
+            (None H.Subdir)
       , hlint = H.callHackage "hlint" "3.5"
       , hls-alternate-number-format-plugin =
           H.callHackage "hls-alternate-number-format-plugin" "1.3.0.0"
@@ -566,7 +570,7 @@ let packages =
       , odd-jobs =
           H.callGit
             "https://github.com/saurabhnanda/odd-jobs"
-            "f6c7bbbcdb383d2eb487ad7fe427ec05a747c14f"
+            "60481132b229d22eda8efcd3392dd1df237bd968"
             (None H.Subdir)
       , one-liner = H.callHackage "one-liner" "2.1"
       , openapi3 = H.callHackage "openapi3" "3.2.3"
@@ -666,7 +670,7 @@ let packages =
       , replace-megaparsec = H.callHackage "replace-megaparsec" "1.4.5.0"
       , rerebase = H.callHackage "rerebase" "1.20"
       , resolv = H.callHackage "resolv" "0.1.2.0"
-      , resource-pool = H.callHackage "resource-pool" "0.4.0.0"
+      , resource-pool = H.callHackage "resource-pool" "0.3.1.0"
       , retrie = H.callHackage "retrie" "1.2.2"
       , retry = H.callHackage "retry" "0.9.3.1"
       , rope-utf16-splay = H.callHackage "rope-utf16-splay" "0.4.0.0"

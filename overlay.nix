@@ -231,8 +231,6 @@ final: prev: with pkgs.haskell.lib; {
 
   cursor-gen = final.callPackage (./pkgs/cursor-gen.nix) { };
 
-  daemons = final.callPackage (./pkgs/daemons.nix) { };
-
   data-binary-ieee754 = final.callPackage (./pkgs/data-binary-ieee754.nix) { };
 
   data-ordlist = final.callPackage (./pkgs/data-ordlist.nix) { };
@@ -508,6 +506,8 @@ final: prev: with pkgs.haskell.lib; {
   haskell-language-server = final.callPackage (./pkgs/haskell-language-server.nix) { };
 
   haskell-src = final.callPackage (./pkgs/haskell-src.nix) { };
+
+  hdaemonize = final.callPackage (./pkgs/hdaemonize.nix) { };
 
   heaps = final.callPackage (./pkgs/heaps.nix) { };
 

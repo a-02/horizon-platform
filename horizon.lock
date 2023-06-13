@@ -260,11 +260,11 @@
   }
 , { mapKey = "cabal-install"
   , mapValue =
-      "4ab64ffdc186f5bb7a2b373d55379846962df7adbac7344a80d6e986cb50d0d7"
+      "fd2294df1599586608fc7dd0797a6095f473d35c91ab21d93503e28a99fa73c3"
   }
 , { mapKey = "cabal-install-solver"
   , mapValue =
-      "3e8e76bf69b3f8aae7fff83b7197fd0340c1a025d67439bb7c2840c09b9ae61a"
+      "83ab01d8bc94f20d343e44d059a87f5b104a998e8b4c44399e63a47372545418"
   }
 , { mapKey = "cache"
   , mapValue =
@@ -457,10 +457,6 @@
 , { mapKey = "cursor-gen"
   , mapValue =
       "9b88cb29fa27e0d1223fbc7c3e9c0a21077c7d65b7d717618c6516ecb8a56236"
-  }
-, { mapKey = "daemons"
-  , mapValue =
-      "63a120fbeccf398388e5d18ab216e0b1fcfeb7e450846fa13239953d81ab9bb1"
   }
 , { mapKey = "data-binary-ieee754"
   , mapValue =
@@ -1013,6 +1009,10 @@
 , { mapKey = "haskell-src"
   , mapValue =
       "dd3f1bdd1290b58fed3eeafeaaba3c4b63b7900cdb5065483fbb5cc9f479ad08"
+  }
+, { mapKey = "hdaemonize"
+  , mapValue =
+      "ab4f90bf1de28057460801b3eb68e3785e2e5bba6227df52d511bf7c209905f1"
   }
 , { mapKey = "heaps"
   , mapValue =
@@ -1752,7 +1752,7 @@
   }
 , { mapKey = "odd-jobs"
   , mapValue =
-      "63a125646016dd066c0fb88d94901bcbc7fb54ead00cda68964dcffab32d0ad2"
+      "d7d651358d62761eabf0186a9dce78308d2af56504370ed223ba39333684ffba"
   }
 , { mapKey = "one-liner"
   , mapValue =
@@ -2120,7 +2120,7 @@
   }
 , { mapKey = "resource-pool"
   , mapValue =
-      "04416c9c464d59c6392a0cbf5b36702059bad320bf4b8cdba9f1fd780f20965d"
+      "17e94560c8817554b7841c7ad141ffb729343cc3084ae0d51484f912b337096a"
   }
 , { mapKey = "retrie"
   , mapValue =
