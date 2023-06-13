@@ -352,7 +352,11 @@ let packages =
       , hie-compat = H.callHackage "hie-compat" "0.3.1.0"
       , hiedb = H.callHackage "hiedb" "0.4.3.0"
       , hinotify = H.callHackage "hinotify" "0.4.1"
-      , hint = H.callGit "https://github.com/haskell-hint/hint" "7803c34c8ae1d83c0f7c13fe6b30fcb3abd0ac51" (None H.Subdir)
+      , hint =
+          H.callGit
+            "https://github.com/haskell-hint/hint"
+            "7803c34c8ae1d83c0f7c13fe6b30fcb3abd0ac51"
+            (None H.Subdir)
       , hlint = H.callHackage "hlint" "3.5"
       , hls-alternate-number-format-plugin =
           H.callHackage "hls-alternate-number-format-plugin" "1.3.0.0"
