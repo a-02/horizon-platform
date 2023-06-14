@@ -9,8 +9,8 @@ mkDerivation {
   version = "0.5.2.0";
   src = fetchgit {
     url = "https://github.com/haskell-beam/beam";
-    sha256 = "05yvc8hw0b2f8dg8lz8w1a2y90pwi10iwqa0b2xjhrlacwi0fci9";
-    rev = "94461937c5ca8b89f1ff1a60bde5bffe207315b4";
+    sha256 = "0mzik3yy8hsj7qkw43j7nsn1gxd2lpdn5s5826zi9vhpvs7gdyn4";
+    rev = "96e35be86dfffe4aa0b8190f7b8656e30cb36301";
     fetchSubmodules = true;
   };
   postUnpack = "sourceRoot+=/beam-sqlite/; echo source root reset to $sourceRoot";

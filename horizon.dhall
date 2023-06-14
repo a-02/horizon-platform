@@ -57,22 +57,22 @@ let packages =
       , beam-core =
           H.callGit
             "https://github.com/haskell-beam/beam"
-            "94461937c5ca8b89f1ff1a60bde5bffe207315b4"
+            "96e35be86dfffe4aa0b8190f7b8656e30cb36301"
             (Some "beam-core/")
       , beam-migrate =
           H.callGit
             "https://github.com/haskell-beam/beam"
-            "94461937c5ca8b89f1ff1a60bde5bffe207315b4"
+            "96e35be86dfffe4aa0b8190f7b8656e30cb36301"
             (Some "beam-migrate/")
       , beam-postgres =
           H.callGit
             "https://github.com/haskell-beam/beam"
-            "94461937c5ca8b89f1ff1a60bde5bffe207315b4"
+            "96e35be86dfffe4aa0b8190f7b8656e30cb36301"
             (Some "beam-postgres/")
       , beam-sqlite =
           H.callGit
             "https://github.com/haskell-beam/beam"
-            "94461937c5ca8b89f1ff1a60bde5bffe207315b4"
+            "96e35be86dfffe4aa0b8190f7b8656e30cb36301"
             (Some "beam-sqlite/")
       , bech32 = H.callHackage "bech32" "1.1.2"
       , bech32-th = H.callHackage "bech32-th" "1.1.1"
