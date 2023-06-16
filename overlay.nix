@@ -239,6 +239,8 @@ final: prev: with pkgs.haskell.lib; {
 
   data-ordlist = final.callPackage (./pkgs/data-ordlist.nix) { };
 
+  data-serializer = final.callPackage (./pkgs/data-serializer.nix) { };
+
   data-sketches = final.callPackage (./pkgs/data-sketches.nix) { };
 
   data-sketches-core = final.callPackage (./pkgs/data-sketches-core.nix) { };

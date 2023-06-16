@@ -156,6 +156,7 @@ let packages =
       , data-binary-ieee754 = H.callHackage "data-binary-ieee754" "0.4.4"
       , data-checked = H.callHackage "data-checked" "0.3"
       , data-ordlist = H.callHackage "data-ordlist" "0.4.7.0"
+      , data-serializer = H.callHackage "data-serializer" "0.3.5"
       , data-sketches = H.callHackage "data-sketches" "0.3.1.0"
       , data-sketches-core = H.callHackage "data-sketches-core" "0.1.0.0"
       , data-textual = H.callHackage "data-textual" "0.3.0.3"

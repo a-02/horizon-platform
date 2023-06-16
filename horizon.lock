@@ -474,6 +474,10 @@
   , mapValue =
       "8dcf1ab5ef0d1a0dbc51dbb5f43ea01e06906faded30a9d44979a32a7c19b9b4"
   }
+, { mapKey = "data-serializer"
+  , mapValue =
+      "09c8326ce4297e38399a5501d137f55ab0ca588ecaf80704231c61af9fda4180"
+  }
 , { mapKey = "data-sketches"
   , mapValue =
       "49ba027c062aa14555dcade901290342ad130078fe1b4dc82b42889d6a361db6"
