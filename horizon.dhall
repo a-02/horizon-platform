@@ -83,6 +83,8 @@ let packages =
       , breakpoint = H.callHackage "breakpoint" "0.1.2.1"
       , brick = H.callHackage "brick" "1.9"
       , bytes = H.callHackage "bytes" "0.17.2"
+      , bytestring-strict-builder =
+          H.callHackage "bytestring-strict-builder" "0.4.5.6"
       , c2hs = H.callHackage "c2hs" "0.28.8"
       , cabal-install = H.callHackage "cabal-install" "3.8.1.0"
       , cabal-install-solver = H.callHackage "cabal-install-solver" "3.8.1.0"

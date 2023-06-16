@@ -254,6 +254,10 @@
   , mapValue =
       "120f74c36c336bc91bd611b1bd49e3faf93fb4fab1757f000177afed1a9ac9f4"
   }
+, { mapKey = "bytestring-strict-builder"
+  , mapValue =
+      "2faa9baaba5c12368ff6f53edbc548241b414089a037d66067088882602b4ffa"
+  }
 , { mapKey = "c2hs"
   , mapValue =
       "6d6262823310cf14a23c4fb5e0374a16a29b0ca6f667e9d0510f17383c3951b0"
