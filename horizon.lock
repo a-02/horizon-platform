@@ -398,6 +398,10 @@
   , mapValue =
       "ab4a61eadafdd406c25391be3f8723f08855ebeec9c8ae342adc8618e96932e1"
   }
+, { mapKey = "contravariant-extras"
+  , mapValue =
+      "963d6ec64d29c7f839cbe1550e3ed2bce5459529634506e31ca7a7e9e9f51b6f"
+  }
 , { mapKey = "control-monad-free"
   , mapValue =
       "a4619d59f869cb6c50d170575eaa089e8bae3ba3e7b1cab53e795206df055912"

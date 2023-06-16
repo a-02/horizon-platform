@@ -126,6 +126,7 @@ let packages =
       , conduit-parse = H.callHackage "conduit-parse" "0.2.1.1"
       , constraints-extras = H.callHackage "constraints-extras" "0.4.0.0"
       , control-monad-free = H.callHackage "control-monad-free" "0.6.2"
+      , contravariant-extras = H.callHackage "contravariant-extras" "0.3.5.3"
       , cpphs = H.callHackage "cpphs" "1.20.9.1"
       , criterion = H.callHackage "criterion" "1.6.0.0"
       , crypto-pubkey-types = H.callHackage "crypto-pubkey-types" "0.4.3"

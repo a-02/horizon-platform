@@ -201,6 +201,8 @@ final: prev: with pkgs.haskell.lib; {
 
   constraints-extras = final.callPackage (./pkgs/constraints-extras.nix) { };
 
+  contravariant-extras = final.callPackage (./pkgs/contravariant-extras.nix) { };
+
   control-monad-free = final.callPackage (./pkgs/control-monad-free.nix) { };
 
   cpphs = final.callPackage (./pkgs/cpphs.nix) { };
