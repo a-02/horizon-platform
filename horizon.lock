@@ -2522,6 +2522,10 @@
   , mapValue =
       "0efa47092a230a4dc1cabef658dafbcb069d3a0c37a6b723ef5fb9a72b1a6d5a"
   }
+, { mapKey = "text-latin1"
+  , mapValue =
+      "77be4a6dd4517af77a1a7c24e2d8ee5b2b6e21602371bb94277a21a3ad0db4a3"
+  }
 , { mapKey = "text-printer"
   , mapValue =
       "b5a0cc78e5983230bb69ee372c7792f12a7fd9614edde7fc2b5b69585cb1818b"

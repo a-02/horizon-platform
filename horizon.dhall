@@ -809,6 +809,7 @@ let packages =
       , text-conversions = H.callHackage "text-conversions" "0.3.1.1"
       , text-display = H.callHackage "text-display" "0.0.4.0"
       , text-icu = H.callHackage "text-icu" "0.8.0.2"
+      , text-latin1 = H.callHackage "text-latin1" "0.3.1"
       , text-printer = H.callHackage "text-printer" "0.5.0.2"
       , text-rope = H.callHackage "text-rope" "0.2"
       , th-desugar = H.callHackage "th-desugar" "1.15"

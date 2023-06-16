@@ -1263,6 +1263,8 @@ final: prev: with pkgs.haskell.lib; {
 
   text-icu = final.callPackage (./pkgs/text-icu.nix) { };
 
+  text-latin1 = final.callPackage (./pkgs/text-latin1.nix) { };
+
   text-printer = final.callPackage (./pkgs/text-printer.nix) { };
 
   text-rope = final.callPackage (./pkgs/text-rope.nix) { };
