@@ -1007,6 +1007,8 @@ final: prev: with pkgs.haskell.lib; {
 
   postgres-options = final.callPackage (./pkgs/postgres-options.nix) { };
 
+  postgresql-binary = final.callPackage (./pkgs/postgresql-binary.nix) { };
+
   postgresql-libpq = final.callPackage (./pkgs/postgresql-libpq.nix) { };
 
   postgresql-migration = final.callPackage (./pkgs/postgresql-migration.nix) { };

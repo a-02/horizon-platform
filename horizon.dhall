@@ -640,6 +640,7 @@ let packages =
       , polysemy-vinyl = H.callHackage "polysemy-vinyl" "0.1.5.0"
       , polysemy-zoo = H.callHackage "polysemy-zoo" "0.8.1.0"
       , port-utils = H.callHackage "port-utils" "0.2.1.0"
+      , postgresql-binary = H.callHackage "postgresql-binary" "0.13.1"
       , postgres-options = H.callHackage "postgres-options" "0.2.0.0"
       , postgresql-libpq = H.callHackage "postgresql-libpq" "0.9.5.0"
       , postgresql-migration = H.callHackage "postgresql-migration" "0.2.1.6"

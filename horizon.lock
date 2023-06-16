@@ -2010,6 +2010,10 @@
   , mapValue =
       "6c933c650d29d124d42e6cf06de7452f448a50eaccc4e0fb6a71d8c443a61b9f"
   }
+, { mapKey = "postgresql-binary"
+  , mapValue =
+      "f72b466655600fefedbfc95b7d95359acf06fea0e6614d72e9d2d3294f25c67a"
+  }
 , { mapKey = "postgresql-libpq"
   , mapValue =
       "fb5b98161077394efc766528082c2b2d6b4c2314c3d4c62c4fe25aaf1de7a773"
