@@ -1046,6 +1046,10 @@
   , mapValue =
       "dd3f1bdd1290b58fed3eeafeaaba3c4b63b7900cdb5065483fbb5cc9f479ad08"
   }
+, { mapKey = "hasql"
+  , mapValue =
+      "34cd25afdc29108c6e9829a92cab2f0b3d55fa00e2426227627e64e15abf22eb"
+  }
 , { mapKey = "hdaemonize"
   , mapValue =
       "ab4f90bf1de28057460801b3eb68e3785e2e5bba6227df52d511bf7c209905f1"

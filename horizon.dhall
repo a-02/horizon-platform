@@ -346,6 +346,7 @@ let packages =
           , H.CabalFlag.Disable "floskell"
           ]
       , haskell-src = H.callHackage "haskell-src" "1.0.4"
+      , hasql = H.callHackage "hasql" "1.6.3"
       , hdaemonize = H.callHackage "hdaemonize" "0.5.6"
       , heaps = H.callHackage "heaps" "0.4"
       , hedgehog-extras = H.callHackage "hedgehog-extras" "0.4.5.1"

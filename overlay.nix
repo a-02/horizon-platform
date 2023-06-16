@@ -525,6 +525,8 @@ final: prev: with pkgs.haskell.lib; {
 
   haskell-src = final.callPackage (./pkgs/haskell-src.nix) { };
 
+  hasql = final.callPackage (./pkgs/hasql.nix) { };
+
   hdaemonize = final.callPackage (./pkgs/hdaemonize.nix) { };
 
   heaps = final.callPackage (./pkgs/heaps.nix) { };
