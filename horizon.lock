@@ -2506,6 +2506,10 @@
   , mapValue =
       "267f4235576ffa1f41efba967e858655f2e58c7c3bf91e62c5c965f221bc4cbd"
   }
+, { mapKey = "template-haskell-compat-v0208"
+  , mapValue =
+      "6f44dae0ce460c5d02e999e1a3131078f005a5be7c9ce266d7076f5c212d64f6"
+  }
 , { mapKey = "test-framework-smallcheck"
   , mapValue =
       "a73ab79e14c1c165908515d87b2d2ce9600889810dd3eced97b4492ce60dd708"

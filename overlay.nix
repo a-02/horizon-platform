@@ -1255,6 +1255,8 @@ final: prev: with pkgs.haskell.lib; {
 
   tdigest = final.callPackage (./pkgs/tdigest.nix) { };
 
+  template-haskell-compat-v0208 = final.callPackage (./pkgs/template-haskell-compat-v0208.nix) { };
+
   test-framework-smallcheck = final.callPackage (./pkgs/test-framework-smallcheck.nix) { };
 
   testing-feat = final.callPackage (./pkgs/testing-feat.nix) { };

@@ -803,6 +803,8 @@ let packages =
       , tasty-rerun = H.callHackage "tasty-rerun" "1.1.18"
       , tasty-wai = H.callHackage "tasty-wai" "0.1.2.0"
       , tdigest = H.callHackage "tdigest" "0.3"
+      , template-haskell-compat-v0208 =
+          H.callHackage "template-haskell-compat-v0208" "0.1.9.2"
       , test-framework-smallcheck =
           H.callHackage "test-framework-smallcheck" "0.2"
       , testing-feat = H.callHackage "testing-feat" "1.1.1.1"
