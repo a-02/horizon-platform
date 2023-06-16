@@ -243,6 +243,8 @@ final: prev: with pkgs.haskell.lib; {
 
   data-sketches-core = final.callPackage (./pkgs/data-sketches-core.nix) { };
 
+  data-textual = final.callPackage (./pkgs/data-textual.nix) { };
+
   dbus = final.callPackage (./pkgs/dbus.nix) { };
 
   deepseq-generics = final.callPackage (./pkgs/deepseq-generics.nix) { };

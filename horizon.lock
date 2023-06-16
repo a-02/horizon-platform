@@ -482,6 +482,10 @@
   , mapValue =
       "fa7f2b06e61a6eb6f4a704c1e56c827b692b335ca2a01861f3d889936d644170"
   }
+, { mapKey = "data-textual"
+  , mapValue =
+      "af15f3d1ff350076dbf0fd78309371c515c1b5ff7ff471fc2b43586586266e3e"
+  }
 , { mapKey = "dbus"
   , mapValue =
       "53b6df9019fe7d1b3da2167d7a790ac5a3766238a26de94d807e547ac1e84779"

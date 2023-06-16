@@ -158,6 +158,7 @@ let packages =
       , data-ordlist = H.callHackage "data-ordlist" "0.4.7.0"
       , data-sketches = H.callHackage "data-sketches" "0.3.1.0"
       , data-sketches-core = H.callHackage "data-sketches-core" "0.1.0.0"
+      , data-textual = H.callHackage "data-textual" "0.3.0.3"
       , dbus = H.callHackage "dbus" "1.2.28"
       , deepseq-generics = H.callHackage "deepseq-generics" "0.2.0.0"
       , deferred-folds = H.callHackage "deferred-folds" "0.9.18.3"
