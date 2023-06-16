@@ -235,6 +235,8 @@ final: prev: with pkgs.haskell.lib; {
 
   data-binary-ieee754 = final.callPackage (./pkgs/data-binary-ieee754.nix) { };
 
+  data-bword = final.callPackage (./pkgs/data-bword.nix) { };
+
   data-checked = final.callPackage (./pkgs/data-checked.nix) { };
 
   data-endian = final.callPackage (./pkgs/data-endian.nix) { };
