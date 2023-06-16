@@ -474,6 +474,10 @@
   , mapValue =
       "2bd00dfe8dd52f1b4018dca78c44cc7a40909619550a6c49b20bb86b805f14fd"
   }
+, { mapKey = "data-dword"
+  , mapValue =
+      "310100a03408bde7002169c4c15c7f8052ae57dcc8bdaef4f789cef9479ce1f4"
+  }
 , { mapKey = "data-endian"
   , mapValue =
       "140ab2b54e94c8f7817ac37836ef88794b7f2bd0867b7b07c4bac248a374b519"

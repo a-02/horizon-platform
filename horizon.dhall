@@ -155,6 +155,7 @@ let packages =
       , cursor-gen = H.callHackage "cursor-gen" "0.4.0.0"
       , data-binary-ieee754 = H.callHackage "data-binary-ieee754" "0.4.4"
       , data-bword = H.callHackage "data-bword" "0.1.0.2"
+      , data-dword = H.callHackage "data-dword" "0.3.2.1"
       , data-checked = H.callHackage "data-checked" "0.3"
       , data-endian = H.callHackage "data-endian" "0.1.1"
       , data-ordlist = H.callHackage "data-ordlist" "0.4.7.0"

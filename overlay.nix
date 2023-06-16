@@ -239,6 +239,8 @@ final: prev: with pkgs.haskell.lib; {
 
   data-checked = final.callPackage (./pkgs/data-checked.nix) { };
 
+  data-dword = final.callPackage (./pkgs/data-dword.nix) { };
+
   data-endian = final.callPackage (./pkgs/data-endian.nix) { };
 
   data-ordlist = final.callPackage (./pkgs/data-ordlist.nix) { };
