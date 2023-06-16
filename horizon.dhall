@@ -349,6 +349,7 @@ let packages =
       , hasql = H.callHackage "hasql" "1.6.3"
       , hdaemonize = H.callHackage "hdaemonize" "0.5.6"
       , heaps = H.callHackage "heaps" "0.4"
+      , headed-megaparsec = H.callHackage "headed-megaparsec" "0.2.1.1"
       , hedgehog-extras = H.callHackage "hedgehog-extras" "0.4.5.1"
       , hedgehog-fn = H.callHackage "hedgehog-fn" "1.0"
       , hedgehog-golden =

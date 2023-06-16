@@ -1054,6 +1054,10 @@
   , mapValue =
       "ab4f90bf1de28057460801b3eb68e3785e2e5bba6227df52d511bf7c209905f1"
   }
+, { mapKey = "headed-megaparsec"
+  , mapValue =
+      "f2c3aae26e23112730ed6571ee277311220c693c9f04dc88c8e7c518532b1b92"
+  }
 , { mapKey = "heaps"
   , mapValue =
       "e042b769e4e44e7f41cbc5c52e1ef3ca3956fd922dcc8070ff55e9e9e6d3d24d"

@@ -529,6 +529,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hdaemonize = final.callPackage (./pkgs/hdaemonize.nix) { };
 
+  headed-megaparsec = final.callPackage (./pkgs/headed-megaparsec.nix) { };
+
   heaps = final.callPackage (./pkgs/heaps.nix) { };
 
   hedgehog-extras = final.callPackage (./pkgs/hedgehog-extras.nix) { };
