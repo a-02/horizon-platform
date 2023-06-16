@@ -527,6 +527,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hasql = final.callPackage (./pkgs/hasql.nix) { };
 
+  hasql-th = final.callPackage (./pkgs/hasql-th.nix) { };
+
   hdaemonize = final.callPackage (./pkgs/hdaemonize.nix) { };
 
   headed-megaparsec = final.callPackage (./pkgs/headed-megaparsec.nix) { };
