@@ -1261,6 +1261,8 @@ final: prev: with pkgs.haskell.lib; {
 
   text-icu = final.callPackage (./pkgs/text-icu.nix) { };
 
+  text-printer = final.callPackage (./pkgs/text-printer.nix) { };
+
   text-rope = final.callPackage (./pkgs/text-rope.nix) { };
 
   th-desugar = final.callPackage (./pkgs/th-desugar.nix) { };

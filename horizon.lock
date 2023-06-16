@@ -2518,6 +2518,10 @@
   , mapValue =
       "0efa47092a230a4dc1cabef658dafbcb069d3a0c37a6b723ef5fb9a72b1a6d5a"
   }
+, { mapKey = "text-printer"
+  , mapValue =
+      "b5a0cc78e5983230bb69ee372c7792f12a7fd9614edde7fc2b5b69585cb1818b"
+  }
 , { mapKey = "text-rope"
   , mapValue =
       "d5815a8ab3e230cc689a477e5a2dc1f8db8632d6e9ff017bcd79dcf2c0d0bbcd"
