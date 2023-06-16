@@ -119,6 +119,8 @@ final: prev: with pkgs.haskell.lib; {
 
   binary-orphans = final.callPackage (./pkgs/binary-orphans.nix) { };
 
+  binary-parser = final.callPackage (./pkgs/binary-parser.nix) { };
+
   blaze-svg = final.callPackage (./pkgs/blaze-svg.nix) { };
 
   blaze-textual = final.callPackage (./pkgs/blaze-textual.nix) { };

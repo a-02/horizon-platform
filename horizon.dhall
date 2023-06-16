@@ -78,6 +78,7 @@ let packages =
       , bech32-th = H.callHackage "bech32-th" "1.1.1"
       , bin = H.callHackage "bin" "0.1.3"
       , binary-orphans = H.callHackage "binary-orphans" "1.0.4.1"
+      , binary-parser = H.callHackage "binary-parser" "0.5.7.3"
       , blaze-svg = H.callHackage "blaze-svg" "0.3.6.1"
       , blaze-textual = H.callHackage "blaze-textual" "0.2.3.1"
       , breakpoint = H.callHackage "breakpoint" "0.1.2.1"

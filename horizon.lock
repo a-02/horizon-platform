@@ -234,6 +234,10 @@
   , mapValue =
       "a53261c27531100833d7e097d7b5ebae3f5101c6e54f44216ed94992a21e8adf"
   }
+, { mapKey = "binary-parser"
+  , mapValue =
+      "640a5bdaf0c45155e9a46518e0fddae490271dae85c73859a7e654d50f67743b"
+  }
 , { mapKey = "blaze-svg"
   , mapValue =
       "6977fd19a31e74d534a7c3fb5533e3fadfe9e74af81df5a5c18dfcca63f11e6f"
