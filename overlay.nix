@@ -875,6 +875,8 @@ final: prev: with pkgs.haskell.lib; {
 
   network-info = final.callPackage (./pkgs/network-info.nix) { };
 
+  network-ip = final.callPackage (./pkgs/network-ip.nix) { };
+
   newtype = final.callPackage (./pkgs/newtype.nix) { };
 
   newtype-generics = final.callPackage (./pkgs/newtype-generics.nix) { };

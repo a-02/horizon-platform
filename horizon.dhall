@@ -567,6 +567,7 @@ let packages =
       , net-mqtt = H.callHackage "net-mqtt" "0.8.2.5"
       , network-conduit-tls = H.callHackage "network-conduit-tls" "1.3.2"
       , network-info = H.callHackage "network-info" "0.2.1"
+      , network-ip = H.callHackage "network-ip" "0.3.0.3"
       , newtype = H.callHackage "newtype" "0.2.2.0"
       , newtype-generics = H.callHackage "newtype-generics" "0.6.2"
       , nix-derivation = H.callHackage "nix-derivation" "1.1.2"

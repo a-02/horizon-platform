@@ -1746,6 +1746,10 @@
   , mapValue =
       "812f1fd3e6a297a2e4761ad70c73ced43535e254eaae6d185c3f939960df8e23"
   }
+, { mapKey = "network-ip"
+  , mapValue =
+      "5daa8bc34ca712ee4e6393a0984583e1e78e6d31194b2ed7f22a4a2ec16b83f0"
+  }
 , { mapKey = "newtype"
   , mapValue =
       "4efce3d9b06e7cd5040441d5e538db7e9ee15152dfed299c7cf7ae604e8169f8"
