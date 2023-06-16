@@ -1299,6 +1299,8 @@ final: prev: with pkgs.haskell.lib; {
 
   type-errors-pretty = final.callPackage (./pkgs/type-errors-pretty.nix) { };
 
+  type-hint = final.callPackage (./pkgs/type-hint.nix) { };
+
   typerep-map = final.callPackage (./pkgs/typerep-map.nix) { };
 
   uglymemo = final.callPackage (./pkgs/uglymemo.nix) { };

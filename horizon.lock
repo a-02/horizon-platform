@@ -2594,6 +2594,10 @@
   , mapValue =
       "49e91e572f304d0f4b86ab9978a52ed477c3aecfed66f53998c34413d3ed3660"
   }
+, { mapKey = "type-hint"
+  , mapValue =
+      "a1d022397705b4fa57a56c20a09625818c00462ce204d6e87e40c484d1936dd2"
+  }
 , { mapKey = "typerep-map"
   , mapValue =
       "fa3e5c9455c12d0d41c359b25d40ef4b574cdcb6328b04763c8dfe6e7cbd7c1c"

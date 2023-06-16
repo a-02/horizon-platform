@@ -831,6 +831,7 @@ let packages =
       , tuple = H.callHackage "tuple" "0.3.0.2"
       , type-errors = H.callHackage "type-errors" "0.2.0.2"
       , type-errors-pretty = H.callHackage "type-errors-pretty" "0.0.1.2"
+      , type-hint = H.callHackage "type-hint" "0.1"
       , typerep-map = H.callHackage "typerep-map" "0.6.0.0"
       , uglymemo = H.callHackage "uglymemo" "0.1.0.1"
       , unagi-chan = H.callHackage "unagi-chan" "0.4.1.4"
