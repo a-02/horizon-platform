@@ -649,6 +649,7 @@ let packages =
       , postgresql-simple = H.callHackage "postgresql-simple" "0.6.5"
       , postgresql-simple-migration =
           H.callHackage "postgresql-simple-migration" "0.1.15.0"
+      , postgresql-syntax = H.callHackage "postgresql-syntax" "0.4.1"
       , pqueue = H.callHackage "pqueue" "1.4.3.0"
       , pretty-relative-time = H.callHackage "pretty-relative-time" "0.3.0.0"
       , primes = H.callHackage "primes" "0.2.1.0"

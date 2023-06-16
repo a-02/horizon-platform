@@ -2038,6 +2038,10 @@
   , mapValue =
       "c3984fff76f63bb4df429372acb1b68f414e63de21377e2bbc852b1e3d9e6bba"
   }
+, { mapKey = "postgresql-syntax"
+  , mapValue =
+      "465fb6f325ada1410d3f00e02309798bbf573cb53824d28323f6ed4309a071eb"
+  }
 , { mapKey = "pqueue"
   , mapValue =
       "ec14ad40754702507e00c6b0d1d52e9918a5c3c3ed49bb3f778ff8ff19478458"

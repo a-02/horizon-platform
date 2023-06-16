@@ -1021,6 +1021,8 @@ final: prev: with pkgs.haskell.lib; {
 
   postgresql-simple-migration = final.callPackage (./pkgs/postgresql-simple-migration.nix) { };
 
+  postgresql-syntax = final.callPackage (./pkgs/postgresql-syntax.nix) { };
+
   pqueue = final.callPackage (./pkgs/pqueue.nix) { };
 
   pretty-relative-time = final.callPackage (./pkgs/pretty-relative-time.nix) { };
