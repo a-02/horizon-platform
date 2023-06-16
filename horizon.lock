@@ -466,6 +466,10 @@
   , mapValue =
       "745e2aaa3c9cc4da276e72edfd6de1db38fb65737a59f09410715cf965a13e06"
   }
+, { mapKey = "data-checked"
+  , mapValue =
+      "2bd00dfe8dd52f1b4018dca78c44cc7a40909619550a6c49b20bb86b805f14fd"
+  }
 , { mapKey = "data-ordlist"
   , mapValue =
       "8dcf1ab5ef0d1a0dbc51dbb5f43ea01e06906faded30a9d44979a32a7c19b9b4"

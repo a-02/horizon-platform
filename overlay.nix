@@ -235,6 +235,8 @@ final: prev: with pkgs.haskell.lib; {
 
   data-binary-ieee754 = final.callPackage (./pkgs/data-binary-ieee754.nix) { };
 
+  data-checked = final.callPackage (./pkgs/data-checked.nix) { };
+
   data-ordlist = final.callPackage (./pkgs/data-ordlist.nix) { };
 
   data-sketches = final.callPackage (./pkgs/data-sketches.nix) { };
