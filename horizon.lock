@@ -234,6 +234,10 @@
   , mapValue =
       "a53261c27531100833d7e097d7b5ebae3f5101c6e54f44216ed94992a21e8adf"
   }
+, { mapKey = "binary-parser"
+  , mapValue =
+      "640a5bdaf0c45155e9a46518e0fddae490271dae85c73859a7e654d50f67743b"
+  }
 , { mapKey = "blaze-svg"
   , mapValue =
       "6977fd19a31e74d534a7c3fb5533e3fadfe9e74af81df5a5c18dfcca63f11e6f"
@@ -253,6 +257,10 @@
 , { mapKey = "bytes"
   , mapValue =
       "120f74c36c336bc91bd611b1bd49e3faf93fb4fab1757f000177afed1a9ac9f4"
+  }
+, { mapKey = "bytestring-strict-builder"
+  , mapValue =
+      "2faa9baaba5c12368ff6f53edbc548241b414089a037d66067088882602b4ffa"
   }
 , { mapKey = "c2hs"
   , mapValue =
@@ -394,6 +402,10 @@
   , mapValue =
       "ab4a61eadafdd406c25391be3f8723f08855ebeec9c8ae342adc8618e96932e1"
   }
+, { mapKey = "contravariant-extras"
+  , mapValue =
+      "963d6ec64d29c7f839cbe1550e3ed2bce5459529634506e31ca7a7e9e9f51b6f"
+  }
 , { mapKey = "control-monad-free"
   , mapValue =
       "a4619d59f869cb6c50d170575eaa089e8bae3ba3e7b1cab53e795206df055912"
@@ -462,9 +474,29 @@
   , mapValue =
       "745e2aaa3c9cc4da276e72edfd6de1db38fb65737a59f09410715cf965a13e06"
   }
+, { mapKey = "data-bword"
+  , mapValue =
+      "03c9898e4aba0352b1559ab9cc7f697adb1eebb22fe907eb3af2fa75e2916db8"
+  }
+, { mapKey = "data-checked"
+  , mapValue =
+      "2bd00dfe8dd52f1b4018dca78c44cc7a40909619550a6c49b20bb86b805f14fd"
+  }
+, { mapKey = "data-dword"
+  , mapValue =
+      "310100a03408bde7002169c4c15c7f8052ae57dcc8bdaef4f789cef9479ce1f4"
+  }
+, { mapKey = "data-endian"
+  , mapValue =
+      "140ab2b54e94c8f7817ac37836ef88794b7f2bd0867b7b07c4bac248a374b519"
+  }
 , { mapKey = "data-ordlist"
   , mapValue =
       "8dcf1ab5ef0d1a0dbc51dbb5f43ea01e06906faded30a9d44979a32a7c19b9b4"
+  }
+, { mapKey = "data-serializer"
+  , mapValue =
+      "09c8326ce4297e38399a5501d137f55ab0ca588ecaf80704231c61af9fda4180"
   }
 , { mapKey = "data-sketches"
   , mapValue =
@@ -473,6 +505,10 @@
 , { mapKey = "data-sketches-core"
   , mapValue =
       "fa7f2b06e61a6eb6f4a704c1e56c827b692b335ca2a01861f3d889936d644170"
+  }
+, { mapKey = "data-textual"
+  , mapValue =
+      "af15f3d1ff350076dbf0fd78309371c515c1b5ff7ff471fc2b43586586266e3e"
   }
 , { mapKey = "dbus"
   , mapValue =
@@ -1010,9 +1046,21 @@
   , mapValue =
       "dd3f1bdd1290b58fed3eeafeaaba3c4b63b7900cdb5065483fbb5cc9f479ad08"
   }
+, { mapKey = "hasql"
+  , mapValue =
+      "34cd25afdc29108c6e9829a92cab2f0b3d55fa00e2426227627e64e15abf22eb"
+  }
+, { mapKey = "hasql-th"
+  , mapValue =
+      "3044c356f1d3d408da4205d71925a830f81857571b753f6ee745423b75471279"
+  }
 , { mapKey = "hdaemonize"
   , mapValue =
       "ab4f90bf1de28057460801b3eb68e3785e2e5bba6227df52d511bf7c209905f1"
+  }
+, { mapKey = "headed-megaparsec"
+  , mapValue =
+      "f2c3aae26e23112730ed6571ee277311220c693c9f04dc88c8e7c518532b1b92"
   }
 , { mapKey = "heaps"
   , mapValue =
@@ -1718,6 +1766,10 @@
   , mapValue =
       "812f1fd3e6a297a2e4761ad70c73ced43535e254eaae6d185c3f939960df8e23"
   }
+, { mapKey = "network-ip"
+  , mapValue =
+      "5daa8bc34ca712ee4e6393a0984583e1e78e6d31194b2ed7f22a4a2ec16b83f0"
+  }
 , { mapKey = "newtype"
   , mapValue =
       "4efce3d9b06e7cd5040441d5e538db7e9ee15152dfed299c7cf7ae604e8169f8"
@@ -1970,6 +2022,10 @@
   , mapValue =
       "6c933c650d29d124d42e6cf06de7452f448a50eaccc4e0fb6a71d8c443a61b9f"
   }
+, { mapKey = "postgresql-binary"
+  , mapValue =
+      "f72b466655600fefedbfc95b7d95359acf06fea0e6614d72e9d2d3294f25c67a"
+  }
 , { mapKey = "postgresql-libpq"
   , mapValue =
       "fb5b98161077394efc766528082c2b2d6b4c2314c3d4c62c4fe25aaf1de7a773"
@@ -1985,6 +2041,10 @@
 , { mapKey = "postgresql-simple-migration"
   , mapValue =
       "c3984fff76f63bb4df429372acb1b68f414e63de21377e2bbc852b1e3d9e6bba"
+  }
+, { mapKey = "postgresql-syntax"
+  , mapValue =
+      "465fb6f325ada1410d3f00e02309798bbf573cb53824d28323f6ed4309a071eb"
   }
 , { mapKey = "pqueue"
   , mapValue =
@@ -2474,6 +2534,10 @@
   , mapValue =
       "267f4235576ffa1f41efba967e858655f2e58c7c3bf91e62c5c965f221bc4cbd"
   }
+, { mapKey = "template-haskell-compat-v0208"
+  , mapValue =
+      "6f44dae0ce460c5d02e999e1a3131078f005a5be7c9ce266d7076f5c212d64f6"
+  }
 , { mapKey = "test-framework-smallcheck"
   , mapValue =
       "a73ab79e14c1c165908515d87b2d2ce9600889810dd3eced97b4492ce60dd708"
@@ -2513,6 +2577,14 @@
 , { mapKey = "text-icu"
   , mapValue =
       "0efa47092a230a4dc1cabef658dafbcb069d3a0c37a6b723ef5fb9a72b1a6d5a"
+  }
+, { mapKey = "text-latin1"
+  , mapValue =
+      "77be4a6dd4517af77a1a7c24e2d8ee5b2b6e21602371bb94277a21a3ad0db4a3"
+  }
+, { mapKey = "text-printer"
+  , mapValue =
+      "b5a0cc78e5983230bb69ee372c7792f12a7fd9614edde7fc2b5b69585cb1818b"
   }
 , { mapKey = "text-rope"
   , mapValue =
@@ -2589,6 +2661,10 @@
 , { mapKey = "type-errors-pretty"
   , mapValue =
       "49e91e572f304d0f4b86ab9978a52ed477c3aecfed66f53998c34413d3ed3660"
+  }
+, { mapKey = "type-hint"
+  , mapValue =
+      "a1d022397705b4fa57a56c20a09625818c00462ce204d6e87e40c484d1936dd2"
   }
 , { mapKey = "typerep-map"
   , mapValue =

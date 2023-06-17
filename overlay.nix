@@ -119,6 +119,8 @@ final: prev: with pkgs.haskell.lib; {
 
   binary-orphans = final.callPackage (./pkgs/binary-orphans.nix) { };
 
+  binary-parser = final.callPackage (./pkgs/binary-parser.nix) { };
+
   blaze-svg = final.callPackage (./pkgs/blaze-svg.nix) { };
 
   blaze-textual = final.callPackage (./pkgs/blaze-textual.nix) { };
@@ -128,6 +130,8 @@ final: prev: with pkgs.haskell.lib; {
   brick = final.callPackage (./pkgs/brick.nix) { };
 
   bytes = final.callPackage (./pkgs/bytes.nix) { };
+
+  bytestring-strict-builder = final.callPackage (./pkgs/bytestring-strict-builder.nix) { };
 
   c2hs = final.callPackage (./pkgs/c2hs.nix) { };
 
@@ -199,6 +203,8 @@ final: prev: with pkgs.haskell.lib; {
 
   constraints-extras = final.callPackage (./pkgs/constraints-extras.nix) { };
 
+  contravariant-extras = final.callPackage (./pkgs/contravariant-extras.nix) { };
+
   control-monad-free = final.callPackage (./pkgs/control-monad-free.nix) { };
 
   cpphs = final.callPackage (./pkgs/cpphs.nix) { };
@@ -233,11 +239,23 @@ final: prev: with pkgs.haskell.lib; {
 
   data-binary-ieee754 = final.callPackage (./pkgs/data-binary-ieee754.nix) { };
 
+  data-bword = final.callPackage (./pkgs/data-bword.nix) { };
+
+  data-checked = final.callPackage (./pkgs/data-checked.nix) { };
+
+  data-dword = final.callPackage (./pkgs/data-dword.nix) { };
+
+  data-endian = final.callPackage (./pkgs/data-endian.nix) { };
+
   data-ordlist = final.callPackage (./pkgs/data-ordlist.nix) { };
+
+  data-serializer = final.callPackage (./pkgs/data-serializer.nix) { };
 
   data-sketches = final.callPackage (./pkgs/data-sketches.nix) { };
 
   data-sketches-core = final.callPackage (./pkgs/data-sketches-core.nix) { };
+
+  data-textual = final.callPackage (./pkgs/data-textual.nix) { };
 
   dbus = final.callPackage (./pkgs/dbus.nix) { };
 
@@ -507,7 +525,13 @@ final: prev: with pkgs.haskell.lib; {
 
   haskell-src = final.callPackage (./pkgs/haskell-src.nix) { };
 
+  hasql = final.callPackage (./pkgs/hasql.nix) { };
+
+  hasql-th = final.callPackage (./pkgs/hasql-th.nix) { };
+
   hdaemonize = final.callPackage (./pkgs/hdaemonize.nix) { };
+
+  headed-megaparsec = final.callPackage (./pkgs/headed-megaparsec.nix) { };
 
   heaps = final.callPackage (./pkgs/heaps.nix) { };
 
@@ -861,6 +885,8 @@ final: prev: with pkgs.haskell.lib; {
 
   network-info = final.callPackage (./pkgs/network-info.nix) { };
 
+  network-ip = final.callPackage (./pkgs/network-ip.nix) { };
+
   newtype = final.callPackage (./pkgs/newtype.nix) { };
 
   newtype-generics = final.callPackage (./pkgs/newtype-generics.nix) { };
@@ -987,6 +1013,8 @@ final: prev: with pkgs.haskell.lib; {
 
   postgres-options = final.callPackage (./pkgs/postgres-options.nix) { };
 
+  postgresql-binary = final.callPackage (./pkgs/postgresql-binary.nix) { };
+
   postgresql-libpq = final.callPackage (./pkgs/postgresql-libpq.nix) { };
 
   postgresql-migration = final.callPackage (./pkgs/postgresql-migration.nix) { };
@@ -994,6 +1022,8 @@ final: prev: with pkgs.haskell.lib; {
   postgresql-simple = final.callPackage (./pkgs/postgresql-simple.nix) { };
 
   postgresql-simple-migration = final.callPackage (./pkgs/postgresql-simple-migration.nix) { };
+
+  postgresql-syntax = final.callPackage (./pkgs/postgresql-syntax.nix) { };
 
   pqueue = final.callPackage (./pkgs/pqueue.nix) { };
 
@@ -1239,6 +1269,8 @@ final: prev: with pkgs.haskell.lib; {
 
   tdigest = final.callPackage (./pkgs/tdigest.nix) { };
 
+  template-haskell-compat-v0208 = final.callPackage (./pkgs/template-haskell-compat-v0208.nix) { };
+
   test-framework-smallcheck = final.callPackage (./pkgs/test-framework-smallcheck.nix) { };
 
   testing-feat = final.callPackage (./pkgs/testing-feat.nix) { };
@@ -1258,6 +1290,10 @@ final: prev: with pkgs.haskell.lib; {
   text-display = final.callPackage (./pkgs/text-display.nix) { };
 
   text-icu = final.callPackage (./pkgs/text-icu.nix) { };
+
+  text-latin1 = final.callPackage (./pkgs/text-latin1.nix) { };
+
+  text-printer = final.callPackage (./pkgs/text-printer.nix) { };
 
   text-rope = final.callPackage (./pkgs/text-rope.nix) { };
 
@@ -1296,6 +1332,8 @@ final: prev: with pkgs.haskell.lib; {
   type-errors = final.callPackage (./pkgs/type-errors.nix) { };
 
   type-errors-pretty = final.callPackage (./pkgs/type-errors-pretty.nix) { };
+
+  type-hint = final.callPackage (./pkgs/type-hint.nix) { };
 
   typerep-map = final.callPackage (./pkgs/typerep-map.nix) { };
 
