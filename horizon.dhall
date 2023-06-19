@@ -349,6 +349,7 @@ let packages =
           ]
       , haskell-src = H.callHackage "haskell-src" "1.0.4"
       , hasql = H.callHackage "hasql" "1.6.3"
+      , hasql-explain-tests = H.callHackage "hasql-explain-tests" "0.1.0.0"
       , hasql-migration = H.callHackage "hasql-migration" "0.3.0"
       , hasql-th = H.callHackage "hasql-th" "0.4.0.18"
       , hasql-transaction = H.callHackage "hasql-transaction" "1.0.1.2"
