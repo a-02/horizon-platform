@@ -1054,6 +1054,10 @@
   , mapValue =
       "34cd25afdc29108c6e9829a92cab2f0b3d55fa00e2426227627e64e15abf22eb"
   }
+, { mapKey = "hasql-migration"
+  , mapValue =
+      "ea944b57a803fb0f1ec78c1d31d57579382002b54f813163d09fe18ed85c5a9e"
+  }
 , { mapKey = "hasql-th"
   , mapValue =
       "3044c356f1d3d408da4205d71925a830f81857571b753f6ee745423b75471279"

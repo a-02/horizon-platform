@@ -529,6 +529,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hasql = final.callPackage (./pkgs/hasql.nix) { };
 
+  hasql-migration = final.callPackage (./pkgs/hasql-migration.nix) { };
+
   hasql-th = final.callPackage (./pkgs/hasql-th.nix) { };
 
   hasql-transaction = final.callPackage (./pkgs/hasql-transaction.nix) { };
