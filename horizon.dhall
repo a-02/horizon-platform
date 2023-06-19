@@ -350,6 +350,7 @@ let packages =
       , haskell-src = H.callHackage "haskell-src" "1.0.4"
       , hasql = H.callHackage "hasql" "1.6.3"
       , hasql-th = H.callHackage "hasql-th" "0.4.0.18"
+      , hasql-transaction = H.callHackage "hasql-transaction" "1.0.1.2"
       , hdaemonize = H.callHackage "hdaemonize" "0.5.6"
       , heaps = H.callHackage "heaps" "0.4"
       , headed-megaparsec = H.callHackage "headed-megaparsec" "0.2.1.1"

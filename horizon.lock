@@ -1058,6 +1058,10 @@
   , mapValue =
       "3044c356f1d3d408da4205d71925a830f81857571b753f6ee745423b75471279"
   }
+, { mapKey = "hasql-transaction"
+  , mapValue =
+      "d4a5470b3b869fb04e496de9ef6477a27a53242ff7cbf27d9d21443b83cf609e"
+  }
 , { mapKey = "hdaemonize"
   , mapValue =
       "ab4f90bf1de28057460801b3eb68e3785e2e5bba6227df52d511bf7c209905f1"
