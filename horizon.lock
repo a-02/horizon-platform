@@ -262,6 +262,10 @@
   , mapValue =
       "2faa9baaba5c12368ff6f53edbc548241b414089a037d66067088882602b4ffa"
   }
+, { mapKey = "bytestring-tree-builder"
+  , mapValue =
+      "0f4a7b167f0c5bd67969996be5fd56bc270ec90aa5f19fad72af2f35aca2bc12"
+  }
 , { mapKey = "c2hs"
   , mapValue =
       "6d6262823310cf14a23c4fb5e0374a16a29b0ca6f667e9d0510f17383c3951b0"
@@ -1053,6 +1057,10 @@
 , { mapKey = "hasql-th"
   , mapValue =
       "3044c356f1d3d408da4205d71925a830f81857571b753f6ee745423b75471279"
+  }
+, { mapKey = "hasql-transaction"
+  , mapValue =
+      "d4a5470b3b869fb04e496de9ef6477a27a53242ff7cbf27d9d21443b83cf609e"
   }
 , { mapKey = "hdaemonize"
   , mapValue =
