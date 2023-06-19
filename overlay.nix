@@ -133,6 +133,8 @@ final: prev: with pkgs.haskell.lib; {
 
   bytestring-strict-builder = final.callPackage (./pkgs/bytestring-strict-builder.nix) { };
 
+  bytestring-tree-builder = final.callPackage (./pkgs/bytestring-tree-builder.nix) { };
+
   c2hs = final.callPackage (./pkgs/c2hs.nix) { };
 
   cabal-install = final.callPackage (./pkgs/cabal-install.nix) { };
