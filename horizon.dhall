@@ -563,6 +563,7 @@ let packages =
       , monad-loops = H.callHackage "monad-loops" "0.4.3"
       , monad-primitive = H.callHackage "monad-primitive" "0.1"
       , monad-time = H.callHackage "monad-time" "0.4.0.0"
+      , monad-time-effectful = H.callHackage "monad-time-effectful" "1.0.0.0"
       , monadlist = H.callHackage "monadlist" "0.0.2"
       , monads-tf = H.callHackage "monads-tf" "0.1.0.3"
       , monoid-extras = H.callHackage "monoid-extras" "0.6.2"
@@ -839,11 +840,6 @@ let packages =
       , threads = H.callHackage "threads" "0.5.1.7"
       , tidal = H.callHackage "tidal" "1.9.4"
       , tidal-link = H.callHackage "tidal-link" "1.0.1"
-      , time-effectful =
-          H.callGit
-            "https://github.com/haskell-effectful/time-effectful"
-            "e212239b685e1ecf7ee95dd1e944cc563351907f"
-            (None H.Subdir)
       , time-locale-compat = H.callHackage "time-locale-compat" "0.1.1.5"
       , time-units = H.callHackage "time-units" "1.0.0"
       , timeit = H.callHackage "timeit" "2.0"

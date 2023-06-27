@@ -1726,6 +1726,10 @@
   , mapValue =
       "3a13f33e03b043747119f51c17318c8b0ec5a08e12464977220fd7c15cddc7ad"
   }
+, { mapKey = "monad-time-effectful"
+  , mapValue =
+      "7419516c5bc58e5d6f9ec93a37d195da1e6c9c0f516bcfd7233bd6c834af24fc"
+  }
 , { mapKey = "monadlist"
   , mapValue =
       "d4878c00c84ce9060ff377c36c5813b39bbf64ce7183c8700e07693a21f0a8b6"
@@ -2633,10 +2637,6 @@
 , { mapKey = "tidal-link"
   , mapValue =
       "a5dede4b56004213341b593cba02b66a6d2f2edeb3442c88d4f570d92e78302f"
-  }
-, { mapKey = "time-effectful"
-  , mapValue =
-      "07f9a619d9d495aeaa135cbf02cfb5acfcdc36f4bdea3e9f6268b401c2b82722"
   }
 , { mapKey = "time-locale-compat"
   , mapValue =

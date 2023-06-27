@@ -865,6 +865,8 @@ final: prev: with pkgs.haskell.lib; {
 
   monad-time = final.callPackage (./pkgs/monad-time.nix) { };
 
+  monad-time-effectful = final.callPackage (./pkgs/monad-time-effectful.nix) { };
+
   monadlist = final.callPackage (./pkgs/monadlist.nix) { };
 
   monads-tf = final.callPackage (./pkgs/monads-tf.nix) { };
@@ -1318,8 +1320,6 @@ final: prev: with pkgs.haskell.lib; {
   tidal = final.callPackage (./pkgs/tidal.nix) { };
 
   tidal-link = final.callPackage (./pkgs/tidal-link.nix) { };
-
-  time-effectful = final.callPackage (./pkgs/time-effectful.nix) { };
 
   time-locale-compat = final.callPackage (./pkgs/time-locale-compat.nix) { };
 
