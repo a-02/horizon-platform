@@ -1824,7 +1824,7 @@
   }
 , { mapKey = "odd-jobs"
   , mapValue =
-      "d7d651358d62761eabf0186a9dce78308d2af56504370ed223ba39333684ffba"
+      "6c6b0734fbf348dcc2efacfd0cf447ae99567e158f14aecd0f82ce08accc99e7"
   }
 , { mapKey = "one-liner"
   , mapValue =
@@ -1972,7 +1972,7 @@
   }
 , { mapKey = "pg-transact-effectful"
   , mapValue =
-      "61c47f7741f89eb6271134eb1b2aad9789f5ad45d75dc3531b850bd3b53a434d"
+      "5968b234115cfe7f86a0d57c8f538f030c2e620d35534a38130f3be56d117b21"
   }
 , { mapKey = "pipes"
   , mapValue =
@@ -2200,7 +2200,7 @@
   }
 , { mapKey = "resource-pool"
   , mapValue =
-      "17e94560c8817554b7841c7ad141ffb729343cc3084ae0d51484f912b337096a"
+      "04416c9c464d59c6392a0cbf5b36702059bad320bf4b8cdba9f1fd780f20965d"
   }
 , { mapKey = "retrie"
   , mapValue =

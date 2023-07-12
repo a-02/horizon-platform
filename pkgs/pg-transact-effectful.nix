@@ -1,4 +1,4 @@
-{ mkDerivation, base, effectful-core, fetchgit, lib, mtl
+{ mkDerivation, base, deepseq, effectful-core, fetchgit, lib, mtl
 , pg-transact, postgresql-simple, resource-pool
 }:
 mkDerivation {
@@ -6,15 +6,16 @@ mkDerivation {
   version = "0.0.1.0";
   src = fetchgit {
     url = "https://github.com/Kleidukos/pg-transact-effectful";
-    sha256 = "1ijrppsyilcf5079hdh711sdq8mc3qy1p9v6p6zvp9sxj52macj5";
-    rev = "45730b124c7c21f1dcfd85667fda1c19b8ec9723";
+    sha256 = "1m1na8q1hm74kdwarjqjpqlrlig16h5js5qisfl1s021gy916bvv";
+    rev = "db6fa0624c6a7dbd39274a0403b7087ae094fe4b";
     fetchSubmodules = true;
   };
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base effectful-core mtl pg-transact postgresql-simple resource-pool
+    base deepseq effectful-core mtl pg-transact postgresql-simple
+    resource-pool
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

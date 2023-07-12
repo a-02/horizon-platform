@@ -590,7 +590,7 @@ let packages =
       , odd-jobs =
           H.callGit
             "https://github.com/saurabhnanda/odd-jobs"
-            "60481132b229d22eda8efcd3392dd1df237bd968"
+            "51c7443"
             (None H.Subdir)
       , one-liner = H.callHackage "one-liner" "2.1"
       , openapi3 = H.callHackage "openapi3" "3.2.3"
@@ -631,7 +631,7 @@ let packages =
       , pg-transact-effectful =
           H.callGit
             "https://github.com/Kleidukos/pg-transact-effectful"
-            "45730b124c7c21f1dcfd85667fda1c19b8ec9723"
+            "db6fa06"
             (None H.Subdir)
       , pipes = H.callHackage "pipes" "4.3.16"
       , pipes-safe = H.callHackage "pipes-safe" "2.3.4"
@@ -692,7 +692,7 @@ let packages =
       , replace-megaparsec = H.callHackage "replace-megaparsec" "1.4.5.0"
       , rerebase = H.callHackage "rerebase" "1.20"
       , resolv = H.callHackage "resolv" "0.1.2.0"
-      , resource-pool = H.callHackage "resource-pool" "0.3.1.0"
+      , resource-pool = H.callHackage "resource-pool" "0.4.0.0"
       , retrie = H.callHackage "retrie" "1.2.2"
       , retry = H.callHackage "retry" "0.9.3.1"
       , rope-utf16-splay = H.callHackage "rope-utf16-splay" "0.4.0.0"
