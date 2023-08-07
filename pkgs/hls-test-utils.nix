@@ -6,10 +6,8 @@
 }:
 mkDerivation {
   pname = "hls-test-utils";
-  version = "1.5.0.0";
-  sha256 = "e3d94e0d441f126c377f4830cc61edc1518684c5862962678be4a65554075e0c";
-  revision = "1";
-  editedCabalFile = "1rcvr6csvmaadsm271wz8plsid6fxk0c0f7lxn8a7q54mk8fyj6z";
+  version = "2.0.0.1";
+  sha256 = "7163a00d6e5b65a3d969059b7c1955860d5040924191fc91fee5cdb1290a4468";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

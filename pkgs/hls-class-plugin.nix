@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "hls-class-plugin";
-  version = "1.1.1.0";
-  sha256 = "1a247c7907b03be422400de6d69d7b35dd2c015cf27ef72d441ee39511cac7e3";
+  version = "2.0.0.1";
+  sha256 = "44c5b7e94a65d56f79bb4430f0b5284a9946b0892766c196d1edab80af22b7c2";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -16,7 +16,7 @@ mkDerivation {
   ];
   testHaskellDepends = [
     aeson base filepath ghcide hls-plugin-api hls-test-utils lens
-    lsp-types
+    lsp-types text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

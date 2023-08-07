@@ -4,10 +4,8 @@
 }:
 mkDerivation {
   pname = "hls-fourmolu-plugin";
-  version = "1.1.1.0";
-  sha256 = "4f121a85ea4edbbbee9d9e426ed6c9f8b349eb189e1d8edf06f5c9a971e8babf";
-  revision = "3";
-  editedCabalFile = "014bvikivg6p60wfdw8cb8agq4bangdld1d2n5778nl7abpjgszf";
+  version = "2.0.0.1";
+  sha256 = "c8238e4fb20aa4fd958c48b6b001b17e2d3c9d2938480136eed7f93f119833a5";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "hls-splice-plugin";
-  version = "1.0.3.0";
-  sha256 = "90e41b28bd9572060876a25137854ea3467fb3197225218c1ada70db2c4ae006";
+  version = "2.0.0.1";
+  sha256 = "034799a5a95301b8cf69683371933c6064b374a77f33ed5d44da06d072619269";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

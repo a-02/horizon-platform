@@ -1,17 +1,17 @@
-{ mkDerivation, base, containers, filepath, ghc-boot-th, ghcide
-, hls-graph, hls-plugin-api, hls-test-utils, lens, lib, lsp
+{ mkDerivation, base, containers, deepseq, filepath, ghc-boot-th
+, ghcide, hls-graph, hls-plugin-api, hls-test-utils, lens, lib, lsp
 , lsp-test, syb, text, transformers, unordered-containers
 }:
 mkDerivation {
-  pname = "hls-explicit-record-fields-plugin";
+  pname = "hls-overloaded-record-dot-plugin";
   version = "2.0.0.1";
-  sha256 = "e189bf4f12c6bec9748f1c447aed2e3a3367d7d42550e88e43a08498e86e8394";
+  sha256 = "caa5f7e5827081d445f6ea8a7ea6124f4e068ba3a63a4e6f9d19b54c018f95c6";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base containers ghc-boot-th ghcide hls-graph hls-plugin-api lens
-    lsp syb text transformers unordered-containers
+    base containers deepseq ghc-boot-th ghcide hls-graph hls-plugin-api
+    lens lsp syb text transformers unordered-containers
   ];
   testHaskellDepends = [
     base filepath hls-test-utils lsp-test text
@@ -23,7 +23,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  description = "Explicit record fields plugin for Haskell Language Server";
+  description = "Overloaded record dot plugin for Haskell Language Server";
   license = lib.licenses.bsd3;
   broken = false;
 }

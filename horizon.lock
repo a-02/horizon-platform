@@ -996,11 +996,11 @@
   }
 , { mapKey = "ghcide"
   , mapValue =
-      "95b4bc8cbf22794d7d147bc695b3ed8e57935a2c01dd38930394a57cac4b9a38"
+      "81ba30bf0bdd8f42d49df7a451f915bf766b4b62d987b5e3061f48235b9beb22"
   }
 , { mapKey = "ghcide-bench"
   , mapValue =
-      "50bf9979cb4ec74c216db479736da4526a0667088895326dee3d7378b9ba9e5f"
+      "8f4879808f8a5ccbe7237f310a105e8321642e061c75a9523e87bd8c7a162a87"
   }
 , { mapKey = "ghcide-test-utils"
   , mapValue =
@@ -1044,7 +1044,7 @@
   }
 , { mapKey = "haskell-language-server"
   , mapValue =
-      "cb58e762cd6479dcebda87bce5f80165d09fb889b0a92c4f59547886d1d73b50"
+      "e25da9033bd28198372d3a1723f2441cbea67cfc8ae1741c2d090b8dcd24d1dd"
   }
 , { mapKey = "haskell-src"
   , mapValue =
@@ -1108,7 +1108,7 @@
   }
 , { mapKey = "hie-bios"
   , mapValue =
-      "8ae3e2b1d41f703922c2aa115edea8d9baa809498cbf4fa9e91b537b1a437f9e"
+      "5c85fb881d3659aa33b030e0e055a899f62f62058af23b936f38281aab01c60e"
   }
 , { mapKey = "hie-compat"
   , mapValue =
@@ -1132,95 +1132,99 @@
   }
 , { mapKey = "hls-alternate-number-format-plugin"
   , mapValue =
-      "7a59da6aadda61106770f916a99f674c0f457fa7e3cba90a50ccfbb54796acf0"
+      "3904d8d4f5071d0f2c066460c2975324113dc2e8dc150b2144b495b147ec2cb4"
   }
 , { mapKey = "hls-cabal-fmt-plugin"
   , mapValue =
-      "5284bc16210e6340fd345be61840606929b0e3cc04256d670fba823553cbe55e"
+      "027bb2f34ad16f8aab3dec6d05f5e385205b5a21002bbadb900178ff45ec9b7e"
   }
 , { mapKey = "hls-cabal-plugin"
   , mapValue =
-      "94c42199a861b465c26efb21947c06df167e6022ac58e5e0b716ecd01fe61dde"
+      "8ea6b3d0f7f1f1aaf0e010a2aea3117a67fc2bb6719bb1f14722ac2437c94e9a"
   }
 , { mapKey = "hls-call-hierarchy-plugin"
   , mapValue =
-      "108bf0c4f23a76ffb354e8cb7d51761e98801917b15c76dc0755ca519ca056b2"
+      "09d95dfef15a9b3ee01f76fcb91abc29b3aefd8e40bde443f249ec63398bbbbe"
   }
 , { mapKey = "hls-change-type-signature-plugin"
   , mapValue =
-      "d340154b5e43cfbb41da56faec54a3926dfaa644a3f2d831468ced3a593f32d8"
+      "5a4a088fabded00f5ccc1fc10ed5f3dfac72e6615055713d595a2d0e29ed8feb"
   }
 , { mapKey = "hls-class-plugin"
   , mapValue =
-      "95a7701a8500c27fad2b7101545e7565ee7e44ca327a46cccbae3906c9a00c3d"
+      "2be0839031bbf93215a7283c596cfb7e9bdd9871a4378c746dfb7a8d1a0cfc60"
   }
 , { mapKey = "hls-code-range-plugin"
   , mapValue =
-      "cbd5a7babb0126d01a0feea5eb5c814f05d880be79223bc856770720ff492f3b"
+      "6ba56d3399fdd075e86eebc8d3a6458a01dcf62e3b93d420c9b7a4334ca4c962"
   }
 , { mapKey = "hls-explicit-fixity-plugin"
   , mapValue =
-      "be46da3ed6c3bfb86f5e8f9319584a06a27d953129e87a941d41d9c197fa9caf"
+      "46d189d85621f72f6807925600b8c098fdebe9318e66aa8ddf9f4f2c67e924e4"
   }
 , { mapKey = "hls-explicit-imports-plugin"
   , mapValue =
-      "4222c5c5ed8aab62363e34e7dabdbc375e2b9f269fde65418f8a17860ab3b4df"
+      "4a85209ab0a20cf18dbfb52c9e38cc2af273037df266588347d8603f834f2263"
   }
 , { mapKey = "hls-explicit-record-fields-plugin"
   , mapValue =
-      "68b258933e57c753c7667ab515ad61171e06648e335805f3d0ef0cee7f62da7f"
+      "4c340e708b29eae8668dc4b7ac2dd2cd7a6e1bfce31d2eaebf800cf57b1df5d9"
   }
 , { mapKey = "hls-fourmolu-plugin"
   , mapValue =
-      "cfb7117f25650712cb0a087246e4eb838a0fae8e28dddc24c590210d133994bf"
+      "9e33f752440d426b73345011516d65e8fea47616083bf2961a4f6586ab3597b3"
   }
 , { mapKey = "hls-gadt-plugin"
   , mapValue =
-      "c651dd127c7b018517d9ffe4f9f5be1b56d84003fb15394d22d722d86ad88213"
+      "d8978ac5269a3c67e81dd71b701d80f075c5b75f1822056568b038582ce9cb63"
   }
 , { mapKey = "hls-graph"
   , mapValue =
-      "2bfbbc6b9ef7f41c9ff02f6773d23d9dcca2819f02c75432abd63a5f244982a1"
+      "149eb1df7e78401946ddbe1c72d9bf39c62a0877f7df1caf7d31d33546a901b8"
   }
 , { mapKey = "hls-hlint-plugin"
   , mapValue =
-      "501eeff346f02a56a756229e87d1190048fe33f65b8650c868776063134f5005"
+      "ecbe1a140283da2e37758cccce09b03287c476f80b4268aa75a336332bae04bf"
   }
 , { mapKey = "hls-module-name-plugin"
   , mapValue =
-      "a0c620a09fb4255afb593752b72b01533219ddd5ec4635595d68eb1ec85d50be"
+      "07a9b28d8c6893e7db44e40de66e85956f5664256b2461d009506dffe0f42450"
+  }
+, { mapKey = "hls-overloaded-record-dot-plugin"
+  , mapValue =
+      "8473837f38f71e5541f145d50cae0dd7bc30e0cab4dc14b1c2962b66d1a9f60e"
   }
 , { mapKey = "hls-plugin-api"
   , mapValue =
-      "35ad50e9b2a71ef17023561299297d71b8f3d0ac7818bfefabf88adfc7725060"
+      "dc67309646fa206902ab15ac3395f88482c2d32dd64efc7234c98616cfeab452"
   }
 , { mapKey = "hls-pragmas-plugin"
   , mapValue =
-      "ba1d44a08ed338b83c87da5d597ca6d2bcfa66efa4c3f982c6baa07bfe588ca0"
+      "87f639035815b8fd1a934776c00f8f9fb6ab94585b6997afd45044844f57d1a3"
   }
 , { mapKey = "hls-qualify-imported-names-plugin"
   , mapValue =
-      "278a39c7af2f0728410dfaf9c4a301373801e6f42e252700884fdbf30d8e09ae"
+      "55f14bb8c727ddbeea1d1728b7661851cc22bc6305f5340e27afcb1dad2f95f2"
   }
 , { mapKey = "hls-refactor-plugin"
   , mapValue =
-      "934bcf76721d7ac501f116b8c3815c6bb7aabc53507ed78995fa8ed7ec356ae4"
+      "d0b9523a80615828e327582effa610e64449eecf0be1fba8659003a5b16d7204"
   }
 , { mapKey = "hls-refine-imports-plugin"
   , mapValue =
-      "7a74d80f225d38ab1dc5976b6f275927c27d8a40dd13616c1e7cad9a7c03ecf8"
+      "811abfdc526fa2eb1a403cdca264a9eb55342bbffd9fd9e7fac974ea57d8865a"
   }
 , { mapKey = "hls-retrie-plugin"
   , mapValue =
-      "6fc404946161e0599e49f55ebceb3884b77ad7721da15cd50ea950ea08603ce6"
+      "01f6f8785e1e539a1af035cf11eaacd66857196c8d35e97239f689946d790cda"
   }
 , { mapKey = "hls-splice-plugin"
   , mapValue =
-      "204a54079194c54de9dca3482b365d2d20c1956180d9fb6c783c403ea966b1d8"
+      "29469f758a9ad236457e67430229a4aee4b413a6dcc7c0355ea5b38d18a84c45"
   }
 , { mapKey = "hls-test-utils"
   , mapValue =
-      "1f969778933519bf88595a4c04218827561d532ca2a4854b0ef9e86d696342b1"
+      "3fc0fae147ece581e218861e4a6cb16fb74db7cdc52fd968e94148b64bd9ed99"
   }
 , { mapKey = "hnix"
   , mapValue =
