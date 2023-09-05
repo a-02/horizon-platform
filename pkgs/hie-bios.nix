@@ -1,34 +1,33 @@
 { mkDerivation, aeson, base, base16-bytestring, bytestring
-, co-log-core, conduit, conduit-extra, containers, cryptohash-sha1
-, deepseq, directory, exceptions, extra, file-embed, filepath, ghc
-, lib, optparse-applicative, prettyprinter, process, tagged, tasty
-, tasty-expected-failure, tasty-hunit, temporary, text, time
-, transformers, unix-compat, unordered-containers, vector, yaml
+, co-log-core, conduit, conduit-extra, cryptohash-sha1, deepseq
+, directory, exceptions, extra, file-embed, filepath, ghc, lib
+, optparse-applicative, prettyprinter, tasty
+, tasty-expected-failure, tasty-hunit, template-haskell, temporary
+, text, time, transformers, unix-compat, unordered-containers, yaml
 }:
 mkDerivation {
   pname = "hie-bios";
-  version = "0.11.0";
-  sha256 = "9708bf4309e904771bf590dd4e683e0b5c18e486ed499be8ceff5119a25f0eef";
-  revision = "3";
-  editedCabalFile = "0axmy522cfk92c5hwrqhkqswlxlm26m821b64rnh32666sxfdhy1";
+  version = "0.12.0";
+  sha256 = "64eb00bb32dec259d0b92c63440bd29c72621683824693c082f643e398db2688";
+  revision = "1";
+  editedCabalFile = "18cmkzrq45schidxrn571b0x6x4vlmwkpzq0nwm97p4gsqvvwj48";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     aeson base base16-bytestring bytestring co-log-core conduit
-    conduit-extra containers cryptohash-sha1 deepseq directory
-    exceptions extra file-embed filepath ghc prettyprinter process
-    temporary text time transformers unix-compat unordered-containers
-    vector yaml
+    conduit-extra cryptohash-sha1 deepseq directory exceptions extra
+    file-embed filepath ghc prettyprinter template-haskell temporary
+    text time transformers unix-compat unordered-containers yaml
   ];
   executableHaskellDepends = [
-    base co-log-core directory filepath ghc optparse-applicative
+    base co-log-core directory filepath optparse-applicative
     prettyprinter
   ];
   testHaskellDepends = [
-    aeson base directory extra filepath ghc tagged tasty
-    tasty-expected-failure tasty-hunit temporary text transformers
-    unordered-containers yaml
+    aeson base co-log-core directory extra filepath ghc prettyprinter
+    tasty tasty-expected-failure tasty-hunit temporary transformers
+    yaml
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

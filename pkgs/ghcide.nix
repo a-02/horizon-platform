@@ -5,10 +5,10 @@
 , dlist, enummapset, exceptions, extra, filepath, fingertree, focus
 , fuzzy, ghc, ghc-boot, ghc-boot-th, ghc-check, ghc-paths
 , ghc-trace-events, gitrev, haddock-library, hashable, hie-bios
-, hie-compat, hiedb, hls-graph, hls-plugin-api, hslogger
-, implicit-hie, implicit-hie-cradle, lens, lib, list-t, lsp
-, lsp-test, lsp-types, monoid-subclasses, mtl, network-uri
-, opentelemetry, optparse-applicative, parallel, prettyprinter
+, hie-compat, hiedb, hls-graph, hls-plugin-api, implicit-hie
+, implicit-hie-cradle, lens, lib, list-t, lsp, lsp-test, lsp-types
+, monoid-subclasses, mtl, network-uri, opentelemetry
+, optparse-applicative, parallel, prettyprinter
 , prettyprinter-ansi-terminal, random, regex-tdfa, safe-exceptions
 , shake, sorted-list, sqlite-simple, stm, stm-containers, syb
 , tasty, tasty-expected-failure, tasty-hunit, tasty-quickcheck
@@ -17,8 +17,8 @@
 }:
 mkDerivation {
   pname = "ghcide";
-  version = "1.9.1.0";
-  sha256 = "49f7e3d15e4701947bba173df256052f04e89ce5889250d6f9a07849ead02de4";
+  version = "2.0.0.1";
+  sha256 = "927ffa9410c6d5c66ca43cdaad788a55c67c031821afe7b9fb41bd98b9cd5afa";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
@@ -29,12 +29,12 @@ mkDerivation {
     dlist enummapset exceptions extra filepath fingertree focus ghc
     ghc-boot ghc-boot-th ghc-check ghc-paths ghc-trace-events Glob
     haddock-library hashable hie-bios hie-compat hiedb hls-graph
-    hls-plugin-api hslogger implicit-hie implicit-hie-cradle lens
-    list-t lsp lsp-types mtl opentelemetry optparse-applicative
-    parallel prettyprinter prettyprinter-ansi-terminal random
-    regex-tdfa safe-exceptions sorted-list sqlite-simple stm
-    stm-containers syb text text-rope time transformers unix unliftio
-    unliftio-core unordered-containers vector
+    hls-plugin-api implicit-hie implicit-hie-cradle lens list-t lsp
+    lsp-types mtl opentelemetry optparse-applicative parallel
+    prettyprinter prettyprinter-ansi-terminal random regex-tdfa
+    safe-exceptions sorted-list sqlite-simple stm stm-containers syb
+    text text-rope time transformers unix unliftio unliftio-core
+    unordered-containers vector
   ];
   executableHaskellDepends = [
     base data-default extra gitrev hls-plugin-api lsp lsp-types

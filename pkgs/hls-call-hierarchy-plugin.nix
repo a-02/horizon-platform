@@ -4,10 +4,8 @@
 }:
 mkDerivation {
   pname = "hls-call-hierarchy-plugin";
-  version = "1.2.0.0";
-  sha256 = "81f8718c353c48f7cacba068bcb073e5dda5d867ba8a30ed3eb9215b2832a574";
-  revision = "2";
-  editedCabalFile = "1c26qc631sbwafyv6ac1925szgfs8bp3n1ki26w6wysgii0sp06m";
+  version = "2.0.0.1";
+  sha256 = "2c4c9da2a234de1534a6f594792ed6244303c4ff3326e32eb4ebcc2437af83ad";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

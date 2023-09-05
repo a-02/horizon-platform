@@ -1,24 +1,22 @@
 { mkDerivation, Diff, aeson, apply-refact, base, binary, bytestring
 , containers, data-default, deepseq, directory, extra, filepath
 , ghc-exactprint, ghc-lib-parser, ghc-lib-parser-ex, ghcide
-, hashable, hlint, hls-plugin-api, hls-test-utils, hslogger, lens
-, lib, lsp, lsp-types, refact, regex-tdfa, stm, temporary, text
-, transformers, unordered-containers
+, hashable, hlint, hls-plugin-api, hls-test-utils, lens, lib, lsp
+, lsp-types, refact, regex-tdfa, stm, temporary, text, transformers
+, unordered-containers
 }:
 mkDerivation {
   pname = "hls-hlint-plugin";
-  version = "1.1.2.0";
-  sha256 = "795cb9fbe79058a9ccf5477276cebf429116dd652d46c3dfbce8fea400b65c9f";
-  revision = "2";
-  editedCabalFile = "01ivgwyim5wd5q0p4ni5lr6ypcbikcapqq6f8kxwxyskpn7p7gyr";
+  version = "2.0.0.1";
+  sha256 = "605ec799dd3a99783a9be19f2188b110098e923784c22a0edeaee0adbac82c5b";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     aeson apply-refact base binary bytestring containers data-default
     deepseq Diff directory extra filepath ghc-exactprint ghc-lib-parser
-    ghc-lib-parser-ex ghcide hashable hlint hls-plugin-api hslogger
-    lens lsp refact regex-tdfa stm temporary text transformers
+    ghc-lib-parser-ex ghcide hashable hlint hls-plugin-api lens lsp
+    refact regex-tdfa stm temporary text transformers
     unordered-containers
   ];
   testHaskellDepends = [

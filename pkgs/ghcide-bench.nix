@@ -7,8 +7,8 @@
 }:
 mkDerivation {
   pname = "ghcide-bench";
-  version = "0.1.1";
-  sha256 = "226c46214fc0b5675cf1a360ab128bcc60697c3ae51482d51956a5e02f0febfa";
+  version = "2.0.0.1";
+  sha256 = "f4333a5665293aa4d22597cce3a0f662a0ab3dc09699bc501f48b735e1255183";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

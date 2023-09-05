@@ -325,8 +325,8 @@ let packages =
       , ghc-typelits-natnormalise =
           H.callHackage "ghc-typelits-natnormalise" "0.7.8"
       , ghcid = H.callHackage "ghcid" "0.8.8"
-      , ghcide = H.callHackage "ghcide" "1.9.1.0"
-      , ghcide-bench = H.callHackage "ghcide-bench" "0.1.1"
+      , ghcide = H.callHackage "ghcide" "2.0.0.1"
+      , ghcide-bench = H.callHackage "ghcide-bench" "2.0.0.1"
       , ghcide-test-utils = H.callHackage "ghcide-test-utils" "1.9.0.0"
       , githash = H.callHackage "githash" "0.1.6.3"
       , gitrev = H.callHackage "gitrev" "1.3.1"
@@ -338,7 +338,7 @@ let packages =
       , hashing = H.callHackage "hashing" "0.1.1.0"
       , hashtables = H.callHackage "hashtables" "1.3.1"
       , haskell-language-server =
-          (H.callHackage "haskell-language-server" "1.9.0.0")
+          (H.callHackage "haskell-language-server" "2.0.0.1")
         with flags =
           [ H.CabalFlag.Disable "dynamic"
           , H.CabalFlag.Disable "ormolu"
@@ -366,7 +366,7 @@ let packages =
       , hedgehog-quickcheck = H.callHackage "hedgehog-quickcheck" "0.1.1"
       , heredoc = H.callHackage "heredoc" "0.2.0.0"
       , hex-text = H.callHackage "hex-text" "0.1.0.8"
-      , hie-bios = H.callHackage "hie-bios" "0.11.0"
+      , hie-bios = H.callHackage "hie-bios" "0.12.0"
       , hie-compat = H.callHackage "hie-compat" "0.3.1.0"
       , hiedb = H.callHackage "hiedb" "0.4.3.0"
       , hinotify = H.callHackage "hinotify" "0.4.1"
@@ -377,37 +377,39 @@ let packages =
             (None H.Subdir)
       , hlint = H.callHackage "hlint" "3.5"
       , hls-alternate-number-format-plugin =
-          H.callHackage "hls-alternate-number-format-plugin" "1.3.0.0"
-      , hls-cabal-fmt-plugin = H.callHackage "hls-cabal-fmt-plugin" "0.1.0.0"
-      , hls-cabal-plugin = H.callHackage "hls-cabal-plugin" "0.1.0.0"
+          H.callHackage "hls-alternate-number-format-plugin" "2.0.0.1"
+      , hls-cabal-fmt-plugin = H.callHackage "hls-cabal-fmt-plugin" "2.0.0.1"
+      , hls-cabal-plugin = H.callHackage "hls-cabal-plugin" "2.0.0.1"
       , hls-call-hierarchy-plugin =
-          H.callHackage "hls-call-hierarchy-plugin" "1.2.0.0"
+          H.callHackage "hls-call-hierarchy-plugin" "2.0.0.1"
       , hls-change-type-signature-plugin =
-          H.callHackage "hls-change-type-signature-plugin" "1.1.0.0"
-      , hls-class-plugin = H.callHackage "hls-class-plugin" "1.1.1.0"
-      , hls-code-range-plugin = H.callHackage "hls-code-range-plugin" "1.1.0.0"
+          H.callHackage "hls-change-type-signature-plugin" "2.0.0.1"
+      , hls-class-plugin = H.callHackage "hls-class-plugin" "2.0.0.1"
+      , hls-code-range-plugin = H.callHackage "hls-code-range-plugin" "2.0.0.1"
       , hls-explicit-fixity-plugin =
-          H.callHackage "hls-explicit-fixity-plugin" "1.1.0.0"
+          H.callHackage "hls-explicit-fixity-plugin" "2.0.0.1"
       , hls-explicit-imports-plugin =
-          H.callHackage "hls-explicit-imports-plugin" "1.2.0.0"
+          H.callHackage "hls-explicit-imports-plugin" "2.0.0.1"
       , hls-explicit-record-fields-plugin =
-          H.callHackage "hls-explicit-record-fields-plugin" "1.0.0.0"
-      , hls-fourmolu-plugin = H.callHackage "hls-fourmolu-plugin" "1.1.1.0"
-      , hls-gadt-plugin = H.callHackage "hls-gadt-plugin" "1.0.1.0"
-      , hls-graph = H.callHackage "hls-graph" "1.9.0.0"
-      , hls-hlint-plugin = H.callHackage "hls-hlint-plugin" "1.1.2.0"
+          H.callHackage "hls-explicit-record-fields-plugin" "2.0.0.1"
+      , hls-fourmolu-plugin = H.callHackage "hls-fourmolu-plugin" "2.0.0.1"
+      , hls-gadt-plugin = H.callHackage "hls-gadt-plugin" "2.0.0.1"
+      , hls-graph = H.callHackage "hls-graph" "2.0.0.1"
+      , hls-hlint-plugin = H.callHackage "hls-hlint-plugin" "2.0.0.1"
       , hls-module-name-plugin =
-          H.callHackage "hls-module-name-plugin" "1.1.1.0"
-      , hls-plugin-api = H.callHackage "hls-plugin-api" "1.6.0.0"
-      , hls-pragmas-plugin = H.callHackage "hls-pragmas-plugin" "1.0.4.0"
+          H.callHackage "hls-module-name-plugin" "2.0.0.1"
+      , hls-overloaded-record-dot-plugin =
+          H.callHackage "hls-overloaded-record-dot-plugin" "2.0.0.1"
+      , hls-plugin-api = H.callHackage "hls-plugin-api" "2.0.0.1"
+      , hls-pragmas-plugin = H.callHackage "hls-pragmas-plugin" "2.0.0.1"
       , hls-qualify-imported-names-plugin =
-          H.callHackage "hls-qualify-imported-names-plugin" "1.0.2.0"
-      , hls-refactor-plugin = H.callHackage "hls-refactor-plugin" "1.1.0.0"
+          H.callHackage "hls-qualify-imported-names-plugin" "2.0.0.1"
+      , hls-refactor-plugin = H.callHackage "hls-refactor-plugin" "2.0.0.1"
       , hls-refine-imports-plugin =
-          H.callHackage "hls-refine-imports-plugin" "1.0.4.0"
-      , hls-retrie-plugin = H.callHackage "hls-retrie-plugin" "1.0.3.0"
-      , hls-splice-plugin = H.callHackage "hls-splice-plugin" "1.0.3.0"
-      , hls-test-utils = H.callHackage "hls-test-utils" "1.5.0.0"
+          H.callHackage "hls-refine-imports-plugin" "2.0.0.1"
+      , hls-retrie-plugin = H.callHackage "hls-retrie-plugin" "2.0.0.1"
+      , hls-splice-plugin = H.callHackage "hls-splice-plugin" "2.0.0.1"
+      , hls-test-utils = H.callHackage "hls-test-utils" "2.0.0.1"
       , hnix =
           H.callGit
             "https://github.com/haskell-nix/hnix"

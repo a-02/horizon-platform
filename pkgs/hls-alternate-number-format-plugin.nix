@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "hls-alternate-number-format-plugin";
-  version = "1.3.0.0";
-  sha256 = "7202b7115bb5696f604f0392012cbf6a1ed1ed1ec88ef3564c2083da34378152";
+  version = "2.0.0.1";
+  sha256 = "ca0815ba0764961fe445128410a5e92e150f1ab09380ff9e50483f897ce45fef";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

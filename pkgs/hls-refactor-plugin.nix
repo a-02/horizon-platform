@@ -9,8 +9,8 @@
 }:
 mkDerivation {
   pname = "hls-refactor-plugin";
-  version = "1.1.0.0";
-  sha256 = "ea14310a53e5e376b5fdf65f695ca26dc98f07dc8fb81b4163bb923e60e1e3b2";
+  version = "2.0.0.1";
+  sha256 = "37a16d097b7cf7551f23e91ce825603d56a3138057d27235f494f8f8948c8773";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -597,6 +597,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hls-module-name-plugin = final.callPackage (./pkgs/hls-module-name-plugin.nix) { };
 
+  hls-overloaded-record-dot-plugin = final.callPackage (./pkgs/hls-overloaded-record-dot-plugin.nix) { };
+
   hls-plugin-api = final.callPackage (./pkgs/hls-plugin-api.nix) { };
 
   hls-pragmas-plugin = final.callPackage (./pkgs/hls-pragmas-plugin.nix) { };

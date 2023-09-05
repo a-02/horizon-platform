@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "hls-change-type-signature-plugin";
-  version = "1.1.0.0";
-  sha256 = "35983c08a19f2070ac04e6801b261ca87b50254af3c4ed40c0b10e65a02eb8d8";
+  version = "2.0.0.1";
+  sha256 = "a54e477a302e3775af1dc7a64fd1055a4fee5271842f9a2cad2323aae59c4cd6";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

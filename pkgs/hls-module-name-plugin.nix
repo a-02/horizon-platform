@@ -4,10 +4,8 @@
 }:
 mkDerivation {
   pname = "hls-module-name-plugin";
-  version = "1.1.1.0";
-  sha256 = "821b5fe4d44077a07b898db2188bcfefb919316004612a666c3f783e677ee01a";
-  revision = "2";
-  editedCabalFile = "1d639q3vbj2xb4zd74w2zvdl89dq56d8ly5s4nla8p2x7bfsnr3x";
+  version = "2.0.0.1";
+  sha256 = "f0b23f0591b6cc33434fe2ae49cfb746cf5091f8d5326de6964d1d65eb119d78";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
