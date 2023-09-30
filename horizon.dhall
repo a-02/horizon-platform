@@ -692,6 +692,7 @@ let packages =
       , regex-pcre-builtin = H.callHackage "regex-pcre-builtin" "0.95.2.3.8.44"
       , relude = H.callHackage "relude" "1.2.0.0"
       , replace-megaparsec = H.callHackage "replace-megaparsec" "1.4.5.0"
+      , req = H.callHackage "req" "3.13.0"
       , rerebase = H.callHackage "rerebase" "1.20"
       , resolv = H.callHackage "resolv" "0.1.2.0"
       , resource-pool = H.callHackage "resource-pool" "0.4.0.0"

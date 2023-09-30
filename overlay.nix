@@ -1099,6 +1099,8 @@ final: prev: with pkgs.haskell.lib; {
 
   replace-megaparsec = final.callPackage (./pkgs/replace-megaparsec.nix) { };
 
+  req = final.callPackage (./pkgs/req.nix) { };
+
   rerebase = final.callPackage (./pkgs/rerebase.nix) { };
 
   resolv = final.callPackage (./pkgs/resolv.nix) { };
