@@ -638,6 +638,7 @@ let packages =
       , pipes = H.callHackage "pipes" "4.3.16"
       , pipes-safe = H.callHackage "pipes-safe" "2.3.4"
       , pointed = H.callHackage "pointed" "5.0.4"
+      , poolboy = H.callHackage "poolboy" "0.2.2.0"
       , polyparse = H.callHackage "polyparse" "1.13"
       , polysemy = H.callHackage "polysemy" "1.9.1.0"
       , polysemy-extra = H.callHackage "polysemy-extra" "0.2.1.0"

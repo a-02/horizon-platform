@@ -2038,6 +2038,10 @@
   , mapValue =
       "b9d76db4394f047042da4241be91548e97e0bf9b917eaec52e685fa560a15060"
   }
+, { mapKey = "poolboy"
+  , mapValue =
+      "7e4fbac7b05a8e2a1985b14e6db283ff0d52f9ddb35996a2ea160dace9b8f378"
+  }
 , { mapKey = "port-utils"
   , mapValue =
       "6e2cece7ccb0cc9610f61952f329ee215f3d9c7e47cf5a20d4e0bb33d9dee84f"
