@@ -1021,6 +1021,8 @@ final: prev: with pkgs.haskell.lib; {
 
   polysemy-zoo = final.callPackage (./pkgs/polysemy-zoo.nix) { };
 
+  poolboy = final.callPackage (./pkgs/poolboy.nix) { };
+
   port-utils = final.callPackage (./pkgs/port-utils.nix) { };
 
   postgres-options = final.callPackage (./pkgs/postgres-options.nix) { };
