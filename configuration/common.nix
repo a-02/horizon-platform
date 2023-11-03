@@ -22,9 +22,32 @@ final: prev: {
 
   text-icu = prev.callPackage ../pkgs/text-icu.nix { icu-i18n = pkgs.icu; };
 
-  sdl2-image = addPkgconfigDepends prev.sdl2-image [ pkgs.libtiff pkgs.libdeflate pkgs.libwebp ];
+  sdl2-gfx = addSetupDepends
+    (overrideCabal prev.sdl2-gfx
+      { __onlyPropagateKnownPkgConfigModules = true; }
+    )
+    [ pkgs.pkg-config pkgs.SDL2 ];
 
-  sdl2-mixer = addPkgconfigDepends prev.sdl2-mixer [ pkgs.glib pkgs.pcre2 pkgs.libsndfile pkgs.libpulseaudio pkgs.alsa-lib pkgs.jack2 ];
+  sdl2-image =
+    addSetupDepends
+      (overrideCabal prev.sdl2-image
+        { __onlyPropagateKnownPkgConfigModules = true; }
+      )
+      [ pkgs.pkg-config pkgs.SDL2 pkgs.libtiff pkgs.libwebp ];
+
+  sdl2-mixer =
+    addSetupDepends
+      (overrideCabal prev.sdl2-mixer
+        { __onlyPropagateKnownPkgConfigModules = true; }
+      )
+      [ pkgs.pkg-config pkgs.SDL2 pkgs.libsndfile pkgs.libpulseaudio pkgs.alsa-lib pkgs.jack2 pkgs.glib pkgs.pcre2 ];
+
+  sdl2-ttf =
+    addSetupDepends
+      (overrideCabal prev.sdl2-ttf
+        { __onlyPropagateKnownPkgConfigModules = true; }
+      )
+      [ pkgs.pkg-config pkgs.SDL2 pkgs.SDL2_ttf pkgs.harfbuzz pkgs.freetype pkgs.glib pkgs.pcre2 ];
 
   X11-xft = addPkgconfigDepends prev.X11-xft [ pkgs.expat pkgs.xorg.libXau pkgs.xorg.libXdmcp ];
 
