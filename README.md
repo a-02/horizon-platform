@@ -27,34 +27,46 @@ This package set has the following policy.
   * wai-app-static
   * warp
 
-## Updating the package set
+## Updating the Package Set
 
-The package set is generated from the `horizon.dhall`. You can edit this in one
-of two ways: manually using a text edit, or programatically using
-`horizon-shell`.
+Generating the nix expressions for the package set is a two step process.
 
-### Manual
+1. Edit the `horizon.dhall` file.
+2. Generate the nix expressions with `nix run develop/#horizon-gen-nix`.
 
-Edit the `horizon.dhall` file and add or change some package data.
+You can edit the `horizon.dhall` file in one of two ways: manually using a text
+editor, or programatically using `horizon-shell`.
 
-Run `horizon-gen-nix` from the remote repository.
-
-```
-nix run 'git+https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix?ref=refs/tags/0.10.0'
-```
-
-### Programatic
+### Using horizon-shell.
 
 To use `horizon-shell`.
 
 ```
-nix develop
+nix run develop/#horizon-shell
 ```
 
-See the in-shell help for usage.
+This is a haskell interpreter with a few shortcut functions available. Running
+`tryToUpgradeEverything` will poll hackage for any potential updates and add
+them to the dhall file. This will only modify the dhall, not the nix
+expressions. You must remember to run `nix run develop/#horizon-gen-nix`
+afterwards.
 
-### Tweaking
+To quickly add a new package to the dhall, use the `addHackage` function. For example
+`addHackage "optics"`.
+
+## Tweaking & Hacking
 
 If you need to do additional manual overrides to the nix code, such as
 `addPkgconfigDepends`, edit the `configuration/common.nix` overlay, which is
-applied last.
+applied over the generated derivations.
+
+If you need to nullify libraries, use the `configuration/hacking.nix` overlay.
+Try to leave a note as to why this library has been nullified.
+
+## Feedback
+
+To build all packages, run
+
+```
+nix run develop/#feedback -- build
+```
