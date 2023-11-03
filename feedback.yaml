@@ -5,6 +5,6 @@ loops:
       find: '*.nix'
   check: nix flake check -L
   gen:
-    command: nix run 'git+https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix?ref=refs/tags/0.10.0' && git add pkgs
+    command: dhall format horizon.dhall && nix run 'git+https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix?ref=refs/tags/0.10.0' && git add pkgs && nix flake show 
     filter:
       find: horizon.dhall
