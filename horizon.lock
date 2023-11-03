@@ -1490,6 +1490,10 @@
   , mapValue =
       "06f4ebe228a54a61a626ab6b2583f56d698fd69bbceaa6d9a1998244c85d1120"
   }
+, { mapKey = "jose-jwt"
+  , mapValue =
+      "965018015f425d2f66bb616c865336065fd3d755aa29ca2b398fc9fe00201e59"
+  }
 , { mapKey = "js-chart"
   , mapValue =
       "8e45afbaac8374c0061c9db979ddfb8b2c978772081fb1b4dfc9a39bdd76af92"

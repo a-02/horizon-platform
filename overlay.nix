@@ -747,6 +747,8 @@ final: prev: with pkgs.haskell.lib; {
 
   jose = final.callPackage (./pkgs/jose.nix) { };
 
+  jose-jwt = final.callPackage (./pkgs/jose-jwt.nix) { };
+
   js-chart = final.callPackage (./pkgs/js-chart.nix) { };
 
   js-dgtable = final.callPackage (./pkgs/js-dgtable.nix) { };
