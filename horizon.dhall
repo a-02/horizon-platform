@@ -483,6 +483,7 @@ let packages =
       , iwlib = H.callHackage "iwlib" "0.1.2"
       , jira-wiki-markup = H.callHackage "jira-wiki-markup" "1.5.1"
       , jose = H.callHackage "jose" "0.10"
+      , jose-jwt = H.callHackage "jose-jwt" "0.9.6"
       , js-chart = H.callHackage "js-chart" "2.9.4.1"
       , js-dgtable = H.callHackage "js-dgtable" "0.5.2"
       , katip = H.callHackage "katip" "0.8.7.4"
