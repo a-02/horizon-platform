@@ -4,6 +4,12 @@ with haskellLib;
 
 final: prev: {
 
+  Cabal-QuickCheck = null;
+
+  Cabal-described = null;
+
+  Cabal-tree-diff = null;
+
   digest = addExtraLibrary prev.digest pkgs.zlib;
 
   hopenssl = prev.hopenssl.override { openssl = pkgs.openssl; };
