@@ -3,10 +3,8 @@
 }:
 mkDerivation {
   pname = "hex-text";
-  version = "0.1.0.8";
-  sha256 = "653924681d94db1e7e8ed9b3be209d17a0fd032683192084d62ee9b6394cf71b";
-  revision = "1";
-  editedCabalFile = "1w1hwzfhaphdbrnbqwn48v2jh7my280nisn7z98asidq77gi0lsl";
+  version = "0.1.0.9";
+  sha256 = "c55b28f5567b1c86e902aaa158a8adc095fd2db40566be7ad696a827af0cfbb7";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

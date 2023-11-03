@@ -6,6 +6,8 @@ mkDerivation {
   pname = "composite-base";
   version = "0.8.2.1";
   sha256 = "31b7fe24885d2db164524a4477058157592ae06a75da5259f0eafc5760555544";
+  revision = "1";
+  editedCabalFile = "1fww7f7z583vp7kfrf6xi6y0plpm4jsh3j72xbgarprlz25j1aip";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

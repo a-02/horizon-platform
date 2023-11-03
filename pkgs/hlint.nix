@@ -7,8 +7,8 @@
 }:
 mkDerivation {
   pname = "hlint";
-  version = "3.5";
-  sha256 = "98bd120a10a086c17d6bf1176a510dc12b36581e5a901f1e024555bb3ccead4f";
+  version = "3.6.1";
+  sha256 = "3280132bb3c1b39faa4c8c6a937479d4622484914da6a227a2ce4b15a76741fd";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = true;

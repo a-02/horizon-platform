@@ -1,19 +1,19 @@
 { mkDerivation, base, binary, binary-orphans, bytestring, cereal
-, containers, hashable, lib, mtl, scientific, text, time
-, transformers, transformers-compat, unordered-containers, void
+, containers, hashable, lib, scientific, text, time, transformers
+, transformers-compat, unordered-containers, void
 }:
 mkDerivation {
   pname = "bytes";
-  version = "0.17.2";
-  sha256 = "bc55f41edad589bc0ba389e8b106d7425a87390dcd5f1371e3194a9cc2c4781a";
+  version = "0.17.3";
+  sha256 = "d10acf05802d4df9646d7aed1b4ebcee13fb38f243f1525caaef1f2e1fd929c7";
   revision = "1";
-  editedCabalFile = "0frs6ag93kmg2fw3vd686czx8g7h9qmdn1ip6wdk96d94ap0fz9i";
+  editedCabalFile = "1jj5fk23wvvvlbkxcpvgp69gglbf719ard5g795irbcx11zkhjd2";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base binary binary-orphans bytestring cereal containers hashable
-    mtl scientific text time transformers transformers-compat
+    scientific text time transformers transformers-compat
     unordered-containers void
   ];
   enableLibraryProfiling = true;

@@ -1,16 +1,13 @@
-{ mkDerivation, Cabal, HUnit, base, concurrent-extra, lib, stm
+{ mkDerivation, HUnit, base, concurrent-extra, lib, stm
 , test-framework, test-framework-hunit
 }:
 mkDerivation {
   pname = "threads";
-  version = "0.5.1.7";
-  sha256 = "e0f6fea09b99a2f84c98089c27c011077bf43f1e1977a5c43997e226d23142d0";
-  revision = "1";
-  editedCabalFile = "18xxmb0x8lr6c90jc1vv078jm932aia9hm722l5wxmwly4a2n4wp";
+  version = "0.5.1.8";
+  sha256 = "c494d50a513ae65a8de773d84084c0acd5b6d3195571bdf97e77dc621fc24a9e";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
-  setupHaskellDepends = [ base Cabal ];
   libraryHaskellDepends = [ base stm ];
   testHaskellDepends = [
     base concurrent-extra HUnit stm test-framework test-framework-hunit

@@ -1,7 +1,7 @@
 { mkDerivation, JuicyPixels, QuickCheck, active, adjunctions, array
 , base, bytestring, cereal, colour, containers, criterion
 , data-default-class, deepseq, diagrams-core, diagrams-solve
-, directory, distributive, dual-tree, exceptions, filepath
+, directory, distributive, dual-tree, exceptions, fail, filepath
 , fingertree, fsnotify, hashable, intervals, lens, lib, linear
 , monoid-extras, mtl, numeric-extras, optparse-applicative, process
 , profunctors, semigroups, tagged, tasty, tasty-hunit
@@ -9,17 +9,17 @@
 }:
 mkDerivation {
   pname = "diagrams-lib";
-  version = "1.4.5.3";
-  sha256 = "2c9eb84b4b3c9f23f01a24cdae24d49c2eccb39bb50c90475ffa119ad813e640";
+  version = "1.4.6";
+  sha256 = "8bc92bdc50a654bfd59748f25dfa317a1d817b503cc8427af16bf2ab29a21ca8";
   revision = "3";
-  editedCabalFile = "10m1nh6swfh4jvky2mx692g0jp1xk1cym9gvzljmmni3pf41mzsf";
+  editedCabalFile = "09b3hdmsk5byjm1jcq03zjb8fz7h3lid747abi3fq9bvsaqsp5ka";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     active adjunctions array base bytestring cereal colour containers
     data-default-class diagrams-core diagrams-solve directory
-    distributive dual-tree exceptions filepath fingertree fsnotify
+    distributive dual-tree exceptions fail filepath fingertree fsnotify
     hashable intervals JuicyPixels lens linear monoid-extras mtl
     optparse-applicative process profunctors semigroups tagged text
     transformers unordered-containers

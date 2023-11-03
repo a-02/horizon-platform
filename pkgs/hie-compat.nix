@@ -3,10 +3,8 @@
 }:
 mkDerivation {
   pname = "hie-compat";
-  version = "0.3.1.0";
-  sha256 = "e1e8a54273ceb50f71ab329c60d3a2cf70e03431bdbf1056970a95845c0fb347";
-  revision = "1";
-  editedCabalFile = "1dr9cqqmxq6dwsdbmm7q4a26ghsnq66yl49wy54dpyln5xzz4234";
+  version = "0.3.1.1";
+  sha256 = "5b1a16d4b9171b06868767669eed4c58605466acbbcbc5d16f69efe7354f4737";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "persistent-qq";
-  version = "2.12.0.5";
-  sha256 = "306079b7c761827a121dabd2c5bac4ee1cd342b8388f737045ce2b4a3fcb6fd6";
+  version = "2.12.0.6";
+  sha256 = "8d7386b94d883713ef41edc4cb30c99c7ad4c54aed7019feba76e07a563f01fc";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -3,8 +3,10 @@
 }:
 mkDerivation {
   pname = "HsOpenSSL";
-  version = "0.11.7.5";
-  sha256 = "e1f85ebe2ac9207414f2ad0b1c7c972f336e8f15ca182e42a5886909962d1478";
+  version = "0.11.7.6";
+  sha256 = "662de291bb4aaac1183b0e4e15345cc1f40e64f293f2ba9513f441ec1cf4c7a2";
+  revision = "1";
+  editedCabalFile = "0nqvb9g1wxz7ydpx9qc9lq9piwsy5zfk454v7mxlwng4i1jsgpk1";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

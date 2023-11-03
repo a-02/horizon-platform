@@ -1,8 +1,8 @@
 { mkDerivation, base, lib, transformers }:
 mkDerivation {
   pname = "monads-tf";
-  version = "0.1.0.3";
-  sha256 = "249dd2aa55c4dd6530f1e49f6b052ec91bc590ecfef2bd24c58837a3f8d4b0f1";
+  version = "0.3.0.1";
+  sha256 = "21bcd293bf663b6cf993600a3357da724e09c088bdb0ba792f7afc8b69fa5f02";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -14,6 +14,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
+  homepage = "https://github.com/typeclasses/monads-tf";
   description = "Monad classes, using type families";
   license = lib.licenses.bsd3;
   broken = false;

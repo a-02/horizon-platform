@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "microlens-ghc";
-  version = "0.4.14.1";
-  sha256 = "56709b10a1b3feba4fc107d7302a51020d90f893b8aac913f8b85750f663dcc0";
+  version = "0.4.14.2";
+  sha256 = "58e5c5a6309d1145ac9062e7759d25184f14d451111b5783c103537c6561cd9d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -18,7 +18,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "http://github.com/monadfix/microlens";
+  homepage = "http://github.com/stevenfontanella/microlens";
   description = "microlens + array, bytestring, containers, transformers";
   license = lib.licenses.bsd3;
   broken = false;

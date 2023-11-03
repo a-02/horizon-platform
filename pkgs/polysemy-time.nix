@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "polysemy-time";
-  version = "0.6.0.0";
-  sha256 = "5764ea3ab9c8b3c6e5c73fd7700f29ba49c82dc06fbb5f40650783c663b8854e";
+  version = "0.6.0.2";
+  sha256 = "5dcd02f89ab3aae2ef1a6cfe71554443ff76d949e0a96f0e85c9fe73a1efe0fd";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -22,7 +22,7 @@ mkDerivation {
   doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://github.com/tek/polysemy-time#readme";
-  description = "Polysemy effects for time";
+  description = "A Polysemy effect for time";
   license = "BSD-2-Clause-Patent";
   broken = false;
 }

@@ -1,25 +1,25 @@
-{ mkDerivation, HUnit, QuickCheck, attoparsec, attoparsec-iso8601
-, base, base-compat, bytestring, containers, cookie, hashable
-, hspec, hspec-discover, http-types, lib, quickcheck-instances
-, tagged, text, time-compat, transformers, unordered-containers
-, uuid-types
+{ mkDerivation, HUnit, QuickCheck, base, bytestring, containers
+, cookie, hashable, hspec, hspec-discover, http-types, lib
+, quickcheck-instances, tagged, text, text-iso8601, time-compat
+, transformers, unordered-containers, uuid-types
 }:
 mkDerivation {
   pname = "http-api-data";
-  version = "0.5.1";
-  sha256 = "6166c64824e139a2727cc31af44d0077f66eb3921a20973bc6e98ff9fb77122b";
+  version = "0.6";
+  sha256 = "74904382dfd0774a34fef881d895afafdb856bd57f162db275cfe550a1dc1346";
+  revision = "1";
+  editedCabalFile = "0vjxs10hv9xhnahzcqb4dlygfzj5rcybgzw2z7qb2mi6sjsllwpv";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    attoparsec attoparsec-iso8601 base base-compat bytestring
-    containers cookie hashable http-types tagged text time-compat
-    transformers unordered-containers uuid-types
+    base bytestring containers cookie hashable http-types tagged text
+    text-iso8601 time-compat transformers unordered-containers
+    uuid-types
   ];
   testHaskellDepends = [
-    base base-compat bytestring cookie hspec HUnit QuickCheck
-    quickcheck-instances text time-compat unordered-containers
-    uuid-types
+    base bytestring cookie hspec HUnit QuickCheck quickcheck-instances
+    text time-compat unordered-containers uuid-types
   ];
   testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;

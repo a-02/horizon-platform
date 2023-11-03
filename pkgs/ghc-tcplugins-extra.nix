@@ -1,8 +1,8 @@
 { mkDerivation, base, ghc, lib }:
 mkDerivation {
   pname = "ghc-tcplugins-extra";
-  version = "0.4.4";
-  sha256 = "3c21708a6e080a915bf29bf60f1bfde68b516f076cea8a7c5c2683a725efde79";
+  version = "0.4.5";
+  sha256 = "0b6831620bae37d090139a89635d31c83b37a29ee89c26f0a586452b94ae10c3";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

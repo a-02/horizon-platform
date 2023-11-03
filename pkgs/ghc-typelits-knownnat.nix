@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "ghc-typelits-knownnat";
-  version = "0.7.8";
-  sha256 = "2723ee1dc9024a4a8ddf93dbb6082410fc05deeee7bd975c8ce5d7fed71bea22";
+  version = "0.7.9";
+  sha256 = "8d9963f02daaedb20c0edc1c27e6e7536ebbe927b281319e7d2cc9f1e5066dc0";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

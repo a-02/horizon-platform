@@ -7,8 +7,8 @@ mkDerivation {
   pname = "diagrams-svg";
   version = "1.4.3.1";
   sha256 = "67080a0aa846f2931c14855560c4bbd848c44935f5ada4dbd6d93074707d5400";
-  revision = "4";
-  editedCabalFile = "026mkj9fz64rdrap25mp8cwdrzwj90h35qg9kkn078fac93aaq10";
+  revision = "5";
+  editedCabalFile = "00hjvv9ncf5il7a09g2gh45bwah4jbnfnhb523jz9lhqqbzxfxny";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "polysemy-zoo";
-  version = "0.8.1.0";
-  sha256 = "2d786f3e178f49a17d7d0e21b58a763da1a032ef8136b492700f3856ef94145d";
+  version = "0.8.2.0";
+  sha256 = "d7fd0c7ae87380d563104cb0e3279f66b83b6f7a656344c79b2720a7f16b4a51";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -28,7 +28,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "https://github.com/isovector/polysemy-zoo#readme";
+  homepage = "https://github.com/polysemy-research/polysemy-zoo#readme";
   description = "Experimental, user-contributed effects and interpreters for polysemy";
   license = lib.licenses.bsd3;
   broken = false;

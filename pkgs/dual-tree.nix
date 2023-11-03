@@ -5,8 +5,8 @@ mkDerivation {
   pname = "dual-tree";
   version = "0.2.3.1";
   sha256 = "d0394b94c312a5ae032ee72d811400e3f435138ea05f7be6a4d019131a19d5a6";
-  revision = "1";
-  editedCabalFile = "0prbgzh1bhgrg6qxp5l2m33f5xcjjjpzbm32xx2rgyi4w1yf3587";
+  revision = "2";
+  editedCabalFile = "1qlrrvw3j9h12nj105aa5ckri5580xgbi16gph70i5w2crmrvphw";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

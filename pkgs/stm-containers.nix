@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "stm-containers";
-  version = "1.2.0.2";
-  sha256 = "ad2df570b76e0e5b5d5df69080a53b5167832d624a6954acdca6a706f9813ea4";
+  version = "1.2.0.3";
+  sha256 = "928cbcbcd8300e16cda4f2042d9fff2cbc89feec4ea95e901e38f6e9a5f690b1";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

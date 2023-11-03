@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "libsystemd-journal";
-  version = "1.4.5";
-  sha256 = "a8c7a2140d0046cb71887fc7ff6f8885feb3bac966d01d9a83b25226b5778f06";
+  version = "1.4.5.1";
+  sha256 = "16da6bd693c0112d2d3567fcc06a65b3e1844eb9c107b5692973216cd1a857b4";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -22,7 +22,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "http://github.com/ocharles/libsystemd-journal";
+  homepage = "https://github.com/ocharles/libsystemd-journal";
   description = "Haskell bindings to libsystemd-journal";
   license = lib.licenses.bsd3;
   broken = false;

@@ -1,17 +1,17 @@
-{ mkDerivation, base, containers, filepath, ghc-boot-th, ghcide
-, hls-graph, hls-plugin-api, hls-test-utils, lens, lib, lsp
+{ mkDerivation, aeson, base, containers, filepath, ghc, ghc-boot-th
+, ghcide, hls-graph, hls-plugin-api, hls-test-utils, lens, lib, lsp
 , lsp-test, syb, text, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "hls-explicit-record-fields-plugin";
-  version = "2.0.0.1";
-  sha256 = "e189bf4f12c6bec9748f1c447aed2e3a3367d7d42550e88e43a08498e86e8394";
+  version = "2.4.0.0";
+  sha256 = "9c8b90c2ae9c886e811dd228302d83c67ea8aa537e60afd9f546a4eced3cac98";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base containers ghc-boot-th ghcide hls-graph hls-plugin-api lens
-    lsp syb text transformers unordered-containers
+    aeson base containers ghc ghc-boot-th ghcide hls-graph
+    hls-plugin-api lens lsp syb text transformers unordered-containers
   ];
   testHaskellDepends = [
     base filepath hls-test-utils lsp-test text

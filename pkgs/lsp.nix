@@ -1,25 +1,26 @@
 { mkDerivation, aeson, async, attoparsec, base, bytestring
 , co-log-core, containers, data-default, directory, exceptions
-, filepath, hashable, hspec, hspec-discover, lens, lib, lsp-types
-, mtl, prettyprinter, random, sorted-list, stm, temporary, text
-, text-rope, transformers, unliftio-core, unordered-containers
-, uuid
+, filepath, hashable, hspec, hspec-discover, lens, lens-aeson, lib
+, lsp-types, mtl, prettyprinter, random, row-types, sorted-list
+, stm, temporary, text, text-rope, transformers, unliftio-core
+, unordered-containers, uuid
 }:
 mkDerivation {
   pname = "lsp";
-  version = "1.6.0.0";
-  sha256 = "896803766e8ceabeacc72743f4b92cf7766b2a1f09be270b29d0a39692b00470";
+  version = "2.2.0.0";
+  sha256 = "592a2d5df3bfc100320ee98d978694dd7d8e5568364daab42f767fb94f9f1d5b";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     aeson async attoparsec base bytestring co-log-core containers
-    data-default directory exceptions filepath hashable lens lsp-types
-    mtl prettyprinter random sorted-list stm temporary text text-rope
-    transformers unliftio-core unordered-containers uuid
+    data-default directory exceptions filepath hashable lens lens-aeson
+    lsp-types mtl prettyprinter random row-types sorted-list stm
+    temporary text text-rope transformers unliftio-core
+    unordered-containers uuid
   ];
   testHaskellDepends = [
-    base containers hspec sorted-list text text-rope
+    base containers hspec row-types sorted-list text text-rope
     unordered-containers
   ];
   testToolDepends = [ hspec-discover ];

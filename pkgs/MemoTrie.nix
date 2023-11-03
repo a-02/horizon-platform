@@ -1,8 +1,8 @@
 { mkDerivation, base, lib, newtype-generics }:
 mkDerivation {
   pname = "MemoTrie";
-  version = "0.6.10";
-  sha256 = "584df0e138093b2f2edc893a69883eb8cbca3402ebdc75392a7742e86156ba53";
+  version = "0.6.11";
+  sha256 = "f7a6abf136eac1c6b370678e14e9519ed88c0c2adf75f06d6855b464db0c2420";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

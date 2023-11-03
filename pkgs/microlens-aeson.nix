@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "microlens-aeson";
-  version = "2.5.0";
-  sha256 = "a28d9c95d14bfccc73856b4d0cbe8b51ec762712ab228121a54878b2c402b840";
+  version = "2.5.1";
+  sha256 = "f7755c46d8cd54ed2d3031c34ac075a6715d40fc19c8edf681c6e6d3c2c4e50a";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

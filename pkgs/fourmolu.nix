@@ -1,30 +1,30 @@
 { mkDerivation, Cabal-syntax, Diff, MemoTrie, QuickCheck, aeson
-, ansi-terminal, array, base, bytestring, containers, directory
-, dlist, exceptions, filepath, ghc-lib-parser, gitrev, hspec
+, ansi-terminal, array, base, binary, bytestring, containers
+, deepseq, directory, file-embed, filepath, ghc-lib-parser, hspec
 , hspec-discover, hspec-megaparsec, lib, megaparsec, mtl
-, optparse-applicative, path, path-io, pretty, process, syb
-, template-haskell, temporary, text, th-lift-instances, yaml
+, optparse-applicative, path, path-io, pretty, process, scientific
+, syb, temporary, text, th-env, yaml
 }:
 mkDerivation {
   pname = "fourmolu";
-  version = "0.10.1.0";
-  sha256 = "e442b4aa21c320994c57f0c87bb7e6bf005207a167cb7e812c5142e4b8687f3e";
+  version = "0.14.1.0";
+  sha256 = "b4b78a1b7b4e643dab2989ace724d37d1a9280b2be0537692d7989435dd119f3";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson ansi-terminal array base bytestring Cabal-syntax containers
-    Diff directory dlist exceptions filepath ghc-lib-parser megaparsec
-    MemoTrie mtl syb template-haskell text th-lift-instances yaml
+    aeson ansi-terminal array base binary bytestring Cabal-syntax
+    containers deepseq Diff directory file-embed filepath
+    ghc-lib-parser megaparsec MemoTrie mtl scientific syb text yaml
   ];
   executableHaskellDepends = [
-    base containers directory filepath ghc-lib-parser gitrev
-    optparse-applicative text yaml
+    base Cabal-syntax containers directory filepath ghc-lib-parser
+    optparse-applicative text th-env yaml
   ];
   testHaskellDepends = [
-    base containers Diff directory filepath ghc-lib-parser hspec
-    hspec-megaparsec megaparsec path path-io pretty process QuickCheck
-    temporary text
+    base bytestring Cabal-syntax containers Diff directory filepath
+    ghc-lib-parser hspec hspec-megaparsec megaparsec path path-io
+    pretty process QuickCheck temporary text yaml
   ];
   testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;

@@ -3,10 +3,8 @@
 }:
 mkDerivation {
   pname = "optics-core";
-  version = "0.4.1";
-  sha256 = "ca64e215f31719482a9449b5d56fbd589367e639d2b1869f7965a3970442949a";
-  revision = "1";
-  editedCabalFile = "0sqwlbl6x0197bpkq7jvn9j5iwyr54z8qwmxbij6qlwjyfld2qxi";
+  version = "0.4.1.1";
+  sha256 = "3e817e3c66a0120ac4b4b6d790e659b75f8c0fb27c5f65f3974f4c697b7bb3fb";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

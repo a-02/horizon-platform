@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "xml-conduit-writer";
-  version = "0.1.1.2";
-  sha256 = "0891c05ad2a2de68183868de8f66230d02f209446ee91bca772cbf22b599ae58";
+  version = "0.1.1.4";
+  sha256 = "229dbf3470a6d6f284329373060d8a14ae26ea92eefda53c138024e55f7ac5ba";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -5,6 +5,8 @@ mkDerivation {
   pname = "xss-sanitize";
   version = "0.3.7.2";
   sha256 = "1bbb7f5be1f4590124c76458fb798bfd9bf8114dce338d5881ad89188a9dc946";
+  revision = "1";
+  editedCabalFile = "1l8y52nja9a2iyxawm3vp23jcs46ziwx0yj2w46drb7knaa306d0";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

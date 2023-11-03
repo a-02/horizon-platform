@@ -1,8 +1,8 @@
 { mkDerivation, base, lib }:
 mkDerivation {
   pname = "indexed-profunctors";
-  version = "0.1.1";
-  sha256 = "5aba418a92a4f75efc626de7c0e4d88ed57033e0de0f2743ce6d9c9ef7626cb1";
+  version = "0.1.1.1";
+  sha256 = "2e69bb2900bb7e562efffff7bcf3f72daf79f013232ce603263a57595412c398";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

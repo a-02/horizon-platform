@@ -1,16 +1,20 @@
-{ mkDerivation, base, bytestring, lib, primitive, stm, text-short
+{ mkDerivation, QuickCheck, array, base, bytestring, lib, primitive
+, quickcheck-classes-base, stm, tasty, tasty-quickcheck, text-short
 }:
 mkDerivation {
   pname = "primitive-unlifted";
-  version = "0.1.3.1";
-  sha256 = "8b330e1a7b146333344304334d67b60481535bb506f1e53500e2ef4bd9fb34be";
-  revision = "1";
-  editedCabalFile = "0y3zdwbs1fdzspj1k95jyjrhm7za38gb6ada031bp02ifxbvsvsf";
+  version = "2.1.0.0";
+  sha256 = "613421078a2f4c012a99233dbc7a8ff0a17a0cb5abfd9baf544f4695751a3d1e";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
-  libraryHaskellDepends = [ base bytestring primitive text-short ];
-  testHaskellDepends = [ base primitive stm ];
+  libraryHaskellDepends = [
+    array base bytestring primitive text-short
+  ];
+  testHaskellDepends = [
+    base primitive QuickCheck quickcheck-classes-base stm tasty
+    tasty-quickcheck
+  ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;

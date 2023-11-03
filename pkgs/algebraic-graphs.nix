@@ -3,10 +3,10 @@
 }:
 mkDerivation {
   pname = "algebraic-graphs";
-  version = "0.6.1";
-  sha256 = "2d64982591929cbc9a2f184eeb7271b8a4096672fe725c928ea4b97aeac40a99";
+  version = "0.7";
+  sha256 = "51159a0d18690ab51e6709e3c576275402f96f57d901f87d734da6854582e568";
   revision = "1";
-  editedCabalFile = "1lnzgy3z51jyl1ail3wdd817np84gzi2bplccwzbm72glwbakc5h";
+  editedCabalFile = "1z9xls7riv3rlp1vjymvj7z64y8w0x3865d2ad2dzrwsdgzcsndf";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

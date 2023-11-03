@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "QuickCheck";
-  version = "2.14.2";
-  sha256 = "d87b6c85696b601175274361fa62217894401e401e150c3c5d4013ac53cd36f3";
+  version = "2.14.3";
+  sha256 = "5c0f22b36b28a1a8fa110b3819818d3f29494a3b0dedbae299f064123ca70501";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

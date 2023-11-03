@@ -3,10 +3,8 @@
 }:
 mkDerivation {
   pname = "mfsolve";
-  version = "0.3.2.1";
-  sha256 = "a225068707a71fdef595cdde77336c1b609b14527e023bf42ab2f86dd9d70da4";
-  revision = "1";
-  editedCabalFile = "0938ji6l1bx787lxcw6rzjwskm9vxm615cvx7hxpbwp0hbxrj5sa";
+  version = "0.3.2.2";
+  sha256 = "093fe312090e7e59355c8d23efb54cfe9bd0f81a2fbfec6c138d34f03a188f81";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

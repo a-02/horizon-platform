@@ -6,8 +6,8 @@
 }:
 mkDerivation {
   pname = "shh";
-  version = "0.7.2.1";
-  sha256 = "dbdaa98e8f5714e4d7bc6234d2e9371c3b613219febd529f323ccd560fc086dc";
+  version = "0.7.2.2";
+  sha256 = "919a6708671820d8adb9c89347aba33bf81b80041bcd4470bc6212c78b5122f8";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

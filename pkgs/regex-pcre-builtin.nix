@@ -5,8 +5,8 @@ mkDerivation {
   pname = "regex-pcre-builtin";
   version = "0.95.2.3.8.44";
   sha256 = "cacea6a45faf93df8afbf50ecb09f87acabfed0477cba4746205649eb52ec55e";
-  revision = "3";
-  editedCabalFile = "071s6k97z0wiqx5rga360awgj0a031gqm725835xxszdz36w0mbv";
+  revision = "6";
+  editedCabalFile = "1rn3649yqqrbd177mbyk12gdpbm3kdzjgnjqxfv68crah237y08j";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

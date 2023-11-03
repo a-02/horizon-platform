@@ -7,8 +7,8 @@ mkDerivation {
   pname = "uuid";
   version = "1.3.15";
   sha256 = "f885958d8934930b7c0f9b91f980722f7f992c9383fc98f075cf9df64c800564";
-  revision = "2";
-  editedCabalFile = "06j1hk4alypnwd4v55w6lfm1jrsaqh85k350qmymw0sqbrd9rmx3";
+  revision = "3";
+  editedCabalFile = "089q2i4rmw8iqzjn2fif4yarnbb7gsnsa4c4zhl24l2hlyakymbx";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

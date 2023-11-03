@@ -1,15 +1,14 @@
-{ mkDerivation, MonadRandom, base, containers, deepseq, gauge
-, ghc-prim, hashable, hashtables, hedgehog, inspection-testing, lib
+{ mkDerivation, MonadRandom, base, containers, deepseq, ghc-prim
+, hashable, hashtables, hedgehog, inspection-testing, lib
 , linear-generics, mmorph, primitive, random, random-shuffle
-, storable-tuple, tasty, tasty-hedgehog, tasty-inspection-testing
-, text, transformers, unordered-containers, vector
+, storable-tuple, tasty, tasty-bench, tasty-hedgehog
+, tasty-inspection-testing, text, transformers
+, unordered-containers, vector
 }:
 mkDerivation {
   pname = "linear-base";
-  version = "0.3.1";
-  sha256 = "10ec4ba4068762362f9921e824ea06e3a69efa08d89ad593e8a5a7113d5fa8be";
-  revision = "1";
-  editedCabalFile = "153nkw2i7n22xzfj8q2xmzsh77pr7pay8v3gc1xli491qmsc0fcd";
+  version = "0.4.0";
+  sha256 = "bcefa019ec293890b464097098bf55f3e2c19913d0246cc3ff49a024ecb25d24";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -23,8 +22,8 @@ mkDerivation {
     vector
   ];
   benchmarkHaskellDepends = [
-    base deepseq gauge hashable hashtables MonadRandom random
-    random-shuffle unordered-containers vector
+    base containers deepseq hashable hashtables MonadRandom random
+    random-shuffle tasty-bench unordered-containers vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

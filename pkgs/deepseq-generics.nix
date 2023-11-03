@@ -5,8 +5,8 @@ mkDerivation {
   pname = "deepseq-generics";
   version = "0.2.0.0";
   sha256 = "b0b3ef5546c0768ef9194519a90c629f8f2ba0348487e620bb89d512187c7c9d";
-  revision = "9";
-  editedCabalFile = "1ww3328aga9s7knbl8xxvsff13gdnl3rdqplpx11rl6k6gnr032k";
+  revision = "10";
+  editedCabalFile = "1pms44620yw0i08zbaf1v9wi36ai43sd3s762jcx5cap1shjl4qv";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

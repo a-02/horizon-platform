@@ -8,8 +8,8 @@
 }:
 mkDerivation {
   pname = "ema";
-  version = "0.10.0.0";
-  sha256 = "69332303174f82e3317142c2456a334bf49efad992ab094dbeca7289a820d92b";
+  version = "0.10.2.0";
+  sha256 = "106f148c767d3c8ea07b2b24a1dab009c95020f071cb046e8eaaf3dab56cf9a4";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = true;

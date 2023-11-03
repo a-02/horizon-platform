@@ -1,21 +1,16 @@
 { mkDerivation, QuickCheck, aeson, base, base64-bytestring
 , blaze-builder, bytestring, case-insensitive, cookie
-, data-default-class, entropy, fetchgit, hspec, hspec-discover
-, http-client, http-types, jose, lens, lens-aeson, lib
-, markdown-unlit, memory, monad-time, mtl, servant, servant-auth
-, servant-server, tagged, text, time, transformers
-, unordered-containers, wai, warp, wreq
+, data-default-class, entropy, hspec, hspec-discover, http-client
+, http-types, jose, lens, lens-aeson, lib, markdown-unlit, memory
+, monad-time, mtl, servant, servant-auth, servant-server, tagged
+, text, time, transformers, unordered-containers, wai, warp, wreq
 }:
 mkDerivation {
   pname = "servant-auth-server";
-  version = "0.4.7.0";
-  src = fetchgit {
-    url = "https://github.com/haskell-servant/servant";
-    sha256 = "0ck3l8nj42nan8abdzvkl4ynb2l9nhnsq2zjl24d7sgca860fi57";
-    rev = "7ae787371333556a7b84778631ed91d1d73e8370";
-    fetchSubmodules = true;
-  };
-  postUnpack = "sourceRoot+=/servant-auth/servant-auth-server/; echo source root reset to $sourceRoot";
+  version = "0.4.8.0";
+  sha256 = "4e095626036c8e953dd7d5e2b1ef3424935ea2ec35a8dee74dc168296af23637";
+  revision = "1";
+  editedCabalFile = "0dff8ycslxv5zy74wiph27sscd2p3zkq09j043yy8mnaypmpn4xr";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

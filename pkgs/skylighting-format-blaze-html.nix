@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "skylighting-format-blaze-html";
-  version = "0.1.1";
-  sha256 = "b1139b4df369de93d1ec6d8a2ed02bf11d559f9eaf71c31434fb5b19ba48ef13";
+  version = "0.1.1.1";
+  sha256 = "8eec82eb8535e4e1c2887d3b83a6ffd8866a0cffac4aa0e50ea229a175415791";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

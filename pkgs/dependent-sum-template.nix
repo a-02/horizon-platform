@@ -1,17 +1,19 @@
-{ mkDerivation, base, constraints-extras, dependent-sum, lib
-, template-haskell, th-abstraction, th-extras
+{ mkDerivation, base, constraints-extras, containers, lib, mtl
+, some, template-haskell, th-abstraction
 }:
 mkDerivation {
   pname = "dependent-sum-template";
-  version = "0.1.1.1";
-  sha256 = "d46fc18d5c2f5d385f901777e982e8a1ae9094ba7e68f7e4997a82036375ae0f";
+  version = "0.2.0.0";
+  sha256 = "c9632d831c33a81863cb2102943cee58ffa0287c1777facc577da0aab93f5a81";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base dependent-sum template-haskell th-abstraction th-extras
+    base containers mtl some template-haskell th-abstraction
   ];
-  testHaskellDepends = [ base constraints-extras dependent-sum ];
+  testHaskellDepends = [
+    base constraints-extras some template-haskell th-abstraction
+  ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;
@@ -19,8 +21,8 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "https://github.com/obsidiansystems/dependent-sum";
-  description = "Template Haskell code to generate instances of classes in dependent-sum package";
+  homepage = "https://github.com/obsidiansystems/dependent-sum-template";
+  description = "Template Haskell code to generate instances of classes in some package";
   license = lib.licenses.publicDomain;
   broken = false;
 }

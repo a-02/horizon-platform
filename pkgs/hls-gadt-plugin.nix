@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "hls-gadt-plugin";
-  version = "2.0.0.1";
-  sha256 = "afdccf8dd43166934036d221c4ce845df876908515c4ec5b945efe04f9b74bdd";
+  version = "2.4.0.0";
+  sha256 = "f2c291ff57ef714be2ad977914ee32aad40fe8d3b46050380bd50431117f1bc2";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

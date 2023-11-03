@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "streaming-bytestring";
-  version = "0.3.0";
-  sha256 = "51e4451745b7e110c0a1852b4b2c457da222fddc5576f48380e0dfd5aa501d58";
+  version = "0.3.1";
+  sha256 = "62c472974bebc5a23c684d189335f1375e2a3fbd43c8ea1cfc69821c14d2065e";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

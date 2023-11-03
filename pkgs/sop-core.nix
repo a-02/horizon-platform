@@ -3,8 +3,8 @@ mkDerivation {
   pname = "sop-core";
   version = "0.5.0.2";
   sha256 = "87bffd2254b98ded822d449fcd1c33dbd74d2ce96bf35e7a6714abc5a2297265";
-  revision = "2";
-  editedCabalFile = "0db36xhswrsc30cw5c5s7h6g1ykcb3bkjjnixaqqshxln6cwfsig";
+  revision = "3";
+  editedCabalFile = "0rlrf4whfkqf200916d02r0s4zqlimb3d4z6gd3f5czayncp31cx";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

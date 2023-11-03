@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "contravariant-extras";
-  version = "0.3.5.3";
-  sha256 = "6a85370aba6dbebfde46a0029039ef329fc1e118794a67a021ed9bf808b58b64";
+  version = "0.3.5.4";
+  sha256 = "2f3a16d38cb6778704db7f142e54be169db4362e033b2d568c172d0c6e64298e";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

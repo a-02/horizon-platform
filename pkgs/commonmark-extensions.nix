@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "commonmark-extensions";
-  version = "0.2.3.4";
-  sha256 = "a084efe90311f8a0d83d8622ef76f17dfdb974a84b74df454cf906b0ee64665e";
+  version = "0.2.4";
+  sha256 = "36757b95cca25b51bb81df41ba656a4e9671f49e7b44e26bdffcdfb8a8183ffb";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

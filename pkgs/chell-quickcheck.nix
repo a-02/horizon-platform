@@ -1,8 +1,8 @@
 { mkDerivation, QuickCheck, base, chell, lib, random }:
 mkDerivation {
   pname = "chell-quickcheck";
-  version = "0.2.5.3";
-  sha256 = "1db092893f392665dcdb8c422cad8e8b6e7a6d6c84da35c50fc7a757d47ea2ae";
+  version = "0.2.5.4";
+  sha256 = "91543124f73b32f314ba67c7f39f7cb70563097f021dc394ce36e9629cd1cc10";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -15,7 +15,7 @@ mkDerivation {
   doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://github.com/typeclasses/chell";
-  description = "QuickCheck support for the Chell testing library";
+  description = "QuickCheck support for Chell";
   license = lib.licenses.mit;
   broken = false;
 }

@@ -5,8 +5,8 @@ mkDerivation {
   pname = "openssl-streams";
   version = "1.2.3.0";
   sha256 = "55f20bd8970e5ce4d0ff16fae8c584c63e26e0990d27364340b997f5feb5f682";
-  revision = "1";
-  editedCabalFile = "0vfawnfcjrw29qg1n7k6z6bk4bmnk869gjlr9mxw4mzxgl80b2vp";
+  revision = "2";
+  editedCabalFile = "0xxbx82ksjnphi7vl93ymm3wp8kib5svqcnd6xamqmywrny08qfq";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

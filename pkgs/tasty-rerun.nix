@@ -3,10 +3,10 @@
 }:
 mkDerivation {
   pname = "tasty-rerun";
-  version = "1.1.18";
-  sha256 = "fa74ac10bc23fd3e443362427236a9c543f92b6aaf2e1bc8e959ecd47fb98c69";
-  revision = "4";
-  editedCabalFile = "1i2van23247h62sz94kjiyyb6xvz88z6kkjqqsbxi4m74pga27hn";
+  version = "1.1.19";
+  sha256 = "6f3df401f724ea0978ade8c18f8a7a5f1032ff7c5bf016885833135dbd2c7235";
+  revision = "2";
+  editedCabalFile = "01gliss91bx2xfpz4f99g82sqahir5g2rnwn531ccn8jp1m917di";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

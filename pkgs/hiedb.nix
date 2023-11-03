@@ -1,15 +1,18 @@
 { mkDerivation, algebraic-graphs, ansi-terminal, array, base
-, bytestring, containers, directory, extra, filepath, ghc
+, bytestring, containers, directory, extra, fetchgit, filepath, ghc
 , ghc-paths, hie-compat, hspec, lib, lucid, mtl
 , optparse-applicative, process, sqlite-simple, temporary
 , terminal-size, text
 }:
 mkDerivation {
   pname = "hiedb";
-  version = "0.4.3.0";
-  sha256 = "609c200782f79120dbb77d0dc26f6db0dda5e976ef1855d3d19024d23fbbbe06";
-  revision = "1";
-  editedCabalFile = "0yaxg7463625spx0dxg4znzyl8zq93mnb393wp6x11n29jd3l20r";
+  version = "0.4.4.0";
+  src = fetchgit {
+    url = "https://github.com/wz1000/HieDB";
+    sha256 = "15sq6dqf2294ymdcwffhigdq31ci50jh2vk8hpnyqhm1bvvbmlh9";
+    rev = "62ef191df2c1ce3324c2dfc2f2a574863642435d";
+    fetchSubmodules = true;
+  };
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

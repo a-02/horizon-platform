@@ -6,6 +6,8 @@ mkDerivation {
   pname = "generic-data";
   version = "1.1.0.0";
   sha256 = "b12cbc4d99b35f3638aa47a5c45a8f1b3b633ac0d2fff24a0c10ec72089bbccb";
+  revision = "1";
+  editedCabalFile = "1njfdpp8rckkibixp89rz8dh4qmz67404gbwq2l0qmfcglzf997p";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

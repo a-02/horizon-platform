@@ -1,17 +1,15 @@
-{ mkDerivation, HUnit, QuickCheck, base, hedgehog, hspec
-, hspec-core, lib, splitmix
+{ mkDerivation, QuickCheck, base, hedgehog, hspec, hspec-core, lib
+, splitmix
 }:
 mkDerivation {
   pname = "hspec-hedgehog";
-  version = "0.0.1.2";
-  sha256 = "23582ee0f9807b2e49de5da4ae8ef83cb56db63a045a7db73d537eab35c9eb9d";
-  revision = "1";
-  editedCabalFile = "1qv2gap0775d2zg8wbd3kq4ypziz05qlz5jfisvl3jfd6jzcf2ad";
+  version = "0.1.1.0";
+  sha256 = "e6275bf607e3a132cf2ca3e1fd5f2c15c27741b02c138553cdddfee2cddb33c2";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base hedgehog hspec hspec-core HUnit QuickCheck splitmix
+    base hedgehog hspec hspec-core QuickCheck splitmix
   ];
   testHaskellDepends = [ base hedgehog hspec ];
   enableLibraryProfiling = true;

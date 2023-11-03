@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "postgres-options";
-  version = "0.2.0.0";
-  sha256 = "c45f459abcc797d0707c1931301434037acdfada33e47c843f219cf35609d9b5";
+  version = "0.2.1.0";
+  sha256 = "0ab2acf4447abec49ca0ffa71de5732d40b04ed0f791e7f7f6c7672f3644936d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

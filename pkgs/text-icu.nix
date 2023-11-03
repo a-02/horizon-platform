@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "text-icu";
-  version = "0.8.0.2";
-  sha256 = "2d99aa88c0b4c7a1a4fc10e7bd0590c334f49bae81ef76c77a370254a4ce3d3b";
+  version = "0.8.0.4";
+  sha256 = "2d9f04c8e14d38a90df3196d96d39d9116edc5faf105498dd722749d659340fa";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

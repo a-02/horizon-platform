@@ -1,11 +1,12 @@
 { mkDerivation, QuickCheck, array, base, base58-bytestring
 , bytestring, containers, deepseq, extra, hspec, hspec-discover
-, lib, memory, optparse-applicative, process, text, vector
+, lib, memory, optparse-applicative, prettyprinter
+, prettyprinter-ansi-terminal, process, text, vector
 }:
 mkDerivation {
   pname = "bech32";
-  version = "1.1.2";
-  sha256 = "489e1922dce97ce59f72d87b17480eb0087b6661d4bcb7be124e027abcb7d2c7";
+  version = "1.1.4";
+  sha256 = "48553d2c017d7dec3450cca628ed09018e345bdb8b368661c0afc05658139a38";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
@@ -14,7 +15,7 @@ mkDerivation {
   ];
   executableHaskellDepends = [
     base base58-bytestring bytestring extra memory optparse-applicative
-    text
+    prettyprinter prettyprinter-ansi-terminal text
   ];
   testHaskellDepends = [
     base base58-bytestring bytestring containers deepseq extra hspec

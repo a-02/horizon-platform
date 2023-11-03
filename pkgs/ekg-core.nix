@@ -5,8 +5,8 @@ mkDerivation {
   pname = "ekg-core";
   version = "0.1.1.7";
   sha256 = "45813f2b94fde0b92c7979bd37de52f09b8b645560f5789276c3acfc7934db12";
-  revision = "2";
-  editedCabalFile = "05h0jz42s1d3bjcvzbp3dv5rvil4ar244mdqdvzbf60z848ppygl";
+  revision = "3";
+  editedCabalFile = "1z5rhc6cd1jflax3g5c773vghwavid5va6zxmaxhdcs6lj9pgzdj";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

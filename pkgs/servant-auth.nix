@@ -5,8 +5,8 @@ mkDerivation {
   pname = "servant-auth";
   version = "0.4.1.0";
   sha256 = "add973fe8bcc1b68eaaf90a1ec8fd6933d11eabf3854f91371b77d6827b5ef21";
-  revision = "5";
-  editedCabalFile = "0azlfs9dvzcf2r3kbm76wmalyhg1w0vi9gc4xlwp8m2n509qhbda";
+  revision = "7";
+  editedCabalFile = "18ylz2071416hhiqy7n72dvpsfy2cmhsh5j96mmcmgx05fcpkswg";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

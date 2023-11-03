@@ -3,13 +3,17 @@
 }:
 mkDerivation {
   pname = "pqueue";
-  version = "1.4.3.0";
-  sha256 = "784bb4171a79fddc1a130621ae7deee1e850e966e31eae3db1e077c02502864e";
+  version = "1.5.0.0";
+  sha256 = "1bf88b8d2c4ac90dee3000684b6e0078502dc5a1030528b687aa143b3ecc1f02";
+  revision = "1";
+  editedCabalFile = "1n9gypnfgqlc1b6djjbkcr8r7bxqf8mpfd7avcf11s529gzk9qgg";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base deepseq indexed-traversable ];
-  testHaskellDepends = [ base deepseq tasty tasty-quickcheck ];
+  testHaskellDepends = [
+    base deepseq indexed-traversable tasty tasty-quickcheck
+  ];
   benchmarkHaskellDepends = [ base deepseq random tasty-bench ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

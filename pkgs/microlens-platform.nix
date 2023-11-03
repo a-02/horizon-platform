@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "microlens-platform";
-  version = "0.4.3.3";
-  sha256 = "5ec7853b372ede912d727368820da5a14455361e1f8a8a7701705cc80fa8468f";
+  version = "0.4.3.4";
+  sha256 = "d09b1d18f32f16070b6e3bf9c182bdb5013f15feee1305bcb939f2330cf84706";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -19,7 +19,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "http://github.com/monadfix/microlens";
+  homepage = "http://github.com/stevenfontanella/microlens";
   description = "microlens + all batteries included (best for apps)";
   license = lib.licenses.bsd3;
   broken = false;

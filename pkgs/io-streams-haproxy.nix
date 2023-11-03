@@ -5,8 +5,8 @@ mkDerivation {
   pname = "io-streams-haproxy";
   version = "1.0.1.0";
   sha256 = "b74eca9290fe838a0e3be857a38b62cf6fb7478acee400eac19e47471a2c96b5";
-  revision = "7";
-  editedCabalFile = "0wib2mz6ifnixrcp9s1pkd00v9q7dvyka1z7zqc3pgif47hr1dbw";
+  revision = "8";
+  editedCabalFile = "03gzlz7hg2jvnx2355r65201680lcm59ln7azzb118abirl460s6";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

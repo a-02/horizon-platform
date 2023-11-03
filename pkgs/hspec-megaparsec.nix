@@ -1,17 +1,13 @@
-{ mkDerivation, base, containers, hspec, hspec-expectations, lib
-, megaparsec
-}:
+{ mkDerivation, base, hspec, hspec-expectations, lib, megaparsec }:
 mkDerivation {
   pname = "hspec-megaparsec";
-  version = "2.2.0";
-  sha256 = "f609b4bb7e38ecba0503f1fc349a2600f5c799ef3c33731ad6a6e1ff9f01ce43";
+  version = "2.2.1";
+  sha256 = "65f4f57f96c05fce5f55e8ad6aafcf4f2e5726d95d74855a95d6779927936a2d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
-  libraryHaskellDepends = [
-    base containers hspec-expectations megaparsec
-  ];
-  testHaskellDepends = [ base hspec hspec-expectations megaparsec ];
+  libraryHaskellDepends = [ base hspec-expectations megaparsec ];
+  testHaskellDepends = [ base hspec megaparsec ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;

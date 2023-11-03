@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "alex";
-  version = "3.2.7.1";
-  sha256 = "9bd2f1a27e8f1b2ffdb5b2fbd3ed82b6f0e85191459a1b24ffcbef4e68a81bec";
+  version = "3.4.0.1";
+  sha256 = "4c38e6fce894bde7e63190900c907040f0a3eaa4cbdd2e6eeac173f57f049f36";
   isLibrary = false;
   isExecutable = true;
   enableSeparateDataOutput = true;

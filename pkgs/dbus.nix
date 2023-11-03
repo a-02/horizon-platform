@@ -2,12 +2,13 @@
 , containers, criterion, deepseq, directory, exceptions, extra
 , filepath, lens, lib, network, parsec, process, random, resourcet
 , split, tasty, tasty-hunit, tasty-quickcheck, template-haskell
-, text, th-lift, transformers, unix, vector, xml-conduit, xml-types
+, temporary, text, th-lift, transformers, unix, vector, xml-conduit
+, xml-types
 }:
 mkDerivation {
   pname = "dbus";
-  version = "1.2.28";
-  sha256 = "7c13a768f396975d228188465a7683efa9253ab792cde0da1662171487654a48";
+  version = "1.3.1";
+  sha256 = "a36eb77ac789cb3ed3b8873387cd9268ba9d3605c56498b69d0fae869f876f58";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -19,7 +20,7 @@ mkDerivation {
   testHaskellDepends = [
     base bytestring cereal containers directory extra filepath network
     parsec process QuickCheck random resourcet tasty tasty-hunit
-    tasty-quickcheck text transformers unix vector
+    tasty-quickcheck temporary text transformers unix vector
   ];
   benchmarkHaskellDepends = [ base criterion ];
   enableLibraryProfiling = true;

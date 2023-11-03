@@ -3,8 +3,8 @@ mkDerivation {
   pname = "hedgehog-quickcheck";
   version = "0.1.1";
   sha256 = "97b65db815fdfaacc7c4d06a7b9b74680b50264afa03f839c4037dcc875152fc";
-  revision = "4";
-  editedCabalFile = "1838hm2p22n8qrps17zjzf9k0jwvrw9g99r0crii3igfbi22m8nf";
+  revision = "6";
+  editedCabalFile = "0ymfpbnywq83xbz1rmp8w3piikgvzriczwcvhir125nk50mgp0xz";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

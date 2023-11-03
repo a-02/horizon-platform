@@ -6,8 +6,8 @@ mkDerivation {
   pname = "microstache";
   version = "1.0.2.3";
   sha256 = "df7a13175783603bfb095e7a5eda9a24eec7d5fd490946d107ad578bb436d29a";
-  revision = "1";
-  editedCabalFile = "04chnz0dcf30a5x90kwqdiad1qbyimmiqgbm38b6m3w72k408hfi";
+  revision = "3";
+  editedCabalFile = "0bl84aym5p31wlyqwh5vicyrdw3nvig65xxdlx4ql8hjr71l7mvi";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

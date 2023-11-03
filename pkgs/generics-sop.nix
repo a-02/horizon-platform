@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "generics-sop";
-  version = "0.5.1.3";
-  sha256 = "ec9cc7b9ca4714fd67538ac4a5ea980ec731cfe0f084c097f8dd284b5669af07";
+  version = "0.5.1.4";
+  sha256 = "616a1c2176097469f9514e76d979fffdbc12d569f44fd01deb14377c7888797e";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

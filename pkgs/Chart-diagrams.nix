@@ -5,10 +5,8 @@
 }:
 mkDerivation {
   pname = "Chart-diagrams";
-  version = "1.9.4";
-  sha256 = "a89cb7aee51fc64276923b879b7bc66fafd994130f53a3035ff6feaf9daf7366";
-  revision = "1";
-  editedCabalFile = "11q3hx4fprmkjp0v4m2c2fzvwqym5aa9wv2lbbr6vxq0wnigp7zz";
+  version = "1.9.5.1";
+  sha256 = "f8dcd91926e6f46b47a21a131650f1dc026e410a63f276ff52ba092aab7662de";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = true;

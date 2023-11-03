@@ -5,8 +5,8 @@ mkDerivation {
   pname = "hw-hspec-hedgehog";
   version = "0.1.1.1";
   sha256 = "fa4c101574484cc8f9775fefc558f62e86c0d0c7e4b494b4adfb6d897ac68fc6";
-  revision = "3";
-  editedCabalFile = "129bnprzh8nglbi5x8i5dlc4v5qr7cqg6bajy6id1168r26ciwcq";
+  revision = "4";
+  editedCabalFile = "0fwdbd7m7b9743y6w1ci3m7m0bgw7w0r0h7pvn2xrhvyjvp9rjqh";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

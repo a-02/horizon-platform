@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "effectful";
-  version = "2.2.2.0";
-  sha256 = "71098017cb64788960eed1de4a88ec0beb6f610d2a3fe88a023b80531a12d7c8";
+  version = "2.3.0.0";
+  sha256 = "6742be657fc65af9aa4f0cedfc7e90b76fba9cb5c736494075182a153244d90f";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

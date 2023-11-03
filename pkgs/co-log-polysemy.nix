@@ -1,8 +1,8 @@
 { mkDerivation, base, co-log-core, lib, polysemy }:
 mkDerivation {
   pname = "co-log-polysemy";
-  version = "0.0.1.3";
-  sha256 = "775989212f33126b035e1f26e836fc197c042d08811dca7ddf25b56fbdf3d7b0";
+  version = "0.0.1.4";
+  sha256 = "de577295c06efe53b49f88360c498f4a10a90708b900ecb004e3a10f8d1250b1";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

@@ -1,19 +1,15 @@
 { mkDerivation, QuickCheck, aeson, base, base-compat
 , base64-bytestring, bytestring, constraints, containers, deepseq
-, exceptions, fetchgit, free, hspec, hspec-discover, http-media
-, http-types, lib, network-uri, safe, servant, sop-core
-, template-haskell, text, transformers
+, exceptions, free, hspec, hspec-discover, http-media, http-types
+, lib, network-uri, safe, servant, sop-core, template-haskell, text
+, transformers
 }:
 mkDerivation {
   pname = "servant-client-core";
-  version = "0.19";
-  src = fetchgit {
-    url = "https://github.com/haskell-servant/servant";
-    sha256 = "0ck3l8nj42nan8abdzvkl4ynb2l9nhnsq2zjl24d7sgca860fi57";
-    rev = "7ae787371333556a7b84778631ed91d1d73e8370";
-    fetchSubmodules = true;
-  };
-  postUnpack = "sourceRoot+=/servant-client-core/; echo source root reset to $sourceRoot";
+  version = "0.20";
+  sha256 = "a6744916079ec769c248ff5f7a2cc62d7eb03abb445be6c1fa7811c2866b4b04";
+  revision = "1";
+  editedCabalFile = "0nkgan32s6v5s3sqk5wdw1m977gszwi8lnap5wrr3m47q7j4003l";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

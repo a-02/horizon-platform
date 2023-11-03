@@ -1,21 +1,22 @@
-{ mkDerivation, QuickCheck, ansi-wl-pprint, base, bytestring
-, containers, hashable, hspec, lib, mtl, parsec, parsers
-, raw-strings-qq, regex-posix, split, template-haskell
-, transformers, unordered-containers, vector
+{ mkDerivation, QuickCheck, base, bytestring, containers, hashable
+, hspec, lib, mtl, parsec, parsers, prettyprinter, raw-strings-qq
+, regex-posix, split, template-haskell, transformers
+, unordered-containers, vector
 }:
 mkDerivation {
   pname = "inline-c";
-  version = "0.9.1.7";
-  sha256 = "53276d02f4940b55da2fe485180bee3ead289f5ab78d70ff4e51334c5e769c71";
+  version = "0.9.1.10";
+  sha256 = "6d0d2e8e49f27925713d7d4550c2e901418b7dfbd6b288e0d3a8fd47165ea4b1";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ansi-wl-pprint base bytestring containers hashable mtl parsec
-    parsers template-haskell transformers unordered-containers vector
+    base bytestring containers hashable mtl parsec parsers
+    prettyprinter template-haskell transformers unordered-containers
+    vector
   ];
   testHaskellDepends = [
-    ansi-wl-pprint base containers hashable hspec parsers QuickCheck
+    base containers hashable hspec parsers prettyprinter QuickCheck
     raw-strings-qq regex-posix split template-haskell transformers
     unordered-containers vector
   ];

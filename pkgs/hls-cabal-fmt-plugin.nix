@@ -1,16 +1,17 @@
 { mkDerivation, base, directory, filepath, ghcide, hls-plugin-api
-, hls-test-utils, lens, lib, lsp-types, process, text, transformers
+, hls-test-utils, lens, lib, lsp-types, mtl, process-extras, text
+, transformers
 }:
 mkDerivation {
   pname = "hls-cabal-fmt-plugin";
-  version = "2.0.0.1";
-  sha256 = "13318921a9587c15b7295953d61c71b6919b116fb3e935f8d3d8b22045b7bcda";
+  version = "2.4.0.0";
+  sha256 = "79630cd9fdf28b8aa49acbdb4389489a4f99137b87f6ef4ce44be013cd9263bf";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base directory filepath ghcide hls-plugin-api lens lsp-types
-    process text transformers
+    base directory filepath ghcide hls-plugin-api lens lsp-types mtl
+    process-extras text transformers
   ];
   testHaskellDepends = [ base directory filepath hls-test-utils ];
   enableLibraryProfiling = true;

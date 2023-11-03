@@ -10,8 +10,8 @@ mkDerivation {
   pname = "linear";
   version = "1.22";
   sha256 = "cfe43e392d0e9b2fd5647bde962b0678681de580260ad30e5f29ae490a03b9b5";
-  revision = "1";
-  editedCabalFile = "1p94bq3pwqvj4qd1lp0w84k514xd9vib76gw0d16q1xh27c2sz4h";
+  revision = "3";
+  editedCabalFile = "1fmq4i3qimccjsn7859q1rk7adpcy9d3zvybl0n7kljn04ag00k4";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

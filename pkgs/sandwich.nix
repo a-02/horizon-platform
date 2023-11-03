@@ -1,6 +1,6 @@
 { mkDerivation, aeson, ansi-terminal, async, base, brick
-, bytestring, colour, containers, directory, exceptions, filepath
-, free, haskell-src-exts, lib, lifted-async, microlens
+, bytestring, colour, containers, deepseq, directory, exceptions
+, filepath, free, haskell-src-exts, lib, lifted-async, microlens
 , microlens-th, monad-control, monad-logger, mtl
 , optparse-applicative, pretty-show, process, safe, safe-exceptions
 , stm, string-interpolate, template-haskell, text, time
@@ -8,31 +8,31 @@
 }:
 mkDerivation {
   pname = "sandwich";
-  version = "0.1.3.2";
-  sha256 = "53798b02cbe82103e27104b57592e92ac957a6d08ff71922534af7719adf5d46";
+  version = "0.1.5.2";
+  sha256 = "214f74ecbed388d68a268969e28b7083a0f34568ccde52b827db59b4b1b12a77";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     aeson ansi-terminal async base brick bytestring colour containers
-    directory exceptions filepath free haskell-src-exts lifted-async
-    microlens microlens-th monad-control monad-logger mtl
+    deepseq directory exceptions filepath free haskell-src-exts
+    lifted-async microlens microlens-th monad-control monad-logger mtl
     optparse-applicative pretty-show process safe safe-exceptions stm
     string-interpolate template-haskell text time transformers
     transformers-base unix unliftio-core vector vty
   ];
   executableHaskellDepends = [
     aeson ansi-terminal async base brick bytestring colour containers
-    directory exceptions filepath free haskell-src-exts lifted-async
-    microlens microlens-th monad-control monad-logger mtl
+    deepseq directory exceptions filepath free haskell-src-exts
+    lifted-async microlens microlens-th monad-control monad-logger mtl
     optparse-applicative pretty-show process safe safe-exceptions stm
     string-interpolate template-haskell text time transformers
     transformers-base unix unliftio-core vector vty
   ];
   testHaskellDepends = [
     aeson ansi-terminal async base brick bytestring colour containers
-    directory exceptions filepath free haskell-src-exts lifted-async
-    microlens microlens-th monad-control monad-logger mtl
+    deepseq directory exceptions filepath free haskell-src-exts
+    lifted-async microlens microlens-th monad-control monad-logger mtl
     optparse-applicative pretty-show process safe safe-exceptions stm
     string-interpolate template-haskell text time transformers
     transformers-base unix unliftio-core vector vty

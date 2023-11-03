@@ -1,12 +1,12 @@
 { mkDerivation, HUnit, QuickCheck, aeson, base, bytestring
-, containers, criterion, deepseq, ghc-prim, lib, string-qq, syb
-, test-framework, test-framework-hunit, test-framework-quickcheck2
-, text, transformers
+, containers, criterion, deepseq, ghc-prim, lib, syb
+, template-haskell, test-framework, test-framework-hunit
+, test-framework-quickcheck2, text, transformers
 }:
 mkDerivation {
   pname = "pandoc-types";
-  version = "1.23";
-  sha256 = "5e6721410219c0a39b05fc732de9864745592fffa8287ad6e87c66138a51162d";
+  version = "1.23.1";
+  sha256 = "ad0fa083d28d452b7d37a1c67a2c140137a5f29a2f52fd88e807fac20245a1c1";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -15,8 +15,9 @@ mkDerivation {
     text transformers
   ];
   testHaskellDepends = [
-    aeson base bytestring containers HUnit QuickCheck string-qq syb
-    test-framework test-framework-hunit test-framework-quickcheck2 text
+    aeson base bytestring containers HUnit QuickCheck syb
+    template-haskell test-framework test-framework-hunit
+    test-framework-quickcheck2 text
   ];
   benchmarkHaskellDepends = [ base criterion text ];
   enableLibraryProfiling = true;

@@ -6,6 +6,8 @@ mkDerivation {
   pname = "numeric-prelude";
   version = "0.4.4";
   sha256 = "5a32f6b4dab913c68db30acc2e70e41e4b8f9fb00d25407ed4b0e4ae85cfa613";
+  revision = "1";
+  editedCabalFile = "0w5an2w06vpi75qj9972qbsiz4n72mr6mkib4ivlrrirndsyda79";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

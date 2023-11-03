@@ -6,8 +6,8 @@
 }:
 mkDerivation {
   pname = "optics";
-  version = "0.4.2";
-  sha256 = "ebe7553704d3491f02777dc6f02a2cf170d4b87ce5265139ce759314460533c7";
+  version = "0.4.2.1";
+  sha256 = "e653d86aba75454fac21ab2f4220e895ad7f6e06889bc08d3f6522de4f7c5f6b";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

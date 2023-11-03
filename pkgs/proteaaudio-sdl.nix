@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "proteaaudio-sdl";
-  version = "0.9.3";
-  sha256 = "57f99c2ca828fd820c618936f970cc70d9457de48ba4ed097531085494b0ee84";
+  version = "0.10.1";
+  sha256 = "581a0c109d53ce7b33afb1242ac4bc89b1144a109ff778b8a69c4d69acfb3526";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

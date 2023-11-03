@@ -1,12 +1,13 @@
-{ mkDerivation, base, criterion, deepseq, lib }:
+{ mkDerivation, QuickCheck, base, criterion, deepseq, lib }:
 mkDerivation {
   pname = "sorted-list";
-  version = "0.2.1.0";
-  sha256 = "b4e476157cf0df745eb3c39921357ffb2bf411cd169e755e99536031e07c5ef4";
+  version = "0.2.2.0";
+  sha256 = "39e70f76a621bd23992e69b5140d76502eaa602e31d2c2f8493fcdda5d980f37";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base deepseq ];
+  testHaskellDepends = [ base QuickCheck ];
   benchmarkHaskellDepends = [ base criterion ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
@@ -15,7 +16,6 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "https://github.com/Daniel-Diaz/sorted-list/blob/master/README.md";
   description = "Type-enforced sorted lists and related functions";
   license = lib.licenses.bsd3;
   broken = false;

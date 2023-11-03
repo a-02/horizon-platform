@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "ghc-exactprint";
-  version = "1.6.1.1";
-  sha256 = "8883b247ca97c8720c047b820941c1119c4537c0121b21b02cca441ea12df437";
+  version = "1.6.1.3";
+  sha256 = "feba1ec1d3df0822ecfb74cfa6221f3c0966419919fa508b031492dc523a4be3";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

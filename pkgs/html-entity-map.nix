@@ -3,8 +3,8 @@ mkDerivation {
   pname = "html-entity-map";
   version = "0.1.0.0";
   sha256 = "983600c33e8515e6ca31742d25490fb5a7be02503331963621b0ba5cd70d344c";
-  revision = "5";
-  editedCabalFile = "1776z73bs1v8z3qwpjvqqmzdlj6gm8qba93f41irhn7swdppfq72";
+  revision = "6";
+  editedCabalFile = "0xlzcz5mxp5l6dz2ajraylxkgdbj5yflxh3fr019d3fqvr2a2hwz";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
