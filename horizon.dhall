@@ -409,13 +409,6 @@ let packages =
       , hls-retrie-plugin = H.callHackage "hls-retrie-plugin" "2.4.0.0"
       , hls-splice-plugin = H.callHackage "hls-splice-plugin" "2.4.0.0"
       , hls-test-utils = H.callHackage "hls-test-utils" "2.4.0.0"
-      , hnix =
-          H.callGit
-            "https://github.com/haskell-nix/hnix"
-            "48e962a3497893c30a749d085ebf82a8cc5cd5bd"
-            (None H.Subdir)
-      , hnix-store-core = H.callHackage "hnix-store-core" "0.6.1.0"
-      , hnix-store-remote = H.callHackage "hnix-store-remote" "0.6.0.0"
       , hosc = H.callHackage "hosc" "0.20"
       , hp2pretty = H.callHackage "hp2pretty" "0.10"
       , hslogger = H.callHackage "hslogger" "1.3.1.0"
