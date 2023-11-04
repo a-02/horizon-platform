@@ -1206,18 +1206,6 @@
   , mapValue =
       "736b6e8bd716787854b17ee1cf070ca2bf7c7d5829e950c6be1878db3f11e431"
   }
-, { mapKey = "hnix"
-  , mapValue =
-      "8d048838791229530ae843c4f039ad42db0de21e401066069bc03fe2e8ea81b7"
-  }
-, { mapKey = "hnix-store-core"
-  , mapValue =
-      "40372f58433f36f655c4a501785c5d782ca8824ba5c3d917d7ce2799bfaaea6a"
-  }
-, { mapKey = "hnix-store-remote"
-  , mapValue =
-      "c8f7a31eca2ab7662d06b9dfc5bf1b58be9e987552dc13b03252570f6b783dbb"
-  }
 , { mapKey = "hosc"
   , mapValue =
       "61ce61b7fbcfe75955e073c3c970f975f124f7b8ece777e46be7988aaf104530"

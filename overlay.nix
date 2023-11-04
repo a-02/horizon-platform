@@ -605,12 +605,6 @@ final: prev: with pkgs.haskell.lib; {
 
   hls-test-utils = final.callPackage (./pkgs/hls-test-utils.nix) { };
 
-  hnix = final.callPackage (./pkgs/hnix.nix) { };
-
-  hnix-store-core = final.callPackage (./pkgs/hnix-store-core.nix) { };
-
-  hnix-store-remote = final.callPackage (./pkgs/hnix-store-remote.nix) { };
-
   hosc = final.callPackage (./pkgs/hosc.nix) { };
 
   hp2pretty = final.callPackage (./pkgs/hp2pretty.nix) { };
