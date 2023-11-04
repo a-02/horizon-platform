@@ -70,3 +70,11 @@ To build all packages, run
 ```
 nix run develop/#feedback -- build
 ```
+
+## Hoogle
+
+To run a hoogle server containing the entire package set. Do
+
+```
+nix run .#run-hoogle
+```

@@ -15,7 +15,7 @@ mkDerivation {
   libraryPkgconfigDepends = [ SDL2 SDL2_ttf ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

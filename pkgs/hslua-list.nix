@@ -11,7 +11,7 @@ mkDerivation {
   testHaskellDepends = [ base hslua-core tasty tasty-lua ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

@@ -9,7 +9,7 @@ mkDerivation {
   libraryHaskellDepends = [ base newtype-generics ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

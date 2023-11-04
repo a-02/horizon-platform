@@ -16,7 +16,7 @@ mkDerivation {
   testHaskellDepends = [ base filepath hls-test-utils ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

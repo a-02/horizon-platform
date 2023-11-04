@@ -48,8 +48,18 @@
 
           packages = filterAttrs (_: isDerivation) legacyPackages;
 
+          horizon-hoogle = pkgs.writers.writeBashBin "horizon-hoogle" ''
+            ${legacyPackages.ghcWithHoogle (p: attrValues (packages // { hoogle = null; }))}/bin/hoogle server --local
+          '';
         in
         {
+
+          apps = {
+            run-hoogle = {
+              type = "app";
+              program = "${horizon-hoogle}/bin/horizon-core-hoogle";
+            };
+          };
 
           checks = with lint-utils.linters.${system}; {
             dhall-format = dhall-format { src = self; };

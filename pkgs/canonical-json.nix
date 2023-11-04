@@ -19,7 +19,7 @@ mkDerivation {
   benchmarkHaskellDepends = [ base bytestring containers criterion ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

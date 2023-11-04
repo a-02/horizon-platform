@@ -577,16 +577,16 @@
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1697280312,
-        "narHash": "sha256-GXjT8XYd0OvyKKnDJjK1w8ler2tN41lvK/dHCeELhGY=",
-        "ref": "refs/tags/0.10.4",
-        "rev": "d57f6cd65403e0b8a404088384fd646ac85fb713",
-        "revCount": 181,
+        "lastModified": 1698091055,
+        "narHash": "sha256-RxZRtv/ccP9lwcU54OQCFfgWK8C8eyKSbT+vW6Bl7ck=",
+        "ref": "refs/tags/0.11.0",
+        "rev": "0f5e5bad673d0c977246e6d96f39a6867e04fad3",
+        "revCount": 190,
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix"
       },
       "original": {
-        "ref": "refs/tags/0.10.4",
+        "ref": "refs/tags/0.11.0",
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix"
       }

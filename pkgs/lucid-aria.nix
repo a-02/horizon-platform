@@ -10,7 +10,7 @@ mkDerivation {
   testHaskellDepends = [ base hspec HUnit lucid ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

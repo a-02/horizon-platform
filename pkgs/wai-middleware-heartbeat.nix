@@ -14,7 +14,7 @@ mkDerivation {
   libraryHaskellDepends = [ base http-types wai ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;
