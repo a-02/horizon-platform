@@ -11,8 +11,8 @@
 }:
 mkDerivation {
   pname = "wreq";
-  version = "0.5.4.0";
-  sha256 = "c528617d5aeab9aa60463221f4ed21a24090dfd8d015bb67e2959bfc938ac471";
+  version = "0.5.4.2";
+  sha256 = "901b28b04ad186be48b1b91fd2172053fac3c91bfdb70dc79fb65b80642cd504";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

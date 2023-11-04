@@ -1,17 +1,17 @@
-{ mkDerivation, ansi-terminal, base, containers, ghc, haskeline
-, lib, mtl, pretty-simple, tasty, tasty-hunit, template-haskell
-, text, transformers
+{ mkDerivation, ansi-terminal, base, containers, deepseq, ghc
+, haskeline, lib, mtl, pretty-simple, tasty, tasty-hunit
+, template-haskell, text, transformers
 }:
 mkDerivation {
   pname = "breakpoint";
-  version = "0.1.2.1";
-  sha256 = "059ac45a5d9e650d61db8167062636f0029ac6ff3c27b1fa3faccc5c195b43ae";
+  version = "0.1.2.2";
+  sha256 = "b51a757785e5baed7a9dfb365cc79d6e519ba52b6680fc5c792eb909a682a20b";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    ansi-terminal base containers ghc haskeline mtl pretty-simple
-    template-haskell text transformers
+    ansi-terminal base containers deepseq ghc haskeline mtl
+    pretty-simple template-haskell text transformers
   ];
   testHaskellDepends = [ base containers tasty tasty-hunit ];
   enableLibraryProfiling = true;

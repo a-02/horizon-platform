@@ -7,6 +7,8 @@ mkDerivation {
   pname = "password";
   version = "3.0.2.1";
   sha256 = "e935fcab166fae63e1fc02155d12e61881d1daac8edfca9f125ea7f44aa2d60d";
+  revision = "1";
+  editedCabalFile = "0a4avz0g6nwr293718h63mpqkxhxsjmmfnyk2wfcfkb4pbm1q0y8";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

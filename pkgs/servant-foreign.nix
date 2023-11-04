@@ -1,16 +1,12 @@
-{ mkDerivation, base, base-compat, fetchgit, hspec, hspec-discover
+{ mkDerivation, base, base-compat, hspec, hspec-discover
 , http-types, lens, lib, servant, text
 }:
 mkDerivation {
   pname = "servant-foreign";
-  version = "0.15.4";
-  src = fetchgit {
-    url = "https://github.com/haskell-servant/servant";
-    sha256 = "0ck3l8nj42nan8abdzvkl4ynb2l9nhnsq2zjl24d7sgca860fi57";
-    rev = "7ae787371333556a7b84778631ed91d1d73e8370";
-    fetchSubmodules = true;
-  };
-  postUnpack = "sourceRoot+=/servant-foreign/; echo source root reset to $sourceRoot";
+  version = "0.16";
+  sha256 = "bbaeb1e42a335fa5f65e837deee782db77b61f068093170eafd2b3763ac8f196";
+  revision = "1";
+  editedCabalFile = "17rnd7dnkj5p8jpbmlgysacrdxxhczd4ll8r5r3bpd56yhj8wm2c";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

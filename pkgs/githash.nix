@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "githash";
-  version = "0.1.6.3";
-  sha256 = "fcba79b60ef87bdd4976332e998589a62e1be012b932b543b49de5e0620eef1b";
+  version = "0.1.7.0";
+  sha256 = "1ad5e7c26bd9c9c4e4c3232206694b153845fe11f227e39d214eef0d95f330d4";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

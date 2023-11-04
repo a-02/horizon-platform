@@ -5,6 +5,8 @@ mkDerivation {
   pname = "th-extras";
   version = "0.0.0.6";
   sha256 = "02bf23940c0233a6ef6f61868e827ebd4554afe8d71cef2a1eb8e286a7f07c4a";
+  revision = "1";
+  editedCabalFile = "0v81vfgaky4bb3rh18mnb7ampwm43dba3vsngv9mb1f3z975f0ix";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

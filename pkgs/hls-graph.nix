@@ -6,8 +6,8 @@
 }:
 mkDerivation {
   pname = "hls-graph";
-  version = "2.0.0.1";
-  sha256 = "cc6227f7c8ab9c615e088a88c28f24df81205ea71be05d94a6bda8299785704d";
+  version = "2.4.0.0";
+  sha256 = "45c894264be5710a6b0c569a8bc35630d515ea92bcca805fe6e2551348723a41";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = true;

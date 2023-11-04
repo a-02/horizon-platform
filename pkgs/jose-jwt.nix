@@ -22,7 +22,7 @@ mkDerivation {
   benchmarkHaskellDepends = [ base bytestring criterion cryptonite ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = true;
+  doHaddock = false;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

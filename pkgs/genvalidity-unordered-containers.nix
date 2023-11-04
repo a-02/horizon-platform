@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "genvalidity-unordered-containers";
-  version = "1.0.0.0";
-  sha256 = "b325c19594853133b62019ad35ed86616b92ac1afd18a5f49a801e3e453fa6e9";
+  version = "1.0.0.1";
+  sha256 = "131481f7eae6edf1e011e3cd5dd67bb2c1113f7429b0a522838d908235d40021";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

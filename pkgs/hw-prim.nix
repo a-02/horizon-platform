@@ -7,6 +7,8 @@ mkDerivation {
   pname = "hw-prim";
   version = "0.6.3.2";
   sha256 = "1fa05fdc46c72ed4b28aabcee69695ce810d451bbd263fbe75f94b179e20441d";
+  revision = "1";
+  editedCabalFile = "1wga8ghc001lz9y76ffrdrpqkxpj1lz7qpkykfl66lsqf5pvng32";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

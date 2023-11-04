@@ -7,25 +7,24 @@
 , hls-change-type-signature-plugin, hls-class-plugin
 , hls-code-range-plugin, hls-explicit-fixity-plugin
 , hls-explicit-imports-plugin, hls-explicit-record-fields-plugin
-, hls-fourmolu-plugin, hls-gadt-plugin, hls-graph, hls-hlint-plugin
+, hls-gadt-plugin, hls-graph, hls-hlint-plugin
 , hls-module-name-plugin, hls-overloaded-record-dot-plugin
 , hls-plugin-api, hls-pragmas-plugin
 , hls-qualify-imported-names-plugin, hls-refactor-plugin
-, hls-refine-imports-plugin, hls-retrie-plugin, hls-splice-plugin
-, hls-test-utils, hp2pretty, hspec-expectations, implicit-hie, lens
-, lens-aeson, lib, lsp, lsp-test, lsp-types, mtl
-, optparse-applicative, optparse-simple, prettyprinter, process
-, regex-tdfa, safe-exceptions, shake, shake-bench, sqlite-simple
-, stm, temporary, text, transformers, unix, unliftio-core
-, unordered-containers, yaml
+, hls-retrie-plugin, hls-splice-plugin, hls-test-utils, hp2pretty
+, hspec-expectations, implicit-hie, lens, lens-aeson, lib, lsp
+, lsp-test, lsp-types, mtl, optparse-applicative, optparse-simple
+, prettyprinter, process, regex-tdfa, row-types, safe-exceptions
+, shake, shake-bench, sqlite-simple, stm, temporary, text
+, transformers, unix, unliftio-core, unordered-containers, yaml
 }:
 mkDerivation {
   pname = "haskell-language-server";
-  version = "2.0.0.1";
-  sha256 = "19f3015f63b60ab2aaeed29bb8bdc1a12e537b721e0caf446a9f0982b27e6cb4";
+  version = "2.4.0.0";
+  sha256 = "0fc7d587b3cd288d770c684611367fab666f9790c56e49d920787b15b4deeb4b";
   configureFlags = [
-    "-f-dynamic" "-f-eval" "-f-floskell" "-f-ormolu" "-f-rename"
-    "-f-stylishhaskell"
+    "-f-dynamic" "-f-eval" "-f-floskell" "-f-fourmolu" "-f-ormolu"
+    "-f-refine-imports" "-f-rename" "-f-stylishhaskell"
   ];
   isLibrary = true;
   isExecutable = true;
@@ -38,13 +37,12 @@ mkDerivation {
     hls-change-type-signature-plugin hls-class-plugin
     hls-code-range-plugin hls-explicit-fixity-plugin
     hls-explicit-imports-plugin hls-explicit-record-fields-plugin
-    hls-fourmolu-plugin hls-gadt-plugin hls-graph hls-hlint-plugin
-    hls-module-name-plugin hls-overloaded-record-dot-plugin
-    hls-plugin-api hls-pragmas-plugin hls-qualify-imported-names-plugin
-    hls-refactor-plugin hls-refine-imports-plugin hls-retrie-plugin
-    hls-splice-plugin lsp optparse-applicative optparse-simple
-    prettyprinter process safe-exceptions sqlite-simple text
-    unordered-containers
+    hls-gadt-plugin hls-graph hls-hlint-plugin hls-module-name-plugin
+    hls-overloaded-record-dot-plugin hls-plugin-api hls-pragmas-plugin
+    hls-qualify-imported-names-plugin hls-refactor-plugin
+    hls-retrie-plugin hls-splice-plugin lsp optparse-applicative
+    optparse-simple prettyprinter process safe-exceptions sqlite-simple
+    text unordered-containers
   ];
   executableHaskellDepends = [
     aeson async base base16-bytestring binary bytestring containers
@@ -59,7 +57,7 @@ mkDerivation {
     aeson base bytestring containers data-default deepseq directory
     extra filepath ghcide ghcide-test-utils hashable hls-plugin-api
     hls-refactor-plugin hls-test-utils hspec-expectations lens
-    lens-aeson lsp-test lsp-types prettyprinter process text
+    lens-aeson lsp-test lsp-types prettyprinter process row-types text
     unordered-containers
   ];
   testToolDepends = [ ghcide ];

@@ -1,22 +1,19 @@
-{ mkDerivation, QuickCheck, base, base-prelude, bytestring
-, criterion, deepseq, lib, quickcheck-instances, tasty, tasty-hunit
-, tasty-quickcheck, text
+{ mkDerivation, base, base-prelude, bytestring, criterion, lib
+, quickcheck-instances, tasty, tasty-hunit, tasty-quickcheck, text
 }:
 mkDerivation {
   pname = "bytestring-tree-builder";
-  version = "0.2.7.10";
-  sha256 = "29282a224cd60c5c15a21deca658eb764325512ee96be8bc27638764aebd363d";
+  version = "0.2.7.11";
+  sha256 = "b757c9ced07898b8bfd03a04d10bc2caab23ac05093c3e2d68cbf0152d0892cf";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring text ];
   testHaskellDepends = [
-    base-prelude bytestring QuickCheck quickcheck-instances tasty
-    tasty-hunit tasty-quickcheck
+    base-prelude bytestring quickcheck-instances tasty tasty-hunit
+    tasty-quickcheck
   ];
-  benchmarkHaskellDepends = [
-    base-prelude bytestring criterion deepseq
-  ];
+  benchmarkHaskellDepends = [ base-prelude bytestring criterion ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;

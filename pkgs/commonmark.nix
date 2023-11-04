@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "commonmark";
-  version = "0.2.2";
-  sha256 = "b70b421f5753d983745e558d7d66a5e346ee5b2ebc0a827e9f63f8ff7a62b24e";
+  version = "0.2.4";
+  sha256 = "557fcef92671eec142068c7772734d41c727659c51eb93db09acca693f9a1d56";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

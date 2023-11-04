@@ -6,6 +6,8 @@ mkDerivation {
   pname = "lucid";
   version = "2.11.20230408";
   sha256 = "0f112990fee9c5b1c62c64c926147272534781ed8a7225d39dd0248a670f441d";
+  revision = "1";
+  editedCabalFile = "1gb3b79xf4jp0xvk2anlvpvac6gqcfpffylkwki19lrx6jbd8fqs";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

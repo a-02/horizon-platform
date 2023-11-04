@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "hls-code-range-plugin";
-  version = "2.0.0.1";
-  sha256 = "f1d4bd7164f1dd60222402438eef724a82b8cdb2cef2669860174641a7fc7ca7";
+  version = "2.4.0.0";
+  sha256 = "6acaa7421a4ce10a71833638573d8ae50ad3111398ea6e0127288e239e4b2e52";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -15,8 +15,9 @@ mkDerivation {
     lens lsp mtl semigroupoids text transformers vector
   ];
   testHaskellDepends = [
-    base bytestring containers filepath ghcide hls-test-utils lens lsp
-    lsp-test tasty-hunit text transformers vector
+    base bytestring containers filepath ghcide hls-plugin-api
+    hls-test-utils lens lsp lsp-test tasty-hunit text transformers
+    vector
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

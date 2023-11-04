@@ -5,8 +5,8 @@ mkDerivation {
   pname = "extended-reals";
   version = "0.2.4.0";
   sha256 = "0c2c664abe60a105207b1678ab699c1b5cf2708976bc6b2b8c3a4e54e93faea5";
-  revision = "1";
-  editedCabalFile = "07qsnn05q9n2l4jh7agql44l2z7rqnwdcp9bssri4chs0jvk15rg";
+  revision = "2";
+  editedCabalFile = "1v4vcrf66bapldw5jswkp4jb1v1qlr5cx2mgjnxb8mszir7s6p1f";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

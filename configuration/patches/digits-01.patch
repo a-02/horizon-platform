@@ -1,0 +1,18 @@
+commit 1217673c07de672edee01d1befb7243ec2de6ca6
+Author: Daniel Firth <dan.firth@homotopic.tech>
+Date:   Sat Nov 4 10:32:11 2023 +0000
+
+    fix build
+
+diff --git a/Setup.lhs b/Setup.lhs
+index 384dfce..76660fd 100644
+--- a/Setup.lhs
++++ b/Setup.lhs
+@@ -2,6 +2,5 @@
+ 
+ > import Distribution.Simple
+ > import System.Cmd
+-> tests _ _ _ _ = system "runhaskell src/Tests.hs" >> return ()
+-> main = defaultMainWithHooks (simpleUserHooks {runTests = tests})
++> main = defaultMainWithHooks simpleUserHooks
+ 

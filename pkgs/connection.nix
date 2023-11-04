@@ -6,8 +6,8 @@ mkDerivation {
   pname = "connection";
   version = "0.3.1";
   sha256 = "5d759589c532c34d87bfc4f6fcb732bf55b55a93559d3b94229e8347a15375d9";
-  revision = "1";
-  editedCabalFile = "08f1n38zryd0jklyv3yillilp040zxfxha6jphrmf28haq2irnk5";
+  revision = "2";
+  editedCabalFile = "1z6v1mhq3wvkbbvhaazlxli3d494iarsqvbx4qwx6xqn1pqz5jrx";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

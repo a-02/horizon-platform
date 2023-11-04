@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "optparse-generic";
-  version = "1.5.0";
-  sha256 = "a566b590218e665725c4de6702cce92670acd14f6debd8e25b1223a76c2ab079";
+  version = "1.5.1";
+  sha256 = "d9db0fd22d84973fb31ed7a52162686fbb9f4efbb8e4525cd39a77bf208bca06";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

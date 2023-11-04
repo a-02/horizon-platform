@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "genvalidity-persistent";
-  version = "1.0.0.1";
-  sha256 = "5982eb6b9b9d5e31287d6de76a5fb25d3721a3274cde107dfd19ccb214a571c0";
+  version = "1.0.0.2";
+  sha256 = "7e0b65463512d455d1c9e61ef28fa7d2e5923a9cfa2a33611d77fd50b64e49c5";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

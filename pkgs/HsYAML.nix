@@ -3,10 +3,8 @@
 }:
 mkDerivation {
   pname = "HsYAML";
-  version = "0.2.1.1";
-  sha256 = "465bb4fc90979c19bedf6db2053f9ac54537b4912d5827d7e2135d42ef5ef628";
-  revision = "2";
-  editedCabalFile = "0r2yh96nhmlfy2vj2c7i5703brv4lp9cw5v044j7s8487jvv70d6";
+  version = "0.2.1.3";
+  sha256 = "e026a9ac5b8fd81436ddc5fe9e0522eeeeba81a44f152c7378d05913778f9d90";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

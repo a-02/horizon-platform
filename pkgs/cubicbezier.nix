@@ -4,10 +4,8 @@
 }:
 mkDerivation {
   pname = "cubicbezier";
-  version = "0.6.0.6";
-  sha256 = "5a73fcde2b92ce138d924c323f04f48427acbfdc2c774ff0f032a10ea60afa68";
-  revision = "1";
-  editedCabalFile = "084inqa0mpm6m958fmjwsnn2fn46mcdpfin482mzs5fk6c9fwywl";
+  version = "0.6.0.7";
+  sha256 = "e2e85e0cc78c2b65858bcd969d58bf36f1cd8e59531d361b6d710073939846e5";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

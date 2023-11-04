@@ -6,8 +6,8 @@ mkDerivation {
   pname = "unicode-transforms";
   version = "0.4.0.1";
   sha256 = "3278e1e1d648da4bcd7368658ae091a89080e88a2f44db9df5136711e99649fc";
-  revision = "3";
-  editedCabalFile = "1hx6v04g4g1d8y8nm26k7vkhgfqmcch5xhvljlz67grw0j5d1zxd";
+  revision = "4";
+  editedCabalFile = "16d6l9ybs2wdwxdf3xfs25pzkkf3svflsn6ncvg86yky4x50zg29";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

@@ -63,6 +63,8 @@ final: prev: with pkgs.haskell.lib; {
 
   active = final.callPackage (./pkgs/active.nix) { };
 
+  aeson = final.callPackage (./pkgs/aeson.nix) { };
+
   aeson-qq = final.callPackage (./pkgs/aeson-qq.nix) { };
 
   aeson-yaml = final.callPackage (./pkgs/aeson-yaml.nix) { };
@@ -82,6 +84,8 @@ final: prev: with pkgs.haskell.lib; {
   apply-refact = final.callPackage (./pkgs/apply-refact.nix) { };
 
   async-timer = final.callPackage (./pkgs/async-timer.nix) { };
+
+  attoparsec-aeson = final.callPackage (./pkgs/attoparsec-aeson.nix) { };
 
   attoparsec-binary = final.callPackage (./pkgs/attoparsec-binary.nix) { };
 
@@ -136,10 +140,6 @@ final: prev: with pkgs.haskell.lib; {
   bytestring-tree-builder = final.callPackage (./pkgs/bytestring-tree-builder.nix) { };
 
   c2hs = final.callPackage (./pkgs/c2hs.nix) { };
-
-  cabal-install = final.callPackage (./pkgs/cabal-install.nix) { };
-
-  cabal-install-solver = final.callPackage (./pkgs/cabal-install-solver.nix) { };
 
   cache = final.callPackage (./pkgs/cache.nix) { };
 
@@ -281,10 +281,6 @@ final: prev: with pkgs.haskell.lib; {
 
   dhall-docs = final.callPackage (./pkgs/dhall-docs.nix) { };
 
-  dhall-json = final.callPackage (./pkgs/dhall-json.nix) { };
-
-  dhall-nixpkgs = final.callPackage (./pkgs/dhall-nixpkgs.nix) { };
-
   diagrams-contrib = final.callPackage (./pkgs/diagrams-contrib.nix) { };
 
   diagrams-core = final.callPackage (./pkgs/diagrams-core.nix) { };
@@ -300,6 +296,8 @@ final: prev: with pkgs.haskell.lib; {
   dictionary-sharing = final.callPackage (./pkgs/dictionary-sharing.nix) { };
 
   digest = final.callPackage (./pkgs/digest.nix) { };
+
+  digits = final.callPackage (./pkgs/digits.nix) { };
 
   dimensional = final.callPackage (./pkgs/dimensional.nix) { };
 
@@ -347,8 +345,6 @@ final: prev: with pkgs.haskell.lib; {
 
   ekg-wai = final.callPackage (./pkgs/ekg-wai.nix) { };
 
-  ema = final.callPackage (./pkgs/ema.nix) { };
-
   email-validate = final.callPackage (./pkgs/email-validate.nix) { };
 
   emojis = final.callPackage (./pkgs/emojis.nix) { };
@@ -372,8 +368,6 @@ final: prev: with pkgs.haskell.lib; {
   fast-math = final.callPackage (./pkgs/fast-math.nix) { };
 
   fcf-containers = final.callPackage (./pkgs/fcf-containers.nix) { };
-
-  feedback = final.callPackage (./pkgs/feedback.nix) { };
 
   file-embed = final.callPackage (./pkgs/file-embed.nix) { };
 
@@ -587,8 +581,6 @@ final: prev: with pkgs.haskell.lib; {
 
   hls-explicit-record-fields-plugin = final.callPackage (./pkgs/hls-explicit-record-fields-plugin.nix) { };
 
-  hls-fourmolu-plugin = final.callPackage (./pkgs/hls-fourmolu-plugin.nix) { };
-
   hls-gadt-plugin = final.callPackage (./pkgs/hls-gadt-plugin.nix) { };
 
   hls-graph = final.callPackage (./pkgs/hls-graph.nix) { };
@@ -607,8 +599,6 @@ final: prev: with pkgs.haskell.lib; {
 
   hls-refactor-plugin = final.callPackage (./pkgs/hls-refactor-plugin.nix) { };
 
-  hls-refine-imports-plugin = final.callPackage (./pkgs/hls-refine-imports-plugin.nix) { };
-
   hls-retrie-plugin = final.callPackage (./pkgs/hls-retrie-plugin.nix) { };
 
   hls-splice-plugin = final.callPackage (./pkgs/hls-splice-plugin.nix) { };
@@ -624,8 +614,6 @@ final: prev: with pkgs.haskell.lib; {
   hosc = final.callPackage (./pkgs/hosc.nix) { };
 
   hp2pretty = final.callPackage (./pkgs/hp2pretty.nix) { };
-
-  hpack-dhall = final.callPackage (./pkgs/hpack-dhall.nix) { };
 
   hslogger = final.callPackage (./pkgs/hslogger.nix) { };
 
@@ -851,8 +839,6 @@ final: prev: with pkgs.haskell.lib; {
 
   mime-mail = final.callPackage (./pkgs/mime-mail.nix) { };
 
-  minio-hs = final.callPackage (./pkgs/minio-hs.nix) { };
-
   mmark = final.callPackage (./pkgs/mmark.nix) { };
 
   mod = final.callPackage (./pkgs/mod.nix) { };
@@ -860,8 +846,6 @@ final: prev: with pkgs.haskell.lib; {
   modern-uri = final.callPackage (./pkgs/modern-uri.nix) { };
 
   monad-logger = final.callPackage (./pkgs/monad-logger.nix) { };
-
-  monad-logger-extras = final.callPackage (./pkgs/monad-logger-extras.nix) { };
 
   monad-loops = final.callPackage (./pkgs/monad-loops.nix) { };
 
@@ -1075,6 +1059,8 @@ final: prev: with pkgs.haskell.lib; {
 
   quiet = final.callPackage (./pkgs/quiet.nix) { };
 
+  quote-quot = final.callPackage (./pkgs/quote-quot.nix) { };
+
   random-bytestring = final.callPackage (./pkgs/random-bytestring.nix) { };
 
   random-fu = final.callPackage (./pkgs/random-fu.nix) { };
@@ -1092,6 +1078,8 @@ final: prev: with pkgs.haskell.lib; {
   refact = final.callPackage (./pkgs/refact.nix) { };
 
   refined = final.callPackage (./pkgs/refined.nix) { };
+
+  regex = final.callPackage (./pkgs/regex.nix) { };
 
   regex-applicative = final.callPackage (./pkgs/regex-applicative.nix) { };
 
@@ -1303,6 +1291,8 @@ final: prev: with pkgs.haskell.lib; {
 
   text-builder-dev = final.callPackage (./pkgs/text-builder-dev.nix) { };
 
+  text-builder-linear = final.callPackage (./pkgs/text-builder-linear.nix) { };
+
   text-conversions = final.callPackage (./pkgs/text-conversions.nix) { };
 
   text-display = final.callPackage (./pkgs/text-display.nix) { };
@@ -1339,6 +1329,8 @@ final: prev: with pkgs.haskell.lib; {
 
   tmp-postgres = final.callPackage (./pkgs/tmp-postgres.nix) { };
 
+  toml-parser = final.callPackage (./pkgs/toml-parser.nix) { };
+
   torsor = final.callPackage (./pkgs/torsor.nix) { };
 
   transformers-except = final.callPackage (./pkgs/transformers-except.nix) { };
@@ -1352,6 +1344,10 @@ final: prev: with pkgs.haskell.lib; {
   type-hint = final.callPackage (./pkgs/type-hint.nix) { };
 
   typerep-map = final.callPackage (./pkgs/typerep-map.nix) { };
+
+  typst = final.callPackage (./pkgs/typst.nix) { };
+
+  typst-symbols = final.callPackage (./pkgs/typst-symbols.nix) { };
 
   uglymemo = final.callPackage (./pkgs/uglymemo.nix) { };
 
@@ -1402,6 +1398,10 @@ final: prev: with pkgs.haskell.lib; {
   version-natural-dhall-instance = final.callPackage (./pkgs/version-natural-dhall-instance.nix) { };
 
   vinyl = final.callPackage (./pkgs/vinyl.nix) { };
+
+  vty-crossplatform = final.callPackage (./pkgs/vty-crossplatform.nix) { };
+
+  vty-unix = final.callPackage (./pkgs/vty-unix.nix) { };
 
   wai-app-static = final.callPackage (./pkgs/wai-app-static.nix) { };
 

@@ -1,12 +1,12 @@
-{ mkDerivation, QuickCheck, base, bytestring, containers, foldl
-, hashable, lib, primitive, quickcheck-instances, rerebase, tasty
-, tasty-hunit, tasty-quickcheck, text, transformers
-, unordered-containers, vector
+{ mkDerivation, base, bytestring, containers, foldl, hashable, lib
+, primitive, quickcheck-instances, rerebase, tasty
+, tasty-quickcheck, text, transformers, unordered-containers
+, vector
 }:
 mkDerivation {
   pname = "deferred-folds";
-  version = "0.9.18.3";
-  sha256 = "3b2130eaa080d199380ad6a139c4eb8198ccc9291b5878dcb5aeb15b19f64774";
+  version = "0.9.18.5";
+  sha256 = "c44e569d79349715cbb32a2958f603084ffec7c099a179313beb206be7fb2ce6";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -15,8 +15,7 @@ mkDerivation {
     transformers unordered-containers vector
   ];
   testHaskellDepends = [
-    QuickCheck quickcheck-instances rerebase tasty tasty-hunit
-    tasty-quickcheck
+    quickcheck-instances rerebase tasty tasty-quickcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

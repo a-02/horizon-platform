@@ -3,8 +3,10 @@
 }:
 mkDerivation {
   pname = "cmark-gfm";
-  version = "0.2.5";
-  sha256 = "411caca0dd16c381d093a563b0002c057a3bdb396d3d3f81ad7fecca40d34451";
+  version = "0.2.6";
+  sha256 = "958cfb3bd54b1bfa9e1e2d9cd1748e76c10d2b30a3cceeab3f6a852205c1a869";
+  revision = "1";
+  editedCabalFile = "1385k2xvxy9ssw69g606vwnpm07sf919prciwvnaipsxiwwbjwl6";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

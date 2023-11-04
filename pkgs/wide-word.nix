@@ -4,10 +4,8 @@
 }:
 mkDerivation {
   pname = "wide-word";
-  version = "0.1.5.0";
-  sha256 = "a732e9fe6eb2c52c744e2250c908126eee4f558ca2d2117a5e6b48023b5b41c0";
-  revision = "2";
-  editedCabalFile = "1zq74zgh82zcxnn9knha6qn36k4sqm93mcck45h8pd6c7yzfc0jx";
+  version = "0.1.6.0";
+  sha256 = "df6aa01a18d2b191f96793fab1cb4b43d465f8c9ad5239f9df4ca9255b059797";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

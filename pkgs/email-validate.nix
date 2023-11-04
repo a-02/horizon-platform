@@ -1,17 +1,17 @@
-{ mkDerivation, QuickCheck, attoparsec, base, bytestring, doctest
-, hspec, lib, template-haskell
+{ mkDerivation, QuickCheck, attoparsec, base, bytestring, hspec
+, lib, template-haskell
 }:
 mkDerivation {
   pname = "email-validate";
-  version = "2.3.2.18";
-  sha256 = "97492da27ec2e856b807a6703be5952b15fdc9be855a32a81526e68a8b2f7185";
+  version = "2.3.2.19";
+  sha256 = "c864ac949b3f2cb72ad6f1309c1315e4c85c6eb455fcadc297281d54ea2fa360";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     attoparsec base bytestring template-haskell
   ];
-  testHaskellDepends = [ base bytestring doctest hspec QuickCheck ];
+  testHaskellDepends = [ base bytestring hspec QuickCheck ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;

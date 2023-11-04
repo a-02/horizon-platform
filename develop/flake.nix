@@ -9,7 +9,7 @@
     feedback.url = "github:NorfairKing/feedback";
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-to-gitlab-ci.url = "git+https://gitlab.nixica.dev/haskell/flake-to-gitlab-ci?ref=refs/tags/0.2.4.2";
-    horizon-gen-nix.url = "git+https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix?ref=refs/tags/0.11.0";
+    horizon-gen-nix.url = "git+https://gitlab.horizon-haskell.net/haskell/horizon-gen-nix?ref=refs/tags/0.10.4";
     horizon-shell.url = "git+https://gitlab.horizon-haskell.net/shells/horizon-shell?ref=refs/tags/0.0.9";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };

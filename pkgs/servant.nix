@@ -1,20 +1,13 @@
 { mkDerivation, QuickCheck, aeson, attoparsec, base, base-compat
 , bifunctors, bytestring, case-insensitive, constraints, deepseq
-, fetchgit, hspec, hspec-discover, http-api-data, http-media
-, http-types, lib, mmorph, mtl, network-uri, quickcheck-instances
-, singleton-bool, sop-core, string-conversions, tagged, text
-, transformers, vault
+, hspec, hspec-discover, http-api-data, http-media, http-types, lib
+, mmorph, mtl, network-uri, quickcheck-instances, singleton-bool
+, sop-core, string-conversions, tagged, text, transformers, vault
 }:
 mkDerivation {
   pname = "servant";
-  version = "0.19.1";
-  src = fetchgit {
-    url = "https://github.com/haskell-servant/servant";
-    sha256 = "0ck3l8nj42nan8abdzvkl4ynb2l9nhnsq2zjl24d7sgca860fi57";
-    rev = "7ae787371333556a7b84778631ed91d1d73e8370";
-    fetchSubmodules = true;
-  };
-  postUnpack = "sourceRoot+=/servant/; echo source root reset to $sourceRoot";
+  version = "0.20.1";
+  sha256 = "94f773f9bdff67eb2d7aec9c67f80e8af79d531ba6f52fad2e142d8ce4551be9";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

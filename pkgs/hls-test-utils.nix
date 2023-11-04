@@ -1,21 +1,22 @@
 { mkDerivation, aeson, async, base, blaze-markup, bytestring
 , containers, data-default, directory, extra, filepath, ghcide
 , hls-graph, hls-plugin-api, lens, lib, lsp, lsp-test, lsp-types
-, tasty, tasty-expected-failure, tasty-golden, tasty-hunit
-, tasty-rerun, temporary, text, unordered-containers
+, row-types, tasty, tasty-expected-failure, tasty-golden
+, tasty-hunit, tasty-rerun, temporary, text, unordered-containers
 }:
 mkDerivation {
   pname = "hls-test-utils";
-  version = "2.0.0.1";
-  sha256 = "7163a00d6e5b65a3d969059b7c1955860d5040924191fc91fee5cdb1290a4468";
+  version = "2.4.0.0";
+  sha256 = "9ccac05eb398d7d4ddd4ababc445323122b79f4f69103544f6eb0ea7a44e8b3a";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     aeson async base blaze-markup bytestring containers data-default
     directory extra filepath ghcide hls-graph hls-plugin-api lens lsp
-    lsp-test lsp-types tasty tasty-expected-failure tasty-golden
-    tasty-hunit tasty-rerun temporary text unordered-containers
+    lsp-test lsp-types row-types tasty tasty-expected-failure
+    tasty-golden tasty-hunit tasty-rerun temporary text
+    unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

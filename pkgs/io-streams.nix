@@ -8,8 +8,8 @@ mkDerivation {
   pname = "io-streams";
   version = "1.5.2.2";
   sha256 = "d365d5051696c15414ebe23749fc67475a532234b7c7d77060323d149a8fc4fe";
-  revision = "1";
-  editedCabalFile = "1fkjzk7s99sb7h1lvandw9p8r05ly4206y3aiah0jg39zjvbi5az";
+  revision = "3";
+  editedCabalFile = "1827mfvqdqarkl29jz84slzn2qf6pm7r7fzcn2b4ds1nv77lab2c";
   configureFlags = [ "-fnointeractivetests" ];
   isLibrary = true;
   isExecutable = false;

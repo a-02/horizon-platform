@@ -1,6 +1,6 @@
 { mkDerivation, HUnit, QuickCheck, aeson, base, base-compat
-, bytestring, containers, deepseq, entropy, exceptions, fetchgit
-, hspec, hspec-discover, http-api-data, http-client, http-media
+, bytestring, containers, deepseq, entropy, exceptions, hspec
+, hspec-discover, http-api-data, http-client, http-media
 , http-types, kan-extensions, lib, markdown-unlit, monad-control
 , mtl, network, semigroupoids, servant, servant-client-core
 , servant-server, sop-core, stm, text, time, transformers
@@ -8,14 +8,10 @@
 }:
 mkDerivation {
   pname = "servant-client";
-  version = "0.19";
-  src = fetchgit {
-    url = "https://github.com/haskell-servant/servant";
-    sha256 = "0ck3l8nj42nan8abdzvkl4ynb2l9nhnsq2zjl24d7sgca860fi57";
-    rev = "7ae787371333556a7b84778631ed91d1d73e8370";
-    fetchSubmodules = true;
-  };
-  postUnpack = "sourceRoot+=/servant-client/; echo source root reset to $sourceRoot";
+  version = "0.20";
+  sha256 = "765d30f3579b74bebfe79f59a4aacfd9dec0c02c7d355f389caa604f0ac3b276";
+  revision = "1";
+  editedCabalFile = "1bvj0rnnyqw3h70b94k9j21np5h0acxn4cla2gsv9zclhd99f4q6";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

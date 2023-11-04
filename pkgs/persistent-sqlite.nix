@@ -7,8 +7,8 @@
 }:
 mkDerivation {
   pname = "persistent-sqlite";
-  version = "2.13.1.1";
-  sha256 = "f2da6df242d3fb40fa256c8e6de0fa53d40d1b091ec7a6ded5001552ed07fa28";
+  version = "2.13.2.0";
+  sha256 = "0761de234c2cc5a63b96dc35e9261e719fdbaccd7995b45778611952ab3704ed";
   configureFlags = [ "-fsystemlib" ];
   isLibrary = true;
   isExecutable = true;

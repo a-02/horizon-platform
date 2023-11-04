@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "polysemy-plugin";
-  version = "0.4.5.0";
-  sha256 = "f0792f0ff445626e45af97c32d1513a389a0e2e90a60583aa93f707ccd1106e0";
+  version = "0.4.5.1";
+  sha256 = "d7ac12b678daff450bd8ffd5e4ac2a9872775be8b5fa325f9a7da49a127fcf18";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

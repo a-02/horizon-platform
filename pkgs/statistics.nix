@@ -7,8 +7,8 @@
 }:
 mkDerivation {
   pname = "statistics";
-  version = "0.16.2.0";
-  sha256 = "b335df6c1f3f53f1da19ed06bdb76474cb5ffd6fd18f7c3639f2148342a058bf";
+  version = "0.16.2.1";
+  sha256 = "a7c0c068a0d1f784d865163748a40fbbdda48febe3b905063a22ce7a32e05ce4";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

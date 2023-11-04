@@ -6,8 +6,8 @@ mkDerivation {
   pname = "integer-logarithms";
   version = "1.0.3.1";
   sha256 = "9b0a9f9fab609b15cd015865721fb05f744a1bc77ae92fd133872de528bbea7f";
-  revision = "4";
-  editedCabalFile = "1jml3fygxcbh9f6nl006mc2gmixlwkzpnnsfxgdmk6pi786b8vrk";
+  revision = "5";
+  editedCabalFile = "03f07vv1xqvv53fiarn4rpj2hzsa9bx7lw883axmgzv49qrzq3ad";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

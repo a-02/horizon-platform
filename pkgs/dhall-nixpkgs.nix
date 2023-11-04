@@ -5,10 +5,8 @@
 }:
 mkDerivation {
   pname = "dhall-nixpkgs";
-  version = "1.0.9";
-  sha256 = "a31c656973f30ddf4d750db75fa351d89a38e7a3937743a8f8f0d71f211611c8";
-  revision = "1";
-  editedCabalFile = "0140jhwf5mz9i5k1v0mbljhr77rgfvhbs5s3ak9naagnxszy725j";
+  version = "1.0.10";
+  sha256 = "a5d672ac4bb86e149c8f324fd4d99e65ce30dc742d3e3bfab86329acb5fbe126";
   isLibrary = false;
   isExecutable = true;
   enableSeparateDataOutput = false;

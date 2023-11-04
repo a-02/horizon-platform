@@ -9,8 +9,8 @@
 }:
 mkDerivation {
   pname = "persistent-postgresql";
-  version = "2.13.5.2";
-  sha256 = "712892e70e5cc0b470506b938ab41785dfcfee36f382017673de50ebf78c105d";
+  version = "2.13.6.1";
+  sha256 = "901af60342bedeecbf9b9c6053818e0e7b483bef9807ad4c4a645896b1506757";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

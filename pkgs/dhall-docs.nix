@@ -6,10 +6,8 @@
 }:
 mkDerivation {
   pname = "dhall-docs";
-  version = "1.0.10";
-  sha256 = "4257d1a4fb06f5c98dbef7d39b420e7c52db9f966cc1c5f4da13d9286bb706e6";
-  revision = "3";
-  editedCabalFile = "06pjafliw9a3pzw9846yb9rmsjrwrn7jhax7s2bsdasx5agdrfg5";
+  version = "1.0.11";
+  sha256 = "984aa37da15a393b7009c17bf0c9f55819446dc2f82e5b0faf654f71c5ff2c45";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = true;

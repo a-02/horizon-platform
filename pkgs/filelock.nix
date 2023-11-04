@@ -1,8 +1,8 @@
 { mkDerivation, async, base, lib, process, unix }:
 mkDerivation {
   pname = "filelock";
-  version = "0.1.1.6";
-  sha256 = "af74f6495512bb5aba041d6a6abe2f289251d847ffb296af3df1e511b6355b88";
+  version = "0.1.1.7";
+  sha256 = "4d35645cdf4f0b7aa8d22238885a970aef2328a39bd4ea63c7274532b1748180";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

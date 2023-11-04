@@ -1,16 +1,17 @@
 { mkDerivation, base, bytestring, containers, directory, filepath
 , lib, mtl, pandoc-types, parsec, pretty-show, split, syb, tagged
-, tasty, tasty-golden, text, xml
+, tasty, tasty-golden, text, typst-symbols, xml
 }:
 mkDerivation {
   pname = "texmath";
-  version = "0.12.7.1";
-  sha256 = "7da715cf40920a3bfe42a33e22cd627f7929e7454595984f8ec02e0ef760f342";
+  version = "0.12.8.4";
+  sha256 = "fb53e9dcc559ff045ebf2e83a1fc6fc599fae59b9c43dda78145872dd8a671de";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base containers mtl pandoc-types parsec split syb text xml
+    base containers mtl pandoc-types parsec split syb text
+    typst-symbols xml
   ];
   testHaskellDepends = [
     base bytestring directory filepath pretty-show tagged tasty

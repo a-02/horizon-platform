@@ -1,11 +1,11 @@
-{ mkDerivation, base, containers, extra, filepath, fuzzy, ghc
-, ghcide, hls-plugin-api, hls-test-utils, lens, lib, lsp, lsp-types
-, text, transformers, unordered-containers
+{ mkDerivation, aeson, base, containers, extra, filepath, fuzzy
+, ghc, ghcide, hls-plugin-api, hls-test-utils, lens, lib, lsp
+, lsp-types, text, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "hls-pragmas-plugin";
-  version = "2.0.0.1";
-  sha256 = "a482f14a787dec6bd5873ffefe8d2aa876265d64c4621404226393ff0d39f8d5";
+  version = "2.4.0.0";
+  sha256 = "32753f991a9053fa626a70e38870d7250c14d2e1e64061320cf5080146299e11";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -14,7 +14,7 @@ mkDerivation {
     transformers unordered-containers
   ];
   testHaskellDepends = [
-    base filepath hls-test-utils lens lsp-types text
+    aeson base filepath hls-test-utils lens lsp-types text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

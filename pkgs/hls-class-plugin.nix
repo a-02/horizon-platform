@@ -1,22 +1,22 @@
 { mkDerivation, aeson, base, containers, deepseq, extra, filepath
 , ghc, ghc-boot-th, ghc-exactprint, ghcide, hls-graph
-, hls-plugin-api, hls-test-utils, lens, lib, lsp, lsp-types, text
-, transformers
+, hls-plugin-api, hls-test-utils, lens, lib, lsp, lsp-types, mtl
+, row-types, text, transformers
 }:
 mkDerivation {
   pname = "hls-class-plugin";
-  version = "2.0.0.1";
-  sha256 = "44c5b7e94a65d56f79bb4430f0b5284a9946b0892766c196d1edab80af22b7c2";
+  version = "2.4.0.0";
+  sha256 = "c4b4a6f38ce86bb850084cd5e2422447d31406f30eb1566c84f448a5ab1863e2";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     aeson base containers deepseq extra ghc ghc-boot-th ghc-exactprint
-    ghcide hls-graph hls-plugin-api lens lsp text transformers
+    ghcide hls-graph hls-plugin-api lens lsp mtl text transformers
   ];
   testHaskellDepends = [
     aeson base filepath ghcide hls-plugin-api hls-test-utils lens
-    lsp-types text
+    lsp-types row-types text
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

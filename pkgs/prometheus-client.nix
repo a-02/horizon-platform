@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "prometheus-client";
-  version = "1.1.0";
-  sha256 = "7da537f479f4982b89ed7e898df6ce73f7351f621add6960adb36905c8d72cb9";
+  version = "1.1.1";
+  sha256 = "6a709ec749651d86e1e3a1189193d3d6a74489eaf8f10297c31cc863fc4644c8";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

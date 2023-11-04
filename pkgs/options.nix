@@ -1,17 +1,14 @@
-{ mkDerivation, base, chell, chell-quickcheck, containers, lib
-, monads-tf, transformers
+{ mkDerivation, base, containers, hspec, lib, monads-tf, patience
 }:
 mkDerivation {
   pname = "options";
-  version = "1.2.1.1";
-  sha256 = "283eea9ae2c539830c6c65f5c03fb00626cfd1274da0526c285c146fc3065a62";
+  version = "1.2.1.2";
+  sha256 = "6e4d8fa177713d00f95cb43d21359a7d2908ce1e04f703be5b59679ccc3a5f4a";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
-  libraryHaskellDepends = [ base containers monads-tf transformers ];
-  testHaskellDepends = [
-    base chell chell-quickcheck containers monads-tf transformers
-  ];
+  libraryHaskellDepends = [ base containers monads-tf ];
+  testHaskellDepends = [ base containers hspec monads-tf patience ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = false;
@@ -19,8 +16,8 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "https://john-millikin.com/software/haskell-options/";
-  description = "A powerful and easy-to-use command-line option parser";
+  homepage = "https://github.com/typeclasses/options/";
+  description = "Powerful and easy command-line option parser";
   license = lib.licenses.mit;
   broken = false;
 }

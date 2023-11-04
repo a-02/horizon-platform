@@ -6,10 +6,10 @@
 }:
 mkDerivation {
   pname = "dhall-json";
-  version = "1.7.11";
-  sha256 = "26c2acf33bfc597f4d2ac333a431180c9929d7a9b4ef7cf70c4bd45eba65ef28";
+  version = "1.7.12";
+  sha256 = "ca48cd434380cbd979dbb12889f90da8fdc1ea90bc266cab14f061c60e19d5fa";
   revision = "1";
-  editedCabalFile = "0m5sngc1j7jagn95qmjz7gpw2jgqnnafgr6nwd506q8z2jg2a3my";
+  editedCabalFile = "0rf3zlr75x6g4hl1759j21fnnrp21shc7a35x7c73a0xyzpviqqi";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

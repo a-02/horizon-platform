@@ -1,24 +1,24 @@
 { mkDerivation, aeson, base, base64-bytestring, bytestring, concise
-, containers, cryptonite, hedgehog, hspec, lens, lib, memory
-, monad-time, mtl, network-uri, pem, tasty, tasty-hedgehog
-, tasty-hspec, template-haskell, text, time, x509
+, containers, crypton, crypton-x509, hedgehog, hspec, lens, lib
+, memory, monad-time, mtl, network-uri, pem, tasty, tasty-hedgehog
+, tasty-hspec, template-haskell, text, time
 }:
 mkDerivation {
   pname = "jose";
-  version = "0.10";
-  sha256 = "1f498a69edae67935216db65afc9990075469918670237d4dcc3b0e38d0a1242";
+  version = "0.11";
+  sha256 = "2974e73d899208dccbb18cac889acceaebb7439e43046ac32c9c702e49f70b40";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson base base64-bytestring bytestring concise containers
-    cryptonite lens memory monad-time mtl network-uri template-haskell
-    text time x509
+    aeson base base64-bytestring bytestring concise containers crypton
+    crypton-x509 lens memory monad-time mtl network-uri
+    template-haskell text time
   ];
   testHaskellDepends = [
-    aeson base base64-bytestring bytestring concise containers
-    cryptonite hedgehog hspec lens mtl network-uri pem tasty
-    tasty-hedgehog tasty-hspec text time x509
+    aeson base base64-bytestring bytestring concise containers crypton
+    crypton-x509 hedgehog hspec lens mtl network-uri pem tasty
+    tasty-hedgehog tasty-hspec time
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

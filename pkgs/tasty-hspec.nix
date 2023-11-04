@@ -1,17 +1,17 @@
-{ mkDerivation, QuickCheck, base, hspec, hspec-core, lib, tasty
-, tasty-quickcheck, tasty-smallcheck
+{ mkDerivation, QuickCheck, base, hspec, hspec-api, hspec-core, lib
+, tasty, tasty-quickcheck, tasty-smallcheck
 }:
 mkDerivation {
   pname = "tasty-hspec";
-  version = "1.2.0.3";
-  sha256 = "9d5d6febcf5f723ecee79a088d13f8550297aead959ca6e52d5b03a598de0d94";
-  revision = "1";
-  editedCabalFile = "01sc5gmij3280b63jpjcz0a2lq045dj5ay46yq9i896cyka6gs6r";
+  version = "1.2.0.4";
+  sha256 = "d1a273cbe653c23422c14e99672f7cd64e07f85bb019f95fef095db8e5b461c2";
+  revision = "2";
+  editedCabalFile = "17q4xwj2glc8d482r33kq472yhkx7nai987x80nw3ilmp942bxzd";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base hspec hspec-core QuickCheck tasty tasty-quickcheck
+    base hspec hspec-api hspec-core QuickCheck tasty tasty-quickcheck
     tasty-smallcheck
   ];
   enableLibraryProfiling = true;

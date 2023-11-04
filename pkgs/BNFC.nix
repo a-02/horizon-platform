@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "BNFC";
-  version = "2.9.4.1";
-  sha256 = "5e93609c1633e4b6636d0ac2b52c1d35228c13bd704a7849cb4e92b00ce27250";
+  version = "2.9.5";
+  sha256 = "fa35e9a2a2bd12c3680482a350f57963807ccc9e964a206cb09e5b1a4d02576b";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
@@ -27,7 +27,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "http://bnfc.digitalgrammars.com/";
+  homepage = "https://bnfc.digitalgrammars.com/";
   description = "A compiler front-end generator";
   license = lib.licenses.bsd3;
   broken = false;

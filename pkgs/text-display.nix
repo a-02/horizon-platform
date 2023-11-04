@@ -3,10 +3,10 @@
 }:
 mkDerivation {
   pname = "text-display";
-  version = "0.0.4.0";
-  sha256 = "b63147b9551a7b6390e31c01ff05b4544fc9bf3ee7e1b1e55f8722652a4b45cc";
+  version = "0.0.5.0";
+  sha256 = "509fbe392f4bcbdfcc38db19c77144abb1111e3e07b2edefae62e97a3f55690f";
   revision = "1";
-  editedCabalFile = "181h85z49vkbirxxqh8ljh5byqz3kvbprcn8pss26bgmxhwbzp9y";
+  editedCabalFile = "0jrzqgz1gicjssjw2sg8v8i70z77vnh1w4pj39470rlijrjmxx7p";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
@@ -22,7 +22,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "https://hackage.haskell.org/package/text-display/docs/doc/book/Introduction.html";
+  homepage = "https://hackage.haskell.org/package/text-display-0.0.5.0/docs/doc/book/Introduction.html";
   description = "A typeclass for user-facing output";
   license = lib.licenses.mit;
   broken = false;

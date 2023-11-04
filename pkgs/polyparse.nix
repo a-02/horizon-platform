@@ -3,8 +3,8 @@ mkDerivation {
   pname = "polyparse";
   version = "1.13";
   sha256 = "1c4c72980e1e5a4f07fea65ca08b2399581d2a6aa21eb1078f7ad286c279707b";
-  revision = "6";
-  editedCabalFile = "0xrmzz7p2akgdyr7gm54yvq83lm9qixcrk72ia2w9xcs2r4b76vz";
+  revision = "9";
+  editedCabalFile = "0abzqic0askffn6nmh1f08d9rd9fykdlcdd9gj1c7p1ykp9zlq29";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

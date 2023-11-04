@@ -1,17 +1,17 @@
 { mkDerivation, aeson, base, containers, filepath, fourmolu, ghc
 , ghc-boot-th, ghcide, hls-plugin-api, hls-test-utils, lens, lib
-, lsp, lsp-test, process-extras, text
+, lsp, lsp-test, mtl, process-extras, text, transformers
 }:
 mkDerivation {
   pname = "hls-fourmolu-plugin";
-  version = "2.0.0.1";
-  sha256 = "c8238e4fb20aa4fd958c48b6b001b17e2d3c9d2938480136eed7f93f119833a5";
+  version = "2.4.0.0";
+  sha256 = "2b3b287559d2f01e24cba8206212340e5a2d6431c0a8cc962e7f209776737d84";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base filepath fourmolu ghc ghc-boot-th ghcide hls-plugin-api lens
-    lsp process-extras text
+    lsp mtl process-extras text transformers
   ];
   testHaskellDepends = [
     aeson base containers filepath hls-plugin-api hls-test-utils

@@ -5,8 +5,8 @@ mkDerivation {
   pname = "compact";
   version = "0.2.0.0";
   sha256 = "03a6b534f4f8f06fe1f3921be74f90c2fab9da7f28e7520612c91c28da266277";
-  revision = "1";
-  editedCabalFile = "1013dkawaw3c6hvlfn9x584pq8z65fvbnp79dl6ll6r0a75rivvm";
+  revision = "2";
+  editedCabalFile = "1x38yjkl9b2ss6p9bdhpk5h1p4p3rlar09a31cpa8cgj959ws1da";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

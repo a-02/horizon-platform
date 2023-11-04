@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "effectful-core";
-  version = "2.2.2.2";
-  sha256 = "58ed41ac7ffb0dd8ad438433c7a510457df691e4a1009b2077cc58226e667afa";
+  version = "2.3.0.0";
+  sha256 = "7b42b7ced91ab62856869a81cacab4700c85d0a3babc010878da05ed7fe33efb";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

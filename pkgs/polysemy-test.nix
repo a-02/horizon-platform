@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "polysemy-test";
-  version = "0.7.0.0";
-  sha256 = "d4b3588cba21b69990ee483e37536b4b1e411f94774c62f90202360f8709d768";
+  version = "0.9.0.0";
+  sha256 = "471f3e2d6c1b29b1cdfb827ef12db59eee6c95b66c010b4eaf039744c3d65e25";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = true;
@@ -23,7 +23,7 @@ mkDerivation {
   doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://github.com/tek/polysemy-test#readme";
-  description = "Polysemy Effects for Testing";
+  description = "Polysemy effects for testing";
   license = "BSD-2-Clause-Patent";
   broken = false;
 }

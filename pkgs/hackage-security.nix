@@ -9,8 +9,8 @@ mkDerivation {
   pname = "hackage-security";
   version = "0.6.2.3";
   sha256 = "52ee0576971955571d846b8e6c09638f89f4f7881f4a95173e44ccc0d856a066";
-  revision = "3";
-  editedCabalFile = "1vdmpklil8a6r03ixzch5d36ngimmq5q8931i8bg9f7hh8nmq8jv";
+  revision = "8";
+  editedCabalFile = "1gzk9hrq0rv94msbvnkynzj5pnh94ixray8dl639zr29qh55cbib";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -1,25 +1,25 @@
 { mkDerivation, QuickCheck, aeson, authenticate-oauth, base
-, blaze-builder, bytestring, case-insensitive, connection
-, containers, exceptions, hspec, hspec-core, hspec-discover
+, blaze-builder, bytestring, case-insensitive, containers
+, crypton-connection, exceptions, hspec, hspec-core, hspec-discover
 , http-api-data, http-client, http-client-tls, http-types, lib
 , modern-uri, monad-control, mtl, retry, template-haskell, text
 , time, transformers, transformers-base, unliftio-core
 }:
 mkDerivation {
   pname = "req";
-  version = "3.13.0";
-  sha256 = "6432d95d6e6750b199b97c3d7147260dcf6f683127c87eb90b7a9f225739fac5";
-  revision = "1";
-  editedCabalFile = "0izg1pj2jbpdlg9i9g30i5h4rcshkawh5zdhlkq1n9xfgc6jqv2v";
+  version = "3.13.1";
+  sha256 = "1045c4158ef361ad913acfcc628e6ddf0c3131c33a7abc83858ec0bfa55bf932";
+  revision = "3";
+  editedCabalFile = "0dib8rwavjrp2bsv3pl3bgblqdfvky53k7qnv7ca4sq8070aqffp";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
     aeson authenticate-oauth base blaze-builder bytestring
-    case-insensitive connection containers exceptions http-api-data
-    http-client http-client-tls http-types modern-uri monad-control mtl
-    retry template-haskell text time transformers transformers-base
-    unliftio-core
+    case-insensitive containers crypton-connection exceptions
+    http-api-data http-client http-client-tls http-types modern-uri
+    monad-control mtl retry template-haskell text transformers
+    transformers-base unliftio-core
   ];
   testHaskellDepends = [
     aeson base blaze-builder bytestring case-insensitive hspec

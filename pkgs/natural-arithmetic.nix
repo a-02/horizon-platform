@@ -1,8 +1,8 @@
 { mkDerivation, base, lib }:
 mkDerivation {
   pname = "natural-arithmetic";
-  version = "0.1.3.0";
-  sha256 = "aa13f2e8671d6bf9d21c7e62cf5f0b0ee94785f0c6249b8b97abd0b9dd8f308e";
+  version = "0.1.4.0";
+  sha256 = "c4ff0cd6c39f2ca4e4f5e5ef6b9e076eedfe629ffdee85501f9aa792254b8289";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "markdown-unlit";
-  version = "0.5.1";
-  sha256 = "c70ef68ca9a9513ce26eba6dd4cf7ce1cb6b17f5ab47dfc1a9d47c544db15f5a";
+  version = "0.6.0";
+  sha256 = "d38b18581fe4da33bcfcc5d368c48a88f27e9801035e4ace59776e14c7787b5a";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

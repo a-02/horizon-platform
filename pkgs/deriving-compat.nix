@@ -5,8 +5,10 @@
 }:
 mkDerivation {
   pname = "deriving-compat";
-  version = "0.6.3";
-  sha256 = "b1bf97012db9012a74af4b13cb3454afb7afa1db54c0f6e4bd7c10349e66692a";
+  version = "0.6.5";
+  sha256 = "47412ecf53461a43d4cc2b705cbc9bb4a958bff7b9008a2582c26b73df5532f3";
+  revision = "1";
+  editedCabalFile = "093kv76593jr1af12c5idqr97mbkf9vs93zbhrw7kcqwiydpsi91";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

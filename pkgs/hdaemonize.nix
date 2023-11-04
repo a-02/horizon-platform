@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "hdaemonize";
-  version = "0.5.6";
-  sha256 = "ad6f302492a9c41e99ce62ca955a959b0cdca0ff328e66f31bfec5a99f7cee24";
+  version = "0.5.7";
+  sha256 = "748823288eec23252335c00576384fc322e4f91c8e86f456530ba5d7c727f01b";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

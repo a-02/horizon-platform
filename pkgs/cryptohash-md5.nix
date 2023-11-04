@@ -5,8 +5,8 @@ mkDerivation {
   pname = "cryptohash-md5";
   version = "0.11.101.0";
   sha256 = "3b08db0ae39df2b44e83053ad30d7546a4c6200a852c22a240a7e03ae1080f05";
-  revision = "2";
-  editedCabalFile = "112lx16przdk80m269rqizma0lxaij52l4haspb0cd07rbgp50cd";
+  revision = "3";
+  editedCabalFile = "1v7gv0xa9yfkxq3g9j79ppzn6hjf467aajzb4x5882yflibfi9ki";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

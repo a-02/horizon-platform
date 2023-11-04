@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "th-desugar";
-  version = "1.15";
-  sha256 = "179e2cddabb1af642d08e304fa24f4910ad42aae10095961a47d0c916e5ffe98";
+  version = "1.16";
+  sha256 = "4ecb87e0d361278c40a62410cdb5580029ecd630cfd2c619ce41812518868210";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -14,8 +14,8 @@ mkDerivation {
     template-haskell th-abstraction th-orphans transformers-compat
   ];
   testHaskellDepends = [
-    base containers hspec HUnit mtl syb template-haskell th-abstraction
-    th-orphans
+    base containers ghc-prim hspec HUnit mtl syb template-haskell
+    th-abstraction th-orphans
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

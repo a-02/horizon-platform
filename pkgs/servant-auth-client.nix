@@ -6,10 +6,10 @@
 }:
 mkDerivation {
   pname = "servant-auth-client";
-  version = "0.4.1.0";
-  sha256 = "03c1c9e1413c05ae30c269a2fef07e68bf41ff675edd180452d863d073e3359b";
-  revision = "6";
-  editedCabalFile = "0d6mi3w3gx9h21awf1gy2wx7dwh5l9ichww21a3p5rfd8a8swypf";
+  version = "0.4.1.1";
+  sha256 = "18bf66c4f35b3da2c6991cc4c74d9594d6fe0134af0bbfaec6547c58c20540bb";
+  revision = "1";
+  editedCabalFile = "1ff5hcpc56w7q97myavmfrl5m8sv38mjcw83lgyy0g56d893svhw";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -29,7 +29,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "http://github.com/haskell-servant/servant-auth#readme";
+  homepage = "https://github.com/haskell-servant/servant/tree/master/servant-auth#readme";
   description = "servant-client/servant-auth compatibility";
   license = lib.licenses.bsd3;
   broken = false;

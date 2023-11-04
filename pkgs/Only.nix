@@ -3,8 +3,8 @@ mkDerivation {
   pname = "Only";
   version = "0.1";
   sha256 = "ab7aa193e8c257d3bda6b0b3c1cbcf74cdaa85ab08cb20c2dd62ba248c1ab265";
-  revision = "1";
-  editedCabalFile = "1ahk7p34kmh041mz7lyc10nhcxgv2i4z8nvzxvqm2x34gslmsbzr";
+  revision = "2";
+  editedCabalFile = "01rvhsm4gyvjpgakrj7nzlfb1bjhkkx87xj3hng2x00g3qc3s0y6";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

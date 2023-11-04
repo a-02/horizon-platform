@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "genvalidity-sydtest-hashable";
-  version = "1.0.0.0";
-  sha256 = "5f4442eb5902c86d72b8340152069d3c3cdb768d8eee0d81e469a650ad178814";
+  version = "1.0.0.1";
+  sha256 = "a2e8037aea68c4721441797ed76802dd2c86d960a3dd29e862bc314a20d9aaee";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

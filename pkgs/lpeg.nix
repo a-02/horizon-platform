@@ -1,8 +1,8 @@
 { mkDerivation, base, lib, lua, tasty, tasty-hunit }:
 mkDerivation {
   pname = "lpeg";
-  version = "1.0.4";
-  sha256 = "24084721a225f133682aa12c5ff4f65c7ea7b6b03894c6af0504864bea2054bb";
+  version = "1.1.0";
+  sha256 = "411509eb9b9142299e76a022d1fcf56ce8e255d5e0a0d1d8b46fcddc3d195b79";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

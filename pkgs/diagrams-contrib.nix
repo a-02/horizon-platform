@@ -8,10 +8,8 @@
 }:
 mkDerivation {
   pname = "diagrams-contrib";
-  version = "1.4.5";
-  sha256 = "900baf9c40a36b637400bb58dbab260d3b654a1249809153c4fdd6ec2152286c";
-  revision = "1";
-  editedCabalFile = "0i5s9mr88kc68v2wc07jpdy2hzqh2gc1dsawvb2sracnqmv9q658";
+  version = "1.4.5.1";
+  sha256 = "cbb799ac8c46e2c3ad7af1f70d62e12838148a833ba3ec9f168bdd53d3151772";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

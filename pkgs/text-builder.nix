@@ -1,18 +1,16 @@
-{ mkDerivation, QuickCheck, base, bytestring, criterion, lib
-, quickcheck-instances, rerebase, tasty, tasty-hunit
-, tasty-quickcheck, text, text-builder-dev
+{ mkDerivation, base, bytestring, criterion, lib, rerebase, tasty
+, tasty-hunit, tasty-quickcheck, text, text-builder-dev
 }:
 mkDerivation {
   pname = "text-builder";
-  version = "0.6.7";
-  sha256 = "90704ab83910db16d43aeb45e1bab1409f995e38c8c15101602eb38b9724f402";
+  version = "0.6.7.1";
+  sha256 = "23ce63494c16c731e472b754df4ec0bc46222629a4b6c44c617e49ce790d53f4";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring text text-builder-dev ];
   testHaskellDepends = [
-    QuickCheck quickcheck-instances rerebase tasty tasty-hunit
-    tasty-quickcheck
+    rerebase tasty tasty-hunit tasty-quickcheck
   ];
   benchmarkHaskellDepends = [ criterion rerebase ];
   enableLibraryProfiling = true;
@@ -23,7 +21,7 @@ mkDerivation {
   doBenchmark = false;
   hyperlinkSource = false;
   homepage = "https://github.com/nikita-volkov/text-builder";
-  description = "An efficient strict text builder";
+  description = "Efficient strict text builder";
   license = lib.licenses.mit;
   broken = false;
 }

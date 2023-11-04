@@ -1,27 +1,26 @@
-{ mkDerivation, Glob, HUnit, QuickCheck, aeson, ansi-wl-pprint
-, base, base-compat, base-compat-batteries, binary, binary-orphans
-, bytestring, cassava, code-page, containers, criterion-measurement
-, deepseq, directory, exceptions, filepath, js-chart, lib
-, microstache, mtl, mwc-random, optparse-applicative, parsec
-, statistics, tasty, tasty-hunit, tasty-quickcheck, text, time
-, transformers, transformers-compat, vector, vector-algorithms
+{ mkDerivation, Glob, HUnit, QuickCheck, aeson, base, base-compat
+, base-compat-batteries, binary, binary-orphans, bytestring
+, cassava, code-page, containers, criterion-measurement, deepseq
+, directory, exceptions, filepath, js-chart, lib, microstache, mtl
+, mwc-random, optparse-applicative, parsec, prettyprinter
+, prettyprinter-ansi-terminal, statistics, tasty, tasty-hunit
+, tasty-quickcheck, text, time, transformers, transformers-compat
+, vector, vector-algorithms
 }:
 mkDerivation {
   pname = "criterion";
-  version = "1.6.0.0";
-  sha256 = "4029ef9ccd158e995a97827bb50d189a98a0875ea4b73300276fac1510a252b0";
-  revision = "1";
-  editedCabalFile = "1sq1izskw1j1dxrdak8zxv22q3cvxg7s9wvxx3l2gj0165xj83bc";
+  version = "1.6.3.0";
+  sha256 = "c31711e2596adf0c46b2451a151357d28633b1bc1a430070758ef3d49ede9ba2";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    aeson ansi-wl-pprint base base-compat-batteries binary
-    binary-orphans bytestring cassava code-page containers
-    criterion-measurement deepseq directory exceptions filepath Glob
-    js-chart microstache mtl mwc-random optparse-applicative parsec
-    statistics text time transformers transformers-compat vector
-    vector-algorithms
+    aeson base base-compat-batteries binary binary-orphans bytestring
+    cassava code-page containers criterion-measurement deepseq
+    directory exceptions filepath Glob js-chart microstache mtl
+    mwc-random optparse-applicative parsec prettyprinter
+    prettyprinter-ansi-terminal statistics text time transformers
+    transformers-compat vector vector-algorithms
   ];
   executableHaskellDepends = [
     base base-compat-batteries optparse-applicative

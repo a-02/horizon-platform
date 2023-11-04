@@ -1,12 +1,12 @@
 { mkDerivation, QuickCheck, base, bytestring, cereal
 , deferred-folds, focus, foldl, lib, list-t, primitive
-, primitive-unlifted, profunctors, quickcheck-instances, rerebase
-, tasty, tasty-hunit, tasty-quickcheck, vector
+, primitive-unlifted, profunctors, rerebase, tasty, tasty-hunit
+, tasty-quickcheck, vector
 }:
 mkDerivation {
   pname = "primitive-extras";
-  version = "0.10.1.6";
-  sha256 = "39036db6f3ecae0adc93b3c4b9a895d9a549e29052167ab44303c87e9d2fabd3";
+  version = "0.10.1.10";
+  sha256 = "14f95972c51a7453573770cec6f345720ea83f375e03f7f1535c34de46a903ad";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -15,8 +15,8 @@ mkDerivation {
     primitive-unlifted profunctors vector
   ];
   testHaskellDepends = [
-    cereal deferred-folds focus primitive QuickCheck
-    quickcheck-instances rerebase tasty tasty-hunit tasty-quickcheck
+    cereal deferred-folds focus primitive QuickCheck rerebase tasty
+    tasty-hunit tasty-quickcheck
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

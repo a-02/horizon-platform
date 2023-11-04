@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "headed-megaparsec";
-  version = "0.2.1.1";
-  sha256 = "34f75cedd58d71d983c235f7c9bf3f89302798c365359ecb696b26c0dffbfbbb";
+  version = "0.2.1.2";
+  sha256 = "8109bd100d4100182369fc26cb2bef1d2908d4a72aadf4457bd0387d67b809cd";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

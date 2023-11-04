@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "unicode-collation";
-  version = "0.1.3.4";
-  sha256 = "b08dbe9bb269d6eda2639cdfc63caee136794f46c16a1ad51b5305dd2ea6d429";
+  version = "0.1.3.5";
+  sha256 = "0229e00ad5f442f6f6c662f3fa02094a6c2cfc3484675712ff374274f4504379";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

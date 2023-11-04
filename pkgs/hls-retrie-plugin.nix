@@ -1,19 +1,20 @@
 { mkDerivation, aeson, base, bytestring, containers, deepseq
 , directory, extra, filepath, ghc, ghcide, hashable, hls-plugin-api
-, hls-refactor-plugin, hls-test-utils, lib, lsp, lsp-types, retrie
-, safe-exceptions, stm, text, transformers, unordered-containers
+, hls-refactor-plugin, hls-test-utils, lens, lib, lsp, lsp-types
+, mtl, retrie, safe-exceptions, stm, text, transformers
+, unordered-containers
 }:
 mkDerivation {
   pname = "hls-retrie-plugin";
-  version = "2.0.0.1";
-  sha256 = "c8cd3d861da0f829cda5ac52ab01a3a84f0023a3a2729aa60c1d5d9f914d0467";
+  version = "2.4.0.0";
+  sha256 = "314317515eaccdfbaff89ab23da0dfe73774276272a16cb5c95b314d50819496";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     aeson base bytestring containers deepseq directory extra ghc ghcide
-    hashable hls-plugin-api hls-refactor-plugin lsp lsp-types retrie
-    safe-exceptions stm text transformers unordered-containers
+    hashable hls-plugin-api hls-refactor-plugin lens lsp lsp-types mtl
+    retrie safe-exceptions stm text transformers unordered-containers
   ];
   testHaskellDepends = [
     aeson base containers filepath hls-plugin-api hls-refactor-plugin

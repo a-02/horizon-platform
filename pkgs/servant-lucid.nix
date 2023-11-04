@@ -5,6 +5,8 @@ mkDerivation {
   pname = "servant-lucid";
   version = "0.9.0.6";
   sha256 = "a03973035722f9aee7a67fcbb6f44a2d515284e21b0bbf236fda3207132709fd";
+  revision = "1";
+  editedCabalFile = "1b76mpiicbx9n062q7br0da6hbmwrbkkc881rh87l0snl03rzpmp";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

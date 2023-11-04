@@ -1,18 +1,16 @@
-{ mkDerivation, QuickCheck, base, bytestring, criterion, lib
-, quickcheck-instances, rerebase, tasty, tasty-hunit
-, tasty-quickcheck
+{ mkDerivation, base, bytestring, criterion, lib
+, quickcheck-instances, rerebase, tasty, tasty-quickcheck
 }:
 mkDerivation {
   pname = "bytestring-strict-builder";
-  version = "0.4.5.6";
-  sha256 = "7c9261ff2d10eb141fead8eb57f51fec14b28e753084c7a07fc319776531117f";
+  version = "0.4.5.7";
+  sha256 = "d7a6b1727cb916b4a9ca85a354ae2ce886b73d01ba7b1a488571ab64b4f774f1";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base bytestring ];
   testHaskellDepends = [
-    QuickCheck quickcheck-instances rerebase tasty tasty-hunit
-    tasty-quickcheck
+    quickcheck-instances rerebase tasty tasty-quickcheck
   ];
   benchmarkHaskellDepends = [ criterion rerebase ];
   enableLibraryProfiling = true;

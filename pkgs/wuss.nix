@@ -1,15 +1,15 @@
-{ mkDerivation, base, bytestring, connection, exceptions, lib
-, network, websockets
+{ mkDerivation, base, bytestring, crypton-connection, exceptions
+, lib, network, websockets
 }:
 mkDerivation {
   pname = "wuss";
-  version = "2.0.1.3";
-  sha256 = "67501f9d44cfc6804494952772d03eaf0c1baea6f827179df8b5dc5c49d7ed0c";
+  version = "2.0.1.4";
+  sha256 = "5b7dbd2e9b1676fb663833249db1c21618fe8521f88fecc5abf2975e8fcca442";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base bytestring connection exceptions network websockets
+    base bytestring crypton-connection exceptions network websockets
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

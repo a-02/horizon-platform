@@ -6,8 +6,8 @@ mkDerivation {
   version = "0.0.1.0";
   src = fetchgit {
     url = "https://github.com/kleidukos/servant-effectful";
-    sha256 = "1vrp4883jsnq4rgdh89qhka6zs2q96bfxi3m1iaqvc7984g1pl64";
-    rev = "65e3041c6cfbc315b20ad22ca18f61dda104eec8";
+    sha256 = "0klxkjhyy8bcm7azdvhq75zfwga08s7fjxpqx5i7ljl04ac74hsi";
+    rev = "21b5a1d7cb209f3b4594167bb0b5a8d632c8a8e1";
     fetchSubmodules = true;
   };
   isLibrary = true;

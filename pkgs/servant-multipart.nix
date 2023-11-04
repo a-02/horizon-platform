@@ -7,8 +7,8 @@ mkDerivation {
   pname = "servant-multipart";
   version = "0.12.1";
   sha256 = "c5236fa4922a869947988d52ab9f5b0a19abf57bb0467e2eb34560f8c79aa5dc";
-  revision = "4";
-  editedCabalFile = "0z4n3a1cdb082nwh3ig68wjk617cvwpq0n9ivsab55nvsr2wsm8q";
+  revision = "5";
+  editedCabalFile = "0pf761m9l6jnqhljjj4i6zr9il8r9ajpqfxzqjgjsnbsg6872ykg";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

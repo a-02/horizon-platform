@@ -1,7 +1,7 @@
-{ mkDerivation, QuickCheck, aeson, attoparsec, base
-, base64-bytestring, blaze-html, bytestring, conduit, containers
-, criterion, deepseq, fast-logger, file-embed, hspec, http-api-data
-, lib, lift-type, monad-logger, mtl, path-pieces
+{ mkDerivation, QuickCheck, aeson, attoparsec, attoparsec-aeson
+, base, base64-bytestring, blaze-html, bytestring, conduit
+, containers, criterion, deepseq, fast-logger, file-embed, hspec
+, http-api-data, lib, lift-type, monad-logger, mtl, path-pieces
 , quickcheck-instances, resource-pool, resourcet, scientific
 , shakespeare, silently, template-haskell, text, th-lift-instances
 , time, transformers, unliftio, unliftio-core, unordered-containers
@@ -9,17 +9,18 @@
 }:
 mkDerivation {
   pname = "persistent";
-  version = "2.14.5.0";
-  sha256 = "04618a23e71256abaa4aa0b8f1d9577305b2840334cc1fbe3382f190853c46ee";
+  version = "2.14.6.0";
+  sha256 = "6e2b300797060e091624ebd4d1d5b0b3dad200acf7b9bf2bccfb1c538db6e53b";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    aeson attoparsec base base64-bytestring blaze-html bytestring
-    conduit containers deepseq fast-logger http-api-data lift-type
-    monad-logger mtl path-pieces resource-pool resourcet scientific
-    silently template-haskell text th-lift-instances time transformers
-    unliftio unliftio-core unordered-containers vault vector
+    aeson attoparsec attoparsec-aeson base base64-bytestring blaze-html
+    bytestring conduit containers deepseq fast-logger http-api-data
+    lift-type monad-logger mtl path-pieces resource-pool resourcet
+    scientific silently template-haskell text th-lift-instances time
+    transformers unliftio unliftio-core unordered-containers vault
+    vector
   ];
   testHaskellDepends = [
     aeson attoparsec base base64-bytestring blaze-html bytestring

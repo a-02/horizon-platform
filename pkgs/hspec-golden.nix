@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "hspec-golden";
-  version = "0.2.0.1";
-  sha256 = "bc64db188b166235d92a3d42efc6c29a41535fda41830cbb03b7e5b9d75d8725";
+  version = "0.2.1.0";
+  sha256 = "7e0cfe0c0427ada2f1947289641c59e5f66e50fc9e743ef52fb41c0b82e46e1d";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

@@ -1,27 +1,27 @@
 { mkDerivation, Diff, Glob, aeson, aeson-pretty, ansi-terminal
 , async, base, bytestring, co-log-core, conduit, conduit-parse
 , containers, data-default, directory, exceptions, extra, filepath
-, hspec, lens, lib, lsp, lsp-types, mtl, parser-combinators
-, process, some, text, time, transformers, unix, unliftio
-, unordered-containers
+, hspec, lens, lens-aeson, lib, lsp, lsp-types, mtl
+, parser-combinators, process, row-types, some, text, time
+, transformers, unix, unliftio
 }:
 mkDerivation {
   pname = "lsp-test";
-  version = "0.14.1.0";
-  sha256 = "e13ae2be422ae1344e8ab9f535f20432b97832be2d0f15a68e631660ffad6435";
+  version = "0.16.0.0";
+  sha256 = "0ea6672ce6287329c6c731a95aef730a3ed8f3ecd0fbf357ad9ea08f6dda5d28";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     aeson aeson-pretty ansi-terminal async base bytestring co-log-core
     conduit conduit-parse containers data-default Diff directory
-    exceptions filepath Glob lens lsp lsp-types mtl parser-combinators
-    process some text time transformers unix unordered-containers
+    exceptions filepath Glob lens lens-aeson lsp lsp-types mtl
+    parser-combinators process row-types some text time transformers
+    unix
   ];
   testHaskellDepends = [
-    aeson base co-log-core data-default directory filepath hspec lens
-    lsp mtl parser-combinators process text unliftio
-    unordered-containers
+    aeson base co-log-core containers data-default directory filepath
+    hspec lens lsp mtl parser-combinators process text unliftio
   ];
   testToolDepends = [ lsp ];
   benchmarkHaskellDepends = [ base extra lsp process ];

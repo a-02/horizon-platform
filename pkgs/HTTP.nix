@@ -6,8 +6,8 @@ mkDerivation {
   pname = "HTTP";
   version = "4000.4.1";
   sha256 = "df31d8efec775124dab856d7177ddcba31be9f9e0836ebdab03d94392f2dd453";
-  revision = "2";
-  editedCabalFile = "1bpq8xjyrgcxs6yf6wh7ada2xrln1dqi02b5ilj8gwn1p30hq8nr";
+  revision = "3";
+  editedCabalFile = "0nsg7j94f8wz9pv4c221c744sncac7hp5x0hlvbljgklj0jmfdqf";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

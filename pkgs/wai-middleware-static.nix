@@ -8,8 +8,8 @@ mkDerivation {
   pname = "wai-middleware-static";
   version = "0.9.2";
   sha256 = "6c0c87558f04807896377535f7801a16b4ddfd9de1a203ef5a45de915907d5fa";
-  revision = "1";
-  editedCabalFile = "1zran8wpwizrwdw23a5qckmiplyk6xf2z8x4his0ipfy2zzl5ql6";
+  revision = "4";
+  editedCabalFile = "0kmy18qq2mc5mlmnx6xaj1wkk63jl0s4fn16zbd6cyb6jb8n2lq4";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

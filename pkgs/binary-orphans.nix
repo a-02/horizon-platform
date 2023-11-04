@@ -6,8 +6,8 @@ mkDerivation {
   pname = "binary-orphans";
   version = "1.0.4.1";
   sha256 = "5f5b789bc86d25bbd054b86b2d9a6a03f4ac0dd480f283564b6d6465cfa2f0d2";
-  revision = "2";
-  editedCabalFile = "1q9fbn41fi4wfk8mrm9izy5jna86gmy7gxhz94crqfhp5f89v58l";
+  revision = "3";
+  editedCabalFile = "085flwx82nvvyb479jma9j62q8i9sbz65rarsqhasgz4vczxqawx";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

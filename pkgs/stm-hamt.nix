@@ -1,12 +1,12 @@
 { mkDerivation, QuickCheck, async, base, criterion, deferred-folds
-, focus, free, hashable, lib, list-t, mwc-random-monad, primitive
-, primitive-extras, quickcheck-instances, rebase, rerebase, tasty
+, focus, free, hashable, lib, list-t, primitive, primitive-extras
+, quickcheck-instances, random, rebase, rerebase, tasty
 , tasty-hunit, tasty-quickcheck, transformers
 }:
 mkDerivation {
   pname = "stm-hamt";
-  version = "1.2.0.11";
-  sha256 = "725c11d46a7e436789e0add1ec4413ab899733e494afd8bced8bb7c474de8537";
+  version = "1.2.0.14";
+  sha256 = "ad4b4badc608cb8a4befdf0b5304932b4eb9a1fe27640488ed03f7e17db31866";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -19,7 +19,7 @@ mkDerivation {
     tasty-hunit tasty-quickcheck
   ];
   benchmarkHaskellDepends = [
-    async criterion focus free mwc-random-monad rebase
+    async criterion focus free random rebase
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

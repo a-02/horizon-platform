@@ -6,8 +6,8 @@ mkDerivation {
   pname = "vector-sized";
   version = "1.5.0";
   sha256 = "54deae5e1d504821d63d5eedfcaea0d01b26af3b8123971ad7f1241326c3048e";
-  revision = "1";
-  editedCabalFile = "0y088b8fdhjrghi203n11ip4x2j4632c8rz6a5hx8azmdz2giiph";
+  revision = "3";
+  editedCabalFile = "1rj53ya87vnglqdnzfvb4w01k3g3wqkcc1i7ip2xryz6pw6vg18w";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

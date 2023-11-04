@@ -1,10 +1,10 @@
 { mkDerivation, QuickCheck, base, lib }:
 mkDerivation {
   pname = "PSQueue";
-  version = "1.1.1";
-  sha256 = "7191ef25e63df3658ad3eccde7d7a7e31fa8dd43c6705714672836dbf9c7ef0a";
+  version = "1.2.0";
+  sha256 = "39003847be7f302a7059b4e103739677f3b205f2d41e63557acc40f9cc577be6";
   revision = "1";
-  editedCabalFile = "02a5g59sc9jh3v4pibhjpijv8lsbiydznrpqyin7qhwsyc0p813a";
+  editedCabalFile = "17np95rwys8rlzlw7g7nsiwipzb5hxwh7frj6ffyrm0sb7jmf126";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

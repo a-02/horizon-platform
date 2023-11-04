@@ -1,23 +1,26 @@
-{ mkDerivation, Cabal, base, bytestring, deepseq, directory, extra
-, filepath, ghcide, hashable, hls-graph, hls-plugin-api
-, hls-test-utils, lens, lib, lsp, lsp-types, regex-tdfa, stm
-, tasty-hunit, text, unordered-containers
+{ mkDerivation, Cabal-syntax, base, bytestring, containers, deepseq
+, directory, extra, filepath, ghcide, hashable, hls-graph
+, hls-plugin-api, hls-test-utils, lens, lib, lsp, lsp-types
+, regex-tdfa, row-types, stm, tasty-hunit, text, text-rope
+, transformers, unordered-containers
 }:
 mkDerivation {
   pname = "hls-cabal-plugin";
-  version = "2.0.0.1";
-  sha256 = "eb48b1e44670c6344ef67e53b60658f23f70dd4f52c5421521b89bc04c63ec9f";
+  version = "2.4.0.0";
+  sha256 = "2337bf878ccf6e5e40b285e60dfa364b6f91b8785451b3f74320eaa75b71b59e";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base bytestring Cabal deepseq directory extra ghcide hashable
-    hls-graph hls-plugin-api lsp lsp-types regex-tdfa stm text
+    base bytestring Cabal-syntax containers deepseq directory extra
+    filepath ghcide hashable hls-graph hls-plugin-api lens lsp
+    lsp-types regex-tdfa stm text text-rope transformers
     unordered-containers
   ];
   testHaskellDepends = [
-    base bytestring filepath ghcide hls-test-utils lens lsp-types
-    tasty-hunit text
+    base bytestring Cabal-syntax directory filepath ghcide
+    hls-test-utils lens lsp lsp-types row-types tasty-hunit text
+    text-rope transformers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

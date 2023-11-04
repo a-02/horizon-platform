@@ -1,22 +1,23 @@
 { mkDerivation, QuickCheck, array, async, attoparsec, auto-update
 , base, base16-bytestring, base64-bytestring, bytestring
-, containers, cryptonite, doctest, hourglass, hspec, hspec-discover
-, iproute, lib, mtl, network, psqueues, word8
+, case-insensitive, containers, crypton, hourglass, hspec
+, hspec-discover, iproute, lib, mtl, network, psqueues, word8
 }:
 mkDerivation {
   pname = "dns";
-  version = "4.1.0";
-  sha256 = "45e3ceb2c2b7a3b2a23fd384f84a81fc4b91330f841f54ae62d8e7a411f100d1";
+  version = "4.2.0";
+  sha256 = "c2d3ce5315a89ce2e362877928e5698159c898c29cb97f10506779ba0db497f9";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     array async attoparsec auto-update base base16-bytestring
-    base64-bytestring bytestring containers cryptonite hourglass
-    iproute mtl network psqueues
+    base64-bytestring bytestring case-insensitive containers crypton
+    hourglass iproute mtl network psqueues
   ];
   testHaskellDepends = [
-    base bytestring doctest hspec iproute network QuickCheck word8
+    base bytestring case-insensitive hspec iproute network QuickCheck
+    word8
   ];
   testToolDepends = [ hspec-discover ];
   enableLibraryProfiling = true;

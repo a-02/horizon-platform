@@ -5,8 +5,8 @@ mkDerivation {
   pname = "servant-blaze";
   version = "0.9.1";
   sha256 = "264aa17b95400a13cf23f7421f54b3a3160119c15380a31a96bdfc4a40f2db21";
-  revision = "1";
-  editedCabalFile = "1y38lzmh5jr3bix0cqrcx9zkjdr1598hz7rvpnm827qw0ln3cmra";
+  revision = "2";
+  editedCabalFile = "1bc933vfxwdcpgfxy34dkxpadv8j1j053rjxfl4lj0gajwxc5x48";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -5,8 +5,8 @@ mkDerivation {
   pname = "natural-transformation";
   version = "0.4";
   sha256 = "aac28e2c1147ed77c1ec0f0eb607a577fa26d0fd67474293ba860ec124efc8af";
-  revision = "10";
-  editedCabalFile = "18d14fasp1l5xdfgp8swgcyyjd3irqj19cn298ksx9wiw43j818p";
+  revision = "12";
+  editedCabalFile = "0nlyhp29s2c93d1rflrw4wkzpp98i9zr11fca2vd6z31yc7dg5pg";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

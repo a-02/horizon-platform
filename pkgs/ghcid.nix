@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "ghcid";
-  version = "0.8.8";
-  sha256 = "92c96e439dd1e0b760181d17ac2ff84f96d0d4871c2f03296a3278095ec858f8";
+  version = "0.8.9";
+  sha256 = "44c29c53fc33541fbde0702c62faa6a756468a24381d1184472b7ede00a308b7";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

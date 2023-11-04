@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "ghc-typelits-natnormalise";
-  version = "0.7.8";
-  sha256 = "d68a0e61ad67f6d267003fe779f43f82152d6eddbc41efd738d6da38cd00de42";
+  version = "0.7.9";
+  sha256 = "86e08fb6a3b7d9039756353394e59226d344d602f4ff552a29116608808ac7ba";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

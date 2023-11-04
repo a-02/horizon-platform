@@ -5,8 +5,8 @@ mkDerivation {
   pname = "wizards";
   version = "1.0.3";
   sha256 = "05650d7bf6dd0e6b87d0d7da6fb003601ce5d7b1f3d69571127ec3c9425b9bb2";
-  revision = "1";
-  editedCabalFile = "095qd17zrdhqmcvmslbyzfa5sh9glvvsnsvnlz31gzsmi8nnsgim";
+  revision = "2";
+  editedCabalFile = "0bnqz6slm3hr98ihhlkmivcd12bda6lf0j7l6dfdz30fl4xqpijl";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
