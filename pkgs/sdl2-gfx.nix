@@ -18,7 +18,7 @@ mkDerivation {
   executablePkgconfigDepends = [ SDL2 SDL2_gfx ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

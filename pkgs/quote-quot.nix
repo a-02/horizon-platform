@@ -15,7 +15,7 @@ mkDerivation {
   benchmarkHaskellDepends = [ base tasty-bench template-haskell ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

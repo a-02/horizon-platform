@@ -14,7 +14,7 @@ mkDerivation {
   testHaskellDepends = [ base smallcheck tasty tasty-smallcheck ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

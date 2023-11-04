@@ -18,7 +18,7 @@ mkDerivation {
   executableHaskellDepends = [ ansi-terminal base vty ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

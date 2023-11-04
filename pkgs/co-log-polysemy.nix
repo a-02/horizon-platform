@@ -10,7 +10,7 @@ mkDerivation {
   executableHaskellDepends = [ base co-log-core polysemy ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

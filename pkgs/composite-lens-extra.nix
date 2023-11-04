@@ -9,7 +9,7 @@ mkDerivation {
   libraryHaskellDepends = [ base composite-base lens vinyl ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;

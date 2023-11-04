@@ -73,11 +73,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1699043048,
-        "narHash": "sha256-s66alk5vDvyvmMm8HqBqnqTI/qJN401X3N/P9scbV/A=",
+        "lastModified": 1699044695,
+        "narHash": "sha256-1PrOuOa1U+b6eJy7cB76Wt1UU4x312QM7YxQ/eKAfTY=",
         "ref": "lts/ghc-9.4.x",
-        "rev": "e0f3d370590ed74e733741b947492702dab286ae",
-        "revCount": 1180,
+        "rev": "f57ca82b03c477708644b26bae9fac2607ae6c6d",
+        "revCount": 1182,
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-core"
       },
@@ -211,11 +211,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1698931758,
-        "narHash": "sha256-pwl9xS9JFMXXR1lUP/QOqO9hiZKukEcVUU1A0DKQwi4=",
+        "lastModified": 1699094435,
+        "narHash": "sha256-YLZ5/KKZ1PyLrm2MO8UxRe4H3M0/oaYqNhSlq6FDeeA=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "b644d97bda6dae837d577e28383c10aa51e5e2d2",
+        "rev": "9d5d25bbfe8c0297ebe85324addcb5020ed1a454",
         "type": "github"
       },
       "original": {

@@ -14,7 +14,7 @@ mkDerivation {
   testHaskellDepends = [ base blaze-html servant-server wai warp ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
-  doHaddock = false;
+  doHaddock = true;
   jailbreak = true;
   doCheck = false;
   doBenchmark = false;
