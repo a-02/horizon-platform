@@ -27,8 +27,6 @@ final: prev: {
 
   ghcide-test-utils = null;
 
-  fourmolu = null;
-
   hopenssl = prev.hopenssl.override { openssl = pkgs.openssl; };
 
   libsodium = prev.callPackage ../pkgs/libsodium.nix { inherit (pkgs) libsodium; };

@@ -7,8 +7,8 @@
 }:
 mkDerivation {
   pname = "fourmolu";
-  version = "0.14.1.0";
-  sha256 = "b4b78a1b7b4e643dab2989ace724d37d1a9280b2be0537692d7989435dd119f3";
+  version = "0.14.0.0";
+  sha256 = "dae73c2dfa5039d1a3ad06e85c7836a2b45fe5d41d90fb98ac7b4c4507ffdad6";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

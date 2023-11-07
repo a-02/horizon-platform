@@ -796,7 +796,7 @@
   }
 , { mapKey = "fourmolu"
   , mapValue =
-      "4e853d48ae63576751d5e3abd3116c366771e78185e45e41ef8fdef8c93b510a"
+      "6ff97a82971010cee09e8479bdec49fefc86b0060d29d924f80ef4da212f82c3"
   }
 , { mapKey = "freer-simple"
   , mapValue =
@@ -1032,7 +1032,7 @@
   }
 , { mapKey = "haskell-language-server"
   , mapValue =
-      "e0dd566382b91595296e8e19b89ea7199006a40461c96376a8c5f421a4c97f9c"
+      "8c6bee7156e989464648f76ee4e29045dc2c21b4e790cfebec29523067d7f0ae"
   }
 , { mapKey = "haskell-src"
   , mapValue =
@@ -1157,6 +1157,10 @@
 , { mapKey = "hls-explicit-record-fields-plugin"
   , mapValue =
       "e34cf05a00bc2a29c2281290f76289082f90397cd498994d07b773bde10f13a6"
+  }
+, { mapKey = "hls-fourmolu-plugin"
+  , mapValue =
+      "a10e36d8f156b5fd997b7006368e06c45d9864f1718c6cfedf8ccc470502edbe"
   }
 , { mapKey = "hls-gadt-plugin"
   , mapValue =

@@ -257,7 +257,7 @@ let packages =
             "https://gitlab.rescue.horizon-haskell.net/hackage/foundation"
             "d3136f4bb8b69e273535352620e53f2196941b35"
             (Some "foundation/")
-      , fourmolu = H.callHackage "fourmolu" "0.14.1.0"
+      , fourmolu = H.callHackage "fourmolu" "0.14.0.0"
       , freer-simple = H.callHackage "freer-simple" "1.2.1.2"
       , friendly-time = H.callHackage "friendly-time" "0.4.1"
       , fsnotify = H.callHackage "fsnotify" "0.4.1.0"
@@ -392,6 +392,7 @@ let packages =
           H.callHackage "hls-explicit-imports-plugin" "2.4.0.0"
       , hls-explicit-record-fields-plugin =
           H.callHackage "hls-explicit-record-fields-plugin" "2.4.0.0"
+      , hls-fourmolu-plugin = H.callHackage "hls-fourmolu-plugin" "2.4.0.0"
       , hls-gadt-plugin = H.callHackage "hls-gadt-plugin" "2.4.0.0"
       , hls-graph = H.callHackage "hls-graph" "2.4.0.0"
       , hls-hlint-plugin = H.callHackage "hls-hlint-plugin" "2.4.0.0"

@@ -581,6 +581,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hls-explicit-record-fields-plugin = final.callPackage (./pkgs/hls-explicit-record-fields-plugin.nix) { };
 
+  hls-fourmolu-plugin = final.callPackage (./pkgs/hls-fourmolu-plugin.nix) { };
+
   hls-gadt-plugin = final.callPackage (./pkgs/hls-gadt-plugin.nix) { };
 
   hls-graph = final.callPackage (./pkgs/hls-graph.nix) { };

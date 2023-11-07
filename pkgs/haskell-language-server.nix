@@ -7,7 +7,7 @@
 , hls-change-type-signature-plugin, hls-class-plugin
 , hls-code-range-plugin, hls-explicit-fixity-plugin
 , hls-explicit-imports-plugin, hls-explicit-record-fields-plugin
-, hls-gadt-plugin, hls-graph, hls-hlint-plugin
+, hls-fourmolu-plugin, hls-gadt-plugin, hls-graph, hls-hlint-plugin
 , hls-module-name-plugin, hls-overloaded-record-dot-plugin
 , hls-plugin-api, hls-pragmas-plugin
 , hls-qualify-imported-names-plugin, hls-refactor-plugin
@@ -23,8 +23,8 @@ mkDerivation {
   version = "2.4.0.0";
   sha256 = "0fc7d587b3cd288d770c684611367fab666f9790c56e49d920787b15b4deeb4b";
   configureFlags = [
-    "-f-eval" "-f-floskell" "-f-fourmolu" "-f-ormolu"
-    "-f-refine-imports" "-f-rename" "-f-stylishhaskell"
+    "-f-eval" "-f-floskell" "-f-ormolu" "-f-refine-imports" "-f-rename"
+    "-f-stylishhaskell"
   ];
   isLibrary = true;
   isExecutable = true;
@@ -37,12 +37,12 @@ mkDerivation {
     hls-change-type-signature-plugin hls-class-plugin
     hls-code-range-plugin hls-explicit-fixity-plugin
     hls-explicit-imports-plugin hls-explicit-record-fields-plugin
-    hls-gadt-plugin hls-graph hls-hlint-plugin hls-module-name-plugin
-    hls-overloaded-record-dot-plugin hls-plugin-api hls-pragmas-plugin
-    hls-qualify-imported-names-plugin hls-refactor-plugin
-    hls-retrie-plugin hls-splice-plugin lsp optparse-applicative
-    optparse-simple prettyprinter process safe-exceptions sqlite-simple
-    text unordered-containers
+    hls-fourmolu-plugin hls-gadt-plugin hls-graph hls-hlint-plugin
+    hls-module-name-plugin hls-overloaded-record-dot-plugin
+    hls-plugin-api hls-pragmas-plugin hls-qualify-imported-names-plugin
+    hls-refactor-plugin hls-retrie-plugin hls-splice-plugin lsp
+    optparse-applicative optparse-simple prettyprinter process
+    safe-exceptions sqlite-simple text unordered-containers
   ];
   executableHaskellDepends = [
     aeson async base base16-bytestring binary bytestring containers
