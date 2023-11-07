@@ -141,6 +141,8 @@ final: prev: with pkgs.haskell.lib; {
 
   c2hs = final.callPackage (./pkgs/c2hs.nix) { };
 
+  cabal-fmt = final.callPackage (./pkgs/cabal-fmt.nix) { };
+
   cache = final.callPackage (./pkgs/cache.nix) { };
 
   canonical-json = final.callPackage (./pkgs/canonical-json.nix) { };
@@ -580,6 +582,8 @@ final: prev: with pkgs.haskell.lib; {
   hls-explicit-imports-plugin = final.callPackage (./pkgs/hls-explicit-imports-plugin.nix) { };
 
   hls-explicit-record-fields-plugin = final.callPackage (./pkgs/hls-explicit-record-fields-plugin.nix) { };
+
+  hls-fourmolu-plugin = final.callPackage (./pkgs/hls-fourmolu-plugin.nix) { };
 
   hls-gadt-plugin = final.callPackage (./pkgs/hls-gadt-plugin.nix) { };
 
