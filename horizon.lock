@@ -1032,7 +1032,7 @@
   }
 , { mapKey = "haskell-language-server"
   , mapValue =
-      "1d80a35b6c5f714726dbbf029820f7ff7c9234a506e75b00acbf09239f2a6ca5"
+      "e0dd566382b91595296e8e19b89ea7199006a40461c96376a8c5f421a4c97f9c"
   }
 , { mapKey = "haskell-src"
   , mapValue =

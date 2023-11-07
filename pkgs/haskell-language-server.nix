@@ -23,7 +23,7 @@ mkDerivation {
   version = "2.4.0.0";
   sha256 = "0fc7d587b3cd288d770c684611367fab666f9790c56e49d920787b15b4deeb4b";
   configureFlags = [
-    "-f-dynamic" "-f-eval" "-f-floskell" "-f-fourmolu" "-f-ormolu"
+    "-f-eval" "-f-floskell" "-f-fourmolu" "-f-ormolu"
     "-f-refine-imports" "-f-rename" "-f-stylishhaskell"
   ];
   isLibrary = true;

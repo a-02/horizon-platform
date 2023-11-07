@@ -336,9 +336,7 @@ let packages =
       , haskell-language-server =
           (H.callHackage "haskell-language-server" "2.4.0.0")
         with flags =
-          [ H.CabalFlag.Disable "dynamic"
-          , H.CabalFlag.Disable "ormolu"
-          , H.CabalFlag.Disable "fourmolu"
+          [ H.CabalFlag.Disable "ormolu"
           , H.CabalFlag.Disable "refine-imports"
           , H.CabalFlag.Disable "rename"
           , H.CabalFlag.Disable "stylishHaskell"
