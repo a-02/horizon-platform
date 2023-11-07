@@ -141,6 +141,8 @@ final: prev: with pkgs.haskell.lib; {
 
   c2hs = final.callPackage (./pkgs/c2hs.nix) { };
 
+  cabal-fmt = final.callPackage (./pkgs/cabal-fmt.nix) { };
+
   cache = final.callPackage (./pkgs/cache.nix) { };
 
   canonical-json = final.callPackage (./pkgs/canonical-json.nix) { };

@@ -278,6 +278,10 @@
   , mapValue =
       "6d6262823310cf14a23c4fb5e0374a16a29b0ca6f667e9d0510f17383c3951b0"
   }
+, { mapKey = "cabal-fmt"
+  , mapValue =
+      "7da8d5b11fb001d85323ae05a3b1b090b35e55f93d2ed5bba5aef3c18d711623"
+  }
 , { mapKey = "cache"
   , mapValue =
       "a49e00288043640d75f03ee1ef20218116f36561ef2573ac7321fcf6b3881105"

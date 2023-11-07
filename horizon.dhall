@@ -91,6 +91,7 @@ let packages =
       , bytestring-tree-builder =
           H.callHackage "bytestring-tree-builder" "0.2.7.11"
       , c2hs = H.callHackage "c2hs" "0.28.8"
+      , cabal-fmt = H.callHackage "cabal-fmt" "0.1.9"
       , cache = H.callHackage "cache" "0.1.3.0"
       , canonical-json = H.callHackage "canonical-json" "0.6.0.1"
       , casing = H.callHackage "casing" "0.1.4.1"
