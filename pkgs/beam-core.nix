@@ -1,18 +1,11 @@
-{ mkDerivation, aeson, base, bytestring, containers, dlist
-, fetchgit, free, ghc-prim, hashable, lib, microlens, mtl
-, network-uri, scientific, tagged, tasty, tasty-hunit, text, time
-, vector, vector-sized
+{ mkDerivation, aeson, base, bytestring, containers, dlist, free
+, ghc-prim, hashable, lib, microlens, mtl, network-uri, scientific
+, tagged, tasty, tasty-hunit, text, time, vector, vector-sized
 }:
 mkDerivation {
   pname = "beam-core";
   version = "0.10.1.0";
-  src = fetchgit {
-    url = "https://github.com/haskell-beam/beam";
-    sha256 = "0mzik3yy8hsj7qkw43j7nsn1gxd2lpdn5s5826zi9vhpvs7gdyn4";
-    rev = "96e35be86dfffe4aa0b8190f7b8656e30cb36301";
-    fetchSubmodules = true;
-  };
-  postUnpack = "sourceRoot+=/beam-core/; echo source root reset to $sourceRoot";
+  sha256 = "303477810d9fa366610a1063fc3316d5441b1a5291c8eb6fa900343e8ac93340";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

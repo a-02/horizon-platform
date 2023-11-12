@@ -1,19 +1,13 @@
 { mkDerivation, aeson, attoparsec, base, beam-core, beam-migrate
-, bytestring, dlist, fetchgit, free, hashable, lib, monad-control
-, mtl, network-uri, scientific, sqlite-simple, tasty
+, bytestring, dlist, free, hashable, lib, monad-control, mtl
+, network-uri, scientific, sqlite-simple, tasty
 , tasty-expected-failure, tasty-hunit, text, time
 , transformers-base, unix
 }:
 mkDerivation {
   pname = "beam-sqlite";
-  version = "0.5.2.0";
-  src = fetchgit {
-    url = "https://github.com/haskell-beam/beam";
-    sha256 = "0mzik3yy8hsj7qkw43j7nsn1gxd2lpdn5s5826zi9vhpvs7gdyn4";
-    rev = "96e35be86dfffe4aa0b8190f7b8656e30cb36301";
-    fetchSubmodules = true;
-  };
-  postUnpack = "sourceRoot+=/beam-sqlite/; echo source root reset to $sourceRoot";
+  version = "0.5.3.0";
+  sha256 = "a49a443524b202576da6a81297e05ae3dd69d5d4bfc494084bd28464bac41614";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

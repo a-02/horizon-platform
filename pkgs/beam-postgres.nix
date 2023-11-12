@@ -1,5 +1,5 @@
 { mkDerivation, aeson, attoparsec, base, beam-core, beam-migrate
-, bytestring, case-insensitive, conduit, fetchgit, free, hashable
+, bytestring, case-insensitive, conduit, free, hashable
 , haskell-src-exts, hedgehog, lib, lifted-base, monad-control, mtl
 , network-uri, postgresql-libpq, postgresql-simple, scientific
 , tagged, tasty, tasty-hunit, text, time, tmp-postgres
@@ -7,14 +7,8 @@
 }:
 mkDerivation {
   pname = "beam-postgres";
-  version = "0.5.3.0";
-  src = fetchgit {
-    url = "https://github.com/haskell-beam/beam";
-    sha256 = "0mzik3yy8hsj7qkw43j7nsn1gxd2lpdn5s5826zi9vhpvs7gdyn4";
-    rev = "96e35be86dfffe4aa0b8190f7b8656e30cb36301";
-    fetchSubmodules = true;
-  };
-  postUnpack = "sourceRoot+=/beam-postgres/; echo source root reset to $sourceRoot";
+  version = "0.5.3.1";
+  sha256 = "36905a02af208dc7755b496ee4afd409d1a769b46c52c5501ade7191137feaa5";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

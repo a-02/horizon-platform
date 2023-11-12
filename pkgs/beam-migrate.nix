@@ -1,19 +1,12 @@
 { mkDerivation, aeson, base, beam-core, bytestring, containers
-, deepseq, dependent-map, dependent-sum, fetchgit, free, ghc-prim
-, hashable, haskell-src-exts, lib, microlens, mtl, parallel, pqueue
-, pretty, scientific, text, time, unordered-containers, uuid-types
-, vector
+, deepseq, dependent-map, dependent-sum, free, ghc-prim, hashable
+, haskell-src-exts, lib, microlens, mtl, parallel, pqueue, pretty
+, scientific, text, time, unordered-containers, uuid-types, vector
 }:
 mkDerivation {
   pname = "beam-migrate";
-  version = "0.5.2.0";
-  src = fetchgit {
-    url = "https://github.com/haskell-beam/beam";
-    sha256 = "0mzik3yy8hsj7qkw43j7nsn1gxd2lpdn5s5826zi9vhpvs7gdyn4";
-    rev = "96e35be86dfffe4aa0b8190f7b8656e30cb36301";
-    fetchSubmodules = true;
-  };
-  postUnpack = "sourceRoot+=/beam-migrate/; echo source root reset to $sourceRoot";
+  version = "0.5.2.1";
+  sha256 = "ccbb4685eee3e0067ae0de3b8a2204641a6b8041010612055afb1d79591af499";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

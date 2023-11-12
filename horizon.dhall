@@ -56,26 +56,10 @@ let packages =
       , base64 = H.callHackage "base64" "0.4.2.4"
       , base64-bytestring = H.callHackage "base64-bytestring" "1.2.1.0"
       , base64-bytestring-type = H.callHackage "base64-bytestring-type" "1.0.1"
-      , beam-core =
-          H.callGit
-            "https://github.com/haskell-beam/beam"
-            "96e35be86dfffe4aa0b8190f7b8656e30cb36301"
-            (Some "beam-core/")
-      , beam-migrate =
-          H.callGit
-            "https://github.com/haskell-beam/beam"
-            "96e35be86dfffe4aa0b8190f7b8656e30cb36301"
-            (Some "beam-migrate/")
-      , beam-postgres =
-          H.callGit
-            "https://github.com/haskell-beam/beam"
-            "96e35be86dfffe4aa0b8190f7b8656e30cb36301"
-            (Some "beam-postgres/")
-      , beam-sqlite =
-          H.callGit
-            "https://github.com/haskell-beam/beam"
-            "96e35be86dfffe4aa0b8190f7b8656e30cb36301"
-            (Some "beam-sqlite/")
+      , beam-core = H.callHackage "beam-core" "0.10.1.0"
+      , beam-migrate = H.callHackage "beam-migrate" "0.5.2.1"
+      , beam-postgres = H.callHackage "beam-postgres" "0.5.3.1"
+      , beam-sqlite = H.callHackage "beam-sqlite" "0.5.3.0"
       , bech32 = H.callHackage "bech32" "1.1.4"
       , bech32-th = H.callHackage "bech32-th" "1.1.1"
       , bin = H.callHackage "bin" "0.1.3"
