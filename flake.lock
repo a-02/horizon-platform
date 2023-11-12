@@ -73,11 +73,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1699044695,
-        "narHash": "sha256-1PrOuOa1U+b6eJy7cB76Wt1UU4x312QM7YxQ/eKAfTY=",
+        "lastModified": 1699788548,
+        "narHash": "sha256-9XTNSqYxT3HzVIglLW4UprhVMjyDsZzQY8s0qZDS+nw=",
         "ref": "lts/ghc-9.4.x",
-        "rev": "f57ca82b03c477708644b26bae9fac2607ae6c6d",
-        "revCount": 1182,
+        "rev": "3d5cb59b2e770f825f3927f26c279f69a6e2c490",
+        "revCount": 1184,
         "type": "git",
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-core"
       },
@@ -93,11 +93,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1681737193,
-        "narHash": "sha256-c+0eLyF/VWZWGeB1DA88aDUZ3BjO6+jnsJpVW4wxs4w=",
+        "lastModified": 1699441004,
+        "narHash": "sha256-7v7CH8ZiB2RClPtpgDLfQxeR+14KXoFl2qTdXd27sL0=",
         "ref": "refs/heads/master",
-        "rev": "efaf89d12a6811f0e00034444904b8d169f0fa34",
-        "revCount": 48,
+        "rev": "226003d10c2d192b088f7c3c9ee7ca549c421a9c",
+        "revCount": 52,
         "type": "git",
         "url": "https://gitlab.nixica.dev/nix/lint-utils"
       },
@@ -112,11 +112,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1681737193,
-        "narHash": "sha256-c+0eLyF/VWZWGeB1DA88aDUZ3BjO6+jnsJpVW4wxs4w=",
+        "lastModified": 1699441004,
+        "narHash": "sha256-7v7CH8ZiB2RClPtpgDLfQxeR+14KXoFl2qTdXd27sL0=",
         "ref": "refs/heads/master",
-        "rev": "efaf89d12a6811f0e00034444904b8d169f0fa34",
-        "revCount": 48,
+        "rev": "226003d10c2d192b088f7c3c9ee7ca549c421a9c",
+        "revCount": 52,
         "type": "git",
         "url": "https://gitlab.nixica.dev/nix/lint-utils"
       },
@@ -179,16 +179,16 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1698973113,
-        "narHash": "sha256-pRYf/geKwHDvaqw+0ldTfGZM5Y5XX/Bw5st+Fxs/4+I=",
+        "lastModified": 1699099776,
+        "narHash": "sha256-X09iKJ27mGsGambGfkKzqvw5esP1L/Rf8H3u3fCqIiU=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "8a8ec371fe6bd092d180e12a0112a37448b4cb30",
+        "rev": "85f1ba3e51676fa8cc604a3d863d729026a6b8eb",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "haskell-updates",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -211,11 +211,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1699094435,
-        "narHash": "sha256-YLZ5/KKZ1PyLrm2MO8UxRe4H3M0/oaYqNhSlq6FDeeA=",
+        "lastModified": 1699601893,
+        "narHash": "sha256-9f008k1k5SmEAO1ldjO5sQf+oWHFkeK5jhS3Ji3vFyk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "9d5d25bbfe8c0297ebe85324addcb5020ed1a454",
+        "rev": "e06c716ef149f466f25e62a836c30b90476e65e5",
         "type": "github"
       },
       "original": {
