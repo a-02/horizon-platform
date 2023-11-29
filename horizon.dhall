@@ -389,6 +389,7 @@ let packages =
       , hls-retrie-plugin = H.callHackage "hls-retrie-plugin" "2.4.0.0"
       , hls-splice-plugin = H.callHackage "hls-splice-plugin" "2.4.0.0"
       , hls-test-utils = H.callHackage "hls-test-utils" "2.4.0.0"
+      , hoauth2 = H.callHackage "hoauth2" "2.10.0"
       , hosc = H.callHackage "hosc" "0.20"
       , hp2pretty = H.callHackage "hp2pretty" "0.10"
       , hslogger = H.callHackage "hslogger" "1.3.1.0"

@@ -1214,6 +1214,10 @@
   , mapValue =
       "736b6e8bd716787854b17ee1cf070ca2bf7c7d5829e950c6be1878db3f11e431"
   }
+, { mapKey = "hoauth2"
+  , mapValue =
+      "801fba9abf801d2dac5d7b0d840fa51d479abd4191253d629b67a50b606b8b93"
+  }
 , { mapKey = "hosc"
   , mapValue =
       "61ce61b7fbcfe75955e073c3c970f975f124f7b8ece777e46be7988aaf104530"
