@@ -1365,6 +1365,8 @@ final: prev: with pkgs.haskell.lib; {
 
   uri-bytestring = final.callPackage (./pkgs/uri-bytestring.nix) { };
 
+  uri-bytestring-aeson = final.callPackage (./pkgs/uri-bytestring-aeson.nix) { };
+
   url-slug = final.callPackage (./pkgs/url-slug.nix) { };
 
   uuid = final.callPackage (./pkgs/uuid.nix) { };

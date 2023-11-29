@@ -2726,6 +2726,10 @@
   , mapValue =
       "dc7dfefcdaa0223acc8469272c692653f9ecd97bcd88989613f526378a66f9b1"
   }
+, { mapKey = "uri-bytestring-aeson"
+  , mapValue =
+      "4066c016bcb7cb46ec1576279dddc0e06d66b7a8b4253f4728979c8f2181172e"
+  }
 , { mapKey = "url-slug"
   , mapValue =
       "4b0ac48095b558c25a270b4477148c2fdca42e1bdbe30bd159e12cac284c06a7"

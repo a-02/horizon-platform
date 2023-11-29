@@ -823,6 +823,7 @@ let packages =
       , unix-bytestring = H.callHackage "unix-bytestring" "0.4.0"
       , unix-memory = H.callHackage "unix-memory" "0.1.2"
       , uri-bytestring = H.callHackage "uri-bytestring" "0.3.3.1"
+      , uri-bytestring-aeson = H.callHackage "uri-bytestring-aeson" "0.1.0.8"
       , url-slug = H.callHackage "url-slug" "0.1.0.0"
       , uuid = H.callHackage "uuid" "1.3.15"
       , validation = H.callHackage "validation" "1.1.3"
