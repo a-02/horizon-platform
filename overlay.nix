@@ -609,6 +609,8 @@ final: prev: with pkgs.haskell.lib; {
 
   hls-test-utils = final.callPackage (./pkgs/hls-test-utils.nix) { };
 
+  hoauth2 = final.callPackage (./pkgs/hoauth2.nix) { };
+
   hosc = final.callPackage (./pkgs/hosc.nix) { };
 
   hp2pretty = final.callPackage (./pkgs/hp2pretty.nix) { };
@@ -1364,6 +1366,8 @@ final: prev: with pkgs.haskell.lib; {
   unix-memory = final.callPackage (./pkgs/unix-memory.nix) { };
 
   uri-bytestring = final.callPackage (./pkgs/uri-bytestring.nix) { };
+
+  uri-bytestring-aeson = final.callPackage (./pkgs/uri-bytestring-aeson.nix) { };
 
   url-slug = final.callPackage (./pkgs/url-slug.nix) { };
 

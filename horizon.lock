@@ -1214,6 +1214,10 @@
   , mapValue =
       "736b6e8bd716787854b17ee1cf070ca2bf7c7d5829e950c6be1878db3f11e431"
   }
+, { mapKey = "hoauth2"
+  , mapValue =
+      "801fba9abf801d2dac5d7b0d840fa51d479abd4191253d629b67a50b606b8b93"
+  }
 , { mapKey = "hosc"
   , mapValue =
       "61ce61b7fbcfe75955e073c3c970f975f124f7b8ece777e46be7988aaf104530"
@@ -2725,6 +2729,10 @@
 , { mapKey = "uri-bytestring"
   , mapValue =
       "dc7dfefcdaa0223acc8469272c692653f9ecd97bcd88989613f526378a66f9b1"
+  }
+, { mapKey = "uri-bytestring-aeson"
+  , mapValue =
+      "4066c016bcb7cb46ec1576279dddc0e06d66b7a8b4253f4728979c8f2181172e"
   }
 , { mapKey = "url-slug"
   , mapValue =
