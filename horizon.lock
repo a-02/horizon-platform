@@ -510,10 +510,6 @@
   , mapValue =
       "36c4bf371eb1a60326835a864f867206fadf1f30a3154dcc870045e7b85f6c5a"
   }
-, { mapKey = "ed25519"
-  , mapValue =
-      "f652995c4c77883e16c140c5651df43fcabd769044a7afadaa0c9b2711241d0d"
-  }
 , { mapKey = "edit-distance"
   , mapValue =
       "67ea802e60bd518725e5fa82f8cf1d52ba8c8a8607422d66270865a694960c43"

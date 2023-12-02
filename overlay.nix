@@ -257,8 +257,6 @@ final: prev: with pkgs.haskell.lib; {
 
   echo = final.callPackage (./pkgs/echo.nix) { };
 
-  ed25519 = final.callPackage (./pkgs/ed25519.nix) { };
-
   edit-distance = final.callPackage (./pkgs/edit-distance.nix) { };
 
   effectful = final.callPackage (./pkgs/effectful.nix) { };

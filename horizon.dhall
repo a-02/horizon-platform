@@ -154,11 +154,6 @@ let packages =
       , double-conversion = H.callHackage "double-conversion" "2.0.4.2"
       , dual-tree = H.callHackage "dual-tree" "0.2.3.1"
       , echo = H.callHackage "echo" "0.1.4"
-      , ed25519 =
-          H.callGit
-            "https://gitlab.homotopic.tech/horizon/adopted/ed25519"
-            "faf8fe90aa1cd2492ea1e64c55f5c59fc0322210"
-            (None H.Subdir)
       , edit-distance = H.callHackage "edit-distance" "0.2.2.1"
       , effectful = H.callHackage "effectful" "2.3.0.0"
       , effectful-cache =
