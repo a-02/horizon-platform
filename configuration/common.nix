@@ -4,6 +4,8 @@ with haskellLib;
 
 final: prev: {
 
+  cheapstake = null;
+
   digits = overrideCabal
     prev.digits
     (_:

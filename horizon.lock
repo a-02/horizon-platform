@@ -78,10 +78,6 @@
   , mapValue =
       "cf4c305dcebcec46780c694c8e6434f56785c4d19c44df5e1a24c4074036b6b2"
   }
-, { mapKey = "Unixutils"
-  , mapValue =
-      "c766178eb49c848aa9b652022497d18b02e54062ce36fa98866c3b618e3a791a"
-  }
 , { mapKey = "X11"
   , mapValue =
       "f2cf81b7ef5f2e06a77d3c9f3908f8cd73ff44cd2c3594ba4b7e69a11cc8f798"

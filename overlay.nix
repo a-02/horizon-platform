@@ -41,8 +41,6 @@ final: prev: with pkgs.haskell.lib; {
 
   Unique = final.callPackage (./pkgs/Unique.nix) { };
 
-  Unixutils = final.callPackage (./pkgs/Unixutils.nix) { };
-
   X11 = final.callPackage (./pkgs/X11.nix) { };
 
   X11-xft = final.callPackage (./pkgs/X11-xft.nix) { };

@@ -22,7 +22,6 @@ let packages =
       , RSA = H.callHackage "RSA" "2.4.1"
       , Stream = H.callHackage "Stream" "0.4.7.2"
       , Unique = H.callHackage "Unique" "0.4.7.9"
-      , Unixutils = H.callHackage "Unixutils" "1.54.2"
       , X11 = H.callHackage "X11" "1.10.3"
       , X11-xft = H.callHackage "X11-xft" "0.3.4"
       , abstract-deque-tests = H.callHackage "abstract-deque-tests" "0.3"
