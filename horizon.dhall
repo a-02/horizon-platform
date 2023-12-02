@@ -433,7 +433,7 @@ let packages =
       , odd-jobs =
           H.callGit
             "https://github.com/saurabhnanda/odd-jobs"
-            "51c7443"
+            "411d5d0aaeeb96d4b72d0a434b9d2b53c88c2eae"
             (None H.Subdir)
       , one-liner = H.callHackage "one-liner" "2.1"
       , openapi3 = H.callHackage "openapi3" "3.2.4"
