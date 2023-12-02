@@ -10,6 +10,7 @@
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
     horizon-core.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-core?ref=lts/ghc-9.4.x";
+    horizon-hoogle.url = "git+https://gitlab.horizon-haskell.net/nix/horizon-hoogle";
     lint-utils.url = "git+https://gitlab.nixica.dev/nix/lint-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   };
@@ -28,6 +29,9 @@
         "aarch64-darwin"
         "x86_64-darwin"
         "x86_64-linux"
+      ];
+      imports = [
+        inputs.horizon-hoogle.flakeModule
       ];
       perSystem = { config, system, ... }:
         let
@@ -48,18 +52,8 @@
 
           packages = filterAttrs (_: isDerivation) legacyPackages;
 
-          horizon-hoogle = pkgs.writers.writeBashBin "horizon-hoogle" ''
-            ${legacyPackages.ghcWithHoogle (p: attrValues (packages // { hoogle = null; }))}/bin/hoogle server --local
-          '';
         in
         {
-
-          apps = {
-            run-hoogle = {
-              type = "app";
-              program = "${horizon-hoogle}/bin/horizon-core-hoogle";
-            };
-          };
 
           checks = with lint-utils.linters.${system}; {
             dhall-format = dhall-format { src = self; };

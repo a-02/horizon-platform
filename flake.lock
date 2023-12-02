@@ -87,6 +87,21 @@
         "url": "https://gitlab.horizon-haskell.net/package-sets/horizon-core"
       }
     },
+    "horizon-hoogle": {
+      "locked": {
+        "lastModified": 1701521742,
+        "narHash": "sha256-huf/95jYL7mY0AHSziJYXx4m/sP+G+YAbJb+Q5Ph/Jg=",
+        "ref": "refs/heads/master",
+        "rev": "ddf3b08c6458c1a9e0d881f968c050bc828b9b8e",
+        "revCount": 2,
+        "type": "git",
+        "url": "https://gitlab.horizon-haskell.net/nix/horizon-hoogle"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitlab.horizon-haskell.net/nix/horizon-hoogle"
+      }
+    },
     "lint-utils": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -229,6 +244,7 @@
       "inputs": {
         "flake-parts": "flake-parts",
         "horizon-core": "horizon-core",
+        "horizon-hoogle": "horizon-hoogle",
         "lint-utils": "lint-utils_2",
         "nixpkgs": "nixpkgs_4"
       }
