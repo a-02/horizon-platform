@@ -567,11 +567,7 @@ let packages =
       , statestack = H.callHackage "statestack" "0.3.1.1"
       , statistics-linreg = H.callHackage "statistics-linreg" "0.3"
       , stm-chans = H.callHackage "stm-chans" "3.0.0.9"
-      , streaming =
-          H.callGit
-            "https://github.com/haskell-streaming/streaming"
-            "b6ec199103c078a07b3dcd197ab39020b2136426"
-            (None H.Subdir)
+      , streaming = H.callHackage "streaming" "0.2.4.0"
       , streaming-binary = H.callHackage "streaming-binary" "0.3.0.1"
       , streaming-bytestring = H.callHackage "streaming-bytestring" "0.3.2"
       , streamly = H.callHackage "streamly" "0.10.0"
