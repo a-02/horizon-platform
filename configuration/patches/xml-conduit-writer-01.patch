@@ -1,0 +1,18 @@
+commit d986482ef065a8762ae880585c6c2b8e4aab9dcb
+Author: Daniel Firth <dan.firth@homotopic.tech>
+Date:   Sat Dec 2 23:56:50 2023 +0000
+
+    ghc 9.6 compat
+
+diff --git a/src/Text/XML/Writer.hs b/src/Text/XML/Writer.hs
+index 65e8f66..13fda5d 100644
+--- a/src/Text/XML/Writer.hs
++++ b/src/Text/XML/Writer.hs
+@@ -36,6 +36,7 @@ module Text.XML.Writer
+     ) where
+ 
+ import Text.XML
++import Control.Monad
+ import Control.Monad.Writer.Strict
+ import Data.Default ()
+ import qualified Data.DList as DL
