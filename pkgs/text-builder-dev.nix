@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "text-builder-dev";
-  version = "0.3.4.1";
-  sha256 = "813f35049e9e542129e2ed6a3eab390d6ca048f21da061a4774b59ce0fc6b324";
+  version = "0.3.4.2";
+  sha256 = "36fdff5e23a98a26e2ebb9328d66c2a9eb6c54810935bc942785951d56d81c60";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -7,6 +7,8 @@ mkDerivation {
   pname = "servant-docs";
   version = "0.13";
   sha256 = "c75ce9536f7568606a8c67a7920c476fb91fba77140b379904d6b26590af2145";
+  revision = "2";
+  editedCabalFile = "1awdlcvi24rqjzx01qff4an4srzqbyrcihxvazha0ypr2w94wz15";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

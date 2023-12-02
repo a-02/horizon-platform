@@ -8,6 +8,8 @@ mkDerivation {
   pname = "servant";
   version = "0.20.1";
   sha256 = "94f773f9bdff67eb2d7aec9c67f80e8af79d531ba6f52fad2e142d8ce4551be9";
+  revision = "2";
+  editedCabalFile = "137yfr7mxfx2r3pkdfwsxv7xxch5l20yirj82186djyg36q5021z";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

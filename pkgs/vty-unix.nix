@@ -5,10 +5,8 @@
 }:
 mkDerivation {
   pname = "vty-unix";
-  version = "0.1.0.0";
-  sha256 = "7faa08b40b6dae02abe518c87b7003876b2e988b620e0b73877bb506383c1295";
-  revision = "1";
-  editedCabalFile = "0vf6zgfdvqmrvwkq6jvcyfdlq374vpgzvh69c43rhkz7x19gds0k";
+  version = "0.2.0.0";
+  sha256 = "c2ab67e09edc4bade04e269adc059320e83f68b31e428d11a69b20c4f161ddc1";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

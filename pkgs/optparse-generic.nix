@@ -1,16 +1,17 @@
-{ mkDerivation, Only, base, bytestring, lib, optparse-applicative
-, text, time, transformers, transformers-compat, void
+{ mkDerivation, Only, base, bytestring, filepath, lib
+, optparse-applicative, text, time, transformers
+, transformers-compat, void
 }:
 mkDerivation {
   pname = "optparse-generic";
-  version = "1.5.1";
-  sha256 = "d9db0fd22d84973fb31ed7a52162686fbb9f4efbb8e4525cd39a77bf208bca06";
+  version = "1.5.2";
+  sha256 = "c7b451f32d34124aab838fadaab4cf2e271e558ddc13a702458b6c790a2e8a35";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
-    base bytestring Only optparse-applicative text time transformers
-    transformers-compat void
+    base bytestring filepath Only optparse-applicative text time
+    transformers transformers-compat void
   ];
   executableHaskellDepends = [ base ];
   enableLibraryProfiling = true;

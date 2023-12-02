@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "toml-parser";
-  version = "1.3.0.0";
-  sha256 = "fcd6a27a4ede2367b4b2d3ffa0cce722cb78adc6647774dbeef8d248bf825b98";
+  version = "1.3.1.0";
+  sha256 = "caa1478969c72cc0054607fc9bcacac98549ed37e4e1f51b814e65f0d8310ae7";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

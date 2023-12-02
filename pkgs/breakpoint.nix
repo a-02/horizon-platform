@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "breakpoint";
-  version = "0.1.2.2";
-  sha256 = "b51a757785e5baed7a9dfb365cc79d6e519ba52b6680fc5c792eb909a682a20b";
+  version = "0.1.3.0";
+  sha256 = "0531e3617085ef1b3961f3bce74938dffa81a25a5270b477c9f3c2305f5aa237";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

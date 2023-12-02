@@ -3,10 +3,10 @@
 }:
 mkDerivation {
   pname = "pipes-safe";
-  version = "2.3.4";
-  sha256 = "5d848967dfd4910293c2a4a35b79bccfe6772e946856a853b15914ca5bc040c1";
-  revision = "6";
-  editedCabalFile = "00zidlhj81dp9ksnilkazi9rzi8azxxyv7gwjm0nn12jii45q6i4";
+  version = "2.3.5";
+  sha256 = "f0b2d191a8a86edd5efeadd2a3af785a0b889222720f27b2fbe69d54fc53d78e";
+  revision = "2";
+  editedCabalFile = "04yyjgqr81b10635bw0f2i5kfh0qzp7l3v9k9qbzskvlsl3kdyjy";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

@@ -2,14 +2,12 @@
 , containers, data-clist, deepseq, directory, exceptions, filepath
 , lib, microlens, microlens-mtl, microlens-th, mtl, stm
 , template-haskell, text, text-zipper, unix-compat, vector, vty
-, vty-crossplatform, word-wrap
+, vty-crossplatform, vty-unix, word-wrap
 }:
 mkDerivation {
   pname = "brick";
-  version = "2.0";
-  sha256 = "7c4d74f216c7339754da1ec963202d3d2fe6ebcc8cb61c9474fc5bb4770f3fad";
-  revision = "1";
-  editedCabalFile = "1h8hzph59s11sxvvhpgdpsh04s4hhbp7hyjp768q84bfcy4whjhr";
+  version = "2.1.1";
+  sha256 = "30280d6f7130eb3e6cbf5a55465a06a825169cb536d3b2e91883aec23532b31e";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
@@ -20,7 +18,7 @@ mkDerivation {
     vty-crossplatform word-wrap
   ];
   testHaskellDepends = [
-    base containers microlens QuickCheck vector vty
+    base containers microlens QuickCheck vector vty vty-unix
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

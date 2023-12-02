@@ -1,8 +1,8 @@
 { mkDerivation, base, lib, text }:
 mkDerivation {
   pname = "typst-symbols";
-  version = "0.1.4";
-  sha256 = "cbb4189d9430c9dabe1f5fb0398ec3fd1ebd035b8c66feea0972c2c3ad23eb4e";
+  version = "0.1.5";
+  sha256 = "20951e9457ba68b7ecaf06814e0bc0ff35af4018353ad88c5541e2710143fccd";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

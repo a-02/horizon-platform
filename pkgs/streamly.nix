@@ -1,21 +1,20 @@
 { mkDerivation, atomic-primops, base, containers, deepseq
 , directory, exceptions, hashable, heaps, lib, lockfree-queue
 , monad-control, mtl, network, streamly-core, template-haskell
-, transformers, transformers-base, unicode-data
-, unordered-containers
+, transformers, unicode-data, unordered-containers
 }:
 mkDerivation {
   pname = "streamly";
-  version = "0.9.0";
-  sha256 = "ec7735826f0a203ac1eaef4f4bd4c587b3868098af6e0dde65e02a910def92da";
+  version = "0.10.0";
+  sha256 = "cfe4643d354fba1c7ad781f80c6d89db61c6895d4f5cdde2cf7875f2ef88ef56";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     atomic-primops base containers deepseq directory exceptions
     hashable heaps lockfree-queue monad-control mtl network
-    streamly-core template-haskell transformers transformers-base
-    unicode-data unordered-containers
+    streamly-core template-haskell transformers unicode-data
+    unordered-containers
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

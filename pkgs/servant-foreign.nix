@@ -5,8 +5,8 @@ mkDerivation {
   pname = "servant-foreign";
   version = "0.16";
   sha256 = "bbaeb1e42a335fa5f65e837deee782db77b61f068093170eafd2b3763ac8f196";
-  revision = "1";
-  editedCabalFile = "17rnd7dnkj5p8jpbmlgysacrdxxhczd4ll8r5r3bpd56yhj8wm2c";
+  revision = "2";
+  editedCabalFile = "1mvp8r90kj0hnl95hzwdf5pja69h44vlwjypygzgjxn1j0lmrj2f";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

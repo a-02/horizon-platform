@@ -8,8 +8,8 @@
 }:
 mkDerivation {
   pname = "hasql";
-  version = "1.6.3.3";
-  sha256 = "043b7afa97ea10717e3339a3eb00b4cf7959f637c3bab2c26ddf7a497cbc94f0";
+  version = "1.6.3.4";
+  sha256 = "948885b37d1f2f0642967aa7eaf98ea2e4d7b76303387e7ddc7b7e77fc76fee6";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

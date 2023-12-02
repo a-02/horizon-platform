@@ -1,19 +1,15 @@
-{ mkDerivation, QuickCheck, base, deepseq, hashable, lib, mtl
-, quickcheck-instances, rerebase, strict-list, tasty, tasty-hunit
-, tasty-quickcheck
+{ mkDerivation, base, deepseq, hashable, lib, mtl, rerebase
+, strict-list, tasty, tasty-quickcheck
 }:
 mkDerivation {
   pname = "deque";
-  version = "0.4.4";
-  sha256 = "d646d82001cc6b1f17a969ab1d479c2f65f31547c1741dfd7d7c12f7709319f4";
+  version = "0.4.4.1";
+  sha256 = "da775f9e524bfeebadb3ac4077dca3e261def708ed8d5779b0a48a5fe584de3f";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [ base deepseq hashable mtl strict-list ];
-  testHaskellDepends = [
-    QuickCheck quickcheck-instances rerebase tasty tasty-hunit
-    tasty-quickcheck
-  ];
+  testHaskellDepends = [ rerebase tasty tasty-quickcheck ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = true;

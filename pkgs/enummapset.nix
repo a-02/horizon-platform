@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "enummapset";
-  version = "0.7.1.0";
-  sha256 = "c938bec2cdfe57c829e7bd36a6687dec506a292810de0e3611219f9a71a00efe";
+  version = "0.7.2.0";
+  sha256 = "a226e15372a5964af13d6e41dc59e830059efa95c83cb06b4197c2325db4c602";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

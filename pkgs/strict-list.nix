@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "strict-list";
-  version = "0.1.7.2";
-  sha256 = "7dd3dad05ea79cbdb8b4d47bb9d4cde4c210d38674ba00cc959291cddf85f9ff";
+  version = "0.1.7.4";
+  sha256 = "a18fed870fedd02400b7b651fa939fedf79afe08c7aad57169c4bcefe5bdcc4a";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
