@@ -3,8 +3,8 @@ mkDerivation {
   pname = "generic-lens-lite";
   version = "0.1";
   sha256 = "865db698880aa050641e43124ce2f3aed064e33c25d3aec85aa040e3e105e01f";
-  revision = "5";
-  editedCabalFile = "1mc7fp8z1zm4k7kl7d4abq73zfkzf19hdviq0gqzgcigyskj97zq";
+  revision = "6";
+  editedCabalFile = "0db0lbdq3iqgq42bj6q5qn4az8szwjyhq93f32zmcj1n4mrpxdj9";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

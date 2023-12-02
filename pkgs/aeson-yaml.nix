@@ -6,8 +6,8 @@ mkDerivation {
   pname = "aeson-yaml";
   version = "1.1.0.1";
   sha256 = "44b44e2ea2d3c7def8e9e90b48fb0054b7a72f2edee2da8545eeef0614a0a11b";
-  revision = "3";
-  editedCabalFile = "11srm7kkslnicqvbk728kzpy58am8rz680f7l6axn2nfh5ykx8n6";
+  revision = "4";
+  editedCabalFile = "0yz6nml8lnd94iks9m0ma7x3sjs17djqh9h6krr52ikg69c4j2cy";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

@@ -5,6 +5,8 @@ mkDerivation {
   pname = "language-c";
   version = "0.9.2";
   sha256 = "b2310d2fda16df72e9f8f63ef18bec2e09ae3aff5891dc948c3d9cb72cef6cb3";
+  revision = "1";
+  editedCabalFile = "03qfp9mf4yrdw3m6sab3np7wjaigg5p3xiiirxin8ihsnnx4rv5l";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

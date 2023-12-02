@@ -6,6 +6,8 @@ mkDerivation {
   pname = "RSA";
   version = "2.4.1";
   sha256 = "72c5d8c45ef1013e0e8aff763bb8894df0f022f28e698e33ae87bbdb33d69041";
+  revision = "2";
+  editedCabalFile = "090yzm99fmh7c6z4m9hbkasqhc3xlw104g2b6wnk77n1abd13ryj";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

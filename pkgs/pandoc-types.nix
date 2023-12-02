@@ -7,6 +7,8 @@ mkDerivation {
   pname = "pandoc-types";
   version = "1.23.1";
   sha256 = "ad0fa083d28d452b7d37a1c67a2c140137a5f29a2f52fd88e807fac20245a1c1";
+  revision = "1";
+  editedCabalFile = "02yaziq3xyz9zqr4qrqm4drlqpa3xnxmm5x0ci52c5p5dr3c3b3d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

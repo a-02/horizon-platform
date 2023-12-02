@@ -5,8 +5,8 @@ mkDerivation {
   pname = "generic-optics";
   version = "2.2.1.0";
   sha256 = "5f1c422a22277d5f0fb5fb7493789e02b13e6d5b36ecd33fd44e8796e75a87af";
-  revision = "1";
-  editedCabalFile = "13wkbs8x0clkqzi4xqin89qywpky8jkpz9cxgwsglbpcyw11jvgq";
+  revision = "2";
+  editedCabalFile = "08g71y2wdmfqfygzyazyzd7n9768dxbam329n31f2jidd7p8yk02";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

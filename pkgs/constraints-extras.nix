@@ -3,8 +3,8 @@ mkDerivation {
   pname = "constraints-extras";
   version = "0.4.0.0";
   sha256 = "f639594f340986e7647616194dec57a85490ca60e3b0f5197d011675da242ec7";
-  revision = "1";
-  editedCabalFile = "1fdabah3ilq9yf94916ml3c3rxgcgab1jhzl4mk1zgzsw78j53qf";
+  revision = "2";
+  editedCabalFile = "0q7kackfb5g9rin3lhccwsf33588f58a61zw7kbisfh6ygfpk6ww";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

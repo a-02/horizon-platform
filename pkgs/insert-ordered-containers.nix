@@ -7,6 +7,8 @@ mkDerivation {
   pname = "insert-ordered-containers";
   version = "0.2.5.3";
   sha256 = "f04f6e59795d8e362d15422a62d7c7c48312c2d97d2bc4372002a8a9b9a2436c";
+  revision = "1";
+  editedCabalFile = "12fkswr70fw2av11yy45v189r6cb8fcg0l1r7mayvwha3gls0j3n";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
