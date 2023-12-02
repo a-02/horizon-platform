@@ -6,8 +6,8 @@ mkDerivation {
   pname = "base64-bytestring-type";
   version = "1.0.1";
   sha256 = "f607d07c4aab227b4536c495fa7c07b35ddc9c2c013d385c16c02f236526780e";
-  revision = "18";
-  editedCabalFile = "0ykjgy3c7f6rmx9mj99y21lxsb81pd999pl98x0kvw0fai762hbp";
+  revision = "19";
+  editedCabalFile = "001hlnsldkiw1lr188n13j41fzfl157ba0y4qdcnzygnj5wa66ac";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

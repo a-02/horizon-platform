@@ -9,6 +9,8 @@ mkDerivation {
   pname = "postgresql-simple";
   version = "0.7.0.0";
   sha256 = "8cb81bb55100715e590d3215d0f0eb6f6c39cc070c070ab621b00cfcc5e4a13e";
+  revision = "1";
+  editedCabalFile = "0yhggx06wbg57psqa8sswf85qfzy8ndssv13vwmxj0gc1ca1zv4l";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

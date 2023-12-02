@@ -5,13 +5,7 @@ final: prev: with pkgs.haskell.lib; {
 
   Boolean = final.callPackage (./pkgs/Boolean.nix) { };
 
-  Chart = final.callPackage (./pkgs/Chart.nix) { };
-
-  Chart-diagrams = final.callPackage (./pkgs/Chart-diagrams.nix) { };
-
   Decimal = final.callPackage (./pkgs/Decimal.nix) { };
-
-  HTF = final.callPackage (./pkgs/HTF.nix) { };
 
   HTTP = final.callPackage (./pkgs/HTTP.nix) { };
 
@@ -47,8 +41,6 @@ final: prev: with pkgs.haskell.lib; {
 
   RSA = final.callPackage (./pkgs/RSA.nix) { };
 
-  SVGFonts = final.callPackage (./pkgs/SVGFonts.nix) { };
-
   Stream = final.callPackage (./pkgs/Stream.nix) { };
 
   Unique = final.callPackage (./pkgs/Unique.nix) { };
@@ -80,8 +72,6 @@ final: prev: with pkgs.haskell.lib; {
   ap-normalize = final.callPackage (./pkgs/ap-normalize.nix) { };
 
   apecs = final.callPackage (./pkgs/apecs.nix) { };
-
-  apply-refact = final.callPackage (./pkgs/apply-refact.nix) { };
 
   async-timer = final.callPackage (./pkgs/async-timer.nix) { };
 
@@ -283,18 +273,6 @@ final: prev: with pkgs.haskell.lib; {
 
   dhall-docs = final.callPackage (./pkgs/dhall-docs.nix) { };
 
-  diagrams-contrib = final.callPackage (./pkgs/diagrams-contrib.nix) { };
-
-  diagrams-core = final.callPackage (./pkgs/diagrams-core.nix) { };
-
-  diagrams-lib = final.callPackage (./pkgs/diagrams-lib.nix) { };
-
-  diagrams-postscript = final.callPackage (./pkgs/diagrams-postscript.nix) { };
-
-  diagrams-solve = final.callPackage (./pkgs/diagrams-solve.nix) { };
-
-  diagrams-svg = final.callPackage (./pkgs/diagrams-svg.nix) { };
-
   dictionary-sharing = final.callPackage (./pkgs/dictionary-sharing.nix) { };
 
   digest = final.callPackage (./pkgs/digest.nix) { };
@@ -401,13 +379,9 @@ final: prev: with pkgs.haskell.lib; {
 
   foundation = final.callPackage (./pkgs/foundation.nix) { };
 
-  fourmolu = final.callPackage (./pkgs/fourmolu.nix) { };
-
   freer-simple = final.callPackage (./pkgs/freer-simple.nix) { };
 
   friendly-time = final.callPackage (./pkgs/friendly-time.nix) { };
-
-  fsnotify = final.callPackage (./pkgs/fsnotify.nix) { };
 
   fusion-plugin-types = final.callPackage (./pkgs/fusion-plugin-types.nix) { };
 
@@ -477,14 +451,6 @@ final: prev: with pkgs.haskell.lib; {
 
   genvalidity-vector = final.callPackage (./pkgs/genvalidity-vector.nix) { };
 
-  ghc-check = final.callPackage (./pkgs/ghc-check.nix) { };
-
-  ghc-exactprint = final.callPackage (./pkgs/ghc-exactprint.nix) { };
-
-  ghc-lib-parser = final.callPackage (./pkgs/ghc-lib-parser.nix) { };
-
-  ghc-lib-parser-ex = final.callPackage (./pkgs/ghc-lib-parser-ex.nix) { };
-
   ghc-tcplugins-extra = final.callPackage (./pkgs/ghc-tcplugins-extra.nix) { };
 
   ghc-trace-events = final.callPackage (./pkgs/ghc-trace-events.nix) { };
@@ -492,14 +458,6 @@ final: prev: with pkgs.haskell.lib; {
   ghc-typelits-knownnat = final.callPackage (./pkgs/ghc-typelits-knownnat.nix) { };
 
   ghc-typelits-natnormalise = final.callPackage (./pkgs/ghc-typelits-natnormalise.nix) { };
-
-  ghcid = final.callPackage (./pkgs/ghcid.nix) { };
-
-  ghcide = final.callPackage (./pkgs/ghcide.nix) { };
-
-  ghcide-bench = final.callPackage (./pkgs/ghcide-bench.nix) { };
-
-  ghcide-test-utils = final.callPackage (./pkgs/ghcide-test-utils.nix) { };
 
   githash = final.callPackage (./pkgs/githash.nix) { };
 
@@ -518,10 +476,6 @@ final: prev: with pkgs.haskell.lib; {
   hashing = final.callPackage (./pkgs/hashing.nix) { };
 
   hashtables = final.callPackage (./pkgs/hashtables.nix) { };
-
-  haskell-language-server = final.callPackage (./pkgs/haskell-language-server.nix) { };
-
-  haskell-src = final.callPackage (./pkgs/haskell-src.nix) { };
 
   hasql = final.callPackage (./pkgs/hasql.nix) { };
 
@@ -551,69 +505,11 @@ final: prev: with pkgs.haskell.lib; {
 
   hex-text = final.callPackage (./pkgs/hex-text.nix) { };
 
-  hie-bios = final.callPackage (./pkgs/hie-bios.nix) { };
-
-  hie-compat = final.callPackage (./pkgs/hie-compat.nix) { };
-
-  hiedb = final.callPackage (./pkgs/hiedb.nix) { };
-
-  hinotify = final.callPackage (./pkgs/hinotify.nix) { };
-
   hint = final.callPackage (./pkgs/hint.nix) { };
-
-  hlint = final.callPackage (./pkgs/hlint.nix) { };
-
-  hls-alternate-number-format-plugin = final.callPackage (./pkgs/hls-alternate-number-format-plugin.nix) { };
-
-  hls-cabal-fmt-plugin = final.callPackage (./pkgs/hls-cabal-fmt-plugin.nix) { };
-
-  hls-cabal-plugin = final.callPackage (./pkgs/hls-cabal-plugin.nix) { };
-
-  hls-call-hierarchy-plugin = final.callPackage (./pkgs/hls-call-hierarchy-plugin.nix) { };
-
-  hls-change-type-signature-plugin = final.callPackage (./pkgs/hls-change-type-signature-plugin.nix) { };
-
-  hls-class-plugin = final.callPackage (./pkgs/hls-class-plugin.nix) { };
-
-  hls-code-range-plugin = final.callPackage (./pkgs/hls-code-range-plugin.nix) { };
-
-  hls-explicit-fixity-plugin = final.callPackage (./pkgs/hls-explicit-fixity-plugin.nix) { };
-
-  hls-explicit-imports-plugin = final.callPackage (./pkgs/hls-explicit-imports-plugin.nix) { };
-
-  hls-explicit-record-fields-plugin = final.callPackage (./pkgs/hls-explicit-record-fields-plugin.nix) { };
-
-  hls-fourmolu-plugin = final.callPackage (./pkgs/hls-fourmolu-plugin.nix) { };
-
-  hls-gadt-plugin = final.callPackage (./pkgs/hls-gadt-plugin.nix) { };
-
-  hls-graph = final.callPackage (./pkgs/hls-graph.nix) { };
-
-  hls-hlint-plugin = final.callPackage (./pkgs/hls-hlint-plugin.nix) { };
-
-  hls-module-name-plugin = final.callPackage (./pkgs/hls-module-name-plugin.nix) { };
-
-  hls-overloaded-record-dot-plugin = final.callPackage (./pkgs/hls-overloaded-record-dot-plugin.nix) { };
-
-  hls-plugin-api = final.callPackage (./pkgs/hls-plugin-api.nix) { };
-
-  hls-pragmas-plugin = final.callPackage (./pkgs/hls-pragmas-plugin.nix) { };
-
-  hls-qualify-imported-names-plugin = final.callPackage (./pkgs/hls-qualify-imported-names-plugin.nix) { };
-
-  hls-refactor-plugin = final.callPackage (./pkgs/hls-refactor-plugin.nix) { };
-
-  hls-retrie-plugin = final.callPackage (./pkgs/hls-retrie-plugin.nix) { };
-
-  hls-splice-plugin = final.callPackage (./pkgs/hls-splice-plugin.nix) { };
-
-  hls-test-utils = final.callPackage (./pkgs/hls-test-utils.nix) { };
 
   hoauth2 = final.callPackage (./pkgs/hoauth2.nix) { };
 
   hosc = final.callPackage (./pkgs/hosc.nix) { };
-
-  hp2pretty = final.callPackage (./pkgs/hp2pretty.nix) { };
 
   hslogger = final.callPackage (./pkgs/hslogger.nix) { };
 
@@ -695,10 +591,6 @@ final: prev: with pkgs.haskell.lib; {
 
   hxt-unicode = final.callPackage (./pkgs/hxt-unicode.nix) { };
 
-  implicit-hie = final.callPackage (./pkgs/implicit-hie.nix) { };
-
-  implicit-hie-cradle = final.callPackage (./pkgs/implicit-hie-cradle.nix) { };
-
   incipit-base = final.callPackage (./pkgs/incipit-base.nix) { };
 
   incipit-core = final.callPackage (./pkgs/incipit-core.nix) { };
@@ -775,8 +667,6 @@ final: prev: with pkgs.haskell.lib; {
 
   linear-generics = final.callPackage (./pkgs/linear-generics.nix) { };
 
-  list-t = final.callPackage (./pkgs/list-t.nix) { };
-
   list-transformer = final.callPackage (./pkgs/list-transformer.nix) { };
 
   lockfree-queue = final.callPackage (./pkgs/lockfree-queue.nix) { };
@@ -790,12 +680,6 @@ final: prev: with pkgs.haskell.lib; {
   lpeg = final.callPackage (./pkgs/lpeg.nix) { };
 
   lrucache = final.callPackage (./pkgs/lrucache.nix) { };
-
-  lsp = final.callPackage (./pkgs/lsp.nix) { };
-
-  lsp-test = final.callPackage (./pkgs/lsp-test.nix) { };
-
-  lsp-types = final.callPackage (./pkgs/lsp-types.nix) { };
 
   lua = final.callPackage (./pkgs/lua.nix) { };
 
@@ -1035,8 +919,6 @@ final: prev: with pkgs.haskell.lib; {
 
   primitive-addr = final.callPackage (./pkgs/primitive-addr.nix) { };
 
-  primitive-extras = final.callPackage (./pkgs/primitive-extras.nix) { };
-
   primitive-offset = final.callPackage (./pkgs/primitive-offset.nix) { };
 
   primitive-unlifted = final.callPackage (./pkgs/primitive-unlifted.nix) { };
@@ -1098,8 +980,6 @@ final: prev: with pkgs.haskell.lib; {
   resolv = final.callPackage (./pkgs/resolv.nix) { };
 
   resource-pool = final.callPackage (./pkgs/resource-pool.nix) { };
-
-  retrie = final.callPackage (./pkgs/retrie.nix) { };
 
   retry = final.callPackage (./pkgs/retry.nix) { };
 
@@ -1169,8 +1049,6 @@ final: prev: with pkgs.haskell.lib; {
 
   shake = final.callPackage (./pkgs/shake.nix) { };
 
-  shake-bench = final.callPackage (./pkgs/shake-bench.nix) { };
-
   shakespeare = final.callPackage (./pkgs/shakespeare.nix) { };
 
   shelly = final.callPackage (./pkgs/shelly.nix) { };
@@ -1222,10 +1100,6 @@ final: prev: with pkgs.haskell.lib; {
   statistics-linreg = final.callPackage (./pkgs/statistics-linreg.nix) { };
 
   stm-chans = final.callPackage (./pkgs/stm-chans.nix) { };
-
-  stm-containers = final.callPackage (./pkgs/stm-containers.nix) { };
-
-  stm-hamt = final.callPackage (./pkgs/stm-hamt.nix) { };
 
   streaming = final.callPackage (./pkgs/streaming.nix) { };
 

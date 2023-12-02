@@ -5,6 +5,8 @@ mkDerivation {
   pname = "JuicyPixels";
   version = "3.3.8";
   sha256 = "d3a0f6ca3515a1b3d526cbf79f2e0b0aab57f208ab216f9c26437bbcd86fb63e";
+  revision = "1";
+  editedCabalFile = "1gbmls58qdlip8nsysy1qsnf7wrw8cgss7i7vmbxxnf9ni0iawn9";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
