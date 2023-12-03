@@ -643,8 +643,6 @@ final: prev: with pkgs.haskell.lib; {
 
   monad-loops = final.callPackage (./pkgs/monad-loops.nix) { };
 
-  monad-primitive = final.callPackage (./pkgs/monad-primitive.nix) { };
-
   monad-time = final.callPackage (./pkgs/monad-time.nix) { };
 
   monad-time-effectful = final.callPackage (./pkgs/monad-time-effectful.nix) { };
@@ -658,8 +656,6 @@ final: prev: with pkgs.haskell.lib; {
   mtl-prelude = final.callPackage (./pkgs/mtl-prelude.nix) { };
 
   multiset = final.callPackage (./pkgs/multiset.nix) { };
-
-  mwc-random-monad = final.callPackage (./pkgs/mwc-random-monad.nix) { };
 
   natural-arithmetic = final.callPackage (./pkgs/natural-arithmetic.nix) { };
 

@@ -1282,10 +1282,6 @@
   , mapValue =
       "4ca8ffd53a7343d889d8496d62e5aff8fce8efb85a394809e1527e50045bf5d1"
   }
-, { mapKey = "monad-primitive"
-  , mapValue =
-      "3a8e34401540504347404208c99042d7ae9cd3e1b8588275f1d45fdfba92462d"
-  }
 , { mapKey = "monad-time"
   , mapValue =
       "334d3b13c8d0340f96be1e8841dc075096ad4baa8a74046fb930678c3d9a9700"
@@ -1313,10 +1309,6 @@
 , { mapKey = "multiset"
   , mapValue =
       "5a95a35559ac2b60fbd9ec551dc2bea4929d9bd8a829b922156ec5dbb15363af"
-  }
-, { mapKey = "mwc-random-monad"
-  , mapValue =
-      "86d67d75db643320a350e163ca634acae65eb5d3b7a19310209cac61e44ff869"
   }
 , { mapKey = "natural-arithmetic"
   , mapValue =
