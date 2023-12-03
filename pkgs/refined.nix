@@ -1,11 +1,16 @@
 { mkDerivation, QuickCheck, aeson, base, bytestring, deepseq
-, exceptions, hashable, lib, mtl, template-haskell, text
+, exceptions, fetchgit, hashable, lib, mtl, template-haskell, text
 , these-skinny
 }:
 mkDerivation {
   pname = "refined";
   version = "0.8.1";
-  sha256 = "35ae42f02aaa7dadbbdd6e9b53a5425b3a2d6bd9249235f6679a61f30e0f2735";
+  src = fetchgit {
+    url = "https://github.com/nikita-volkov/refined";
+    sha256 = "1xl5syy2bl0j50fqg6ps161jagm9h30lhcd6z1khnxnfyq473awf";
+    rev = "11296288b5e2f2b391ee721b50af3cfe7beaa790";
+    fetchSubmodules = true;
+  };
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

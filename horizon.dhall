@@ -501,7 +501,11 @@ let packages =
       , rebase = H.callHackage "rebase" "1.20.1.1"
       , ref-tf = H.callHackage "ref-tf" "0.5.0.1"
       , refact = H.callHackage "refact" "0.3.0.2"
-      , refined = H.callHackage "refined" "0.8.1"
+      , refined =
+          H.callGit
+            "https://github.com/nikita-volkov/refined"
+            "11296288b5e2f2b391ee721b50af3cfe7beaa790"
+            (None H.Subdir)
       , regex = H.callHackage "regex" "1.1.0.2"
       , regex-applicative = H.callHackage "regex-applicative" "0.3.4"
       , regex-pcre-builtin = H.callHackage "regex-pcre-builtin" "0.95.2.3.8.44"
