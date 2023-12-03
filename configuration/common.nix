@@ -34,6 +34,17 @@ final: prev: {
       ];
     });
 
+  html-entities = overrideCabal
+    prev.html-entities
+    (_:
+      {
+        patches = [
+          ./patches/html-entities-01.patch
+      ];
+    });
+
+
+
 
   libsodium = prev.callPackage ../pkgs/libsodium.nix { inherit (pkgs) libsodium; };
 
