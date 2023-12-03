@@ -6,11 +6,12 @@
 , tasty-golden, tasty-hunit, tasty-quickcheck, template-haskell
 , text, time, time-locale-compat, transformers, transformers-base
 , transformers-compat, unix, unliftio-core, unordered-containers
+, vector
 }:
 mkDerivation {
   pname = "katip";
-  version = "0.8.7.4";
-  sha256 = "5b62c9345bc20c2d9eed9643e38db0ff6fd5831ab158a3d9b10f29cfc863333e";
+  version = "0.8.8.0";
+  sha256 = "747ae5306498e9bdc3ab3ffb1fb1719c10475219f6faddfad24c1eeee4ea1d5d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -19,7 +20,7 @@ mkDerivation {
     microlens microlens-th monad-control mtl old-locale resourcet
     safe-exceptions scientific semigroups stm string-conv
     template-haskell text time transformers transformers-base
-    transformers-compat unix unliftio-core unordered-containers
+    transformers-compat unix unliftio-core unordered-containers vector
   ];
   testHaskellDepends = [
     aeson base bytestring containers directory microlens

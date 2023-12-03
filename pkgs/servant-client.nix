@@ -10,8 +10,8 @@ mkDerivation {
   pname = "servant-client";
   version = "0.20";
   sha256 = "765d30f3579b74bebfe79f59a4aacfd9dec0c02c7d355f389caa604f0ac3b276";
-  revision = "1";
-  editedCabalFile = "1bvj0rnnyqw3h70b94k9j21np5h0acxn4cla2gsv9zclhd99f4q6";
+  revision = "3";
+  editedCabalFile = "0awk9s22228mm4ff3bc165djvykihbkk6vqvfak0mz1m7dypi7fq";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

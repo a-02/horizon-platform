@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "wuss";
-  version = "2.0.1.4";
-  sha256 = "5b7dbd2e9b1676fb663833249db1c21618fe8521f88fecc5abf2975e8fcca442";
+  version = "2.0.1.5";
+  sha256 = "c20e41cfe73d38db8331a7edd7c3b2f51e47ad11c8e5de0d257379589d00b4b3";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

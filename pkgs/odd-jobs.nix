@@ -14,8 +14,8 @@ mkDerivation {
   version = "0.2.3";
   src = fetchgit {
     url = "https://github.com/saurabhnanda/odd-jobs";
-    sha256 = "1blg3aw26fjrim788ha4dsrcjvb62ilbgnclnz3knrc8y0lgil1i";
-    rev = "51c74432a5bbb1599c439fc59eef89d3adcde1a2";
+    sha256 = "12sacrjx7ng82aasbph2g5i45cfmhdb63c5ffzdzfdiw1avzcrqb";
+    rev = "411d5d0aaeeb96d4b72d0a434b9d2b53c88c2eae";
     fetchSubmodules = true;
   };
   isLibrary = true;

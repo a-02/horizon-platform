@@ -1,13 +1,12 @@
 { mkDerivation, Diff, aeson, aeson-pretty, async, base, bytestring
 , deepseq, directory, exceptions, filepath, hedgehog, http-conduit
 , lib, mmorph, mtl, network, process, resourcet, stm, tar
-, temporary, text, time, transformers, unliftio
-, unordered-containers, yaml, zlib
+, temporary, text, time, transformers, unliftio, yaml, zlib
 }:
 mkDerivation {
   pname = "hedgehog-extras";
-  version = "0.4.7.1";
-  sha256 = "3d2954651c33f07ae9a4d13fb6a3bb55db99b9493f7f2dccce9516e8eaad360e";
+  version = "0.5.0.0";
+  sha256 = "03e87bcbad70c8694c15dc5701e8af9bd18e18fcda8d67cb8dced99bebbb221e";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -15,7 +14,7 @@ mkDerivation {
     aeson aeson-pretty async base bytestring deepseq Diff directory
     exceptions filepath hedgehog http-conduit mmorph mtl network
     process resourcet stm tar temporary text time transformers unliftio
-    unordered-containers yaml zlib
+    yaml zlib
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

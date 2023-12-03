@@ -9,7 +9,7 @@
 
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
-    horizon-core.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-core?ref=lts/ghc-9.4.x";
+    horizon-advance.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-advance?ref=lts/ghc-9.6.x";
     horizon-hoogle.url = "git+https://gitlab.horizon-haskell.net/nix/horizon-hoogle";
     lint-utils.url = "git+https://gitlab.nixica.dev/nix/lint-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
@@ -19,7 +19,7 @@
     inputs@
     { self
     , flake-parts
-    , horizon-core
+    , horizon-advance
     , lint-utils
     , nixpkgs
     , ...
@@ -48,7 +48,7 @@
             (import (./configuration + "/${system}.nix") { inherit pkgs haskellLib; })
           ];
 
-          legacyPackages = horizon-core.legacyPackages.${system}.extend overrides;
+          legacyPackages = horizon-advance.legacyPackages.${system}.extend overrides;
 
           packages = filterAttrs (_: isDerivation) legacyPackages;
 

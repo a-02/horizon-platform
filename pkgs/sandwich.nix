@@ -5,11 +5,12 @@
 , optparse-applicative, pretty-show, process, safe, safe-exceptions
 , stm, string-interpolate, template-haskell, text, time
 , transformers, transformers-base, unix, unliftio-core, vector, vty
+, vty-crossplatform
 }:
 mkDerivation {
   pname = "sandwich";
-  version = "0.1.5.2";
-  sha256 = "214f74ecbed388d68a268969e28b7083a0f34568ccde52b827db59b4b1b12a77";
+  version = "0.2.1.0";
+  sha256 = "c4c2048f67688956991554e15aaab219c74eeab933981ed5a03ac2d583f58a03";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;
@@ -19,7 +20,7 @@ mkDerivation {
     lifted-async microlens microlens-th monad-control monad-logger mtl
     optparse-applicative pretty-show process safe safe-exceptions stm
     string-interpolate template-haskell text time transformers
-    transformers-base unix unliftio-core vector vty
+    transformers-base unix unliftio-core vector vty vty-crossplatform
   ];
   executableHaskellDepends = [
     aeson ansi-terminal async base brick bytestring colour containers
@@ -27,7 +28,7 @@ mkDerivation {
     lifted-async microlens microlens-th monad-control monad-logger mtl
     optparse-applicative pretty-show process safe safe-exceptions stm
     string-interpolate template-haskell text time transformers
-    transformers-base unix unliftio-core vector vty
+    transformers-base unix unliftio-core vector vty vty-crossplatform
   ];
   testHaskellDepends = [
     aeson ansi-terminal async base brick bytestring colour containers
@@ -35,7 +36,7 @@ mkDerivation {
     lifted-async microlens microlens-th monad-control monad-logger mtl
     optparse-applicative pretty-show process safe safe-exceptions stm
     string-interpolate template-haskell text time transformers
-    transformers-base unix unliftio-core vector vty
+    transformers-base unix unliftio-core vector vty vty-crossplatform
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

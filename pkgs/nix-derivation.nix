@@ -3,10 +3,8 @@
 }:
 mkDerivation {
   pname = "nix-derivation";
-  version = "1.1.2";
-  sha256 = "c7ff162f245021d7ba8ea24b993b1df2241744f6e0a78b0783092182fbea8808";
-  revision = "4";
-  editedCabalFile = "1bvrnaw0qpiaxdnwvdf7w1ybds4b5c5z8wfizla5pby2lnf8cv0x";
+  version = "1.1.3";
+  sha256 = "ab4dd7540c5f39abcf0486e35441a7115f36d76611cc2278db8b43f9c783b985";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

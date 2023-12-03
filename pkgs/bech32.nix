@@ -7,6 +7,8 @@ mkDerivation {
   pname = "bech32";
   version = "1.1.4";
   sha256 = "48553d2c017d7dec3450cca628ed09018e345bdb8b368661c0afc05658139a38";
+  revision = "1";
+  editedCabalFile = "1w86km0kq03vzp7j58sva1a9xlspbkh2zycl3c8r34jjpbqxzyw9";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

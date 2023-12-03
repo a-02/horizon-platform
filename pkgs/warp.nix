@@ -8,8 +8,8 @@
 }:
 mkDerivation {
   pname = "warp";
-  version = "3.3.30";
-  sha256 = "ef2e5a25284d712ecb23ce34e222dc6bf95496bb931da9d508801f9bd8b6aec4";
+  version = "3.3.31";
+  sha256 = "7ca9c7df2ba44ffe225df63866f32b14b70ea2c045ff9301bac982ce377ec38d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

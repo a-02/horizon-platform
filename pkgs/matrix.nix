@@ -3,10 +3,8 @@
 }:
 mkDerivation {
   pname = "matrix";
-  version = "0.3.6.1";
-  sha256 = "fa976ca3bc98149ce59b7ae37869eda615562711e1fef90889f6e0c4f2093b2c";
-  revision = "1";
-  editedCabalFile = "0iy0gdgg68ldhgm4lzvzl5pmzflx0r4brdbdkq75rkarm7cigawn";
+  version = "0.3.6.3";
+  sha256 = "0c8317398bdeae95fec515a7b6ccc957563dfed97e9dd1c5391333226d42f03f";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -23,6 +21,6 @@ mkDerivation {
   doBenchmark = false;
   hyperlinkSource = false;
   description = "A native implementation of matrix operations";
-  license = lib.licenses.bsd3;
+  license = lib.licenses.mit;
   broken = false;
 }

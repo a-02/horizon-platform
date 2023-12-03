@@ -1,17 +1,18 @@
 { mkDerivation, base, containers, directory, exceptions, filepath
-, fusion-plugin-types, ghc-prim, heaps, lib, monad-control
-, template-haskell, transformers
+, fusion-plugin-types, ghc-bignum, ghc-prim, heaps, lib
+, monad-control, template-haskell, transformers, unix
 }:
 mkDerivation {
   pname = "streamly-core";
-  version = "0.1.0";
-  sha256 = "b4c52f3f192b4f259213231742df0ef12e7d504225afdfca7d1f48fec4734e2b";
+  version = "0.2.0";
+  sha256 = "9fe280b777b7b38138d9bede92c792dc7b7c23458978305663808337d7332424";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     base containers directory exceptions filepath fusion-plugin-types
-    ghc-prim heaps monad-control template-haskell transformers
+    ghc-bignum ghc-prim heaps monad-control template-haskell
+    transformers unix
   ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;

@@ -9,8 +9,8 @@ mkDerivation {
   pname = "servant-auth-server";
   version = "0.4.8.0";
   sha256 = "4e095626036c8e953dd7d5e2b1ef3424935ea2ec35a8dee74dc168296af23637";
-  revision = "1";
-  editedCabalFile = "0dff8ycslxv5zy74wiph27sscd2p3zkq09j043yy8mnaypmpn4xr";
+  revision = "4";
+  editedCabalFile = "1cib954pc6x4qawyizxlr9qg9838rahyihdiv4qiz09i19m8n6zj";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
