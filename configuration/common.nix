@@ -17,6 +17,17 @@ final: prev: {
 
   libsodium = prev.callPackage ../pkgs/libsodium.nix { inherit (pkgs) libsodium; };
 
+  linear-generics = overrideCabal
+    prev.linear-generics
+    (_:
+      {
+        patches = [
+          ./patches/linear-generics-01.patch
+          ./patches/linear-generics-02.patch
+      ];
+    });
+
+
   saltine = addPkgconfigDepend prev.saltine pkgs.libsodium;
 
   sandwich = null;
