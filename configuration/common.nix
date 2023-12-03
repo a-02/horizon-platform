@@ -15,6 +15,17 @@ final: prev: {
       ];
     });
 
+  hasql-transaction = overrideCabal
+    prev.hasql-transaction
+    (_:
+      {
+        patches = [
+          ./patches/hasql-transaction-01.patch
+          ./patches/hasql-transaction-02.patch
+      ];
+    });
+
+
   libsodium = prev.callPackage ../pkgs/libsodium.nix { inherit (pkgs) libsodium; };
 
   linear-generics = overrideCabal
