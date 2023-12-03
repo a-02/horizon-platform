@@ -25,6 +25,15 @@ final: prev: {
       ];
     });
 
+  headed-megaparsec = overrideCabal
+    prev.headed-megaparsec
+    (_:
+      {
+        patches = [
+          ./patches/headed-megaparsec-01.patch
+      ];
+    });
+
 
   libsodium = prev.callPackage ../pkgs/libsodium.nix { inherit (pkgs) libsodium; };
 
