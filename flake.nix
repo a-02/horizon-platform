@@ -9,7 +9,7 @@
 
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
-    horizon-advance.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-advance?ref=lts/ghc-9.6.x";
+    horizon-advance.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-advance";
     horizon-hoogle.url = "git+https://gitlab.horizon-haskell.net/nix/horizon-hoogle";
     lint-utils.url = "git+https://gitlab.nixica.dev/nix/lint-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";

@@ -1,13 +1,16 @@
-{ mkDerivation, HUnit, base, bytestring, ghc-prim, lib
+{ mkDerivation, HUnit, base, bytestring, fetchgit, ghc-prim, lib
 , system-cxx-std-lib, test-framework, test-framework-hunit
 , test-framework-quickcheck2, text
 }:
 mkDerivation {
   pname = "double-conversion";
   version = "2.0.4.2";
-  sha256 = "9ab8bc1f0fa7de356c07b23d7d684b6c3ddfa542fd56ea422fb5fd17000aec64";
-  revision = "2";
-  editedCabalFile = "1mpnx4m2pg5crfz9k8wamh5mgsha0np3ynnllrmglmwh54gvfjj3";
+  src = fetchgit {
+    url = "https://github.com/haskell/double-conversion/";
+    sha256 = "15060q09kjlk62lq4labmc84f2m3df1ylf21p7r975x13wj1xy3f";
+    rev = "1320d0a4df745c9ecb5fada9a681b3842cf1f47c";
+    fetchSubmodules = true;
+  };
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -27,6 +30,6 @@ mkDerivation {
   hyperlinkSource = false;
   homepage = "https://github.com/haskell/double-conversion";
   description = "Fast conversion between single and double precision floating point and text";
-  license = lib.licenses.bsd3;
+  license = lib.licenses.bsd2;
   broken = false;
 }

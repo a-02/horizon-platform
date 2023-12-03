@@ -1,0 +1,507 @@
+commit d4bcbb5bdb361b828717962bab085f95b5feb60d
+Author: Nikita Volkov <nikita.y.volkov@mail.ru>
+Date:   Wed Nov 23 20:22:52 2022 +0300
+
+    Format and isolate config
+
+diff --git a/conflicts-test/Main.hs b/conflicts-test/Main.hs
+index 4ac6101..b12fbb6 100644
+--- a/conflicts-test/Main.hs
++++ b/conflicts-test/Main.hs
+@@ -1,14 +1,13 @@
+ module Main where
+ 
+-import Prelude
++import qualified Control.Concurrent.Async as F
+ import qualified Hasql.Connection as A
+ import qualified Hasql.Session as B
+ import qualified Hasql.Transaction as C
+ import qualified Hasql.Transaction.Sessions as G
+ import qualified Main.Statements as D
+ import qualified Main.Transactions as E
+-import qualified Control.Concurrent.Async as F
+-
++import Prelude
+ 
+ main =
+   bracket acquire release use
+@@ -18,8 +17,8 @@ main =
+       where
+         acquire =
+           join $
+-          fmap (either (fail . show) return) $
+-          A.acquire connectionSettings
++            fmap (either (fail . show) return) $
++              A.acquire connectionSettings
+           where
+             connectionSettings =
+               A.settings "localhost" 5432 "postgres" "" "postgres"
+@@ -42,15 +41,13 @@ main =
+         tests =
+           [readAndWriteTransactionsTest, transactionsTest, transactionAndQueryTest]
+ 
+-
+ session connection session =
+-  B.run session connection >>=
+-  either (fail . show) return
++  B.run session connection
++    >>= either (fail . show) return
+ 
+ transaction connection transaction =
+   session connection (G.transaction G.RepeatableRead G.Write transaction)
+ 
+-
+ type Test =
+   A.Connection -> A.Connection -> IO Bool
+ 
+diff --git a/conflicts-test/Main/Statements.hs b/conflicts-test/Main/Statements.hs
+index 406675c..d7c0b6f 100644
+--- a/conflicts-test/Main/Statements.hs
++++ b/conflicts-test/Main/Statements.hs
+@@ -1,11 +1,10 @@
+ module Main.Statements where
+ 
+-import Prelude
+ import Contravariant.Extras
+-import Hasql.Statement
+-import qualified Hasql.Encoders as E
+ import qualified Hasql.Decoders as D
+-
++import qualified Hasql.Encoders as E
++import Hasql.Statement
++import Prelude
+ 
+ createAccountTable :: Statement () ()
+ createAccountTable =
+@@ -45,4 +44,3 @@ getBalance =
+     ((E.param . E.nonNullable) E.int8)
+     (D.rowMaybe ((D.column . D.nonNullable) D.numeric))
+     True
+-
+diff --git a/conflicts-test/Main/Transactions.hs b/conflicts-test/Main/Transactions.hs
+index b58ada3..8e0001c 100644
+--- a/conflicts-test/Main/Transactions.hs
++++ b/conflicts-test/Main/Transactions.hs
+@@ -1,9 +1,8 @@
+ module Main.Transactions where
+ 
+-import Prelude
+ import Hasql.Transaction
+ import qualified Main.Statements as A
+-
++import Prelude
+ 
+ createSchema :: Transaction ()
+ createSchema =
+@@ -20,10 +19,8 @@ transfer id1 id2 amount =
+   do
+     success <- statement (id1, amount) A.modifyBalance
+     if success
+-      then
+-        statement (id2, negate amount) A.modifyBalance
+-      else
+-        return False
++      then statement (id2, negate amount) A.modifyBalance
++      else return False
+ 
+ transferTimes :: Int -> Int64 -> Int64 -> Scientific -> Transaction ()
+ transferTimes times id1 id2 amount =
+diff --git a/hasql-transaction.cabal b/hasql-transaction.cabal
+index 92bd97b..8d4fc1c 100644
+--- a/hasql-transaction.cabal
++++ b/hasql-transaction.cabal
+@@ -24,8 +24,8 @@ library
+     Hasql.Transaction
+     Hasql.Transaction.Sessions
+   other-modules:
++    Hasql.Transaction.Config
+     Hasql.Transaction.Private.Prelude
+-    Hasql.Transaction.Private.Model
+     Hasql.Transaction.Private.SQL
+     Hasql.Transaction.Private.Statements
+     Hasql.Transaction.Private.Sessions
+diff --git a/library/Hasql/Transaction.hs b/library/Hasql/Transaction.hs
+index ad5d4e4..b6bc424 100644
+--- a/library/Hasql/Transaction.hs
++++ b/library/Hasql/Transaction.hs
+@@ -1,14 +1,13 @@
+ -- |
+ -- An API for declaration of transactions.
+ module Hasql.Transaction
+-(
+-  -- * Transaction monad
+-  Transaction,
+-  condemn,
+-  sql,
+-  statement,
+-)
++  ( -- * Transaction monad
++    Transaction,
++    condemn,
++    sql,
++    statement,
++  )
+ where
+ 
++import Hasql.Transaction.Config
+ import Hasql.Transaction.Private.Transaction
+-import Hasql.Transaction.Private.Model
+diff --git a/library/Hasql/Transaction/Private/Model.hs b/library/Hasql/Transaction/Config.hs
+similarity index 52%
+rename from library/Hasql/Transaction/Private/Model.hs
+rename to library/Hasql/Transaction/Config.hs
+index 484ea20..fac010e 100644
+--- a/library/Hasql/Transaction/Private/Model.hs
++++ b/library/Hasql/Transaction/Config.hs
+@@ -1,25 +1,21 @@
+-module Hasql.Transaction.Private.Model
+-where
++module Hasql.Transaction.Config where
+ 
+ import Hasql.Transaction.Private.Prelude
+ 
+--- |
+---
+-data Mode =
+-  -- |
+-  -- Read-only. No writes possible.
+-  Read |
+-  -- |
+-  -- Write and commit.
+-  Write
++data Mode
++  = -- |
++    -- Read-only. No writes possible.
++    Read
++  | -- |
++    -- Write and commit.
++    Write
+   deriving (Show, Eq, Ord, Enum, Bounded)
+ 
+ -- |
+ -- For reference see
+ -- <http://www.postgresql.org/docs/current/static/transaction-iso.html the Postgres' documentation>.
+---
+-data IsolationLevel =
+-  ReadCommitted |
+-  RepeatableRead |
+-  Serializable
++data IsolationLevel
++  = ReadCommitted
++  | RepeatableRead
++  | Serializable
+   deriving (Show, Eq, Ord, Enum, Bounded)
+diff --git a/library/Hasql/Transaction/Private/Prelude.hs b/library/Hasql/Transaction/Private/Prelude.hs
+index 9c54666..79bf394 100644
+--- a/library/Hasql/Transaction/Private/Prelude.hs
++++ b/library/Hasql/Transaction/Private/Prelude.hs
+@@ -1,25 +1,28 @@
+ module Hasql.Transaction.Private.Prelude
+-( 
+-  module Exports,
+-  tryError,
+-)
++  ( module Exports,
++    tryError,
++  )
+ where
+ 
+-
+--- base
+--------------------------
++import Contravariant.Extras as Exports
+ import Control.Applicative as Exports
+ import Control.Arrow as Exports
+ import Control.Category as Exports
+ import Control.Concurrent as Exports
+ import Control.Exception as Exports
+-import Control.Monad as Exports hiding (join, fail, mapM_, sequence_, forM_, msum, mapM, sequence, forM)
+-import Control.Monad.IO.Class as Exports
++import Control.Monad as Exports hiding (fail, forM, forM_, join, mapM, mapM_, msum, sequence, sequence_)
++import Control.Monad.Error.Class as Exports (MonadError (..))
+ import Control.Monad.Fail as Exports
+ import Control.Monad.Fix as Exports hiding (fix)
++import Control.Monad.IO.Class as Exports
+ import Control.Monad.ST as Exports
++import Control.Monad.Trans.Class as Exports
++import Control.Monad.Trans.Maybe as Exports hiding (liftListen, liftPass)
++import Control.Monad.Trans.Reader as Exports hiding (liftCallCC, liftCatch)
++import Control.Monad.Trans.State.Strict as Exports hiding (liftCallCC, liftCatch, liftListen, liftPass)
+ import Data.Bits as Exports
+ import Data.Bool as Exports
++import Data.ByteString as Exports (ByteString)
+ import Data.Char as Exports
+ import Data.Coerce as Exports
+ import Data.Complex as Exports
+@@ -30,18 +33,20 @@ import Data.Fixed as Exports
+ import Data.Foldable as Exports hiding (toList)
+ import Data.Function as Exports hiding (id, (.))
+ import Data.Functor as Exports
++import Data.Functor.Contravariant as Exports
++import Data.Functor.Contravariant.Divisible as Exports
+ import Data.Functor.Identity as Exports
+-import Data.Int as Exports
+ import Data.IORef as Exports
++import Data.Int as Exports
+ import Data.Ix as Exports
+-import Data.List as Exports hiding (sortOn, isSubsequenceOf, uncons, concat, foldr, foldl1, maximum, minimum, product, sum, all, and, any, concatMap, elem, foldl, foldr1, notElem, or, find, maximumBy, minimumBy, mapAccumL, mapAccumR, foldl')
++import Data.List as Exports hiding (all, and, any, concat, concatMap, elem, find, foldl, foldl', foldl1, foldr, foldr1, isSubsequenceOf, mapAccumL, mapAccumR, maximum, maximumBy, minimum, minimumBy, notElem, or, product, sortOn, sum, uncons)
+ import Data.Maybe as Exports
+-import Data.Monoid as Exports hiding (Last(..), First(..), (<>), Alt)
++import Data.Monoid as Exports hiding (Alt, First (..), Last (..), (<>))
+ import Data.Ord as Exports
+ import Data.Proxy as Exports
+ import Data.Ratio as Exports
+-import Data.Semigroup as Exports
+ import Data.STRef as Exports
++import Data.Semigroup as Exports
+ import Data.String as Exports
+ import Data.Traversable as Exports
+ import Data.Tuple as Exports
+@@ -52,13 +57,12 @@ import Debug.Trace as Exports
+ import Foreign.ForeignPtr as Exports
+ import Foreign.Ptr as Exports
+ import Foreign.StablePtr as Exports
+-import Foreign.Storable as Exports hiding (sizeOf, alignment)
+-import GHC.Conc as Exports hiding (withMVar, threadWaitWriteSTM, threadWaitWrite, threadWaitReadSTM, threadWaitRead)
+-import GHC.Exts as Exports (lazy, inline, sortWith, groupWith, IsList(..))
++import Foreign.Storable as Exports hiding (alignment, sizeOf)
++import GHC.Conc as Exports hiding (threadWaitRead, threadWaitReadSTM, threadWaitWrite, threadWaitWriteSTM, withMVar)
++import GHC.Exts as Exports (IsList (..), groupWith, inline, lazy, sortWith)
+ import GHC.Generics as Exports (Generic, Generic1)
+ import GHC.IO.Exception as Exports
+ import Numeric as Exports
+-import Prelude as Exports hiding (fail, concat, foldr, mapM_, sequence_, foldl1, maximum, minimum, product, sum, all, and, any, concatMap, elem, foldl, foldr1, notElem, or, mapM, sequence, id, (.))
+ import System.Environment as Exports
+ import System.Exit as Exports
+ import System.IO as Exports
+@@ -68,35 +72,11 @@ import System.Mem as Exports
+ import System.Mem.StableName as Exports
+ import System.Timeout as Exports
+ import Text.ParserCombinators.ReadP as Exports (ReadP, ReadS, readP_to_S, readS_to_P)
+-import Text.ParserCombinators.ReadPrec as Exports (ReadPrec, readPrec_to_P, readP_to_Prec, readPrec_to_S, readS_to_Prec)
+-import Text.Printf as Exports (printf, hPrintf)
+-import Text.Read as Exports (Read(..), readMaybe, readEither)
++import Text.ParserCombinators.ReadPrec as Exports (ReadPrec, readP_to_Prec, readPrec_to_P, readPrec_to_S, readS_to_Prec)
++import Text.Printf as Exports (hPrintf, printf)
++import Text.Read as Exports (Read (..), readEither, readMaybe)
+ import Unsafe.Coerce as Exports
+-
+--- transformers
+--------------------------
+-import Control.Monad.IO.Class as Exports
+-import Control.Monad.Trans.Class as Exports
+-import Control.Monad.Trans.Maybe as Exports hiding (liftListen, liftPass)
+-import Control.Monad.Trans.Reader as Exports hiding (liftCallCC, liftCatch)
+-import Control.Monad.Trans.State.Strict as Exports hiding (liftCallCC, liftCatch, liftListen, liftPass)
+-
+--- mtl
+--------------------------
+-import Control.Monad.Error.Class as Exports (MonadError (..))
+-
+--- contravariant
+--------------------------
+-import Data.Functor.Contravariant as Exports
+-import Data.Functor.Contravariant.Divisible as Exports
+-
+--- contravariant-extras
+--------------------------
+-import Contravariant.Extras as Exports
+-
+--- bytestring
+--------------------------
+-import Data.ByteString as Exports (ByteString)
++import Prelude as Exports hiding (all, and, any, concat, concatMap, elem, fail, foldl, foldl1, foldr, foldr1, id, mapM, mapM_, maximum, minimum, notElem, or, product, sequence, sequence_, sum, (.))
+ 
+ tryError :: MonadError e m => m a -> m (Either e a)
+ tryError m =
+diff --git a/library/Hasql/Transaction/Private/SQL.hs b/library/Hasql/Transaction/Private/SQL.hs
+index 5ac4902..5776d39 100644
+--- a/library/Hasql/Transaction/Private/SQL.hs
++++ b/library/Hasql/Transaction/Private/SQL.hs
+@@ -1,10 +1,8 @@
+-module Hasql.Transaction.Private.SQL
+-where
++module Hasql.Transaction.Private.SQL where
+ 
+-import Hasql.Transaction.Private.Prelude
+-import Hasql.Transaction.Private.Model
+ import qualified ByteString.TreeBuilder as D
+-
++import Hasql.Transaction.Config
++import Hasql.Transaction.Private.Prelude
+ 
+ beginTransaction :: IsolationLevel -> Mode -> ByteString
+ beginTransaction isolation mode =
+@@ -26,4 +24,4 @@ beginTransaction isolation mode =
+ declareCursor :: ByteString -> ByteString -> ByteString
+ declareCursor name sql =
+   D.toByteString $
+-  "DECLARE " <> D.byteString name <> " NO SCROLL CURSOR FOR " <> D.byteString sql
++    "DECLARE " <> D.byteString name <> " NO SCROLL CURSOR FOR " <> D.byteString sql
+diff --git a/library/Hasql/Transaction/Private/Sessions.hs b/library/Hasql/Transaction/Private/Sessions.hs
+index 0161486..5f4fcc7 100644
+--- a/library/Hasql/Transaction/Private/Sessions.hs
++++ b/library/Hasql/Transaction/Private/Sessions.hs
+@@ -1,12 +1,10 @@
+-module Hasql.Transaction.Private.Sessions
+-where
++module Hasql.Transaction.Private.Sessions where
+ 
+-import Hasql.Transaction.Private.Prelude
+-import Hasql.Transaction.Private.Model
+ import Hasql.Session
++import Hasql.Transaction.Config
++import Hasql.Transaction.Private.Prelude
+ import qualified Hasql.Transaction.Private.Statements as Statements
+ 
+-
+ {-
+ We may want to
+ do one transaction retry in case of the 23505 error, and fail if an identical
+@@ -14,7 +12,7 @@ error is seen.
+ -}
+ inRetryingTransaction :: IsolationLevel -> Mode -> Session (a, Bool) -> Bool -> Session a
+ inRetryingTransaction level mode session preparable =
+-  fix $ \ retry -> do
++  fix $ \retry -> do
+     attemptRes <- tryTransaction level mode session preparable
+     case attemptRes of
+       Just a -> return a
+@@ -22,21 +20,21 @@ inRetryingTransaction level mode session preparable =
+ 
+ tryTransaction :: IsolationLevel -> Mode -> Session (a, Bool) -> Bool -> Session (Maybe a)
+ tryTransaction level mode body preparable = do
+-
+   statement () (Statements.beginTransaction level mode preparable)
+ 
+-  bodyRes <- catchError (fmap Just body) $ \ error -> do
++  bodyRes <- catchError (fmap Just body) $ \error -> do
+     statement () (Statements.abortTransaction preparable)
+     handleTransactionError error $ return Nothing
+ 
+   case bodyRes of
+-    Just (res, commit) -> catchError (commitOrAbort commit preparable $> Just res) $ \ error -> do
++    Just (res, commit) -> catchError (commitOrAbort commit preparable $> Just res) $ \error -> do
+       handleTransactionError error $ return Nothing
+     Nothing -> return Nothing
+ 
+-commitOrAbort commit preparable = if commit
+-  then statement () (Statements.commitTransaction preparable)
+-  else statement () (Statements.abortTransaction preparable)
++commitOrAbort commit preparable =
++  if commit
++    then statement () (Statements.commitTransaction preparable)
++    else statement () (Statements.abortTransaction preparable)
+ 
+ handleTransactionError error onTransactionError = case error of
+   QueryError _ _ (ResultError (ServerError "40001" _ _ _ _)) -> onTransactionError
+diff --git a/library/Hasql/Transaction/Private/Statements.hs b/library/Hasql/Transaction/Private/Statements.hs
+index 2345629..7eb43c6 100644
+--- a/library/Hasql/Transaction/Private/Statements.hs
++++ b/library/Hasql/Transaction/Private/Statements.hs
+@@ -1,16 +1,13 @@
+-module Hasql.Transaction.Private.Statements
+-where
++module Hasql.Transaction.Private.Statements where
+ 
+-import Hasql.Transaction.Private.Prelude
+-import Hasql.Transaction.Private.Model
+-import qualified Hasql.Statement as A
+-import qualified Hasql.Encoders as B
+ import qualified Hasql.Decoders as C
++import qualified Hasql.Encoders as B
++import qualified Hasql.Statement as A
++import Hasql.Transaction.Config
++import Hasql.Transaction.Private.Prelude
+ import qualified Hasql.Transaction.Private.SQL as D
+ 
+-
+ -- * Transactions
+--------------------------
+ 
+ beginTransaction :: IsolationLevel -> Mode -> Bool -> A.Statement () ()
+ beginTransaction isolation mode preparable =
+@@ -24,9 +21,7 @@ abortTransaction :: Bool -> A.Statement () ()
+ abortTransaction preparable =
+   A.Statement "ABORT" B.noParams C.noResult preparable
+ 
+-
+ -- * Streaming
+--------------------------
+ 
+ declareCursor :: ByteString -> ByteString -> B.Params a -> A.Statement a ()
+ declareCursor name sql encoder =
+diff --git a/library/Hasql/Transaction/Private/Transaction.hs b/library/Hasql/Transaction/Private/Transaction.hs
+index 672a7e6..d36a9da 100644
+--- a/library/Hasql/Transaction/Private/Transaction.hs
++++ b/library/Hasql/Transaction/Private/Transaction.hs
+@@ -1,13 +1,11 @@
+-module Hasql.Transaction.Private.Transaction
+-where
++module Hasql.Transaction.Private.Transaction where
+ 
+-import Hasql.Transaction.Private.Prelude
+-import Hasql.Transaction.Private.Model
+-import qualified Hasql.Statement as A
+ import qualified Hasql.Session as B
+-import qualified Hasql.Transaction.Private.Statements as C
++import qualified Hasql.Statement as A
++import Hasql.Transaction.Config
++import Hasql.Transaction.Private.Prelude
+ import qualified Hasql.Transaction.Private.Sessions as D
+-
++import qualified Hasql.Transaction.Private.Statements as C
+ 
+ -- |
+ -- A composable abstraction over the retryable transactions.
+@@ -15,8 +13,8 @@ import qualified Hasql.Transaction.Private.Sessions as D
+ -- Executes multiple queries under the specified mode and isolation level,
+ -- while automatically retrying the transaction in case of conflicts.
+ -- Thus this abstraction closely reproduces the behaviour of 'STM'.
+-newtype Transaction a =
+-  Transaction (StateT Bool B.Session a)
++newtype Transaction a
++  = Transaction (StateT Bool B.Session a)
+   deriving (Functor, Applicative, Monad)
+ 
+ instance Semigroup a => Semigroup (Transaction a) where
+diff --git a/library/Hasql/Transaction/Sessions.hs b/library/Hasql/Transaction/Sessions.hs
+index 0cde4f2..018ec31 100644
+--- a/library/Hasql/Transaction/Sessions.hs
++++ b/library/Hasql/Transaction/Sessions.hs
+@@ -1,18 +1,17 @@
+ module Hasql.Transaction.Sessions
+-(
+-  transaction,
+-  unpreparedTransaction,
+-  -- * Transaction settings
+-  C.Mode(..),
+-  C.IsolationLevel(..),
+-)
++  ( transaction,
++    unpreparedTransaction,
++
++    -- * Transaction settings
++    C.Mode (..),
++    C.IsolationLevel (..),
++  )
+ where
+ 
+ import Data.Bool
+-import qualified Hasql.Transaction.Private.Transaction as A
+ import qualified Hasql.Session as B
+-import qualified Hasql.Transaction.Private.Model as C
+-
++import qualified Hasql.Transaction.Config as C
++import qualified Hasql.Transaction.Private.Transaction as A
+ 
+ -- |
+ -- Execute the transaction using the provided isolation level and mode.
+@@ -29,4 +28,4 @@ transaction isolation mode transaction =
+ {-# INLINE unpreparedTransaction #-}
+ unpreparedTransaction :: C.IsolationLevel -> C.Mode -> A.Transaction a -> B.Session a
+ unpreparedTransaction isolation mode transaction =
+-  A.run transaction isolation mode False
+\ No newline at end of file
++  A.run transaction isolation mode False

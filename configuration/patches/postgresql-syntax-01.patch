@@ -1,0 +1,32 @@
+commit ece56da3079d80e69fece7e05a5540fd4858a98c
+Author: Daniel Firth <dan.firth@homotopic.tech>
+Date:   Sun Dec 3 09:22:44 2023 +0000
+
+    hide unzip and unsnoc
+
+diff --git a/library/PostgresqlSyntax/Extras/NonEmpty.hs b/library/PostgresqlSyntax/Extras/NonEmpty.hs
+index 7d9ecd1..d0cd890 100644
+--- a/library/PostgresqlSyntax/Extras/NonEmpty.hs
++++ b/library/PostgresqlSyntax/Extras/NonEmpty.hs
+@@ -1,7 +1,7 @@
+ module PostgresqlSyntax.Extras.NonEmpty where
+ 
+ import Data.List.NonEmpty
+-import PostgresqlSyntax.Prelude hiding (cons, fromList, head, init, last, reverse, tail, uncons)
++import PostgresqlSyntax.Prelude hiding (cons, fromList, head, init, last, reverse, tail, uncons, unsnoc)
+ 
+ -- |
+ -- >>> intersperseFoldMap ", " id (fromList ["a"])
+diff --git a/library/PostgresqlSyntax/Prelude.hs b/library/PostgresqlSyntax/Prelude.hs
+index c16ee7a..9fe2596 100644
+--- a/library/PostgresqlSyntax/Prelude.hs
++++ b/library/PostgresqlSyntax/Prelude.hs
+@@ -29,7 +29,7 @@ import Data.Either as Exports
+ import Data.Fixed as Exports
+ import Data.Foldable as Exports
+ import Data.Function as Exports hiding (id, (.))
+-import Data.Functor as Exports
++import Data.Functor as Exports hiding (unzip)
+ import Data.Functor.Identity as Exports
+ import Data.HashMap.Strict as Exports (HashMap)
+ import Data.HashSet as Exports (HashSet)

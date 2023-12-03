@@ -1,0 +1,19 @@
+commit e724581275f1dd3a673ccbff1b32f458b5b4589f
+Author: Daniel Firth <dan.firth@homotopic.tech>
+Date:   Sun Dec 3 09:31:56 2023 +0000
+
+    hide unzip
+
+diff --git a/library/Hasql/TH/Prelude.hs b/library/Hasql/TH/Prelude.hs
+index 60d73db..d01d39e 100644
+--- a/library/Hasql/TH/Prelude.hs
++++ b/library/Hasql/TH/Prelude.hs
+@@ -29,7 +29,7 @@ import Data.Either as Exports
+ import Data.Fixed as Exports
+ import Data.Foldable as Exports
+ import Data.Function as Exports hiding (id, (.))
+-import Data.Functor as Exports
++import Data.Functor as Exports hiding (unzip)
+ import Data.Functor.Contravariant as Exports
+ import Data.Functor.Contravariant.Divisible as Exports
+ import Data.Functor.Identity as Exports

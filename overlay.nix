@@ -443,8 +443,6 @@ final: prev: with pkgs.haskell.lib; {
 
   hex-text = final.callPackage (./pkgs/hex-text.nix) { };
 
-  hint = final.callPackage (./pkgs/hint.nix) { };
-
   hoauth2 = final.callPackage (./pkgs/hoauth2.nix) { };
 
   hosc = final.callPackage (./pkgs/hosc.nix) { };
@@ -564,10 +562,6 @@ final: prev: with pkgs.haskell.lib; {
   lazy-search = final.callPackage (./pkgs/lazy-search.nix) { };
 
   lazysmallcheck = final.callPackage (./pkgs/lazysmallcheck.nix) { };
-
-  lens-family = final.callPackage (./pkgs/lens-family.nix) { };
-
-  lens-family-th = final.callPackage (./pkgs/lens-family-th.nix) { };
 
   libsodium = final.callPackage (./pkgs/libsodium.nix) { };
 

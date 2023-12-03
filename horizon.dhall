@@ -151,7 +151,11 @@ let packages =
       , doctemplates = H.callHackage "doctemplates" "0.11"
       , doctest-discover = H.callHackage "doctest-discover" "0.2.0.0"
       , dom-lt = H.callHackage "dom-lt" "0.2.3"
-      , double-conversion = H.callHackage "double-conversion" "2.0.4.2"
+      , double-conversion =
+          H.callGit
+            "https://github.com/haskell/double-conversion/"
+            "1320d0a4df745c9ecb5fada9a681b3842cf1f47c"
+            (None H.Subdir)
       , dual-tree = H.callHackage "dual-tree" "0.2.3.1"
       , echo = H.callHackage "echo" "0.1.4"
       , edit-distance = H.callHackage "edit-distance" "0.2.2.1"
@@ -276,11 +280,6 @@ let packages =
       , hedgehog-quickcheck = H.callHackage "hedgehog-quickcheck" "0.1.1"
       , heredoc = H.callHackage "heredoc" "0.2.0.0"
       , hex-text = H.callHackage "hex-text" "0.1.0.9"
-      , hint =
-          H.callGit
-            "https://github.com/haskell-hint/hint"
-            "7803c34c8ae1d83c0f7c13fe6b30fcb3abd0ac51"
-            (None H.Subdir)
       , hoauth2 = H.callHackage "hoauth2" "2.10.0"
       , hosc = H.callHackage "hosc" "0.20"
       , hslogger = H.callHackage "hslogger" "1.3.1.0"
@@ -358,8 +357,6 @@ let packages =
       , language-c = H.callHackage "language-c" "0.9.2"
       , lazy-search = H.callHackage "lazy-search" "0.1.3.0"
       , lazysmallcheck = H.callHackage "lazysmallcheck" "0.6"
-      , lens-family = H.callHackage "lens-family" "2.1.2"
-      , lens-family-th = H.callHackage "lens-family-th" "0.5.2.1"
       , libsodium = H.callHackage "libsodium" "1.0.18.3"
       , libsystemd-journal = H.callHackage "libsystemd-journal" "1.4.5.1"
       , linear-base = H.callHackage "linear-base" "0.4.0"

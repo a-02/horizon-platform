@@ -1,0 +1,19 @@
+commit 078971615dca7717537f8937df26e1f6879bfad1
+Author: Daniel Firth <dan.firth@homotopic.tech>
+Date:   Sun Dec 3 09:12:30 2023 +0000
+
+    hide unzip
+
+diff --git a/library/HeadedMegaparsec/Prelude.hs b/library/HeadedMegaparsec/Prelude.hs
+index bb225f3..388e755 100644
+--- a/library/HeadedMegaparsec/Prelude.hs
++++ b/library/HeadedMegaparsec/Prelude.hs
+@@ -27,7 +27,7 @@ import Data.Either as Exports
+ import Data.Fixed as Exports
+ import Data.Foldable as Exports
+ import Data.Function as Exports hiding (id, (.))
+-import Data.Functor as Exports
++import Data.Functor as Exports hiding (unzip)
+ import Data.Functor.Identity as Exports
+ import Data.IORef as Exports
+ import Data.Int as Exports

@@ -500,7 +500,7 @@
   }
 , { mapKey = "double-conversion"
   , mapValue =
-      "a99e6e4aaef6a17cdb32288269c8b4afe060b5f99911b75fa9375f8851835232"
+      "82ceb4a0b5f0fd1dd24578b72818b2cd3f04d4867f6e78dd85e415ee87388300"
   }
 , { mapKey = "dual-tree"
   , mapValue =
@@ -882,10 +882,6 @@
   , mapValue =
       "b77a6d96279f2ea4a69ea2c23a7a1750fcbe3fdd26f8c31820e0e058693b91e3"
   }
-, { mapKey = "hint"
-  , mapValue =
-      "a1ed160179e897277725404d6a25a963e434bbb9b10ef97575fe9f6f664644fa"
-  }
 , { mapKey = "hoauth2"
   , mapValue =
       "68baf2c558a19d87ffd41201ccf3cc9e92ac2aa3c1371c448f5e14a563da95b9"
@@ -1125,14 +1121,6 @@
 , { mapKey = "lazysmallcheck"
   , mapValue =
       "f67f9447d30fc6d4e3405fc2d2e928b67d161aa4ef1b8a4141dae95abfeaefa4"
-  }
-, { mapKey = "lens-family"
-  , mapValue =
-      "2b0d8491bc8ee5ffc35dbc9aae7db636e154ffecc0a13b360216a1a07ca9ca7b"
-  }
-, { mapKey = "lens-family-th"
-  , mapValue =
-      "92ec67b778c3da7813d3e3a766c085ad5ce75e29dd8ec3c6f4d3856752018b37"
   }
 , { mapKey = "libsodium"
   , mapValue =
