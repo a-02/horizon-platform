@@ -151,7 +151,11 @@ let packages =
       , doctemplates = H.callHackage "doctemplates" "0.11"
       , doctest-discover = H.callHackage "doctest-discover" "0.2.0.0"
       , dom-lt = H.callHackage "dom-lt" "0.2.3"
-      , double-conversion = H.callHackage "double-conversion" "2.0.4.2"
+      , double-conversion =
+          H.callGit
+            "https://github.com/haskell/double-conversion/"
+            "1320d0a4df745c9ecb5fada9a681b3842cf1f47c"
+            (None H.Subdir)
       , dual-tree = H.callHackage "dual-tree" "0.2.3.1"
       , echo = H.callHackage "echo" "0.1.4"
       , edit-distance = H.callHackage "edit-distance" "0.2.2.1"

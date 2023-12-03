@@ -500,7 +500,7 @@
   }
 , { mapKey = "double-conversion"
   , mapValue =
-      "a99e6e4aaef6a17cdb32288269c8b4afe060b5f99911b75fa9375f8851835232"
+      "82ceb4a0b5f0fd1dd24578b72818b2cd3f04d4867f6e78dd85e415ee87388300"
   }
 , { mapKey = "dual-tree"
   , mapValue =
