@@ -43,9 +43,6 @@ final: prev: {
       ];
     });
 
-
-
-
   libsodium = prev.callPackage ../pkgs/libsodium.nix { inherit (pkgs) libsodium; };
 
   linear-generics = overrideCabal
@@ -58,6 +55,14 @@ final: prev: {
       ];
     });
 
+  postgresql-syntax = overrideCabal
+    prev.postgresql-syntax
+    (_:
+      {
+        patches = [
+          ./patches/postgresql-syntax-01.patch
+      ];
+    });
 
   saltine = addPkgconfigDepend prev.saltine pkgs.libsodium;
 
