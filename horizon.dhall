@@ -557,7 +557,11 @@ let packages =
       , snap-server = H.callHackage "snap-server" "1.1.2.1"
       , sort = H.callHackage "sort" "1.0.0.0"
       , sorted-list = H.callHackage "sorted-list" "0.2.2.0"
-      , souffle-haskell = H.callHackage "souffle-haskell" "3.5.1"
+      , souffle-haskell =
+          H.callGit
+            "https://github.com/luc-tielen/souffle-haskell"
+            "e441c84f1d64890e31c92fbb278c074ae8bcaff5"
+            (None H.Subdir)
       , sqlite-simple = H.callHackage "sqlite-simple" "0.4.18.2"
       , statestack = H.callHackage "statestack" "0.3.1.1"
       , statistics-linreg = H.callHackage "statistics-linreg" "0.3"

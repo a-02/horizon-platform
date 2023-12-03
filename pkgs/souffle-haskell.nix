@@ -1,21 +1,26 @@
 { mkDerivation, array, base, bytestring, criterion, deepseq
-, directory, filepath, hedgehog, hspec, hspec-hedgehog, lib, mtl
-, process, profunctors, temporary, text, text-short, vector
+, directory, fetchgit, filepath, hedgehog, hspec, hspec-hedgehog
+, lib, mtl, process, profunctors, temporary, text, vector
 }:
 mkDerivation {
   pname = "souffle-haskell";
-  version = "3.5.1";
-  sha256 = "70b9b8fb6e58609675c5b29137557f1cbe599443dd0ab31ca33b1f66815ebc6f";
+  version = "4.0.0";
+  src = fetchgit {
+    url = "https://github.com/luc-tielen/souffle-haskell";
+    sha256 = "03kn2ap5wkiiqajln48gn70pq5dsypivvb6n3nl3i4gqdh8l2xnm";
+    rev = "e441c84f1d64890e31c92fbb278c074ae8bcaff5";
+    fetchSubmodules = true;
+  };
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
   libraryHaskellDepends = [
     array base bytestring deepseq directory filepath mtl process
-    profunctors temporary text text-short vector
+    profunctors temporary text vector
   ];
   testHaskellDepends = [
     array base directory hedgehog hspec hspec-hedgehog profunctors
-    temporary text text-short vector
+    temporary text vector
   ];
   benchmarkHaskellDepends = [ base criterion deepseq text vector ];
   enableLibraryProfiling = true;

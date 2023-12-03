@@ -1828,7 +1828,7 @@
   }
 , { mapKey = "souffle-haskell"
   , mapValue =
-      "ee44e9b748a808329d7460c370ddc0e7dade782cc039b6b2e577dab8e1740328"
+      "c7a4d4b2d6401d2a21eeb43191ff5b2adfc5b3ee01f537e6f95c1b6d28b426f3"
   }
 , { mapKey = "sqlite-simple"
   , mapValue =
