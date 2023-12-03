@@ -19,6 +19,8 @@ final: prev: {
 
   saltine = addPkgconfigDepend prev.saltine pkgs.libsodium;
 
+  sandwich = null;
+
   text-icu = prev.callPackage ../pkgs/text-icu.nix { icu-i18n = pkgs.icu; };
 
   xml-conduit-writer = overrideCabal
