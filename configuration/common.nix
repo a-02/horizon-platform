@@ -15,6 +15,15 @@ final: prev: {
       ];
     });
 
+  hasql-th = overrideCabal
+    prev.hasql-th
+    (_:
+      {
+        patches = [
+          ./patches/hasql-th-01.patch
+      ];
+    });
+
   hasql-transaction = overrideCabal
     prev.hasql-transaction
     (_:
