@@ -1003,6 +1003,8 @@ final: prev: with pkgs.haskell.lib; {
 
   threads = final.callPackage (./pkgs/threads.nix) { };
 
+  thyme = final.callPackage (./pkgs/thyme.nix) { };
+
   tidal = final.callPackage (./pkgs/tidal.nix) { };
 
   tidal-link = final.callPackage (./pkgs/tidal-link.nix) { };

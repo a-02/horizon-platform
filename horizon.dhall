@@ -615,6 +615,7 @@ let packages =
       , th-env = H.callHackage "th-env" "0.1.1"
       , these-skinny = H.callHackage "these-skinny" "0.7.5"
       , threads = H.callHackage "threads" "0.5.1.8"
+      , thyme = H.callHackage "thyme" "0.4"
       , tidal = H.callHackage "tidal" "1.9.4"
       , tidal-link = H.callHackage "tidal-link" "1.0.1"
       , time-locale-compat = H.callHackage "time-locale-compat" "0.1.1.5"

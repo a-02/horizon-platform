@@ -2002,6 +2002,10 @@
   , mapValue =
       "012fd79575c75ab4c4dada5afeb76fbe5c19b1440703d6846506d87aa539ee03"
   }
+, { mapKey = "thyme"
+  , mapValue =
+      "99bfddd71613719117aaf62aeb5839f54622c09de9e17d648d3d34462d4010ef"
+  }
 , { mapKey = "tidal"
   , mapValue =
       "f7050a97172409920a01812ea96f210bddfd28ea3c06a62465effa6ab0f03a66"
