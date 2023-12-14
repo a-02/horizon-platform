@@ -785,6 +785,8 @@ final: prev: with pkgs.haskell.lib; {
 
   proteaaudio-sdl = final.callPackage (./pkgs/proteaaudio-sdl.nix) { };
 
+  qrcode-core = final.callPackage (./pkgs/qrcode-core.nix) { };
+
   quickcheck-arbitrary-adt = final.callPackage (./pkgs/quickcheck-arbitrary-adt.nix) { };
 
   quickcheck-assertions = final.callPackage (./pkgs/quickcheck-assertions.nix) { };

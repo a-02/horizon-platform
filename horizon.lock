@@ -1566,6 +1566,10 @@
   , mapValue =
       "5153d09e9d248fc28f6761059ffdc89a08360cf95ca02b8e0e92ba7efe386be3"
   }
+, { mapKey = "qrcode-core"
+  , mapValue =
+      "7acd3e3f4b7a8d049c49a8733fbc2c640fb9806bac3434cfad5c2d3c87f11aa3"
+  }
 , { mapKey = "quickcheck-arbitrary-adt"
   , mapValue =
       "89d54b49edc359675d4750d129a75053aaeedf3de20e6606c0c7a8bea79baa6d"
