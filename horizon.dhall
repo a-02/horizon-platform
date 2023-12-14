@@ -71,6 +71,7 @@ let packages =
       , cassava-megaparsec = H.callHackage "cassava-megaparsec" "2.1.0"
       , cheapskate = H.callHackage "cheapskate" "0.1.1.2"
       , checkers = H.callHackage "checkers" "0.6.0"
+      , chronos = H.callHackage "chronos" "1.1.5.1"
       , circle-packing = H.callHackage "circle-packing" "0.1.0.6"
       , citeproc = H.callHackage "citeproc" "0.8.1"
       , cmark-gfm = H.callHackage "cmark-gfm" "0.2.6"

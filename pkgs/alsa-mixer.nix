@@ -1,8 +1,8 @@
 { mkDerivation, alsa-core, alsa-lib, base, c2hs, lib, unix }:
 mkDerivation {
   pname = "alsa-mixer";
-  version = "0.3.0";
-  sha256 = "cb6a197de99c6b4339a7f552e1c6b71eaefa11bb96102d5ba4519a23c615de02";
+  version = "0.3.0.1";
+  sha256 = "a75c2807f33ee9076d4fa15d236af910774e35d5fcd714d61ba63301adaebd2f";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
