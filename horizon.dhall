@@ -426,6 +426,7 @@ let packages =
             "411d5d0aaeeb96d4b72d0a434b9d2b53c88c2eae"
             (None H.Subdir)
       , one-liner = H.callHackage "one-liner" "2.1"
+      , one-tme-password = H.callHackage "one-time-password" "2.0.0"
       , openapi3 = H.callHackage "openapi3" "3.2.4"
       , openssl-streams = H.callHackage "openssl-streams" "1.2.3.0"
       , opentelemetry = H.callHackage "opentelemetry" "0.8.0"

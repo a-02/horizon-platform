@@ -1358,6 +1358,10 @@
   , mapValue =
       "bc001566c6f470ec800e10b9134acab2b03fe248072cec9898e046ff12310c87"
   }
+, { mapKey = "one-tme-password"
+  , mapValue =
+      "413cad2843b1e6a2356abcb25d7425c20b6ee9b80647680ee213ab2c10ec76a4"
+  }
 , { mapKey = "openapi3"
   , mapValue =
       "c0e1d7399351a660064b6220840e59bf3a994eb792891953fb7e60eceddccca1"

@@ -681,6 +681,8 @@ final: prev: with pkgs.haskell.lib; {
 
   one-liner = final.callPackage (./pkgs/one-liner.nix) { };
 
+  one-tme-password = final.callPackage (./pkgs/one-tme-password.nix) { };
+
   openapi3 = final.callPackage (./pkgs/openapi3.nix) { };
 
   openssl-streams = final.callPackage (./pkgs/openssl-streams.nix) { };
