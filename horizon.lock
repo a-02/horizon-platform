@@ -1358,7 +1358,7 @@
   , mapValue =
       "bc001566c6f470ec800e10b9134acab2b03fe248072cec9898e046ff12310c87"
   }
-, { mapKey = "one-tme-password"
+, { mapKey = "one-time-password"
   , mapValue =
       "413cad2843b1e6a2356abcb25d7425c20b6ee9b80647680ee213ab2c10ec76a4"
   }
