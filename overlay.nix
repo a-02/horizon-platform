@@ -107,6 +107,8 @@ final: prev: with pkgs.haskell.lib; {
 
   breakpoint = final.callPackage (./pkgs/breakpoint.nix) { };
 
+  bytebuild = final.callPackage (./pkgs/bytebuild.nix) { };
+
   bytestring-strict-builder = final.callPackage (./pkgs/bytestring-strict-builder.nix) { };
 
   bytestring-tree-builder = final.callPackage (./pkgs/bytestring-tree-builder.nix) { };

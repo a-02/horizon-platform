@@ -55,6 +55,7 @@ let packages =
       , binary-parser = H.callHackage "binary-parser" "0.5.7.5"
       , blaze-svg = H.callHackage "blaze-svg" "0.3.7"
       , blaze-textual = H.callHackage "blaze-textual" "0.2.3.1"
+      , bytebuild = H.callHackage "bytebuild" "0.3.14.0"
       , breakpoint = H.callHackage "breakpoint" "0.1.3.0"
       , bytestring-strict-builder =
           H.callHackage "bytestring-strict-builder" "0.4.5.7"

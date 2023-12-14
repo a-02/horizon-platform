@@ -210,6 +210,10 @@
   , mapValue =
       "bb69f7754dbfd382152e7c236213b1d40ace37e5989878c4e619edc343112c6d"
   }
+, { mapKey = "bytebuild"
+  , mapValue =
+      "d0faaa2227470adadf0a66b989be0533d4421660964ff579cb894f3d4f6fac19"
+  }
 , { mapKey = "bytestring-strict-builder"
   , mapValue =
       "751e303b024b1474905c38c27dce01bf31012b1f424c11f9f894dabdebbdba7d"
