@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "skylighting";
-  version = "0.14";
-  sha256 = "ffa6cd93a645d259cf9b04e5751ffcb7c045a8452ef3c4e2512365126fae7ca7";
+  version = "0.14.1";
+  sha256 = "5a0ad5d7d7ff517a5c5b696de4482ae383b24cc00580447514a1c27a3834d1bb";
   configureFlags = [ "-fexecutable" ];
   isLibrary = true;
   isExecutable = true;

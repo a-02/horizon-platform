@@ -6,8 +6,8 @@
 }:
 mkDerivation {
   pname = "rebase";
-  version = "1.20.1.1";
-  sha256 = "106ce99d3c9bb5b0920cf8d03d98c3b2c90a08648bbab4ba93ad63a81d869abb";
+  version = "1.20.2";
+  sha256 = "001297a891f30c51fa7f95d97fbb6e47c8dd4a7f13ddb371d5b5780fca7bbb92";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

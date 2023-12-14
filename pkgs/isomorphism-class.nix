@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "isomorphism-class";
-  version = "0.1.0.11";
-  sha256 = "e317c46a01bf4f274a745b5583028a48485aeb80b06f3b6b9394e186df4d37fd";
+  version = "0.1.0.12";
+  sha256 = "f9de876e5500825bb0d26d34e9c781b87c8b136320baecfade35b0488593ccb9";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

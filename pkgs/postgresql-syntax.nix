@@ -1,13 +1,12 @@
-{ mkDerivation, QuickCheck, base, bytestring, case-insensitive
-, hashable, headed-megaparsec, hedgehog, lib, megaparsec
-, parser-combinators, quickcheck-instances, rerebase, tasty
-, tasty-hunit, tasty-quickcheck, text, text-builder
+{ mkDerivation, base, bytestring, case-insensitive, hashable
+, headed-megaparsec, hedgehog, lib, megaparsec, parser-combinators
+, rerebase, tasty, tasty-hunit, text, text-builder
 , unordered-containers
 }:
 mkDerivation {
   pname = "postgresql-syntax";
-  version = "0.4.1";
-  sha256 = "93cde438f4ca505450dc9c85d13c3e2868c5e268f25110c2e8c0b7bd9e9443d3";
+  version = "0.4.1.1";
+  sha256 = "74f3cdd6267bacde12734285303a607e39f5c36fa0d4cbff70c897d3e3b8fbf7";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -16,10 +15,7 @@ mkDerivation {
     megaparsec parser-combinators text text-builder
     unordered-containers
   ];
-  testHaskellDepends = [
-    hedgehog QuickCheck quickcheck-instances rerebase tasty tasty-hunit
-    tasty-quickcheck
-  ];
+  testHaskellDepends = [ hedgehog rerebase tasty tasty-hunit ];
   enableLibraryProfiling = true;
   enableExecutableProfiling = true;
   doHaddock = true;

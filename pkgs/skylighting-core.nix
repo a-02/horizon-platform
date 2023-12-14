@@ -6,8 +6,8 @@
 }:
 mkDerivation {
   pname = "skylighting-core";
-  version = "0.14";
-  sha256 = "1223bd508d2e8dbd98db371c8ebbbe70449856d984934f54fa33d3040fe8cb91";
+  version = "0.14.1";
+  sha256 = "8b3c0584eefaf58e88afa7b07cdaacaaa4210934e13fe5f077316ff9488bc3c4";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

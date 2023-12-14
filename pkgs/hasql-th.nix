@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "hasql-th";
-  version = "0.4.0.18";
-  sha256 = "db80c9f972c7311a499b6b2243286d5435ab60f606f88b1bb7d94430dbd4087d";
+  version = "0.4.0.19";
+  sha256 = "ac664d83f2cd55e0007c6a53bd4034c51cd2141494a963e4b27d1e7292d10c9c";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

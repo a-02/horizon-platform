@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "commonmark-pandoc";
-  version = "0.2.1.3";
-  sha256 = "77adcf9074299a5b318901d057ebf49a7f032245f2aee783ef475539b0897f21";
+  version = "0.2.2";
+  sha256 = "60b4bd5deb258bad77db02a33bb1a2d0061666271f84872ae1ff20c87905bc8b";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

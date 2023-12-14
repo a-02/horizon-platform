@@ -57,10 +57,6 @@ final: prev: with pkgs.haskell.lib; {
 
   algebraic-graphs = final.callPackage (./pkgs/algebraic-graphs.nix) { };
 
-  alsa-core = final.callPackage (./pkgs/alsa-core.nix) { };
-
-  alsa-mixer = final.callPackage (./pkgs/alsa-mixer.nix) { };
-
   ap-normalize = final.callPackage (./pkgs/ap-normalize.nix) { };
 
   apecs = final.callPackage (./pkgs/apecs.nix) { };
@@ -78,6 +74,8 @@ final: prev: with pkgs.haskell.lib; {
   autoexporter = final.callPackage (./pkgs/autoexporter.nix) { };
 
   base-prelude = final.callPackage (./pkgs/base-prelude.nix) { };
+
+  base32 = final.callPackage (./pkgs/base32.nix) { };
 
   base58-bytestring = final.callPackage (./pkgs/base58-bytestring.nix) { };
 
@@ -130,6 +128,8 @@ final: prev: with pkgs.haskell.lib; {
   cheapskate = final.callPackage (./pkgs/cheapskate.nix) { };
 
   checkers = final.callPackage (./pkgs/checkers.nix) { };
+
+  chronos = final.callPackage (./pkgs/chronos.nix) { };
 
   circle-packing = final.callPackage (./pkgs/circle-packing.nix) { };
 

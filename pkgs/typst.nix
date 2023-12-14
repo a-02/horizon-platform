@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "typst";
-  version = "0.3.2.1";
-  sha256 = "756a901db74317797d2b064fe72142c60ea5242d76991d68b8b21805c38bc145";
+  version = "0.4";
+  sha256 = "ebb99b3e0a848d96e2ae9f20ead03caeff0deed2fb42e914b2e7a2f673a51c79";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

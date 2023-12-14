@@ -5,8 +5,8 @@
 }:
 mkDerivation {
   pname = "deferred-folds";
-  version = "0.9.18.5";
-  sha256 = "c44e569d79349715cbb32a2958f603084ffec7c099a179313beb206be7fb2ce6";
+  version = "0.9.18.6";
+  sha256 = "ebffce410040c77d2babee73f45ab7e79da7dcec424590a991b6dc0b8a1b8f02";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
@@ -24,7 +24,7 @@ mkDerivation {
   doCheck = false;
   doBenchmark = false;
   hyperlinkSource = false;
-  homepage = "https://github.com/metrix-ai/deferred-folds";
+  homepage = "https://github.com/nikita-volkov/deferred-folds";
   description = "Abstractions over deferred folds";
   license = lib.licenses.mit;
   broken = false;

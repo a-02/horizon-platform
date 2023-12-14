@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "texmath";
-  version = "0.12.8.4";
-  sha256 = "fb53e9dcc559ff045ebf2e83a1fc6fc599fae59b9c43dda78145872dd8a671de";
+  version = "0.12.8.6";
+  sha256 = "7ba37a07ad3bb64d1dfbe443dcf64575458e403083151591445a2c1ef040da9d";
   isLibrary = true;
   isExecutable = true;
   enableSeparateDataOutput = false;

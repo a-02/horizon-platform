@@ -1,6 +1,6 @@
 { mkDerivation, Diff, Glob, JuicyPixels, SHA, aeson, aeson-pretty
-, array, attoparsec, base, base64, binary, blaze-html, blaze-markup
-, bytestring, case-insensitive, citeproc, commonmark
+, array, attoparsec, base, base64-bytestring, binary, blaze-html
+, blaze-markup, bytestring, case-insensitive, citeproc, commonmark
 , commonmark-extensions, commonmark-pandoc, containers
 , crypton-connection, data-default, deepseq, directory, doclayout
 , doctemplates, emojis, exceptions, file-embed, filepath
@@ -16,16 +16,16 @@
 }:
 mkDerivation {
   pname = "pandoc";
-  version = "3.1.9";
-  sha256 = "8a69439793e549a928f83b38e95200a993a53cc961e6d128d465e4576f17861a";
+  version = "3.1.10";
+  sha256 = "e1da7afcb6c03cb7469a02b31ba121d1c259eabe5a99a1d33432182bd1e2d8e4";
   configureFlags = [ "-f-trypandoc" ];
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [
-    aeson aeson-pretty array attoparsec base base64 binary blaze-html
-    blaze-markup bytestring case-insensitive citeproc commonmark
-    commonmark-extensions commonmark-pandoc containers
+    aeson aeson-pretty array attoparsec base base64-bytestring binary
+    blaze-html blaze-markup bytestring case-insensitive citeproc
+    commonmark commonmark-extensions commonmark-pandoc containers
     crypton-connection data-default deepseq directory doclayout
     doctemplates emojis exceptions file-embed filepath Glob gridtables
     haddock-library http-client http-client-tls http-types ipynb

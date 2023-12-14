@@ -6,8 +6,8 @@
 }:
 mkDerivation {
   pname = "postgresql-binary";
-  version = "0.13.1.1";
-  sha256 = "8bd3d7fbf638b42350d30bbe0a8b504993e00b17cb4aa403ee6cce995890499b";
+  version = "0.13.1.2";
+  sha256 = "a59b169660cd6e13de4c8f30ec16d1c4b4a8314b81d10e85b81a77d4a9ffb53d";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;

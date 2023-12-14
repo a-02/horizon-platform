@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "binary-parser";
-  version = "0.5.7.4";
-  sha256 = "ba824da8aff477db01478810fee5f485e6e27a19800a42a86ccb3983cbe9931a";
+  version = "0.5.7.5";
+  sha256 = "472e4376b7f5e8fd1d50a692cb13898f3fe10504879c60d0d00c8299fe58dc1f";
   isLibrary = true;
   isExecutable = false;
   enableSeparateDataOutput = false;
