@@ -485,6 +485,7 @@ let packages =
       , prometheus-proc = H.callHackage "prometheus-proc" "0.1.5.0"
       , proteaaudio-sdl = H.callHackage "proteaaudio-sdl" "0.10.1"
       , qrcode-core = H.callHackage "qrcode-core" "0.9.9"
+      , qrcode-juicypixels= H.callHackage "qrcode-juicypixels" "0.8.5"
       , quickcheck-arbitrary-adt =
           H.callHackage "quickcheck-arbitrary-adt" "0.3.1.0"
       , quickcheck-assertions = H.callHackage "quickcheck-assertions" "0.3.0"

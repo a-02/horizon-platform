@@ -1570,6 +1570,10 @@
   , mapValue =
       "7acd3e3f4b7a8d049c49a8733fbc2c640fb9806bac3434cfad5c2d3c87f11aa3"
   }
+, { mapKey = "qrcode-juicypixels"
+  , mapValue =
+      "87ef45b5b52050162b787cb17dbd88e0ee7110d964805d4a90f254cda95ff8d7"
+  }
 , { mapKey = "quickcheck-arbitrary-adt"
   , mapValue =
       "89d54b49edc359675d4750d129a75053aaeedf3de20e6606c0c7a8bea79baa6d"

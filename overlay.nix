@@ -787,6 +787,8 @@ final: prev: with pkgs.haskell.lib; {
 
   qrcode-core = final.callPackage (./pkgs/qrcode-core.nix) { };
 
+  qrcode-juicypixels = final.callPackage (./pkgs/qrcode-juicypixels.nix) { };
+
   quickcheck-arbitrary-adt = final.callPackage (./pkgs/quickcheck-arbitrary-adt.nix) { };
 
   quickcheck-assertions = final.callPackage (./pkgs/quickcheck-assertions.nix) { };
