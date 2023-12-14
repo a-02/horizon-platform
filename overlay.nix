@@ -847,6 +847,8 @@ final: prev: with pkgs.haskell.lib; {
 
   scotty = final.callPackage (./pkgs/scotty.nix) { };
 
+  sel = final.callPackage (./pkgs/sel.nix) { };
+
   selective = final.callPackage (./pkgs/selective.nix) { };
 
   semver = final.callPackage (./pkgs/semver.nix) { };

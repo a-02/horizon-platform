@@ -520,6 +520,10 @@ let packages =
       , sandwich = H.callHackage "sandwich" "0.2.1.0"
       , say = H.callHackage "say" "0.1.0.1"
       , scotty = H.callHackage "scotty" "0.20.1"
+      , sel = 
+          H.callTarball
+            "https://hackage.haskell.org/package/sel-0.0.1.0/candidate/sel-0.0.1.0.tar.gz"
+            (None H.Subdir)
       , selective = H.callHackage "selective" "0.7"
       , semver = H.callHackage "semver" "0.4.0.1"
       , servant-auth = H.callHackage "servant-auth" "0.4.1.0"

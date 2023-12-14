@@ -1690,6 +1690,10 @@
   , mapValue =
       "deb5070d680ae8302a6043c5062bd0f2653341d927a5f5b817592768ad44d5a5"
   }
+, { mapKey = "sel"
+  , mapValue =
+      "b0967651afd8bdcc3374407d7556a11c6cd2ba77d99f38865eff69092c1562be"
+  }
 , { mapKey = "selective"
   , mapValue =
       "7fcbdbf0899852feafd725f9454930b1f571b4cfb6f0050ae8d58a82cd97aa2f"
